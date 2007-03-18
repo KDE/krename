@@ -1,0 +1,44 @@
+Krename is a very powerfull batch file renamer for KDE3.
+Features include:
+-renaming a list of files based on a set of expressions
+-copying/moving a list of files to another directory
+-convert filenames to upper/lower case
+-adding numbers to filenames
+-finding and replacing parts of the filename
+-rename Mp3/Ogg Vorbis files based on their ID3 tags.
+-setting access and modification dates
+-permissions and file ownership
+-a plug-in API which allows you to extend krename's features
+-rename directories recursively
+-support for KFilePlugins
+-create undo file
+-and many more...
+
+Visit the Krename Homepage at: http://www.krename.net
+
+           HAVE FUN!
+           Dominik Seichter <domseichter@web.de>
+
+==============================
+Old Version of the text above:
+==============================
+
+Krename is a very powerful batch file renamer for KDE2 which
+can rename a list of files based on a set of expressions.
+It can copy/move the files to another directory or simply
+rename the input files. Krename supports many conversion
+operations, including conversion of a filename to lowercase
+or to uppercase, conversion of the first letter of every
+word to uppercase, adding numbers to filenames, finding
+and replacing parts of the filename, and many more.
+Krename can rename Mp3/Ogg Vorbis files based on the
+information stored in their ID3 tags.
+It can also change access and modification dates,
+permissions, and file ownership.
+
+WARNING! It will not compile with automake 1.5, automake 1.4 is required.
+
+Visit the Krename Homepage at: http://krename.sourceforge.net
+
+           HAVE FUN!
+           Dominik Seichter <domseichter@web.de>

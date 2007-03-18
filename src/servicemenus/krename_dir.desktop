@@ -1,0 +1,12 @@
+[Desktop Entry]
+Actions=Rename
+Encoding=UTF-8
+ServiceTypes=inode/directory
+
+[Desktop Action Rename]
+Exec=krename -r %U
+Name=Rename with KRename
+Name[de]=Mit KRename umbenennen
+Name[es]=Renombrar con KRename
+Name[fr]=Renommer avec KRename 
+Icon=krename 

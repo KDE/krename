@@ -1,0 +1,16 @@
+[Desktop Entry]
+Encoding=UTF-8
+ServiceTypes=all/allfiles
+Actions=Rename
+
+ExcludeServiceTypes=kdedevice/*
+ 
+[Desktop Action Rename]
+Name=Rename with KRename
+Name[de]=Mit KRename umbenennen
+Name[es]=Renombrar con KRename
+Name[fr]=Renommer avec KRename 
+Name[pt_BR]=Renomear com KRename
+Exec=krename %F
+Icon=krename
+

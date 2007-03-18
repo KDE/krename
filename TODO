@@ -1,0 +1,377 @@
+DOM: Copying extremely slows
+DOM: Remember the last 10 selected tokens in HelpDialog
+DOM: Display in Realtime Preview a new first column which contains a small warning icons
+     If the new and the old filename are identical
+DOM: Kontext men� im advance mode f�r alle text boxen:
+     Insert -> Filename To Lowercase
+            -> Filename To Upercase
+	    -> Number
+	    -> Date
+	    -> ...
+
+Stonki: Thumbnails auch im rename-tab fenster
+========================================
+Here's some feedback on it. I like it, but the "find and replace"
+function was unclear. Was it finding and replacing parts of the
+filename, or inside the contents of the files?
+========================================
+Thanks for making krename, it is truly a great piece of software. It saved
+me litteraly hours of painful work in sorting the hundreds of photographs
+given to us by at least a dozen different people for our wedding. It would
+have taken me ages to sort them by hand.
+
+This is only a small donation but I hope it will help in making krename
+even better.
+
+I had sent my comments earlier but to mention them again here are the only
+4 problems I have faced with krename (all relate to beginner mode, 'add
+files' section), none of them are show-stoppers bwt :) :
+
+1) in thumbnail view, when selecting a block of files to move around, they
+get copied to their destination in reverse order
+
+2) for some reason, the thumbnails do not always display (as in, the image
+thumbnails do not show, they stay as file type icons instead) when I select
+add files and only 'show thumbnail' is selected ('show file name' not
+checked). However, if I select add files with only 'show file name'
+checked, and THEN (after files are shown in list) check 'show thumbnails',
+then all the thumbnails will show properly.
+
+Cheers and thanks again for this great piece of software.
+========================================
+Hallo
+
+
+Erst mal vielen Dank fÃ¼r das Programm; es sparte mir eine Menge Zeit 
+beim Re-Organisieren meiner MP3-Sammlung.
+
+Dabei habe ich es ziemlich oft benutzt, und mir sind einige Dinge 
+aufgefallen, die vielleicht verbessert werden kÃ¶nnten. (Ich beziehe mich 
+auf die Version 2.8.5. Falls eine neuere Version da ist, die meine 
+Anmerkungen Ã¼berflÃ¼ssig macht, verzeih mir bitte):
+- Beim HinzufÃ¼gen von Verzeichnissen werden die selbst definierten 
+Filter (*.mp3) und die Einstellung fÃ¼r "Unterverzeichnisse rekursiv 
+hinzufÃ¼gen" nicht gespeichert; vor allem die RekursivitÃ¤t hat mich 
+genervt, weil ich die immer wieder vergessen hab.
+
+DankeschÃ¶n fÃ¼r deine MÃ¼he!
+
+Regards/MfG,
+Christian Weiske
+=======================================
+Hi,
+
+Ich habe ein paar verbesserungsvorschlÃ¤ge fÃ¼r Dein super Tool KRename:
+
+-) Bei den Plugins fÃ¼r auf KFilePlugins zurÃ¼ckgreifen, listest Du all ihre 
+mÃ¶glichen Felder auf. I fÃ¤nde es sehr hilfreich, wenn der ausgewÃ¤hlte 
+Platzhalter automatisch bei einem Doppelklick darauf an Cursorposition in das 
+Eingabefeld fÃ¼r das Namensmuster eingefÃ¼hgt wÃ¼rde.
+FÃ¼r die Ãbersicht wÃ¤re es auch schÃ¶n, wenn dieses Eingabefeld nochmal (ohne 
+drop-down menÃ¼) unter den plugins sichtbar wÃ¤re....
+
+-) WÃ¤re es mÃ¶glich, als Startwert nicht nur eine Zahl (0, 1, 2,...) sondern 
+auch Buchstaben (a, b, c, ... / A, B, C, ...) angeben zu kÃ¶nnen?
+
+-) Es wÃ¤re super, wenn man verschiedene ZÃ¤hler seperat definieren kÃ¶nnte. zB. 
+mit einem Tabinterface fÃ¼r den Konfigurationsdialog "1. ZÃ¤hler", "2. ZÃ¤hler", 
+etc, wenn mehr als eine ##-Grupe im Muster auftaucht
+
+-) Was ich immer wieder brauche ist eine reset-Bedingung, die den ZÃ¤hler 
+wieder auf seinen Startwert setzt, so das er quasi im Kreis zÃ¤hlt (1, 2, 3, 
+1, 2, 3, 1, 2, 3,... mit 3 als reset)
+Ich kÃ¶nnte mir das als eine Zeile mit
+Checkbox "reset bei"; Combobox "<self> | 1. ZÃ¤hler | 2. ZÃ¤hler | ..."; 
+Combobox "> | >= | = | <= | <"; Spinbox fÃ¼r Zahl
+
+-) Was ich persÃ¶nlich seltener brauche, fÃ¼r manche aber bestimmt hilfreich 
+ist, wÃ¤re die MÃ¶glichkeit auch Schrittweiten a la "1/2" od. "1/3" zuzulassen.
+Im Falle "1/3" wÃ¼rde dann so gezÃ¤hlt: "1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 
+5, ..."
+
+Gruss,
+Jonas
+=======================================
+
+On Sat June 12 2004 04:40 am, Dominik Seichter wrote:
+> Hi,
+>
+> This idea is also a good idea. KRename had a similar feature already in
+> earlier version (but not that powerful - you could only specify a fixed
+> tag). I do not know if this will be possible in 3.1 but I promisse that I
+> will look into this issue.
+>
+> CU Dom
+>
+> Am Freitag, 11. Juni 2004 05:51 schrieben Sie:
+> > At present you have tags to take information from a file and rename the
+> > file.
+> >
+> > Now think in reverse - krename plugins allow the possibility for a
+> > multiple format tagger.
+> >
+> > So a new tab would allow....
+> >
+> > artist - track - title - xxx.ogg
+> >
+> > to be parse with the following command
+> >
+> > [Artist] - [Track] - [Title] - xxx
+> >
+> > The info then could be written to the file tag.
+> >
+> > Also the inclusion of modifiers (and Search & Replace) allow for the
+> > information to be cleaned up before it is written.
+> >
+> > Phoenix
+
+This was inspired from using Cantus.
+
+TTC Timothy Taylor - Economics Lecture 20-A Global Economic Perspective.mp3
+Please enter the formatting string (%t - %s): TTC %a - %b %g %t-%s
+
+Feedback...
+20 A Global Economic Perspective ~ Timothy Taylor ~ Economics ~ 0 ~ Lecture
+
+The course is "Economics"
+%b stands for aBlum
+
+Now I could have done %x %a - %x %x %t-%s or variations there of
+%x stands for ignore.
+
+powerful concept, no? Like I said, krename has one extra twist no one else has
+done yet - multiple file formats
+
+And for another wow: combine the actions so the following happens
+filename -> tag -> filename
+This is what part of my script does.
+
+The only usability issue is the length of the tag names themselves,
+TTC [artist] - [album] [genre] [track]-[title]
+Is a tad long to write, no?
+[x] for ignore?
+
+Of course a drop-down combo "memory" would help.
+
+I hope my "annoyance" is helpful, Phoenix
+===================================================================
+[23:32:12] <Keimix> BTW  is there a possibility to load just one of the kfile-plugins at krename startup, because loading all slows krename down alot?
+[23:35:49] <domseichter> No, not yet. But it's a good idea. Strange that I did not have it and nobody asked me for this feature!
+===================================================================
+"Squashing weird characters" sollte auf die ToDO liste
+===================================================================
+> Remark Dom, 4-10-2004
+> - Add a random token (maybe even a random number and a random string token)
+>   In the first case the range and in the latter case the length should be specified
+ 
+=================================================================== 
+Arpad Biro <biro_arpad@yahoo.com>:
+
+----------------------
+
+
+an undo script bug:
+
+  1. cd to a temporary dir (for example /tmp)
+  2. touch file1
+     mkdir dir1
+     touch dir1/file2
+  3. rename the above 3 items (use the "Add directory names with filenames" option),
+     and also create an undo script
+  4. run the undo script
+
+The directory is renamed back first, and the file in it cannot be renamed back.
+
+other text-related things
+-------------------------
+
+
+The "WARNING..." string in the encoding conversion plugin is unlocalizable.
+===================================================================
+
+----------  Weitergeleitete Nachricht  ----------
+
+Subject: krename - vorschlaege/diskussion
+Date: Dienstag, 13. September 2005 00:41
+From: Christian Goehl <pastulio@gmx.net>
+To: support@stonki.de
+
+Hello, as you live in germany I assume you speak German. If not,
+ tell me.
+
+Wenn man ueber den dsdirselectdialog Dateien/Ordner hinzufuegt und
+ die Anzahl enorm ist (70gb mp3s), wird die aktuelle kde session
+ beendet. Man kann noch den Crash-Handler sehen. Wahrscheinlich ist
+ das ein Bug in KFileDialog oder in Qt. Als Ausweg kann man
+ natuerlich die Dateien via D'n'D hinzufuegen, allerdings kann hat
+ man dann nicht die vielseitigen Optionen des Dialogs.
+
+Nun aber zu meinem eigentlichen Anliegen: Ich besitze eine riesige
+Musiksammlung, leider sind aber nicht alle Dateien einheitlich
+ benannt. Generell waere es mit Krename schon moeglich diese zu
+ vereinheitlichen, es ist aber sehr aufwendig, vorallem weil es
+ keine Verallgemeinerung von Dateitypen(z.B. Audiodatei) gibt, so
+ muss man immer beide Tags fuer mp3 und ogg einfuegen.
+
+Desweiteren waere eine Art KI wuenschenswert, welche bei bestimmten
+Stichwoertern wie zum Beispiel "Unbekannt, unknown, track" anhand
+ des Ordnernamens und MusicBrainz oder CDDB Vorschlaege zum taggen
+ macht.
+
+Vielleicht kann man auch noch einen Normalisierer einbauen, wobei
+ ich mir nicht genauch vorstellen kann, wie aufwendig sowas ist.
+
+Die oben genannten Vorschlaege sind nicht unbedingt als eine
+ Erweiterung zu Krename zu sehen, vielleicht sollten sie auch in
+ einer getrennten Anwendung realisiert werden. Denn der Vorgang
+ sollte auch fuer Anfaenger einfach sein. Moeglicherweise kommt
+ auch einfach ein neues Profil in Frage.
+
+Ich waere bereit an diesem Projekt mitzuarbeiten, obgleich meine
+Programmierfaehigkeiten eher im Hobbybereich liegen. Dennoch habe
+ ich schon Erfahrungen mit KDE/Qt gesammelt.
+
+MfG,
+Christian Goehl
+
+==================================================
+[14:43:43] <[Stonki]> 1) Man kann kein existierendes Profil ?berschreiben !
+[14:44:33] <Dom64> ok, stimmt das sollte m�glich sein.
+[14:44:37] <Dom64> Kann man leicht hinzugeben
+[14:45:41] <[Stonki]> und bei den profilen m?chte ich noch paar andere EInstellungen sein
+[14:46:15] <[Stonki]> zum beispiel rufe ich krename ?ber krusader auf. Da w?re eine option bei den profilen toll, in der man automatisch im Reiter "Dateiname" landet
+[14:46:24] <[Stonki]> und NACH dem umbenennen automatisch krename schliessen
+[14:46:54] <Dom64> Praktisch einen "Profile Settings" Dialog mit:
+[14:46:58] <Dom64> -> Krename Default Page
+[14:46:59] <[Stonki]> und man sollte anzeigen lassen, WAS bei den profilen eigentlich nun gespeichert wird
+[14:47:04] <Dom64> -> Close Krename after renaming
+[14:47:23] <[Stonki]> -> Behaviour after renaming
+[14:47:30] <[Stonki]> rather than just closing
+[14:47:47] <Dom64> Ok, und da evtl. auch alles zum �ndern. Also dass man dort auch direkt zum beispiel das template umstellen kann.
+[14:47:58] <Dom64> Stimmt, kann man ja mehr optionen machen als nur schliessen.
+[14:48:25] <[Stonki]> viel spass :)
+[14:48:29] <[Stonki]> UND
+[14:48:56] <Dom64> *g
+[14:49:01] <[Stonki]> es ging doch irgendwie die tracknummer von MP3 songs automatisch nach ## zu formatieren, oder ?
+[14:49:25] <[Stonki]> und das wird dann puenktlich zu kde 3.5 krename 3.50 :)
+[14:50:27] <Dom64> ja [###mp3TrackNumber]
+[14:50:41] <Dom64> einfach beliebig viele #'s voranstellen, geht bei jeder zahl die von einem plugin kommt
+[14:50:53] <Dom64> KRename 3.50 :)
+
+========
+[quote]
+1. If I select files in Konqueror and then right click too select actions|krename, then it takes me to the [files] section - but it would be more efficient to go straight to [filenames]. 
+[/quote]
+This was fixed some time ago. But does not work with the latest release. I will fix it for the next version.
+
+========
+
+Hello,
+
+This is a great software but there is a powerful feature that I'd like 
+to see in the future.
+When you use the 'find and replace' feature, you only can give rules 
+that apply on the original filename. Why don't give the possibility to 
+apply a new rule on the original file changed by the past rules ?
+An exemple :
+
+the original file : "artist - the song.mp3"
+
+the result I want : "artist__the_song.mp3"
+
+The way I did that on windows (in the past :-) ) with emusic tag editor :
+rule 1 " " --> "_" the current filename is "artist_-_the_song.mp3"
+rule 2 "-" --> "_" the current filename is "artist___the_song.mp3"
+rule 3 "___" --> "__" the current filename is "artist__the_song.mp3"
+
+With this software, rules n applies on the filename modified by rules 
+n-1, n-2, n-p and so on (this could be annoying, that's why the best is 
+to give the possibility to have the present behaviour or 'my' feature 
+enabled).
+
+
+With the current version (ok, I only have 3.03) it is not possible to do 
+so in one shot. With the pas example :
+
+Find and replace:
+- add " " --> "_"
+- add "-" --> "_"
+- add "___" --> "__"  ==> no effect because there is no such string in 
+the original filename.
+The result is "artist___the_song.mp3".
+
+I could tried
+- add " - " --> __
+- add " " --> _
+There is a conflict and not all the changes are applied.
+
+Thank you for your response.
+
+Best regards.
+
+mailto : benoit.turpin@ecl2005.ec-lyon.fre
+
+============
+
+Package: krename
+Version: 3.0.9 3.5.1, Debian Package 4:3.5.1-4 (testing/unstable)
+Severity: wishlist
+Compiler: Target: x86_64-linux-gnu
+OS: Linux 2.6.15-1-amd64-k8-smp x86_64 (Debian Package 4:3.5.1-4 (testing/unstable))
+
+In konqueror file management, say you right-click on a file and select krename from actions. When krename comes up and displays the chosen file, click Add. 
+
+Current behavior: the file selector opens in the user's home directory.
+
+Requested behavior: open in the same directory as the currently chosen file.
+
+Great program!
+Dave
+======================
+I just thought that krename is a great tool! And could be best: due its 
+integration with konqueror it could manage a download directory in such 
+manner that when a batch of files just arrives ( may be downloaded by kget), 
+krename renames it and then moves it to another directory, keeping track of 
+its activities, so the recent arrives never collides with elder files.
+
+Please, excuse my poor english.
+
+Best regards,
+
+Marcelo Mazini.
+==========================
+
+Hi, I download many scientific articles, usualy in pdf or ps, with httrack. When on my disk, names are often like 4523.pdf and I would like to use krename as :
+Withdraw title property in document to use it as a new fiel in rename items. If title property do not exist, use some heuristic to find the best candidate (say for example, in the first pages, usually the very first one, center aligned, biggest font size, bold, uppercase, and a ponderation rule of all this kind of criteria).
+Hope you like it and that it will be available. Let me now. I remain at your disposal if you want to discuss this feature. Best regards,
+Laurent.
+
+ ~~
+It is a good idea to add a feature to KRename so that you can check wether a token is empty (doesn't exist) and only use it if it does exist and use something else if it does not exist. I will try to add something to the next version.
+
+Unfortunately it would be a too big issue to add support for extracting headlines from a PDF file to KRename. This would require a complete PDF parser in KRename. If you want this functionallity it is better to write an external tool and use KRename's command plugin.
+
+best regards,
+   Dom
+==========================
+
+Morgen!
+
+Danke f�r die Idee. Das ist auf jeden Fall sinvoll, werde ich f�r die n�chste Version hinzuf�gen.
+
+CU Dom
+
+Am Friday, 1. December 2006 19:38 schrieben Sie:
+> Kam gerade im Chat
+>
+> Bei den Settings von krename einstellen, wie viele Dateien er
+> wirklich anzeigt im Preview Fenster. Default: unlimited, aber wenn
+> man wirklich mal 10.000 Dateien umbenennt, dann kann man das z.B
+> auf 200 stellen, er macht das preview dann nur f�r 200 und erst
+> beim eigentlich start dann alle 10.000
+>
+>
+> cu
+> stonki
+
+==========================
