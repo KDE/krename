@@ -7,7 +7,8 @@ include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  )
 ########### next target ###############
 
 set(krename_SRCS
-   main.cpp )
+   main.cpp 
+   krenameimpl.cpp )
 
 kde4_automoc(${krename_SRCS})
 
@@ -23,7 +24,7 @@ else(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
   set(KDE4_KMETADATA "")
 endif(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
 
-configure_file(config-kmetadata.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kmetadata.h )
+#configure_file(config-kmetadata.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kmetadata.h )
 
 target_link_libraries(krename  ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KMETADATA} )
 

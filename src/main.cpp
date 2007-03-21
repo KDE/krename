@@ -30,10 +30,10 @@
 #include <kmessagebox.h>
 
 // Own includes
+#include "krenameimpl.h"
 /*
 #include "wizard.h"
 #include "tabs.h"
-#include "krenameimpl.h"
 #include "firststartdlg.h"
 */
 
@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
     KApplication a;
     a.connect( &a, SIGNAL( lastWindowClosed() ), &a, SLOT( quit() ) );
 
-    //QWidget* krename = KRenameImpl::launch( QRect( 0, 0, 0, 0 ), QStringList() );
+    QWidget* krename = KRenameImpl::launch( QRect( 0, 0, 0, 0 ), QStringList() );
 
     /* Check if Krename
      * was started from root!
