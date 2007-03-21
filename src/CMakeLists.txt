@@ -2,15 +2,24 @@
 add_subdirectory( pics )
 add_subdirectory( servicemenus )
 
-include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES}  )
+include_directories( ${CMAKE_SOURCE_DIR} ${KDE4_INCLUDE_DIR} 
+  ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}  )
+add_definitions( ${KDE4_DEFINITIONS} )
 
 ########### next target ###############
 
-set(krename_SRCS
-   main.cpp 
-   krenameimpl.cpp )
 
-kde4_automoc(${krename_SRCS})
+set(krename_SRCS
+  main.cpp 
+  krenameimpl.cpp 
+  )
+
+kde4_automoc( ${krename_SRCS} )
+
+kde4_add_ui_files( krename_SRCS 
+  guimodeselector.ui 
+  krenamefiles.ui 
+  )
 
 kde4_add_executable(krename ${krename_SRCS})
 
@@ -26,7 +35,7 @@ endif(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
 
 #configure_file(config-kmetadata.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kmetadata.h )
 
-target_link_libraries(krename  ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KMETADATA} )
+target_link_libraries(krename ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KMETADATA} )
 
 install(TARGETS krename DESTINATION ${BIN_INSTALL_DIR})
 

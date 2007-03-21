@@ -18,10 +18,38 @@
 #ifndef KRENAMEIMPL_H
 #define KRENAMEIMPL_H
 
+#include <QObject>
+
+#include <kurl.h>
+
+class KMenuBar;
+class QPushButton;
+
+class KRenameImpl : public QObject {
+    Q_OBJECT
+
+ public: 
+    ~KRenameImpl();
+
+    static QWidget* launch( const QRect & rect, const KUrl::List & list, 
+                            KRenameImpl* impl = NULL, bool loadprofile = true );
+
+ private:
+    KRenameImpl( QWidget* parent, KMenuBar* menuBar, QPushButton* finishButton );
+
+ private:
+    QWidget*     m_parent;
+    KMenuBar*    m_menuBar;
+    QPushButton* m_finishButton;
+
+};
+
+#if 0 
 // Own includes
+/*
 #include "batchrenamer.h"
 #include "krenamedcop.h"
-
+*/
 class HelpDialog;
 class HelpDialogData;
 class KAction;
@@ -349,5 +377,5 @@ bool KRenameImpl::hasCommandlineProfile() const
 {
     return m_hasCommandlineProfile;
 }
-
+#endif // 0
 #endif

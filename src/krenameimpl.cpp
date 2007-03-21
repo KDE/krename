@@ -16,7 +16,84 @@
  ***************************************************************************/
 
 #include "krenameimpl.h"
+#include "krenameimpl.moc"
+#include "ui_guimodeselector.h"
 
+#include <kapplication.h>
+#include <kconfig.h>
+#include <kmenubar.h>
+
+KRenameImpl::KRenameImpl( QWidget* parent, KMenuBar* menuBar, QPushButton* finishButton )
+    : QObject( (QObject*)parent ), m_parent( parent ), 
+      m_menuBar( menuBar ), m_finishButton( finishButton )
+{
+}
+
+KRenameImpl::~KRenameImpl()
+{
+
+}
+
+QWidget* KRenameImpl::launch( const QRect & rect, const KUrl::List & list, 
+                              KRenameImpl* impl, bool loadprofile )
+{
+    KConfig* config = kapp->sessionConfig();
+
+    config->setGroup( QString("GUISettings") );
+    bool firststart = config->readBoolEntry( "firststart", true );
+    bool wizardmode = config->readBoolEntry( "GUIWizardMode", false );
+
+    if( firststart ) {
+        QDialog dialog;
+        Ui::GuiModeSelector selector;
+        selector.setupUi( &dialog );
+
+        dialog.exec();
+
+        /* start the GUI Mode selction dialog */
+        /*
+        FirstStartDlg* fsd = new FirstStartDlg();
+        fsd->exec();
+        wizardmode = fsd->useWizard();
+        */
+        config->setGroup("GUISettings");
+        config->writeEntry( "firststart", false );
+        config->writeEntry( "GUIWizardMode", wizardmode );
+        config->sync();
+    }
+
+    /*
+    QWidget* w = NULL;
+    KRenameImpl* k = NULL;
+
+    if( wizardmode ) {
+        wizard* krename = new wizard( impl, rect );
+        k = krename->getKRename();
+        w = (QWidget*)krename;
+    } else {
+        tabs* krename = new tabs( impl, rect );
+        k = krename->getKRename();
+        w = (QWidget*)krename;
+    }
+
+    kapp->setMainWidget( w );
+
+    for( unsigned int i = 0; i < list.count(); i++ )
+        k->addFileOrDir( list[i] );
+
+    k->updatePre();
+
+    // it is time to load a default profile now (if the user has specified one)
+    if( loadprofile && !k->hasCommandlineProfile() && ProfileManager::hasDefaultProfile() )
+	ProfileManager::loadDefaultProfile( k );
+    else if ( !k->hasCommandlineProfile() )
+        w->show();
+
+    return w;
+    */
+}
+
+#if 0
 // Own includes
 #include "ProgressDialog.h"
 #include "confdialog.h"
@@ -1834,3 +1911,4 @@ void KRenameImpl::slotEasy4()
 {
     getHelpDialogString( comboCustomExtension->lineEdit() );
 }
+#endif // 0
