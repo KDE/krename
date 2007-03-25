@@ -4,7 +4,7 @@
     begin                : Die Mai 20 2003
     copyright            : (C) 2003 by Dominik Seichter
     email                : domseichter@web.de
- ***************************************************************************/
+***************************************************************************/
 
 /***************************************************************************
  *                                                                         *
@@ -17,16 +17,19 @@
 
 #include "krenameimpl.h"
 #include "krenameimpl.moc"
-#include "ui_guimodeselector.h"
+#include "firststartdlg.h"
+#include "krenamewindow.h"
 
 #include <kapplication.h>
 #include <kconfig.h>
 #include <kmenubar.h>
 
-KRenameImpl::KRenameImpl( QWidget* parent, KMenuBar* menuBar, QPushButton* finishButton )
-    : QObject( (QObject*)parent ), m_parent( parent ), 
-      m_menuBar( menuBar ), m_finishButton( finishButton )
+#include <QMenu>
+
+KRenameImpl::KRenameImpl( KRenameWindow* window )
+    : QObject( (QObject*)window ), m_window( window )
 {
+    setupActions();
 }
 
 KRenameImpl::~KRenameImpl()
@@ -34,50 +37,33 @@ KRenameImpl::~KRenameImpl()
 
 }
 
-QWidget* KRenameImpl::launch( const QRect & rect, const KUrl::List & list, 
-                              KRenameImpl* impl, bool loadprofile )
+QWidget* KRenameImpl::launch( const QRect & rect, const KUrl::List & list, bool loadprofile )
 {
     KConfig* config = kapp->sessionConfig();
 
     config->setGroup( QString("GUISettings") );
-    bool firststart = config->readBoolEntry( "firststart", true );
+    bool firststart = config->readBoolEntry( "firststart4", true );
     bool wizardmode = config->readBoolEntry( "GUIWizardMode", false );
 
     if( firststart ) {
-        QDialog dialog;
-        Ui::GuiModeSelector selector;
-        selector.setupUi( &dialog );
-
+        // start the GUI Mode selction dialog
+        FirstStartDlg dialog;
         dialog.exec();
 
-        /* start the GUI Mode selction dialog */
-        /*
-        FirstStartDlg* fsd = new FirstStartDlg();
-        fsd->exec();
-        wizardmode = fsd->useWizard();
-        */
+        // TODO: this dialog should have screenshots an nice description texts!!!
+        wizardmode = dialog.useWizardMode();
+
         config->setGroup("GUISettings");
-        config->writeEntry( "firststart", false );
+        config->writeEntry( "firststart4", false );
         config->writeEntry( "GUIWizardMode", wizardmode );
         config->sync();
     }
 
+    KRenameWindow* w  = new KRenameWindow( wizardmode, NULL );
+    KRenameImpl* impl = new KRenameImpl( w );
+    w->setGeometry( rect );
+
     /*
-    QWidget* w = NULL;
-    KRenameImpl* k = NULL;
-
-    if( wizardmode ) {
-        wizard* krename = new wizard( impl, rect );
-        k = krename->getKRename();
-        w = (QWidget*)krename;
-    } else {
-        tabs* krename = new tabs( impl, rect );
-        k = krename->getKRename();
-        w = (QWidget*)krename;
-    }
-
-    kapp->setMainWidget( w );
-
     for( unsigned int i = 0; i < list.count(); i++ )
         k->addFileOrDir( list[i] );
 
@@ -88,9 +74,37 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KUrl::List & list,
 	ProfileManager::loadDefaultProfile( k );
     else if ( !k->hasCommandlineProfile() )
         w->show();
+    */
+
+    w->show();
 
     return w;
-    */
+}
+
+void KRenameImpl::setupActions()
+{
+    QMenu* mnuExtra = new KPopupMenu( parent );
+    QMenu* mnuSettings = new KPopupMenu( parent );
+    KHelpMenu* mnuHelp = new KHelpMenu( parent );
+
+    m_window->menuBar()->insertItem( i18n("E&xtras"), mnuExtra );
+    mnuExtra->insertItem( i18n("&Profiles..."), this, SLOT( manageProfiles() ) );
+    mnuExtra->insertSeparator();
+    mnuExtra->insertItem( SmallIcon("undo"), i18n("&Undo Old Renaming Action..."), this, SLOT( undo() ) );
+    m_window->menuBar()->insertItem( i18n("&Settings"), mnuSettings );
+    m_window->menuBar()->insertSeparator();
+    m_window->menuBar()->insertItem( i18n("&Help"), mnuHelp->menu() );
+
+    KAction* prefAct = KStdAction::preferences( this, SLOT(preferences()), actionCollection() );
+    loadPlugins = new KAction( i18n("&Load KDE file plugins"), 0, this, SLOT( loadFilePlugins() ), actionCollection() );
+    KAction* reloadAct = new KAction( i18n("&Reload Plugin Data"), 0, this, SLOT( reloadFilePluginData() ), actionCollection() );
+    
+    prefAct->plug( mnuSettings );
+    mnuSettings->insertSeparator();
+    loadPlugins->plug( mnuSettings );
+    reloadAct->plug( mnuSettings );
+    
+    QObject::connect( mnuHelp, SIGNAL(showAboutApplication()), this, SLOT(about()));
 }
 
 #if 0
@@ -366,34 +380,6 @@ void KRenameImpl::parseCommandline()
             // start renaming
             QTimer::singleShot( 200, this, SLOT( start() ) );
     }
-}
-
-void KRenameImpl::setupActions()
-{
-    KActionCollection* actionCollection = new KActionCollection( this );
-
-    KPopupMenu* mnuExtra = new KPopupMenu( parent );
-    KPopupMenu* mnuSettings = new KPopupMenu( parent );
-    KHelpMenu* mnuHelp = new KHelpMenu( parent );
-
-    menuBar->insertItem( i18n("E&xtras"), mnuExtra );
-    mnuExtra->insertItem( i18n("&Profiles..."), this, SLOT( manageProfiles() ) );
-    mnuExtra->insertSeparator();
-    mnuExtra->insertItem( SmallIcon("undo"), i18n("&Undo Old Renaming Action..."), this, SLOT( undo() ) );
-    menuBar->insertItem( i18n("&Settings"), mnuSettings );
-    menuBar->insertSeparator();
-    menuBar->insertItem( i18n("&Help"), mnuHelp->menu() );
-
-    KAction* prefAct = KStdAction::preferences( this, SLOT(preferences()), actionCollection );
-    loadPlugins = new KAction( i18n("&Load KDE file plugins"), 0, this, SLOT( loadFilePlugins() ), actionCollection );
-    KAction* reloadAct = new KAction( i18n("&Reload Plugin Data"), 0, this, SLOT( reloadFilePluginData() ), actionCollection );
-    
-    prefAct->plug( mnuSettings );
-    mnuSettings->insertSeparator();
-    loadPlugins->plug( mnuSettings );
-    reloadAct->plug( mnuSettings );
-    
-    connect( mnuHelp, SIGNAL(showAboutApplication()), this, SLOT(about()));
 }
 
 void KRenameImpl::setupPages()

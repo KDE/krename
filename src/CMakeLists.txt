@@ -11,7 +11,9 @@ add_definitions( ${KDE4_DEFINITIONS} )
 
 set(krename_SRCS
   main.cpp 
+  firststartdlg.cpp
   krenameimpl.cpp 
+  krenamewindow.cpp
   )
 
 kde4_automoc( ${krename_SRCS} )

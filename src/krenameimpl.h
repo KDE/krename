@@ -22,8 +22,7 @@
 
 #include <kurl.h>
 
-class KMenuBar;
-class QPushButton;
+class KRenameWindow;
 
 class KRenameImpl : public QObject {
     Q_OBJECT
@@ -31,16 +30,17 @@ class KRenameImpl : public QObject {
  public: 
     ~KRenameImpl();
 
-    static QWidget* launch( const QRect & rect, const KUrl::List & list, 
-                            KRenameImpl* impl = NULL, bool loadprofile = true );
+    static QWidget* launch( const QRect & rect, const KUrl::List & list, bool loadprofile = true );
 
  private:
-    KRenameImpl( QWidget* parent, KMenuBar* menuBar, QPushButton* finishButton );
+    KRenameImpl( KRenameWindow* window );
+
+    /** Creates all menu items and actions.
+     */
+    void setupActions();
 
  private:
-    QWidget*     m_parent;
-    KMenuBar*    m_menuBar;
-    QPushButton* m_finishButton;
+    KRenameWindow* m_window;
 
 };
 
