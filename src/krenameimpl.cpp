@@ -20,11 +20,13 @@
 #include "firststartdlg.h"
 #include "krenamewindow.h"
 
+#include <kaction.h>
 #include <kapplication.h>
 #include <kconfig.h>
+#include <kmenu.h>
 #include <kmenubar.h>
+#include <kstandardaction.h>
 
-#include <QMenu>
 
 KRenameImpl::KRenameImpl( KRenameWindow* window )
     : QObject( (QObject*)window ), m_window( window )
@@ -42,8 +44,8 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KUrl::List & list, bool 
     KConfig* config = kapp->sessionConfig();
 
     config->setGroup( QString("GUISettings") );
-    bool firststart = config->readBoolEntry( "firststart4", true );
-    bool wizardmode = config->readBoolEntry( "GUIWizardMode", false );
+    bool firststart  = config->readBoolEntry( "firststart4", true );
+    EGuiMode guimode = (EGuiMode)config->readNumEntry ( "GuiMode", eGuiMode_Wizard );
 
     if( firststart ) {
         // start the GUI Mode selction dialog
@@ -51,15 +53,15 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KUrl::List & list, bool 
         dialog.exec();
 
         // TODO: this dialog should have screenshots an nice description texts!!!
-        wizardmode = dialog.useWizardMode();
+        guimode = dialog.guiMode();
 
         config->setGroup("GUISettings");
         config->writeEntry( "firststart4", false );
-        config->writeEntry( "GUIWizardMode", wizardmode );
+        config->writeEntry( "GuiMode", (int)guimode );
         config->sync();
     }
 
-    KRenameWindow* w  = new KRenameWindow( wizardmode, NULL );
+    KRenameWindow* w  = new KRenameWindow( guimode, NULL );
     KRenameImpl* impl = new KRenameImpl( w );
     w->setGeometry( rect );
 
@@ -83,28 +85,43 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KUrl::List & list, bool 
 
 void KRenameImpl::setupActions()
 {
-    QMenu* mnuExtra = new KPopupMenu( parent );
-    QMenu* mnuSettings = new KPopupMenu( parent );
-    KHelpMenu* mnuHelp = new KHelpMenu( parent );
+    KMenu* mnuExtra    = new KMenu( i18n("E&xtras"), m_window );
+    KMenu* mnuSettings = new KMenu( i18n("&Settings"), m_window );
+    KMenu* mnuHelp     = m_window->helpMenu( QString::null, true );
 
-    m_window->menuBar()->insertItem( i18n("E&xtras"), mnuExtra );
-    mnuExtra->insertItem( i18n("&Profiles..."), this, SLOT( manageProfiles() ) );
-    mnuExtra->insertSeparator();
-    mnuExtra->insertItem( SmallIcon("undo"), i18n("&Undo Old Renaming Action..."), this, SLOT( undo() ) );
-    m_window->menuBar()->insertItem( i18n("&Settings"), mnuSettings );
-    m_window->menuBar()->insertSeparator();
-    m_window->menuBar()->insertItem( i18n("&Help"), mnuHelp->menu() );
+    KAction* actProfiles = new KAction( i18n("&Profiles..."), m_window );
+    KAction* actUndo     = new KAction( i18n("&Undo Old Renaming Action..."), m_window );
+    KAction* actPref     = KStandardAction::preferences( this, SLOT(slotPreferences()), m_window );
+    KAction* actLoad     = new KAction( i18n("&Load KDE file plugins"), m_window );
+    KAction* actReload   = new KAction( i18n("&Reload Plugin Data"), m_window );
 
-    KAction* prefAct = KStdAction::preferences( this, SLOT(preferences()), actionCollection() );
-    loadPlugins = new KAction( i18n("&Load KDE file plugins"), 0, this, SLOT( loadFilePlugins() ), actionCollection() );
-    KAction* reloadAct = new KAction( i18n("&Reload Plugin Data"), 0, this, SLOT( reloadFilePluginData() ), actionCollection() );
-    
-    prefAct->plug( mnuSettings );
-    mnuSettings->insertSeparator();
-    loadPlugins->plug( mnuSettings );
-    reloadAct->plug( mnuSettings );
-    
-    QObject::connect( mnuHelp, SIGNAL(showAboutApplication()), this, SLOT(about()));
+    /*
+      // Enable this code after upgrade to newest KDE libs
+
+    KAction* actProfiles = new KAction( i18n("&Profiles..."), m_window->actionCollection(), "profiles" );
+    KAction* actUndo     = new KAction( "undo", i18n("&Undo Old Renaming Action..."), m_window->actionCollection(), "undo" );
+    KAction* actPref     = KStdAction::preferences( this, SLOT(slotPreferences()), m_windowactionCollection() );
+    KAction* actLoad     = new KAction( i18n("&Load KDE file plugins"), m_window->actionCollection(), "loadplugins" );
+    KAction* actReload   = new KAction( i18n("&Reload Plugin Data"), m_window->actionCollection(), "reloadplugins" );
+    */
+
+    m_window->menuBar()->addMenu( mnuExtra );
+    m_window->menuBar()->addMenu( mnuSettings );
+    m_window->menuBar()->addMenu( mnuHelp );
+
+    mnuExtra->addAction( actProfiles );
+    mnuExtra->addSeparator();
+    mnuExtra->addAction( actUndo );
+
+    mnuSettings->addAction( actPref );
+    mnuSettings->addSeparator();
+    mnuSettings->addAction( actLoad );
+    mnuSettings->addAction( actReload );
+
+    QObject::connect(actProfiles, SIGNAL(triggered(bool)), this, SLOT(slotManageProfiles()));
+    QObject::connect(actUndo,     SIGNAL(triggered(bool)), this, SLOT(slotUndo()));
+    QObject::connect(actLoad,     SIGNAL(triggered(bool)), this, SLOT(slotLoadFilePlugins()));
+    QObject::connect(actLoad,     SIGNAL(triggered(bool)), this, SLOT(slotReloadFilePluginData()));
 }
 
 #if 0
@@ -166,13 +183,6 @@ void KRenameImpl::setupActions()
 
 #define ID_WIZARD 2905
 #define ID_TAB 2904
-
-QString pageTitle[] = {
-    I18N_NOOP( "F&iles" ),
-    I18N_NOOP( "Des&tination" ),
-    I18N_NOOP( "P&lugins" ),
-    I18N_NOOP( "File&name" )
-};
 
 KPushButton* createButton( KGuiItem item, QWidget* parent )
 {

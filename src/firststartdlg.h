@@ -21,6 +21,7 @@
 #include <QDialog>
 
 #include "ui_guimodeselector.h"
+#include "krenamewindow.h" // for EGuiMode
 
 class QDialogButtonBox;
 
@@ -37,19 +38,18 @@ class FirstStartDlg : public QDialog {
     FirstStartDlg( QWidget* parent = NULL );
 
     /** 
-     * @returns true if the user selected the wizard mode
-     *          false if the user want to use advanced mode.
+     * @returns the selected Gui Mode
      */
-    inline bool useWizardMode() const;
+    inline EGuiMode guiMode() const;
 
  private:
     Ui::GuiModeSelector m_selector;
     QDialogButtonBox*   m_buttons;
 };
 
-bool FirstStartDlg::useWizardMode() const
+EGuiMode FirstStartDlg::guiMode() const
 {
-    return m_selector.optionWizard->isChecked();
+    return m_selector.optionWizard->isChecked() ? eGuiMode_Wizard : eGuiMode_Advanced;
 }
 
 #endif // _FIRSTSTARTDLG_H_
