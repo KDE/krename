@@ -22,7 +22,6 @@
 // KDE includes
 #include <kapplication.h>
 #include <kaboutdata.h>
-#include <kaboutapplication.h>
 #include <kcmdlineargs.h>
 #include <kconfig.h>
 #include <kimageio.h>
@@ -45,17 +44,6 @@
     #define VERSION "3.9.0"
 #endif
 
-KAboutData aboutData( "krename", I18N_NOOP("KRename"), VERSION, I18N_NOOP(
-    "KRename is a batch file renamer which can rename a\n"
-    "list of files based on a set of expressions.\n\n"
-    "If you like KRename you may want to support it.\n"
-    "Testing, bug fixes and feature request are as welcome\n"
-    "as financial support (everybody needs money ;)\nSee help files for details.\n" ),
-    KAboutData::License_GPL, "KRename Build:" __DATE__ " " __TIME__
-    , "(c) 2001-2007, Dominik Seichter\n",
-    "http://www.krename.net", "domseichter@web.de" );
-
-
 static KCmdLineOptions options[] =
 {
     { "+[file]", I18N_NOOP("file will be added to the list of files for renaming"), 0},
@@ -73,16 +61,26 @@ static KCmdLineOptions options[] =
 
 int main(int argc, char *argv[])
 {
+    KAboutData aboutData( "krename", I18N_NOOP("KRename"), VERSION, I18N_NOOP(
+                              "KRename is a batch file renamer which can rename a\n"
+                              "list of files based on a set of expressions.\n\n"
+                              "If you like KRename you may want to support it.\n"
+                              "Testing, bug fixes and feature request are as welcome\n"
+                              "as financial support (everybody needs money ;)\nSee help files for details.\n" ),
+                          KAboutData::License_GPL, "KRename Build:" __DATE__ " " __TIME__
+                          , "(c) 2001-2007, Dominik Seichter\n",
+                          "http://www.krename.net", "domseichter@web.de" );
+
     aboutData.addAuthor("Dominik Seichter", 0, "domseichter@web.de",
-        "http://www.krename.net" );
+                        "http://www.krename.net" );
     aboutData.addAuthor("Stefan \"Stonki\" Onken",
-        I18N_NOOP("Website, testing, very good ideas and keeping me coding!"),
-        "support@stonki.de", "http://www.stonki.de" );
+                        I18N_NOOP("Website, testing, very good ideas and keeping me coding!"),
+                        "support@stonki.de", "http://www.stonki.de" );
 
     aboutData.addCredit("Trevor Semeniuk",  I18N_NOOP("Thanks to him for creating RedHat 7.x packages and some other help."),
                         "semeniuk@ee.ualberta.ca", "http://www.semeniuk.net" );
     aboutData.addCredit("Groult Richard",   I18N_NOOP("Fixed a bug with startIndex and added the BatchRenamer class\n"
-                        "to his excellent image viewer showimg."),
+                                                      "to his excellent image viewer showimg."),
                         "rgroult@jalix.org", "http://ric.jalix.org/" );
     aboutData.addCredit("Michael Elvers",  I18N_NOOP("Fixed a bug that caused krename not closing open files."),
                         "m_elvers@yahoo.com", "http://come.to/melvers" );
