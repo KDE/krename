@@ -19,6 +19,9 @@
 
 #include "ui_krenamefiles.h"
 #include "ui_krenamedestination.h"
+#include "ui_krenamesimple.h"
+#include "ui_krenameplugins.h"
+#include "ui_krenamefilename.h"
 
 #include <kicon.h>
 #include <klocale.h>
@@ -31,18 +34,40 @@
 #include <QTabBar>
 #include <QVBoxLayout>
 
-static const char* pageTitles[] = {
-    I18N_NOOP( "Add some files\t\t(Step 1/3)" ),
-    I18N_NOOP( "Set the destination\t\t(Step 2/3)" ),
-    I18N_NOOP( "Filename\t\t(Step 3/3)" )
+// Wizard mode
+static const KRenameWindow::TGuiMode tWizardMode = {
+    3,
+    {
+        I18N_NOOP( "Add some files" ),
+        I18N_NOOP( "Set the destination" ),
+        I18N_NOOP( "Filename" ),
+        NULL
+    },
+    {
+        0, 1, 3, -1
+    }
+};
+
+// Advanced mode
+static const KRenameWindow::TGuiMode tAdvancedMode = {
+    4,
+    {
+        I18N_NOOP( "&Files" ),
+        I18N_NOOP( "&Destination" ),
+        I18N_NOOP( "&Plugins" ),
+        I18N_NOOP( "File&name" )
+    },
+    {
+        0, 1, 2, 4
+    }
 };
 
 KRenameWindow::KRenameWindow( EGuiMode guiMode, QWidget* parent )
     : KMainWindow( parent ), 
-      m_eGuiMode( guiMode ), m_curPage( 0 ), 
+      m_eGuiMode( guiMode ), m_curPage( 0 ), m_guiMode( NULL ), 
       m_buttonBack( NULL ), m_buttonNext( NULL )
 {
-    QWidget*     center = new QWidget( center );
+    QWidget*     center = new QWidget();
     QVBoxLayout* layout = new QVBoxLayout( center );
 
     m_stackTop = new QStackedWidget( center );
@@ -57,27 +82,63 @@ KRenameWindow::KRenameWindow( EGuiMode guiMode, QWidget* parent )
 
     this->setCentralWidget( center );
 
-    m_lblTitle = new QLabel( m_stackTop );
-    m_stackTop->addWidget( m_lblTitle );
+    QWidget*     title       = new QWidget();
+    QHBoxLayout* titleLayout = new QHBoxLayout( title );
+
+    m_lblTitle = new QLabel( title );
+    m_lblStep  = new QLabel( title );
+
+    titleLayout->addWidget( m_lblTitle );
+    titleLayout->addStretch();
+    titleLayout->addWidget( m_lblStep );
+
+    m_stackTop->addWidget( title );
 
     m_tabBar = new QTabBar( m_stackTop );
     m_stackTop->addWidget( m_tabBar );
 
-    connect( m_tabBar, SIGNAL(currentChanged(int)), SLOT(showPage(int)));
+    for( int i=0;i<tAdvancedMode.numPages;i++ )
+        m_tabBar->addTab( i18n( tAdvancedMode.pageTitles[i] ) );
 
+    m_pageFiles    = new Ui::KRenameFiles();
+    m_pageDests    = new Ui::KRenameDestination();
+    m_pageSimple   = new Ui::KRenameSimple();
+    m_pagePlugins  = new Ui::KRenamePlugins();
+    m_pageFilename = new Ui::KRenameFilename();
+
+    // add files page
     QWidget* page = new QWidget( m_stack );
-    m_pageFiles = new Ui::KRenameFiles();
     m_pageFiles->setupUi( page );
     m_stack->addWidget( page );
-    m_tabBar->addTab( i18n("&Files") );
 
+    // add destination page
     page = new QWidget( m_stack );
-    m_pageDests = new Ui::KRenameDestination();
     m_pageDests->setupUi( page );
     m_stack->addWidget( page );
-    m_tabBar->addTab( i18n("&Destination") );
-    
+
+    // add plugin page
+    page = new QWidget( m_stack );
+    m_pagePlugins->setupUi( page );
+    m_stack->addWidget( page );
+
+    // add simple filename page for wizard mode
+    page = new QWidget( m_stack );
+    m_pageSimple->setupUi( page );
+    m_stack->addWidget( page );
+
+    // add filename page
+    page = new QWidget( m_stack );
+    m_pageFilename->setupUi( page );
+    m_stack->addWidget( page );
+
     setupGui();
+
+    // Make sure that now signal occurs before setupGui was called
+    connect( m_tabBar, SIGNAL(currentChanged(int)), SLOT(showPage(int)));
+    connect( m_buttonClose, SIGNAL(clicked(bool)), SLOT(close()));
+
+    // Show the first page in any mode
+    showPage( 0 );
 }
 
 void KRenameWindow::setupGui()
@@ -89,6 +150,8 @@ void KRenameWindow::setupGui()
 
     if( m_eGuiMode == eGuiMode_Wizard ) 
     {
+        m_guiMode    = &tWizardMode;
+
         m_buttonBack = new KPushButton( KIcon( "back" ), i18n("&Back") );
         m_buttonNext = new KPushButton( KIcon( "next" ), i18n("&Next") );
 
@@ -101,9 +164,15 @@ void KRenameWindow::setupGui()
         m_stackTop->setCurrentIndex( 0 ); // m_lblTitle
     }
     else
+    {
+        m_guiMode    = &tAdvancedMode;
         m_stackTop->setCurrentIndex( 1 ); // m_tabBar
+    }
 
-    m_buttonClose = new KPushButton( KIcon( "cancel" ), i18n("&Close") );
+    m_buttonFinish = new KPushButton( KIcon( "finish" ), i18n("&Finish...") );
+    m_buttonClose  = new KPushButton( KIcon( "cancel" ), i18n("&Close") );
+    
+    m_buttons->addButton( m_buttonFinish, QDialogButtonBox::AcceptRole );
     m_buttons->addButton( m_buttonClose, QDialogButtonBox::RejectRole );
 
     enableControls();
@@ -111,11 +180,16 @@ void KRenameWindow::setupGui()
 
 void KRenameWindow::showPage( int index )
 {
-    if( index >= 0 && index < m_stack->count() )
+    if( index >= 0 && index < m_guiMode->numPages )
     {
         m_curPage = index;
-        m_stack->setCurrentIndex( index );
-        m_lblTitle->setText( i18n( pageTitles[m_curPage] ) );
+        m_stack->setCurrentIndex( m_guiMode->mapIndex[index] );
+        
+        if( m_eGuiMode == eGuiMode_Wizard )
+        {
+            m_lblTitle->setText( i18n( m_guiMode->pageTitles[index] ) );
+            m_lblStep->setText( i18n("(Step %1/%2)", index+1, m_guiMode->numPages ) );
+        }
 
         enableControls();
     }
@@ -124,10 +198,13 @@ void KRenameWindow::showPage( int index )
 void KRenameWindow::enableControls()
 {
     if( m_buttonNext )
-        m_buttonNext->setEnabled( m_curPage < m_stack->count() - 1 );
+        m_buttonNext->setEnabled( m_curPage < m_guiMode->numPages - 1 );
 
     if( m_buttonBack )
         m_buttonBack->setEnabled( m_curPage > 0 );
+
+    if( m_buttonFinish )
+        m_buttonFinish->setEnabled( m_curPage == m_guiMode->numPages - 1 );
 }
 
 void KRenameWindow::slotBack()

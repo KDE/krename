@@ -27,11 +27,28 @@
 #include <kmenubar.h>
 #include <kstandardaction.h>
 
+typedef struct TFileDescription {
+    QString filename;
+    QString extension;
+    QString directory;
+
+    KUrl    url;
+};
+
+typedef struct TFileItem {
+    TFileDescription src;
+    TFileDescription dst;
+
+    bool dir;
+};
+
 
 KRenameImpl::KRenameImpl( KRenameWindow* window )
     : QObject( (QObject*)window ), m_window( window )
 {
     setupActions();
+
+    window->m_pageFiles->fileList->setModel( );
 }
 
 KRenameImpl::~KRenameImpl()

@@ -29,6 +29,9 @@ class QTabBar;
 namespace Ui {
     class KRenameFiles;
     class KRenameDestination;
+    class KRenameSimple;
+    class KRenamePlugins;
+    class KRenameFilename;
 };
 
 /** This enum specifies the available GUI modes for KRename
@@ -49,8 +52,26 @@ enum EGuiMode {
 class KRenameWindow : public KMainWindow {
  Q_OBJECT
 
+     friend class KRenameImpl;
+
  public:
     KRenameWindow( EGuiMode guiMode, QWidget* parent = NULL );
+
+    /** The maximum number of pages in any gui mode.
+     *  No gui mode can have more pages than this.
+     */
+    static const int MAX_PAGES = 4;
+
+    /** This structure is used to describe a gui mode.
+     *  It is required to map indexes to the right indexes
+     *  of the widget stack and to retrieve the total number
+     *  of pages per mode as well as the individual page titles.
+     */
+    typedef struct {
+        const int   numPages;
+        const char* pageTitles[KRenameWindow::MAX_PAGES];
+        const int   mapIndex[KRenameWindow::MAX_PAGES];
+    } TGuiMode;
 
  private slots:
     void slotBack();
@@ -73,7 +94,8 @@ class KRenameWindow : public KMainWindow {
 
  private:
     EGuiMode          m_eGuiMode;  /// The current gui mode
-    int               m_curPage;   /// The index of the current page
+    int               m_curPage;   /// The index of the current page in the current gui mode
+    const TGuiMode*   m_guiMode;   /// The description structure of the current gui mode
 
     QStackedWidget*   m_stackTop;  /// Contains a title label in wizard mode
                                    /// and a tabbar in advanced mode
@@ -81,15 +103,19 @@ class KRenameWindow : public KMainWindow {
     QDialogButtonBox* m_buttons;
 
     QLabel*           m_lblTitle;  /// The title label in wizard mode
+    QLabel*           m_lblStep;   /// The current step in wizard mode
     QTabBar*          m_tabBar;    /// The tabbar to switch pages in advanced mode
 
     KPushButton*      m_buttonBack;
     KPushButton*      m_buttonNext;
     KPushButton*      m_buttonClose;
+    KPushButton*      m_buttonFinish;
 
     Ui::KRenameFiles*       m_pageFiles;
     Ui::KRenameDestination* m_pageDests;
-
+    Ui::KRenameSimple*      m_pageSimple;
+    Ui::KRenamePlugins*     m_pagePlugins;
+    Ui::KRenameFilename*    m_pageFilename;
 };
 
 #endif // _KRENAMEWINDOW_H_
