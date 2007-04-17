@@ -18,14 +18,33 @@
 #ifndef KRENAMEIMPL_H
 #define KRENAMEIMPL_H
 
+#include <vector>
+
 #include <QObject>
 
 #include <kurl.h>
 
+class KRenameModel;
 class KRenameWindow;
 
 class KRenameImpl : public QObject {
     Q_OBJECT
+
+ public: 
+    typedef struct TFileDescription {
+        QString filename;
+        QString extension;
+        QString directory;
+        
+        KUrl    url;
+    };
+    
+    typedef struct TFileItem {
+        TFileDescription src;
+        TFileDescription dst;
+
+        bool dir;
+    };
 
  public: 
     ~KRenameImpl();
@@ -39,9 +58,22 @@ class KRenameImpl : public QObject {
      */
     void setupActions();
 
+    /** Connect all gui components with their slots
+     */
+    void setupSlots();
+
+ private slots:
+
+    /** Called when the user clicks the "Add..." button.
+     *  open a dialog to select files for adding to KRename.
+     */
+    void slotAddFiles();
+
  private:
     KRenameWindow* m_window;
-
+    KRenameModel*  m_model;
+    
+    std::vector<TFileItem> m_vector;
 };
 
 #if 0 

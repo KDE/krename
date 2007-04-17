@@ -17,43 +17,41 @@
 
 #include "krenameimpl.h"
 #include "krenameimpl.moc"
+#include "filedialogextwidget.h"
 #include "firststartdlg.h"
+#include "krenamemodel.h"
 #include "krenamewindow.h"
+
+
+#include "ui_krenamefiles.h"
+#include "ui_krenamedestination.h"
+#include "ui_krenamesimple.h"
+#include "ui_krenameplugins.h"
+#include "ui_krenamefilename.h"
 
 #include <kaction.h>
 #include <kapplication.h>
 #include <kconfig.h>
+#include <kfiledialog.h>
 #include <kmenu.h>
 #include <kmenubar.h>
 #include <kstandardaction.h>
 
-typedef struct TFileDescription {
-    QString filename;
-    QString extension;
-    QString directory;
-
-    KUrl    url;
-};
-
-typedef struct TFileItem {
-    TFileDescription src;
-    TFileDescription dst;
-
-    bool dir;
-};
-
+#include <QStringListModel>
 
 KRenameImpl::KRenameImpl( KRenameWindow* window )
     : QObject( (QObject*)window ), m_window( window )
 {
     setupActions();
+    setupSlots();
 
-    window->m_pageFiles->fileList->setModel( );
+    m_model = new KRenameModel( &m_vector );
+    window->m_pageFiles->fileList->setModel( m_model );
 }
 
 KRenameImpl::~KRenameImpl()
 {
-
+    delete m_model;
 }
 
 QWidget* KRenameImpl::launch( const QRect & rect, const KUrl::List & list, bool loadprofile )
@@ -135,11 +133,75 @@ void KRenameImpl::setupActions()
     mnuSettings->addAction( actLoad );
     mnuSettings->addAction( actReload );
 
-    QObject::connect(actProfiles, SIGNAL(triggered(bool)), this, SLOT(slotManageProfiles()));
-    QObject::connect(actUndo,     SIGNAL(triggered(bool)), this, SLOT(slotUndo()));
-    QObject::connect(actLoad,     SIGNAL(triggered(bool)), this, SLOT(slotLoadFilePlugins()));
-    QObject::connect(actLoad,     SIGNAL(triggered(bool)), this, SLOT(slotReloadFilePluginData()));
+    connect(actProfiles, SIGNAL(triggered(bool)), SLOT(slotManageProfiles()));
+    connect(actUndo,     SIGNAL(triggered(bool)), SLOT(slotUndo()));
+    connect(actLoad,     SIGNAL(triggered(bool)), SLOT(slotLoadFilePlugins()));
+    connect(actLoad,     SIGNAL(triggered(bool)), SLOT(slotReloadFilePluginData()));
 }
+
+void KRenameImpl::setupSlots()
+{
+    connect( m_window->m_pageFiles->buttonAdd, SIGNAL(clicked()), SLOT(slotAddFiles()));
+}
+
+void KRenameImpl::slotAddFiles()
+{
+    FileDialogExtWidget* widget = new FileDialogExtWidget();
+    widget->show();
+
+    /*
+    KFileDialog dialog( KUrl("kfiledialog://krename"), "*", m_window, widget );
+    dialog.setOperationMode( KFileDialog::Opening );
+    dialog.setMode( KFile::Files | KFile::ExistingOnly );
+
+    if( dialog.exec() == QDialog::Accepted ) 
+    {
+    
+    }
+    */
+    //KUrl::List list = KFileDialog::getOpenUrls( KUrl("kfiledialog://krename"), "*", m_window );
+    /*
+    KUrl::List::Iterator it = list.begin();
+
+    while( it != list.end() )
+    {
+
+        ++it;
+    }
+    */
+    /*
+    bool auto_up = false;
+    
+    DSDirSelectDialog* dsd = new DSDirSelectDialog( parent );
+    if( dsd->exec() == QDialog::Accepted ) {
+        KURL::List slist = dsd->selectedURLs();
+        KURL::List::Iterator it = slist.begin();
+
+        for ( ; it != slist.end(); ++it )
+        {
+            if( !fileList->isFile( *it, false ) )
+            {
+                if( dsd->onlyDirs() )
+                    fileList->addDirName( *it, dsd->currentFilter(), dsd->hidden(), dsd->recursively() );
+                else
+                    fileList->addDir( *it, dsd->currentFilter(), dsd->hidden(), dsd->recursively(), dsd->dirs() );
+            }
+            else
+            {
+                fileList->addFile( *it, true );
+                auto_up = true;
+            }
+        }
+        
+        if( auto_up )
+        {
+            updatePreview();
+            updateCount();
+        }
+    }
+    */
+}
+
 
 #if 0
 // Own includes

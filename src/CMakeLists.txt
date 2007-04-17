@@ -11,8 +11,10 @@ add_definitions( ${KDE4_DEFINITIONS} )
 
 set(krename_SRCS
   main.cpp 
+  filedialogextwidget.cpp
   firststartdlg.cpp
   krenameimpl.cpp 
+  krenamemodel.cpp
   krenamewindow.cpp
   )
 
@@ -41,7 +43,8 @@ endif(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
 
 #configure_file(config-kmetadata.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kmetadata.h )
 
-target_link_libraries(krename ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KMETADATA} )
+target_link_libraries(krename ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS}
+${KDE4_KIO_LIBS} ${KDE4_KMETADATA} )
 
 install(TARGETS krename DESTINATION ${BIN_INSTALL_DIR})
 
