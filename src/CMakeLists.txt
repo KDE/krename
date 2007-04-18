@@ -13,6 +13,7 @@ set(krename_SRCS
   main.cpp 
   filedialogextwidget.cpp
   firststartdlg.cpp
+  krenamefile.cpp 
   krenameimpl.cpp 
   krenamemodel.cpp
   krenamewindow.cpp

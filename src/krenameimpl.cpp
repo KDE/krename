@@ -22,7 +22,6 @@
 #include "krenamemodel.h"
 #include "krenamewindow.h"
 
-
 #include "ui_krenamefiles.h"
 #include "ui_krenamedestination.h"
 #include "ui_krenamesimple.h"
@@ -31,6 +30,7 @@
 
 #include <kaction.h>
 #include <kapplication.h>
+#include <kcmdlineargs.h>
 #include <kconfig.h>
 #include <kfiledialog.h>
 #include <kmenu.h>
@@ -47,6 +47,9 @@ KRenameImpl::KRenameImpl( KRenameWindow* window )
 
     m_model = new KRenameModel( &m_vector );
     window->m_pageFiles->fileList->setModel( m_model );
+
+    parseCmdLineOptions();
+    slotEnableControls();
 }
 
 KRenameImpl::~KRenameImpl()
@@ -144,37 +147,151 @@ void KRenameImpl::setupSlots()
     connect( m_window->m_pageFiles->buttonAdd, SIGNAL(clicked()), SLOT(slotAddFiles()));
 }
 
+void KRenameImpl::addFileOrDir( KUrl url )
+{
+    KRenameFile item( url );
+
+    m_vector.append( item );
+}
+
+void KRenameImpl::parseCmdLineOptions()
+{
+    KCmdLineArgs* args = KCmdLineArgs::parsedArgs();
+
+    /*
+    QCStringList optlist = args->getOptionList ( "r" );
+    for (QCStringList::ConstIterator it=optlist.begin(); it!=optlist.end(); ++it)
+    {
+
+        KURL url;
+        url.setPath( *it );
+        fileList->addDir( url, "*", false, true, false );
+    }
+    */
+
+    // Add all files from the commandline options
+    for( int i = 0; i < args->count(); i++)
+        this->addFileOrDir( args->url( i ) );
+
+    /*
+    // load the profile first, so that we do not overwrite other
+    // commandline settings
+    QCString templ = args->getOption( "profile" );
+    if( !templ.isEmpty() )
+    {
+        m_hasCommandlineProfile = true;
+        ProfileManager::loadProfile( QString( templ ), this );
+    }
+
+    if( !args->isSet( "previewitems" ) )
+        numRealTimePreview = -1;
+    else
+        numRealTimePreview = QString( args->getOption( "previewitems" ) ).toInt();
+
+    templ = args->getOption( "template" );
+    if( !templ.isEmpty() )
+        filename->setText( templ );
+
+    templ = args->getOption( "extension" );
+    if( !templ.isEmpty() ) 
+    {
+        extemplate->setText( templ );
+        checkExtension->setChecked( false );
+    }
+
+    templ = args->getOption( "copy" );
+    if( !templ.isEmpty() ) 
+    {
+        urlrequester->setURL( templ );
+        optionCopy->setChecked( true );
+    }
+
+    templ = args->getOption( "move" );
+    if( !templ.isEmpty() ) 
+    {
+        urlrequester->setURL( templ );
+        optionMove->setChecked( true );
+    }
+        
+    QCStringList uselist = args->getOptionList ( "use-plugin" );
+    if( !uselist.isEmpty() ) 
+    {
+        for(unsigned int i = 0; i < uselist.count(); i++ )
+            uselist[i] = uselist[i].lower();
+    
+        QPtrListIterator<PluginLoader::PluginLibrary> it( plugin->libs );
+        while ( it.current() ) 
+        {
+            if( uselist.contains( (*it)->plugin->getName().lower().utf8() ) )
+                (*it)->check->setChecked( true );
+                
+            ++it;
+        }
+
+        pluginHelpChanged();
+    }
+    
+    bool startnow = args->isSet( "start" );
+    
+    // Free some memory
+    args->clear();      
+
+    enableControls();
+    updateCount();
+    updatePreview();
+    
+    if( fileList->count() )
+    {
+        // we got already filenames over the commandline, so show directly the last
+        // page of the wizard
+        emit showPage( m_wizard ? 3 : 4 );
+    }
+
+    if( startnow ) 
+    {
+        // As file adding runs in a another trhread,
+        // there might be adding in progress but not yet
+        // all files in the list.
+        // so let's wait for file adding to finish first
+        // before starting.
+        while( fileList->runningAddListeners() > 0 )
+            kapp->processEvents();
+
+        if( fileList->count() ) 
+            // start renaming
+            QTimer::singleShot( 200, this, SLOT( start() ) );
+    }
+    */
+}
+
+
 void KRenameImpl::slotAddFiles()
 {
     FileDialogExtWidget* widget = new FileDialogExtWidget();
-    widget->show();
-
-    /*
     KFileDialog dialog( KUrl("kfiledialog://krename"), "*", m_window, widget );
     dialog.setOperationMode( KFileDialog::Opening );
     dialog.setMode( KFile::Files | KFile::ExistingOnly );
 
     if( dialog.exec() == QDialog::Accepted ) 
     {
-    
+        KUrl::List           list = dialog.selectedUrls();
+        KUrl::List::Iterator it   = list.begin();
+
+        while( it != list.end() )
+        {
+            this->addFileOrDir( *it );
+            ++it;
+        }
     }
-    */
+
     //KUrl::List list = KFileDialog::getOpenUrls( KUrl("kfiledialog://krename"), "*", m_window );
     /*
-    KUrl::List::Iterator it = list.begin();
-
-    while( it != list.end() )
-    {
-
-        ++it;
-    }
     */
     /*
     bool auto_up = false;
     
     DSDirSelectDialog* dsd = new DSDirSelectDialog( parent );
     if( dsd->exec() == QDialog::Accepted ) {
-        KURL::List slist = dsd->selectedURLs();
         KURL::List::Iterator it = slist.begin();
 
         for ( ; it != slist.end(); ++it )
@@ -200,6 +317,11 @@ void KRenameImpl::slotAddFiles()
         }
     }
     */
+}
+
+void KRenameImpl::slotEnableControls()
+{
+
 }
 
 

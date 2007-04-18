@@ -18,11 +18,11 @@
 #ifndef KRENAMEIMPL_H
 #define KRENAMEIMPL_H
 
-#include <vector>
-
 #include <QObject>
 
 #include <kurl.h>
+
+#include "krenamefile.h"
 
 class KRenameModel;
 class KRenameWindow;
@@ -62,6 +62,17 @@ class KRenameImpl : public QObject {
      */
     void setupSlots();
 
+    /** Adds an url to the list of files which will 
+     *  be renamed.
+     *
+     *  \param url must be an existing file or directory.
+     */
+    void addFileOrDir( KUrl url );
+
+    /** Parses commandline options
+     */
+    void parseCmdLineOptions();
+
  private slots:
 
     /** Called when the user clicks the "Add..." button.
@@ -69,11 +80,16 @@ class KRenameImpl : public QObject {
      */
     void slotAddFiles();
 
+    /** Ensures that all controls have the current
+     *  enabled/disabled state
+     */
+    void slotEnableControls();
+
  private:
     KRenameWindow* m_window;
     KRenameModel*  m_model;
     
-    std::vector<TFileItem> m_vector;
+    KRenameFile::List m_vector;
 };
 
 #if 0 
