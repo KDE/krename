@@ -17,9 +17,20 @@
 
 #include "krenamefile.h"
 
+#include <kfileitem.h>
+#include <kio/netaccess.h>
+
 KRenameFile::KRenameFile( KUrl src )
+    : m_bValid( false )
 {
-    initFileDescription( m_src, src );
+    KIO::UDSEntry entry;
+    KIO::NetAccess::stat( src, entry, NULL );
+    KFileItem file( entry, src );
+
+    m_bValid     = file.isReadable();
+    m_bDirectory = file.isDir();
+
+    initFileDescription( m_src, src, eSplitMode_FirstDot, 0 );
 }
 
 KRenameFile::KRenameFile( const KRenameFile & rhs )
@@ -32,11 +43,71 @@ const KRenameFile & KRenameFile::operator=( const KRenameFile & rhs )
     m_bDirectory = rhs.m_bDirectory;
     m_src        = rhs.m_src;
     m_dst        = rhs.m_dst;
+
+    return *this;
 }
 
-void KRenameFile::initFileDescription( TFileDescription & rDescription, const KUrl & url ) const
+void KRenameFile::initFileDescription( TFileDescription & rDescription, const KUrl & url, ESplitMode eSplitMode, int dot ) const
 {
-    rDescription.url = url;
+    int splitPos = -1;
+    QString path = url.path();
+    QString file;
+
+    if( !m_bValid )
+        return;
+
+    rDescription.url       = url;
+    rDescription.directory = path;
+
+    if( !m_bDirectory ) 
+    {
+        // split directory/filename
+        splitPos = path.lastIndexOf( '/' );
+        if( splitPos == -1 )
+        {
+            // only a filename?? can this happen?
+            file = path;
+            path = QString::null;
+        }
+        else
+        {
+            file = path.right( path.length() - splitPos - 1 );
+            path = path.left( splitPos );
+        }
+
+        // split filename.extension
+        splitPos = -1;
+        if( eSplitMode == eSplitMode_FirstDot ) 
+            splitPos = file.indexOf( '.' );
+        else if( eSplitMode == eSplitMode_LastDot )
+            splitPos = file.lastIndexOf( '.' );
+        else
+        {
+            if( dot ) 
+            {
+                int i = 0;
+                splitPos = 0;
+                do {
+                    splitPos = file.indexOf( '.', splitPos );
+                    ++i;
+                } while( i < dot && splitPos != -1 );
+            }
+        }
+        
+        rDescription.filename  = file.left( splitPos );
+        rDescription.extension = file.right( file.length() - splitPos - 1 );
+        rDescription.directory = path;
+    }
+
+    /*
+      TODO: Write a real unit test for this class
+    qDebug("URL : %s\n", url.prettyUrl().toLatin1().data() );
+    qDebug("Path: %s\n", rDescription.directory.toLatin1().data());
+    qDebug("File: %s\n", rDescription.filename.toLatin1().data());
+    qDebug("Ext : %s\n", rDescription.extension.toLatin1().data());
+    qDebug("=====");
+    */
 }
+
 
 

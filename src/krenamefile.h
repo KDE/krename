@@ -22,6 +22,15 @@
 
 #include <kurl.h>
 
+/** An enum to describe the mode to split 
+ *  filename and extension.
+ */
+enum ESplitMode {
+    eSplitMode_FirstDot, ///< Extension starts at the first dot found in the filename
+    eSplitMode_LastDot,  ///< Extension starts at the last dot found in the filename
+    eSplitMode_CustomDot ///< Extension starts at a user defined dot in the filename
+};
+
 class KRenameFile {
     typedef struct TFileDescription {
         QString filename;
@@ -29,10 +38,21 @@ class KRenameFile {
         QString directory;
         
         KUrl    url;
+
+        const TFileDescription & operator=( const TFileDescription & rhs ) 
+        {
+            filename  = rhs.filename;
+            extension = rhs.extension;
+            directory = rhs.directory;
+            url       = rhs.url;
+
+            return *this;
+        }
     };
 
  public:
     KRenameFile()
+        : m_bValid( false )
     {
     }
 
@@ -47,6 +67,15 @@ class KRenameFile {
         }        
 
     const KRenameFile & operator=( const KRenameFile & rhs );
+
+    /** 
+     * \returns true if this file references 
+     *               an existing file or directory
+     */
+    inline bool isValid() const
+    {
+        return m_bValid;
+    }
 
     inline const QString & srcFilename() const 
         {
@@ -94,13 +123,14 @@ class KRenameFile {
         }
 
  private:
-    void initFileDescription( TFileDescription & rDescription, const KUrl & url ) const;
+    void initFileDescription( TFileDescription & rDescription, const KUrl & url, ESplitMode eSplitMode, int dot ) const;
 
  private:
     TFileDescription m_src;
     TFileDescription m_dst;
 
     bool             m_bDirectory;
+    bool             m_bValid;
 };
 
 #endif // _KRENAME_FILE_H_
