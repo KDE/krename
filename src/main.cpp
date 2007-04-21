@@ -55,6 +55,7 @@ static KCmdLineOptions options[] =
     { "move +[dir]", I18N_NOOP("move files to directory"), 0 },
     { "profile +[profile]", I18N_NOOP("load the profile named [profile] on startup"), 0 },
     { "start", I18N_NOOP("start renaming immediately"), 0 },
+    { "test", I18N_NOOP("start KRename's selftest (developers only)"), 0 },
     { "previewitems <num>",  I18N_NOOP("only show <num> preview items"), 0 },
     KCmdLineLastOption
 };

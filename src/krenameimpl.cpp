@@ -20,6 +20,7 @@
 #include "filedialogextwidget.h"
 #include "firststartdlg.h"
 #include "krenamemodel.h"
+#include "krenametest.h"
 #include "krenamewindow.h"
 
 #include "ui_krenamefiles.h"
@@ -157,6 +158,11 @@ void KRenameImpl::addFileOrDir( KUrl url )
 void KRenameImpl::parseCmdLineOptions()
 {
     KCmdLineArgs* args = KCmdLineArgs::parsedArgs();
+
+    if( args->isSet( "test" ) )
+    {
+        this->selfTest();
+    }
 
     /*
     QCStringList optlist = args->getOptionList ( "r" );
@@ -324,6 +330,11 @@ void KRenameImpl::slotEnableControls()
 
 }
 
+void KRenameImpl::selfTest()
+{
+    KRenameTest* test = new KRenameTest();
+    test->startTest();    
+}
 
 #if 0
 // Own includes

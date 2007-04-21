@@ -16,6 +16,7 @@ set(krename_SRCS
   krenamefile.cpp 
   krenameimpl.cpp 
   krenamemodel.cpp
+  krenametest.cpp
   krenamewindow.cpp
   )
 
