@@ -334,6 +334,11 @@ void KRenameImpl::selfTest()
 {
     KRenameTest* test = new KRenameTest();
     test->startTest();    
+
+    // Make _really_ sure it comes to front
+    test->show();
+    test->activateWindow();
+    test->raise();
 }
 
 #if 0

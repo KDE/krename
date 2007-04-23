@@ -51,21 +51,78 @@ class KRenameFile {
     };
 
  public:
+    /** A list of KRenameFile objects
+     */
+    typedef QVector<KRenameFile> List;
+
+    /** Empty default constructor
+     *  which creates an invalid KRenameFile.
+     *
+     *  \see isValid
+     */
     KRenameFile()
         : m_bValid( false )
     {
     }
 
-    KRenameFile( KUrl src );
+    /** Construct a new KRenameFile from an url.
+     *  
+     *  The url will be tested for existance
+     *  and isValid() returns only true
+     *  if the url is existing.
+     *
+     *  \param src an url of a file or directory
+     *  \param eSplitMode splitmode which is used to separate
+     *                    filename and extension
+     *  \param dot dot to use as separator for eSplitMode_CustomDot
+     *  \see isValid()
+     */
+    KRenameFile( KUrl src, ESplitMode eSplitMode = eSplitMode_FirstDot, unsigned int dot = 1 );
+
+    /** Construct a new KRenameFile from an url.
+     *
+     *  The url is expected to exist and is not 
+     *  tested for existance. This is much faster than
+     *  the other constructor.
+     *
+     *  \param src an url of a file or directory
+     *  \param directory must be true if the url referes
+     *                   to a directory.
+     *  \param eSplitMode splitmode which is used to separate
+     *                    filename and extension
+     *  \param dot dot to use as separator for eSplitMode_CustomDot
+     */
+    KRenameFile( KUrl src, bool directory, ESplitMode eSplitMode = eSplitMode_FirstDot, unsigned int dot = 1 );
+
+    /** Copy constructor
+     *  \param rhs KRenameFile to copy
+     */
     KRenameFile( const KRenameFile & rhs );
 
-    typedef QVector<KRenameFile> List;
+    /** Set the splitmode to separate filename from fileextension
+     *  
+     *  \param eSplitMode splitmode which is used to separate
+     *                    filename and extension
+     *  \param dot dot to use as separator for eSplitMode_CustomDot
+     *
+     *  \see srcFilename() 
+     *  \see srcExtension()
+     */
+    void setCurrentSplitMode( ESplitMode eSplitMode, unsigned int dot = 1 );
 
+    /** Convert the KRenameFile into a string
+     *  that can be displayed to the user.
+     *
+     *  \returns original source url as string representation
+     */
     inline const QString toString() const
-        {
-            return m_src.url.prettyUrl();
-        }        
+    {
+        return m_src.url.prettyUrl();
+    }        
 
+    /** Assigns another KRenameFile to this KRenameFile
+     *  \param rhs object to assign
+     */
     const KRenameFile & operator=( const KRenameFile & rhs );
 
     /** 
@@ -78,9 +135,9 @@ class KRenameFile {
     }
 
     inline const QString & srcFilename() const 
-        {
-            return m_src.filename;
-        }
+    {
+        return m_src.filename;
+    }
 
     inline const QString & srcExtension() const 
         {
@@ -123,7 +180,7 @@ class KRenameFile {
         }
 
  private:
-    void initFileDescription( TFileDescription & rDescription, const KUrl & url, ESplitMode eSplitMode, int dot ) const;
+    void initFileDescription( TFileDescription & rDescription, const KUrl & url, ESplitMode eSplitMode, unsigned int dot ) const;
 
  private:
     TFileDescription m_src;
