@@ -71,4 +71,11 @@ bool KRenameModel::setData(const QModelIndex &index,
     return false;
 }
 
+void KRenameModel::addFile( const KRenameFile & file )
+{
+    this->beginInsertRows( QModelIndex(), 0, m_vector->size() );
+    m_vector->push_back( file );
+    this->endInsertRows();
+}
+
 #include "krenamemodel.moc"

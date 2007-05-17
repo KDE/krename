@@ -85,10 +85,25 @@ class KRenameImpl : public QObject {
      */
     void slotAddFiles();
 
+    /** Called when the user clicks the "Remove" buttons.
+     *  Remove selected files from the list.
+     */
+    void slotRemoveFiles();
+
+    /** Called when the user clicks the "Remove All..." buttons.
+     *  Remove all files from the list.
+     */
+    void slotRemoveAllFiles();
+
     /** Ensures that all controls have the current
      *  enabled/disabled state
      */
     void slotEnableControls();
+
+    /** Updates the count of files 
+     *  in the file list of KRename
+     */
+    void slotUpdateCount();
 
  private:
     KRenameWindow* m_window;

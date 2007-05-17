@@ -108,7 +108,7 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const KU
                 do {
                     splitPos = file.indexOf( '.', splitPos + 1 );
                     ++i;
-                } while( i < dot && splitPos != -1 );
+                } while( i < static_cast<int>(dot) && splitPos != -1 );
             }
             else
                 // if dot == 0, do not take an extension

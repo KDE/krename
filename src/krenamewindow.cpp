@@ -65,7 +65,7 @@ static const KRenameWindow::TGuiMode tAdvancedMode = {
 KRenameWindow::KRenameWindow( EGuiMode guiMode, QWidget* parent )
     : KMainWindow( parent ), 
       m_eGuiMode( guiMode ), m_curPage( 0 ), m_guiMode( NULL ), 
-      m_buttonBack( NULL ), m_buttonNext( NULL )
+      m_fileCount( 0 ), m_buttonBack( NULL ), m_buttonNext( NULL )
 {
     QWidget*     center = new QWidget();
     QVBoxLayout* layout = new QVBoxLayout( center );
@@ -205,6 +205,25 @@ void KRenameWindow::enableControls()
 
     if( m_buttonFinish )
         m_buttonFinish->setEnabled( m_curPage == m_guiMode->numPages - 1 );
+
+    // enable gui controls
+    m_pageFiles->buttonRemove->setEnabled( m_fileCount );
+    m_pageFiles->buttonRemoveAll->setEnabled( m_fileCount );
+    m_pageFiles->checkName->setEnabled( m_pageFiles->checkPreview->isChecked() );
+
+    m_pageFiles->buttonUp->setEnabled( m_fileCount );
+    m_pageFiles->buttonMove->setEnabled( m_fileCount );
+    m_pageFiles->buttonDown->setEnabled( m_fileCount );
+
+
+}
+
+void KRenameWindow::setCount( unsigned int count )
+{
+    m_fileCount = count;
+    m_pageFiles->labelCount->setText( i18n("<b>Files:<b> %1", m_fileCount ) );
+
+    this->enableControls();
 }
 
 void KRenameWindow::slotBack()

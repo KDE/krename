@@ -73,6 +73,11 @@ class KRenameWindow : public KMainWindow {
         const int   mapIndex[KRenameWindow::MAX_PAGES];
     } TGuiMode;
 
+    /** Set the count displayed on the files tab of KRename
+     *  \param count typically the number of files in the list
+     */
+    void setCount( unsigned int count );
+
  private slots:
     void slotBack();
     void slotNext();
@@ -96,6 +101,7 @@ class KRenameWindow : public KMainWindow {
     EGuiMode          m_eGuiMode;  /// The current gui mode
     int               m_curPage;   /// The index of the current page in the current gui mode
     const TGuiMode*   m_guiMode;   /// The description structure of the current gui mode
+    int               m_fileCount; /// Current number of files; used for enabled disabled state
 
     QStackedWidget*   m_stackTop;  /// Contains a title label in wizard mode
                                    /// and a tabbar in advanced mode
@@ -117,5 +123,6 @@ class KRenameWindow : public KMainWindow {
     Ui::KRenamePlugins*     m_pagePlugins;
     Ui::KRenameFilename*    m_pageFilename;
 };
+
 
 #endif // _KRENAMEWINDOW_H_

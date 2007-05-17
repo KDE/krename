@@ -28,12 +28,16 @@ class KRenameModel : public QAbstractListModel {
    KRenameModel( KRenameFile::List* vector );
    ~KRenameModel();
 
+   void addFile( const KRenameFile & file );
+
    virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const;
    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
 
    Qt::ItemFlags flags(const QModelIndex &index) const;
    bool setData(const QModelIndex &index, const QVariant &value, int role);
 
+   void append( const KRenameFile & file );
+ 
  private:
    KRenameFile::List* m_vector;
 };

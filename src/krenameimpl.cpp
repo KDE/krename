@@ -36,6 +36,7 @@
 #include <kfiledialog.h>
 #include <kmenu.h>
 #include <kmenubar.h>
+#include <kmessagebox.h>
 #include <kstandardaction.h>
 
 #include <QStringListModel>
@@ -51,6 +52,7 @@ KRenameImpl::KRenameImpl( KRenameWindow* window )
 
     parseCmdLineOptions();
     slotEnableControls();
+    slotUpdateCount();
 }
 
 KRenameImpl::~KRenameImpl()
@@ -146,13 +148,18 @@ void KRenameImpl::setupActions()
 void KRenameImpl::setupSlots()
 {
     connect( m_window->m_pageFiles->buttonAdd, SIGNAL(clicked()), SLOT(slotAddFiles()));
+    connect( m_window->m_pageFiles->buttonRemove, SIGNAL(clicked()), SLOT(slotRemoveFiles()));
+    connect( m_window->m_pageFiles->buttonRemoveAll, SIGNAL(clicked()), SLOT(slotRemoveAllFiles()));
 }
 
 void KRenameImpl::addFileOrDir( KUrl url )
 {
     KRenameFile item( url );
 
-    m_vector.append( item );
+    m_model->addFile( item );
+    qDebug("m_vector %i\n", m_vector.size() );
+
+    this->slotUpdateCount();
 }
 
 void KRenameImpl::parseCmdLineOptions()
@@ -325,9 +332,29 @@ void KRenameImpl::slotAddFiles()
     */
 }
 
-void KRenameImpl::slotEnableControls()
+void KRenameImpl::slotRemoveFiles()
 {
 
+}
+
+void KRenameImpl::slotRemoveAllFiles()
+{
+    // TODO: Show message box: Do you really want to remove all files.
+    if( KMessageBox::questionYesNo( m_window, i18n("Do you really want to remove all files from the list?"),
+                                    i18n("KRename"), KStandardGuiItem::yes(), KStandardGuiItem::no(),
+                                    "KRenameRemoveAllFromFileList" ) == KMessageBox::Yes )
+    {
+        m_vector.clear();
+        m_window->m_pageFiles->fileList->reset();
+
+
+        this->slotUpdateCount();
+    }
+}
+
+void KRenameImpl::slotEnableControls()
+{
+    
 }
 
 void KRenameImpl::selfTest()
@@ -339,6 +366,13 @@ void KRenameImpl::selfTest()
     test->show();
     test->activateWindow();
     test->raise();
+}
+
+void KRenameImpl::slotUpdateCount()
+{
+    m_window->setCount( m_vector.size() );
+
+    this->slotEnableControls();
 }
 
 #if 0
