@@ -41,6 +41,8 @@
 
 #include <QStringListModel>
 
+#include <QHeaderView>
+
 KRenameImpl::KRenameImpl( KRenameWindow* window )
     : QObject( (QObject*)window ), m_window( window )
 {
@@ -52,8 +54,9 @@ KRenameImpl::KRenameImpl( KRenameWindow* window )
 
     m_previewModel = new KRenamePreviewModel( &m_vector );
     m_window->m_pageSimple->listPreview->setModel( m_previewModel );
+    m_window->m_pageFilename->listPreview->setModel( m_previewModel );
 
-//m_window->m_pageSimple->listPreview->
+    m_window->m_pageSimple->listPreview->setHeader( new QHeaderView( Qt::Horizontal ) );
     m_renamer.setFiles( &m_vector );
     m_renamer.setText("& Hallo");
 

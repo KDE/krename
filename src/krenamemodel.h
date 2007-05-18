@@ -54,6 +54,9 @@ class KRenamePreviewModel : public QAbstractTableModel {
    virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const;
    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
 
+   virtual QModelIndex parent ( const QModelIndex & index ) const;
+   virtual QModelIndex sibling ( int row, int column, const QModelIndex & index ) const;
+
    virtual QVariant headerData ( int section, Qt::Orientation orientation, int role ) const;
  private:
    KRenameFile::List* m_vector;

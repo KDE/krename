@@ -134,9 +134,20 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
     
 }
 
+QModelIndex KRenamePreviewModel::parent ( const QModelIndex & index ) const
+{
+    return QModelIndex();
+}
+
+QModelIndex KRenamePreviewModel::sibling ( int row, int column, const QModelIndex & index ) const
+{
+    return QModelIndex();
+}
+
 void KRenamePreviewModel::refresh() 
 {
     emit reset();
 }
+
 
 #include "krenamemodel.moc"
