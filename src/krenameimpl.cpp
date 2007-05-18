@@ -50,6 +50,13 @@ KRenameImpl::KRenameImpl( KRenameWindow* window )
     m_model = new KRenameModel( &m_vector );
     window->m_pageFiles->fileList->setModel( m_model );
 
+    m_previewModel = new KRenamePreviewModel( &m_vector );
+    m_window->m_pageSimple->listPreview->setModel( m_previewModel );
+
+//m_window->m_pageSimple->listPreview->
+    m_renamer.setFiles( &m_vector );
+    m_renamer.setText("& Hallo");
+
     parseCmdLineOptions();
     slotEnableControls();
     slotUpdateCount();
@@ -152,12 +159,26 @@ void KRenameImpl::setupSlots()
     connect( m_window->m_pageFiles->buttonRemoveAll, SIGNAL(clicked()), SLOT(slotRemoveAllFiles()));
 }
 
-void KRenameImpl::addFileOrDir( KUrl url )
+void KRenameImpl::addFileOrDir( const KUrl & url )
 {
     KRenameFile item( url );
 
     m_model->addFile( item );
-    qDebug("m_vector %i\n", m_vector.size() );
+
+    this->slotUpdateCount();
+}
+
+void KRenameImpl::addFilesOrDirs( const KUrl::List & list )
+{
+    KUrl::List::ConstIterator it   = list.begin();
+    
+    while( it != list.end() )
+    {
+        KRenameFile item( *it );
+        m_model->addFile( item );
+
+        ++it;
+    }
 
     this->slotUpdateCount();
 }
@@ -183,8 +204,11 @@ void KRenameImpl::parseCmdLineOptions()
     */
 
     // Add all files from the commandline options
+    KUrl::List list;
     for( int i = 0; i < args->count(); i++)
-        this->addFileOrDir( args->url( i ) );
+        list.append( args->url( i ) );
+
+    this->addFilesOrDirs( list );
 
     /*
     // load the profile first, so that we do not overwrite other
@@ -287,14 +311,7 @@ void KRenameImpl::slotAddFiles()
 
     if( dialog.exec() == QDialog::Accepted ) 
     {
-        KUrl::List           list = dialog.selectedUrls();
-        KUrl::List::Iterator it   = list.begin();
-
-        while( it != list.end() )
-        {
-            this->addFileOrDir( *it );
-            ++it;
-        }
+        this->addFilesOrDirs( dialog.selectedUrls() );
     }
 
     //KUrl::List list = KFileDialog::getOpenUrls( KUrl("kfiledialog://krename"), "*", m_window );
@@ -373,6 +390,17 @@ void KRenameImpl::slotUpdateCount()
     m_window->setCount( m_vector.size() );
 
     this->slotEnableControls();
+    this->slotUpdatePreview();
+}
+
+void KRenameImpl::slotUpdatePreview()
+{
+    KApplication::setOverrideCursor( Qt::WaitCursor );
+    m_renamer.processFilenames();
+    KApplication::restoreOverrideCursor();
+
+    m_previewModel->refresh();
+    //m_window->m_pageSimple->listPreview->reset();
 }
 
 #if 0

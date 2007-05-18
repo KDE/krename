@@ -42,6 +42,22 @@ class KRenameModel : public QAbstractListModel {
    KRenameFile::List* m_vector;
 };
 
+class KRenamePreviewModel : public QAbstractTableModel {
+ Q_OBJECT
+ public:
+   KRenamePreviewModel( KRenameFile::List* vector );
+   ~KRenamePreviewModel();
+
+   void refresh();
+
+   virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const;
+   virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const;
+   virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
+
+   virtual QVariant headerData ( int section, Qt::Orientation orientation, int role ) const;
+ private:
+   KRenameFile::List* m_vector;
+};
 
 #endif // KRENAMEMODEL_H
 

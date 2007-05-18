@@ -17,6 +17,8 @@
 
 #include "krenamemodel.h"
 
+#include <klocale.h>
+
 KRenameModel::KRenameModel( KRenameFile::List* vector )
     : QAbstractListModel(),
       m_vector( vector )
@@ -76,6 +78,65 @@ void KRenameModel::addFile( const KRenameFile & file )
     this->beginInsertRows( QModelIndex(), 0, m_vector->size() );
     m_vector->push_back( file );
     this->endInsertRows();
+}
+
+
+
+
+
+
+KRenamePreviewModel::KRenamePreviewModel( KRenameFile::List* vector )
+    : m_vector( vector )
+{
+
+}
+
+KRenamePreviewModel::~KRenamePreviewModel()
+{
+
+}
+
+int KRenamePreviewModel::rowCount ( const QModelIndex & parent ) const
+{
+    return m_vector->size();
+}
+
+int KRenamePreviewModel::columnCount ( const QModelIndex & parent ) const
+{
+    return 2;
+}
+
+QVariant KRenamePreviewModel::headerData ( int section, Qt::Orientation orientation, int role ) const
+{
+    if (orientation != Qt::Horizontal || section >= 2 || role != Qt::DisplayRole )
+        return QVariant();
+
+    return section ? i18n("Origin") : i18n("Renamed");
+} 
+
+QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
+{
+    if (!index.isValid())
+        return QVariant();
+    
+    if (index.row() >= m_vector->size())
+        return QVariant();
+    
+    if (index.column() >= 2 )
+        return QVariant();
+
+    if (role == Qt::DisplayRole)
+    {
+        return index.column() ? m_vector->at(index.row()).dstFilename() : m_vector->at(index.row()).srcFilename();
+    }
+    else
+        return QVariant();
+    
+}
+
+void KRenamePreviewModel::refresh() 
+{
+    emit reset();
 }
 
 #include "krenamemodel.moc"

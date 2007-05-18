@@ -175,7 +175,19 @@ void KRenameWindow::setupGui()
     m_buttons->addButton( m_buttonFinish, QDialogButtonBox::AcceptRole );
     m_buttons->addButton( m_buttonClose, QDialogButtonBox::RejectRole );
 
-    enableControls();
+    setupSlots();
+    slotEnableControls();
+}
+
+void KRenameWindow::setupSlots()
+{
+    connect( m_pageDests->optionRename,    SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
+    connect( m_pageDests->optionCopy,      SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
+    connect( m_pageDests->optionMove,      SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
+    connect( m_pageDests->optionLink,      SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
+    connect( m_pageDests->checkUndoScript, SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
+
+
 }
 
 void KRenameWindow::showPage( int index )
@@ -191,11 +203,11 @@ void KRenameWindow::showPage( int index )
             m_lblStep->setText( i18n("(Step %1/%2)", index+1, m_guiMode->numPages ) );
         }
 
-        enableControls();
+        slotEnableControls();
     }
 }
 
-void KRenameWindow::enableControls()
+void KRenameWindow::slotEnableControls()
 {
     if( m_buttonNext )
         m_buttonNext->setEnabled( m_curPage < m_guiMode->numPages - 1 );
@@ -215,7 +227,9 @@ void KRenameWindow::enableControls()
     m_pageFiles->buttonMove->setEnabled( m_fileCount );
     m_pageFiles->buttonDown->setEnabled( m_fileCount );
 
-
+    m_pageDests->urlrequester->setEnabled( !m_pageDests->optionRename->isChecked() );
+    m_pageDests->groupUndo->setEnabled( !m_pageDests->optionCopy->isChecked() );
+    m_pageDests->undorequester->setEnabled( m_pageDests->checkUndoScript->isChecked() );
 }
 
 void KRenameWindow::setCount( unsigned int count )
@@ -223,7 +237,7 @@ void KRenameWindow::setCount( unsigned int count )
     m_fileCount = count;
     m_pageFiles->labelCount->setText( i18n("<b>Files:<b> %1", m_fileCount ) );
 
-    this->enableControls();
+    this->slotEnableControls();
 }
 
 void KRenameWindow::slotBack()

@@ -22,9 +22,11 @@
 
 #include <kurl.h>
 
+#include "batchrenamer.h"
 #include "krenamefile.h"
 
 class KRenameModel;
+class KRenamePreviewModel;
 class KRenameWindow;
 
 class KRenameImpl : public QObject {
@@ -62,12 +64,29 @@ class KRenameImpl : public QObject {
      */
     void setupSlots();
 
-    /** Adds an url to the list of files which will 
+    /** Adds a single url to the list of files which will 
      *  be renamed.
      *
+     *  If you have a KUrl::List use addFilesOrDirs which is 
+     *  faster.
+     *
      *  \param url must be an existing file or directory.
+     *
+     *  \see addFilesOrDirs
      */
-    void addFileOrDir( KUrl url );
+    void addFileOrDir( const KUrl & url );
+
+    /** Adds a list of urls to the list of files which will 
+     *  be renamed.
+     *
+     *  Adding a whole list is much faster than adding single
+     *  files.
+     *
+     *  \param list of existing files or directories
+     *
+     *  \see addFileOrDir
+     */
+    void addFilesOrDirs( const KUrl::List & list );
 
     /** Parses commandline options
      */
@@ -105,11 +124,18 @@ class KRenameImpl : public QObject {
      */
     void slotUpdateCount();
 
+    /** Updates the preview of the filenames after renaming
+     */
+    void slotUpdatePreview();
+
  private:
-    KRenameWindow* m_window;
-    KRenameModel*  m_model;
+    KRenameWindow*        m_window;
+    KRenameModel*         m_model;
+    KRenamePreviewModel*  m_previewModel;
     
-    KRenameFile::List m_vector;
+    KRenameFile::List     m_vector;
+
+    BatchRenamer          m_renamer;
 };
 
 #if 0 

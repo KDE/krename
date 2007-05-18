@@ -154,9 +154,19 @@ class KRenameFile {
             return m_src.url;
         }
 
+    inline void setDstFilename( const QString & filename ) 
+        {
+            m_dst.filename = filename;
+        }
+
     inline const QString & dstFilename() const 
         {
             return m_dst.filename;
+        }
+
+    inline void setDstExtension( const QString & extension ) 
+        {
+            m_dst.extension = extension;
         }
 
     inline const QString & dstExtension() const 
@@ -164,9 +174,19 @@ class KRenameFile {
             return m_dst.extension;
         }
 
+    inline void setDstDirectory( const QString & directory ) 
+        {
+            m_dst.directory = directory;
+        }
+
     inline const QString & dstDirectory() const 
         {
             return m_dst.directory;
+        }
+
+    inline void setDstUrl( const KUrl & url ) 
+        {
+            m_dst.url = url;
         }
 
     inline const KUrl & dstUrl() const 

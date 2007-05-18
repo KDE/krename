@@ -78,6 +78,8 @@ class KRenameWindow : public KMainWindow {
      */
     void setCount( unsigned int count );
 
+ signals:
+
  private slots:
     void slotBack();
     void slotNext();
@@ -88,14 +90,18 @@ class KRenameWindow : public KMainWindow {
      */
     void showPage( int index );
 
+    /** Resets the enabled/disabled state of all GUI elements correctly
+     */
+    void slotEnableControls();
+
  private:
     /** Configures the GUI for the current GUI mode
      */
     void setupGui();
 
-    /** Resets the enabled/disabled state of all GUI elements correctly
+    /** Setup all signals and slots
      */
-    void enableControls();
+    void setupSlots();
 
  private:
     EGuiMode          m_eGuiMode;  /// The current gui mode

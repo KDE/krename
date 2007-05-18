@@ -11,6 +11,7 @@ add_definitions( ${KDE4_DEFINITIONS} )
 
 set(krename_SRCS
   main.cpp 
+  batchrenamer.cpp
   filedialogextwidget.cpp
   firststartdlg.cpp
   krenamefile.cpp 

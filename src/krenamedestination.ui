@@ -13,11 +13,20 @@
    <string/>
   </property>
   <layout class="QVBoxLayout" >
-   <property name="margin" >
-    <number>9</number>
-   </property>
    <property name="spacing" >
     <number>6</number>
+   </property>
+   <property name="leftMargin" >
+    <number>9</number>
+   </property>
+   <property name="topMargin" >
+    <number>9</number>
+   </property>
+   <property name="rightMargin" >
+    <number>9</number>
+   </property>
+   <property name="bottomMargin" >
+    <number>9</number>
    </property>
    <item>
     <widget class="QGroupBox" name="groupOptions" >
@@ -25,11 +34,20 @@
       <string>&amp;Options</string>
      </property>
      <layout class="QVBoxLayout" >
-      <property name="margin" >
-       <number>9</number>
-      </property>
       <property name="spacing" >
        <number>6</number>
+      </property>
+      <property name="leftMargin" >
+       <number>9</number>
+      </property>
+      <property name="topMargin" >
+       <number>9</number>
+      </property>
+      <property name="rightMargin" >
+       <number>9</number>
+      </property>
+      <property name="bottomMargin" >
+       <number>9</number>
       </property>
       <item>
        <widget class="QRadioButton" name="optionRename" >
@@ -60,7 +78,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="urlrequester" />
+       <widget class="KUrlRequester" name="urlrequester" />
       </item>
       <item>
        <spacer>
@@ -91,11 +109,20 @@
       <string>&amp;Undo Renaming</string>
      </property>
      <layout class="QVBoxLayout" >
-      <property name="margin" >
-       <number>9</number>
-      </property>
       <property name="spacing" >
        <number>6</number>
+      </property>
+      <property name="leftMargin" >
+       <number>9</number>
+      </property>
+      <property name="topMargin" >
+       <number>9</number>
+      </property>
+      <property name="rightMargin" >
+       <number>9</number>
+      </property>
+      <property name="bottomMargin" >
+       <number>9</number>
       </property>
       <item>
        <widget class="QCheckBox" name="checkUndoScript" >
@@ -105,7 +132,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="undorequester" />
+       <widget class="KUrlRequester" name="undorequester" />
       </item>
      </layout>
     </widget>
@@ -125,6 +152,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KUrlRequester</class>
+   <extends>QLineEdit</extends>
+   <header location="global" >kurlrequester.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
