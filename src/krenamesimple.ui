@@ -100,7 +100,7 @@
          </widget>
         </item>
         <item row="2" column="2" >
-         <widget class="QComboBox" name="comboFilenameCustom" >
+         <widget class="ExtHistoryCombo" name="comboFilenameCustom" >
           <property name="enabled" >
            <bool>false</bool>
           </property>
@@ -168,7 +168,7 @@
          </widget>
         </item>
         <item row="1" column="2" >
-         <widget class="QComboBox" name="comboSuffixCustom" >
+         <widget class="ExtHistoryCombo" name="comboSuffixCustom" >
           <property name="sizePolicy" >
            <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
             <horstretch>2</horstretch>
@@ -293,7 +293,7 @@
          </widget>
         </item>
         <item row="0" column="2" >
-         <widget class="QComboBox" name="comboPrefixCustom" >
+         <widget class="ExtHistoryCombo" name="comboPrefixCustom" >
           <property name="sizePolicy" >
            <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
             <horstretch>2</horstretch>
@@ -306,7 +306,7 @@
          </widget>
         </item>
         <item row="3" column="2" >
-         <widget class="QComboBox" name="comboExtensionCustom" >
+         <widget class="ExtHistoryCombo" name="comboExtensionCustom" >
           <property name="enabled" >
            <bool>false</bool>
           </property>
@@ -547,6 +547,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ExtHistoryCombo</class>
+   <extends>QComboBox</extends>
+   <header>exthistorycombo.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

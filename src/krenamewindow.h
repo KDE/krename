@@ -19,6 +19,7 @@
 #define _KRENAMEWINDOW_H_
 
 #include <kmainwindow.h>
+#include "batchrenamer.h"
 
 class KPushButton;
 class QDialogButtonBox;
@@ -80,6 +81,28 @@ class KRenameWindow : public KMainWindow {
 
  signals:
 
+    /** Called whenever the user changes the rename mode
+     *
+     *  @param mode the renaming mode selected by the user
+     */
+    void renameModeChanged( ERenameMode mode );
+
+    /** Called whenever the user has changed the template for the filename
+     *
+     *  @param filename the new template for the filename
+     */
+    void filenameTemplateChanged( const QString & filename );
+
+    /** Called whenever the user has changed the template for the extension
+     *
+     *  @param filename the new template for the extension
+     */
+    void extensionTemplateChanged( const QString & extension );
+
+    /** Called whenever the GUI wants an updated preview
+     */
+    void updatePreview();
+
  private slots:
     void slotBack();
     void slotNext();
@@ -93,6 +116,16 @@ class KRenameWindow : public KMainWindow {
     /** Resets the enabled/disabled state of all GUI elements correctly
      */
     void slotEnableControls();
+
+    /** Called when one of the checkboxes for 
+     *  rename, copy, more or link was clicked
+     *  to change the rename mode.
+     */
+    void slotRenameModeChanged();
+
+    /** Called whenever one of the template fields has changed
+     */
+    void slotTemplateChanged();
 
  private:
     /** Configures the GUI for the current GUI mode

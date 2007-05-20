@@ -20,6 +20,7 @@
 
 #include <QDateTime>
 #include <QList>
+#include <QObject>
 
 #include "krenamefile.h"
 
@@ -93,7 +94,9 @@ class PluginLoader;
  *
  *  @author Dominik Seichter
  */
-class BatchRenamer {
+class BatchRenamer : public QObject {
+    Q_OBJECT
+
     public:
         BatchRenamer();
         ~BatchRenamer();
@@ -111,17 +114,6 @@ class BatchRenamer {
          *  @returns the list of files or NULL if none was set.
          */
         inline const KRenameFile::List* files() const;
-
-        /** Sets the current mode of renaming.
-         *  KRename can rename files, move them while
-         *  renaming to another directory, rename copies
-         *  or create renamed sym-links.
-         *
-         *  This mode specifies what should be done with the files.
-         *
-         *  @param mode the renaming mode.
-         */
-        inline void setRenameMode( ERenameMode mode );
 
         /** 
          *  @returns the current renaming mode
@@ -142,8 +134,6 @@ class BatchRenamer {
         void processFiles( ProgressDialog* p, QObject* object );
         void createPreview( QListView* list );
 
-        inline void setText( const QString & t ) { text = t; doEscape( text, false ); }
-        inline void setExText( const QString & t ) { extext = t; }
         inline void setDirname( const KUrl & url ) { dirname = url; }
         inline void setUndoScript( const QString & t ) { m_undoScript = t; }
         inline void setUndo( bool b ) { undo = b; }
@@ -180,6 +170,33 @@ class BatchRenamer {
         static void escape( QString & text, const QString & token, const QString & sequence );
 
         //static QString buildFilename( fileentry* entry, bool dir = true );
+
+    public slots:
+
+        /** Sets the current mode of renaming.
+         *  KRename can rename files, move them while
+         *  renaming to another directory, rename copies
+         *  or create renamed sym-links.
+         *
+         *  This mode specifies what should be done with the files.
+         *
+         *  @param mode the renaming mode.
+         */
+        inline void setRenameMode( ERenameMode mode );
+
+        /** Sets the template for the filename that is used
+         *  to transform the filename to its final representation.
+         *
+         *  @param t the new template
+         */
+        inline void setFilenameTemplate( const QString & t );
+
+        /** Sets the template for the filename that is used
+         *  to transform the filename to its final representation.
+         *
+         *  @param t the new template
+         */
+        inline void setExtensionTemplate( const QString & t );
 
     private:
         /** 
@@ -250,6 +267,18 @@ void BatchRenamer::setRenameMode( ERenameMode mode )
 ERenameMode BatchRenamer::renameMode() const
 {
     return m_renameMode;
+}
+
+void BatchRenamer::setFilenameTemplate( const QString & t ) 
+{ 
+    text = t;
+    doEscape( text, false ); 
+}
+
+void BatchRenamer::setExtensionTemplate( const QString & t ) 
+{ 
+    extext = t;
+    doEscape( extext, false ); 
 }
 
 #endif

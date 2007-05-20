@@ -181,13 +181,18 @@ void KRenameWindow::setupGui()
 
 void KRenameWindow::setupSlots()
 {
-    connect( m_pageDests->optionRename,    SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
-    connect( m_pageDests->optionCopy,      SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
-    connect( m_pageDests->optionMove,      SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
-    connect( m_pageDests->optionLink,      SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
+    connect( m_pageDests->optionRename,    SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
+    connect( m_pageDests->optionCopy,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
+    connect( m_pageDests->optionMove,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
+    connect( m_pageDests->optionLink,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->checkUndoScript, SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
 
-
+    connect( m_pageFilename->filenameTemplate,   SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
+    connect( m_pageFilename->extensionTemplate,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
+    connect( m_pageSimple->comboFilenameCustom,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
+    connect( m_pageSimple->comboSuffixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
+    connect( m_pageSimple->comboPrefixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
+    connect( m_pageSimple->comboExtensionCustom, SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
 }
 
 void KRenameWindow::showPage( int index )
@@ -249,5 +254,48 @@ void KRenameWindow::slotNext()
 {
     this->showPage( m_curPage+1 );
 }
+
+void KRenameWindow::slotRenameModeChanged()
+{
+    ERenameMode mode = eRenameMode_Rename;
+
+    if( m_pageDests->optionRename->isChecked() )
+        mode = eRenameMode_Rename;
+    else if( m_pageDests->optionCopy->isChecked() )
+        mode = eRenameMode_Copy;
+    else if( m_pageDests->optionMove->isChecked() ) 
+        mode = eRenameMode_Move;
+    else if( m_pageDests->optionLink->isChecked() )
+        mode = eRenameMode_Link;
+
+    emit renameModeChanged( mode );
+
+    this->slotEnableControls();
+}
+
+void KRenameWindow::slotTemplateChanged()
+{
+    QString filename;
+    QString extension;
+
+    if( m_eGuiMode == eGuiMode_Wizard ) 
+    {
+
+
+    }
+    else
+    {
+        filename  = m_pageFilename->filenameTemplate->currentText();
+        extension = m_pageFilename->extensionTemplate->currentText();
+    }
+
+    emit filenameTemplateChanged( filename );
+    emit extensionTemplateChanged( extension );
+
+    emit updatePreview();
+
+    this->slotEnableControls();
+}
+
 
 #include "krenamewindow.moc"

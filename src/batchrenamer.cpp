@@ -1026,4 +1026,5 @@ void BatchRenamer::findCounterReset( int i )
 	}
 }
 
+#include "batchrenamer.moc"
 

@@ -58,7 +58,6 @@ KRenameImpl::KRenameImpl( KRenameWindow* window )
 
     m_window->m_pageSimple->listPreview->setHeader( new QHeaderView( Qt::Horizontal ) );
     m_renamer.setFiles( &m_vector );
-    m_renamer.setText("& Hallo");
 
     parseCmdLineOptions();
     slotEnableControls();
@@ -160,6 +159,16 @@ void KRenameImpl::setupSlots()
     connect( m_window->m_pageFiles->buttonAdd, SIGNAL(clicked()), SLOT(slotAddFiles()));
     connect( m_window->m_pageFiles->buttonRemove, SIGNAL(clicked()), SLOT(slotRemoveFiles()));
     connect( m_window->m_pageFiles->buttonRemoveAll, SIGNAL(clicked()), SLOT(slotRemoveAllFiles()));
+
+    connect( m_window, SIGNAL(updatePreview()), SLOT(slotUpdatePreview()));
+
+    QObject::connect( m_window, SIGNAL(renameModeChanged(ERenameMode)), &m_renamer, SLOT(setRenameMode(ERenameMode)));
+    QObject::connect( m_window, SIGNAL(filenameTemplateChanged(const QString &)), 
+                      &m_renamer, SLOT(setFilenameTemplate(const QString &)));
+    QObject::connect( m_window, SIGNAL(extensionTemplateChanged(const QString &)), 
+                      &m_renamer, SLOT(setExtensionTemplate(const QString &)));
+
+
 }
 
 void KRenameImpl::addFileOrDir( const KUrl & url )
