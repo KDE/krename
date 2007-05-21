@@ -65,6 +65,13 @@ class KRenameTest : public QWidget {
                                   const QString & filename, const QString & extension,
                                   ESplitMode eSplitMode, int dot );
 
+
+    /** Test the BatchRenamer class
+     */
+    void testBatchRenamer();
+    bool tokenTest( const char* token, const QString & filename, const QString & expected) ;
+
+
     /** Write a test caption to the output window
      *  \param text the text which will be output
      */
@@ -80,6 +87,7 @@ class KRenameTest : public QWidget {
 
     int        m_counter;    ///< test counter (increased for each individual test)
     bool       m_result;     ///< return value of tests is stored here
+    bool       m_verbose;    ///< if true print more information for each test
     int        m_success;    ///< counter of successfull tests
     int        m_failed;     ///< counter of failed tests
 

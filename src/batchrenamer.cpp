@@ -861,7 +861,7 @@ QString BatchRenamer::findLength( const QString & token, const QString & name )
 {
     if( token.toLower().startsWith( "length" ) ) {
         int minus = 0;
-        if( token[6] == '-' ) {
+        if( token.length() > 6 && token[6] == '-' ) {
             bool n = false;
             minus = token.mid( 7, token.length() - 7 ).toInt( &n );
             if( !n )

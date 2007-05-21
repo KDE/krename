@@ -18,6 +18,7 @@
 #include "krenametest.h"
 
 #include "krenamefile.h"
+#include "batchrenamer.h"
 
 #include <stdio.h>
 
@@ -41,14 +42,37 @@
                             PRINT_RESULT( name );
 
 
+#define RUN_TOKEN_TEST( name, templ, filename, expect ) m_result = tokenTest( templ, filename, expect ); \
+                                                        PRINT_RESULT( name );
+
+#define RUN_NUMBER_TEST( name, length, start, step, skip ) m_result = numberingTest( length, start, step, skip, 100 ); \
+                                                           PRINT_RESULT( name );
+
+#define RUN_NUMBER_TESTS( name, start, step, skip ) m_result = numberingTest( 1, start, step, skip, 100 ); \
+                                                    PRINT_RESULT( name ); \
+                                                    m_result = numberingTest( 2, start, step, skip, 100 ); \
+                                                    PRINT_RESULT( name ); \
+                                                    m_result = numberingTest( 3, start, step, skip, 100 ); \
+                                                    PRINT_RESULT( name ); \
+                                                    m_result = numberingTest( 4, start, step, skip, 100 ); \
+                                                    PRINT_RESULT( name ); \
+                                                    m_result = numberingTest( 10, start, step, skip, 100 ); \
+                                                    PRINT_RESULT( name ); \
+
+#define RUN_REPLACE_TEST( name, token, file, expect, replace, with, regExp ) \
+                                                        m_result = replaceTest( token, file, expect, replace, with, regExp); \
+                                                        PRINT_RESULT( name );
+
+
 KRenameTest::KRenameTest()
     : QWidget( ),
-      m_counter( 0 ), m_success( 0 ), m_failed( 0 )
+      m_counter( 0 ), m_verbose( false ), m_success( 0 ), m_failed( 0 )
 {
     QVBoxLayout* layout = new QVBoxLayout( this );
 
     m_text = new QTextEdit( this );
     m_text->setReadOnly( true );
+    m_text->setFont( QFont("Courier") );
 
     layout->addWidget( m_text );
 
@@ -64,6 +88,7 @@ KRenameTest::~KRenameTest()
 void KRenameTest::startTest()
 {
     testKRenameFile();
+    testBatchRenamer();
 
     this->writeTestMessage( "<b>Results:</b>\n\nSuccessfull: %i Failed %i", m_success, m_failed );
 }
@@ -217,3 +242,108 @@ bool KRenameTest::testKRenameFileInternal( const KUrl & url, const QString & dir
 
     return true;
 }
+
+void KRenameTest::testBatchRenamer()
+{
+    writeTestHeader( "BatchRenamer" );
+
+    // Testing the basic KRename tokens
+    QString filename( " Test File name " );
+    QString directory1( "krename" );
+    QString directory2( "home" );
+    
+    RUN_TOKEN_TEST( "$ Test", "$", filename, filename );
+    RUN_TOKEN_TEST( "& Test", "&", filename, filename.toUpper() );
+    RUN_TOKEN_TEST( "% Test", "%", filename, filename.toLower() );
+    RUN_TOKEN_TEST( "* Test", "*", filename, " Test File Name " );
+    RUN_TOKEN_TEST( "\\ Test", "\\", filename, filename.trimmed() );
+    RUN_TOKEN_TEST( "# Test", "#", filename, QString::number( 0 ) );
+    RUN_TOKEN_TEST( "## Test", "##", filename, QString().sprintf("%02i", 0 ) );
+    RUN_TOKEN_TEST( "### Test", "###", filename, QString().sprintf("%03i", 0 ) );
+    RUN_TOKEN_TEST( "#### Test", "####", filename, QString().sprintf("%04i", 0 ) );
+    RUN_TOKEN_TEST( "##### Test", "#####", filename, QString().sprintf("%05i", 0 ) );
+    RUN_TOKEN_TEST( "#{100;2} Test", "#{100;2}", filename, QString::number( 100 ) );
+    RUN_TOKEN_TEST( "####{100;2} Test", "####{100;2}", filename, QString().sprintf("%04i", 100 ) );
+    RUN_TOKEN_TEST( "[1] Test", "[1]", filename, QString( filename[0] ) );
+    RUN_TOKEN_TEST( "[2] Test", "[2]", filename, QString( filename[1] )  );
+    RUN_TOKEN_TEST( "[3] Test", "[3]", filename, QString( filename[2] ) );
+    RUN_TOKEN_TEST( "[&4] Test", "[&4]", filename, QString( filename[3].toUpper()) );
+    RUN_TOKEN_TEST( "[$4] Test", "[$4]", filename, QString( filename[3] ) );
+    RUN_TOKEN_TEST( "[%4] Test", "[%4]", filename, QString( filename[3].toLower()) );
+    RUN_TOKEN_TEST( "[*4] Test", "[*4]", filename, QString( filename[3].toUpper()) );
+    RUN_TOKEN_TEST( "[\\1] Test", "[\\1]", filename, "" );
+    RUN_TOKEN_TEST( "[4-] Test", "[4-]", filename, filename.right( filename.length() - 3 ) );
+    RUN_TOKEN_TEST( "[&4-] Test", "[&4-]", filename, filename.right( filename.length() - 3 ).toUpper() );
+    RUN_TOKEN_TEST( "[$4-] Test", "[$4-]", filename, filename.right( filename.length() - 3 ) );
+    RUN_TOKEN_TEST( "[%4-] Test", "[%4-]", filename, filename.right( filename.length() - 3 ).toLower() );
+    RUN_TOKEN_TEST( "[*4-] Test", "[*4-]", filename, "St File Name " );
+    RUN_TOKEN_TEST( "[\\4-] Test", "[\\4-]", filename, filename.right( filename.length() - 3 ).trimmed() );
+    RUN_TOKEN_TEST( "[length] Test", "[length]", filename, QString::number( filename.length() ) );
+    RUN_TOKEN_TEST( "[length-0] Test", "[length-0]", filename, QString::number( filename.length() ) );
+    RUN_TOKEN_TEST( "[length-1] Test", "[length-1]", filename, QString::number( filename.length() - 1 ) );
+    RUN_TOKEN_TEST( "[length-2] Test", "[length-2]", filename, QString::number( filename.length() - 2 ) );
+    RUN_TOKEN_TEST( "[#length] Test", "[#length]", filename, QString::number( filename.length() ) );
+    RUN_TOKEN_TEST( "[#length-0] Test", "[#length-0]", filename, QString::number( filename.length() ) );
+    RUN_TOKEN_TEST( "[#length-1] Test", "[#length-1]", filename, QString::number( filename.length() - 1 ) );
+    RUN_TOKEN_TEST( "[#length-2] Test", "[#length-2]", filename, QString::number( filename.length() - 2 ) );
+    RUN_TOKEN_TEST( "[####length] Test", "[####length]", filename, QString().sprintf("%04i", filename.length() ) );
+    RUN_TOKEN_TEST( "[####length-0] Test", "[####length-0]", filename, QString().sprintf("%04i", filename.length() ) );
+    RUN_TOKEN_TEST( "[####length-1] Test", "[####length-1]", filename, QString().sprintf("%04i", filename.length() - 1) );
+    RUN_TOKEN_TEST( "[####length-2] Test", "[####length-2]", filename, QString().sprintf("%04i", filename.length() - 2) );
+    RUN_TOKEN_TEST( "[6-9] Test", "[6-9]", filename, filename.mid( 5, 4 ) );
+    RUN_TOKEN_TEST( "[&6-9] Test", "[&6-9]", filename, filename.mid( 5, 4 ).toUpper() );
+    RUN_TOKEN_TEST( "[$6-9] Test", "[$6-9]", filename, filename.mid( 5, 4 ) );
+    RUN_TOKEN_TEST( "[%6-9] Test", "[%6-9]", filename, filename.mid( 5, 4 ).toLower() );
+    RUN_TOKEN_TEST( "[*6-9] Test", "[*6-9]", filename, filename.mid( 5, 4 ) );
+    RUN_TOKEN_TEST( "[\\6-9] Test", "[\\6-9]", filename, filename.mid( 5, 4 ).trimmed() );
+    RUN_TOKEN_TEST( "[6;4] Test", "[6;4]", filename, filename.mid( 5, 4 ) );
+    RUN_TOKEN_TEST( "[&6;4] Test", "[&6;4]", filename, filename.mid( 5, 4 ).toUpper() );
+    RUN_TOKEN_TEST( "[$6;4] Test", "[$6;4]", filename, filename.mid( 5, 4 ) );
+    RUN_TOKEN_TEST( "[%6;4] Test", "[%6;4]", filename, filename.mid( 5, 4 ).toLower() );
+    RUN_TOKEN_TEST( "[*6;4] Test", "[*6;4]", filename, filename.mid( 5, 4 ) );
+    RUN_TOKEN_TEST( "[\\6;4] Test", "[\\6;4]", filename, filename.mid( 5, 4 ).trimmed() );
+    RUN_TOKEN_TEST( "[dirname] Test", "[dirname]", filename, directory1 );
+    RUN_TOKEN_TEST( "[&dirname] Test", "[&dirname]", filename, directory1.toUpper() );
+    RUN_TOKEN_TEST( "[$dirname] Test", "[$dirname]", filename, directory1 );
+    RUN_TOKEN_TEST( "[%dirname] Test", "[%dirname]", filename, directory1.toLower() );
+    RUN_TOKEN_TEST( "[*dirname] Test", "[*dirname]", filename, "Krename" );
+    RUN_TOKEN_TEST( "[\\dirname] Test", "[\\dirname]", filename, directory1 );
+    RUN_TOKEN_TEST( "[dirname.] Test", "[dirname.]", filename, directory2 );
+    RUN_TOKEN_TEST( "[&dirname.] Test", "[&dirname.]", filename, directory2.toUpper() );
+    RUN_TOKEN_TEST( "[$dirname.] Test", "[$dirname.]", filename, directory2 );
+    RUN_TOKEN_TEST( "[%dirname.] Test", "[%dirname.]", filename, directory2.toLower() );
+    RUN_TOKEN_TEST( "[*dirname.] Test", "[*dirname.]", filename, "Home" );
+    RUN_TOKEN_TEST( "[\\dirname.] Test", "[\\dirname.]", filename, directory2 );
+    RUN_TOKEN_TEST( "[dirname..] Test", "[dirname..]", filename, "" );
+    RUN_TOKEN_TEST( "[&dirname..] Test", "[&dirname..]", filename, "" );
+    RUN_TOKEN_TEST( "[$dirname..] Test", "[$dirname..]", filename, "" );
+    RUN_TOKEN_TEST( "[%dirname..] Test", "[%dirname..]", filename, "" );
+    RUN_TOKEN_TEST( "[*dirname..] Test", "[*dirname..]", filename, "" );
+    RUN_TOKEN_TEST( "[\\dirname..] Test", "[\\dirname..]", filename, "" );
+}
+
+bool KRenameTest::tokenTest( const char* token, const QString & filename, const QString & expected) 
+{
+    QString directory("/home/krename/");
+    KRenameFile::List list;
+    KRenameFile file( KUrl( directory + filename ), filename.isEmpty() );
+
+    list.push_back( file );
+
+    BatchRenamer b;
+    b.setFilenameTemplate( token );
+    b.setFiles( &list );
+    b.processFilenames();
+
+    QString str = list[0].dstFilename();
+
+    bool result = (str == expected);
+    if( m_verbose || !result )
+        writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)", 
+                         expected.toLatin1().data(), 
+                         str.toLatin1().data(), token );
+
+    return result;
+}
+
+
