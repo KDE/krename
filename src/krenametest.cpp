@@ -320,6 +320,104 @@ void KRenameTest::testBatchRenamer()
     RUN_TOKEN_TEST( "[%dirname..] Test", "[%dirname..]", filename, "" );
     RUN_TOKEN_TEST( "[*dirname..] Test", "[*dirname..]", filename, "" );
     RUN_TOKEN_TEST( "[\\dirname..] Test", "[\\dirname..]", filename, "" );
+
+    // Testing all special Characters in KRename
+    RUN_TOKEN_TEST( "\\/ Test", "\\/", filename, "%2f" ); // this is displayed as a slash,
+                                                          // unix filenames are not allowed
+                                                          // to contain a slash
+    RUN_TOKEN_TEST( "\\[ Test", "\\[", filename, "[" );
+    RUN_TOKEN_TEST( "\\] Test", "\\]", filename, "]" );
+    RUN_TOKEN_TEST( "\\$ Test", "\\$", filename, "$" );
+    RUN_TOKEN_TEST( "\\* Test", "\\*", filename, "*" );
+    RUN_TOKEN_TEST( "\\\\ Test", "\\\\", filename, "\\" );
+    RUN_TOKEN_TEST( "\\& Test", "\\&", filename, "&" );
+    RUN_TOKEN_TEST( "\\% Test", "\\%", filename, "%" );
+    RUN_TOKEN_TEST( "\\# Test", "\\#", filename, "#" );
+
+    // Testing filenames with special characters
+    QString specialname("Test %1 File");
+    RUN_TOKEN_TEST( "File [ Test", "$", specialname.arg( "[" ), specialname.arg( "[" ) );
+    RUN_TOKEN_TEST( "File ] Test", "$", specialname.arg( "]" ), specialname.arg( "]" ) );
+    RUN_TOKEN_TEST( "File $ Test", "$", specialname.arg( "$" ), specialname.arg( "$" ) );
+    RUN_TOKEN_TEST( "File * Test", "$", specialname.arg( "*" ), specialname.arg( "*" ) );
+    RUN_TOKEN_TEST( "File \\ Test", "$", specialname.arg( "\\" ), specialname.arg( "\\" ) );
+    RUN_TOKEN_TEST( "File & Test", "$", specialname.arg( "&" ), specialname.arg( "&" ) );
+    RUN_TOKEN_TEST( "File % Test", "$", specialname.arg( "%" ), specialname.arg( "%" ) );
+    RUN_TOKEN_TEST( "File # Test", "$", specialname.arg( "#" ), specialname.arg( "#" ) );
+
+    // load all plugins now
+    //PluginLoader::instance()->loadPlugins( false ); // file plugins are not required
+
+    // Testing system functions
+    RUN_TOKEN_TEST( "Date Test", "[date]", filename, QDateTime::currentDateTime().toString( "dd-MM-yyyy") );
+    RUN_TOKEN_TEST( "dd-MM-yyyy Date Test", "[date;dd-MM-yyyy]", 
+                    filename, QDateTime::currentDateTime().toString( "dd-MM-yyyy") );
+    RUN_TOKEN_TEST( "dd:MM:yyyy Date Test", "[date;dd:MM:yyyy]", 
+                    filename, QDateTime::currentDateTime().toString( "dd:MM:yyyy") );
+    RUN_TOKEN_TEST( "yy.mm.dd Date Test", "[date;yy.mm.dd]", 
+                    filename, QDateTime::currentDateTime().toString( "yy.mm.dd") );
+    RUN_TOKEN_TEST( "d Date Test", "[date;d]", filename, QDateTime::currentDateTime().toString( "d") );
+    RUN_TOKEN_TEST( "dd Date Test", "[date;dd]", filename, QDateTime::currentDateTime().toString( "dd") );
+    RUN_TOKEN_TEST( "ddd Date Test", "[date;ddd]", filename, QDateTime::currentDateTime().toString( "ddd") );
+    RUN_TOKEN_TEST( "dddd Date Test", "[date;dddd]", filename, QDateTime::currentDateTime().toString( "dddd") );
+    RUN_TOKEN_TEST( "M Date Test", "[date;M]", filename, QDateTime::currentDateTime().toString( "M") );
+    RUN_TOKEN_TEST( "MM Date Test", "[date;MM]", filename, QDateTime::currentDateTime().toString( "MM") );
+    RUN_TOKEN_TEST( "MMM Date Test", "[date;MMM]", filename, QDateTime::currentDateTime().toString( "MMM") );
+    RUN_TOKEN_TEST( "MMMM Date Test", "[date;MMMM]", filename, QDateTime::currentDateTime().toString( "MMMM") );
+    RUN_TOKEN_TEST( "yy Date Test", "[date;yy]", filename, QDateTime::currentDateTime().toString( "yy") );
+    RUN_TOKEN_TEST( "yyyy Date Test", "[date;yyyy]", filename, QDateTime::currentDateTime().toString( "yyyy") );
+
+    RUN_TOKEN_TEST( "h Date Test", "[date;h]", filename, QDateTime::currentDateTime().toString( "h") );
+    RUN_TOKEN_TEST( "hh Date Test", "[date;hh]", filename, QDateTime::currentDateTime().toString( "hh") );
+    RUN_TOKEN_TEST( "m Date Test", "[date;m]", filename, QDateTime::currentDateTime().toString( "m") );
+    RUN_TOKEN_TEST( "mm Date Test", "[date;mm]", filename, QDateTime::currentDateTime().toString( "mm") );
+    RUN_TOKEN_TEST( "s Date Test", "[date;s]", filename, QDateTime::currentDateTime().toString( "s") );
+    RUN_TOKEN_TEST( "ss Date Test", "[date;ss]", filename, QDateTime::currentDateTime().toString( "ss") );
+    // Current computers are to slow to compare two milliseconds as the instruction is longer than
+    // a millisecond.
+    //
+    // RUN_TOKEN_TEST( "z Date Test", "[date;z]", filename, QDateTime::currentDateTime().toString( "z") );
+    // RUN_TOKEN_TEST( "zzz Date Test", "[date;zzz]", filename, QDateTime::currentDateTime().toString( "zzz") );
+    RUN_TOKEN_TEST( "ap Date Test", "[date;ap]", filename, QDateTime::currentDateTime().toString( "ap") );
+    RUN_TOKEN_TEST( "AP Date Test", "[date;AP]", filename, QDateTime::currentDateTime().toString( "AP") );
+    RUN_TOKEN_TEST( "Day Test", "[day]", filename, QDateTime::currentDateTime().toString( "dd") );
+    RUN_TOKEN_TEST( "Month Test", "[month]", filename, QDateTime::currentDateTime().toString( "MM") );
+    RUN_TOKEN_TEST( "Year Test", "[year]", filename, QDateTime::currentDateTime().toString( "yyyy") );
+    RUN_TOKEN_TEST( "Hour Test", "[hour]", filename, QDateTime::currentDateTime().toString( "hh") );
+    RUN_TOKEN_TEST( "Minute Test", "[minute]", filename, QDateTime::currentDateTime().toString( "mm") );
+    RUN_TOKEN_TEST( "Second Test", "[second]", filename, QDateTime::currentDateTime().toString( "ss") );
+    RUN_TOKEN_TEST( "Time Test", "[time]", filename, QDateTime::currentDateTime().toString( "hh-mm-ss") );
+
+    // Testing numbering name, start, step, skip
+    RUN_NUMBER_TESTS( "Numbers 0- Step 1", 0, 1, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers 1- Step 1", 1, 1, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers 2- Step 1", 2, 1, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers -2- Step 1", -2, 1, QList<int>() );
+
+    RUN_NUMBER_TESTS( "Numbers 0- Step 2", 0, 2, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers 1- Step 2", 1, 2, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers 2- Step 2", 2, 2, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers -2- Step 2", -2, 2, QList<int>() );
+
+    RUN_NUMBER_TESTS( "Numbers 0- Step 7", 0, 7, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers 1- Step 7", 1, 7, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers 2- Step 7", 2, 7, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers -2- Step 7", -2, 7, QList<int>() );
+
+    RUN_NUMBER_TESTS( "Numbers 0- Step -3", 0, -3, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers 1- Step -3", 1, -3, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers 2- Step -3", 2, -3, QList<int>() );
+    RUN_NUMBER_TESTS( "Numbers -2- Step -3", -2, -3, QList<int>() );
+
+    RUN_NUMBER_TESTS( "Skip 0- Step 1", 0, 1, QList<int>() << 1 << 2 << 3 << 4 << 89);
+    RUN_NUMBER_TESTS( "Skip 1- Step 1", 1, 1, QList<int>() << 1 << 2 << 3 << 4 << 89);
+    RUN_NUMBER_TESTS( "Skip 2- Step 1", 2, 1, QList<int>() << 1 << 2 << 3 << 4 << 89);
+    RUN_NUMBER_TESTS( "Skip -2- Step 1", -2, 1, QList<int>() << 1 << 2 << 3 << 4 << 89);
+
+    RUN_NUMBER_TESTS( "Skip 10- Step 79", 10, 79, QList<int>() << 1 << 2 << 3 << 4 << 89);
+    RUN_NUMBER_TESTS( "Skip 10- Step -2", 10, -2, QList<int>() << 1 << 2 << 3 << 4 << 89);
+    RUN_NUMBER_TESTS( "Skip 10- Step -1", 10, -1, QList<int>() << 1 << 2 << 3 << 4 << 89);
+
 }
 
 bool KRenameTest::tokenTest( const char* token, const QString & filename, const QString & expected) 
@@ -346,4 +444,52 @@ bool KRenameTest::tokenTest( const char* token, const QString & filename, const 
     return result;
 }
 
+bool KRenameTest::numberingTest( int length, int start, int step, QList<int> skip, int num )
+{
+    QString directory("/home/krename/");
+    KRenameFile::List list;
+    QString token;
+    token.fill( '#', length );
 
+    for(int i=0;i<num;i++) 
+    {
+        QString filename = "any" + QString::number( i );
+        KRenameFile file( KUrl( directory + filename ), filename.isEmpty() );
+
+        list.push_back( file );
+    }
+
+    BatchRenamer b;
+    b.setFilenameTemplate( token );
+    b.setFiles( &list );
+    b.setStep( step );
+    b.setIndex( start );
+    b.setSkipList( skip );
+    b.processFilenames();
+
+    int cur = start;
+    bool result = true;
+    QString expected;
+
+    while( skip.contains( cur ) )
+        cur += step;
+
+    KRenameFile::List::ConstIterator it = list.begin();
+
+    while( it != list.end()  && result ) 
+    {
+        expected.sprintf("%0*i", length, cur );
+        result = ((*it).dstFilename() == expected);
+        if( m_verbose || !result )
+            qDebug(" ---> Expected: (%s) Got: (%s) Start: %i Step: %i Token: (%s)", 
+                   expected.toLatin1().data(), (*it).dstFilename().toLatin1().data(), start, step, token.toLatin1().data() );
+
+        do {
+            cur += step;
+        } while( skip.contains( cur ) );
+
+        ++it;
+    }
+
+    return result;
+}

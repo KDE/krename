@@ -24,7 +24,7 @@ ExtHistoryCombo::ExtHistoryCombo( QWidget* parent )
     : KHistoryComboBox( parent )
 {
     connect( this, SIGNAL( activated( const QString& )), SLOT( addToHistory( const QString& )));
-    connect( this, SIGNAL( textChanged(const QString &)), SLOT( slotTextChanged()));
+    connect( this, SIGNAL( editTextChanged(const QString &)), SLOT( slotTextChanged()));
     connect( &m_timer, SIGNAL( timeout() ), this, SIGNAL( delayedTextChanged() ) );
 
     this->setMaxCount( EXT_HISTORY_COMBO_MAX_COUNT );
