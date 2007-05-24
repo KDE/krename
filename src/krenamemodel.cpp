@@ -127,7 +127,33 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
 
     if (role == Qt::DisplayRole)
     {
-        return index.column() ? m_vector->at(index.row()).dstFilename() : m_vector->at(index.row()).srcFilename();
+        KRenameFile file = m_vector->at(index.row());
+        QString filename;
+        QString extension;
+
+        if( index.column() )
+        {
+            filename  = file.dstFilename();
+            extension = file.dstExtension();
+        }
+        else
+        {
+            filename  = file.srcFilename();
+            extension = file.srcExtension();
+        }
+
+        if( !extension.isEmpty() )
+        {
+            filename += ".";
+            filename += extension;
+        }
+
+        if( filename.isEmpty() )
+        {
+            filename = index.column() ? file.dstDirectory() : file.srcDirectory();
+        }
+
+        return filename;
     }
     else
         return QVariant();

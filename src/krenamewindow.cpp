@@ -23,6 +23,8 @@
 #include "ui_krenameplugins.h"
 #include "ui_krenamefilename.h"
 
+#include "numberdialog.h"
+
 #include <kicon.h>
 #include <klocale.h>
 #include <kpushbutton.h>
@@ -187,6 +189,9 @@ void KRenameWindow::setupSlots()
     connect( m_pageDests->optionLink,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->checkUndoScript, SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
 
+    connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotEnableControls()));
+    connect( m_pageFilename->buttonNumbering,    SIGNAL(clicked(bool))       , SLOT(slotAdvancedNumberingDlg()));
+
     connect( m_pageFilename->filenameTemplate,   SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageFilename->extensionTemplate,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageSimple->comboFilenameCustom,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
@@ -235,6 +240,8 @@ void KRenameWindow::slotEnableControls()
     m_pageDests->urlrequester->setEnabled( !m_pageDests->optionRename->isChecked() );
     m_pageDests->groupUndo->setEnabled( !m_pageDests->optionCopy->isChecked() );
     m_pageDests->undorequester->setEnabled( m_pageDests->checkUndoScript->isChecked() );
+
+    m_pageFilename->extensionTemplate->setEnabled( !m_pageFilename->checkExtension->isChecked() );
 }
 
 void KRenameWindow::setCount( unsigned int count )
@@ -286,7 +293,8 @@ void KRenameWindow::slotTemplateChanged()
     else
     {
         filename  = m_pageFilename->filenameTemplate->currentText();
-        extension = m_pageFilename->extensionTemplate->currentText();
+        extension = m_pageFilename->checkExtension->isChecked() ? "$" : 
+            m_pageFilename->extensionTemplate->currentText();
     }
 
     emit filenameTemplateChanged( filename );
@@ -294,8 +302,15 @@ void KRenameWindow::slotTemplateChanged()
 
     emit updatePreview();
 
+    m_pageFilename->buttonNumbering->setEnabled( filename.contains('#') || extension.contains('#') );
     this->slotEnableControls();
 }
 
+void KRenameWindow::slotAdvancedNumberingDlg()
+{
+    NumberDialog dialog( this );
+    dialog.exec();
+
+}
 
 #include "krenamewindow.moc"

@@ -20,6 +20,7 @@ set(krename_SRCS
   krenamemodel.cpp
   krenametest.cpp
   krenamewindow.cpp
+  numberdialog.cpp
   )
 
 kde4_automoc( ${krename_SRCS} )
@@ -31,6 +32,7 @@ kde4_add_ui_files( krename_SRCS
   krenamefilename.ui 
   krenamesimple.ui 
   krenameplugins.ui
+  numberwidget.ui
   )
 
 kde4_add_executable(krename ${krename_SRCS})

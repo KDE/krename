@@ -71,6 +71,8 @@ class KRenameTest : public QWidget {
     void testBatchRenamer();
     bool tokenTest( const char* token, const QString & filename, const QString & expected) ;
     bool numberingTest( int length, int start, int step, QList<int> skip, int num = 100 );
+    bool replaceTest( const QString & token, const QString & filename, const QString & expected, 
+                      const QString & replace, const QString & with, bool regExp );
 
     /** Write a test caption to the output window
      *  \param text the text which will be output

@@ -138,8 +138,6 @@ class BatchRenamer : public QObject {
         inline void setUndoScript( const QString & t ) { m_undoScript = t; }
         inline void setUndo( bool b ) { undo = b; }
         inline void setOverwrite( bool b ) { overwrite = b; }
-        inline void setIndex( int i ) { m_index = i; }
-        inline void setStep( int s ) { m_step = s; }
 	inline void setResetCounter( bool r ) { m_reset = r; }
         inline void setSkipList( const QList<int> & s ) { m_skip = s; }
         inline void setReplaceList( const QList<replacestrings> & r ) { m_replace = r; }
@@ -198,6 +196,22 @@ class BatchRenamer : public QObject {
          */
         inline void setExtensionTemplate( const QString & t );
 
+        /** Set the start index for the basic counters
+         *  which do not specify an own start index in their
+         *  appendiy (e.g. ###{7}, means 7 is the start index
+         *
+         *  @param i start index
+         */
+        inline void setNumberStartIndex( int i ) { m_index = i; }
+
+        /** Set the stepping for the basic counters
+         *  which do not specify an own stepping in their
+         *  appendiy (e.g. ###{1,2}, means 2 is the stepping
+         *
+         *  @param s stepping
+         */
+        inline void setNumberStepping( int s ) { m_step = s; }
+
     private:
         /** 
          * Returns the length of the string when int n is converted to
@@ -224,8 +238,6 @@ class BatchRenamer : public QObject {
         QString extext;         // Extension template
         QString m_undoScript;     // Filename of undoscript
         bool undo;              // create an undo script
-        int m_index;              // index for numbers
-        int m_step;               // step for numbers
 	bool m_reset;             // reset counter on new directories
         bool overwrite;         // overwrite existing files
         int m_mode;             // renaming mode
@@ -237,6 +249,9 @@ class BatchRenamer : public QObject {
         // a is used in find number and
         // required for skipping.
         int m_counter_index;
+        int m_index;              // index for numbers
+        int m_step;               // step for numbers
+
 	QList<tCounterValues> m_counters;
 
  private:

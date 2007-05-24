@@ -127,6 +127,14 @@ class KRenameWindow : public KMainWindow {
      */
     void slotTemplateChanged();
 
+    /** This slot shows a dialog with advanced numbering settings
+     *  - start index
+     *  - stepping
+     *  - reset counter on each new directory
+     *  - skip numbers list
+     *
+     */
+    void slotAdvancedNumberingDlg();
  private:
     /** Configures the GUI for the current GUI mode
      */

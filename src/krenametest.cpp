@@ -418,6 +418,34 @@ void KRenameTest::testBatchRenamer()
     RUN_NUMBER_TESTS( "Skip 10- Step -2", 10, -2, QList<int>() << 1 << 2 << 3 << 4 << 89);
     RUN_NUMBER_TESTS( "Skip 10- Step -1", 10, -1, QList<int>() << 1 << 2 << 3 << 4 << 89);
 
+    // Test the find and replace feature of KRename
+    RUN_REPLACE_TEST( "Replace: Spaces", "$", "Filename with spaces", "Filename_with_spaces", " ", "_", false );
+    RUN_REPLACE_TEST( "Replace: Nothing", "$", "Filename", "Filename", " ", "_", false );
+    RUN_REPLACE_TEST( "Replace: Word", "$", "Filename with spaces", "Filename HAS spaces", "with", "HAS", false );
+    RUN_REPLACE_TEST( "Replace: $", "$", "Filename with $ and spaces", "Filename with ! and spaces", "$", "!", false );
+    RUN_REPLACE_TEST( "Replace: &", "$", "Filename with & and spaces", "Filename with ! and spaces", "&", "!", false );
+    RUN_REPLACE_TEST( "Replace: %", "$", "Filename with % and spaces", "Filename with ! and spaces", "%", "!", false );
+    RUN_REPLACE_TEST( "Replace: *", "$", "Filename with * and spaces", "Filename with ! and spaces", "*", "!", false );
+    RUN_REPLACE_TEST( "Replace: [", "$", "Filename with [ and spaces", "Filename with ! and spaces", "[", "!", false );
+    RUN_REPLACE_TEST( "Replace: ]", "$", "Filename with ] and spaces", "Filename with ! and spaces", "]", "!", false );
+    RUN_REPLACE_TEST( "Replace: #", "$", "Filename with # and spaces", "Filename with ! and spaces", "#", "!", false );
+    RUN_REPLACE_TEST( "Replace: to $", "$", "Filename with spaces", "Filename $ spaces", "with", "$", false );
+    RUN_REPLACE_TEST( "Replace: to &", "$", "Filename with spaces", "Filename & spaces", "with", "&", false );
+    RUN_REPLACE_TEST( "Replace: to %", "$", "Filename with spaces", "Filename % spaces", "with", "%", false );
+    RUN_REPLACE_TEST( "Replace: to *", "$", "Filename with spaces", "Filename * spaces", "with", "*", false );
+    RUN_REPLACE_TEST( "Replace: to [", "$", "Filename with spaces", "Filename [ spaces", "with", "[", false );
+    RUN_REPLACE_TEST( "Replace: to ]", "$", "Filename with spaces", "Filename ] spaces", "with", "]", false );
+    RUN_REPLACE_TEST( "Replace: to #", "$", "Filename with spaces", "Filename # spaces", "with", "#", false );
+
+    RUN_REPLACE_TEST( "RegExp: ?", "$", "Filename", "AAAAAAAAA", "[a-zA-z]?", "A", true );
+    RUN_REPLACE_TEST( "RegExp: {1}", "$", "Filename", "AAAAAAAA", "[a-zA-z]{1}", "A", true );
+    RUN_REPLACE_TEST( "RegExp: +", "$", "Filename", "A", "[a-zA-z]+", "A", true );
+    RUN_REPLACE_TEST( "RegExp: \\d", "$", "Filename 123", "Filename NumberNumberNumber", "\\d", "Number", true );
+    RUN_REPLACE_TEST( "RegExp: \\d+", "$", "Filename 123", "Filename Number", "\\d+", "Number", true );
+    RUN_REPLACE_TEST( "RegExp: Match", "$", "Filename 123", "MATCHING", "[a-zA-z]* \\d{3}", "MATCHING", true );
+
+    // TODO:
+    // TODO: Manual Change Test
 }
 
 bool KRenameTest::tokenTest( const char* token, const QString & filename, const QString & expected) 
@@ -462,8 +490,8 @@ bool KRenameTest::numberingTest( int length, int start, int step, QList<int> ski
     BatchRenamer b;
     b.setFilenameTemplate( token );
     b.setFiles( &list );
-    b.setStep( step );
-    b.setIndex( start );
+    b.setNumberStepping( step );
+    b.setNumberStartIndex( start );
     b.setSkipList( skip );
     b.processFilenames();
 
@@ -492,4 +520,40 @@ bool KRenameTest::numberingTest( int length, int start, int step, QList<int> ski
     }
 
     return result;
+}
+
+bool KRenameTest::replaceTest( const QString & token, const QString & filename, const QString & expected, 
+                               const QString & replace, const QString & with, bool regExp ) 
+{
+    QString directory("/home/krename/");
+    KRenameFile::List list;
+    KRenameFile file( KUrl( directory + filename ), filename.isEmpty() );
+    list.push_back( file );
+
+    QList<replacestrings> replaceList;
+
+    struct replacestrings strings;
+    strings.find    = replace;
+    strings.replace = with;
+    strings.reg     = regExp;
+
+    replaceList.append( strings );
+
+
+    BatchRenamer b;
+    b.setFilenameTemplate( token );
+    b.setFiles( &list );
+    b.setReplaceList( replaceList );
+    b.processFilenames();
+
+
+    QString str = list[0].dstFilename();
+    bool result = (str == expected);
+    if( m_verbose || !result )
+        writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)", 
+                         expected.toLatin1().data(), 
+                         str.toLatin1().data(), token.toLatin1().data() );
+
+    return result;
+
 }

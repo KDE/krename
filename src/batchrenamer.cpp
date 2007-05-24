@@ -52,10 +52,11 @@
 using namespace KIO;
 
 BatchRenamer::BatchRenamer()
-    : m_index( 0 ), m_files( NULL ), m_renameMode( eRenameMode_Rename )
+    : m_index( 0 ), m_step( 1 ), m_files( NULL ), m_renameMode( eRenameMode_Rename )
 {
     //plug = PluginLoader::instance();
     m_counter_index = 0;
+    m_reset         = false;
 }
 
 BatchRenamer::~BatchRenamer()
