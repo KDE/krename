@@ -120,6 +120,26 @@ class BatchRenamer : public QObject {
          */
         inline ERenameMode renameMode() const;
 
+        /** 
+         * @returns the current start index for counters
+         */
+        inline int numberStartIndex() const;
+
+        /**
+         * @returns the stepping for counters
+         */
+        inline int numberStepping() const;
+
+        /**
+         * @returns if counters are reset on new directories
+         */
+        inline int numberReset() const;
+
+        /** 
+         * @returns the list of numbers that are skipped during renaming
+         */
+        inline QList<int> numberSkipList() const;
+
         /** Does the actuall renaming,
          *  transforming all source filenames in the file list
          *  to the new destination filenames.
@@ -138,8 +158,6 @@ class BatchRenamer : public QObject {
         inline void setUndoScript( const QString & t ) { m_undoScript = t; }
         inline void setUndo( bool b ) { undo = b; }
         inline void setOverwrite( bool b ) { overwrite = b; }
-	inline void setResetCounter( bool r ) { m_reset = r; }
-        inline void setSkipList( const QList<int> & s ) { m_skip = s; }
         inline void setReplaceList( const QList<replacestrings> & r ) { m_replace = r; }
         
         inline void setChanges( const QList<manualchanges> & m ) { m_changes = m; }
@@ -211,6 +229,20 @@ class BatchRenamer : public QObject {
          *  @param s stepping
          */
         inline void setNumberStepping( int s ) { m_step = s; }
+
+        /** Sets wether all counters should be reset for new 
+         *  directories
+         *
+         *  @param r if true counters will be reset
+         */
+	inline void setNumberReset( bool r ) { m_reset = r; }
+
+        /** Sets the list of numbers that are skipped by counters
+         *
+         *  @param s a list of numbers that is skipped
+         */
+        inline void setNumberSkipList( const QList<int> & s ) { m_skip = s; }
+
 
     private:
         /** 
@@ -294,6 +326,26 @@ void BatchRenamer::setExtensionTemplate( const QString & t )
 { 
     extext = t;
     doEscape( extext, false ); 
+}
+
+int BatchRenamer::numberStartIndex() const
+{
+    return m_index;
+}
+
+int BatchRenamer::numberStepping() const
+{
+    return m_step;
+}
+
+int BatchRenamer::numberReset() const
+{
+    return m_reset;
+}
+
+QList<int> BatchRenamer::numberSkipList() const
+{
+    return m_skip;
 }
 
 #endif

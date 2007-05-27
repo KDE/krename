@@ -492,7 +492,7 @@ bool KRenameTest::numberingTest( int length, int start, int step, QList<int> ski
     b.setFiles( &list );
     b.setNumberStepping( step );
     b.setNumberStartIndex( start );
-    b.setSkipList( skip );
+    b.setNumberSkipList( skip );
     b.processFilenames();
 
     int cur = start;

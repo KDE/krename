@@ -23,6 +23,8 @@
 #include "krenametest.h"
 #include "krenamewindow.h"
 
+#include "numberdialog.h"
+
 #include "ui_krenamefiles.h"
 #include "ui_krenamedestination.h"
 #include "ui_krenamesimple.h"
@@ -168,7 +170,7 @@ void KRenameImpl::setupSlots()
     QObject::connect( m_window, SIGNAL(extensionTemplateChanged(const QString &)), 
                       &m_renamer, SLOT(setExtensionTemplate(const QString &)));
 
-
+    connect( m_window, SIGNAL(showAdvancedNumberingDialog()), SLOT(slotAdvancedNumberingDlg()));
 }
 
 void KRenameImpl::addFileOrDir( const KUrl & url )
@@ -413,6 +415,21 @@ void KRenameImpl::slotUpdatePreview()
 
     m_previewModel->refresh();
     //m_window->m_pageSimple->listPreview->reset();
+}
+
+void KRenameImpl::slotAdvancedNumberingDlg()
+{
+    NumberDialog dialog( m_renamer.numberStartIndex(), m_renamer.numberStepping(), 
+                         m_renamer.numberReset(), m_renamer.numberSkipList() ,m_window );
+    if( dialog.exec() == QDialog::Accepted ) 
+    {
+        m_renamer.setNumberStartIndex( dialog.startIndex() );
+        m_renamer.setNumberStepping( dialog.numberStepping() );
+        m_renamer.setNumberReset( dialog.resetCounter() );
+        m_renamer.setNumberSkipList( dialog.skipNumbers() );
+
+        slotUpdatePreview();
+    }
 }
 
 #if 0

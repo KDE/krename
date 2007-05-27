@@ -103,13 +103,17 @@ class KRenameWindow : public KMainWindow {
      */
     void updatePreview();
 
+    /** Called when the user requests the advanced numbering dialog
+     */
+    void showAdvancedNumberingDialog();
+
  private slots:
     void slotBack();
     void slotNext();
 
     /** Changes the current page to the page with the given index
      * 
-     *  \param index the index of the page to show
+     *  @param index the index of the page to show
      */
     void showPage( int index );
 
@@ -127,14 +131,6 @@ class KRenameWindow : public KMainWindow {
      */
     void slotTemplateChanged();
 
-    /** This slot shows a dialog with advanced numbering settings
-     *  - start index
-     *  - stepping
-     *  - reset counter on each new directory
-     *  - skip numbers list
-     *
-     */
-    void slotAdvancedNumberingDlg();
  private:
     /** Configures the GUI for the current GUI mode
      */

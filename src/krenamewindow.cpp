@@ -23,8 +23,6 @@
 #include "ui_krenameplugins.h"
 #include "ui_krenamefilename.h"
 
-#include "numberdialog.h"
-
 #include <kicon.h>
 #include <klocale.h>
 #include <kpushbutton.h>
@@ -190,7 +188,7 @@ void KRenameWindow::setupSlots()
     connect( m_pageDests->checkUndoScript, SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
 
     connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotEnableControls()));
-    connect( m_pageFilename->buttonNumbering,    SIGNAL(clicked(bool))       , SLOT(slotAdvancedNumberingDlg()));
+    connect( m_pageFilename->buttonNumbering,    SIGNAL(clicked(bool))       , SIGNAL(showAdvancedNumberingDialog()));
 
     connect( m_pageFilename->filenameTemplate,   SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageFilename->extensionTemplate,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
@@ -304,13 +302,6 @@ void KRenameWindow::slotTemplateChanged()
 
     m_pageFilename->buttonNumbering->setEnabled( filename.contains('#') || extension.contains('#') );
     this->slotEnableControls();
-}
-
-void KRenameWindow::slotAdvancedNumberingDlg()
-{
-    NumberDialog dialog( this );
-    dialog.exec();
-
 }
 
 #include "krenamewindow.moc"

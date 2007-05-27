@@ -33,8 +33,9 @@ class QDialogButtonBox;
  *
  */
 class NumberDialog : public QDialog {
+ Q_OBJECT
  public:
-    NumberDialog( QWidget* parent = NULL );
+    NumberDialog( int start, int step, bool reset, QList<int> skip, QWidget* parent = NULL );
 
     /** 
      * @returns the start index the user has selected
@@ -55,6 +56,13 @@ class NumberDialog : public QDialog {
      * @returns the list of number that should be skipped in counters
      */
     QList<int> skipNumbers() const;
+
+ private slots:
+     
+     void slotAddNumber();
+     void slotRemoveNumber();
+
+     void slotEnableControls();
 
  private:
     Ui::NumberWidget    m_widget;

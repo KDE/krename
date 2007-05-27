@@ -128,6 +128,15 @@ class KRenameImpl : public QObject {
      */
     void slotUpdatePreview();
 
+    /** This slot shows a dialog with advanced numbering settings
+     *  - start index
+     *  - stepping
+     *  - reset counter on each new directory
+     *  - skip numbers list
+     *
+     */
+    void slotAdvancedNumberingDlg();
+
  private:
     KRenameWindow*        m_window;
     KRenameModel*         m_model;
