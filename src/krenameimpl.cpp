@@ -24,12 +24,16 @@
 #include "krenamewindow.h"
 
 #include "numberdialog.h"
+#include "insertpartfilenamedlg.h"
+#include "progressdialog.h"
 
+/*
 #include "ui_krenamefiles.h"
 #include "ui_krenamedestination.h"
 #include "ui_krenamesimple.h"
 #include "ui_krenameplugins.h"
 #include "ui_krenamefilename.h"
+*/
 
 #include <kaction.h>
 #include <kapplication.h>
@@ -43,8 +47,6 @@
 
 #include <QStringListModel>
 
-#include <QHeaderView>
-
 KRenameImpl::KRenameImpl( KRenameWindow* window )
     : QObject( (QObject*)window ), m_window( window )
 {
@@ -52,13 +54,11 @@ KRenameImpl::KRenameImpl( KRenameWindow* window )
     setupSlots();
 
     m_model = new KRenameModel( &m_vector );
-    window->m_pageFiles->fileList->setModel( m_model );
+    m_window->setModel( m_model );
 
     m_previewModel = new KRenamePreviewModel( &m_vector );
-    m_window->m_pageSimple->listPreview->setModel( m_previewModel );
-    m_window->m_pageFilename->listPreview->setModel( m_previewModel );
+    m_window->setPreviewModel( m_previewModel );
 
-    m_window->m_pageSimple->listPreview->setHeader( new QHeaderView( Qt::Horizontal ) );
     m_renamer.setFiles( &m_vector );
 
     parseCmdLineOptions();
@@ -158,11 +158,13 @@ void KRenameImpl::setupActions()
 
 void KRenameImpl::setupSlots()
 {
-    connect( m_window->m_pageFiles->buttonAdd, SIGNAL(clicked()), SLOT(slotAddFiles()));
-    connect( m_window->m_pageFiles->buttonRemove, SIGNAL(clicked()), SLOT(slotRemoveFiles()));
-    connect( m_window->m_pageFiles->buttonRemoveAll, SIGNAL(clicked()), SLOT(slotRemoveAllFiles()));
+    connect( m_window, SIGNAL(addFiles()),       SLOT(slotAddFiles()));
+    connect( m_window, SIGNAL(removeFiles()),    SLOT(slotRemoveFiles()));
+    connect( m_window, SIGNAL(removeAllFiles()), SLOT(slotRemoveAllFiles()));
 
-    connect( m_window, SIGNAL(updatePreview()), SLOT(slotUpdatePreview()));
+    connect( m_window, SIGNAL(updatePreview()),  SLOT(slotUpdatePreview()));
+
+    connect( m_window, SIGNAL(accepted()),       SLOT(slotStart()));
 
     QObject::connect( m_window, SIGNAL(renameModeChanged(ERenameMode)), &m_renamer, SLOT(setRenameMode(ERenameMode)));
     QObject::connect( m_window, SIGNAL(filenameTemplateChanged(const QString &)), 
@@ -170,7 +172,8 @@ void KRenameImpl::setupSlots()
     QObject::connect( m_window, SIGNAL(extensionTemplateChanged(const QString &)), 
                       &m_renamer, SLOT(setExtensionTemplate(const QString &)));
 
-    connect( m_window, SIGNAL(showAdvancedNumberingDialog()), SLOT(slotAdvancedNumberingDlg()));
+    connect( m_window, SIGNAL(showAdvancedNumberingDialog()),  SLOT(slotAdvancedNumberingDlg()));
+    connect( m_window, SIGNAL(showInsertPartFilenameDialog()), SLOT(slotInsertPartFilenameDlg()));
 }
 
 void KRenameImpl::addFileOrDir( const KUrl & url )
@@ -182,14 +185,32 @@ void KRenameImpl::addFileOrDir( const KUrl & url )
     this->slotUpdateCount();
 }
 
-void KRenameImpl::addFilesOrDirs( const KUrl::List & list )
+void KRenameImpl::addFilesOrDirs( const KUrl::List & list, bool recursively, bool dirsWithFiles, bool dirsOnly, bool hidden )
 {
     KUrl::List::ConstIterator it   = list.begin();
     
     while( it != list.end() )
     {
         KRenameFile item( *it );
-        m_model->addFile( item );
+        if( item.isDirectory() )
+        {
+            if(dirsWithFiles || dirsOnly)
+            {
+                m_model->addFile( item );
+            }
+            
+            if( recursively ) 
+            {
+
+            }
+        }
+        else 
+        {
+            if( !dirsOnly ) 
+            {
+                m_model->addFile( item );
+            }
+        }
 
         ++it;
     }
@@ -325,7 +346,8 @@ void KRenameImpl::slotAddFiles()
 
     if( dialog.exec() == QDialog::Accepted ) 
     {
-        this->addFilesOrDirs( dialog.selectedUrls() );
+        this->addFilesOrDirs( dialog.selectedUrls(), widget->addRecursively(), widget->addDirsWithFiles(),
+                              widget->addDirsOnly(), widget->addHidden() );
     }
 
     //KUrl::List list = KFileDialog::getOpenUrls( KUrl("kfiledialog://krename"), "*", m_window );
@@ -376,7 +398,7 @@ void KRenameImpl::slotRemoveAllFiles()
                                     "KRenameRemoveAllFromFileList" ) == KMessageBox::Yes )
     {
         m_vector.clear();
-        m_window->m_pageFiles->fileList->reset();
+        m_window->resetFileList();
 
 
         this->slotUpdateCount();
@@ -430,6 +452,41 @@ void KRenameImpl::slotAdvancedNumberingDlg()
 
         slotUpdatePreview();
     }
+}
+
+void KRenameImpl::slotInsertPartFilenameDlg()
+{
+    InsertPartFilenameDlg dialog( m_vector.first().srcFilename() );
+
+    if( dialog.exec() == QDialog::Accepted ) 
+    {
+        qDebug("command=%s", dialog.command().toLatin1().data() );
+        m_window->setFilenameTemplate( dialog.command(), true );
+
+        // Update preview will called from KRenameWindow because of the changed template
+        // slotUpdatePreview();s
+    }
+}
+
+void KRenameImpl::slotStart()
+{
+    ProgressDialog progress;
+    progress.print(QString( i18n("Starting conversion of %1 files.") ).arg(m_vector.count()));
+
+    delete m_window;
+    m_window = NULL;
+
+    // save the configuration
+    //saveConfig();
+
+    // Should not be necessary as the preview should have been done
+    m_renamer.processFilenames();
+
+    // Do the actual renaming
+    m_renamer.processFiles( &progress );
+
+    // We are done - ProgressDialog will restart us if necessary
+    delete this;
 }
 
 #if 0

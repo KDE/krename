@@ -17,6 +17,8 @@
 
 #include "krenamewindow.h"
 
+#include "krenamemodel.h"
+
 #include "ui_krenamefiles.h"
 #include "ui_krenamedestination.h"
 #include "ui_krenamesimple.h"
@@ -29,7 +31,9 @@
 #include <kseparator.h>
 
 #include <QDialogButtonBox>
+#include <QHeaderView>
 #include <QLabel>
+#include <QLineEdit>
 #include <QStackedWidget>
 #include <QTabBar>
 #include <QVBoxLayout>
@@ -175,12 +179,18 @@ void KRenameWindow::setupGui()
     m_buttons->addButton( m_buttonFinish, QDialogButtonBox::AcceptRole );
     m_buttons->addButton( m_buttonClose, QDialogButtonBox::RejectRole );
 
+    m_pageSimple->listPreview->setHeader( new QHeaderView( Qt::Horizontal ) );
+
     setupSlots();
     slotEnableControls();
 }
 
 void KRenameWindow::setupSlots()
 {
+    connect( m_pageFiles->buttonAdd,       SIGNAL(clicked(bool)), SIGNAL(addFiles()));
+    connect( m_pageFiles->buttonRemove,    SIGNAL(clicked(bool)), SIGNAL(removeFiles()));
+    connect( m_pageFiles->buttonRemoveAll, SIGNAL(clicked(bool)), SIGNAL(removeAllFiles()));
+
     connect( m_pageDests->optionRename,    SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->optionCopy,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->optionMove,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
@@ -189,6 +199,8 @@ void KRenameWindow::setupSlots()
 
     connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotEnableControls()));
     connect( m_pageFilename->buttonNumbering,    SIGNAL(clicked(bool))       , SIGNAL(showAdvancedNumberingDialog()));
+    connect( m_pageFilename->buttonInsert,       SIGNAL(clicked(bool))       , SIGNAL(showInsertPartFilenameDialog()));
+
 
     connect( m_pageFilename->filenameTemplate,   SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageFilename->extensionTemplate,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
@@ -240,6 +252,10 @@ void KRenameWindow::slotEnableControls()
     m_pageDests->undorequester->setEnabled( m_pageDests->checkUndoScript->isChecked() );
 
     m_pageFilename->extensionTemplate->setEnabled( !m_pageFilename->checkExtension->isChecked() );
+    m_pageFilename->buttonFind->setEnabled( m_fileCount != 0 );
+    m_pageFilename->buttonNumbering->setEnabled( m_fileCount != 0 );
+    m_pageFilename->buttonInsert->setEnabled( m_fileCount != 0 );
+
 }
 
 void KRenameWindow::setCount( unsigned int count )
@@ -248,6 +264,30 @@ void KRenameWindow::setCount( unsigned int count )
     m_pageFiles->labelCount->setText( i18n("<b>Files:<b> %1", m_fileCount ) );
 
     this->slotEnableControls();
+}
+
+void KRenameWindow::setFilenameTemplate( const QString & templ, bool insert )
+{
+    if( insert )
+        m_pageFilename->filenameTemplate->lineEdit()->insert( templ );
+    else
+        m_pageFilename->filenameTemplate->lineEdit()->setText( templ );
+}
+
+void KRenameWindow::resetFileList() 
+{
+    m_pageFiles->fileList->reset();
+}
+
+void KRenameWindow::setModel( KRenameModel* model )
+{
+    m_pageFiles->fileList->setModel( model );
+}
+
+void KRenameWindow::setPreviewModel( KRenamePreviewModel* model )
+{
+    m_pageSimple->listPreview->setModel( model );
+    m_pageFilename->listPreview->setModel( model );
 }
 
 void KRenameWindow::slotBack()

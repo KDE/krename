@@ -149,10 +149,18 @@ class BatchRenamer : public QObject {
          */
         void processFilenames();
 
+        /** Process all files
+         * 
+         *  processFilenames has to be called before
+         *
+         *  All files will be renamed according to the users settings.
+         *
+         *  Output will be reported through a progress dialog
+         *
+         *  @param p use this dialog to report progress to the user
+         */
+        void processFiles( ProgressDialog* p );
 
-
-        void processFiles( ProgressDialog* p, QObject* object );
-        void createPreview( QListView* list );
 
         inline void setDirname( const KUrl & url ) { dirname = url; }
         inline void setUndoScript( const QString & t ) { m_undoScript = t; }

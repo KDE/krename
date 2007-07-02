@@ -128,7 +128,7 @@ void BatchRenamer::processFilenames()
 }
 
 
-void BatchRenamer::processFiles( ProgressDialog* p, QObject* object )
+void BatchRenamer::processFiles( ProgressDialog* p )
 {
 #if 0
     delete object;
@@ -266,39 +266,6 @@ QString BatchRenamer::parsePlugins( int i, const QString& text, int type )
         }
 
     return ret;
-#endif // 0
-}
-
-void BatchRenamer::createPreview( QListView* list )
-{
-#if 0
-    KMyListViewItem* item1 = NULL;
-    QString tmp;
-
-    m_counters.clear();
-    for( unsigned int i = 0; i < m_files.count(); i++) 
-    {            
-	m_counter_index = 0;
-
-	if( i && m_reset )
-	    findCounterReset( i );
-
-        m_files[i].dst.name = processString( text, m_files[i].src.name, i );
-        if( !extext.isEmpty() )
-            m_files[i].dst.extension = processString( extext, m_files[i].src.extension, i );
-
-        bool modified = applyManualChanges( i );
-
-
-        QString sname = BatchRenamer::buildFilename( &m_files[i].src, false );
-
-        // Let's run the plugins that change the final filename,
-        // i.e the encodingsplugin
-        m_files[i].dst.name = parsePlugins( i, m_files[i].dst.name, TYPE_FINAL_FILENAME );
-        QString dname = BatchRenamer::buildFilename( &m_files[i].dst, false );
-        
-        item1 = new KMyListViewItem( modified, list, item1, sname, dname );
-    }
 #endif // 0
 }
 
@@ -805,7 +772,11 @@ QString BatchRenamer::findPartStrings( QString oldname, QString token )
          * x should not be larger than the old name
          * and not smaller than zero.
          */
-        int x = sec-first.toInt();
+        int x = sec-first.toInt( &ok );
+        // if first is no number, but for example length, we return here so that findLength can do its job
+        if( !ok ) 
+            return QString::null;
+
         if( x > (signed int)oldname.length() || x < 0 )
             x = oldname.length()-first.toInt();
 

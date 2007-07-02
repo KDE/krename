@@ -21,18 +21,22 @@ set(krename_SRCS
   krenametest.cpp
   krenamewindow.cpp
   numberdialog.cpp
+  insertpartfilenamedlg.cpp
+  progressdialog.cpp
   )
 
 kde4_automoc( ${krename_SRCS} )
 
 kde4_add_ui_files( krename_SRCS 
   guimodeselector.ui 
+  partfilenamewidget.ui
   krenamefiles.ui 
   krenamedestination.ui 
   krenamefilename.ui 
   krenamesimple.ui 
   krenameplugins.ui
   numberwidget.ui
+  progressdialog.ui
   )
 
 kde4_add_executable(krename ${krename_SRCS})

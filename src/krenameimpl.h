@@ -83,10 +83,15 @@ class KRenameImpl : public QObject {
      *  files.
      *
      *  \param list of existing files or directories
+     *  \param recursively if true all directories will be added recursively
+     *  \param dirsWithFiles add directory names along with their contents
+     *  \param dirsOnly add only directories and no files
+     *  \param hidden add also hidden files and directories
      *
      *  \see addFileOrDir
      */
-    void addFilesOrDirs( const KUrl::List & list );
+    void addFilesOrDirs( const KUrl::List & list, bool recursively = false, bool dirsWithFiles = false, 
+                         bool dirsOnly = false, bool hidden = false );
 
     /** Parses commandline options
      */
@@ -136,6 +141,17 @@ class KRenameImpl : public QObject {
      *
      */
     void slotAdvancedNumberingDlg();
+
+    /** This slots shows a dialog which allows the user
+     *  to confortably insert a part of an oldfilename into the 
+     *  new filename (part is to be understood as "substring")
+     */
+    void slotInsertPartFilenameDlg();
+
+    /** Start the actual renaming
+     *  with the current settings
+     */
+    void slotStart();
 
  private:
     KRenameWindow*        m_window;

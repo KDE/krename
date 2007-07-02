@@ -21,6 +21,9 @@
 #include <kmainwindow.h>
 #include "batchrenamer.h"
 
+class KRenameModel;
+class KRenamePreviewModel;
+
 class KPushButton;
 class QDialogButtonBox;
 class QLabel;
@@ -75,9 +78,33 @@ class KRenameWindow : public KMainWindow {
     } TGuiMode;
 
     /** Set the count displayed on the files tab of KRename
-     *  \param count typically the number of files in the list
+     *  @param count typically the number of files in the list
      */
     void setCount( unsigned int count );
+
+    /** Set the template for the filename.
+     *
+     *  @param templ the new template
+     *  @param insert if true the template string will be inserted into the current
+     *         template otherwise it will be replaced
+     */
+    void setFilenameTemplate( const QString & templ, bool insert = false );
+
+    /** Reset the display of the internal file list
+     */
+    void resetFileList();
+
+    /** Set the KRename model
+     *
+     *  @param model a krename model
+     */
+    void setModel( KRenameModel* model );
+
+    /** Set the preview mode
+     *
+     * @param model a preview model
+     */
+    void setPreviewModel( KRenamePreviewModel* model );
 
  signals:
 
@@ -106,6 +133,23 @@ class KRenameWindow : public KMainWindow {
     /** Called when the user requests the advanced numbering dialog
      */
     void showAdvancedNumberingDialog();
+
+    /** Called when the user requests the insert part filename dialog
+     */
+    void showInsertPartFilenameDialog();
+
+    /** Called when the user wants to add more files
+     */
+    void addFiles();
+
+    /** Called when the user wants to remove all files
+     */
+    void removeAllFiles();
+
+    /** Called when the user wants to remove all selected files
+     *  //TODO: Parameter for all selected files
+     */
+    void removeFiles();
 
  private slots:
     void slotBack();
