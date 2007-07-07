@@ -171,6 +171,8 @@ void KRenameImpl::setupSlots()
                       &m_renamer, SLOT(setFilenameTemplate(const QString &)));
     QObject::connect( m_window, SIGNAL(extensionTemplateChanged(const QString &)), 
                       &m_renamer, SLOT(setExtensionTemplate(const QString &)));
+    QObject::connect( m_window, SIGNAL(overwriteFilesChanged(bool)), 
+                      &m_renamer, SLOT(setOverwriteExistingFiles(bool)));
 
     connect( m_window, SIGNAL(showAdvancedNumberingDialog()),  SLOT(slotAdvancedNumberingDlg()));
     connect( m_window, SIGNAL(showInsertPartFilenameDialog()), SLOT(slotInsertPartFilenameDlg()));
@@ -417,8 +419,8 @@ void KRenameImpl::selfTest()
 
     // Make _really_ sure it comes to front
     test->show();
-    test->activateWindow();
     test->raise();
+    test->activateWindow();
 }
 
 void KRenameImpl::slotUpdateCount()
@@ -470,23 +472,37 @@ void KRenameImpl::slotInsertPartFilenameDlg()
 
 void KRenameImpl::slotStart()
 {
-    ProgressDialog progress;
-    progress.print(QString( i18n("Starting conversion of %1 files.") ).arg(m_vector.count()));
+    ProgressDialog* progress = new ProgressDialog();
+    progress->print( i18n("Starting conversion of %1 files.", m_vector.count()) );
 
-    delete m_window;
-    m_window = NULL;
+    // Make sure the GUI will not delete our models
+    m_window->setModel( NULL );
+    m_window->setPreviewModel( NULL );
+
+    // Get some properties from the gui and initialize BatchRenamer
+    m_renamer.setDestinationDir( m_window->destinationUrl() );
+
+    // delete the GUI
+    //delete m_window;
+    //m_window = NULL;
+
+    // show the progress dialog
+    progress->show();
+    progress->raise();
+    progress->activateWindow();
 
     // save the configuration
     //saveConfig();
 
-    // Should not be necessary as the preview should have been done
+    // Process files with addiational properties which were not 
+    // necessary or available in the preview
     m_renamer.processFilenames();
 
     // Do the actual renaming
-    m_renamer.processFiles( &progress );
+    m_renamer.processFiles( progress );
 
     // We are done - ProgressDialog will restart us if necessary
-    delete this;
+    //delete this;
 }
 
 #if 0

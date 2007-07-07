@@ -24,7 +24,7 @@ ProgressDialog::ProgressDialog( QWidget* parent )
 {
     m_widget.setupUi( this );
 
-    connect( m_widget.buttonCancel, SIGNAL(clicked(true)), SLOT(slotCancelled()));
+    connect( m_widget.buttonCancel, SIGNAL(clicked(bool)), SLOT(slotCancelled()));
 }
 
 void ProgressDialog::slotCancelled()
@@ -36,6 +36,7 @@ void ProgressDialog::print( const QString & text, const QString & pixmap )
 {
     QPixmap icon = SmallIcon(pixmap);
 
+    new QListWidgetItem( icon, text, m_widget.display );
 }
 
 void ProgressDialog::error( const QString & text )

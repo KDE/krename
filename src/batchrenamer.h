@@ -162,10 +162,8 @@ class BatchRenamer : public QObject {
         void processFiles( ProgressDialog* p );
 
 
-        inline void setDirname( const KUrl & url ) { dirname = url; }
         inline void setUndoScript( const QString & t ) { m_undoScript = t; }
         inline void setUndo( bool b ) { undo = b; }
-        inline void setOverwrite( bool b ) { overwrite = b; }
         inline void setReplaceList( const QList<replacestrings> & r ) { m_replace = r; }
         
         inline void setChanges( const QList<manualchanges> & m ) { m_changes = m; }
@@ -251,6 +249,17 @@ class BatchRenamer : public QObject {
          */
         inline void setNumberSkipList( const QList<int> & s ) { m_skip = s; }
 
+        /** Sets if existing files maybe overwritten during renaming
+         *
+         *  @param overwrite if true existing files will be overwritten
+         */
+        inline void setOverwriteExistingFiles( bool overwrite ) { m_overwrite = overwrite; }
+
+        /** Sets the destination url (a directory) for copy, move and link operations
+         *
+         *  @param url destination directory
+         */
+        inline void setDestinationDir( const KUrl & url ) { m_destination = url; }
 
     private:
         /** 
@@ -274,12 +283,10 @@ class BatchRenamer : public QObject {
         bool applyManualChanges( int i );
 
         QString text;           // template
-        KUrl dirname;           // destination dir
         QString extext;         // Extension template
         QString m_undoScript;     // Filename of undoscript
         bool undo;              // create an undo script
 	bool m_reset;             // reset counter on new directories
-        bool overwrite;         // overwrite existing files
         int m_mode;             // renaming mode
         QList<int> m_skip; // Numbers to skip
         QList<replacestrings> m_replace; // Replace strings
@@ -295,10 +302,12 @@ class BatchRenamer : public QObject {
 	QList<tCounterValues> m_counters;
 
  private:
-        KRenameFile::List* m_files;      ///< The list of files to rename and the resulting renamed filenames
-        ERenameMode        m_renameMode; ///< The rename mode specifies if files are renamed, copied or moved (or linked)
+        KRenameFile::List* m_files;       ///< The list of files to rename and the resulting renamed filenames
+        ERenameMode        m_renameMode;  ///< The rename mode specifies if files are renamed, copied or moved (or linked)
+        bool               m_overwrite;   ///< Overwrite existing files
+        KUrl               m_destination; ///< Destination directory for copy, move and link
 
-    protected:
+ protected:
         QFile* f;
         QTime t;
         QProgressDialog* progress;

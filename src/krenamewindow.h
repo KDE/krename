@@ -61,6 +61,8 @@ class KRenameWindow : public KMainWindow {
  public:
     KRenameWindow( EGuiMode guiMode, QWidget* parent = NULL );
 
+    ~KRenameWindow();
+
     /** The maximum number of pages in any gui mode.
      *  No gui mode can have more pages than this.
      */
@@ -106,6 +108,11 @@ class KRenameWindow : public KMainWindow {
      */
     void setPreviewModel( KRenamePreviewModel* model );
 
+    /** 
+     * @returns the destinationUrl selected by the user
+     */
+    const KUrl destinationUrl() const;
+
  signals:
 
     /** Called whenever the user changes the rename mode
@@ -113,6 +120,13 @@ class KRenameWindow : public KMainWindow {
      *  @param mode the renaming mode selected by the user
      */
     void renameModeChanged( ERenameMode mode );
+
+    /** Called whenever the user changes the option 
+     *  if existing files maybe overwritten
+     *
+     *  @param bool overwrite if true existing files maybe overwritten during renaming
+     */
+    void overwriteFilesChanged(bool overwrite);
 
     /** Called whenever the user has changed the template for the filename
      *
@@ -151,9 +165,14 @@ class KRenameWindow : public KMainWindow {
      */
     void removeFiles();
 
+    /** Called when the user wants to rename with current settings
+     */
+    void accepted();
+
  private slots:
     void slotBack();
     void slotNext();
+    void slotFinish();
 
     /** Changes the current page to the page with the given index
      * 

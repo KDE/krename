@@ -43,8 +43,8 @@
 #include <klocale.h>
 
 // Own includes
-//#include "ProgressDialog.h"
 #include "batchrenamer.h"
+#include "progressdialog.h"
 //#include "fileoperation.h"
 //#include "pluginloader.h"
 //#include "kmylistview.h"
@@ -57,6 +57,7 @@ BatchRenamer::BatchRenamer()
     //plug = PluginLoader::instance();
     m_counter_index = 0;
     m_reset         = false;
+    m_overwrite     = false;
 }
 
 BatchRenamer::~BatchRenamer()
@@ -67,7 +68,7 @@ void BatchRenamer::processFilenames()
 {
     m_counters.clear();
     
-    for( unsigned int i = 0; i < m_files->count(); i++) 
+    for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++) 
     {
         m_counter_index = 0;
 
@@ -80,17 +81,18 @@ void BatchRenamer::processFilenames()
 
             (*m_files)[i].setDstUrl( url );
             
-        } else {
-            (*m_files)[i].setDstDirectory( dirname.path() );
-            (*m_files)[i].setDstUrl( dirname );
+        } 
+        else 
+        {
+            (*m_files)[i].setDstUrl( m_destination );
+            (*m_files)[i].setDstDirectory( m_destination.path() );
         }
 
         if( i > 0 && m_reset )
             findCounterReset( i );
 
         (*m_files)[i].setDstFilename( processString( text, (*m_files)[i].srcFilename(), i ) );
-        if( !extext.isEmpty() )
-            (*m_files)[i].setDstExtension( processString( extext, (*m_files)[i].srcExtension(), i ) );
+        (*m_files)[i].setDstExtension( processString( extext, (*m_files)[i].srcExtension(), i ) );
 
         (void)applyManualChanges( i );
 
@@ -130,6 +132,81 @@ void BatchRenamer::processFilenames()
 
 void BatchRenamer::processFiles( ProgressDialog* p )
 {
+    int     errors = 0;
+    QString dest   = (*m_files)[0].dstUrl().prettyUrl();
+    
+    // Give the user some information...
+    p->setProgressTotalSteps( m_files->count() );
+    p->setProgress( 0 );
+    switch( m_renameMode ) 
+    {
+        default:
+        case eRenameMode_Rename:
+            p->print( i18n("Input files will be renamed.") );
+            break;
+        case eRenameMode_Copy:
+            p->print( i18n("Files will be copied to: %1", dest ) );
+            break;
+        case eRenameMode_Move:
+            p->print( i18n("Files will be moved to: %1", dest ) );
+            break;
+        case eRenameMode_Link:
+            p->print( i18n("Symbolic links will be created in: %1", dest ) );
+            break;
+    }
+
+    for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++) 
+    {
+        KUrl    dstUrl    = (*m_files)[i].dstUrl();
+        QString directory = (*m_files)[i].dstDirectory();
+        QString filename  = (*m_files)[i].dstFilename();
+        QString extension = (*m_files)[i].dstExtension();
+        
+        if( !extension.isEmpty() )
+        {
+            filename += ".";
+            filename += extension;
+        }
+
+        dstUrl.setDirectory( directory );
+        dstUrl.setFileName( filename );
+
+        //p->print( QString( "%1 -> %2" ).arg( (*m_files)[i].srcUrl().prettyUrl() ).arg( dstUrl.prettyUrl() ) );
+        p->setProgress( i + 1 );
+
+        if( p->wasCancelled() )
+            break;
+
+        KIO::Job* job;
+        switch( m_renameMode ) 
+        {
+            default:
+            case eRenameMode_Rename:
+            case eRenameMode_Move:
+                job = KIO::file_move( (*m_files)[i].srcUrl(), dstUrl, m_overwrite, false, false );
+                break;
+            case eRenameMode_Copy:
+                job = KIO::file_copy( (*m_files)[i].srcUrl(), dstUrl, -1, m_overwrite, false, false );
+                break;
+            case eRenameMode_Link:
+                //job = KIO::file_link( (*m_files)[i].srcUrl(), dstUrl, m_overwrite, false, false );
+                break;
+        }
+
+        if( !NetAccess::synchronousRun( job, p ) ) 
+        {
+            p->error( i18n("Error during renaming %1", dstUrl.prettyUrl()) );
+            errors++;
+        } 
+    }
+
+    if( errors > 0 ) 
+        p->warning( i18n("%1 errors occurred!", errors ) );
+
+    p->print( i18n("KRename finished the renaming process."), "krename" );
+    p->print( i18n("Press close to quit!") );
+
+
 #if 0
     delete object;
     t.start();
@@ -145,8 +222,8 @@ void BatchRenamer::processFiles( ProgressDialog* p )
             m_files[i].dst.url = m_files[i].src.url;
             m_files[i].dst.url.setFileName( QString::null );
         } else {
-            m_files[i].dst.directory = dirname.path();
-            m_files[i].dst.url = dirname;
+            m_files[i].dst.directory = m_destination.path();
+            m_files[i].dst.url = m_destination;
         }
 
         if( i == 0 )

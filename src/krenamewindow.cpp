@@ -137,12 +137,22 @@ KRenameWindow::KRenameWindow( EGuiMode guiMode, QWidget* parent )
 
     setupGui();
 
+    
+    m_pageDests->urlrequester->setMode( KFile::Directory | KFile::ExistingOnly );
+    
+
     // Make sure that now signal occurs before setupGui was called
     connect( m_tabBar, SIGNAL(currentChanged(int)), SLOT(showPage(int)));
     connect( m_buttonClose, SIGNAL(clicked(bool)), SLOT(close()));
+    connect( m_buttons, SIGNAL(accepted()), SLOT(slotFinish()));
+
 
     // Show the first page in any mode
     showPage( 0 );
+}
+
+KRenameWindow::~KRenameWindow()
+{
 }
 
 void KRenameWindow::setupGui()
@@ -196,6 +206,9 @@ void KRenameWindow::setupSlots()
     connect( m_pageDests->optionMove,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->optionLink,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->checkUndoScript, SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
+    connect( m_pageDests->checkOverwrite,  SIGNAL(clicked(bool)), SIGNAL(overwriteFilesChanged(bool)));
+
+
 
     connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotEnableControls()));
     connect( m_pageFilename->buttonNumbering,    SIGNAL(clicked(bool))       , SIGNAL(showAdvancedNumberingDialog()));
@@ -290,6 +303,11 @@ void KRenameWindow::setPreviewModel( KRenamePreviewModel* model )
     m_pageFilename->listPreview->setModel( model );
 }
 
+const KUrl KRenameWindow::destinationUrl() const
+{
+    return m_pageDests->urlrequester->url();
+}
+
 void KRenameWindow::slotBack()
 {
     this->showPage( m_curPage-1 );
@@ -298,6 +316,11 @@ void KRenameWindow::slotBack()
 void KRenameWindow::slotNext()
 {
     this->showPage( m_curPage+1 );
+}
+
+void KRenameWindow::slotFinish()
+{
+    emit accepted();
 }
 
 void KRenameWindow::slotRenameModeChanged()
