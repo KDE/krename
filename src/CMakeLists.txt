@@ -20,9 +20,13 @@ set(krename_SRCS
   krenamemodel.cpp
   krenametest.cpp
   krenamewindow.cpp
+  krecursivelister.cpp
   numberdialog.cpp
   insertpartfilenamedlg.cpp
+  threadedlister.cpp
   progressdialog.cpp
+  replacedialog.cpp
+  tokenhelpdialog.cpp
   )
 
 kde4_automoc( ${krename_SRCS} )
@@ -37,6 +41,9 @@ kde4_add_ui_files( krename_SRCS
   krenameplugins.ui
   numberwidget.ui
   progressdialog.ui
+  replacewidget.ui
+  replaceitemdlg.ui
+  tokenhelpwidget.ui
   )
 
 kde4_add_executable(krename ${krename_SRCS})

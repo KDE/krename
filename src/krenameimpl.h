@@ -19,6 +19,7 @@
 #define KRENAMEIMPL_H
 
 #include <QObject>
+#include <QMutex>
 
 #include <kurl.h>
 
@@ -28,25 +29,11 @@
 class KRenameModel;
 class KRenamePreviewModel;
 class KRenameWindow;
+class ThreadedLister;
+class QLineEdit;
 
 class KRenameImpl : public QObject {
     Q_OBJECT
-
- public: 
-    typedef struct TFileDescription {
-        QString filename;
-        QString extension;
-        QString directory;
-        
-        KUrl    url;
-    };
-    
-    typedef struct TFileItem {
-        TFileDescription src;
-        TFileDescription dst;
-
-        bool dir;
-    };
 
  public: 
     ~KRenameImpl();
@@ -83,6 +70,7 @@ class KRenameImpl : public QObject {
      *  files.
      *
      *  \param list of existing files or directories
+     *  \param filter only add files or directories matching this filter
      *  \param recursively if true all directories will be added recursively
      *  \param dirsWithFiles add directory names along with their contents
      *  \param dirsOnly add only directories and no files
@@ -90,7 +78,8 @@ class KRenameImpl : public QObject {
      *
      *  \see addFileOrDir
      */
-    void addFilesOrDirs( const KUrl::List & list, bool recursively = false, bool dirsWithFiles = false, 
+    void addFilesOrDirs( const KUrl::List & list, const QString & filter = "*", 
+                         bool recursively = false, bool dirsWithFiles = false, 
                          bool dirsOnly = false, bool hidden = false );
 
     /** Parses commandline options
@@ -119,11 +108,6 @@ class KRenameImpl : public QObject {
      */
     void slotRemoveAllFiles();
 
-    /** Ensures that all controls have the current
-     *  enabled/disabled state
-     */
-    void slotEnableControls();
-
     /** Updates the count of files 
      *  in the file list of KRename
      */
@@ -148,10 +132,27 @@ class KRenameImpl : public QObject {
      */
     void slotInsertPartFilenameDlg();
 
+    /** This slot shows a dialog which allows the user to configure find and replace
+     */
+    void slotFindReplaceDlg();
+
     /** Start the actual renaming
      *  with the current settings
      */
     void slotStart();
+
+    /** Clean's up and deletes the lister after he has done
+     *  all his work.
+     *
+     *  \param lister a ThreadedLister which has done his work
+     */
+    void slotListerDone( ThreadedLister* lister );
+
+    /** Show a TokenHelpDialog that works on a QLineEdit
+     *
+     *  \param edit insert user selected tokens into this linedit
+     */
+    void slotTokenHelpDialog(QLineEdit* edit);
 
  private:
     KRenameWindow*        m_window;

@@ -530,9 +530,9 @@ bool KRenameTest::replaceTest( const QString & token, const QString & filename, 
     KRenameFile file( KUrl( directory + filename ), filename.isEmpty() );
     list.push_back( file );
 
-    QList<replacestrings> replaceList;
+    QList<TReplaceItem> replaceList;
 
-    struct replacestrings strings;
+    struct TReplaceItem strings;
     strings.find    = replace;
     strings.replace = with;
     strings.reg     = regExp;

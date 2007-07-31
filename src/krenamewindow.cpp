@@ -208,15 +208,15 @@ void KRenameWindow::setupSlots()
     connect( m_pageDests->checkUndoScript, SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
     connect( m_pageDests->checkOverwrite,  SIGNAL(clicked(bool)), SIGNAL(overwriteFilesChanged(bool)));
 
-
-
     connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotEnableControls()));
     connect( m_pageFilename->buttonNumbering,    SIGNAL(clicked(bool))       , SIGNAL(showAdvancedNumberingDialog()));
     connect( m_pageFilename->buttonInsert,       SIGNAL(clicked(bool))       , SIGNAL(showInsertPartFilenameDialog()));
-
+    connect( m_pageFilename->buttonFind,         SIGNAL(clicked(bool))       , SIGNAL(showFindReplaceDialog()));
 
     connect( m_pageFilename->filenameTemplate,   SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageFilename->extensionTemplate,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
+    connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotTemplateChanged()));
+    connect( m_pageFilename->buttonFunctions,    SIGNAL(clicked(bool))       , SLOT(slotTokenHelpRequested()));
     connect( m_pageSimple->comboFilenameCustom,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageSimple->comboSuffixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageSimple->comboPrefixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
@@ -308,6 +308,23 @@ const KUrl KRenameWindow::destinationUrl() const
     return m_pageDests->urlrequester->url();
 }
 
+QList<int> KRenameWindow::selectedFileItems() const
+{
+    QList<int> selected;
+
+    QItemSelectionModel* selection = m_pageFiles->fileList->selectionModel();
+    QModelIndexList      indeces = selection->selectedIndexes();
+    QModelIndexList::const_iterator it = indeces.begin();
+    
+    while( it != indeces.end() )
+    {
+        selected.append( (*it).row() );
+        ++it;
+    }
+
+    return selected;
+}
+
 void KRenameWindow::slotBack()
 {
     this->showPage( m_curPage-1 );
@@ -366,5 +383,11 @@ void KRenameWindow::slotTemplateChanged()
     m_pageFilename->buttonNumbering->setEnabled( filename.contains('#') || extension.contains('#') );
     this->slotEnableControls();
 }
+
+void KRenameWindow::slotTokenHelpRequested()
+{
+    emit showTokenHelpDialog( m_pageFilename->filenameTemplate->lineEdit() );
+}
+
 
 #include "krenamewindow.moc"

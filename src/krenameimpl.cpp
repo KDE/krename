@@ -26,14 +26,9 @@
 #include "numberdialog.h"
 #include "insertpartfilenamedlg.h"
 #include "progressdialog.h"
-
-/*
-#include "ui_krenamefiles.h"
-#include "ui_krenamedestination.h"
-#include "ui_krenamesimple.h"
-#include "ui_krenameplugins.h"
-#include "ui_krenamefilename.h"
-*/
+#include "replacedialog.h"
+#include "threadedlister.h"
+#include "tokenhelpdialog.h"
 
 #include <kaction.h>
 #include <kapplication.h>
@@ -62,7 +57,6 @@ KRenameImpl::KRenameImpl( KRenameWindow* window )
     m_renamer.setFiles( &m_vector );
 
     parseCmdLineOptions();
-    slotEnableControls();
     slotUpdateCount();
 }
 
@@ -176,6 +170,8 @@ void KRenameImpl::setupSlots()
 
     connect( m_window, SIGNAL(showAdvancedNumberingDialog()),  SLOT(slotAdvancedNumberingDlg()));
     connect( m_window, SIGNAL(showInsertPartFilenameDialog()), SLOT(slotInsertPartFilenameDlg()));
+    connect( m_window, SIGNAL(showFindReplaceDialog()),        SLOT(slotFindReplaceDlg()));
+    connect( m_window, SIGNAL(showTokenHelpDialog(QLineEdit*)),SLOT(slotTokenHelpDialog(QLineEdit*)));
 }
 
 void KRenameImpl::addFileOrDir( const KUrl & url )
@@ -187,7 +183,8 @@ void KRenameImpl::addFileOrDir( const KUrl & url )
     this->slotUpdateCount();
 }
 
-void KRenameImpl::addFilesOrDirs( const KUrl::List & list, bool recursively, bool dirsWithFiles, bool dirsOnly, bool hidden )
+void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filter, 
+                                  bool recursively, bool dirsWithFiles, bool dirsOnly, bool hidden )
 {
     KUrl::List::ConstIterator it   = list.begin();
     
@@ -200,10 +197,21 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, bool recursively, boo
             {
                 m_model->addFile( item );
             }
-            
-            if( recursively ) 
+            else
             {
+                KApplication::setOverrideCursor( Qt::BusyCursor );
 
+                ThreadedLister* thl = new ThreadedLister( m_model );
+                connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
+
+                thl->setDirname( *it );
+                thl->setDirnames( dirsOnly );
+                thl->setFilter( filter );
+                thl->setHidden( hidden );
+                thl->setRecursive( recursively );
+                thl->setRecursiveDirOnlyMode( recursively );
+
+                thl->start();
             }
         }
         else 
@@ -342,13 +350,13 @@ void KRenameImpl::parseCmdLineOptions()
 void KRenameImpl::slotAddFiles()
 {
     FileDialogExtWidget* widget = new FileDialogExtWidget();
-    KFileDialog dialog( KUrl("kfiledialog://krename"), "*", m_window, widget );
+    KFileDialog dialog( KUrl("kfiledialog://krename"), "*|All files and directories", m_window, widget );
     dialog.setOperationMode( KFileDialog::Opening );
     dialog.setMode( KFile::Files | KFile::ExistingOnly );
 
     if( dialog.exec() == QDialog::Accepted ) 
     {
-        this->addFilesOrDirs( dialog.selectedUrls(), widget->addRecursively(), widget->addDirsWithFiles(),
+        this->addFilesOrDirs( dialog.selectedUrls(), dialog.currentFilter(), widget->addRecursively(), widget->addDirsWithFiles(),
                               widget->addDirsOnly(), widget->addHidden() );
     }
 
@@ -389,7 +397,8 @@ void KRenameImpl::slotAddFiles()
 
 void KRenameImpl::slotRemoveFiles()
 {
-
+    m_model->removeFiles( m_window->selectedFileItems() );
+    this->slotUpdateCount();
 }
 
 void KRenameImpl::slotRemoveAllFiles()
@@ -407,11 +416,6 @@ void KRenameImpl::slotRemoveAllFiles()
     }
 }
 
-void KRenameImpl::slotEnableControls()
-{
-    
-}
-
 void KRenameImpl::selfTest()
 {
     KRenameTest* test = new KRenameTest();
@@ -427,7 +431,6 @@ void KRenameImpl::slotUpdateCount()
 {
     m_window->setCount( m_vector.size() );
 
-    this->slotEnableControls();
     this->slotUpdatePreview();
 }
 
@@ -462,12 +465,41 @@ void KRenameImpl::slotInsertPartFilenameDlg()
 
     if( dialog.exec() == QDialog::Accepted ) 
     {
-        qDebug("command=%s", dialog.command().toLatin1().data() );
         m_window->setFilenameTemplate( dialog.command(), true );
 
         // Update preview will called from KRenameWindow because of the changed template
         // slotUpdatePreview();s
     }
+}
+
+void KRenameImpl::slotFindReplaceDlg()
+{
+    ReplaceDialog dialog( m_renamer.replaceList(), m_window );
+
+    if( dialog.exec() == QDialog::Accepted ) 
+    {
+        m_renamer.setReplaceList( dialog.replaceList() );
+        slotUpdatePreview();
+    }
+}
+
+void KRenameImpl::slotListerDone( ThreadedLister* lister ) 
+{
+    // Delete the listener
+    delete lister;
+
+    // restore cursor
+    KApplication::restoreOverrideCursor();
+
+    // update preview
+    slotUpdateCount();
+    slotUpdatePreview();
+} 
+
+void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
+{
+    TokenHelpDialog dialog( edit, m_window );
+    dialog.exec();
 }
 
 void KRenameImpl::slotStart()

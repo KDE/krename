@@ -27,6 +27,7 @@ class KRenamePreviewModel;
 class KPushButton;
 class QDialogButtonBox;
 class QLabel;
+class QLineEdit;
 class QStackedWidget;
 class QTabBar;
 
@@ -113,6 +114,12 @@ class KRenameWindow : public KMainWindow {
      */
     const KUrl destinationUrl() const;
 
+    /**
+     * \returns a list of all file indexes that are selected
+     *          in the filelist
+     */
+    QList<int> selectedFileItems() const;
+
  signals:
 
     /** Called whenever the user changes the rename mode
@@ -152,6 +159,10 @@ class KRenameWindow : public KMainWindow {
      */
     void showInsertPartFilenameDialog();
 
+    /** Called when the user requests the find and repalce dialog
+     */
+    void showFindReplaceDialog();
+
     /** Called when the user wants to add more files
      */
     void addFiles();
@@ -161,9 +172,17 @@ class KRenameWindow : public KMainWindow {
     void removeAllFiles();
 
     /** Called when the user wants to remove all selected files
-     *  //TODO: Parameter for all selected files
+     *
+     *  \see selectedFileItems() to retrieve the selected files
      */
     void removeFiles();
+    
+    /** Show a token help dialog which inserts a token
+     *  into a KLineEdit
+     *
+     *  \param edit the QLineEdit which is used to insert tokens selected by the user
+     */
+    void showTokenHelpDialog( QLineEdit* edit );
 
     /** Called when the user wants to rename with current settings
      */
@@ -193,6 +212,11 @@ class KRenameWindow : public KMainWindow {
     /** Called whenever one of the template fields has changed
      */
     void slotTemplateChanged();
+
+    /** Emits the showTokenHelpDialog signal with the appropriate
+     *  KLineEdi
+     */
+    void slotTokenHelpRequested();
 
  private:
     /** Configures the GUI for the current GUI mode

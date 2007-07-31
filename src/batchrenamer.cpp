@@ -923,58 +923,43 @@ QString BatchRenamer::findLength( const QString & token, const QString & name )
     return QString::null;
 }
 
-QString BatchRenamer::findReplace( QString text )
+QString BatchRenamer::findReplace( const QString & text )
 {
-    // Call for each element in replace strings doReplace with correct values
-    for( unsigned int i = 0; i < m_replace.count(); i++ ) {
-        replacestrings s = m_replace[i];
-        text = doReplace( text, unEscape( s.find ), s.replace, s.reg );
+    QList<TReplaceItem>::const_iterator it = m_replace.begin();
+
+    QString t( text );
+    while( it != m_replace.end() )
+    {
+        QString find( (*it).find );
+
+        // Call for each element in replace strings doReplace with correct values
+        t = doReplace( t, unEscape( find ), (*it).replace, (*it).reg );
+        ++it;
     }
 
-    return text;
+    return t;
 }
 
-QString BatchRenamer::doReplace( QString text, QString find, QString replace, bool reg )
+QString BatchRenamer::doReplace( const QString & text, const QString & find, const QString & replace, bool reg )
 {
+    QString t( text );
     if( !reg ) 
     {
-#if QT_VERSION >= 0x030100
+        QString escaped = find;
+        escaped = doEscape( escaped );
+
         // we use the escaped text here because the user might want 
         // to find a "&" and replace it
-        text.replace( doEscape( find ), replace );
-#else
-        int pos = 0;
-        QString f = doEscape( find );
-        do {
-            
-            pos = text.find( f, pos );
-            if( pos >= 0 ) {
-                text.replace( pos, f.length(), replace );
-                pos += replace.length();
-            }
-        } while( pos >= 0 );
-#endif
+        t.replace( escaped, replace );
     } 
     else
     {
-#if QT_VERSION >= 0x030100    
         // no doEscape() here for the regexp, because it would destroy our regular expression
         // other wise we will not find stuff like $, [ in the text 
-        text = doEscape( unEscape( text ).replace( QRegExp( find ), replace ) );
-#else
-        // Test this code more!
-        pos = 0;
-        do {
-            QRegExp exp( find );
-            pos = exp.search( text, pos );
-            if( pos >= 0 ) {
-                text = doEscape( unEscape( text ).replace( pos, exp.matchedLength(), replace ) );
-                pos += replace.length();
-            }
-        } while( pos >= 0 );
-#endif
+        t = doEscape( unEscape( t ).replace( QRegExp( find ), replace ) );
     }
-    return text;
+
+    return t;
 }
 
 void BatchRenamer::writeUndoScript( QTextStream* t )

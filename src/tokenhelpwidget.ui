@@ -1,0 +1,105 @@
+<ui version="4.0" >
+ <class>TokenHelpWidget</class>
+ <widget class="QWidget" name="TokenHelpWidget" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>491</width>
+    <height>355</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>KRename Help</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>All supported tokens (commands) are listed is this dialog. You can search for tokens and insert a found token into the pattern for the filename.</string>
+     </property>
+     <property name="wordWrap" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSplitter" name="splitter" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QWidget" name="layoutWidget" >
+      <layout class="QVBoxLayout" >
+       <item>
+        <widget class="KTreeWidgetSearchLineWidget" name="searchCategory" />
+       </item>
+       <item>
+        <widget class="QTreeWidget" name="listCategories" >
+         <property name="alternatingRowColors" >
+          <bool>true</bool>
+         </property>
+         <property name="itemsExpandable" >
+          <bool>false</bool>
+         </property>
+         <property name="sortingEnabled" >
+          <bool>true</bool>
+         </property>
+         <property name="allColumnsShowFocus" >
+          <bool>true</bool>
+         </property>
+         <column>
+          <property name="text" >
+           <string>Category</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget" >
+      <layout class="QVBoxLayout" >
+       <item>
+        <widget class="KTreeWidgetSearchLineWidget" name="searchToken" />
+       </item>
+       <item>
+        <widget class="QTreeWidget" name="listTokens" >
+         <property name="alternatingRowColors" >
+          <bool>true</bool>
+         </property>
+         <property name="itemsExpandable" >
+          <bool>false</bool>
+         </property>
+         <property name="sortingEnabled" >
+          <bool>true</bool>
+         </property>
+         <property name="allColumnsShowFocus" >
+          <bool>true</bool>
+         </property>
+         <column>
+          <property name="text" >
+           <string>Token</string>
+          </property>
+         </column>
+         <column>
+          <property name="text" >
+           <string>Description</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KTreeWidgetSearchLineWidget</class>
+   <extends>QLineEdit</extends>
+   <header location="global" >ktreewidgetsearchline.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

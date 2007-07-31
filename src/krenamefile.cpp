@@ -20,7 +20,7 @@
 #include <kfileitem.h>
 #include <kio/netaccess.h>
 
-KRenameFile::KRenameFile( KUrl src, ESplitMode eSplitMode, unsigned int dot )
+KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int dot )
     : m_bValid( false )
 {
     KIO::UDSEntry entry;
@@ -33,10 +33,16 @@ KRenameFile::KRenameFile( KUrl src, ESplitMode eSplitMode, unsigned int dot )
     initFileDescription( m_src, src, eSplitMode, dot );
 }
 
-KRenameFile::KRenameFile( KUrl src, bool directory, ESplitMode eSplitMode, unsigned int dot )
+KRenameFile::KRenameFile( const KUrl & src, bool directory, ESplitMode eSplitMode, unsigned int dot )
     : m_bDirectory( directory ), m_bValid( true )
 {
     initFileDescription( m_src, src, eSplitMode, dot );
+}
+
+KRenameFile::KRenameFile( const KFileItem& item, ESplitMode eSplitMode, unsigned int dot )
+    : m_bDirectory( item.isDir() ), m_bValid( item.isReadable() )
+{
+    initFileDescription( m_src, item.url(), eSplitMode, dot );
 }
 
 KRenameFile::KRenameFile( const KRenameFile & rhs )

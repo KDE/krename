@@ -30,6 +30,12 @@ class KRenameModel : public QAbstractListModel {
 
    void addFile( const KRenameFile & file );
 
+   /** Remove items in the model
+    *
+    *  \param remove list of indexes to remove
+    */
+   void removeFiles( const QList<int> & remove );
+
    virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const;
    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
 

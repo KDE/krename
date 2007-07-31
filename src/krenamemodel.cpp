@@ -61,7 +61,7 @@ Qt::ItemFlags KRenameModel::flags(const QModelIndex &index) const
 }
 
 bool KRenameModel::setData(const QModelIndex &index,
-                               const QVariant &value, int role)
+                           const QVariant &value, int role)
 {
     if (index.isValid() && role == Qt::EditRole) {
     
@@ -80,9 +80,26 @@ void KRenameModel::addFile( const KRenameFile & file )
     this->endInsertRows();
 }
 
+void KRenameModel::removeFiles( const QList<int> & remove )
+{
+    int offset = 0;
 
+    QList<int> copy( remove );
+    qSort( copy );
 
+    QList<int>::const_iterator it = copy.begin();
+    this->beginRemoveRows( QModelIndex(), *it, copy.back() );
+    while( it != copy.end() )
+    {
+        qDebug("About to remove: %i\n", *it );
+        m_vector->erase( m_vector->begin() + *it - offset );
 
+        ++offset;
+        ++it;
+    }
+
+    this->endRemoveRows();
+}
 
 
 KRenamePreviewModel::KRenamePreviewModel( KRenameFile::List* vector )

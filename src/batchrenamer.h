@@ -57,18 +57,23 @@ typedef struct manualchanges {
     QString user;  // name the user wants
 };
 
-typedef struct replacestrings {
-    QString find;      // Text to replace
-    QString replace;   // Replace with
-    bool reg;          // is it a reg expression ?
-};
-
 typedef struct tCounterValues {
     int value;  // current value of this counter
     int start;  // start value of this counter (for findResetCounter)
     int step;   // stepping value of this counter;
 };
 
+
+
+/** A structure describing a string or regular
+ *  expression that is to be found in the final/resulting
+ *  filename and to be replaced with another string.
+ */
+typedef struct TReplaceItem {
+    QString find;      ///< Text to replace
+    QString replace;   ///< Replace with
+    bool reg;          ///< is it a reg expression ?
+};
 
 /** An enum to set the renaming mode of KRename
  */
@@ -164,8 +169,10 @@ class BatchRenamer : public QObject {
 
         inline void setUndoScript( const QString & t ) { m_undoScript = t; }
         inline void setUndo( bool b ) { undo = b; }
-        inline void setReplaceList( const QList<replacestrings> & r ) { m_replace = r; }
-        
+
+        inline void setReplaceList( const QList<TReplaceItem> & r ) { m_replace = r; }
+        inline const QList<TReplaceItem> & replaceList() const { return m_replace; }
+
         inline void setChanges( const QList<manualchanges> & m ) { m_changes = m; }
 
         inline void setMode( int m) { m_mode = m; }
@@ -182,8 +189,6 @@ class BatchRenamer : public QObject {
         QString findPartStrings( QString oldname, QString token );
         static QString findDirName( QString token, QString path );
         QString findLength( const QString & token, const QString & name );
-        QString findReplace( QString text );  // text is here already the new filename !
-        QString doReplace( QString text, QString find, QString replace, bool reg ); // text is here already the new filename !
 
         QString processString( QString text, QString oldname, int i );
         
@@ -261,6 +266,30 @@ class BatchRenamer : public QObject {
          */
         inline void setDestinationDir( const KUrl & url ) { m_destination = url; }
 
+     private:
+        /** Do find and replace on the final resulting filename.
+         *  
+         *  \param text the new final filename with all other changes applied.
+         *
+         *  \returns the new filename with all find and replace being done.
+         *
+         *  \see m_replace
+         */
+        QString findReplace( const QString & text );
+
+        /**
+         * Replace one string (which might be a regular expression) in the final filename
+         * with another string and return a new filename.
+         *
+         *  \param text the new final filename with all other changes applied.
+         *  \param find the string or regular expression to find
+         *  \param replace replace a matched string with this value
+         *  \param reg if true treat find as regular expression
+         *
+         *  \returns the new filename with find and replace being done.
+         */
+        QString doReplace( const QString & text, const QString & find, const QString & replace, bool reg );
+
     private:
         /** 
          * Returns the length of the string when int n is converted to
@@ -289,7 +318,6 @@ class BatchRenamer : public QObject {
 	bool m_reset;             // reset counter on new directories
         int m_mode;             // renaming mode
         QList<int> m_skip; // Numbers to skip
-        QList<replacestrings> m_replace; // Replace strings
         QList<manualchanges> m_changes;  // User made changes
         PluginLoader* plug;
 
@@ -306,6 +334,8 @@ class BatchRenamer : public QObject {
         ERenameMode        m_renameMode;  ///< The rename mode specifies if files are renamed, copied or moved (or linked)
         bool               m_overwrite;   ///< Overwrite existing files
         KUrl               m_destination; ///< Destination directory for copy, move and link
+
+        QList<TReplaceItem> m_replace;    ///< List of strings for find and replace
 
  protected:
         QFile* f;

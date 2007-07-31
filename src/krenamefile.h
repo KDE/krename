@@ -22,6 +22,8 @@
 
 #include <kurl.h>
 
+class KFileItem;
+
 /** An enum to describe the mode to split 
  *  filename and extension.
  */
@@ -77,7 +79,7 @@ class KRenameFile {
      *  \param dot dot to use as separator for eSplitMode_CustomDot
      *  \see isValid()
      */
-    KRenameFile( KUrl src, ESplitMode eSplitMode = eSplitMode_FirstDot, unsigned int dot = 1 );
+    KRenameFile( const KUrl & src, ESplitMode eSplitMode = eSplitMode_FirstDot, unsigned int dot = 1 );
 
     /** Construct a new KRenameFile from an url.
      *
@@ -92,7 +94,17 @@ class KRenameFile {
      *                    filename and extension
      *  \param dot dot to use as separator for eSplitMode_CustomDot
      */
-    KRenameFile( KUrl src, bool directory, ESplitMode eSplitMode = eSplitMode_FirstDot, unsigned int dot = 1 );
+    KRenameFile( const KUrl & src, bool directory, ESplitMode eSplitMode = eSplitMode_FirstDot, unsigned int dot = 1 );
+
+    /** Construct a new KRenameFile form a KFileItem which is faster
+     *  than construction from an URL.
+     *
+     *  \param item a KFileItem
+     *  \param eSplitMode splitmode which is used to separate
+     *                    filename and extension
+     *  \param dot dot to use as separator for eSplitMode_CustomDot
+     */
+    KRenameFile( const KFileItem& item, ESplitMode eSplitMode = eSplitMode_FirstDot, unsigned int dot = 1 );
 
     /** Copy constructor
      *  \param rhs KRenameFile to copy
