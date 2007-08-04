@@ -38,7 +38,7 @@ TokenHelpDialog::TokenHelpDialog( QLineEdit* edit, QWidget* parent )
     connect(m_buttons, SIGNAL(rejected()), SLOT(reject()));
 }
 
-void TokenHelpDialog::add( const QString & headline, const QStringList & commands, const QPixmap & icon )
+void TokenHelpDialog::add( const QString & headline, const QStringList & commands, const QPixmap & icon, bool first )
 {
     m_map[headline] = commands;
 

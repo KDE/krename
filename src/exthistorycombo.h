@@ -32,6 +32,9 @@ class ExtHistoryCombo : public KHistoryComboBox {
  public:
     ExtHistoryCombo( QWidget* parent );
 
+    /// Fix compilation, designer needs this method
+    inline void insertItems( int, QStringList & list ) { KHistoryComboBox::insertItems( list ); } 
+
  signals:
     void delayedTextChanged();
 

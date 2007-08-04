@@ -375,3 +375,15 @@ Am Friday, 1. December 2006 19:38 schrieben Sie:
 > stonki
 
 ==========================
+hi there
+it would be kewl to have a menu option (like kdiff3) with which you could directly access the last few rename patterns.. 
+f.e I used $_[modificationdate;yyyy-MM-dd_hh-mm] a few times within the past few minutes on a single file and each time 
+had to do more clicks than necessary if there were such a feature.. what do you think?
+regards marcel
+P.S.: and I tried sending this via the report feature but got:
+Unable to send the bug report.
+Please submit a bug report manually...
+See http://bugs.kde.org/ for instructions.
+Server said: "550 5.7.0 Need to authenticate via SMTP-AUTH-Login {mp049}"
+
+By the way will your genius tool be on board for KDE4 ??
