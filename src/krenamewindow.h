@@ -120,6 +120,11 @@ class KRenameWindow : public KMainWindow {
      */
     QList<int> selectedFileItems() const;
 
+ public slots:
+    /** Resets the enabled/disabled state of all GUI elements correctly
+     */
+    void slotEnableControls();
+
  signals:
 
     /** Called whenever the user changes the rename mode
@@ -198,10 +203,6 @@ class KRenameWindow : public KMainWindow {
      *  @param index the index of the page to show
      */
     void showPage( int index );
-
-    /** Resets the enabled/disabled state of all GUI elements correctly
-     */
-    void slotEnableControls();
 
     /** Called when one of the checkboxes for 
      *  rename, copy, more or link was clicked

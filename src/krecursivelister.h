@@ -24,6 +24,7 @@
 #include <kdirlister.h>
 #include <kfileitem.h>
 
+class QWidget;
 
 /** A convienience class that recursively lists a directory
  * @author Jonathon Sim
@@ -42,8 +43,7 @@ public:
         KRecursiveLister(QObject *parent=NULL);
 	~KRecursiveLister();
 
-	/** Returns the list of fileitems found. */
-	const KFileItemList & items();
+        inline void setMainWindow( QWidget* cache ) { m_cache = cache; }
 
         /** sets wether hidden files shall be listed */
         inline void setShowingDotFiles( bool dotfiles );
@@ -59,36 +59,32 @@ public:
 	
         /** Stops the listing */
 	void stop();
-	
-        /** Returns the subdirectories found by the listing */
-	const KFileItemList& dirs();
-
-        void cleanUp();
 
  signals: // Signals
 	/** Listing is complete */
 	void completed();
+        void newItems( const KFileItemList& items );
 
 protected slots: // Protected slots
     
         /** handles completion of a listing. */
         void slotListingComplete();
         void listNextDirectory();
+        void slotNewItems( const KFileItemList& items );
 
 protected: // Protected methods
 	/** Starts listing the specified url */
 	void startListing(const KUrl & url);
 	
 	//Protected variables
-	KFileItemList	filelist; 	//Files found at  url
 	KFileItemList	dirlist;	//Dirs remaining to list
-	KFileItemList	dirtree;
-	KFileItemList allItems;
 	QPointer<KDirLister>		lister;			//The current KDirLister
 
         bool m_hidden;
         bool m_dirs;
         QString m_filter;
+
+        QWidget* m_cache;
 };
 
 void KRecursiveLister::setShowingDotFiles( bool dotfiles ) 

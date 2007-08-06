@@ -28,6 +28,7 @@ class KDirLister;
 class KRecursiveLister;
 class KRenameModel;
 class QMutex;
+class QWidget;
 
 /*
 class FileList : public KFileItemList {
@@ -47,13 +48,16 @@ class FileList : public KFileItemList {
 };
 */
 
-class ThreadedLister : public QThread
+class ThreadedLister : public QObject
 {
     Q_OBJECT
     public:
-        ThreadedLister( KRenameModel* model );
+        ThreadedLister( QWidget* cache, KRenameModel* model );
         ~ThreadedLister();
                 
+        inline void start() { this->run(); }
+        inline void exit( int v = 0 ) { return; }
+
         inline const KUrl & dirname();
         inline bool dirnames();
         inline const QString & filter();
@@ -92,7 +96,8 @@ class ThreadedLister : public QThread
                 
         KDirLister*       m_lister;
         KRecursiveLister* m_reclister;
-        
+      
+        QWidget*          m_cache;
         KRenameModel*     m_model;
 };
 

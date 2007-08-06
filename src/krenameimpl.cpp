@@ -193,26 +193,19 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
         KRenameFile item( *it );
         if( item.isDirectory() )
         {
-            if(dirsWithFiles || dirsOnly)
-            {
-                m_model->addFile( item );
-            }
-            else
-            {
-                KApplication::setOverrideCursor( Qt::BusyCursor );
+            KApplication::setOverrideCursor( Qt::BusyCursor );
 
-                ThreadedLister* thl = new ThreadedLister( m_model );
-                connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
+            ThreadedLister* thl = new ThreadedLister( m_window, m_model );
+            connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
+            
+            thl->setDirname( *it );
+            thl->setDirnames( dirsOnly );
+            thl->setFilter( filter );
+            thl->setHidden( hidden );
+            thl->setRecursive( recursively );
+            thl->setRecursiveDirOnlyMode( recursively );
 
-                thl->setDirname( *it );
-                thl->setDirnames( dirsOnly );
-                thl->setFilter( filter );
-                thl->setHidden( hidden );
-                thl->setRecursive( recursively );
-                thl->setRecursiveDirOnlyMode( recursively );
-
-                thl->start();
-            }
+            thl->start();
         }
         else 
         {
@@ -397,8 +390,13 @@ void KRenameImpl::slotAddFiles()
 
 void KRenameImpl::slotRemoveFiles()
 {
-    m_model->removeFiles( m_window->selectedFileItems() );
-    this->slotUpdateCount();
+    if( m_window->selectedFileItems().count() )
+    {
+        m_model->removeFiles( m_window->selectedFileItems() );
+        this->slotUpdateCount();
+
+        m_window->slotEnableControls();
+    }
 }
 
 void KRenameImpl::slotRemoveAllFiles()
@@ -413,6 +411,7 @@ void KRenameImpl::slotRemoveAllFiles()
 
 
         this->slotUpdateCount();
+        m_window->slotEnableControls();
     }
 }
 

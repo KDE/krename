@@ -19,11 +19,8 @@
 
 #include "krecursivelister.h"
 
-KRecursiveLister::KRecursiveLister(QObject *parent ) : QObject(parent) {
+KRecursiveLister::KRecursiveLister(QObject *parent ) : QObject(parent), m_cache( NULL ) {
     lister = 0L;
-    filelist.clear();
-    dirlist.clear();
-    dirtree.clear();
     m_hidden = false;
     m_dirs = false;
     m_filter = QString::null;
@@ -31,54 +28,38 @@ KRecursiveLister::KRecursiveLister(QObject *parent ) : QObject(parent) {
 
 KRecursiveLister::~KRecursiveLister(){
     delete lister;
-
-    while (!allItems.isEmpty())
-     delete allItems.takeFirst();
 }
 
-void KRecursiveLister::cleanUp()
-{
-    filelist.clear();
-    dirlist.clear();
-}
+
 /** Starts listing the specified url */
 void KRecursiveLister::openUrl(const KUrl& url ){
-    filelist.clear();
     dirlist.clear();
     startListing(url);
 }
 
-/** Returns the list of fileitems found. */
-const KFileItemList & KRecursiveLister::items(){
-    return filelist;
-}
-
-/** handles completion of a listing. */
-void KRecursiveLister::slotListingComplete(){
-    KFileItemList templist=lister->items();
-
+void KRecursiveLister::slotNewItems( const KFileItemList& items )
+{
     KFileItem * newitem;
 
-    KFileItemList::const_iterator it = templist.begin();
-    while( it != templist.end() )
+    qDebug("??? Got Rec items: %i", items.count() );
+
+    KFileItemList::const_iterator it = items.begin();
+    while( it != items.end() )
     {
         if ((*it)->isDir()) {
             newitem= new KFileItem(*(*it));
             dirlist.append(newitem);//Used for recursing the directories
-            dirtree.append(newitem);//Returned to user on request.
-            allItems.append(newitem);
-        }
-        else {
-            qDebug("GOT: %s", (*it)->url().url().toLatin1().data());
-
-            newitem= new KFileItem(*(*it));
-            filelist.append(newitem);
-            allItems.append(newitem);
         }
 
         ++it;
     }
 
+    emit newItems( items );
+}
+
+/** handles completion of a listing. */
+void KRecursiveLister::slotListingComplete(){
+    this->slotNewItems( lister->items( KDirLister::FilteredItems ) );
     QTimer::singleShot( 0, this, SLOT( listNextDirectory() ));
 }
 
@@ -88,18 +69,19 @@ void KRecursiveLister::startListing(const KUrl& url){
         lister=new KDirLister();
         lister->setShowingDotFiles( m_hidden );
         lister->setNameFilter( m_filter );
-        lister->setDirOnlyMode( m_dirs );
+        //lister->setDirOnlyMode( m_dirs );
+        lister->setMainWindow( m_cache ); 
+        lister->setAutoUpdate( false );
+
+        //connect(lister,SIGNAL(newItems(const KFileItemList&)), this, SLOT(slotNewItems(const KFileItemList&)));
         connect(lister,SIGNAL(completed()), this, SLOT(slotListingComplete()) );
     }
 
-
-    qDebug("REC: listing: %s", url.url().toLatin1().data());
     lister->openUrl( url, false, false );
 }
 
 void KRecursiveLister::listNextDirectory()
 {
-    qDebug("REC: listNextDirectory()");
     if ( dirlist.isEmpty() )
         emit completed();
     else
@@ -108,6 +90,7 @@ void KRecursiveLister::listNextDirectory()
         KUrl url = nextdir->url();
         dirlist.removeLast();
         startListing( url );
+        delete nextdir;
     }
 }
 
@@ -116,8 +99,4 @@ void KRecursiveLister::stop(){
     lister->stop();
 }
 
-/** Returns the subdirectories found by the listing */
-const KFileItemList& KRecursiveLister::dirs(){
-    return dirtree;
-}
 #include "krecursivelister.moc"
