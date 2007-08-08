@@ -152,6 +152,14 @@ class KRenameWindow : public KMainWindow {
      */
     void extensionTemplateChanged( const QString & extension );
 
+    /** Called whenever the user changes the file preview state
+     *
+     *  @param enable if true display previews 
+     *  @param filenames if true display filenames next to preview (if enable is false
+     *                   this parameter has to be ignored.
+     */
+    void filePreviewChanged( bool enable, bool filenames );
+
     /** Called whenever the GUI wants an updated preview
      */
     void updatePreview();
@@ -215,9 +223,19 @@ class KRenameWindow : public KMainWindow {
     void slotTemplateChanged();
 
     /** Emits the showTokenHelpDialog signal with the appropriate
-     *  KLineEdi
+     *  KLineEdit
      */
     void slotTokenHelpRequested();
+
+    /** Called when one of the preview checkboxes is clicked.
+     */
+    void slotPreviewChanged();
+
+    /** Called whenever the user changes the current sort mode
+     *
+     *  @param index currently selected sort index
+     */
+    void slotSortChanged( int index );
 
  private:
     /** Configures the GUI for the current GUI mode

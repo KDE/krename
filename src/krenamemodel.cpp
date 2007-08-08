@@ -17,11 +17,97 @@
 
 #include "krenamemodel.h"
 
+#include <QPixmap>
+
 #include <klocale.h>
+
+// Helper functions for sorting
+const QString findNumInString( unsigned int pos, const QString & s )
+{
+    QString num;
+    
+    for( int i = static_cast<int>(pos); i >= 0; i-- )
+        if( s[i].isDigit() )
+            num.prepend( s[i] );
+        else
+            break;
+            
+
+    for( int i = pos + 1; i < s.length(); i++ )
+        if( s[i].isDigit() )
+            num.append( s[i] );
+        else
+            break;
+    
+    return num;
+}
+
+int compareNummeric( const QString & s1, const QString & s2 )
+{
+    int z = 0;
+    int max = ( s1.length() > s2.length() ? s1.length() : s2.length() );
+    
+    QString num1;
+    QString num2;
+    for( z=0;z<max;z++)
+    {
+        //if( z >= s1.length() || z >= s2.length() )
+        //    break;
+            
+        if( s1[z] != s2[z] )
+        {
+            if( z < s1.length() && s1[z].isDigit() )
+                num1 = findNumInString( z, s1 );
+            
+            if( z < s2.length() && s2[z].isDigit() )
+                num2 = findNumInString( z, s2 );
+            
+            if( num1.isNull() && num2.isNull() )    
+                break;
+                
+            int a = num1.toInt();
+            int b = num2.toInt();
+            if( a == b )
+                return s1.compare( s2 );
+            else
+                return ( a > b ) ? 1 : -1;
+        }
+    }
+        
+    return s1.compare( s2 );
+}
+
+// Less than functions for sorting
+bool ascendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
+{
+    return file1.srcUrl() < file2.srcUrl();
+}
+
+bool descendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
+{
+    return !(file1.srcUrl() < file2.srcUrl());
+}
+
+bool numericKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
+{
+    KUrl url1 = file1.srcUrl();
+    KUrl url2 = file2.srcUrl();
+    if( url1.directory() != url2.directory() )
+    {
+        // not in the same directory so do lexical comparison
+        return url1 < url2;
+    }
+    else
+        return (compareNummeric( file1.srcFilename(), file2.srcFilename() ) < 0);
+
+    return false;
+}
 
 KRenameModel::KRenameModel( KRenameFile::List* vector )
     : QAbstractListModel(),
-      m_vector( vector )
+      m_vector( vector ),
+      m_preview( false ),
+      m_text( false )
 {
 
 }
@@ -44,9 +130,13 @@ QVariant KRenameModel::data ( const QModelIndex & index, int role ) const
     if (index.row() >= m_vector->size())
         return QVariant();
 
-    if (role == Qt::DisplayRole)
+    if (role == Qt::DisplayRole && (!m_preview || (m_preview && m_text)) )
     {
         return m_vector->at(index.row()).toString();
+    }
+    else if( role == Qt::DecorationRole && m_preview ) 
+    {
+        return m_vector->at(index.row()).icon();
     }
     else
         return QVariant();
@@ -91,7 +181,6 @@ void KRenameModel::removeFiles( const QList<int> & remove )
     this->beginRemoveRows( QModelIndex(), *it, copy.back() );
     while( it != copy.end() )
     {
-        qDebug("About to remove: %i\n", *it );
         m_vector->erase( m_vector->begin() + *it - offset );
 
         ++offset;
@@ -101,6 +190,19 @@ void KRenameModel::removeFiles( const QList<int> & remove )
     this->endRemoveRows();
 }
 
+void KRenameModel::sort( ESortMode mode )
+{
+    if( mode == eSortMode_Ascending ) 
+        qSort( m_vector->begin(), m_vector->end(), ascendingKRenameFileLessThan );
+    else if( mode == eSortMode_Descending ) 
+        qSort( m_vector->begin(), m_vector->end(), descendingKRenameFileLessThan );
+    else if( mode == eSortMode_Numeric ) 
+        qSort( m_vector->begin(), m_vector->end(), numericKRenameFileLessThan );
+    else
+        return;
+
+    this->reset();
+}
 
 KRenamePreviewModel::KRenamePreviewModel( KRenameFile::List* vector )
     : m_vector( vector )
@@ -191,6 +293,5 @@ void KRenamePreviewModel::refresh()
 {
     emit reset();
 }
-
 
 #include "krenamemodel.moc"

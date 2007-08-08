@@ -200,6 +200,9 @@ void KRenameWindow::setupSlots()
     connect( m_pageFiles->buttonAdd,       SIGNAL(clicked(bool)), SIGNAL(addFiles()));
     connect( m_pageFiles->buttonRemove,    SIGNAL(clicked(bool)), SIGNAL(removeFiles()));
     connect( m_pageFiles->buttonRemoveAll, SIGNAL(clicked(bool)), SIGNAL(removeAllFiles()));
+    connect( m_pageFiles->checkPreview,    SIGNAL(clicked(bool)), SLOT( slotPreviewChanged()));
+    connect( m_pageFiles->checkName,       SIGNAL(clicked(bool)), SLOT( slotPreviewChanged()));
+    connect( m_pageFiles->comboSort,       SIGNAL(currentIndexChanged(int)), SLOT( slotSortChanged(int)));
 
     connect( m_pageDests->optionRename,    SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->optionCopy,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
@@ -255,7 +258,7 @@ void KRenameWindow::slotEnableControls()
     m_pageFiles->buttonRemove->setEnabled( m_fileCount );
     m_pageFiles->buttonRemoveAll->setEnabled( m_fileCount );
     m_pageFiles->checkName->setEnabled( m_pageFiles->checkPreview->isChecked() );
-
+   
     m_pageFiles->buttonUp->setEnabled( m_fileCount );
     m_pageFiles->buttonMove->setEnabled( m_fileCount );
     m_pageFiles->buttonDown->setEnabled( m_fileCount );
@@ -387,6 +390,43 @@ void KRenameWindow::slotTemplateChanged()
 void KRenameWindow::slotTokenHelpRequested()
 {
     emit showTokenHelpDialog( m_pageFilename->filenameTemplate->lineEdit() );
+}
+
+void KRenameWindow::slotPreviewChanged()
+{
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
+
+    if( m_pageFiles->checkPreview->isChecked() && !m_pageFiles->checkName->isChecked() )
+        m_pageFiles->fileList->setViewMode( QListView::IconMode );
+    else
+        m_pageFiles->fileList->setViewMode( QListView::ListMode );
+
+    model->setEnablePreview( m_pageFiles->checkPreview->isChecked(), m_pageFiles->checkName->isChecked() );
+    emit filePreviewChanged( m_pageFiles->checkPreview->isChecked(), m_pageFiles->checkName->isChecked() );
+
+    m_pageFiles->fileList->repaint();
+    this->slotEnableControls();
+}
+
+void KRenameWindow::slotSortChanged( int index )
+{
+    ESortMode eMode;
+
+    switch( index ) 
+    {
+        default:
+        case 0:
+            eMode = eSortMode_Unsorted;  break;
+        case 1:
+            eMode = eSortMode_Ascending; break;
+        case 2: 
+            eMode = eSortMode_Descending; break;
+        case 3:
+            eMode = eSortMode_Numeric; break;
+    }
+
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
+    model->sort( eMode );
 }
 
 

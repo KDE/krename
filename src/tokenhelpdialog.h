@@ -24,6 +24,7 @@
 
 class QDialogButtonBox;
 class QLineEdit;
+class QTreeWidgetItem;
 
 class TokenHelpDialog : public QDialog {
  Q_OBJECT
@@ -41,8 +42,13 @@ class TokenHelpDialog : public QDialog {
      */
     void add( const QString & headline, const QStringList & commands, const QPixmap & icon, bool first = false );
 
+ public slots:
+     int exec();
+
  private slots:
-        void slotInsert();
+    void slotInsert();
+
+    void slotCategoryChanged( QTreeWidgetItem* item );
 
  private:
     Ui::TokenHelpWidget m_widget;
@@ -51,6 +57,8 @@ class TokenHelpDialog : public QDialog {
     QLineEdit*          m_edit;
 
     QMap<QString,QStringList> m_map;
+
+    QString             m_first;
 };
 
 #endif // _TOKEN_HELP_DIALOG_H_

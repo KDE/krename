@@ -25,6 +25,12 @@
    </item>
    <item>
     <widget class="QSplitter" name="splitter" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
      <property name="orientation" >
       <enum>Qt::Horizontal</enum>
      </property>
@@ -37,6 +43,9 @@
         <widget class="QTreeWidget" name="listCategories" >
          <property name="alternatingRowColors" >
           <bool>true</bool>
+         </property>
+         <property name="rootIsDecorated" >
+          <bool>false</bool>
          </property>
          <property name="itemsExpandable" >
           <bool>false</bool>
@@ -65,6 +74,9 @@
         <widget class="QTreeWidget" name="listTokens" >
          <property name="alternatingRowColors" >
           <bool>true</bool>
+         </property>
+         <property name="rootIsDecorated" >
+          <bool>false</bool>
          </property>
          <property name="itemsExpandable" >
           <bool>false</bool>

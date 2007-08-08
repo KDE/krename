@@ -19,6 +19,67 @@
 
 #include <kfileitem.h>
 #include <kio/netaccess.h>
+#include <kio/previewjob.h>
+
+/** A singleton class that loads icons for urls in a synchronous way
+ */
+class KRenamePreviewProvider {
+
+public:
+    /** Get the KRenamePreviewProvider instance. This is a singleton
+     *  as only one KRenamePreviewProvider may exist for one application.
+     */
+    static KRenamePreviewProvider* Instance() 
+    {
+        if( !s_instance ) 
+            s_instance = new KRenamePreviewProvider();
+            
+        return s_instance;
+    }
+
+    QPixmap loadIcon( const KUrl & url ) 
+    {
+        KIO::UDSEntry entry;
+        KIO::NetAccess::stat( url, entry, NULL );
+        KFileItem item( entry, url );
+        QList<KFileItem> list;
+        list.append( item );
+
+        KJob* job = new KIO::PreviewJob( list, 64, 64, 0, 0, true, false, NULL ); 
+        if( !job->exec() ) 
+        {
+            return item.pixmap( 64 );
+        }
+        else
+        {
+            return item.pixmap( 64 );
+        }
+
+        delete job;
+    }
+
+private:
+    /** Create a KRenamePreviewProvider 
+     */
+    KRenamePreviewProvider() 
+        : m_job( NULL )
+    {
+
+    }
+
+    ~KRenamePreviewProvider() 
+    {
+        delete m_job;
+    }
+
+private:
+    static KRenamePreviewProvider* s_instance;
+
+    KIO::PreviewJob* m_job;
+}; 
+
+KRenamePreviewProvider* KRenamePreviewProvider::s_instance = NULL;
+
 
 KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int dot )
     : m_bValid( false )
@@ -148,6 +209,12 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const KU
     qDebug("=====");
     */
 }
+
+void KRenameFile::loadPreviewIcon()
+{
+    m_icon = KRenamePreviewProvider::Instance()->loadIcon( m_src.url );
+}
+
 
 
 

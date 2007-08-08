@@ -21,6 +21,7 @@
 #include <QVector>
 
 #include <kurl.h>
+#include <QPixmap>
 
 class KFileItem;
 
@@ -132,6 +133,19 @@ class KRenameFile {
         return m_src.url.prettyUrl();
     }        
 
+    /** Get a preview icon of the KRenameFile
+     *  
+     *  \returns a QPixmap containing a preview of this KRenameFile.
+     *           This might be only a mimetype icon depending on the current KDE settings.
+     */
+    inline const QPixmap & icon() const
+    {
+        if( m_icon.isNull() )
+            const_cast<KRenameFile*>(this)->loadPreviewIcon();
+
+        return m_icon;
+    }
+
     /** Assigns another KRenameFile to this KRenameFile
      *  \param rhs object to assign
      */
@@ -214,12 +228,19 @@ class KRenameFile {
  private:
     void initFileDescription( TFileDescription & rDescription, const KUrl & url, ESplitMode eSplitMode, unsigned int dot ) const;
 
+    /** Load a preview icon for this KRenameFile object
+     *  using KDEs preview loading mechanism.
+     */
+    void loadPreviewIcon();
+
  private:
     TFileDescription m_src;
     TFileDescription m_dst;
 
     bool             m_bDirectory;
     bool             m_bValid;
+
+    QPixmap          m_icon;
 };
 
 #endif // _KRENAME_FILE_H_

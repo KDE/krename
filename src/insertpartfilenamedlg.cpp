@@ -40,6 +40,7 @@ InsertPartFilenameDlg::InsertPartFilenameDlg( const QString & filename, QWidget*
 
     connect(m_widget.checkInvert,  SIGNAL(clicked(bool)),      this, SLOT( slotUpdateKRenameCommand() ));
     connect(m_widget.textFilename, SIGNAL(selectionChanged()), this, SLOT( slotSelectionChanged() )); 
+    connect(m_widget.comboConvert, SIGNAL(currentIndexChanged(int)), this, SLOT( slotSelectionChanged() )); 
 
     this->slotUpdateKRenameCommand();
 }
@@ -61,6 +62,14 @@ void InsertPartFilenameDlg::slotUpdateKRenameCommand()
     int  end         = m_end;
     int  start       = m_start;
 
+    const char* conversionflag = "$";
+    if( m_widget.comboConvert->currentIndex() == 1 ) 
+        conversionflag = "%";
+    else if( m_widget.comboConvert->currentIndex() == 2 ) 
+        conversionflag = "&";
+    else if( m_widget.comboConvert->currentIndex() == 3 ) 
+        conversionflag = "*";
+
     if( !m_widget.textFilename->text().isEmpty() )
     {
         if( m_widget.checkInvert->isChecked() && hasSelected )
@@ -71,15 +80,15 @@ void InsertPartFilenameDlg::slotUpdateKRenameCommand()
                 start++;
                 end++;
                 if( start > 1 )
-                    m_command = QString("[$1;%1]").arg(start-1);
+                    m_command = QString("[%1;%2]").arg(conversionflag).arg(start-1);
 
                 if( end <= (signed int)m_widget.textFilename->text().length() )
-                    m_command.append( QString("[$%1-[length]]").arg(end) );
+                    m_command.append( QString("[%1%2-[length]]").arg(conversionflag).arg(end) );
             } 
         } 
         else if( m_widget.checkInvert->isChecked() && !hasSelected )
         {
-            m_command = QString("[$1;%1][$%2-[length]]").arg(cursorPos).arg(cursorPos+1);            
+            m_command = QString("[%1").arg(conversionflag) + QString("1;%1][%3%2-[length]]").arg(cursorPos).arg(cursorPos+1);
         }
         else if( !m_widget.checkInvert->isChecked() && hasSelected )
         {
@@ -88,14 +97,14 @@ void InsertPartFilenameDlg::slotUpdateKRenameCommand()
                 start++;
                 end++;
                 if( end <= (signed int)m_widget.textFilename->text().length() )
-                    m_command = QString("[$%1;%2]").arg(start).arg(end-start);
+                    m_command = QString("[%1%2;%3]").arg(conversionflag).arg(start).arg(end-start);
                 else
-                    m_command = QString("[$%1-[length]]").arg(start);
+                    m_command = QString("[%1%2-[length]]").arg(conversionflag).arg(start);
             }
         } 
         else if( !m_widget.checkInvert->isChecked() && !hasSelected )
         {
-            m_command = QString("[$%1-[length]]").arg( cursorPos );
+            m_command = QString("[%1%2-[length]]").arg(conversionflag).arg( cursorPos );
         }
 
     }
