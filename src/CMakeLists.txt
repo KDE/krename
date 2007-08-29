@@ -29,8 +29,6 @@ set(krename_SRCS
   tokenhelpdialog.cpp
   )
 
-kde4_automoc( ${krename_SRCS} )
-
 kde4_add_ui_files( krename_SRCS 
   guimodeselector.ui 
   partfilenamewidget.ui
@@ -68,6 +66,6 @@ install(TARGETS krename DESTINATION ${BIN_INSTALL_DIR})
 
 ########### install files ###############
 
-install( FILES  krename.desktop DESTINATION ${XDG_APPS_DIR} )
+#install( FILES  krename.desktop DESTINATION ${XDG_APPS_DIR} )
 
 kde4_install_icons( ${ICON_INSTALL_DIR} )

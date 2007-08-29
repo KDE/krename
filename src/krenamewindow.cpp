@@ -220,10 +220,21 @@ void KRenameWindow::setupSlots()
     connect( m_pageFilename->extensionTemplate,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotTemplateChanged()));
     connect( m_pageFilename->buttonFunctions,    SIGNAL(clicked(bool))       , SLOT(slotTokenHelpRequested()));
+    connect( m_pageFilename->comboExtension,     SIGNAL(currentIndexChanged(int)), SLOT(slotExtensionSplitModeChanged(int)));
+
     connect( m_pageSimple->comboFilenameCustom,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageSimple->comboSuffixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageSimple->comboPrefixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
     connect( m_pageSimple->comboExtensionCustom, SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
+
+    connect( m_pageSimple->comboExtension,       SIGNAL(currentIndexChanged(int)), SLOT(slotEnableControls()));
+    connect( m_pageSimple->comboFilename,        SIGNAL(currentIndexChanged(int)), SLOT(slotEnableControls()));
+
+    connect( m_pageSimple->buttonHelp1,          SIGNAL(clicked(bool)),        SLOT(slotTokenHelpRequestedWizard1()));
+    connect( m_pageSimple->buttonHelp2,          SIGNAL(clicked(bool)),        SLOT(slotTokenHelpRequestedWizard2()));
+    connect( m_pageSimple->buttonHelp3,          SIGNAL(clicked(bool)),        SLOT(slotTokenHelpRequestedWizard3()));
+    connect( m_pageSimple->buttonHelp4,          SIGNAL(clicked(bool)),        SLOT(slotTokenHelpRequestedWizard4()));
+
 }
 
 void KRenameWindow::showPage( int index )
@@ -272,6 +283,15 @@ void KRenameWindow::slotEnableControls()
     m_pageFilename->buttonNumbering->setEnabled( m_fileCount != 0 );
     m_pageFilename->buttonInsert->setEnabled( m_fileCount != 0 );
 
+    m_pageSimple->buttonHelp3->setEnabled( m_pageSimple->comboFilename->currentIndex() == 
+                                           m_pageSimple->comboFilename->count() - 1 );
+    m_pageSimple->comboFilenameCustom->setEnabled( m_pageSimple->comboFilename->currentIndex() == 
+                                                   m_pageSimple->comboFilename->count() - 1 );
+
+    m_pageSimple->buttonHelp4->setEnabled( m_pageSimple->comboExtension->currentIndex() == 
+                                           m_pageSimple->comboExtension->count() - 1 );
+    m_pageSimple->comboExtensionCustom->setEnabled( m_pageSimple->comboExtension->currentIndex() == 
+                                                    m_pageSimple->comboExtension->count() - 1 );
 }
 
 void KRenameWindow::setCount( unsigned int count )
@@ -298,6 +318,8 @@ void KRenameWindow::resetFileList()
 void KRenameWindow::setModel( KRenameModel* model )
 {
     m_pageFiles->fileList->setModel( model );
+
+    connect( model, SIGNAL( maxDotsChanged(int) ), SLOT( slotMaxDotsChanged(int)) );
 }
 
 void KRenameWindow::setPreviewModel( KRenamePreviewModel* model )
@@ -392,6 +414,45 @@ void KRenameWindow::slotTokenHelpRequested()
     emit showTokenHelpDialog( m_pageFilename->filenameTemplate->lineEdit() );
 }
 
+void KRenameWindow::slotTokenHelpRequestedWizard1()
+{
+    emit showTokenHelpDialog( m_pageSimple->comboPrefixCustom->lineEdit() );
+}
+
+void KRenameWindow::slotTokenHelpRequestedWizard2()
+{
+    emit showTokenHelpDialog( m_pageSimple->comboSuffixCustom->lineEdit() );
+}
+
+void KRenameWindow::slotTokenHelpRequestedWizard3()
+{
+    emit showTokenHelpDialog( m_pageSimple->comboFilenameCustom->lineEdit() );
+}
+
+void KRenameWindow::slotTokenHelpRequestedWizard4()
+{
+    emit showTokenHelpDialog( m_pageSimple->comboExtensionCustom->lineEdit() );
+}
+
+void KRenameWindow::slotExtensionSplitModeChanged( int index )
+{
+    ESplitMode splitMode;
+    switch( index ) 
+    {
+        case 0:
+            splitMode = eSplitMode_FirstDot;
+            break;
+        case 1:
+            splitMode = eSplitMode_LastDot;
+            break;
+        default:
+            splitMode = eSplitMode_CustomDot;
+            break;
+    }
+
+    emit extensionSplitModeChanged( splitMode, index-1 );
+}
+
 void KRenameWindow::slotPreviewChanged()
 {
     KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
@@ -429,5 +490,16 @@ void KRenameWindow::slotSortChanged( int index )
     model->sort( eMode );
 }
 
+void KRenameWindow::slotMaxDotsChanged( int dots )
+{
+    int i;
+
+    for( i=2;i<m_pageFilename->comboExtension->count();i++ )
+        m_pageFilename->comboExtension->removeItem( i );
+
+    for( i=1;i<=dots;i++ )
+        m_pageFilename->comboExtension->addItem( QString::number( i ) );
+
+}
 
 #include "krenamewindow.moc"

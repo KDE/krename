@@ -154,6 +154,13 @@ class KRenameImpl : public QObject {
      */
     void slotTokenHelpDialog(QLineEdit* edit);
 
+    /** Called when the user selects another extension split mode
+     *
+     *  @param splitMode the mode which is used to split filename and extension
+     *  @param dot the n-th dot to use for splitting if splitMode = eSplitMode_CustomDot
+     */
+    void slotExtensionSplitModeChanged( ESplitMode splitMode, int dot );
+
  private:
     KRenameWindow*        m_window;
     KRenameModel*         m_model;
@@ -162,6 +169,9 @@ class KRenameImpl : public QObject {
     KRenameFile::List     m_vector;
 
     BatchRenamer          m_renamer;
+
+    ESplitMode            m_lastSplitMode; ///< The last used split mode
+    int                   m_lastDot;       ///< The last used dot value for splitmode
 };
 
 #if 0 

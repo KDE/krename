@@ -152,6 +152,13 @@ class KRenameWindow : public KMainWindow {
      */
     void extensionTemplateChanged( const QString & extension );
 
+    /** Called whenever the user change the splitmode between filename and extension
+     *
+     *  @param splitMode the mode which is used to split filename and extension
+     *  @param dot the n-th dot to use for splitting if splitMode = eSplitMode_CustomDot
+     */
+    void extensionSplitModeChanged( ESplitMode splitMode, int dot );
+
     /** Called whenever the user changes the file preview state
      *
      *  @param enable if true display previews 
@@ -227,6 +234,30 @@ class KRenameWindow : public KMainWindow {
      */
     void slotTokenHelpRequested();
 
+    /** Emits the showTokenHelpDialog signal with the appropriate
+     *  KLineEdit
+     */
+    void slotTokenHelpRequestedWizard1();
+
+    /** Emits the showTokenHelpDialog signal with the appropriate
+     *  KLineEdit
+     */
+    void slotTokenHelpRequestedWizard2();
+
+    /** Emits the showTokenHelpDialog signal with the appropriate
+     *  KLineEdit
+     */
+    void slotTokenHelpRequestedWizard3();
+
+    /** Emits the showTokenHelpDialog signal with the appropriate
+     *  KLineEdit
+     */
+    void slotTokenHelpRequestedWizard4();
+
+    /** Called when the user selects another extension split mode
+     */
+    void slotExtensionSplitModeChanged( int index );
+
     /** Called when one of the preview checkboxes is clicked.
      */
     void slotPreviewChanged();
@@ -236,6 +267,14 @@ class KRenameWindow : public KMainWindow {
      *  @param index currently selected sort index
      */
     void slotSortChanged( int index );
+
+    /** Called whenever the possible maximum value of 
+     *  dots in a filename has changed.
+     *
+     *  @param dots the maximum number of dots in a filename
+     *              that can be used to separate fileanem and extension
+     */
+    void slotMaxDotsChanged( int dots );
 
  private:
     /** Configures the GUI for the current GUI mode

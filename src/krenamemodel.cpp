@@ -107,7 +107,8 @@ KRenameModel::KRenameModel( KRenameFile::List* vector )
     : QAbstractListModel(),
       m_vector( vector ),
       m_preview( false ),
-      m_text( false )
+      m_text( false ),
+      m_maxDots( 0 )
 {
 
 }
@@ -168,6 +169,14 @@ void KRenameModel::addFile( const KRenameFile & file )
     this->beginInsertRows( QModelIndex(), 0, m_vector->size() );
     m_vector->push_back( file );
     this->endInsertRows();
+
+    int dots  = file.dots();
+    if( dots > m_maxDots ) 
+    {
+        m_maxDots = dots;
+        
+        emit maxDotsChanged( m_maxDots );
+    }
 }
 
 void KRenameModel::removeFiles( const QList<int> & remove )

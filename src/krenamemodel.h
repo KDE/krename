@@ -72,11 +72,22 @@ class KRenameModel : public QAbstractListModel {
     */
    inline void setEnablePreview( bool preview, bool filenames );
 
+ signals:
+   /** This signal is emitted when the maximum number of 
+    *  dots in a filename that can be used to separate
+    *  filename and extension has changed (by adding a new file).
+    *
+    *  @param dots the maximum number of dots in a filename
+    */
+   void maxDotsChanged( int dots );
+
  private:
    KRenameFile::List* m_vector;
 
    bool               m_preview;
    bool               m_text;
+
+   int                m_maxDots; ///< The maximum number of dots in a filename which can be used to separate filename and extension
 };
 
 void KRenameModel::setEnablePreview( bool preview, bool filenames )

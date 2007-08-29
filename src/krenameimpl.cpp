@@ -44,7 +44,8 @@
 #include <QStringListModel>
 
 KRenameImpl::KRenameImpl( KRenameWindow* window )
-    : QObject( (QObject*)window ), m_window( window )
+    : QObject( (QObject*)window ), m_window( window ),
+      m_lastSplitMode( eSplitMode_FirstDot ), m_lastDot( 0 )
 {
     setupActions();
     setupSlots();
@@ -168,6 +169,8 @@ void KRenameImpl::setupSlots()
                       &m_renamer, SLOT(setExtensionTemplate(const QString &)));
     QObject::connect( m_window, SIGNAL(overwriteFilesChanged(bool)), 
                       &m_renamer, SLOT(setOverwriteExistingFiles(bool)));
+
+    connect( m_window, SIGNAL(extensionSplitModeChanged(ESplitMode,int)), SLOT(slotExtensionSplitModeChanged(ESplitMode,int)));
 
     connect( m_window, SIGNAL(showAdvancedNumberingDialog()),  SLOT(slotAdvancedNumberingDlg()));
     connect( m_window, SIGNAL(showInsertPartFilenameDialog()), SLOT(slotInsertPartFilenameDlg()));
@@ -530,6 +533,27 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
 
     dialog.add( i18n("Special Characters:" ), help, SmallIcon("krename") );
     dialog.exec();
+}
+
+void KRenameImpl::slotExtensionSplitModeChanged( ESplitMode splitMode, int dot )
+{
+    // only change the splitMode if it has really change since the last time
+    if( splitMode != m_lastSplitMode ||
+        dot != m_lastDot ) 
+    {
+        KRenameFile::List::iterator it = m_vector.begin();
+    
+        while( it != m_vector.end() )
+        {
+            (*it).setCurrentSplitMode( splitMode, dot );
+            ++it;
+        }
+
+        slotUpdatePreview();
+    }
+
+    m_lastSplitMode = splitMode;
+    m_lastDot       = dot;
 }
 
 void KRenameImpl::slotStart()

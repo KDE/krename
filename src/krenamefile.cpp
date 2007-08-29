@@ -117,6 +117,8 @@ const KRenameFile & KRenameFile::operator=( const KRenameFile & rhs )
     m_src        = rhs.m_src;
     m_dst        = rhs.m_dst;
 
+    m_bValid     = rhs.m_bValid;
+
     return *this;
 }
 
@@ -182,6 +184,7 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const KU
                 splitPos = file.length();
         }
 
+        
         if( splitPos == -1 )
             splitPos = file.length();
 
@@ -215,6 +218,18 @@ void KRenameFile::loadPreviewIcon()
     m_icon = KRenamePreviewProvider::Instance()->loadIcon( m_src.url );
 }
 
+int KRenameFile::dots() const
+{
+    int dots = 0;
+
+    dots += m_src.filename.count( '.' );
+    dots += m_src.extension.count( '.' );
+    
+    if( !m_src.extension.isEmpty() )
+        ++dots;
+
+    return dots;
+}
 
 
 

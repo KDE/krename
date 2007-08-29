@@ -123,6 +123,11 @@ class KRenameFile {
      */
     void setCurrentSplitMode( ESplitMode eSplitMode, unsigned int dot = 1 );
 
+    /** 
+     * \returns the number of dots in this filename that can be used to separate filename and extension
+     */
+    int dots() const;
+
     /** Convert the KRenameFile into a string
      *  that can be displayed to the user.
      *
