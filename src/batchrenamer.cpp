@@ -133,11 +133,14 @@ void BatchRenamer::processFilenames()
 void BatchRenamer::processFiles( ProgressDialog* p )
 {
     int     errors = 0;
-    QString dest   = (*m_files)[0].dstUrl().prettyUrl();
+    KUrl    dest   = (*m_files)[0].dstUrl();
+    // TODO: error handling if dest is empty
     
     // Give the user some information...
     p->setProgressTotalSteps( m_files->count() );
     p->setProgress( 0 );
+    p->setDestination( dest );
+
     switch( m_renameMode ) 
     {
         default:
@@ -145,13 +148,13 @@ void BatchRenamer::processFiles( ProgressDialog* p )
             p->print( i18n("Input files will be renamed.") );
             break;
         case eRenameMode_Copy:
-            p->print( i18n("Files will be copied to: %1", dest ) );
+            p->print( i18n("Files will be copied to: %1", dest.prettyUrl() ) );
             break;
         case eRenameMode_Move:
-            p->print( i18n("Files will be moved to: %1", dest ) );
+            p->print( i18n("Files will be moved to: %1", dest.prettyUrl() ) );
             break;
         case eRenameMode_Link:
-            p->print( i18n("Symbolic links will be created in: %1", dest ) );
+            p->print( i18n("Symbolic links will be created in: %1", dest.prettyUrl() ) );
             break;
     }
 

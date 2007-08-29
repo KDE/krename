@@ -28,6 +28,14 @@ class ProgressDialog : public QDialog {
  public:
     ProgressDialog( QWidget* parent = NULL );
 
+    /** Set the destination of the files
+     *  so that the user can easily open a file browser
+     *  theres.
+     *
+     *  @param dest the destination directory
+     */
+    inline void setDestination( const KUrl & dest );
+
     /** Set the number of total steps in the progressbar
      *  which is displayed to the user.
      *
@@ -53,7 +61,7 @@ class ProgressDialog : public QDialog {
     inline void setDestination( const KURL & dir );
     inline void setRenamedFiles( RenamedList* list, unsigned int size ) ;
     inline void setCreatedDirectories( const KURL::List & list );
-    */
+    *    */
 
     //void done( int errors, int successfull, bool allowundo );
 
@@ -81,12 +89,21 @@ class ProgressDialog : public QDialog {
       */
      void slotCancelled();
 
- private:
+     /** Called when the users presses the "Open Destination..." button
+      */
+     void slotOpenDestination();
 
+ private:
     Ui::ProgressDialog m_widget;
 
     bool m_canceled;       ///< the current canceled state
+    KUrl m_dest;           ///< files destination
 };
+
+void ProgressDialog::setDestination( const KUrl & dest )
+{
+    m_dest = dest;
+}
 
 void ProgressDialog::setProgressTotalSteps( int t )
 {
