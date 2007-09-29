@@ -20,6 +20,7 @@
 #include <QPixmap>
 
 #include <klocale.h>
+#include <krun.h>
 
 // Helper functions for sorting
 const QString findNumInString( unsigned int pos, const QString & s )
@@ -118,7 +119,7 @@ KRenameModel::~KRenameModel()
 
 }
 
-int KRenameModel::rowCount ( const QModelIndex & parent ) const
+int KRenameModel::rowCount ( const QModelIndex & ) const
 {
     return m_vector->size();
 }
@@ -213,6 +214,13 @@ void KRenameModel::sort( ESortMode mode )
     this->reset();
 }
 
+void KRenameModel::run(const QModelIndex & index, QWidget* window ) const
+{
+    KRenameFile file = m_vector->at(index.row());
+    new KRun( file.srcUrl(), window );
+}
+
+
 KRenamePreviewModel::KRenamePreviewModel( KRenameFile::List* vector )
     : m_vector( vector )
 {
@@ -224,12 +232,12 @@ KRenamePreviewModel::~KRenamePreviewModel()
 
 }
 
-int KRenamePreviewModel::rowCount ( const QModelIndex & parent ) const
+int KRenamePreviewModel::rowCount ( const QModelIndex & ) const
 {
     return m_vector->size();
 }
 
-int KRenamePreviewModel::columnCount ( const QModelIndex & parent ) const
+int KRenamePreviewModel::columnCount ( const QModelIndex & ) const
 {
     return 2;
 }
@@ -276,7 +284,7 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
             filename += extension;
         }
 
-        if( filename.isEmpty() )
+        if( file.isDirectory() )
         {
             filename = index.column() ? file.dstDirectory() : file.srcDirectory();
         }
@@ -288,12 +296,12 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
     
 }
 
-QModelIndex KRenamePreviewModel::parent ( const QModelIndex & index ) const
+QModelIndex KRenamePreviewModel::parent ( const QModelIndex & ) const
 {
     return QModelIndex();
 }
 
-QModelIndex KRenamePreviewModel::sibling ( int row, int column, const QModelIndex & index ) const
+QModelIndex KRenamePreviewModel::sibling ( int, int, const QModelIndex & ) const
 {
     return QModelIndex();
 }

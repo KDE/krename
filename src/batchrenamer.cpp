@@ -208,8 +208,8 @@ void BatchRenamer::processFiles( ProgressDialog* p )
 
     p->print( i18n("KRename finished the renaming process."), "krename" );
     p->print( i18n("Press close to quit!") );
-
-
+    p->done();
+    
 #if 0
     delete object;
     t.start();

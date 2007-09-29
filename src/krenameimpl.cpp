@@ -568,15 +568,17 @@ void KRenameImpl::slotStart()
     // Get some properties from the gui and initialize BatchRenamer
     m_renamer.setDestinationDir( m_window->destinationUrl() );
 
-    // delete the GUI
-    //delete m_window;
-    //m_window = NULL;
-
     // show the progress dialog
     progress->show();
     progress->raise();
     progress->activateWindow();
 
+    // delete the GUI
+    //delete m_window;
+    //m_window = NULL;
+    m_window->hide();
+    m_window = NULL;
+ 
     // save the configuration
     //saveConfig();
 

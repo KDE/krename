@@ -203,6 +203,7 @@ void KRenameWindow::setupSlots()
     connect( m_pageFiles->checkPreview,    SIGNAL(clicked(bool)), SLOT( slotPreviewChanged()));
     connect( m_pageFiles->checkName,       SIGNAL(clicked(bool)), SLOT( slotPreviewChanged()));
     connect( m_pageFiles->comboSort,       SIGNAL(currentIndexChanged(int)), SLOT( slotSortChanged(int)));
+    connect( m_pageFiles->fileList,        SIGNAL(activated(const QModelIndex&)), SLOT( slotOpenFile(const QModelIndex&)));
 
     connect( m_pageDests->optionRename,    SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->optionCopy,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
@@ -222,10 +223,15 @@ void KRenameWindow::setupSlots()
     connect( m_pageFilename->buttonFunctions,    SIGNAL(clicked(bool))       , SLOT(slotTokenHelpRequested()));
     connect( m_pageFilename->comboExtension,     SIGNAL(currentIndexChanged(int)), SLOT(slotExtensionSplitModeChanged(int)));
 
-    connect( m_pageSimple->comboFilenameCustom,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
-    connect( m_pageSimple->comboSuffixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
-    connect( m_pageSimple->comboPrefixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
-    connect( m_pageSimple->comboExtensionCustom, SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
+    connect( m_pageSimple->comboFilenameCustom,  SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
+    connect( m_pageSimple->comboSuffixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
+    connect( m_pageSimple->comboPrefixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
+    connect( m_pageSimple->comboExtensionCustom, SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
+
+    connect( m_pageSimple->comboPrefix,          SIGNAL(currentIndexChanged(int)), SLOT(slotSimpleTemplateChanged()));
+    connect( m_pageSimple->comboSuffix,          SIGNAL(currentIndexChanged(int)), SLOT(slotSimpleTemplateChanged()));
+    connect( m_pageSimple->comboFilename,        SIGNAL(currentIndexChanged(int)), SLOT(slotSimpleTemplateChanged()));
+    connect( m_pageSimple->comboExtension,       SIGNAL(currentIndexChanged(int)), SLOT(slotSimpleTemplateChanged()));
 
     connect( m_pageSimple->comboExtension,       SIGNAL(currentIndexChanged(int)), SLOT(slotEnableControls()));
     connect( m_pageSimple->comboFilename,        SIGNAL(currentIndexChanged(int)), SLOT(slotEnableControls()));
@@ -235,6 +241,8 @@ void KRenameWindow::setupSlots()
     connect( m_pageSimple->buttonHelp3,          SIGNAL(clicked(bool)),        SLOT(slotTokenHelpRequestedWizard3()));
     connect( m_pageSimple->buttonHelp4,          SIGNAL(clicked(bool)),        SLOT(slotTokenHelpRequestedWizard4()));
 
+    connect( m_pageSimple->spinDigits,           SIGNAL(valueChanged(int)),    SLOT(slotSimpleTemplateChanged()));
+    connect( m_pageSimple->spinIndex,            SIGNAL(valueChanged(int)),    SLOT(slotSimpleTemplateChanged()));
 }
 
 void KRenameWindow::showPage( int index )
@@ -283,6 +291,7 @@ void KRenameWindow::slotEnableControls()
     m_pageFilename->buttonNumbering->setEnabled( m_fileCount != 0 );
     m_pageFilename->buttonInsert->setEnabled( m_fileCount != 0 );
 
+    m_pageSimple->buttonFind->setEnabled( m_fileCount != 0 );
     m_pageSimple->buttonHelp3->setEnabled( m_pageSimple->comboFilename->currentIndex() == 
                                            m_pageSimple->comboFilename->count() - 1 );
     m_pageSimple->comboFilenameCustom->setEnabled( m_pageSimple->comboFilename->currentIndex() == 
@@ -350,6 +359,51 @@ QList<int> KRenameWindow::selectedFileItems() const
     return selected;
 }
 
+
+QString KRenameWindow::getPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom ) 
+{
+    QString str;
+    QString number = "#";
+    int c = m_pageSimple->spinDigits->value()-1;
+
+    while( c-- > 0 )
+        number += "#";
+
+    number += QString("{%1}").arg( m_pageSimple->spinIndex->value() );
+    
+    if( combo->currentIndex() == 1 ) 
+        str = number;
+    else if( combo->currentIndex() == 2 ) 
+        str = "[date]"; // TODO date
+
+    str += comboCustom->currentText();
+
+    return str;
+}
+
+QString KRenameWindow::getFilenameSimple( QComboBox* combo, QComboBox* comboCustom ) 
+{
+    QString str;
+
+    // TODO: Replace strings with constants
+    switch( combo->currentIndex() ) 
+    {
+        default:
+        case 0:
+            str = "$"; break;
+        case 1:
+            str = "%"; break;
+        case 2:
+            str = "&"; break;
+        case 3:
+            str = "*"; break;
+        case 4:
+            str = comboCustom->currentText();
+    }
+
+    return str;
+}
+
 void KRenameWindow::slotBack()
 {
     this->showPage( m_curPage-1 );
@@ -388,17 +442,9 @@ void KRenameWindow::slotTemplateChanged()
     QString filename;
     QString extension;
 
-    if( m_eGuiMode == eGuiMode_Wizard ) 
-    {
-
-
-    }
-    else
-    {
-        filename  = m_pageFilename->filenameTemplate->currentText();
-        extension = m_pageFilename->checkExtension->isChecked() ? "$" : 
-            m_pageFilename->extensionTemplate->currentText();
-    }
+    filename  = m_pageFilename->filenameTemplate->currentText();
+    extension = m_pageFilename->checkExtension->isChecked() ? "$" : 
+        m_pageFilename->extensionTemplate->currentText();
 
     emit filenameTemplateChanged( filename );
     emit extensionTemplateChanged( extension );
@@ -407,6 +453,26 @@ void KRenameWindow::slotTemplateChanged()
 
     m_pageFilename->buttonNumbering->setEnabled( filename.contains('#') || extension.contains('#') );
     this->slotEnableControls();
+}
+
+void KRenameWindow::slotSimpleTemplateChanged()
+{
+    QString filename  = getFilenameSimple( m_pageSimple->comboFilename, m_pageSimple->comboFilenameCustom );
+    QString extension = getFilenameSimple( m_pageSimple->comboExtension, m_pageSimple->comboExtensionCustom );
+    QString prefix    = getPrefixSuffixSimple( m_pageSimple->comboPrefix, m_pageSimple->comboPrefixCustom );
+    QString suffix    = getPrefixSuffixSimple( m_pageSimple->comboSuffix, m_pageSimple->comboSuffixCustom );
+
+    filename = prefix + filename + suffix;
+
+    // set the new templates, but make sure signals 
+    // are blockes so that slotTemplateChanged emits updatePreview()
+    // which is calculation intensive only once!
+    this->blockSignals( true );
+    m_pageFilename->filenameTemplate->lineEdit()->setText( filename );
+    m_pageFilename->extensionTemplate->lineEdit()->setText( extension );
+    m_pageFilename->checkExtension->setChecked( false );
+    this->blockSignals( false );
+    this->slotTemplateChanged();
 }
 
 void KRenameWindow::slotTokenHelpRequested()
@@ -500,6 +566,12 @@ void KRenameWindow::slotMaxDotsChanged( int dots )
     for( i=1;i<=dots;i++ )
         m_pageFilename->comboExtension->addItem( QString::number( i ) );
 
+}
+
+void KRenameWindow::slotOpenFile(const QModelIndex& index)
+{
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
+    model->run( index, this );
 }
 
 #include "krenamewindow.moc"

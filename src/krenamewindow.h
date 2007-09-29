@@ -25,9 +25,11 @@ class KRenameModel;
 class KRenamePreviewModel;
 
 class KPushButton;
+class QComboBox;
 class QDialogButtonBox;
 class QLabel;
 class QLineEdit;
+class QModelIndex;
 class QStackedWidget;
 class QTabBar;
 
@@ -229,6 +231,10 @@ class KRenameWindow : public KMainWindow {
      */
     void slotTemplateChanged();
 
+    /** Called whenever one of the template fields in wizard mode has changed
+     */
+    void slotSimpleTemplateChanged();
+
     /** Emits the showTokenHelpDialog signal with the appropriate
      *  KLineEdit
      */
@@ -276,6 +282,13 @@ class KRenameWindow : public KMainWindow {
      */
     void slotMaxDotsChanged( int dots );
 
+    /** Called whenever the user clicks a file
+     *  in a listview to open it.
+     *
+     *  @param index the model index of the requested file in a model
+     */
+    void slotOpenFile(const QModelIndex& index);
+
  private:
     /** Configures the GUI for the current GUI mode
      */
@@ -284,6 +297,24 @@ class KRenameWindow : public KMainWindow {
     /** Setup all signals and slots
      */
     void setupSlots();
+
+    /** Get a template for the prefix or suffix in wizard mode
+     *  from 2 combo boxes
+     *
+     *  @param combo the combobox used to select a default prefix/suffix (e.g. date)
+     *  @param comboCustom additional user defined text
+     *  @returns a template string
+     */
+    QString getPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom );
+
+    /** Get a template for the filename or extension in wizard mode
+     *  from 2 combo boxes
+     *
+     *  @param combo the combobox used to select a default filename (e.g. lowercase)
+     *  @param comboCustom additional user defined text
+     *  @returns a template string
+     */
+    QString getFilenameSimple( QComboBox* combo, QComboBox* comboCustom );
 
  private:
     EGuiMode          m_eGuiMode;  /// The current gui mode

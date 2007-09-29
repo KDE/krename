@@ -25,13 +25,15 @@ ProgressDialog::ProgressDialog( QWidget* parent )
 {
     m_widget.setupUi( this );
 
-    QPushButton* buttonUndo = m_widget.buttonBox->addButton( i18n("&Rename more..."), QDialogButtonBox::ActionRole );
-    QPushButton* buttonMore = m_widget.buttonBox->addButton( i18n("&Undo"), QDialogButtonBox::ActionRole );
-    QPushButton* buttonDest = m_widget.buttonBox->addButton( i18n("&Open Destination..."), QDialogButtonBox::ActionRole );
+    m_buttonUndo = m_widget.buttonBox->addButton( i18n("&Rename more..."), QDialogButtonBox::ActionRole );
+    m_buttonMore = m_widget.buttonBox->addButton( i18n("&Undo"), QDialogButtonBox::ActionRole );
+    m_buttonDest = m_widget.buttonBox->addButton( i18n("&Open Destination..."), QDialogButtonBox::ActionRole );
 
+    m_buttonUndo->setEnabled( false );
+    m_buttonMore->setEnabled( false );
 
     connect( m_widget.buttonCancel, SIGNAL(clicked(bool)), SLOT(slotCancelled()));
-    connect( buttonDest,            SIGNAL(clicked(bool)), SLOT(slotOpenDestination()));
+    connect( m_buttonDest,            SIGNAL(clicked(bool)), SLOT(slotOpenDestination()));
 }
 
 void ProgressDialog::slotCancelled()
@@ -43,6 +45,14 @@ void ProgressDialog::slotOpenDestination()
 {
     new KRun( m_dest, this );
 }
+
+void ProgressDialog::done()
+{
+    m_widget.buttonCancel->setEnabled( false );
+
+    m_buttonUndo->setEnabled( true );
+    m_buttonMore->setEnabled( true );
+} 
 
 void ProgressDialog::print( const QString & text, const QString & pixmap )
 {

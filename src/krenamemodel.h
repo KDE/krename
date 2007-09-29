@@ -72,6 +72,13 @@ class KRenameModel : public QAbstractListModel {
     */
    inline void setEnablePreview( bool preview, bool filenames );
 
+   /** Run/open the file which is pointed to by the passed modelinex
+    *
+    *  @param index a modelindex specifying a file to open
+    *  @param window a window used to cache authentication information
+    */
+   void run(const QModelIndex & index, QWidget* window ) const;
+
  signals:
    /** This signal is emitted when the maximum number of 
     *  dots in a filename that can be used to separate

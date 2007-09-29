@@ -373,6 +373,9 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="minimum" >
+             <number>1</number>
+            </property>
            </widget>
           </item>
           <item row="0" column="1" >
@@ -382,6 +385,12 @@
               <horstretch>2</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="minimum" >
+             <number>-10000</number>
+            </property>
+            <property name="maximum" >
+             <number>10000</number>
             </property>
            </widget>
           </item>

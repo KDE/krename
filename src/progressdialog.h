@@ -83,7 +83,14 @@ class ProgressDialog : public QDialog {
      *  @param text message
      */
     void warning( const QString & text );
-    
+
+    /** Renaming is done.
+     *
+     *  Mostly used to disable the cancel button
+     *  and enable other buttons
+     */
+    void done(); 
+
  private slots:
      /** Called when the user cancels the operation
       */
@@ -98,6 +105,10 @@ class ProgressDialog : public QDialog {
 
     bool m_canceled;       ///< the current canceled state
     KUrl m_dest;           ///< files destination
+
+    QPushButton* m_buttonUndo;
+    QPushButton* m_buttonMore;
+    QPushButton* m_buttonDest;
 };
 
 void ProgressDialog::setDestination( const KUrl & dest )
