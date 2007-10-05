@@ -204,6 +204,8 @@ void KRenameWindow::setupSlots()
     connect( m_pageFiles->checkName,       SIGNAL(clicked(bool)), SLOT( slotPreviewChanged()));
     connect( m_pageFiles->comboSort,       SIGNAL(currentIndexChanged(int)), SLOT( slotSortChanged(int)));
     connect( m_pageFiles->fileList,        SIGNAL(activated(const QModelIndex&)), SLOT( slotOpenFile(const QModelIndex&)));
+    connect( m_pageFiles->buttonUp,        SIGNAL(clicked(bool)), SLOT( slotMoveUp() ) );
+    connect( m_pageFiles->buttonDown,      SIGNAL(clicked(bool)), SLOT( slotMoveDown() ) );
 
     connect( m_pageDests->optionRename,    SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->optionCopy,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
@@ -572,6 +574,55 @@ void KRenameWindow::slotOpenFile(const QModelIndex& index)
 {
     KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
     model->run( index, this );
+}
+
+void KRenameWindow::slotMoveUp()
+{
+    QList<int> sel = this->selectedFileItems();
+
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());    
+    model->moveFilesUp( sel );
+
+    QItemSelectionModel* selection = m_pageFiles->fileList->selectionModel();
+    QList<int>::const_iterator it  = sel.begin();
+    while( it != sel.end() )
+    {
+        if( *it - 1 > 0 ) 
+            selection->select( model->createIndex( *it - 1 ), QItemSelectionModel::Select );
+
+        ++it;
+    }
+
+    // make sure that the first item is visible
+    // TODO: Maybe it is better to calculate the minimum index here
+    if( sel.size() )
+        m_pageFiles->fileList->scrollTo( model->createIndex( sel.front() - 1 ), QAbstractItemView::EnsureVisible );
+    
+}
+
+void KRenameWindow::slotMoveDown()
+{
+    QList<int> sel = this->selectedFileItems();
+
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());    
+    model->moveFilesDown( sel );
+
+
+    QItemSelectionModel* selection = m_pageFiles->fileList->selectionModel();
+    QList<int>::const_iterator it  = sel.begin();
+    while( it != sel.end() )
+    {
+        if( *it + 1 < model->rowCount() ) 
+            selection->select( model->createIndex( *it + 1 ), QItemSelectionModel::Select );
+
+        ++it;
+    }
+
+
+    // make sure that the last item is visible
+    // TODO: Maybe it is better to calculate the maximum index here
+    if( sel.size() )
+        m_pageFiles->fileList->scrollTo( model->createIndex( sel.back() + 1 ), QAbstractItemView::EnsureVisible );
 }
 
 #include "krenamewindow.moc"

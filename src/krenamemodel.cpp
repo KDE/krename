@@ -153,7 +153,7 @@ Qt::ItemFlags KRenameModel::flags(const QModelIndex &index) const
 }
 
 bool KRenameModel::setData(const QModelIndex &index,
-                           const QVariant &value, int role)
+                           const QVariant &, int role)
 {
     if (index.isValid() && role == Qt::EditRole) {
     
@@ -218,6 +218,70 @@ void KRenameModel::run(const QModelIndex & index, QWidget* window ) const
 {
     KRenameFile file = m_vector->at(index.row());
     new KRun( file.srcUrl(), window );
+}
+
+const QModelIndex KRenameModel::createIndex( int row ) const
+{
+    return QAbstractItemModel::createIndex( row, 0 );
+}
+
+void KRenameModel::moveFilesUp( const QList<int> & files )
+{
+    int         index;
+    KRenameFile tmp;
+
+    QList<int> copy( files );
+    qSort( copy );
+
+    QList<int>::const_iterator it = copy.begin();
+    while( it != copy.end() )
+    {
+        index                     = *it;
+        if( index <= 0 ) // cannot swap top item
+        {
+            ++it;
+            continue;
+        }
+
+        // swap items 
+        tmp                    = m_vector->at( index );
+        (*m_vector)[index]     = KRenameFile( m_vector->at( index - 1 ) );
+        (*m_vector)[index - 1] = tmp;
+
+        ++it;
+    }
+
+    this->reset();
+}
+
+void KRenameModel::moveFilesDown( const QList<int> & files )
+{
+    int         index;
+    KRenameFile tmp;
+
+    QList<int> copy( files );
+    // sort the list in reverse order
+    qSort( copy.begin(), copy.end(), qGreater<int>() );
+
+    QList<int>::const_iterator it = copy.begin();
+    while( it != copy.end() )
+    {
+        index                     = *it;
+        if( index + 1 >= m_vector->size() ) // cannot swap bottom item
+        {
+            ++it;
+            continue;
+        }
+
+        // swap items 
+        tmp                    = m_vector->at( index );
+        (*m_vector)[index]     = KRenameFile( m_vector->at( index + 1 ) );
+        (*m_vector)[index + 1] = tmp;
+
+        ++it;
+    }
+
+    this->reset();
 }
 
 

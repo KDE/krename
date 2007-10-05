@@ -289,6 +289,16 @@ class KRenameWindow : public KMainWindow {
      */
     void slotOpenFile(const QModelIndex& index);
 
+    /** Called when the user wants to move files up
+     *  in the file list box.
+     */
+    void slotMoveUp();
+
+    /** Called when the user wants to move files down
+     *  in the file list box.
+     */
+    void slotMoveDown();
+
  private:
     /** Configures the GUI for the current GUI mode
      */

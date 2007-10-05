@@ -56,6 +56,23 @@ class KRenameModel : public QAbstractListModel {
     */
    void sort( ESortMode mode );
 
+   /** Move each file in a list of indeces upwards
+    *  @param files list of file indeces. Each file is moved up one position
+    */
+   void moveFilesUp( const QList<int> & files );
+
+   /** Move each file in a list of indeces downwards
+    *  @param files list of file indeces. Each file is moved down one position
+    */
+   void moveFilesDown( const QList<int> & files );
+
+   /** Creates a new model index
+    *
+    *  @param row the index of the requested file
+    *  @returns the model index for a certain row
+    */
+   const QModelIndex createIndex( int row ) const;
+
    virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const;
    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
 
