@@ -12,6 +12,7 @@ add_definitions( ${KDE4_DEFINITIONS} )
 set(krename_SRCS
   main.cpp 
   batchrenamer.cpp
+  customdialog.cpp
   exthistorycombo.cpp
   filedialogextwidget.cpp
   firststartdlg.cpp
@@ -24,12 +25,14 @@ set(krename_SRCS
   numberdialog.cpp
   insertpartfilenamedlg.cpp
   threadedlister.cpp
+  previewlist.cpp
   progressdialog.cpp
   replacedialog.cpp
   tokenhelpdialog.cpp
   )
 
 kde4_add_ui_files( krename_SRCS 
+  customfilenamedlg.ui		
   guimodeselector.ui 
   partfilenamewidget.ui
   krenamefiles.ui 

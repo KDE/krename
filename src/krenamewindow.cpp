@@ -34,6 +34,7 @@
 #include <QHeaderView>
 #include <QLabel>
 #include <QLineEdit>
+#include <QMenu>
 #include <QStackedWidget>
 #include <QTabBar>
 #include <QVBoxLayout>
@@ -228,6 +229,8 @@ void KRenameWindow::setupSlots()
     connect( m_pageFilename->buttonUp,           SIGNAL(clicked(bool)), SLOT( slotMoveUpPreview() ) );
     connect( m_pageFilename->buttonDown,         SIGNAL(clicked(bool)), SLOT( slotMoveDownPreview() ) );
 
+    connect( m_pageFilename->listPreview,        SIGNAL(addFiles()),    SIGNAL(addFiles()));
+
     connect( m_pageSimple->comboFilenameCustom,  SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
     connect( m_pageSimple->comboSuffixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
     connect( m_pageSimple->comboPrefixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
@@ -251,6 +254,8 @@ void KRenameWindow::setupSlots()
 
     connect( m_pageSimple->buttonUp,             SIGNAL(clicked(bool)),        SLOT( slotMoveUpPreview() ) );
     connect( m_pageSimple->buttonDown,           SIGNAL(clicked(bool)),        SLOT( slotMoveDownPreview() ) );
+
+    connect( m_pageSimple->listPreview,          SIGNAL(addFiles()),    SIGNAL(addFiles()));
 }
 
 void KRenameWindow::showPage( int index )
@@ -335,6 +340,9 @@ void KRenameWindow::resetFileList()
 void KRenameWindow::setModel( KRenameModel* model )
 {
     m_pageFiles->fileList->setModel( model );
+
+    m_pageFilename->listPreview->setKRenameModel( model );
+    m_pageSimple->listPreview->setKRenameModel( model );
 
     connect( model, SIGNAL( maxDotsChanged(int) ), SLOT( slotMaxDotsChanged(int)) );
 }
@@ -725,5 +733,6 @@ void KRenameWindow::moveDown( const QList<int> & selected, QAbstractItemView* vi
     if( selected.size() )
         view->scrollTo( model->createIndex( selected.back() + 1 ), QAbstractItemView::EnsureVisible );
 }
+
 
 #include "krenamewindow.moc"

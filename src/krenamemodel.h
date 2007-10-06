@@ -73,6 +73,22 @@ class KRenameModel : public QAbstractListModel {
     */
    const QModelIndex createIndex( int row ) const;
 
+   /** Get the file at position index.
+    *
+    *  @param a valid index in the internal vector
+    *
+    *  @returns a KRenameFile object
+    */
+   const KRenameFile & file( int index ) const;
+
+   /** Get the file at position index.
+    *
+    *  @param a valid index in the internal vector
+    *
+    *  @returns a KRenameFile object
+    */
+   KRenameFile & file( int index );
+
    virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const;
    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
 

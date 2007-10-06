@@ -225,6 +225,16 @@ const QModelIndex KRenameModel::createIndex( int row ) const
     return QAbstractItemModel::createIndex( row, 0 );
 }
 
+const KRenameFile & KRenameModel::file( int index ) const
+{
+    return m_vector->at(index);
+}
+
+KRenameFile & KRenameModel::file( int index )
+{
+    return (*m_vector)[index];
+}
+
 void KRenameModel::moveFilesUp( const QList<int> & files )
 {
     int         index;
@@ -327,14 +337,21 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
 
     if (role == Qt::DisplayRole)
     {
-        KRenameFile file = m_vector->at(index.row());
+        const KRenameFile& file = m_vector->at(index.row());
         QString filename;
         QString extension;
+        QString manual;
 
         if( index.column() )
         {
-            filename  = file.dstFilename();
-            extension = file.dstExtension();
+            manual    = file.manualChanges();
+            if( manual.isNull() )
+            {
+                filename  = file.dstFilename();
+                extension = file.dstExtension();
+            }
+            else
+                filename = manual;
         }
         else
         {
@@ -355,8 +372,14 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
 
         return filename;
     }
-    else
-        return QVariant();
+    else if( role == Qt::ForegroundRole )
+    {
+        const KRenameFile& file = m_vector->at(index.row());
+        if( !file.manualChanges().isNull() )
+            return QVariant( Qt::blue );
+    }
+
+    return QVariant();
     
 }
 

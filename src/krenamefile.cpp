@@ -120,6 +120,7 @@ const KRenameFile & KRenameFile::operator=( const KRenameFile & rhs )
     m_bValid     = rhs.m_bValid;
     m_icon       = rhs.m_icon;
     m_error      = rhs.m_error;
+    m_manual     = rhs.m_manual;
 
     return *this;
 }

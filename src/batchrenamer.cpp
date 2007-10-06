@@ -528,13 +528,17 @@ const KUrl BatchRenamer::buildDestinationUrl( const KRenameFile & file ) const
     QString directory = file.dstDirectory();
     QString filename  = file.dstFilename();
     QString extension = file.dstExtension();
-    
+    QString manual    = file.manualChanges();
+
     if( !extension.isEmpty() )
     {
         filename += ".";
         filename += extension;
     }
     
+    if( !manual.isNull() )
+        filename = manual;
+
     dstUrl.setDirectory( directory );
     dstUrl.setFileName( filename );
     

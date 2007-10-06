@@ -98,7 +98,11 @@ void ProgressDialog::slotRenameUnprocessedAgain()
     while( it != m_renamer->files()->end() )
     {
         if( (*it).hasError() )
-            list.append( *it );
+        {
+            KRenameFile file( *it );
+            file.setManualChanges( QString::null ); // reset manual changes!!
+            list.append( file );
+        }
 
         ++it;
     }

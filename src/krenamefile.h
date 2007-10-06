@@ -199,6 +199,24 @@ class KRenameFile {
         return m_bValid;
     }
 
+    /** 
+     * \returns manualChanges the user has made to the filename
+     */
+    inline const QString & manualChanges() const
+    {
+        return m_manual;
+    }
+
+    /**
+     * Sets manual changes made by the user
+     *
+     * \param manual manual changes for filename and extension
+     */
+    inline void setManualChanges( const QString & manual ) 
+    {
+        m_manual = manual;
+    }
+
     inline const QString & srcFilename() const 
     {
         return m_src.filename;
@@ -276,12 +294,13 @@ class KRenameFile {
     TFileDescription m_src;
     TFileDescription m_dst;
 
-    bool             m_bDirectory;
-    bool             m_bValid;
+    bool             m_bDirectory;   ///< If true this is a directory
+    bool             m_bValid;       ///< If true this item is valid
 
-    QPixmap          m_icon;
+    QPixmap          m_icon;         ///< This is the file preview icon
 
-    int              m_error;
+    int              m_error;        ///< This value is set to != 0 if an error occurred during renaming
+    QString          m_manual;       ///< Manual changes to the filename+extension by the user are stored here
 };
 
 #endif // _KRENAME_FILE_H_
