@@ -55,7 +55,7 @@ int compareNummeric( const QString & s1, const QString & s2 )
         //if( z >= s1.length() || z >= s2.length() )
         //    break;
             
-        if( s1[z] != s2[z] )
+        if( (z < s1.length() && z < s2.length() && s1[z] != s2[z])  )
         {
             if( z < s1.length() && s1[z].isDigit() )
                 num1 = findNumInString( z, s1 );

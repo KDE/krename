@@ -225,6 +225,9 @@ void KRenameWindow::setupSlots()
     connect( m_pageFilename->buttonFunctions,    SIGNAL(clicked(bool))       , SLOT(slotTokenHelpRequested()));
     connect( m_pageFilename->comboExtension,     SIGNAL(currentIndexChanged(int)), SLOT(slotExtensionSplitModeChanged(int)));
 
+    connect( m_pageFilename->buttonUp,           SIGNAL(clicked(bool)), SLOT( slotMoveUpPreview() ) );
+    connect( m_pageFilename->buttonDown,         SIGNAL(clicked(bool)), SLOT( slotMoveDownPreview() ) );
+
     connect( m_pageSimple->comboFilenameCustom,  SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
     connect( m_pageSimple->comboSuffixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
     connect( m_pageSimple->comboPrefixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
@@ -245,6 +248,9 @@ void KRenameWindow::setupSlots()
 
     connect( m_pageSimple->spinDigits,           SIGNAL(valueChanged(int)),    SLOT(slotSimpleTemplateChanged()));
     connect( m_pageSimple->spinIndex,            SIGNAL(valueChanged(int)),    SLOT(slotSimpleTemplateChanged()));
+
+    connect( m_pageSimple->buttonUp,             SIGNAL(clicked(bool)),        SLOT( slotMoveUpPreview() ) );
+    connect( m_pageSimple->buttonDown,           SIGNAL(clicked(bool)),        SLOT( slotMoveDownPreview() ) );
 }
 
 void KRenameWindow::showPage( int index )
@@ -361,6 +367,28 @@ QList<int> KRenameWindow::selectedFileItems() const
     return selected;
 }
 
+QList<int> KRenameWindow::selectedFileItemsPreview() const
+{
+    QList<int> selected;
+
+    QItemSelectionModel* selection;
+
+    if( m_eGuiMode == eGuiMode_Wizard ) 
+        selection = m_pageSimple->listPreview->selectionModel();
+    else
+        selection = m_pageFilename->listPreview->selectionModel();
+
+    QModelIndexList      indeces = selection->selectedIndexes();
+    QModelIndexList::const_iterator it = indeces.begin();
+    
+    while( it != indeces.end() )
+    {
+        selected.append( (*it).row() );
+        ++it;
+    }
+
+    return selected;
+}
 
 QString KRenameWindow::getPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom ) 
 {
@@ -623,6 +651,79 @@ void KRenameWindow::slotMoveDown()
     // TODO: Maybe it is better to calculate the maximum index here
     if( sel.size() )
         m_pageFiles->fileList->scrollTo( model->createIndex( sel.back() + 1 ), QAbstractItemView::EnsureVisible );
+}
+
+void KRenameWindow::slotMoveUpPreview()
+{
+    QList<int>         sel  = this->selectedFileItemsPreview();
+    QAbstractItemView* view;
+
+    if( m_eGuiMode == eGuiMode_Wizard ) 
+        view = m_pageSimple->listPreview;
+    else
+        view = m_pageFilename->listPreview;
+
+    moveUp( sel, view );
+}
+
+void KRenameWindow::slotMoveDownPreview()
+{
+    QList<int>         sel  = this->selectedFileItemsPreview();
+    QAbstractItemView* view;
+
+    if( m_eGuiMode == eGuiMode_Wizard ) 
+        view = m_pageSimple->listPreview;
+    else
+        view = m_pageFilename->listPreview;
+
+    moveDown( sel, view );
+}
+
+void KRenameWindow::moveUp( const QList<int> & selected, QAbstractItemView* view ) 
+{
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());    
+    model->moveFilesUp( selected );
+
+    updatePreview();
+
+    QItemSelectionModel* selection = view->selectionModel();
+    QList<int>::const_iterator it  = selected.begin();
+    while( it != selected.end() )
+    {
+        if( *it - 1 > 0 ) 
+            selection->select( model->createIndex( *it - 1 ), QItemSelectionModel::Select );
+
+        ++it;
+    }
+
+    // make sure that the first item is visible
+    // TODO: Maybe it is better to calculate the minimum index here
+    if( selected.size() )
+        view->scrollTo( model->createIndex( selected.front() - 1 ), QAbstractItemView::EnsureVisible );
+}
+
+void KRenameWindow::moveDown( const QList<int> & selected, QAbstractItemView* view )
+{
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());    
+    model->moveFilesDown( selected );
+
+    updatePreview();
+
+    QItemSelectionModel* selection = view->selectionModel();
+    QList<int>::const_iterator it  = selected.begin();
+    while( it != selected.end() )
+    {
+        if( *it + 1 < model->rowCount() ) 
+            selection->select( model->createIndex( *it + 1 ), QItemSelectionModel::Select );
+
+        ++it;
+    }
+
+
+    // make sure that the last item is visible
+    // TODO: Maybe it is better to calculate the maximum index here
+    if( selected.size() )
+        view->scrollTo( model->createIndex( selected.back() + 1 ), QAbstractItemView::EnsureVisible );
 }
 
 #include "krenamewindow.moc"

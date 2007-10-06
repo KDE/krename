@@ -167,6 +167,25 @@ class BatchRenamer : public QObject {
         void processFiles( ProgressDialog* p );
 
 
+        /** undo all files
+         * 
+         *  processFiles has to be called before
+         *
+         *  A previous renaming operation will be undone.
+         *
+         *  Output will be reported through a progress dialog
+         *
+         *  @param p use this dialog to report progress to the user
+         */
+        void undoFiles( ProgressDialog* p );
+
+        /** Build the destination url from a KRenameFile
+         *
+         *  @param file a KRenameFile
+         *  @returns a valid KUrl
+         */
+        const KUrl buildDestinationUrl( const KRenameFile & file ) const;
+
         inline void setUndoScript( const QString & t ) { m_undoScript = t; }
         inline void setUndo( bool b ) { undo = b; }
 

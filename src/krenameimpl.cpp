@@ -43,7 +43,7 @@
 
 #include <QStringListModel>
 
-KRenameImpl::KRenameImpl( KRenameWindow* window )
+KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list )
     : QObject( (QObject*)window ), m_window( window ),
       m_lastSplitMode( eSplitMode_FirstDot ), m_lastDot( 0 )
 {
@@ -58,6 +58,9 @@ KRenameImpl::KRenameImpl( KRenameWindow* window )
 
     m_renamer.setFiles( &m_vector );
 
+    for( unsigned int i = 0; i < list.count(); i++ )
+        m_model->addFile( list[i] );
+
     parseCmdLineOptions();
     slotUpdateCount();
 }
@@ -67,7 +70,7 @@ KRenameImpl::~KRenameImpl()
     delete m_model;
 }
 
-QWidget* KRenameImpl::launch( const QRect & rect, const KUrl::List & list, bool loadprofile )
+QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list, bool loadprofile )
 {
     KConfig* config = kapp->sessionConfig();
 
@@ -90,15 +93,10 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KUrl::List & list, bool 
     }
 
     KRenameWindow* w  = new KRenameWindow( guimode, NULL );
-    KRenameImpl* impl = new KRenameImpl( w );
+    KRenameImpl* impl = new KRenameImpl( w, list );
     w->setGeometry( rect );
 
     /*
-    for( unsigned int i = 0; i < list.count(); i++ )
-        k->addFileOrDir( list[i] );
-
-    k->updatePre();
-
     // it is time to load a default profile now (if the user has specified one)
     if( loadprofile && !k->hasCommandlineProfile() && ProfileManager::hasDefaultProfile() )
 	ProfileManager::loadDefaultProfile( k );

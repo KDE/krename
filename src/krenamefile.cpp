@@ -82,7 +82,7 @@ KRenamePreviewProvider* KRenamePreviewProvider::s_instance = NULL;
 
 
 KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int dot )
-    : m_bValid( false )
+    : m_bValid( false ), m_error( 0 )
 {
     KIO::UDSEntry entry;
     KIO::NetAccess::stat( src, entry, NULL );
@@ -95,13 +95,13 @@ KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int 
 }
 
 KRenameFile::KRenameFile( const KUrl & src, bool directory, ESplitMode eSplitMode, unsigned int dot )
-    : m_bDirectory( directory ), m_bValid( true )
+    : m_bDirectory( directory ), m_bValid( true ), m_error( 0 )
 {
     initFileDescription( m_src, src, eSplitMode, dot );
 }
 
 KRenameFile::KRenameFile( const KFileItem& item, ESplitMode eSplitMode, unsigned int dot )
-    : m_bDirectory( item.isDir() ), m_bValid( item.isReadable() )
+    : m_bDirectory( item.isDir() ), m_bValid( item.isReadable() ), m_error( 0 )
 {
     initFileDescription( m_src, item.url(), eSplitMode, dot );
 }
@@ -118,6 +118,8 @@ const KRenameFile & KRenameFile::operator=( const KRenameFile & rhs )
     m_dst        = rhs.m_dst;
 
     m_bValid     = rhs.m_bValid;
+    m_icon       = rhs.m_icon;
+    m_error      = rhs.m_error;
 
     return *this;
 }

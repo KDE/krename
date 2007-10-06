@@ -160,19 +160,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
 
     for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++) 
     {
-        KUrl    dstUrl    = (*m_files)[i].dstUrl();
-        QString directory = (*m_files)[i].dstDirectory();
-        QString filename  = (*m_files)[i].dstFilename();
-        QString extension = (*m_files)[i].dstExtension();
-        
-        if( !extension.isEmpty() )
-        {
-            filename += ".";
-            filename += extension;
-        }
-
-        dstUrl.setDirectory( directory );
-        dstUrl.setFileName( filename );
+        KUrl    dstUrl    = this->buildDestinationUrl( (*m_files)[i] );
 
         //p->print( QString( "%1 -> %2" ).arg( (*m_files)[i].srcUrl().prettyUrl() ).arg( dstUrl.prettyUrl() ) );
         p->setProgress( i + 1 );
@@ -192,13 +180,14 @@ void BatchRenamer::processFiles( ProgressDialog* p )
                 job = KIO::file_copy( (*m_files)[i].srcUrl(), dstUrl, -1, m_overwrite, false, false );
                 break;
             case eRenameMode_Link:
-                //job = KIO::file_link( (*m_files)[i].srcUrl(), dstUrl, m_overwrite, false, false );
+                //job = KIO::link( (*m_files)[i].srcUrl(), dstUrl, m_overwrite, false, false );
                 break;
         }
 
         if( !NetAccess::synchronousRun( job, p ) ) 
         {
             p->error( i18n("Error during renaming %1", dstUrl.prettyUrl()) );
+            (*m_files)[i].setError( 1 );
             errors++;
         } 
     }
@@ -208,7 +197,8 @@ void BatchRenamer::processFiles( ProgressDialog* p )
 
     p->print( i18n("KRename finished the renaming process."), "krename" );
     p->print( i18n("Press close to quit!") );
-    p->done();
+    bool enableUndo = (m_renameMode != eRenameMode_Copy);
+    p->done( enableUndo, this, errors );
     
 #if 0
     delete object;
@@ -276,6 +266,59 @@ void BatchRenamer::processFiles( ProgressDialog* p )
 
     work( p );
 #endif // 0
+}
+
+void BatchRenamer::undoFiles( ProgressDialog* p )
+{
+    int     errors = 0;
+    KUrl    dest   = (*m_files)[0].dstUrl();
+    
+    // Give the user some information...
+    p->setProgressTotalSteps( m_files->count() );
+    p->setProgress( 0 );
+    p->setDestination( dest );
+    p->print( i18n("Undoing all renamed files.") );
+
+    for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++) 
+    {
+        KUrl dstUrl = this->buildDestinationUrl( (*m_files)[i] );
+
+        //p->print( QString( "%1 -> %2" ).arg( (*m_files)[i].srcUrl().prettyUrl() ).arg( dstUrl.prettyUrl() ) );
+        p->setProgress( i + 1 );
+
+        if( p->wasCancelled() )
+            break;
+
+        KIO::Job* job;
+        switch( m_renameMode ) 
+        {
+            default:
+            case eRenameMode_Rename:
+            case eRenameMode_Move:
+                job = KIO::file_move( dstUrl, (*m_files)[i].srcUrl(), m_overwrite, false, false );
+                break;
+            case eRenameMode_Link:
+                // In case of link delete created file
+                job = KIO::file_delete( dstUrl, false );
+                break;
+                //case eRenameMode_Copy: // no undo possible
+        }
+
+        if( !NetAccess::synchronousRun( job, p ) ) 
+        {
+            p->error( i18n("Error during undoing %1", dstUrl.prettyUrl()) );
+            (*m_files)[i].setError( 1 );
+            errors++;
+        } 
+    }
+
+    if( errors > 0 ) 
+        p->warning( i18n("%1 errors occurred!", errors ) );
+
+    p->print( i18n("KRename finished the undo process."), "krename" );
+    p->print( i18n("Press close to quit!") );
+    p->done( false, this, errors ); // do not allow undo from undo
+
 }
 
 QString BatchRenamer::processString( QString text, QString oldname, int i )
@@ -477,6 +520,25 @@ void BatchRenamer::work( ProgressDialog* p )
     delete []renamedFiles;
     delete this;
 #endif // 0
+}
+
+const KUrl BatchRenamer::buildDestinationUrl( const KRenameFile & file ) const
+{
+    KUrl    dstUrl    = file.dstUrl();
+    QString directory = file.dstDirectory();
+    QString filename  = file.dstFilename();
+    QString extension = file.dstExtension();
+    
+    if( !extension.isEmpty() )
+    {
+        filename += ".";
+        filename += extension;
+    }
+    
+    dstUrl.setDirectory( directory );
+    dstUrl.setFileName( filename );
+    
+    return dstUrl;
 }
 
 void BatchRenamer::escape( QString & text, const QString & token, const QString & sequence )

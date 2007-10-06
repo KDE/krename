@@ -22,6 +22,8 @@
 
 #include "ui_progressdialog.h"
 
+class BatchRenamer;
+
 class ProgressDialog : public QDialog {
     Q_OBJECT
 
@@ -88,8 +90,14 @@ class ProgressDialog : public QDialog {
      *
      *  Mostly used to disable the cancel button
      *  and enable other buttons
+     *
+     *  @param enableUndo if true the undo button will be enabled
+     *  @param batchRename is a handle to a batchrenamer instance that can be used to undo the operation and
+     *                     to determine URLs for a new renaming session
+     *  @param errros the number of errors that have occurred. If errors have occured the user
+     *                has the extra possibility to only rename files with errors again
      */
-    void done(); 
+    void done( bool enableUndo, BatchRenamer* renamer, int errors ); 
 
  private slots:
      /** Called when the user cancels the operation
@@ -100,15 +108,41 @@ class ProgressDialog : public QDialog {
       */
      void slotOpenDestination();
 
+     /** Called when the user wants to rename some more files
+      */
+     void slotRestartKRename();
+
+     /** Called when the user wants to rename all files again
+      *  that have been processed without an error.
+      */
+     void slotRenameProcessedAgain();
+
+     /** Called when the user wants to rename all files again
+      *  that have been processed with an error.
+      */
+     void slotRenameUnprocessedAgain();
+
+     /** Called when the user wants to rename all files again.
+      */
+     void slotRenameAllAgain();
+
+     /** Called when the user wants instant undo
+      */
+     void slotUndo();
+
  private:
     Ui::ProgressDialog m_widget;
 
-    bool m_canceled;       ///< the current canceled state
-    KUrl m_dest;           ///< files destination
+    bool m_canceled;         ///< the current canceled state
+    BatchRenamer* m_renamer; ///< A BatchRenamer that can undo the operation
+    KUrl m_dest;             ///< files destination
 
     QPushButton* m_buttonUndo;
     QPushButton* m_buttonMore;
     QPushButton* m_buttonDest;
+
+    QAction*     m_actProcessed;
+    QAction*     m_actUnprocessed;
 };
 
 void ProgressDialog::setDestination( const KUrl & dest )

@@ -38,10 +38,10 @@ class KRenameImpl : public QObject {
  public: 
     ~KRenameImpl();
 
-    static QWidget* launch( const QRect & rect, const KUrl::List & list, bool loadprofile = true );
+    static QWidget* launch( const QRect & rect, const KRenameFile::List & list, bool loadprofile = true );
 
  private:
-    KRenameImpl( KRenameWindow* window );
+    KRenameImpl( KRenameWindow* window, const KRenameFile::List & list );
 
     /** Creates all menu items and actions.
      */

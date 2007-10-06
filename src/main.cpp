@@ -115,7 +115,7 @@ int main(int argc, char *argv[])
     KApplication a;
     a.connect( &a, SIGNAL( lastWindowClosed() ), &a, SLOT( quit() ) );
 
-    QWidget* krename = KRenameImpl::launch( QRect( 0, 0, 0, 0 ), QStringList() );
+    QWidget* krename = KRenameImpl::launch( QRect( 0, 0, 0, 0 ), KRenameFile::List() );
 
     /* Check if Krename
      * was started from root!

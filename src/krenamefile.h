@@ -151,6 +151,40 @@ class KRenameFile {
         return m_icon;
     }
 
+    /** Set the preview icon of the KRenameFile
+     *
+     *  @param icon a preview icon.
+     *
+     *  This method is only here for performance reason
+     *  to easily and fast set the icon from one 
+     *  KRenameFile onto another.
+     *
+     *  Normally KRenameFile knows how to load the icon itselfs.
+     */
+    inline void setIcon( const QPixmap & icon ) 
+    {
+        m_icon = icon;
+    }
+
+    /** Set this error code to value != 0
+     *  if an error has occured during renaming this
+     *  particular file.
+     *
+     *  @param error an error code (0 means no error)
+     */
+    inline void setError( int error ) 
+    {
+        m_error = error;;
+    }
+
+    /**
+     * @returns true if an error code was set for this KRenameFile
+     */
+    inline bool hasError() const
+    {
+        return m_error != 0;
+    }
+
     /** Assigns another KRenameFile to this KRenameFile
      *  \param rhs object to assign
      */
@@ -246,6 +280,8 @@ class KRenameFile {
     bool             m_bValid;
 
     QPixmap          m_icon;
+
+    int              m_error;
 };
 
 #endif // _KRENAME_FILE_H_

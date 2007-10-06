@@ -25,6 +25,7 @@ class KRenameModel;
 class KRenamePreviewModel;
 
 class KPushButton;
+class QAbstractItemView;
 class QComboBox;
 class QDialogButtonBox;
 class QLabel;
@@ -121,6 +122,12 @@ class KRenameWindow : public KMainWindow {
      *          in the filelist
      */
     QList<int> selectedFileItems() const;
+
+    /**
+     * \returns a list of all file indexes that are selected
+     *          in the preview
+     */
+    QList<int> selectedFileItemsPreview() const;
 
  public slots:
     /** Resets the enabled/disabled state of all GUI elements correctly
@@ -299,6 +306,16 @@ class KRenameWindow : public KMainWindow {
      */
     void slotMoveDown();
 
+    /** Called when the user wants to move files up
+     *  in the preview.
+     */
+    void slotMoveUpPreview();
+
+    /** Called when the user wants to move files down
+     *  in the preview.
+     */
+    void slotMoveDownPreview();
+
  private:
     /** Configures the GUI for the current GUI mode
      */
@@ -325,6 +342,9 @@ class KRenameWindow : public KMainWindow {
      *  @returns a template string
      */
     QString getFilenameSimple( QComboBox* combo, QComboBox* comboCustom );
+
+    void moveUp( const QList<int> & selected, QAbstractItemView* view );
+    void moveDown( const QList<int> & selected, QAbstractItemView* view );
 
  private:
     EGuiMode          m_eGuiMode;  /// The current gui mode
