@@ -107,40 +107,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupUndo" >
-     <property name="title" >
-      <string>&amp;Undo Renaming</string>
-     </property>
-     <layout class="QVBoxLayout" >
-      <property name="spacing" >
-       <number>6</number>
-      </property>
-      <property name="leftMargin" >
-       <number>9</number>
-      </property>
-      <property name="topMargin" >
-       <number>9</number>
-      </property>
-      <property name="rightMargin" >
-       <number>9</number>
-      </property>
-      <property name="bottomMargin" >
-       <number>9</number>
-      </property>
-      <item>
-       <widget class="QCheckBox" name="checkUndoScript" >
-        <property name="text" >
-         <string>&amp;Create undo script</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="KUrlRequester" name="undorequester" />
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
     <spacer>
      <property name="orientation" >
       <enum>Qt::Vertical</enum>

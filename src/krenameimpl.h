@@ -30,6 +30,7 @@ class KRenameModel;
 class KRenamePreviewModel;
 class KRenameWindow;
 class ThreadedLister;
+class PluginLoader;
 class QLineEdit;
 
 class KRenameImpl : public QObject {
@@ -172,6 +173,8 @@ class KRenameImpl : public QObject {
 
     ESplitMode            m_lastSplitMode; ///< The last used split mode
     int                   m_lastDot;       ///< The last used dot value for splitmode
+
+    PluginLoader*         m_pluginLoader;  ///< Global plugin loader instance
 };
 
 #if 0 

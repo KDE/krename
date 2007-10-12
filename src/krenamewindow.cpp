@@ -212,7 +212,6 @@ void KRenameWindow::setupSlots()
     connect( m_pageDests->optionCopy,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->optionMove,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->optionLink,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
-    connect( m_pageDests->checkUndoScript, SIGNAL(clicked(bool)), SLOT(slotEnableControls()));
     connect( m_pageDests->checkOverwrite,  SIGNAL(clicked(bool)), SIGNAL(overwriteFilesChanged(bool)));
 
     connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotEnableControls()));
@@ -296,8 +295,6 @@ void KRenameWindow::slotEnableControls()
     m_pageFiles->buttonDown->setEnabled( m_fileCount );
 
     m_pageDests->urlrequester->setEnabled( !m_pageDests->optionRename->isChecked() );
-    m_pageDests->groupUndo->setEnabled( !m_pageDests->optionCopy->isChecked() );
-    m_pageDests->undorequester->setEnabled( m_pageDests->checkUndoScript->isChecked() );
 
     m_pageFilename->extensionTemplate->setEnabled( !m_pageFilename->checkExtension->isChecked() );
     m_pageFilename->buttonFind->setEnabled( m_fileCount != 0 );

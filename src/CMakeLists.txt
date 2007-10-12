@@ -15,6 +15,7 @@ set(krename_SRCS
   customdialog.cpp
   exthistorycombo.cpp
   filedialogextwidget.cpp
+  fileplugin.cpp
   firststartdlg.cpp
   krenamefile.cpp 
   krenameimpl.cpp 
@@ -25,9 +26,12 @@ set(krename_SRCS
   numberdialog.cpp
   insertpartfilenamedlg.cpp
   threadedlister.cpp
+  plugin.cpp
+  pluginloader.cpp
   previewlist.cpp
   progressdialog.cpp
   replacedialog.cpp
+  systemplugin.cpp
   tokenhelpdialog.cpp
   )
 

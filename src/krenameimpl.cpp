@@ -25,6 +25,8 @@
 
 #include "numberdialog.h"
 #include "insertpartfilenamedlg.h"
+#include "plugin.h"
+#include "pluginloader.h"
 #include "progressdialog.h"
 #include "replacedialog.h"
 #include "threadedlister.h"
@@ -60,6 +62,8 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list 
 
     for( unsigned int i = 0; i < list.count(); i++ )
         m_model->addFile( list[i] );
+
+    m_pluginLoader = PluginLoader::Instance();
 
     parseCmdLineOptions();
     slotUpdateCount();
@@ -116,7 +120,6 @@ void KRenameImpl::setupActions()
     KMenu* mnuHelp     = m_window->helpMenu( QString::null, true );
 
     KAction* actProfiles = new KAction( i18n("&Profiles..."), m_window );
-    KAction* actUndo     = new KAction( i18n("&Undo Old Renaming Action..."), m_window );
     KAction* actPref     = KStandardAction::preferences( this, SLOT(slotPreferences()), m_window );
     KAction* actLoad     = new KAction( i18n("&Load KDE file plugins"), m_window );
     KAction* actReload   = new KAction( i18n("&Reload Plugin Data"), m_window );
@@ -136,8 +139,6 @@ void KRenameImpl::setupActions()
     m_window->menuBar()->addMenu( mnuHelp );
 
     mnuExtra->addAction( actProfiles );
-    mnuExtra->addSeparator();
-    mnuExtra->addAction( actUndo );
 
     mnuSettings->addAction( actPref );
     mnuSettings->addSeparator();
@@ -145,7 +146,6 @@ void KRenameImpl::setupActions()
     mnuSettings->addAction( actReload );
 
     connect(actProfiles, SIGNAL(triggered(bool)), SLOT(slotManageProfiles()));
-    connect(actUndo,     SIGNAL(triggered(bool)), SLOT(slotUndo()));
     connect(actLoad,     SIGNAL(triggered(bool)), SLOT(slotLoadFilePlugins()));
     connect(actLoad,     SIGNAL(triggered(bool)), SLOT(slotReloadFilePluginData()));
 }
@@ -501,6 +501,7 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
 {
     TokenHelpDialog dialog( edit, m_window );
 
+    // add built-in tokens
     QStringList help;
     help.append("$;;" + i18n("old filename") );
     help.append("%;;" + i18n("old filename converted to lower case") );
@@ -528,8 +529,19 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
     help.append( "\\[;;" + i18n("Insert '['") );
     help.append( "\\];;" + i18n("Insert ']'") );
     help.append( "\\#;;" + i18n("Insert '#'") );
-
     dialog.add( i18n("Special Characters:" ), help, SmallIcon("krename") );
+
+    // add plugin tokens
+    QList<Plugin*>::const_iterator it = m_pluginLoader->plugins().begin();
+    while( it != m_pluginLoader->plugins().end() )
+    {
+        help.clear();
+        help = (*it)->help();
+        dialog.add( (*it)->name(), help, (*it)->icon() );
+
+        ++it;
+    }
+
     dialog.exec();
 }
 

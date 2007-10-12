@@ -45,16 +45,14 @@
 // Own includes
 #include "batchrenamer.h"
 #include "progressdialog.h"
-//#include "fileoperation.h"
-//#include "pluginloader.h"
-//#include "kmylistview.h"
+#include "pluginloader.h"
+#include "plugin.h"
 
 using namespace KIO;
 
 BatchRenamer::BatchRenamer()
     : m_index( 0 ), m_step( 1 ), m_files( NULL ), m_renameMode( eRenameMode_Rename )
 {
-    //plug = PluginLoader::instance();
     m_counter_index = 0;
     m_reset         = false;
     m_overwrite     = false;
@@ -797,22 +795,20 @@ QString BatchRenamer::processToken( QString token, QString oldname, int i )
     if( !tmp.isEmpty() )
         return tmp;
         
-#if 0    
-    Plugin* p = plug->findPlugin( token );
+    Plugin* p = PluginLoader::Instance()->findPlugin( token );
     if( p )
     {
-        tmp = p->processFile( this, i, token, TYPE_BRACKET );
+        tmp = p->processFile( this, i, token );
         if( !tmp.isNull() )
         {
             doEscape( tmp );
             return tmp;
         }
     }
-#endif // 0
 
     /*
      * Maybe I should remove this!
-     * Krename simply ignores unknown tokens!
+     * KRename simply ignores unknown tokens!
      * Usefull for the MP3 Plugin!
      */
     return QString::null;

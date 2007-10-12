@@ -87,7 +87,6 @@ enum ERenameMode {
 class QObject;
 class QListView;
 class ProgressDialog;
-class PluginLoader;
 
 /** This is the core class for renaming.
  *  
@@ -338,7 +337,6 @@ class BatchRenamer : public QObject {
         int m_mode;             // renaming mode
         QList<int> m_skip; // Numbers to skip
         QList<manualchanges> m_changes;  // User made changes
-        PluginLoader* plug;
 
         // a is used in find number and
         // required for skipping.
