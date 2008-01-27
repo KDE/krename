@@ -18,6 +18,7 @@
 #include "plugin.h"
 
 Plugin::Plugin()
+    : m_enabled( false )
 {
 }
 

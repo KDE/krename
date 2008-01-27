@@ -1,7 +1,7 @@
 /***************************************************************************
-                       systemplugin.h  -  description
+                         translitplugin.h  -  description
                              -------------------
-    begin                : Thu Oct 11 2007
+    begin                : Sat Oct 13 2007
     copyright            : (C) 2007 by Dominik Seichter
     email                : domseichter@web.de
  ***************************************************************************/
@@ -15,34 +15,23 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _SYSTEM_PLUGIN_H_
-#define _SYSTEM_PLUGIN_H_
+#ifndef _TRANSLIT_PLUGIN_H_
+#define _TRANSLIT_PLUGIN_H_
 
 #include "fileplugin.h"
 
-class SystemPlugin : public FilePlugin {
+#include <QHash>
+
+class TranslitPlugin : public FilePlugin {
  public:
-    /** Create a new SystemPlugin
-     */
-    SystemPlugin();
-
-    virtual ~SystemPlugin();
-
-    /** 
-     * @returns a name of the plugin that can be displayed
-     *          to the user. This name should be internationalized.
-     */
-    inline virtual const QString name() const;
+    TranslitPlugin();
+    
+    ~TranslitPlugin();
 
     /** 
      * @returns the type of the plugin.
      */
-    inline int type() const;
-
-    /**
-     * @returns an icon for this plugin.
-     */
-    inline virtual const QPixmap icon() const;
+    inline virtual int type() const;
 
     /**
      * This function is the core of your plugin.
@@ -80,35 +69,42 @@ class SystemPlugin : public FilePlugin {
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    inline virtual const QStringList & help() const;
+    inline const QStringList & help() const;
+
+    /** Create a user interface for this plugin
+     *
+     *  @param parent the parent widget of this plugin
+     */
+    //virtual void createUI( QWidget* parent ) const;
 
  private:
-    const QString time( time_t time, const QString & format );
+    /** Transliterate a string and return the 
+     *  transliterated version.
+     *
+     *  @param unicoded the string which is to be transliterated
+     *
+     *  @returns a transliterated copy of the string
+     */
+    QString transliterate(const QString & unicoded);
 
  private:
     QStringList m_help;
 
+    static const QString s_strUtf8[];
+    static const QString s_strEngl[];
+
+    static QHash<QString,QString> s_mapFromUTF8;
 };
 
-
-inline const QString SystemPlugin::name() const
+inline int TranslitPlugin::type() const
 {
-    return m_name;
-}
-
-inline int SystemPlugin::type() const
-{
+    //return ePluginType_Filename | ePluginType_Token;
     return ePluginType_Token;
 }
 
-inline const QPixmap SystemPlugin::icon() const
-{
-    return m_icon;
-}
-
-inline const QStringList & SystemPlugin::help() const
+inline const QStringList & TranslitPlugin::help() const
 {
     return m_help;
 }
 
-#endif // _SYSTEM_PLUGIN_H_
+#endif // _TRANSLIT_PLUGIN_H_

@@ -380,7 +380,7 @@ QString BatchRenamer::parsePlugins( int i, const QString& text, int type )
         ret = "";
         
     for( ; it.current(); ++it )
-        if( (*it)->usePlugin && (*it)->plugin->type() == type )
+        if( (*it)->usePlugin && ((*it)->plugin->type() & type) )
         {
             ret = (*it)->plugin->processFile( this, i, text, type );
             doEscape( ret );
@@ -798,7 +798,7 @@ QString BatchRenamer::processToken( QString token, QString oldname, int i )
     Plugin* p = PluginLoader::Instance()->findPlugin( token );
     if( p )
     {
-        tmp = p->processFile( this, i, token );
+        tmp = p->processFile( this, i, token, ePluginType_Token );
         if( !tmp.isNull() )
         {
             doEscape( tmp );

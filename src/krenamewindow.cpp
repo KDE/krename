@@ -18,6 +18,8 @@
 #include "krenamewindow.h"
 
 #include "krenamemodel.h"
+#include "plugin.h"
+#include "pluginloader.h"
 
 #include "ui_krenamefiles.h"
 #include "ui_krenamedestination.h"
@@ -137,7 +139,7 @@ KRenameWindow::KRenameWindow( EGuiMode guiMode, QWidget* parent )
     m_stack->addWidget( page );
 
     setupGui();
-
+    setupPlugins();
     
     m_pageDests->urlrequester->setMode( KFile::Directory | KFile::ExistingOnly );
     
@@ -196,6 +198,43 @@ void KRenameWindow::setupGui()
     slotEnableControls();
 }
 
+void KRenameWindow::setupPlugins()
+{
+    PluginLoader* loader = PluginLoader::Instance();
+
+    const QList<Plugin*> & list = loader->plugins();
+    QList<Plugin*>::const_iterator it = list.begin();
+
+    m_pluginsWidgetHash.reserve( list.count() );
+    m_pluginsHash.reserve( list.count() );
+
+    m_pagePlugins->searchPlugins->searchLine()->setTreeWidget( m_pagePlugins->listPlugins );
+    
+    while( it != list.end() )
+    {
+        // create plugin gui
+        QWidget* widget = new QWidget( m_pagePlugins->stackPlugins );
+        (*it)->createUI( widget );
+        int idx = m_pagePlugins->stackPlugins->addWidget( widget );
+        m_pagePlugins->stackPlugins->setCurrentIndex( idx );
+
+        m_pluginsHash[(*it)->name()] = (*it);
+        m_pluginsWidgetHash[(*it)->name()] = widget;
+
+        // add to list of all plugins
+        QTreeWidgetItem* item = new QTreeWidgetItem( m_pagePlugins->listPlugins );
+        item->setText( 0, (*it)->name() );
+        item->setIcon( 0, (*it)->icon() );
+
+        ++it;
+    }
+
+    QTreeWidgetItem* root = m_pagePlugins->listPlugins->invisibleRootItem();
+    if( root && root->childCount() )
+        slotPluginChanged( root->child( 0 ) );
+
+}
+
 void KRenameWindow::setupSlots()
 {
     connect( m_pageFiles->buttonAdd,       SIGNAL(clicked(bool)), SIGNAL(addFiles()));
@@ -213,6 +252,9 @@ void KRenameWindow::setupSlots()
     connect( m_pageDests->optionMove,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->optionLink,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
     connect( m_pageDests->checkOverwrite,  SIGNAL(clicked(bool)), SIGNAL(overwriteFilesChanged(bool)));
+
+    connect( m_pagePlugins->listPlugins,   SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(slotPluginChanged(QTreeWidgetItem*)));
+    connect( m_pagePlugins->checkEnablePlugin, SIGNAL(clicked(bool)), SLOT(slotPluginEnabled()));
 
     connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotEnableControls()));
     connect( m_pageFilename->buttonNumbering,    SIGNAL(clicked(bool))       , SIGNAL(showAdvancedNumberingDialog()));
@@ -731,5 +773,33 @@ void KRenameWindow::moveDown( const QList<int> & selected, QAbstractItemView* vi
         view->scrollTo( model->createIndex( selected.back() + 1 ), QAbstractItemView::EnsureVisible );
 }
 
+void KRenameWindow::slotPluginChanged(QTreeWidgetItem* selected)
+{
+    QWidget* w = m_pluginsWidgetHash[selected->text(0)];
+    Plugin*  p = m_pluginsHash[selected->text(0)];
+
+    if( p->alwaysEnabled() )
+        m_pagePlugins->checkEnablePlugin->setChecked( true );
+    else
+        m_pagePlugins->checkEnablePlugin->setChecked( p->isEnabled() );
+
+    m_pagePlugins->checkEnablePlugin->setEnabled( !p->alwaysEnabled() );
+    m_pagePlugins->stackPlugins->setCurrentWidget( w );
+
+    slotPluginEnabled();
+}
+
+void KRenameWindow::slotPluginEnabled()
+{
+    QTreeWidgetItem* selected = m_pagePlugins->listPlugins->currentItem();
+    if( selected ) 
+    {
+        QWidget* w = m_pluginsWidgetHash[selected->text(0)];
+        Plugin*  p = m_pluginsHash[selected->text(0)];
+        
+        p->setEnabled( m_pagePlugins->checkEnablePlugin->isChecked() );
+        w->setEnabled( p->alwaysEnabled() || m_pagePlugins->checkEnablePlugin->isChecked() );
+    }
+}
 
 #include "krenamewindow.moc"

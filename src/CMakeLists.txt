@@ -23,6 +23,7 @@ set(krename_SRCS
   krenametest.cpp
   krenamewindow.cpp
   krecursivelister.cpp
+  modeltest.cpp
   numberdialog.cpp
   insertpartfilenamedlg.cpp
   threadedlister.cpp
@@ -31,8 +32,10 @@ set(krename_SRCS
   previewlist.cpp
   progressdialog.cpp
   replacedialog.cpp
+  scriptplugin.cpp
   systemplugin.cpp
   tokenhelpdialog.cpp
+  translitplugin.cpp
   )
 
 kde4_add_ui_files( krename_SRCS 
@@ -66,7 +69,8 @@ endif(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
 #configure_file(config-kmetadata.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kmetadata.h )
 
 target_link_libraries(krename ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS}
-${KDE4_KIO_LIBS} ${KDE4_KMETADATA} )
+			      ${KDE4_KIO_LIBS} ${KDE4_KMETADATA}
+			      ${KDE4_KJS_LIBS} )
 
 install(TARGETS krename DESTINATION ${BIN_INSTALL_DIR})
 

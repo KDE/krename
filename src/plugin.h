@@ -24,11 +24,13 @@
 class BatchRenamer;
 
 /** An enum to determine the correct plugin type.
+ * 
+ *  A plugin may be of different types at a time.
  */
 enum EPluginType {
-    ePluginType_Token,    ///< A plugin that handles a token in brackets [ ]
-    ePluginType_Filename, ///< A plugin that transforms the complete final filename
-    ePluginType_File      ///< A plugin that changes the finally renamed file
+    ePluginType_Token     = 0x01, ///< A plugin that handles a token in brackets [ ]
+    ePluginType_Filename  = 0x02, ///< A plugin that transforms the complete final filename
+    ePluginType_File      = 0x04  ///< A plugin that changes the finally renamed file
 };
 
 /** This is the abstract interface that has to be implemented
@@ -46,15 +48,41 @@ class Plugin {
     virtual const QString name() const = 0;
 
     /** 
+     * Determines the type of the plugin.
+     * Different enum values may be or'ed together.
+     *
      * @returns the type of the plugin.
      */
-    virtual EPluginType type() const = 0;
+    virtual int type() const = 0;
 
     /**
      * @returns an icon for this plugin.
      */
     virtual const QPixmap icon() const = 0;
 
+    /** Set the enabled state of a plugin
+     *  so that it can be used.
+     *
+     *  \param b the enabled state of the plugin.
+     *
+     *  This has no effect if alwaysEnabled returns true
+     */
+    inline void setEnabled( bool b );
+
+    /** 
+     * @returns true if this plugin is enabled.
+     * Only use it if it is enabled.
+     */
+    inline bool isEnabled() const;
+
+    /**
+     * @returns true if this plugins is always enabled
+     *
+     * Warning: If you return true here, the user has no possibility to
+     *          disable this plugin.
+     */
+    virtual bool alwaysEnabled() const = 0;
+    
     /**
      * This function is the core of your plugin.
      *
@@ -74,6 +102,7 @@ class Plugin {
      *                        If type is ePluginType_Token, this is the contents of a token
      *                        in brackets. If your plugin supports the token [example],
      *                        KRename will pass the strign "example" to your method.
+     * @param eCurrentType the current type of plugin that is requested (for plugins that support more than one type)
      *
      * @returns the result of the function, depending on type().
      * @returns QString::null if this plugin has nothing to do.
@@ -81,7 +110,7 @@ class Plugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken ) = 0;
+    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType ) = 0;
 
     /** Get a list of all tokens supported by this plugin. 
      *
@@ -101,6 +130,12 @@ class Plugin {
      */
     virtual const QStringList & help() const = 0;
 
+    /** Create a user interface for this plugin
+     *
+     *  @param parent the parent widget of this plugin
+     */
+    virtual void createUI( QWidget* parent ) const = 0;
+
     /*
         virtual bool checkError() = 0;
         virtual void drawInterface( QWidget* w, QVBoxLayout* l ) = 0;
@@ -116,6 +151,19 @@ class Plugin {
         virtual const QPixmap getIcon() const;
         virtual const QStringList getKeys() const;
     */
+
+ private:
+    bool m_enabled;
 };
+
+inline void Plugin::setEnabled( bool b )
+{
+    m_enabled = b;
+}
+
+inline bool Plugin::isEnabled() const
+{
+    return this->alwaysEnabled() || m_enabled;
+}
 
 #endif // _PLUGIN_H_

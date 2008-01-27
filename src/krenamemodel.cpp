@@ -119,8 +119,11 @@ KRenameModel::~KRenameModel()
 
 }
 
-int KRenameModel::rowCount ( const QModelIndex & ) const
+int KRenameModel::rowCount ( const QModelIndex & index ) const
 {
+    if( !index.isValid() )
+        return 0;
+
     return m_vector->size();
 }
 
@@ -147,7 +150,7 @@ QVariant KRenameModel::data ( const QModelIndex & index, int role ) const
 Qt::ItemFlags KRenameModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid())
-        return Qt::ItemIsEnabled;
+        return Qt::ItemIsDropEnabled;
     
     return QAbstractItemModel::flags(index) | Qt::ItemIsEditable;
 }

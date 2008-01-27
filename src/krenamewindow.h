@@ -21,6 +21,8 @@
 #include <kmainwindow.h>
 #include "batchrenamer.h"
 
+#include <QHash>
+
 class KRenameModel;
 class KRenamePreviewModel;
 
@@ -33,6 +35,9 @@ class QLineEdit;
 class QModelIndex;
 class QStackedWidget;
 class QTabBar;
+class QTreeWidgetItem;
+
+class Plugin;
 
 namespace Ui {
     class KRenameFiles;
@@ -316,6 +321,14 @@ class KRenameWindow : public KMainWindow {
      */
     void slotMoveDownPreview();
 
+    /** Called when the user selects a plugin in the plugins tab
+     */
+    void slotPluginChanged(QTreeWidgetItem* selected);
+
+    /** Called when a plugin is enabled or disabled
+     */
+    void slotPluginEnabled();
+
  private:
     /** Configures the GUI for the current GUI mode
      */
@@ -324,6 +337,10 @@ class KRenameWindow : public KMainWindow {
     /** Setup all signals and slots
      */
     void setupSlots();
+
+    /** Load all plugins
+     */
+    void setupPlugins();
 
     /** Get a template for the prefix or suffix in wizard mode
      *  from 2 combo boxes
@@ -371,6 +388,9 @@ class KRenameWindow : public KMainWindow {
     Ui::KRenameSimple*      m_pageSimple;
     Ui::KRenamePlugins*     m_pagePlugins;
     Ui::KRenameFilename*    m_pageFilename;
+
+    QHash<QString,QWidget*> m_pluginsWidgetHash;
+    QHash<QString,Plugin*>  m_pluginsHash;
 };
 
 

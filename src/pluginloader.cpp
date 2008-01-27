@@ -19,7 +19,9 @@
 
 #include "plugin.h"
 #include "fileplugin.h"
+#include "scriptplugin.h"
 #include "systemplugin.h"
+#include "translitplugin.h"
 
 #include <kservice.h>
 
@@ -94,7 +96,9 @@ void PluginLoader::clear()
 
 void PluginLoader::load()
 {
+    m_plugins.append( new ScriptPlugin() );
     m_plugins.append( new SystemPlugin() );
+    m_plugins.append( new TranslitPlugin() );
     //this->loadFilePlugins();
 
 
@@ -102,7 +106,7 @@ void PluginLoader::load()
     QList<Plugin*>::iterator it = m_plugins.begin();
     while( it != m_plugins.end() )
     {
-        if( (*it)->type() == ePluginType_Token ) 
+        if( ((*it)->type() & ePluginType_Token) ) 
         {
             const QStringList & tokens = (*it)->supportedTokens(); 
             QStringList::const_iterator itList = tokens.begin();

@@ -557,3 +557,4 @@ bool KRenameTest::replaceTest( const QString & token, const QString & filename, 
     return result;
 
 }
+

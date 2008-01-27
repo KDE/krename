@@ -65,6 +65,7 @@ SystemPlugin::SystemPlugin()
     m_help.append( "[accessdate];;" + i18n("Insert the date of the last file access") );
     m_help.append( "[accessdate;yyyy-MM-dd];;" + i18n("Insert the formatted date of the last file access") );
 
+    m_name = i18n("Date and system functions");
     m_icon = "clock";   
 }
 
@@ -73,12 +74,8 @@ SystemPlugin::~SystemPlugin()
 
 }
 
-QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken )
+QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType )
 {
-    /*
-    if( !this->supports( filenameOrToken ) )
-        return QString::null;
-    */
     /*
     if( token.lower().startsWith( getPattern() ) )
         token = token.mid( getPattern().length(), token.length() - getPattern().length() );

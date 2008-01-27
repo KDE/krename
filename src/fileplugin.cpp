@@ -19,7 +19,12 @@
 
 #include <kapplication.h>
 #include <kiconloader.h>
+#include <klistwidget.h>
+#include <klocale.h>
 #include <kservice.h>
+
+#include <QLabel>
+#include <QHBoxLayout>
 
 FilePlugin::FilePlugin( KService* service )
 {
@@ -39,7 +44,7 @@ FilePlugin::~FilePlugin()
 
 }
 
-QString FilePlugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken )
+QString FilePlugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType )
 {
 
     return QString::null;
@@ -58,10 +63,38 @@ bool FilePlugin::supports( const QString & token )
     return false;
 }
 
-
 const QPixmap FilePlugin::icon() const
 {
     return KIconLoader::global()->loadIcon( m_icon, K3Icon::Small );
-    //return kapp->iconLoader()->loadIcon( m_icon, KIcon::Small );
+}
+
+void FilePlugin::createUI( QWidget* parent ) const
+{
+    QSpacerItem* spacer = new QSpacerItem( 20, 20, QSizePolicy::Expanding, QSizePolicy::Expanding );
+    
+    QVBoxLayout* l    = new QVBoxLayout( parent );
+    QHBoxLayout* hbox = new QHBoxLayout( parent );
+    
+    QLabel* pix = new QLabel( parent );
+    pix->setPixmap( KIconLoader::global()->loadIcon( m_icon, K3Icon::Desktop ) );
+    
+    hbox->addWidget( pix );
+    hbox->addWidget( new QLabel( "<qt><b>"+name()+"</b></qt>", parent  ) );
+    hbox->addItem( spacer );
+
+    l->addLayout( hbox );    
+    l->addWidget( new QLabel( "KOMMENTAR", parent  ) );
+    l->addWidget( new QLabel( i18n("Supported tokens:"), parent  ) );
+
+    KListWidget* list = new KListWidget( parent  );
+    //list->setColumnMode( KListBox::FitToWidth );
+    
+    const QStringList & keys = supportedTokens();
+
+    for( unsigned int i = 0; i < keys.count(); i++ )
+        list->insertItem( 0, "[" + keys[i] + "]" );
+    
+    l->addWidget( list );
+    l->setStretchFactor( list, 2 );
 }
 

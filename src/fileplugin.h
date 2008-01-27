@@ -41,12 +41,20 @@ class FilePlugin : public Plugin {
     /** 
      * @returns the type of the plugin.
      */
-    inline virtual EPluginType type() const;
+    inline virtual int type() const;
 
     /**
      * @returns an icon for this plugin.
      */
     virtual const QPixmap icon() const;
+
+    /**
+     * @returns true if this plugins is always enabled
+     *
+     * Warning: If you return true here, the user has no possibility to
+     *          disable this plugin.
+     */
+    inline virtual bool alwaysEnabled() const;
 
     /**
      * This function is the core of your plugin.
@@ -67,6 +75,7 @@ class FilePlugin : public Plugin {
      *                        If type is ePluginType_Token, this is the contents of a token
      *                        in brackets. If your plugin supports the token [example],
      *                        KRename will pass the strign "example" to your method.
+     * @param eCurrentType the current type of plugin that is requested (for plugins that support more than one type)
      *
      * @returns the result of the function, depending on type().
      * @returns QString::null if this plugin has nothing to do.
@@ -74,7 +83,7 @@ class FilePlugin : public Plugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken );
+    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
 
     /** Get a list of all tokens supported by this plugin. 
      *
@@ -92,6 +101,14 @@ class FilePlugin : public Plugin {
      *  @returns a stringlist containing help on the supported tokens
      */
     inline virtual const QStringList & help() const;
+
+    /** Create a user interface for this plugin
+     *
+     *  @param parent the parent widget of this plugin
+     *
+     *  This is implemented here for all FilePlugin based classed
+     */
+    void createUI( QWidget* parent ) const;
 
  protected:
     FilePlugin();
@@ -130,7 +147,12 @@ inline const QString FilePlugin::name() const
     return m_name;
 }
 
-inline EPluginType FilePlugin::type() const
+inline bool FilePlugin::alwaysEnabled() const
+{
+    return true;
+}
+
+inline int FilePlugin::type() const
 {
     return ePluginType_Token;
 }

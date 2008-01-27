@@ -32,6 +32,8 @@
 #include "threadedlister.h"
 #include "tokenhelpdialog.h"
 
+#include "modeltest.h"
+
 #include <kaction.h>
 #include <kapplication.h>
 #include <kcmdlineargs.h>
@@ -422,6 +424,9 @@ void KRenameImpl::selfTest()
     KRenameTest* test = new KRenameTest();
     test->startTest();    
 
+    new ModelTest( m_model );
+    new ModelTest( m_previewModel );
+
     // Make _really_ sure it comes to front
     test->show();
     test->raise();
@@ -537,7 +542,8 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
     {
         help.clear();
         help = (*it)->help();
-        dialog.add( (*it)->name(), help, (*it)->icon() );
+        if( !help.isEmpty() )
+            dialog.add( (*it)->name(), help, (*it)->icon() );
 
         ++it;
     }
