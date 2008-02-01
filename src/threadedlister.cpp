@@ -30,7 +30,7 @@
 QMutex ThreadedLister::s_mutex;
 
 ThreadedLister::ThreadedLister( const KUrl & dirname, QWidget* cache, KRenameModel* model )
-    : QObject( NULL ), m_dirname( dirname ), m_job( NULL ), m_cache( cache ), m_model( model )
+    : QObject( NULL ), m_dirname( dirname ), m_cache( cache ), m_model( model )
 {
     m_listHiddenFiles  = false;
     m_listRecursive    = false;
@@ -42,8 +42,6 @@ ThreadedLister::ThreadedLister( const KUrl & dirname, QWidget* cache, KRenameMod
 
 ThreadedLister::~ThreadedLister()
 {
-    if( m_job )
-        delete m_job;
 }
 
 void ThreadedLister::run()
@@ -57,16 +55,17 @@ void ThreadedLister::run()
     }
     s_mutex.unlock();
 
+    KIO::ListJob* job   = NULL; // Will delete itself automatically
     KIO::JobFlags flags = KIO::HideProgressInfo;
     if( m_listRecursive ) 
-        m_job = KIO::listRecursive( m_dirname, flags, m_listHiddenFiles );
+        job = KIO::listRecursive( m_dirname, flags, m_listHiddenFiles );
     else
-        m_job = KIO::listDir( m_dirname, flags, m_listHiddenFiles );
+        job = KIO::listDir( m_dirname, flags, m_listHiddenFiles );
 
-    connect( m_job, SIGNAL(entries( KIO::Job*, const KIO::UDSEntryList & )), SLOT(foundItem(KIO::Job*, const KIO::UDSEntryList &)));
-    connect( m_job, SIGNAL(result( KJob* job )), SLOT( completed() ) );
+    connect( job, SIGNAL(entries( KIO::Job*, const KIO::UDSEntryList & )), SLOT(foundItem(KIO::Job*, const KIO::UDSEntryList &)));
+    connect( job, SIGNAL(result( KJob* )), SLOT( completed() ) );
 
-    m_job->start();
+    job->start();
     /*
     if( m_recursive ) 
     {
@@ -141,12 +140,6 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
 
 void ThreadedLister::completed()
 {
-    if( m_job )
-    {
-        delete m_job;
-        m_job = NULL;
-    }
-
     emit listerDone( this );
 }
 

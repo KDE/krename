@@ -31,7 +31,6 @@ class QWidget;
 namespace KIO {
     class Job;
     class KUDSEntry;
-    class ListJob;
 };
 
 class ThreadedLister : public QObject
@@ -81,8 +80,6 @@ class ThreadedLister : public QObject
         bool              m_listRecursive;
         bool              m_listDirnamesOnly;
         bool              m_listDirnames;
-                
-        KIO::ListJob*     m_job;
 
         QWidget*          m_cache;
         KRenameModel*     m_model;
