@@ -24,51 +24,42 @@
 
 #include <kfileitem.h>
 
-class KDirLister;
-class KRecursiveLister;
 class KRenameModel;
 class QMutex;
 class QWidget;
 
-/*
-class FileList : public KFileItemList {
-    public:
-        FileList( const KFileItemList & list ) 
-            {
-                KFileItem* it;
-                for( it = list.first(); it; it = list.next() )  
-                    this->append( it );
-            }
-
-    protected:
-        int compareItems( QPtrCollection::Item item1, QPtrCollection::Item item2 ) {
-            return static_cast<KFileItem*>(item1)->url().url().compare( static_cast<KFileItem*>(item2)->url().url() );
-        }
-        
+namespace KIO {
+    class Job;
+    class KUDSEntry;
+    class ListJob;
 };
-*/
 
 class ThreadedLister : public QObject
 {
     Q_OBJECT
     public:
-        ThreadedLister( QWidget* cache, KRenameModel* model );
+        ThreadedLister( const KUrl & dirname, QWidget* cache, KRenameModel* model );
         ~ThreadedLister();
                 
         inline void start() { this->run(); }
-        inline void exit( int v = 0 ) { return; }
 
-        inline const KUrl & dirname();
-        inline bool dirnames();
-        inline const QString & filter();
-        inline bool hidden();
-        
-        inline void setDirname( const KUrl & dirname );
-        inline void setDirnames( bool names );        
+        /** Sets if dirnames should listed along with the filenames.
+         *  This is disabled by default.
+         *
+         *  \param names if true dirnames are listed along with the filenames.
+         */
+        inline void setListDirnames( bool names );        
+
+        /** Sets if only dirnames should listed.
+         *  This is disabled by default.
+         *
+         *  \param names if true only dirnames are listed.
+         */
+        inline void setListDirnamesOnly( bool names );        
+
         inline void setFilter( const QString & filter );
-        inline void setHidden( bool h );
-        inline void setRecursive( bool r );
-        inline void setRecursiveDirOnlyMode( bool m );
+        inline void setListHidden( bool h );
+        inline void setListRecursively( bool r );
         
     signals:
         void listerDone( ThreadedLister* );
@@ -77,38 +68,34 @@ class ThreadedLister : public QObject
         void run();
         
     private slots:
-        void reclisterFinished();
-        void listerFinished();
+        void completed();
         
-        void newItems( const KFileItemList& items );
+        void foundItem(KIO::Job*, const KIO::UDSEntryList & list);
 
     private:        
         static QMutex     s_mutex; ///< Mutex assuring that only one thread at a time will work on m_model
         
         KUrl              m_dirname;
         QString           m_filter;
-        bool              m_hidden;
-        bool              m_recursive;
-        bool              m_dirnames;
-        bool              m_dironly;
-
-        KUrl::List        m_files;
+        bool              m_listHiddenFiles;
+        bool              m_listRecursive;
+        bool              m_listDirnamesOnly;
+        bool              m_listDirnames;
                 
-        KDirLister*       m_lister;
-        KRecursiveLister* m_reclister;
-      
+        KIO::ListJob*     m_job;
+
         QWidget*          m_cache;
         KRenameModel*     m_model;
 };
 
-void ThreadedLister::setDirname( const KUrl & dirname )
+void ThreadedLister::setListDirnames( bool names )
 {
-    m_dirname = dirname;
+    m_listDirnames = names;
 }
 
-void ThreadedLister::setDirnames( bool names )
+void ThreadedLister::setListDirnamesOnly( bool names )
 {
-    m_dirnames = names;
+    m_listDirnamesOnly = names;
 }
 
 void ThreadedLister::setFilter( const QString & filter )
@@ -116,45 +103,14 @@ void ThreadedLister::setFilter( const QString & filter )
     m_filter = filter;
 }
 
-void ThreadedLister::setHidden( bool h )
+void ThreadedLister::setListHidden( bool h )
 {
-    m_hidden = h;
+    m_listHiddenFiles = h;
 }
 
-void ThreadedLister::setRecursive( bool r )
+void ThreadedLister::setListRecursively( bool r )
 {
-    m_recursive = r;
-}
-
-void ThreadedLister::setRecursiveDirOnlyMode( bool m )
-{
-    m_dironly = m;
-}
-
-/*
-KUrl::List* ThreadedLister::items()
-{
-    return &m_files;
-}
-*/
-const KUrl & ThreadedLister::dirname()
-{
-    return m_dirname;
-}
-
-bool ThreadedLister::dirnames()
-{
-    return m_dirnames;
-}
-
-const QString & ThreadedLister::filter()
-{
-    return m_filter;
-}
-
-bool ThreadedLister::hidden()
-{
-    return m_hidden;
+    m_listRecursive = r;
 }
 
 #endif

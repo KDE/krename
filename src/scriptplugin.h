@@ -138,7 +138,7 @@ class ScriptPlugin : public Plugin {
 
  private:
     QStringList       m_keys;
-    KJS::Interpreter* m_interpreter;
+    //KJS::Interpreter* m_interpreter;
 };
 
 

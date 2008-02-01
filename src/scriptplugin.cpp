@@ -25,13 +25,15 @@
 #include <QLabel>
 #include <QHBoxLayout>
 
+/*
 #include <kjs/completion.h>
 #include <kjs/interpreter.h>
 #include <kjs/value.h>
-
+*/
 ScriptPlugin::ScriptPlugin()
 {
     m_name = "ScriptPlugin";
+    /*
     m_interpreter = new KJS::Interpreter();
 
     QString script = "alert(\"Hello\"); 4 + 6;";
@@ -43,6 +45,7 @@ ScriptPlugin::ScriptPlugin()
     }
     else
         qDebug("compType=%i\n", comp.complType() ); 
+    */
 }
 
 ScriptPlugin::~ScriptPlugin()
@@ -71,7 +74,7 @@ bool ScriptPlugin::supports( const QString & token )
 
 const QPixmap ScriptPlugin::icon() const
 {
-    return KIconLoader::global()->loadIcon( m_icon, K3Icon::Small );
+    return KIconLoader::global()->loadIcon( m_icon, KIconLoader::NoGroup, KIconLoader::SizeSmall );
 }
 
 void ScriptPlugin::createUI( QWidget* parent ) const
@@ -82,7 +85,7 @@ void ScriptPlugin::createUI( QWidget* parent ) const
     QHBoxLayout* hbox = new QHBoxLayout( parent );
     
     QLabel* pix = new QLabel( parent );
-    pix->setPixmap( KIconLoader::global()->loadIcon( m_icon, K3Icon::Desktop ) );
+    pix->setPixmap( KIconLoader::global()->loadIcon( m_icon, KIconLoader::Desktop ) );
     
     hbox->addWidget( pix );
     hbox->addWidget( new QLabel( "<qt><b>"+name()+"</b></qt>", parent  ) );

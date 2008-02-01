@@ -199,15 +199,14 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
         {
             KApplication::setOverrideCursor( Qt::BusyCursor );
 
-            ThreadedLister* thl = new ThreadedLister( m_window, m_model );
+            ThreadedLister* thl = new ThreadedLister( *it, m_window, m_model );
             connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
             
-            thl->setDirname( *it );
-            thl->setDirnames( dirsOnly );
             thl->setFilter( filter );
-            thl->setHidden( hidden );
-            thl->setRecursive( recursively );
-            thl->setRecursiveDirOnlyMode( recursively );
+            thl->setListDirnamesOnly( dirsOnly );
+            thl->setListHidden( hidden );
+            thl->setListRecursively( recursively );
+            thl->setListDirnames( dirsWithFiles );
 
             thl->start();
         }

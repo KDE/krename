@@ -18,48 +18,56 @@
  
 #include "threadedlister.h"
 
-#include "krecursivelister.h"
 #include "krenamemodel.h"
+
+#include <kio/job.h>
+#include <kio/jobclasses.h>
 
 #include <kapplication.h>
 #include <QMutex>
+#include <QRegExp>
 
 QMutex ThreadedLister::s_mutex;
 
-ThreadedLister::ThreadedLister( QWidget* cache, KRenameModel* model )
- : QObject( NULL ), m_cache( cache ), m_model( model )
+ThreadedLister::ThreadedLister( const KUrl & dirname, QWidget* cache, KRenameModel* model )
+    : QObject( NULL ), m_dirname( dirname ), m_job( NULL ), m_cache( cache ), m_model( model )
 {
-    m_reclister = NULL;
-    m_lister = NULL;
-
-    m_hidden = false;
-    m_recursive = false;
-    m_dirnames = false;
-    m_dironly = false;
+    m_listHiddenFiles  = false;
+    m_listRecursive    = false;
+    m_listDirnamesOnly = false;
+    m_listDirnames     = false;
 
     qRegisterMetaType<KFileItemList>("KFileItemList");
 }
 
 ThreadedLister::~ThreadedLister()
 {
-    if( m_reclister )
-        delete m_reclister;
-        
-    if( m_lister )
-        delete m_lister;
+    if( m_job )
+        delete m_job;
 }
 
 void ThreadedLister::run()
 {
     s_mutex.lock();
-    if( m_dirnames ) 
+    if( m_listDirnames ) 
     {
         QString name = m_dirname.fileName();
-        if( !m_hidden && !name.startsWith(".") )        
+        if( !m_listHiddenFiles && !name.startsWith(".") )        
             m_model->addFile( KRenameFile( m_dirname, true ) );
     }
     s_mutex.unlock();
 
+    KIO::JobFlags flags = KIO::HideProgressInfo;
+    if( m_listRecursive ) 
+        m_job = KIO::listRecursive( m_dirname, flags, m_listHiddenFiles );
+    else
+        m_job = KIO::listDir( m_dirname, flags, m_listHiddenFiles );
+
+    connect( m_job, SIGNAL(entries( KIO::Job*, const KIO::UDSEntryList & )), SLOT(foundItem(KIO::Job*, const KIO::UDSEntryList &)));
+    connect( m_job, SIGNAL(result( KJob* job )), SLOT( completed() ) );
+
+    m_job->start();
+    /*
     if( m_recursive ) 
     {
         m_reclister = new KRecursiveLister();
@@ -88,38 +96,56 @@ void ThreadedLister::run()
 
         m_lister->openUrl( m_dirname, false, false );    
     }
+    */
 }
 
-void ThreadedLister::newItems( const KFileItemList& items )
+void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
 {
-    s_mutex.lock();
-        
-    if( m_dirnames ) 
-    {
-        QString name = m_dirname.fileName();
-        if( !m_hidden && name.right( 1 ) != QString::fromLatin1(".") )        
-            m_model->addFile( KRenameFile( m_dirname, true ) );
-    }
+    QString displayName;
+    QRegExp filter( m_filter );
+    filter.setPatternSyntax( QRegExp::Wildcard );
     
-    KFileItemList::const_iterator it = items.begin();
-    while( it != items.end() ) 
+    KIO::UDSEntryList::const_iterator it = list.begin();
+    while( it != list.end() ) 
     {
-        if( !(*it)->isDir() || ((*it)->isDir() && m_dirnames ) )
-            m_model->addFile( KRenameFile( *(*it) ) );
-        ++it;
+        displayName = (*it).stringValue( KIO::UDSEntry::UDS_NAME );
+        if( !filter.isEmpty() && !filter.exactMatch( displayName ) )
+        {
+            // does not match filter
+            // skip it 
+            ++it;
+        }
+        else
+        {
+            if( (m_listDirnames || m_listDirnamesOnly) && (*it).isDir() ) 
+            {
+                // Filter out parent and current directory
+                if( displayName != "." && displayName != ".." )
+                {
+                    s_mutex.lock();
+                    m_model->addFile( KRenameFile( KFileItem( *it, (*it).stringValue( KIO::UDSEntry::UDS_URL )) ));             
+                    s_mutex.unlock();
+                }
+            }
+            else if( !m_listDirnamesOnly && !(*it).isDir() )
+            {
+                s_mutex.lock();
+                m_model->addFile( KRenameFile( KFileItem( *it, (*it).stringValue( KIO::UDSEntry::UDS_URL )) ));             
+                s_mutex.unlock();
+            }
+ 
+            ++it;
+        }
     }
-
-    s_mutex.unlock();
 }
 
-void ThreadedLister::reclisterFinished()
+void ThreadedLister::completed()
 {
-    emit listerDone( this );
-}
-
-void ThreadedLister::listerFinished()
-{
-    newItems( m_lister->items( KDirLister::FilteredItems ) );
+    if( m_job )
+    {
+        delete m_job;
+        m_job = NULL;
+    }
 
     emit listerDone( this );
 }

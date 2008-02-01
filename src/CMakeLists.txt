@@ -22,7 +22,6 @@ set(krename_SRCS
   krenamemodel.cpp
   krenametest.cpp
   krenamewindow.cpp
-  krecursivelister.cpp
   modeltest.cpp
   numberdialog.cpp
   insertpartfilenamedlg.cpp
