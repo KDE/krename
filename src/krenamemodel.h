@@ -54,7 +54,7 @@ class KRenameModel : public QAbstractListModel {
     *
     *  @param mode the sort mode to use
     */
-   void sort( ESortMode mode );
+   void sortFiles( ESortMode mode );
 
    /** Move each file in a list of indeces upwards
     *  @param files list of file indeces. Each file is moved up one position

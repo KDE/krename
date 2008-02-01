@@ -65,7 +65,7 @@ bool FilePlugin::supports( const QString & token )
 
 const QPixmap FilePlugin::icon() const
 {
-    return KIconLoader::global()->loadIcon( m_icon, K3Icon::Small );
+    return KIconLoader::global()->loadIcon( m_icon, KIconLoader::NoGroup, KIconLoader::SizeSmall );
 }
 
 void FilePlugin::createUI( QWidget* parent ) const
@@ -76,7 +76,7 @@ void FilePlugin::createUI( QWidget* parent ) const
     QHBoxLayout* hbox = new QHBoxLayout( parent );
     
     QLabel* pix = new QLabel( parent );
-    pix->setPixmap( KIconLoader::global()->loadIcon( m_icon, K3Icon::Desktop ) );
+    pix->setPixmap( KIconLoader::global()->loadIcon( m_icon, KIconLoader::Desktop ) );
     
     hbox->addWidget( pix );
     hbox->addWidget( new QLabel( "<qt><b>"+name()+"</b></qt>", parent  ) );
@@ -91,7 +91,7 @@ void FilePlugin::createUI( QWidget* parent ) const
     
     const QStringList & keys = supportedTokens();
 
-    for( unsigned int i = 0; i < keys.count(); i++ )
+    for( int i = 0; i < keys.count(); i++ )
         list->insertItem( 0, "[" + keys[i] + "]" );
     
     l->addWidget( list );

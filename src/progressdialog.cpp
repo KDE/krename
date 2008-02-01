@@ -143,7 +143,7 @@ void ProgressDialog::slotUndo()
     }
 }
 
-void ProgressDialog::done( bool enableUndo, BatchRenamer* renamer, int errors )
+void ProgressDialog::renamingDone( bool enableUndo, BatchRenamer* renamer, int errors )
 {
     m_widget.buttonCancel->setEnabled( false );
 

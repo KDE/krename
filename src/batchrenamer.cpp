@@ -33,8 +33,7 @@
 #include <sys/stat.h>
 
 // QT includes
-#include <qdir.h>
-#include <qregexp.h>
+#include <QTextStream>
 
 // KDE includes
 #include <kapplication.h>
@@ -166,23 +165,37 @@ void BatchRenamer::processFiles( ProgressDialog* p )
         if( p->wasCancelled() )
             break;
 
-        KIO::Job* job;
+        KIO::JobFlags flags  = (m_overwrite ? KIO::Overwrite : KIO::DefaultFlags) | KIO::HideProgressInfo;
+        KIO::Job*     job    = NULL;
+        const KUrl &  srcUrl =  (*m_files)[i].srcUrl();
+                    
         switch( m_renameMode ) 
         {
             default:
             case eRenameMode_Rename:
             case eRenameMode_Move:
-                job = KIO::file_move( (*m_files)[i].srcUrl(), dstUrl, m_overwrite, false, false );
+                job = KIO::file_move( srcUrl, dstUrl, -1, flags );
                 break;
             case eRenameMode_Copy:
-                job = KIO::file_copy( (*m_files)[i].srcUrl(), dstUrl, -1, m_overwrite, false, false );
+                job = KIO::file_copy( srcUrl, dstUrl, -1, flags );
                 break;
             case eRenameMode_Link:
-                //job = KIO::link( (*m_files)[i].srcUrl(), dstUrl, m_overwrite, false, false );
+            {
+                if( !srcUrl.isLocalFile() ) 
+                {
+                    // We can only do symlinks to local urls
+                    p->error( i18n("Cannot create symlink to non-local URL: %1", srcUrl.prettyUrl()) );
+                    (*m_files)[i].setError( 1 );
+                    errors++;
+                }
+                else
+                    job = KIO::symlink( srcUrl.path(), dstUrl, flags );
+
                 break;
+            }
         }
 
-        if( !NetAccess::synchronousRun( job, p ) ) 
+        if( job && !NetAccess::synchronousRun( job, p ) ) 
         {
             p->error( i18n("Error during renaming %1", dstUrl.prettyUrl()) );
             (*m_files)[i].setError( 1 );
@@ -196,7 +209,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
     p->print( i18n("KRename finished the renaming process."), "krename" );
     p->print( i18n("Press close to quit!") );
     bool enableUndo = (m_renameMode != eRenameMode_Copy);
-    p->done( enableUndo, this, errors );
+    p->renamingDone( enableUndo, this, errors );
     
 #if 0
     delete object;
@@ -287,22 +300,25 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
         if( p->wasCancelled() )
             break;
 
-        KIO::Job* job;
+        KIO::JobFlags flags = (m_overwrite ? KIO::Overwrite : KIO::DefaultFlags) | KIO::HideProgressInfo;
+        KIO::Job*     job   = NULL;
         switch( m_renameMode ) 
         {
             default:
             case eRenameMode_Rename:
             case eRenameMode_Move:
-                job = KIO::file_move( dstUrl, (*m_files)[i].srcUrl(), m_overwrite, false, false );
+                job = KIO::file_move( dstUrl, (*m_files)[i].srcUrl(), -1, flags );
                 break;
             case eRenameMode_Link:
                 // In case of link delete created file
                 job = KIO::file_delete( dstUrl, false );
                 break;
-                //case eRenameMode_Copy: // no undo possible
+            case eRenameMode_Copy: // no undo possible
+                // TODO: Maybe we should delete the created files
+                break;
         }
 
-        if( !NetAccess::synchronousRun( job, p ) ) 
+        if( job && !NetAccess::synchronousRun( job, p ) ) 
         {
             p->error( i18n("Error during undoing %1", dstUrl.prettyUrl()) );
             (*m_files)[i].setError( 1 );
@@ -315,7 +331,7 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
 
     p->print( i18n("KRename finished the undo process."), "krename" );
     p->print( i18n("Press close to quit!") );
-    p->done( false, this, errors ); // do not allow undo from undo
+    p->renamingDone( false, this, errors ); // do not allow undo from undo
 
 }
 
@@ -1100,7 +1116,7 @@ bool BatchRenamer::applyManualChanges( int i )
      */
 
     if( !m_changes.isEmpty() )
-        for( unsigned int z = 0; z < m_changes.count(); z++ ) {
+        for( int z = 0; z < m_changes.count(); z++ ) {
             KUrl file = m_changes[z].url;
             if( file == (*m_files)[i].srcUrl() ) {
                 (*m_files)[i].setDstFilename( m_changes[z].user );

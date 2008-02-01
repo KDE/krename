@@ -62,7 +62,7 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list 
 
     m_renamer.setFiles( &m_vector );
 
-    for( unsigned int i = 0; i < list.count(); i++ )
+    for( int i = 0; i < list.count(); i++ )
         m_model->addFile( list[i] );
 
     m_pluginLoader = PluginLoader::Instance();
@@ -80,11 +80,12 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list
 {
     KConfig* config = kapp->sessionConfig();
 
-    config->setGroup( QString("GUISettings") );
-    bool firststart  = config->readBoolEntry( "firststart4", true );
-    EGuiMode guimode = (EGuiMode)config->readNumEntry ( "GuiMode", eGuiMode_Wizard );
+    KConfigGroup groupGui = config->group( QString("GUISettings") );
+    bool firststart  = groupGui.readEntry( "firststart4", QVariant(true) ).toBool();
+    EGuiMode guimode = static_cast<EGuiMode>(groupGui.readEntry ( "GuiMode", QVariant(static_cast<int>(eGuiMode_Wizard)) ).toInt());
 
-    if( firststart ) {
+    if( firststart ) 
+    {
         // start the GUI Mode selction dialog
         FirstStartDlg dialog;
         dialog.exec();
@@ -92,9 +93,8 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list
         // TODO: this dialog should have screenshots an nice description texts!!!
         guimode = dialog.guiMode();
 
-        config->setGroup("GUISettings");
-        config->writeEntry( "firststart4", false );
-        config->writeEntry( "GuiMode", (int)guimode );
+        groupGui.writeEntry( "firststart4", false );
+        groupGui.writeEntry( "GuiMode", (int)guimode );
         config->sync();
     }
 

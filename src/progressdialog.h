@@ -97,7 +97,7 @@ class ProgressDialog : public QDialog {
      *  @param errros the number of errors that have occurred. If errors have occured the user
      *                has the extra possibility to only rename files with errors again
      */
-    void done( bool enableUndo, BatchRenamer* renamer, int errors ); 
+    void renamingDone( bool enableUndo, BatchRenamer* renamer, int errors ); 
 
  private slots:
      /** Called when the user cancels the operation

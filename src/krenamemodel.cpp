@@ -203,7 +203,7 @@ void KRenameModel::removeFiles( const QList<int> & remove )
     this->endRemoveRows();
 }
 
-void KRenameModel::sort( ESortMode mode )
+void KRenameModel::sortFiles( ESortMode mode )
 {
     if( mode == eSortMode_Ascending ) 
         qSort( m_vector->begin(), m_vector->end(), ascendingKRenameFileLessThan );
