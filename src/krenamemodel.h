@@ -79,7 +79,7 @@ class KRenameModel : public QAbstractListModel {
     *
     *  @returns a KRenameFile object
     */
-   const KRenameFile & file( int index ) const;
+   inline const KRenameFile & file( int index ) const;
 
    /** Get the file at position index.
     *
@@ -87,15 +87,15 @@ class KRenameModel : public QAbstractListModel {
     *
     *  @returns a KRenameFile object
     */
-   KRenameFile & file( int index );
+   inline KRenameFile & file( int index );
+
+
 
    virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const;
    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
 
    Qt::ItemFlags flags(const QModelIndex &index) const;
    bool setData(const QModelIndex &index, const QVariant &value, int role);
-
-   void append( const KRenameFile & file );
 
    /** Enable the preview of KRenameFile objects.
     *
@@ -129,6 +129,16 @@ class KRenameModel : public QAbstractListModel {
 
    int                m_maxDots; ///< The maximum number of dots in a filename which can be used to separate filename and extension
 };
+
+const KRenameFile & KRenameModel::file( int index ) const
+{
+    return m_vector->at(index);
+}
+
+KRenameFile & KRenameModel::file( int index )
+{
+    return (*m_vector)[index];
+}
 
 void KRenameModel::setEnablePreview( bool preview, bool filenames )
 {

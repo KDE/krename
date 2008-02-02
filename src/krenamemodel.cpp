@@ -122,9 +122,9 @@ KRenameModel::~KRenameModel()
 int KRenameModel::rowCount ( const QModelIndex & index ) const
 {
     if( !index.isValid() )
-        return 0;
+        return m_vector->size();
 
-    return m_vector->size();
+    return 0;
 }
 
 QVariant KRenameModel::data ( const QModelIndex & index, int role ) const
@@ -170,7 +170,7 @@ bool KRenameModel::setData(const QModelIndex &index,
 
 void KRenameModel::addFile( const KRenameFile & file )
 {
-    this->beginInsertRows( QModelIndex(), 0, m_vector->size() );
+    this->beginInsertRows( QModelIndex(), m_vector->size(), m_vector->size() );
     m_vector->push_back( file );
     this->endInsertRows();
 
@@ -226,16 +226,6 @@ void KRenameModel::run(const QModelIndex & index, QWidget* window ) const
 const QModelIndex KRenameModel::createIndex( int row ) const
 {
     return QAbstractItemModel::createIndex( row, 0 );
-}
-
-const KRenameFile & KRenameModel::file( int index ) const
-{
-    return m_vector->at(index);
-}
-
-KRenameFile & KRenameModel::file( int index )
-{
-    return (*m_vector)[index];
 }
 
 void KRenameModel::moveFilesUp( const QList<int> & files )
@@ -309,9 +299,12 @@ KRenamePreviewModel::~KRenamePreviewModel()
 
 }
 
-int KRenamePreviewModel::rowCount ( const QModelIndex & ) const
+int KRenamePreviewModel::rowCount ( const QModelIndex & parent ) const
 {
-    return m_vector->size();
+    if( !parent.isValid() )
+       return m_vector->size();
+
+    return 0;
 }
 
 int KRenamePreviewModel::columnCount ( const QModelIndex & ) const

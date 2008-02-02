@@ -66,36 +66,6 @@ void ThreadedLister::run()
     connect( job, SIGNAL(result( KJob* )), SLOT( completed() ) );
 
     job->start();
-    /*
-    if( m_recursive ) 
-    {
-        m_reclister = new KRecursiveLister();
-        
-        m_reclister->setShowingDotFiles( m_hidden );
-        m_reclister->setNameFilter( m_filter );
-        m_reclister->setDirOnlyMode( m_dironly );
-        m_reclister->setMainWindow( m_cache );
-                
-        connect( m_reclister, SIGNAL( completed() ), SLOT( reclisterFinished() ) );
-        connect( m_reclister, SIGNAL( newItems( const KFileItemList& ) ), SLOT( newItems( const KFileItemList& ) ) );
-        
-        m_reclister->openUrl( m_dirname );
-    } 
-    else 
-    {
-        m_lister = new KDirLister();
-    
-        m_lister->setAutoUpdate( false );
-        m_lister->setShowingDotFiles( m_hidden );
-        m_lister->setNameFilter( m_filter );
-        m_lister->setMainWindow( m_cache );
-    
-        connect( m_lister, SIGNAL( completed() ), this, SLOT( listerFinished() ) );
-        connect( m_lister, SIGNAL( newItems( const KFileItemList& ) ), this, SLOT( newItems( const KFileItemList& ) ) );
-
-        m_lister->openUrl( m_dirname, false, false );    
-    }
-    */
 }
 
 void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
@@ -116,20 +86,23 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
         }
         else
         {
+            KUrl url = m_dirname;
+            url.addPath( displayName ); // displayName is a relative path
+
             if( (m_listDirnames || m_listDirnamesOnly) && (*it).isDir() ) 
             {
                 // Filter out parent and current directory
                 if( displayName != "." && displayName != ".." )
                 {
                     s_mutex.lock();
-                    m_model->addFile( KRenameFile( KFileItem( *it, (*it).stringValue( KIO::UDSEntry::UDS_URL )) ));             
+                    m_model->addFile( KRenameFile( KFileItem( *it, url ) ));             
                     s_mutex.unlock();
                 }
             }
             else if( !m_listDirnamesOnly && !(*it).isDir() )
             {
                 s_mutex.lock();
-                m_model->addFile( KRenameFile( KFileItem( *it, (*it).stringValue( KIO::UDSEntry::UDS_URL )) ));             
+                m_model->addFile( KRenameFile( KFileItem( *it, url ) ));
                 s_mutex.unlock();
             }
  

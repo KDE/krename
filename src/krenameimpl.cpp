@@ -355,40 +355,6 @@ void KRenameImpl::slotAddFiles()
         this->addFilesOrDirs( dialog.selectedUrls(), dialog.currentFilter(), widget->addRecursively(), widget->addDirsWithFiles(),
                               widget->addDirsOnly(), widget->addHidden() );
     }
-
-    //KUrl::List list = KFileDialog::getOpenUrls( KUrl("kfiledialog://krename"), "*", m_window );
-    /*
-    */
-    /*
-    bool auto_up = false;
-    
-    DSDirSelectDialog* dsd = new DSDirSelectDialog( parent );
-    if( dsd->exec() == QDialog::Accepted ) {
-        KURL::List::Iterator it = slist.begin();
-
-        for ( ; it != slist.end(); ++it )
-        {
-            if( !fileList->isFile( *it, false ) )
-            {
-                if( dsd->onlyDirs() )
-                    fileList->addDirName( *it, dsd->currentFilter(), dsd->hidden(), dsd->recursively() );
-                else
-                    fileList->addDir( *it, dsd->currentFilter(), dsd->hidden(), dsd->recursively(), dsd->dirs() );
-            }
-            else
-            {
-                fileList->addFile( *it, true );
-                auto_up = true;
-            }
-        }
-        
-        if( auto_up )
-        {
-            updatePreview();
-            updateCount();
-        }
-    }
-    */
 }
 
 void KRenameImpl::slotRemoveFiles()
@@ -422,9 +388,9 @@ void KRenameImpl::selfTest()
 {
     KRenameTest* test = new KRenameTest();
     test->startTest();    
-
+    
     new ModelTest( m_model );
-    new ModelTest( m_previewModel );
+    //new ModelTest( m_previewModel );
 
     // Make _really_ sure it comes to front
     test->show();
