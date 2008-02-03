@@ -28,7 +28,8 @@ enum ESortMode {
     eSortMode_Unsorted,
     eSortMode_Ascending,
     eSortMode_Descending,
-    eSortMode_Numeric
+    eSortMode_Numeric,
+    eSortMode_Random
 };
 
 class KRenameModel : public QAbstractListModel {
@@ -39,9 +40,9 @@ class KRenameModel : public QAbstractListModel {
 
    /** Add a KRenameFile to the model
     *
-    *  @param file a KRenameFile which is added to the list
+    *  @param files a KRenameFile::List which is added to the internal list
     */
-   void addFile( const KRenameFile & file );
+   void addFiles( const KRenameFile::List & files );
 
    /** Remove items in the model
     *

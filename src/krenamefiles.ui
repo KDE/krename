@@ -116,6 +116,11 @@
          <string>Sort: Numeric</string>
         </property>
        </item>
+       <item>
+        <property name="text" >
+         <string>Sort:Random</string>
+        </property>
+       </item>
       </widget>
      </item>
      <item>

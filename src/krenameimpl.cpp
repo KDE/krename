@@ -61,9 +61,7 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list 
     m_window->setPreviewModel( m_previewModel );
 
     m_renamer.setFiles( &m_vector );
-
-    for( int i = 0; i < list.count(); i++ )
-        m_model->addFile( list[i] );
+    m_model->addFiles( list );
 
     m_pluginLoader = PluginLoader::Instance();
 
@@ -180,9 +178,12 @@ void KRenameImpl::setupSlots()
 
 void KRenameImpl::addFileOrDir( const KUrl & url )
 {
-    KRenameFile item( url );
+    KRenameFile       item( url );
+    KRenameFile::List list;
 
-    m_model->addFile( item );
+    list.append( item );
+
+    m_model->addFiles( list );
 
     this->slotUpdateCount();
 }
@@ -214,7 +215,10 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
         {
             if( !dirsOnly ) 
             {
-                m_model->addFile( item );
+                KRenameFile::List list;
+                list.append( item );
+
+                m_model->addFiles( list );
             }
         }
 

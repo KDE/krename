@@ -51,7 +51,12 @@ void ThreadedLister::run()
     {
         QString name = m_dirname.fileName();
         if( !m_listHiddenFiles && !name.startsWith(".") )        
-            m_model->addFile( KRenameFile( m_dirname, true ) );
+        {
+            KRenameFile::List list;
+            list.append( KRenameFile( m_dirname, true ) );
+
+            m_model->addFiles( list );
+        }
     }
     s_mutex.unlock();
 
@@ -73,6 +78,9 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
     QString displayName;
     QRegExp filter( m_filter );
     filter.setPatternSyntax( QRegExp::Wildcard );
+
+    KRenameFile::List files ;
+    files.reserve( list.count() ); 
     
     KIO::UDSEntryList::const_iterator it = list.begin();
     while( it != list.end() ) 
@@ -93,22 +101,20 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
             {
                 // Filter out parent and current directory
                 if( displayName != "." && displayName != ".." )
-                {
-                    s_mutex.lock();
-                    m_model->addFile( KRenameFile( KFileItem( *it, url ) ));             
-                    s_mutex.unlock();
-                }
+                    files.append( KRenameFile( KFileItem( *it, url ) ) );
             }
             else if( !m_listDirnamesOnly && !(*it).isDir() )
             {
-                s_mutex.lock();
-                m_model->addFile( KRenameFile( KFileItem( *it, url ) ));
-                s_mutex.unlock();
+                files.append( KRenameFile( KFileItem( *it, url ) ) );
             }
  
             ++it;
         }
     }
+    
+    s_mutex.lock();
+    m_model->addFiles( files );
+    s_mutex.unlock();
 }
 
 void ThreadedLister::completed()

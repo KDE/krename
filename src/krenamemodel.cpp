@@ -20,6 +20,7 @@
 #include <QPixmap>
 
 #include <klocale.h>
+#include <krandom.h>
 #include <krun.h>
 
 // Helper functions for sorting
@@ -104,6 +105,11 @@ bool numericKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & 
     return false;
 }
 
+bool randomKRenameFileLessThan( const KRenameFile &, const KRenameFile & ) 
+{
+    return static_cast<double>(KRandom::random()) / static_cast<double>(RAND_MAX) < 0.5;
+}
+
 KRenameModel::KRenameModel( KRenameFile::List* vector )
     : QAbstractListModel(),
       m_vector( vector ),
@@ -168,18 +174,30 @@ bool KRenameModel::setData(const QModelIndex &index,
     return false;
 }
 
-void KRenameModel::addFile( const KRenameFile & file )
+void KRenameModel::addFiles( const KRenameFile::List & files )
 {
-    this->beginInsertRows( QModelIndex(), m_vector->size(), m_vector->size() );
-    m_vector->push_back( file );
-    this->endInsertRows();
-
-    int dots  = file.dots();
-    if( dots > m_maxDots ) 
+    if( files.count() )
     {
-        m_maxDots = dots;
+        int oldMaxDots = m_maxDots;
+        m_vector->reserve( m_vector->count() + files.count() );
         
-        emit maxDotsChanged( m_maxDots );
+        this->beginInsertRows( QModelIndex(), m_vector->size(), m_vector->size() + files.count() - 1 );
+
+        KRenameFile::List::const_iterator it = files.begin();
+        while( it != files.end() )
+        {
+            m_vector->push_back( *it );
+            
+            int dots  = (*it).dots();
+            if( dots > m_maxDots ) 
+                m_maxDots = dots;
+
+            ++it;
+        }
+        this->endInsertRows();
+
+        if( m_maxDots > oldMaxDots ) 
+            emit maxDotsChanged( m_maxDots );
     }
 }
 
@@ -211,6 +229,8 @@ void KRenameModel::sortFiles( ESortMode mode )
         qSort( m_vector->begin(), m_vector->end(), descendingKRenameFileLessThan );
     else if( mode == eSortMode_Numeric ) 
         qSort( m_vector->begin(), m_vector->end(), numericKRenameFileLessThan );
+    else if( mode == eSortMode_Random ) 
+        qSort( m_vector->begin(), m_vector->end(), randomKRenameFileLessThan );
     else
         return;
 
@@ -287,7 +307,9 @@ void KRenameModel::moveFilesDown( const QList<int> & files )
     this->reset();
 }
 
-
+//////////////////////////////////////////////////////////////
+// Preview model starts below
+//////////////////////////////////////////////////////////////
 KRenamePreviewModel::KRenamePreviewModel( KRenameFile::List* vector )
     : m_vector( vector )
 {

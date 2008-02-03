@@ -627,10 +627,12 @@ void KRenameWindow::slotSortChanged( int index )
             eMode = eSortMode_Descending; break;
         case 3:
             eMode = eSortMode_Numeric; break;
+        case 4:
+            eMode = eSortMode_Random; break;
     }
 
     KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
-    model->sort( eMode );
+    model->sortFiles( eMode );
 }
 
 void KRenameWindow::slotMaxDotsChanged( int dots )
