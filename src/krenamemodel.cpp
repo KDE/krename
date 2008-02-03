@@ -17,6 +17,7 @@
 
 #include "krenamemodel.h"
 
+#include <QMimeData>
 #include <QPixmap>
 
 #include <klocale.h>
@@ -115,7 +116,8 @@ KRenameModel::KRenameModel( KRenameFile::List* vector )
       m_vector( vector ),
       m_preview( false ),
       m_text( false ),
-      m_maxDots( 0 )
+      m_maxDots( 0 ),
+      m_mimeType("text/uri-list")
 {
 
 }
@@ -158,7 +160,53 @@ Qt::ItemFlags KRenameModel::flags(const QModelIndex &index) const
     if (!index.isValid())
         return Qt::ItemIsDropEnabled;
     
-    return QAbstractItemModel::flags(index) | Qt::ItemIsEditable;
+    return QAbstractItemModel::flags(index) | Qt::ItemIsEditable | Qt::ItemIsDropEnabled;
+}
+
+Qt::DropActions KRenameModel::supportedDropActions() const
+{
+    return Qt::CopyAction | Qt::MoveAction;
+}
+
+QStringList KRenameModel::mimeTypes() const
+{
+    QStringList types;
+    types << m_mimeType;
+    return types;
+}
+
+bool KRenameModel::dropMimeData(const QMimeData *data,
+                                Qt::DropAction action,
+                                int row, int,
+                                const QModelIndex &)
+{
+    if (action == Qt::IgnoreAction)
+        return true;
+
+    if (!data->hasFormat( m_mimeType ))
+        return false;
+
+    KRenameFile::List           dirs;
+    KRenameFile::List           files;
+    QList<QUrl>                 urls = data->urls();
+    QList<QUrl>::const_iterator it   = urls.begin();
+
+    while( it != urls.end() )
+    {
+        KRenameFile file( *it );
+
+        if( file.isValid() && !file.isDir() )
+            files.append( file );
+        else if( file.isValid() && file.isDir() )
+            // Add directories recursively
+            dirs.append( file );
+
+        ++it;
+    }
+
+    this->addFiles( files );
+    // TODO: Wait cursor, add directories recursively.
+    return true;
 }
 
 bool KRenameModel::setData(const QModelIndex &index,

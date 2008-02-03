@@ -95,7 +95,11 @@ class KRenameModel : public QAbstractListModel {
    virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const;
    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
 
+   Qt::DropActions supportedDropActions() const;
+   QStringList mimeTypes() const;
    Qt::ItemFlags flags(const QModelIndex &index) const;
+   bool dropMimeData(const QMimeData *data, Qt::DropAction action,
+                     int row, int column,const QModelIndex &parent);
    bool setData(const QModelIndex &index, const QVariant &value, int role);
 
    /** Enable the preview of KRenameFile objects.
@@ -128,7 +132,8 @@ class KRenameModel : public QAbstractListModel {
    bool               m_preview;
    bool               m_text;
 
-   int                m_maxDots; ///< The maximum number of dots in a filename which can be used to separate filename and extension
+   int                m_maxDots;  ///< The maximum number of dots in a filename which can be used to separate filename and extension
+   const char*        m_mimeType; ///< MIME type for drag and drop operations
 };
 
 const KRenameFile & KRenameModel::file( int index ) const
