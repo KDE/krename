@@ -22,6 +22,8 @@
 
 #include <QAbstractListModel>
 
+class ThreadedLister;
+
 /** This enum is used to specify a sorting mode
  */
 enum ESortMode {
@@ -125,6 +127,13 @@ class KRenameModel : public QAbstractListModel {
     *  @param dots the maximum number of dots in a filename
     */
    void maxDotsChanged( int dots );
+
+   /** Emitted when files have been added using drag and drop
+    */
+   void filesDropped();
+   
+ private slots:
+     void slotListerDone( ThreadedLister* lister );
 
  private:
    KRenameFile::List* m_vector;

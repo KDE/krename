@@ -124,7 +124,7 @@
        </item>
        <item>
         <property name="text" >
-         <string>Sort:Random</string>
+         <string>Sort: Random</string>
         </property>
        </item>
       </widget>

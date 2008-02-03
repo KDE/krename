@@ -16,10 +16,12 @@
  ***************************************************************************/
 
 #include "krenamemodel.h"
+#include "threadedlister.h"
 
 #include <QMimeData>
 #include <QPixmap>
 
+#include <kapplication.h>
 #include <klocale.h>
 #include <krandom.h>
 #include <krun.h>
@@ -186,28 +188,65 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     if (!data->hasFormat( m_mimeType ))
         return false;
 
-    KRenameFile::List           dirs;
+    KUrl::List                  dirs;
     KRenameFile::List           files;
     QList<QUrl>                 urls = data->urls();
     QList<QUrl>::const_iterator it   = urls.begin();
+
+    KApplication::setOverrideCursor( Qt::BusyCursor );
 
     while( it != urls.end() )
     {
         KRenameFile file( *it );
 
-        if( file.isValid() && !file.isDir() )
+        if( file.isValid() && !file.isDirectory() )
             files.append( file );
-        else if( file.isValid() && file.isDir() )
+        else if( file.isValid() && file.isDirectory() )
             // Add directories recursively
-            dirs.append( file );
+            dirs.append( *it );
 
         ++it;
     }
 
     this->addFiles( files );
-    // TODO: Wait cursor, add directories recursively.
+    if( dirs.count() ) 
+    {
+        KUrl::List::const_iterator it = dirs.begin();
+
+        while( it != dirs.end() )
+        {
+            ThreadedLister* thl = new ThreadedLister( *it, NULL, this );
+            connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
+            
+            thl->setListDirnamesOnly( false );
+            thl->setListHidden( false );
+            thl->setListRecursively( true );
+            thl->setListDirnames( false );
+        
+            thl->start();
+
+            ++it;
+        }
+    }
+    else
+    {
+        KApplication::restoreOverrideCursor();
+        emit filesDropped();
+    }
+
     return true;
 }
+
+void KRenameModel::slotListerDone( ThreadedLister* lister ) 
+{
+    // Delete the listener
+    delete lister;
+
+    // restore cursor
+    KApplication::restoreOverrideCursor();
+
+    emit filesDropped();
+} 
 
 bool KRenameModel::setData(const QModelIndex &index,
                            const QVariant &, int role)

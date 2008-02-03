@@ -152,6 +152,9 @@ void KRenameImpl::setupActions()
 
 void KRenameImpl::setupSlots()
 {
+    connect( m_model,  SIGNAL(filesDropped()),   SLOT(slotUpdateCount()));
+    connect( m_model,  SIGNAL(filesDropped()),   SLOT(slotUpdatePreview()));
+
     connect( m_window, SIGNAL(addFiles()),       SLOT(slotAddFiles()));
     connect( m_window, SIGNAL(removeFiles()),    SLOT(slotRemoveFiles()));
     connect( m_window, SIGNAL(removeAllFiles()), SLOT(slotRemoveAllFiles()));
