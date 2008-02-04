@@ -674,7 +674,6 @@ void KRenameWindow::slotMoveUp()
     // TODO: Maybe it is better to calculate the minimum index here
     if( sel.size() )
         m_pageFiles->fileList->scrollTo( model->createIndex( sel.front() - 1 ), QAbstractItemView::EnsureVisible );
-    
 }
 
 void KRenameWindow::slotMoveDown()
@@ -694,7 +693,6 @@ void KRenameWindow::slotMoveDown()
 
         ++it;
     }
-
 
     // make sure that the last item is visible
     // TODO: Maybe it is better to calculate the maximum index here

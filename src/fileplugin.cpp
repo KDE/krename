@@ -26,12 +26,16 @@
 #include <QLabel>
 #include <QHBoxLayout>
 
+//#include <strigi/fieldpropertiesdb.h>
+
 FilePlugin::FilePlugin( KService* service )
 {
     m_name = service->name();
     m_icon = service->icon();
-
-    qDebug("!!LOADED service: %s", m_name.toLatin1().data() );
+/*
+    Strigi::FieldPropertiesDb db = Strigi::FieldPropertiesDb::db();
+    Strigi::FieldProperties properties = db.allProperties();
+*/
 }
 
 FilePlugin::FilePlugin()

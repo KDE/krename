@@ -39,6 +39,12 @@ public:
 
     QPixmap loadIcon( const KUrl & url ) 
     {
+        return KIO::pixmapForUrl( url );
+
+        // TODO: Use preview job to load a real preview delayed
+        //       and to replace the icon
+
+        /*
         KIO::UDSEntry entry;
         KIO::NetAccess::stat( url, entry, NULL );
         KFileItem item( entry, url );
@@ -56,26 +62,22 @@ public:
         }
 
         delete job;
+        */
     }
 
 private:
     /** Create a KRenamePreviewProvider 
      */
     KRenamePreviewProvider() 
-        : m_job( NULL )
     {
-
     }
 
     ~KRenamePreviewProvider() 
     {
-        delete m_job;
     }
 
 private:
     static KRenamePreviewProvider* s_instance;
-
-    KIO::PreviewJob* m_job;
 }; 
 
 KRenamePreviewProvider* KRenamePreviewProvider::s_instance = NULL;

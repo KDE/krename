@@ -45,6 +45,8 @@
 #include <kmessagebox.h>
 #include <kstandardaction.h>
 
+#include <kio/netaccess.h>
+
 #include <QStringListModel>
 
 KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list )
@@ -56,6 +58,8 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list 
 
     m_model = new KRenameModel( &m_vector );
     m_window->setModel( m_model );
+
+    connect( m_model,  SIGNAL(filesDropped()),   SLOT(slotUpdateCount()));
 
     m_previewModel = new KRenamePreviewModel( &m_vector );
     m_window->setPreviewModel( m_previewModel );
@@ -152,9 +156,6 @@ void KRenameImpl::setupActions()
 
 void KRenameImpl::setupSlots()
 {
-    connect( m_model,  SIGNAL(filesDropped()),   SLOT(slotUpdateCount()));
-    connect( m_model,  SIGNAL(filesDropped()),   SLOT(slotUpdatePreview()));
-
     connect( m_window, SIGNAL(addFiles()),       SLOT(slotAddFiles()));
     connect( m_window, SIGNAL(removeFiles()),    SLOT(slotRemoveFiles()));
     connect( m_window, SIGNAL(removeAllFiles()), SLOT(slotRemoveAllFiles()));
@@ -370,8 +371,6 @@ void KRenameImpl::slotRemoveFiles()
     {
         m_model->removeFiles( m_window->selectedFileItems() );
         this->slotUpdateCount();
-
-        m_window->slotEnableControls();
     }
 }
 
@@ -387,7 +386,6 @@ void KRenameImpl::slotRemoveAllFiles()
 
 
         this->slotUpdateCount();
-        m_window->slotEnableControls();
     }
 }
 
@@ -408,6 +406,7 @@ void KRenameImpl::selfTest()
 void KRenameImpl::slotUpdateCount()
 {
     m_window->setCount( m_vector.size() );
+    m_window->slotEnableControls();
 
     this->slotUpdatePreview();
 }
@@ -554,7 +553,23 @@ void KRenameImpl::slotStart()
     m_window->setPreviewModel( NULL );
 
     // Get some properties from the gui and initialize BatchRenamer
-    m_renamer.setDestinationDir( m_window->destinationUrl() );
+    const KUrl & destination = m_window->destinationUrl();
+    if( !KIO::NetAccess::exists( destination, true, NULL ) )
+    {
+        int m = KMessageBox::warningContinueCancel( m_window, i18n("The directory %1 does not exist. "
+                                                                   "Do you want KRename to create it for you?").arg( 
+                                                                       destination.prettyUrl() ) );
+        if( m == KMessageBox::Cancel )
+            return;
+
+        if( !KIO::NetAccess::mkdir( destination, NULL ) )
+        {
+            KMessageBox::error( m_window, i18n("The directory %1 could not be created.").arg( destination.prettyUrl() ) );
+            return;
+        }
+    }
+
+    m_renamer.setDestinationDir( destination );
 
     // show the progress dialog
     progress->show();

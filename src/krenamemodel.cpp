@@ -197,13 +197,16 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
 
     while( it != urls.end() )
     {
-        KRenameFile file( *it );
+        if( (*it).isValid() ) 
+        {
+            KRenameFile file( *it );
 
-        if( file.isValid() && !file.isDirectory() )
-            files.append( file );
-        else if( file.isValid() && file.isDirectory() )
-            // Add directories recursively
-            dirs.append( *it );
+            if( file.isValid() && !file.isDirectory() )
+                files.append( file );
+            else if( file.isValid() && file.isDirectory() )
+                // Add directories recursively
+                dirs.append( *it );
+        }
 
         ++it;
     }
