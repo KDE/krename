@@ -41,7 +41,7 @@
 #include <sys/types.h>
 
 #ifndef VERSION
-    #define VERSION "3.9.0"
+    #define VERSION "3.9.1"
 #endif
 
 int main(int argc, char *argv[])
