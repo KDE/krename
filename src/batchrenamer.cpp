@@ -492,7 +492,7 @@ void BatchRenamer::work( ProgressDialog* p )
                 // Plugins ???
                 (*tundo) << "echo \"" << src.fileName()
                          << " -> " << dst.fileName() << "\"" << endl;
-                (*tundo) << "mv --force -b --suffix=.krename_ \"" << m_files[i].dst.name
+                (*tundo) << "mv -f \"" << m_files[i].dst.name
                          << "\" \"" << m_files[i].src.name << "\"" << endl;
             } else
                 p->warning( QString( i18n("Undo is not possible for remote file: %1") ).arg( dst.prettyURL() ) );
@@ -1046,7 +1046,7 @@ QString BatchRenamer::doReplace( const QString & text, const QString & find, con
 void BatchRenamer::writeUndoScript( QTextStream* t )
 {
     // write header comments
-    (*t) << "#!/bin/bash" << endl
+    (*t) << "#!/bin/sh" << endl
          << "# KRename Undo Script" << endl << "#" << endl
          << "# KRename was written by:" << endl
          << "# Dominik Seichter <domseichter@web.de>" << endl
