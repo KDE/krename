@@ -490,8 +490,8 @@ void BatchRenamer::work( ProgressDialog* p )
         if( undo )
             if( dst.isLocalFile() && src.isLocalFile() ) {
                 // Plugins ???
-                (*tundo) << "echo \"" << src.fileName()
-                         << " -> " << dst.fileName() << "\"" << endl;
+                (*tundo) << "echo \"" << dst.fileName()
+                         << " -> " << src.fileName() << "\"" << endl;
                 (*tundo) << "mv -f \"" << m_files[i].dst.name
                          << "\" \"" << m_files[i].src.name << "\"" << endl;
             } else
