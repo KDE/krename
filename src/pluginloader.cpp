@@ -20,6 +20,7 @@
 #include "plugin.h"
 #include "fileplugin.h"
 #include "scriptplugin.h"
+#include "strigiplugin.h"
 #include "systemplugin.h"
 #include "translitplugin.h"
 
@@ -99,6 +100,7 @@ void PluginLoader::load()
     m_plugins.append( new ScriptPlugin() );
     m_plugins.append( new SystemPlugin() );
     m_plugins.append( new TranslitPlugin() );
+    m_plugins.append( new StrigiPlugin() );
     //this->loadFilePlugins();
 
 

@@ -30,11 +30,6 @@
 
 // Own includes
 #include "krenameimpl.h"
-/*
-#include "wizard.h"
-#include "tabs.h"
-#include "firststartdlg.h"
-*/
 
 // OS includes
 #include <unistd.h>

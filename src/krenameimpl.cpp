@@ -18,7 +18,6 @@
 #include "krenameimpl.h"
 #include "krenameimpl.moc"
 #include "filedialogextwidget.h"
-#include "firststartdlg.h"
 #include "krenamemodel.h"
 #include "krenametest.h"
 #include "krenamewindow.h"
@@ -84,23 +83,13 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list
 
     KConfigGroup groupGui = config->group( QString("GUISettings") );
     bool firststart  = groupGui.readEntry( "firststart4", QVariant(true) ).toBool();
-    EGuiMode guimode = static_cast<EGuiMode>(groupGui.readEntry ( "GuiMode", QVariant(static_cast<int>(eGuiMode_Wizard)) ).toInt());
 
     if( firststart ) 
     {
-        // start the GUI Mode selction dialog
-        FirstStartDlg dialog;
-        dialog.exec();
-
-        // TODO: this dialog should have screenshots an nice description texts!!!
-        guimode = dialog.guiMode();
-
-        groupGui.writeEntry( "firststart4", false );
-        groupGui.writeEntry( "GuiMode", (int)guimode );
-        config->sync();
+        // WELCOME TO KRENAME
     }
 
-    KRenameWindow* w  = new KRenameWindow( guimode, NULL );
+    KRenameWindow* w  = new KRenameWindow( NULL );
     KRenameImpl* impl = new KRenameImpl( w, list );
     w->setGeometry( rect );
 
@@ -493,7 +482,7 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
     help.append("[$dirname];;" + i18n("insert name of directory") );
     help.append("[$dirname.];;" + i18n("insert name of parent directory") );
     help.append("[#length-0];;" + i18n("insert the length of the input filename") );
-    dialog.add( i18n("Built-in Functions:" ), help, SmallIcon("krename"), true );
+    dialog.add( i18n("Built-in Functions" ), help, SmallIcon("krename"), true );
 
     help.clear();
     help.append( "\\$;;" + i18n("Insert '$'") );
@@ -505,7 +494,7 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
     help.append( "\\[;;" + i18n("Insert '['") );
     help.append( "\\];;" + i18n("Insert ']'") );
     help.append( "\\#;;" + i18n("Insert '#'") );
-    dialog.add( i18n("Special Characters:" ), help, SmallIcon("krename") );
+    dialog.add( i18n("Special Characters" ), help, SmallIcon("krename") );
 
     // add plugin tokens
     QList<Plugin*>::const_iterator it = m_pluginLoader->plugins().begin();

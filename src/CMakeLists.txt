@@ -16,7 +16,6 @@ set(krename_SRCS
   exthistorycombo.cpp
   filedialogextwidget.cpp
   fileplugin.cpp
-  firststartdlg.cpp
   krenamefile.cpp 
   krenameimpl.cpp 
   krenamemodel.cpp
@@ -32,6 +31,7 @@ set(krename_SRCS
   progressdialog.cpp
   replacedialog.cpp
   scriptplugin.cpp
+  strigiplugin.cpp
   systemplugin.cpp
   tokenhelpdialog.cpp
   translitplugin.cpp
@@ -44,7 +44,6 @@ kde4_add_ui_files( krename_SRCS
   krenamefiles.ui 
   krenamedestination.ui 
   krenamefilename.ui 
-  krenamesimple.ui 
   krenameplugins.ui
   numberwidget.ui
   progressdialog.ui

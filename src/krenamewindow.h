@@ -47,17 +47,7 @@ namespace Ui {
     class KRenameFilename;
 };
 
-/** This enum specifies the available GUI modes for KRename
- */
-enum EGuiMode {
-    eGuiMode_Wizard,
-    eGuiMode_Advanced
-};
-
 /** KRenameWindow is the main window of KRename.
- *
- *  It can display several pages either as a wizard
- *  or in a tabbed window.
  *
  *  According to the window mode setting, a row of buttons 
  *  is displayed at the bottom of the window.
@@ -68,7 +58,7 @@ class KRenameWindow : public KMainWindow {
      friend class KRenameImpl;
 
  public:
-    KRenameWindow( EGuiMode guiMode, QWidget* parent = NULL );
+    KRenameWindow( QWidget* parent = NULL );
 
     ~KRenameWindow();
 
@@ -364,28 +354,21 @@ class KRenameWindow : public KMainWindow {
     void moveDown( const QList<int> & selected, QAbstractItemView* view );
 
  private:
-    EGuiMode          m_eGuiMode;  /// The current gui mode
     int               m_curPage;   /// The index of the current page in the current gui mode
     const TGuiMode*   m_guiMode;   /// The description structure of the current gui mode
     int               m_fileCount; /// Current number of files; used for enabled disabled state
 
-    QStackedWidget*   m_stackTop;  /// Contains a title label in wizard mode
-                                   /// and a tabbar in advanced mode
     QStackedWidget*   m_stack;
     QDialogButtonBox* m_buttons;
 
-    QLabel*           m_lblTitle;  /// The title label in wizard mode
-    QLabel*           m_lblStep;   /// The current step in wizard mode
     QTabBar*          m_tabBar;    /// The tabbar to switch pages in advanced mode
 
-    KPushButton*      m_buttonBack;
-    KPushButton*      m_buttonNext;
     KPushButton*      m_buttonClose;
     KPushButton*      m_buttonFinish;
 
     Ui::KRenameFiles*       m_pageFiles;
     Ui::KRenameDestination* m_pageDests;
-    Ui::KRenameSimple*      m_pageSimple;
+    //Ui::KRenameSimple*      m_pageSimple;
     Ui::KRenamePlugins*     m_pagePlugins;
     Ui::KRenameFilename*    m_pageFilename;
 
