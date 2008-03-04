@@ -353,6 +353,43 @@ QList<int> KRenameWindow::selectedFileItemsPreview() const
     return selected;
 }
 
+void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom, const QString & templ ) 
+{
+    if( templ.isEmpty() ) 
+    {
+        comboCustom->lineEdit()->setText( templ );
+        combo->setCurrentIndex( 0 );
+    }
+    else
+    {
+        QString number = "#";
+        int c = m_pageFilename->spinDigits->value()-1;
+        
+        while( c-- > 0 )
+            number += "#";
+        
+        number += QString("{%1}").arg( m_pageFilename->spinIndex->value() );
+
+        if( templ.startsWith( number ) ) 
+        {
+            QString value = templ.right( templ.length() - number.length() );
+            combo->setCurrentIndex( 1 );
+            comboCustom->lineEdit()->setText( value );
+        }
+        else if( templ.startsWith( "[date]" ) ) 
+        {
+            QString value = templ.right( templ.length() - 6 );
+            combo->setCurrentIndex( 2 );
+            comboCustom->lineEdit()->setText( value );
+        }
+        else
+        {
+            combo->setCurrentIndex( 0 );
+            comboCustom->lineEdit()->setText( templ );
+        }
+    }
+}
+
 QString KRenameWindow::getPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom ) 
 {
     QString str;
@@ -439,13 +476,12 @@ void KRenameWindow::slotTemplateChanged()
     extension = m_pageFilename->checkExtension->isChecked() ? "$" : 
         m_pageFilename->extensionTemplate->currentText();
 
-    emit filenameTemplateChanged( filename );
-    emit extensionTemplateChanged( extension );
+    // set the new templates also for simple mode
+    this->blockSignals( true );
+    this->setSimpleTemplate( filename, extension );
+    this->blockSignals( false );
 
-    emit updatePreview();
-
-    m_pageFilename->buttonNumbering->setEnabled( filename.contains('#') || extension.contains('#') );
-    this->slotEnableControls();
+    this->templatesChanged( filename, extension );
 }
 
 void KRenameWindow::slotSimpleTemplateChanged()
@@ -465,7 +501,73 @@ void KRenameWindow::slotSimpleTemplateChanged()
     m_pageFilename->extensionTemplate->lineEdit()->setText( extension );
     m_pageFilename->checkExtension->setChecked( false );
     this->blockSignals( false );
-    this->slotTemplateChanged();
+
+    this->templatesChanged( filename, extension );
+}
+
+void KRenameWindow::templatesChanged( const QString & filename, const QString & extension ) 
+{
+    emit filenameTemplateChanged( filename );
+    emit extensionTemplateChanged( extension );
+
+    emit updatePreview();
+
+    m_pageFilename->buttonNumbering->setEnabled( filename.contains('#') || extension.contains('#') );
+    this->slotEnableControls();
+}
+
+void KRenameWindow::setSimpleTemplate( const QString & filename, const QString & extension ) 
+{
+    // First set the simple extension from a template string
+    if( extension == "$" ) 
+        m_pageFilename->comboExtensionSimple->setCurrentIndex( 0 );
+    else if( extension == "%" )
+        m_pageFilename->comboExtensionSimple->setCurrentIndex( 1 );
+    else if( extension == "&" )
+        m_pageFilename->comboExtensionSimple->setCurrentIndex( 2 );
+    else if( extension == "*" )
+        m_pageFilename->comboExtensionSimple->setCurrentIndex( 3 );
+    else 
+    {
+        m_pageFilename->comboExtensionSimple->setCurrentIndex( 4 );
+        m_pageFilename->comboExtensionCustom->lineEdit()->setText( extension );
+    }
+
+    // Now split the filename in prefix and suffix and set it as template
+    int index = 4;
+    int pos   = filename.indexOf( "$" );
+    if( pos == -1 ) 
+    {
+        pos = filename.indexOf( "%" );
+        if( pos == -1 )
+        {
+            pos = filename.indexOf( "&" );
+            if( pos == -1 ) 
+            {
+                pos = filename.indexOf( "*" );
+                if( pos != -1 )
+                    index = 3;
+            }
+            else 
+                index = 2;
+        }
+        else
+            index = 1;
+    }
+    else
+        index = 0;
+
+    m_pageFilename->comboFilenameSimple->setCurrentIndex( index );
+    if( pos == -1 ) 
+        m_pageFilename->comboFilenameCustom->lineEdit()->setText( extension );
+    else 
+    {
+        QString prefix = ( pos > 0 ? filename.left( pos ) : QString::null);
+        QString suffix = ( pos < filename.length() ? filename.right( filename.length() - pos - 1 ) : QString::null);
+
+        setPrefixSuffixSimple( m_pageFilename->comboPrefix, m_pageFilename->comboPrefixCustom, prefix );
+        setPrefixSuffixSimple( m_pageFilename->comboSuffix, m_pageFilename->comboSuffixCustom, suffix );
+    }
 }
 
 void KRenameWindow::slotTokenHelpRequested()

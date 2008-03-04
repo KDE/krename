@@ -350,6 +350,23 @@ class KRenameWindow : public KMainWindow {
      */
     QString getFilenameSimple( QComboBox* combo, QComboBox* comboCustom );
 
+    /** Set the GUI elements in the simple filename tab using a template
+     *  that has specified in advanced mode
+     *
+     *  @param filename template of the filename
+     *  @param extension template of the extension
+     */
+    void setSimpleTemplate( const QString & filename, const QString & extension );
+
+    /** Emit signals that the template has been changed in some way by the user
+     *
+     *  @param filename template of the filename
+     *  @param extension template of the extension
+     */
+    void templatesChanged( const QString & filename, const QString & extension );
+
+    void setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom, const QString & templ );
+
     void moveUp( const QList<int> & selected, QAbstractItemView* view );
     void moveDown( const QList<int> & selected, QAbstractItemView* view );
 
