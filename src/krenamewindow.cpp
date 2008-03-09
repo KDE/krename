@@ -165,13 +165,10 @@ void KRenameWindow::setupPlugins()
         item->setText( 0, (*it)->name() );
         item->setIcon( 0, (*it)->icon() );
 
+        slotPluginChanged( item );
+
         ++it;
     }
-
-    QTreeWidgetItem* root = m_pagePlugins->listPlugins->invisibleRootItem();
-    if( root && root->childCount() )
-        slotPluginChanged( root->child( 0 ) );
-
 }
 
 void KRenameWindow::setupSlots()
@@ -477,9 +474,9 @@ void KRenameWindow::slotTemplateChanged()
         m_pageFilename->extensionTemplate->currentText();
 
     // set the new templates also for simple mode
-    this->blockSignals( true );
+    blockSignalsRecursive( this, true );
     this->setSimpleTemplate( filename, extension );
-    this->blockSignals( false );
+    blockSignalsRecursive( this, false );
 
     this->templatesChanged( filename, extension );
 }
@@ -496,11 +493,11 @@ void KRenameWindow::slotSimpleTemplateChanged()
     // set the new templates, but make sure signals 
     // are blockes so that slotTemplateChanged emits updatePreview()
     // which is calculation intensive only once!
-    this->blockSignals( true );
+    blockSignalsRecursive( this, true );
     m_pageFilename->filenameTemplate->lineEdit()->setText( filename );
     m_pageFilename->extensionTemplate->lineEdit()->setText( extension );
     m_pageFilename->checkExtension->setChecked( false );
-    this->blockSignals( false );
+    blockSignalsRecursive( this, false );
 
     this->templatesChanged( filename, extension );
 }
@@ -807,6 +804,27 @@ void KRenameWindow::slotPluginEnabled()
         
         p->setEnabled( m_pagePlugins->checkEnablePlugin->isChecked() );
         w->setEnabled( p->alwaysEnabled() || m_pagePlugins->checkEnablePlugin->isChecked() );
+    }
+}
+
+void KRenameWindow::blockSignalsRecursive( QObject* obj, bool b ) 
+{
+    if( obj )
+    {
+        obj->blockSignals(b);
+        
+        QList<QObject*> list = obj->children();
+        QList<QObject*>::iterator it = list.begin();
+        QObject* o = NULL;
+        
+        while( it != list.end() ) 
+        {
+            o = *it;
+            if( o && o != obj) 
+                blockSignalsRecursive(o, b);
+            
+            ++it;
+        }
     }
 }
 

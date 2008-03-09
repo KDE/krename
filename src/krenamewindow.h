@@ -371,6 +371,9 @@ class KRenameWindow : public KMainWindow {
     void moveDown( const QList<int> & selected, QAbstractItemView* view );
 
  private:
+    void blockSignalsRecursive( QObject* obj, bool b );
+
+ private:
     int               m_curPage;   /// The index of the current page in the current gui mode
     const TGuiMode*   m_guiMode;   /// The description structure of the current gui mode
     int               m_fileCount; /// Current number of files; used for enabled disabled state

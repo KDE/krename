@@ -13,6 +13,7 @@ set(krename_SRCS
   main.cpp 
   batchrenamer.cpp
   customdialog.cpp
+  datetimeplugin.cpp
   exthistorycombo.cpp
   filedialogextwidget.cpp
   fileplugin.cpp
@@ -39,6 +40,7 @@ set(krename_SRCS
 
 kde4_add_ui_files( krename_SRCS 
   customfilenamedlg.ui		
+  datetimepluginwidget.ui
   guimodeselector.ui 
   partfilenamewidget.ui
   krenamefiles.ui 

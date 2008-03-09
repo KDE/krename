@@ -201,6 +201,19 @@ void BatchRenamer::processFiles( ProgressDialog* p )
             (*m_files)[i].setError( 1 );
             errors++;
         } 
+
+        /*
+         * The renamed file should be on its correct location now,
+         * so that we can call the last plugins (e.g. for changing permissions)
+         *
+         * Remember, the token argument is the filename for this type of plugins!
+         *
+         * If the return value is not empty an error has occured!
+         * The plugin should return an error message in this case!
+         */
+        int errorCount = 0;
+        this->executePlugin( i, dstUrl.path(), ePluginType_File, errorCount, p );
+        errors += errorCount;
     }
 
     if( errors > 0 ) 
@@ -366,7 +379,7 @@ QString BatchRenamer::processString( QString text, QString oldname, int i )
     text = findStar( oldname, text );
     text = findNumbers( text, m_files->count(), i );
     /*
-     * text is used as argument token for plugins!
+ is used as argument token for plugins!
      */
     //text = parsePlugins( i, text, TYPE_TOKEN );
 
@@ -386,24 +399,37 @@ QString BatchRenamer::processString( QString text, QString oldname, int i )
     return text;
 }
 
-QString BatchRenamer::parsePlugins( int i, const QString& text, int type )
+QString BatchRenamer::executePlugin( int index, const QString & filenameOrPath, int type, int & errorCount, ProgressDialog* p )
 {
-#if 0
-    QPtrListIterator<PluginLoader::PluginLibrary> it( plug->libs );
-    QString ret = text;
+    const QList<Plugin*> & plugins = PluginLoader::Instance()->plugins();
+    QList<Plugin*>::const_iterator it = plugins.begin();
 
-    if( type == TYPE_FINAL_FILE )
-        ret = "";
-        
-    for( ; it.current(); ++it )
-        if( (*it)->usePlugin && ((*it)->plugin->type() & type) )
+    errorCount = 0;
+    QString ret = filenameOrPath;
+    while( it != plugins.end() ) 
+    {
+        qDebug("Checking %s", (*it)->name().toUtf8().data() );
+        if( (*it)->isEnabled() && ((*it)->type() & type) )
         {
-            ret = (*it)->plugin->processFile( this, i, text, type );
-            doEscape( ret );
+            // Every plugin should use the return value of the previous as the new filename to work on
+            ret = (*it)->processFile( this, index, ret, static_cast<EPluginType>(type) );
+            if( type == ePluginType_File ) 
+            {
+                if( ret != QString::null  ) 
+                {
+                    // An error occurred -> report it
+                    p->error( ret );
+                    ++errorCount;
+                }
+
+                ret = filenameOrPath;
+            }
         }
 
+        ++it;
+    }
+    
     return ret;
-#endif // 0
 }
 
 void BatchRenamer::work( ProgressDialog* p )

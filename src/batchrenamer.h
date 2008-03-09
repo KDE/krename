@@ -38,15 +38,6 @@ class QTextStream;
  */
 #define MAXENTRIES 1000
 
-/* May Value for SpinBoxes
- *
- */
-#define SPINMAX 100000
-
-enum {
-    COPY, MOVE, RENAME, PREVIEW, LINK
-};
-
 /*
  * Changes made by hand by the user
  * in the preview list view are
@@ -317,6 +308,18 @@ class BatchRenamer : public QObject {
          */
         int getCharacters( int n ) ;
 
+        /** Execute all plugins of a certain type
+         *
+         *  @param index the current index
+         *  @param filenameOrPath the current filename or path
+         *  @param type the type of the plugins to run
+         *  @param errorCount the number of errors will be written to this value
+         *  @param p dialog for error reporting
+         *
+         *  @returns either a new filename or an error message (depends on plugin type)
+         */
+        QString executePlugin( int index, const QString & filenameOrPath, int type, int & errorCount, ProgressDialog* p );
+
         void work( ProgressDialog* p );
         void writeUndoScript( QTextStream* t );
         //void parseSubdirs( data* f );
@@ -326,7 +329,6 @@ class BatchRenamer : public QObject {
 	 *  The caller has to check m_reset before calling this function.
 	 */
         void findCounterReset( int i );
-        QString parsePlugins( int i, const QString & text, int type );
         bool applyManualChanges( int i );
 
         QString text;           // template

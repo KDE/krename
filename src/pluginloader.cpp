@@ -18,6 +18,8 @@
 #include "pluginloader.h"
 
 #include "plugin.h"
+
+#include "datetimeplugin.h"
 #include "fileplugin.h"
 #include "scriptplugin.h"
 #include "strigiplugin.h"
@@ -97,6 +99,7 @@ void PluginLoader::clear()
 
 void PluginLoader::load()
 {
+    m_plugins.append( new DateTimePlugin() );
     m_plugins.append( new ScriptPlugin() );
     m_plugins.append( new SystemPlugin() );
     m_plugins.append( new TranslitPlugin() );

@@ -58,6 +58,9 @@ QString StrigiPlugin::processFile( BatchRenamer* b, int index, const QString & f
     QString token( filenameOrToken.toLower() );
     QString filename = (*b->files())[index].dstUrl().path();
 
+    if( filename.isEmpty() )
+        return QString::null;
+
     char result = m_analyzer.indexFile( filename.toUtf8().data() );
     qDebug("index result=%x", result );
 

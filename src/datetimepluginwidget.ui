@@ -1,0 +1,83 @@
+<ui version="4.0" >
+ <class>DateTimePluginWidget</class>
+ <widget class="QWidget" name="DateTimePluginWidget" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>543</width>
+    <height>373</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="KDatePicker" name="datepicker" />
+   </item>
+   <item>
+    <widget class="QCheckBox" name="checkAccess" >
+     <property name="text" >
+      <string>Change &amp;access date &amp;&amp; time</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="checkModification" >
+     <property name="text" >
+      <string>Change &amp;modifcation date &amp;&amp; time</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QLabel" name="label" >
+       <property name="text" >
+        <string>Time:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinHour" >
+       <property name="maximum" >
+        <number>23</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinMinute" >
+       <property name="maximum" >
+        <number>59</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinSecond" >
+       <property name="maximum" >
+        <number>59</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonCurrent" >
+       <property name="text" >
+        <string>Get &amp;Current Time</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KDatePicker</class>
+   <extends>QFrame</extends>
+   <header>kdatepicker.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
