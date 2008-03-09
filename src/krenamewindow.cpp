@@ -531,6 +531,7 @@ void KRenameWindow::setSimpleTemplate( const QString & filename, const QString &
     }
 
     // Now split the filename in prefix and suffix and set it as template
+    // TODO: Make sure we do not find something like [*5-] or \$
     int index = 4;
     int pos   = filename.indexOf( "$" );
     if( pos == -1 ) 
@@ -556,7 +557,17 @@ void KRenameWindow::setSimpleTemplate( const QString & filename, const QString &
 
     m_pageFilename->comboFilenameSimple->setCurrentIndex( index );
     if( pos == -1 ) 
-        m_pageFilename->comboFilenameCustom->lineEdit()->setText( extension );
+    {
+        // No token found, so we have no prefix or suffix but 
+        // a custom name.
+        m_pageFilename->comboPrefixCustom->lineEdit()->setText( QString::null );
+        m_pageFilename->comboPrefix->setCurrentIndex( 0 );
+
+        m_pageFilename->comboSuffixCustom->lineEdit()->setText( QString::null );
+        m_pageFilename->comboSuffix->setCurrentIndex( 0 );
+
+        m_pageFilename->comboFilenameCustom->lineEdit()->setText( filename );
+    }
     else 
     {
         QString prefix = ( pos > 0 ? filename.left( pos ) : QString::null);
