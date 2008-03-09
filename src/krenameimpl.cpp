@@ -109,38 +109,17 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list
 void KRenameImpl::setupActions()
 {
     KMenu* mnuExtra    = new KMenu( i18n("E&xtras"), m_window );
-    KMenu* mnuSettings = new KMenu( i18n("&Settings"), m_window );
+
     KMenu* mnuHelp     = m_window->helpMenu( QString::null, true );
 
     KAction* actProfiles = new KAction( i18n("&Profiles..."), m_window );
-    KAction* actPref     = KStandardAction::preferences( this, SLOT(slotPreferences()), m_window );
-    KAction* actLoad     = new KAction( i18n("&Load KDE file plugins"), m_window );
-    KAction* actReload   = new KAction( i18n("&Reload Plugin Data"), m_window );
-
-    /*
-      // Enable this code after upgrade to newest KDE libs
-
-    KAction* actProfiles = new KAction( i18n("&Profiles..."), m_window->actionCollection(), "profiles" );
-    KAction* actUndo     = new KAction( "undo", i18n("&Undo Old Renaming Action..."), m_window->actionCollection(), "undo" );
-    KAction* actPref     = KStdAction::preferences( this, SLOT(slotPreferences()), m_windowactionCollection() );
-    KAction* actLoad     = new KAction( i18n("&Load KDE file plugins"), m_window->actionCollection(), "loadplugins" );
-    KAction* actReload   = new KAction( i18n("&Reload Plugin Data"), m_window->actionCollection(), "reloadplugins" );
-    */
 
     m_window->menuBar()->addMenu( mnuExtra );
-    m_window->menuBar()->addMenu( mnuSettings );
     m_window->menuBar()->addMenu( mnuHelp );
 
     mnuExtra->addAction( actProfiles );
 
-    mnuSettings->addAction( actPref );
-    mnuSettings->addSeparator();
-    mnuSettings->addAction( actLoad );
-    mnuSettings->addAction( actReload );
-
     connect(actProfiles, SIGNAL(triggered(bool)), SLOT(slotManageProfiles()));
-    connect(actLoad,     SIGNAL(triggered(bool)), SLOT(slotLoadFilePlugins()));
-    connect(actLoad,     SIGNAL(triggered(bool)), SLOT(slotReloadFilePluginData()));
 }
 
 void KRenameImpl::setupSlots()
