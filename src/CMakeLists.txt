@@ -28,6 +28,7 @@ set(krename_SRCS
   threadedlister.cpp
   plugin.cpp
   pluginloader.cpp
+  permissionsplugin.cpp
   previewlist.cpp
   progressdialog.cpp
   replacedialog.cpp
@@ -48,6 +49,7 @@ kde4_add_ui_files( krename_SRCS
   krenamefilename.ui 
   krenameplugins.ui
   numberwidget.ui
+  permissionspluginwidget.ui
   progressdialog.ui
   replacewidget.ui
   replaceitemdlg.ui
