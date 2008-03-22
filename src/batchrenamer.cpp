@@ -1036,6 +1036,10 @@ QString BatchRenamer::processToken( QString token, QString oldname, int i )
     if( !tmp.isEmpty() )
         return tmp;
         
+    tmp = findTrimmed( token, (*m_files)[i].srcFilename() );
+    if( !tmp.isEmpty() )
+        return tmp;
+
     Plugin* p = PluginLoader::Instance()->findPlugin( token );
     if( p )
     {
@@ -1224,6 +1228,15 @@ QString BatchRenamer::findLength( const QString & token, const QString & name )
         }
         
         return QString::number( name.length() - minus );
+    }
+   
+    return QString::null;
+}
+
+QString BatchRenamer::findTrimmed( const QString & token, const QString & name )
+{
+    if( token.toLower() == "trimmed" ) {
+        return name.trimmed();
     }
    
     return QString::null;

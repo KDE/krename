@@ -256,7 +256,6 @@ void KRenameTest::testBatchRenamer()
     RUN_TOKEN_TEST( "& Test", "&", filename, filename.toUpper() );
     RUN_TOKEN_TEST( "% Test", "%", filename, filename.toLower() );
     RUN_TOKEN_TEST( "* Test", "*", filename, " Test File Name " );
-    RUN_TOKEN_TEST( "\\ Test", "\\", filename, filename.trimmed() );
     RUN_TOKEN_TEST( "# Test", "#", filename, QString::number( 0 ) );
     RUN_TOKEN_TEST( "## Test", "##", filename, QString().sprintf("%02i", 0 ) );
     RUN_TOKEN_TEST( "### Test", "###", filename, QString().sprintf("%03i", 0 ) );
@@ -278,6 +277,7 @@ void KRenameTest::testBatchRenamer()
     RUN_TOKEN_TEST( "[%4-] Test", "[%4-]", filename, filename.right( filename.length() - 3 ).toLower() );
     RUN_TOKEN_TEST( "[*4-] Test", "[*4-]", filename, "St File Name " );
     RUN_TOKEN_TEST( "[\\4-] Test", "[\\4-]", filename, filename.right( filename.length() - 3 ).trimmed() );
+    RUN_TOKEN_TEST( "[trimmed] Test", "[trimmed]", filename, filename.trimmed() );
     RUN_TOKEN_TEST( "[length] Test", "[length]", filename, QString::number( filename.length() ) );
     RUN_TOKEN_TEST( "[length-0] Test", "[length-0]", filename, QString::number( filename.length() ) );
     RUN_TOKEN_TEST( "[length-1] Test", "[length-1]", filename, QString::number( filename.length() - 1 ) );

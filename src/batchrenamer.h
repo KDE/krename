@@ -197,17 +197,34 @@ class BatchRenamer : public QObject {
         QString processToken( QString token, QString oldname, int i );
         QString findPartStrings( QString oldname, QString token );
         static QString findDirName( QString token, QString path );
-        QString findLength( const QString & token, const QString & name );
-
-        QString processString( QString text, const QString & originalName, int i );
-        QString processBrackets( QString text, int* length, const QString & oldname, int index );
-        QString processNumber( int length, const QString & appendix );
 
         static QString & doEscape( QString & text, bool filename = true );
         static QString & unEscape( QString & text );
         static void escape( QString & text, const QString & token, const QString & sequence );
 
         //static QString buildFilename( fileentry* entry, bool dir = true );
+
+        /** Handle the [length] tokens
+         *
+         *  @param token a token found in square brackets
+         *  @param name the filename of the current file
+         *
+         *  @return QString::null if no length token was found or the a new string
+         */
+        QString findLength( const QString & token, const QString & name );
+
+        /** Handle the [trimmed] token
+         *
+         *  @param token a token found in square brackets
+         *  @param name the filename of the current file
+         *
+         *  @return QString::null if no length token was found or the a new string
+         */
+        QString findTrimmed( const QString & token, const QString & name );
+
+        QString processString( QString text, const QString & originalName, int i );
+        QString processBrackets( QString text, int* length, const QString & oldname, int index );
+        QString processNumber( int length, const QString & appendix );
 
     public slots:
 
