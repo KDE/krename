@@ -66,7 +66,7 @@ SystemPlugin::SystemPlugin()
     m_help.append( "[accessdate;yyyy-MM-dd];;" + i18n("Insert the formatted date of the last file access") );
 
     m_name = i18n("Date and system functions");
-    m_icon = "clock";   
+    m_icon = "system-run";   
 }
 
 SystemPlugin::~SystemPlugin()

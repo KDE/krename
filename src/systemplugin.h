@@ -39,10 +39,6 @@ class SystemPlugin : public FilePlugin {
      */
     inline int type() const;
 
-    /**
-     * @returns an icon for this plugin.
-     */
-    inline virtual const QPixmap icon() const;
 
     /**
      * This function is the core of your plugin.
@@ -99,11 +95,6 @@ inline const QString SystemPlugin::name() const
 inline int SystemPlugin::type() const
 {
     return ePluginType_Token;
-}
-
-inline const QPixmap SystemPlugin::icon() const
-{
-    return m_icon;
 }
 
 inline const QStringList & SystemPlugin::help() const

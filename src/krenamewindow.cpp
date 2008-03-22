@@ -104,7 +104,8 @@ KRenameWindow::KRenameWindow( QWidget* parent )
 
     setupGui();
     setupPlugins();
-    
+    setupIcons();
+
     m_pageDests->urlrequester->setMode( KFile::Directory | KFile::ExistingOnly );
     
     // Make sure that now signal occurs before setupGui was called
@@ -169,6 +170,40 @@ void KRenameWindow::setupPlugins()
 
         ++it;
     }
+}
+
+void KRenameWindow::setupIcons()
+{
+    QPixmap upIcon = KIconLoader::global()->loadIcon( "arrow-up", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+    QPixmap downIcon = KIconLoader::global()->loadIcon( "arrow-down", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+
+    // Page 1 icons
+
+    QPixmap openIcon = KIconLoader::global()->loadIcon( "document-open", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+    QPixmap removeIcon = KIconLoader::global()->loadIcon( "list-remove", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+
+    m_pageFiles->buttonAdd->setIcon( openIcon );
+    m_pageFiles->buttonRemove->setIcon( removeIcon );
+    m_pageFiles->buttonUp->setIcon( upIcon );
+    m_pageFiles->buttonDown->setIcon( downIcon );
+
+    // Page 4 icons
+
+    QPixmap helpIcon = KIconLoader::global()->loadIcon( "help-hint", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+    QPixmap findIcon = KIconLoader::global()->loadIcon( "edit-find", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+
+    m_pageFilename->buttonHelp1->setIcon( helpIcon ); 
+    m_pageFilename->buttonHelp2->setIcon( helpIcon ); 
+    m_pageFilename->buttonHelp3->setIcon( helpIcon ); 
+    m_pageFilename->buttonHelp4->setIcon( helpIcon ); 
+    m_pageFilename->buttonFunctions->setIcon( helpIcon );
+
+    m_pageFilename->buttonFind->setIcon( findIcon );
+    m_pageFilename->buttonFindSimple->setIcon( findIcon );
+
+    m_pageFilename->buttonUp->setIcon( upIcon );
+    m_pageFilename->buttonDown->setIcon( downIcon );
+    
 }
 
 void KRenameWindow::setupSlots()
@@ -273,6 +308,9 @@ void KRenameWindow::slotEnableControls()
                                                         m_pageFilename->comboExtensionSimple->count() - 1 );
     m_pageFilename->comboExtensionCustom->setEnabled( m_pageFilename->comboExtensionSimple->currentIndex() == 
                                                       m_pageFilename->comboExtensionSimple->count() - 1 );
+
+    m_pageFilename->buttonUp->setEnabled( m_fileCount );
+    m_pageFilename->buttonDown->setEnabled( m_fileCount );
 }
 
 void KRenameWindow::setCount( unsigned int count )

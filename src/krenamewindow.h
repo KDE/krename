@@ -332,6 +332,11 @@ class KRenameWindow : public KMainWindow {
      */
     void setupPlugins();
 
+    /** Set standard KDE icons on UI elements
+     *  as this cannot be done from within designer
+     */
+    void setupIcons();
+
     /** Get a template for the prefix or suffix in wizard mode
      *  from 2 combo boxes
      *
