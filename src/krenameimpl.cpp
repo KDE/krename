@@ -47,6 +47,7 @@
 #include <kio/netaccess.h>
 
 #include <QStringListModel>
+#include <QTimer>
 
 KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list )
     : QObject( (QObject*)window ), m_window( window ),
@@ -205,9 +206,7 @@ void KRenameImpl::parseCmdLineOptions()
     KCmdLineArgs* args = KCmdLineArgs::parsedArgs();
 
     if( args->isSet( "test" ) )
-    {
-        this->selfTest();
-    }
+        QTimer::singleShot( 0, this, SLOT( selfTest() ) );
 
     /*
     QCStringList optlist = args->getOptionList ( "r" );

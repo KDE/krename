@@ -87,12 +87,12 @@ class KRenameImpl : public QObject {
      */
     void parseCmdLineOptions();
 
+ private slots:
+
     /** Start KRename's selftest:
      *  I.e several unit tests.
      */
     void selfTest();
-
- private slots:
 
     /** Called when the user clicks the "Add..." button.
      *  open a dialog to select files for adding to KRename.

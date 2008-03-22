@@ -348,24 +348,235 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
 
 }
 
-QString BatchRenamer::processString( QString text, QString oldname, int i )
+bool isToken( const QChar & token ) 
 {
-    /*
-     * Come on! Grep for this text and help me!
-     *
-     * note about krename escape sequences
-     * for certain characters:
-     *
-     * Krename will have problems with files
-     * which contain one of the following
-     * unicode characters: 60000, 60001, 60002
-     * 60003, 60004, 60005, 60006.
-     *
-     * This is not a good solution, if you have a
-     * better one please tell me about it!
-     */
-     
+    const QChar tokens[] = {
+        QChar('&'),
+        QChar('$'),
+        QChar('%'),
+        QChar('#'),
+        QChar('['),
+        QChar(']'),
+        QChar('\\'),
+        QChar('/'),
+        QChar('{'),
+        QChar('}'),
+        QChar('*')
+    };
+    const int count = 11;
+
+    for( int i=0;i<count;i++ )
+        if( token == tokens[i] )
+            return true;
+
+    return false;
+}
+
+int getNextToken( const QString & text, QString & token, int pos = 0 ) 
+{
+    bool escaped = false;
+    token = QString::null;
+
+    if( pos < 0 )
+        return -1;
+
+    while( pos < text.length() ) 
+    {
+        if( !escaped && text[pos] == QChar('\\') )
+        {
+            escaped = true;
+        }
+        else if( !escaped && isToken( text[pos] ) )
+        {
+            token = text[pos];
+            return ++pos;
+        }
+        else 
+        {
+            escaped = false;
+        }
+
+        ++pos;
+    }
+
+    return -1;
+}
+
+QString BatchRenamer::processBrackets( QString text, int* length, const QString & oldname, int index )
+{
+    int pos=0;
+    QString token;
+    QString result;
+ 
+    *length = 0;
+
+   while( (pos = getNextToken( text, token, pos )) != -1 )
+    {
+        if( token == "[" ) 
+        {
+            int length = 0;
+            QString substitute = processBrackets( text.right( text.length() - pos ), &length, oldname, index );
+            text.replace( pos - 1, length, substitute );
+            pos += length;
+        }
+        else if( token == "]" ) 
+        {
+            // Done with this token
+            break;
+        }
+    }
+
+   if( pos != -1 ) 
+   {
+       result = findToken( oldname, text.left( pos - 1 ), index );
+       *length = pos+1; // skip any closing bracket
+   }
+
+   return result;
+}
+
+QString BatchRenamer::processNumber( int length, const QString & appendix ) 
+{
+    tCounterValues countervalues;
+    countervalues.start = m_index;
+    countervalues.step = m_step;
+
+    if( !appendix.isEmpty() ) 
+    {
+        bool ok = false;
+        int tmp = appendix.section( ';', 0, 0 ).toInt( &ok ); // first section = start index
+        if( ok )
+            countervalues.start = tmp;
+        
+        tmp= appendix.section( ';', 1, 1 ).toInt( &ok ); // second section = stepping
+        if( ok )
+            countervalues.step = tmp;
+    }
+
+    if( (signed int)m_counters.count() <= m_counter_index )
+    {
+	countervalues.value = countervalues.start - countervalues.step;
+	// other wise the counter would start at:
+	// start + step instead of start
+	m_counters.append( countervalues );
+    }
+
+    do {
+	m_counters[m_counter_index].value += m_counters[m_counter_index].step;
+    } while( m_skip.contains( m_counters[m_counter_index].value ) );
+    
+    QString number;
+    number.sprintf("%0*i", length, m_counters[m_counter_index].value );
+
+    ++m_counter_index;
+    return number;
+}
+
+QString BatchRenamer::processString( QString text, const QString & originalName, int index )
+{
+    QString oldname = originalName;
     doEscape( oldname );
+
+    // Parse into tokens
+    int pos=0;
+    QString token;
+    while( (pos = getNextToken( text, token, pos )) != -1 )
+    {
+
+        // Handle simple tokens
+        if( token == "$" )
+        {
+            text.replace( pos - 1, token.length(), oldname );
+            pos += oldname.length();
+        }
+        else if( token == "%" )
+        {
+            text.replace( pos - 1, token.length(), oldname.toLower() );
+            pos += oldname.length();
+        }
+        else if( token == "&" )
+        {
+            text.replace( pos - 1, token.length(), oldname.toUpper() );
+            pos += oldname.length();
+        }
+        else if( token == "\\" )
+        {
+            QString trimmed = oldname.trimmed();
+            text.replace( pos - 1, token.length(), trimmed );
+            pos += trimmed.length();
+        }
+        else if( token == "*" ) 
+        {
+            QString tmp = oldname.toLower();
+            if( tmp[0].isLetter() )
+                tmp[0] = tmp[0].toUpper();
+
+            for( int i = 0; i < tmp.length(); i++ )
+                if( tmp[i+1].isLetter() && !tmp[i].isLetter() &&
+                    tmp[i] != '\'' && tmp[i] != '?' && tmp[i] != '`' )
+                    tmp[i+1] = tmp[i+1].toUpper();
+
+            text.replace( pos - 1, token.length(), tmp );
+            pos += tmp.length();            
+        }
+        else if( token == "[" ) 
+        {
+            int length = 0;
+            QString substitute = processBrackets( text.right( text.length() - pos ), &length, oldname, index );
+            text.replace( pos - 1, length, substitute );
+            pos += length;
+        }
+        else if( token == "]" ) 
+        {
+            // Ignore
+        }
+        else if( token == "#" ) 
+        {
+            int curPos = pos;
+            int count  = 1;
+            while( text[curPos] == '#' ) 
+            {
+                ++curPos;
+                count++;
+            }
+
+            int length = curPos - pos + 1;
+            int appendixLength = 0;
+            QString appendix;
+            if( text[curPos] == '{' ) 
+            {
+                int     appendixPos = curPos;
+                QString appendixToken;
+                while( (appendixPos = getNextToken( text, appendixToken, appendixPos )) != -1 )
+                {
+                    if( appendixToken == "}" ) 
+                    {
+                        break;
+                    }
+                }
+
+                appendix = text.mid( curPos + 1, appendixPos - curPos - 2 );
+                appendixLength = appendixPos - curPos + 1;
+            }
+
+            QString number   = processNumber( count, appendix );
+            text.replace( pos - 1, (length + appendixLength), number );
+            pos += (length + appendixLength);
+        }
+    }
+
+    //text = parsePlugins( i, text, TYPE_TOKEN );
+
+    /*
+     * Replace after Plugins !
+     * Replace shoud be the last the
+     * before re-escaping tokens !
+     */
+    text = findReplace( text );
+    text = unEscape( text );
+    return text;
+
+    int i = index;
     /*
      * Call here all functions that handle
      * arguments that are single tokens (&,%,...).
@@ -587,39 +798,26 @@ const KUrl BatchRenamer::buildDestinationUrl( const KRenameFile & file ) const
 
 void BatchRenamer::escape( QString & text, const QString & token, const QString & sequence )
 {
-    /*
-     * NEVER, ABSOLUTELY NEVER change pos = 0
-     * to pos = -1, it won't work !
-     * This bug took hours to find and was
-     * a serious bug in 1.7.
-     */
-#if QT_VERSION >= 0x030100
     text.replace( token, sequence );
-#else
-    int pos = 0;
-    do {
-       pos = text.find( token, pos );
-       if( pos >= 0 )
-           text.replace( pos, token.length(), sequence );
-    } while ( pos >= 0 );
-#endif
 }
 
 QString & BatchRenamer::doEscape( QString & text, bool filename )
 {
     if( filename ) {
-        BatchRenamer::escape( text, "&", QChar( 60000 ) );
-        BatchRenamer::escape( text, "$", QChar( 60001 ) );
-        BatchRenamer::escape( text, "%", QChar( 60002 ) );
-        BatchRenamer::escape( text, "#", QChar( 60004 ) );
-        BatchRenamer::escape( text, "[", QChar( 60005 ) );
-        BatchRenamer::escape( text, "]", QChar( 60006 ) );
-        BatchRenamer::escape( text, "\\", QChar( 60007 ) );
-        BatchRenamer::escape( text, "/", QChar( 60008 ) );
-        BatchRenamer::escape( text, "{", QChar( 60009 ) );        
-        BatchRenamer::escape( text, "}", QChar( 60010 ) );        
-        BatchRenamer::escape( text, "*", QChar( 60011 ) );        
+        BatchRenamer::escape( text, "\\", "\\\\" );
+        BatchRenamer::escape( text, "&", "\\&" );
+        BatchRenamer::escape( text, "$", "\\$" );
+        BatchRenamer::escape( text, "%", "\\%" );
+        BatchRenamer::escape( text, "#", "\\#" );
+        BatchRenamer::escape( text, "[", "\\[" );
+        BatchRenamer::escape( text, "]", "\\]" );
+        BatchRenamer::escape( text, "/", "\\/" );
+        BatchRenamer::escape( text, "{", "\\{" );
+        BatchRenamer::escape( text, "}", "\\}" );
+        BatchRenamer::escape( text, "*", "\\*" );
     } else {
+        // Regular expressions are already escaped in the new format
+        /*
         BatchRenamer::escape( text, "\\&", QChar( 60000 ) );
         BatchRenamer::escape( text, "\\$", QChar( 60001 ) );
         BatchRenamer::escape( text, "\\%", QChar( 60002 ) );
@@ -631,6 +829,7 @@ QString & BatchRenamer::doEscape( QString & text, bool filename )
         BatchRenamer::escape( text, "\\{", QChar( 60009 ) );        
         BatchRenamer::escape( text, "\\}", QChar( 60010 ) );      
         BatchRenamer::escape( text, "\\*", QChar( 60011 ) );          
+        */
     }
 
     return text;
@@ -638,21 +837,21 @@ QString & BatchRenamer::doEscape( QString & text, bool filename )
 
 QString & BatchRenamer::unEscape( QString & text )
 { 
-    BatchRenamer::escape( text, QChar( 60000 ), "&" );
-    BatchRenamer::escape( text, QChar( 60001 ), "$" );
-    BatchRenamer::escape( text, QChar( 60002 ), "%" );
-    BatchRenamer::escape( text, QChar( 60004 ), "#" );
-    BatchRenamer::escape( text, QChar( 60005 ), "[" );
-    BatchRenamer::escape( text, QChar( 60006 ), "]" );
-    BatchRenamer::escape( text, QChar( 60007 ), "\\" );
+    BatchRenamer::escape( text, "\\\\", "\\" );
+    BatchRenamer::escape( text, "\\&", "&" );
+    BatchRenamer::escape( text, "\\$", "$" );
+    BatchRenamer::escape( text, "\\%", "%" );
+    BatchRenamer::escape( text, "\\#", "#" );
+    BatchRenamer::escape( text, "\\[", "[" );
+    BatchRenamer::escape( text, "\\]", "]" );
     // %252f == /, it seems that filenames on unix cannot contain
     // a /. So I use %252f, at least konqui displays it correctly
     // this was needed, so that plugins that return a slash do not cause errors
-    BatchRenamer::escape( text, QChar( 60008 ), "%2f" );
-    BatchRenamer::escape( text, QChar( 60009 ), "{" );        
-    BatchRenamer::escape( text, QChar( 60010 ), "}" );        
-    BatchRenamer::escape( text, QChar( 60011 ), "*" );
-
+    BatchRenamer::escape( text, "\\/", "%2f" );
+    BatchRenamer::escape( text, "\\{", "{" );
+    BatchRenamer::escape( text, "\\}", "}" );
+    BatchRenamer::escape( text, "\\*", "*" );
+    
     return text;
 }
 
@@ -856,7 +1055,7 @@ QString BatchRenamer::processToken( QString token, QString oldname, int i )
     return QString::null;
 }
 
-QString BatchRenamer::findToken( QString oldname, QString token, int i )
+QString BatchRenamer::findToken( const QString & oldname, QString token, int i )
 {
     enum conversion { LOWER, UPPER, MIXED, STAR, STRIP, NONE, EMPTY, NUMBER };
     unsigned int numwidth = 0;

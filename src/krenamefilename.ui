@@ -22,7 +22,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex" >
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tabAdvanced" >
       <attribute name="title" >
@@ -342,10 +342,16 @@ p, li { white-space: pre-wrap; }
                <bool>false</bool>
               </property>
               <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+               <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
                 <horstretch>2</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="sizeIncrement" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
               </property>
               <property name="editable" >
                <bool>true</bool>
@@ -355,7 +361,7 @@ p, li { white-space: pre-wrap; }
             <item row="2" column="1" >
              <widget class="QComboBox" name="comboFilenameSimple" >
               <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
                 <horstretch>3</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -407,10 +413,16 @@ p, li { white-space: pre-wrap; }
             <item row="1" column="2" >
              <widget class="ExtHistoryCombo" name="comboSuffixCustom" >
               <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+               <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
                 <horstretch>2</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="sizeIncrement" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
               </property>
               <property name="editable" >
                <bool>true</bool>
@@ -420,7 +432,7 @@ p, li { white-space: pre-wrap; }
             <item row="1" column="1" >
              <widget class="QComboBox" name="comboSuffix" >
               <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
                 <horstretch>3</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -472,7 +484,7 @@ p, li { white-space: pre-wrap; }
             <item row="0" column="1" >
              <widget class="QComboBox" name="comboPrefix" >
               <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
                 <horstretch>3</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -497,7 +509,7 @@ p, li { white-space: pre-wrap; }
             <item row="3" column="1" >
              <widget class="QComboBox" name="comboExtensionSimple" >
               <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
                 <horstretch>3</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -532,10 +544,16 @@ p, li { white-space: pre-wrap; }
             <item row="0" column="2" >
              <widget class="ExtHistoryCombo" name="comboPrefixCustom" >
               <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+               <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
                 <horstretch>2</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="sizeIncrement" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
               </property>
               <property name="editable" >
                <bool>true</bool>
@@ -548,10 +566,16 @@ p, li { white-space: pre-wrap; }
                <bool>false</bool>
               </property>
               <property name="sizePolicy" >
-               <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+               <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
                 <horstretch>2</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="sizeIncrement" >
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
               </property>
               <property name="editable" >
                <bool>true</bool>
@@ -580,6 +604,12 @@ p, li { white-space: pre-wrap; }
            </property>
            <item>
             <widget class="QGroupBox" name="groupNumber" >
+             <property name="sizePolicy" >
+              <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="title" >
               <string>N&amp;umber</string>
              </property>
@@ -674,6 +704,12 @@ p, li { white-space: pre-wrap; }
             <widget class="QPushButton" name="buttonFindSimple" >
              <property name="enabled" >
               <bool>false</bool>
+             </property>
+             <property name="sizePolicy" >
+              <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
              <property name="text" >
               <string>Find &amp;and Replace...</string>

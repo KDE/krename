@@ -193,14 +193,16 @@ class BatchRenamer : public QObject {
         QString findNumbers( QString text, int count, int i );
         QString findStar( const QString & oldname, QString text );
         QString findBrackets( QString oldname, QString text, int i );
-        QString findToken( QString oldname, QString token, int i );
+        QString findToken( const QString & oldname, QString token, int i );
         QString processToken( QString token, QString oldname, int i );
         QString findPartStrings( QString oldname, QString token );
         static QString findDirName( QString token, QString path );
         QString findLength( const QString & token, const QString & name );
 
-        QString processString( QString text, QString oldname, int i );
-        
+        QString processString( QString text, const QString & originalName, int i );
+        QString processBrackets( QString text, int* length, const QString & oldname, int index );
+        QString processNumber( int length, const QString & appendix );
+
         static QString & doEscape( QString & text, bool filename = true );
         static QString & unEscape( QString & text );
         static void escape( QString & text, const QString & token, const QString & sequence );
