@@ -263,7 +263,7 @@ void KRenameWindow::setupSlots()
     connect( m_pageFilename->buttonFindSimple,     SIGNAL(clicked(bool))       , SIGNAL(showFindReplaceDialog()));
 
     connect( m_pageFilename->spinDigits,           SIGNAL(valueChanged(int)),    SLOT(slotSimpleTemplateChanged()));
-    connect( m_pageFilename->spinIndex,            SIGNAL(valueChanged(int)),    SLOT(slotSimpleTemplateChanged()));
+    connect( m_pageFilename->spinIndex,            SIGNAL(valueChanged(int)),    SLOT(slotSimpleStartIndexChanged()));
 }
 
 void KRenameWindow::showPage( int index )
@@ -388,6 +388,66 @@ QList<int> KRenameWindow::selectedFileItemsPreview() const
     return selected;
 }
 
+bool KRenameWindow::isPreviewEnabled() const
+{
+    return m_pageFiles->checkPreview->isChecked();
+}
+
+void KRenameWindow::setPreviewEnabled( bool bPreview )
+{
+    m_pageFiles->checkPreview->setChecked( bPreview );
+}
+
+bool KRenameWindow::isPreviewNamesEnabled() const
+{
+    return m_pageFiles->checkName->isChecked();
+}
+
+void KRenameWindow::setPreviewNamesEnabled( bool bPreview )
+{
+    m_pageFiles->checkName->setChecked( bPreview );
+}
+
+int KRenameWindow::numberStartIndex() const
+{
+    return m_pageFilename->spinIndex->value();
+}
+
+void KRenameWindow::setNumberStartIndex( int index )
+{
+    m_pageFilename->spinIndex->setValue( index );
+}
+
+int KRenameWindow::sortMode() const
+{
+    return m_pageFiles->comboSort->currentIndex();
+}
+
+void KRenameWindow::setSortMode( int sortMode )
+{
+    m_pageFiles->comboSort->setCurrentIndex( sortMode );
+}
+
+int KRenameWindow::previewColumnWidth( int index )
+{
+    return m_pageFilename->listPreview->columnWidth( index );
+}
+
+void KRenameWindow::setPreviewColumnWidth( int index, int width )
+{
+    m_pageFilename->listPreview->setColumnWidth( index, width );
+}
+
+bool KRenameWindow::isAdvancedMode() const
+{
+    return (m_pageFilename->tabWidget->currentIndex() == 0);
+}
+
+void KRenameWindow::setAdvancedMode( bool bAdvanced )
+{
+    m_pageFilename->tabWidget->setCurrentIndex( bAdvanced ? 0 : 1 );
+}
+
 void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom, const QString & templ ) 
 {
     if( templ.isEmpty() ) 
@@ -500,6 +560,13 @@ void KRenameWindow::slotRenameModeChanged()
     emit renameModeChanged( mode );
 
     this->slotEnableControls();
+}
+
+void KRenameWindow::slotSimpleStartIndexChanged()
+{
+    emit startIndexChanged( m_pageFilename->spinIndex->value() );
+
+    updatePreview();
 }
 
 void KRenameWindow::slotTemplateChanged()

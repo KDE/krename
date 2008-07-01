@@ -263,6 +263,8 @@ void KRenameTest::testBatchRenamer()
     RUN_TOKEN_TEST( "##### Test", "#####", filename, QString().sprintf("%05i", 0 ) );
     RUN_TOKEN_TEST( "#{100;2} Test", "#{100;2}", filename, QString::number( 100 ) );
     RUN_TOKEN_TEST( "####{100;2} Test", "####{100;2}", filename, QString().sprintf("%04i", 100 ) );
+    RUN_TOKEN_TEST( "####{2;2}## Test", "####{2;2}##", filename, 
+		    QString().sprintf("%04i", 2 ) + QString().sprintf("%02i", 0 ));
     RUN_TOKEN_TEST( "[1] Test", "[1]", filename, QString( filename[0] ) );
     RUN_TOKEN_TEST( "[2] Test", "[2]", filename, QString( filename[1] )  );
     RUN_TOKEN_TEST( "[3] Test", "[3]", filename, QString( filename[2] ) );

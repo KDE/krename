@@ -87,7 +87,14 @@ class KRenameImpl : public QObject {
      */
     void parseCmdLineOptions();
 
+    /** Load configuration
+     */
+    void loadConfig();
+
  private slots:
+    /** Save configuration
+     */
+    void saveConfig();
 
     /** Start KRename's selftest:
      *  I.e several unit tests.

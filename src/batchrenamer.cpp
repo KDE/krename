@@ -408,7 +408,7 @@ QString BatchRenamer::processBrackets( QString text, int* length, const QString 
  
     *length = 0;
 
-    qDebug("processBrackets: %s\n", text.toUtf8().data() );
+    // MSG: qDebug("processBrackets: %s\n", text.toUtf8().data() );
     while( (pos = getNextToken( text, token, pos )) != -1 )
     {
         if( token == "[" ) 
@@ -416,19 +416,19 @@ QString BatchRenamer::processBrackets( QString text, int* length, const QString 
             int localLength = 0;
             QString substitute = processBrackets( text.right( text.length() - pos ), &localLength, oldname, index );
             text.replace( pos - 1, localLength, substitute );
-            qDebug("substituted: %s\n", text.toUtf8().data() );
+            // MSG: qDebug("substituted: %s\n", text.toUtf8().data() );
             *length += (localLength - substitute.length() );
         }
         else if( token == "]" ) 
         {
             // Done with this token
-            qDebug("END: %s\n", text.left( pos - 1 ).toUtf8().data() );
+            // MSG: qDebug("END: %s\n", text.left( pos - 1 ).toUtf8().data() );
             result = findToken( oldname, text.left( pos - 1 ), index );
             *length += pos + 1;
             break;
         }
     }
-    qDebug("processedBrackets: %s\n", result.toUtf8().data() );
+    // MSG: qDebug("processedBrackets: %s\n", result.toUtf8().data() );
     
     /*
      
@@ -517,7 +517,8 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
             int length = 0;
             QString substitute = processBrackets( text.right( text.length() - pos ), &length, oldname, index );
             text.replace( pos - 1, length, substitute );
-	    pos += substitute.length() - 1;
+	    if( substitute.length() > 0 )
+		pos += substitute.length() - 1;
         }
         else if( token == "]" ) 
         {
@@ -548,13 +549,16 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
                     }
                 }
 
+		// -2 because we have to go, before the current found token
                 appendix = text.mid( curPos + 1, appendixPos - curPos - 2 );
-                appendixLength = appendixPos - curPos + 1;
+                appendixLength = appendixPos - curPos;
             }
 
             QString number   = processNumber( count, appendix );
             text.replace( pos - 1, (length + appendixLength), number );
-            pos += (length + appendixLength);
+
+	    if( number.length() > 0 )
+		pos += number.length() - 1;
         }
     }
 
@@ -921,7 +925,7 @@ QString BatchRenamer::findPartStrings( QString oldname, QString token )
     QString first, second;
     int pos = -1;
     
-    qDebug("PART: %s", token.toUtf8().data() );
+    // MSG: qDebug("PART: %s", token.toUtf8().data() );
     // parse things like [2;4{[dirname]}]
     if( token.count( '{' ) >= 1 && token.count( '}' ) >= 1 ) {
         int pos = token.indexOf( '{' );

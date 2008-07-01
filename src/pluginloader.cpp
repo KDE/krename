@@ -23,8 +23,8 @@
 #include "fileplugin.h"
 #include "permissionsplugin.h"
 #include "scriptplugin.h"
-#include "strigiplugin.h"
 #include "systemplugin.h"
+#include "taglibplugin.h"
 #include "translitplugin.h"
 
 #include <kservice.h>
@@ -103,8 +103,8 @@ void PluginLoader::load()
     m_plugins.append( new DateTimePlugin() );
     m_plugins.append( new PermissionsPlugin() );
     m_plugins.append( new ScriptPlugin() );
-    m_plugins.append( new StrigiPlugin() );
     m_plugins.append( new SystemPlugin() );
+    m_plugins.append( new TagLibPlugin() );
     m_plugins.append( new TranslitPlugin() );
     //this->loadFilePlugins();
 
@@ -128,24 +128,3 @@ void PluginLoader::load()
     }
 }
 
-void PluginLoader::loadFilePlugins() 
-{
-    KService::List list = KService::allServices();
-    for( int i = 0; i < list.count(); i++ ) {
-        KService* s = list[i].data();
-        qDebug("SERVICE : %s", s->name().toLatin1().data());
-        QStringList types = s->serviceTypes();
-        qDebug("Supports: %s", types.join(";").toLatin1().data() );
-        qDebug("Type    : %s\n", s->type().toLatin1().data() );
-
-        if( s->type() == "Service" && s->hasServiceType( "KFilePlugin" ) ) {
-            FilePlugin* plugin = new FilePlugin( s );
-            if( false ) { //plugin->isValid() ) {
-                //addPlugin( kfileplugin );
-            } else
-                delete plugin;
-            
-        }
-    }
-
-}

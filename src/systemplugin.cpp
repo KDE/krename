@@ -67,6 +67,9 @@ SystemPlugin::SystemPlugin()
 
     m_name = i18n("Date and system functions");
     m_icon = "system-run";   
+    m_comment = i18n("<qt>This plugin contains tokens to get "
+		     "the creation, modification and last access "
+		     "time of files and the current system time and date.</qt>");
 }
 
 SystemPlugin::~SystemPlugin()

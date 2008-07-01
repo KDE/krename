@@ -2,14 +2,19 @@
 add_subdirectory( pics )
 add_subdirectory( servicemenus )
 
-include_directories( ${CMAKE_SOURCE_DIR} ${KDE4_INCLUDE_DIR} 
-  ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}  )
-add_definitions( ${KDE4_DEFINITIONS} )
+INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR} 
+                     ${KDE4_INCLUDE_DIR} 
+		     ${QT_INCLUDES} 
+		     ${CMAKE_CURRENT_SOURCE_DIR} 
+		     ${CMAKE_CURRENT_BINARY_DIR}
+		     ${TAGLIB_INCLUDE_DIR} )
+
+ADD_DEFINITIONS(${TAGLIB_CFLAGS} ${KDE4_DEFINITIONS} )
 
 ########### next target ###############
 
 
-set(krename_SRCS
+SET(krename_SRCS
   main.cpp 
   batchrenamer.cpp
   customdialog.cpp
@@ -33,8 +38,8 @@ set(krename_SRCS
   progressdialog.cpp
   replacedialog.cpp
   scriptplugin.cpp
-  strigiplugin.cpp
   systemplugin.cpp
+  taglibplugin.cpp
   tokenhelpdialog.cpp
   translitplugin.cpp
   )
@@ -56,6 +61,7 @@ kde4_add_ui_files( krename_SRCS
   tokenhelpwidget.ui
   )
 
+#kde4_automoc( ${krename_SRCS} )
 kde4_add_executable(krename ${krename_SRCS})
 
 # find Nepomuk's libkmetadata
@@ -70,11 +76,14 @@ endif(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
 
 #configure_file(config-kmetadata.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kmetadata.h )
 
-target_link_libraries(krename ${KDE4_KDECORE_LIBS} ${KDE4_KDEUI_LIBS}
-			      ${KDE4_KIO_LIBS} ${KDE4_KMETADATA}
-			      ${KDE4_KJS_LIBS} )
+TARGET_LINK_LIBRARIES(krename ${KDE4_KDECORE_LIBS} 
+                              ${KDE4_KDEUI_LIBS}
+			      ${KDE4_KIO_LIBS} 
+			      ${KDE4_KMETADATA}
+			      ${KDE4_KJS_LIBS} 
+			      ${TAGLIB_LIBRARIES} )
 
-install(TARGETS krename DESTINATION ${BIN_INSTALL_DIR})
+INSTALL(TARGETS krename DESTINATION ${BIN_INSTALL_DIR})
 
 
 ########### install files ###############

@@ -98,6 +98,9 @@ TranslitPlugin::TranslitPlugin()
     m_help.append( "[transliterated;Some string];;" + i18n("Transliterates the string following the semicolon") );
 
     m_name = i18n("Transliteration");
+    m_icon = "applications-education-language";
+    m_comment = i18n("<qt>This plugin can transcribe a filename "
+		     "into English (i.e. perform transliteration).</qt>");
 
     if( TranslitPlugin::s_mapFromUTF8.isEmpty() )
     {

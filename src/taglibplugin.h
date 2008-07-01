@@ -1,7 +1,7 @@
 /***************************************************************************
-                      strigiplugin.h  -  description
+                      taglibplugin.h  -  description
                              -------------------
-    begin                : Sun Feb 24 2008
+    begin                : Tue Jul 1st 2008
     copyright            : (C) 2008 by Dominik Seichter
     email                : domseichter@web.de
  ***************************************************************************/
@@ -15,17 +15,15 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _STRIGI_PLUGIN_H_
-#define _STRIGI_PLUGIN_H_
+#ifndef _TAG_LIB_PLUGIN_H_
+#define _TAG_LIB_PLUGIN_H_
 
 #include "fileplugin.h"
 
-#include <strigi/analyzerconfiguration.h>
-#include <strigi/streamanalyzer.h>
 
-class StrigiPlugin : public FilePlugin {
+class TagLibPlugin : public FilePlugin {
  public:
-    StrigiPlugin();
+    TagLibPlugin();
     
     /**
      * This function is the core of your plugin.
@@ -67,15 +65,11 @@ class StrigiPlugin : public FilePlugin {
 
  private:
     QStringList m_help;
-
-    Strigi::AnalyzerConfiguration m_config;
-    Strigi::StreamAnalyzer        m_analyzer;
-
 };
 
-inline const QStringList & StrigiPlugin::help() const 
+inline const QStringList & TagLibPlugin::help() const 
 { 
     return m_help; 
 }
 
-#endif // _STRIGI_PLUGIN_H_
+#endif // _TAG_LIB_PLUGIN_H_

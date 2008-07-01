@@ -57,10 +57,6 @@ class PluginLoader {
      */
     void load();
 
-    /** Load all KDE file plugins 
-     */
-    void loadFilePlugins();
-
  private:
 
     static PluginLoader* s_instance;     ///< The handle to the only pluginloader instance

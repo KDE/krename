@@ -69,8 +69,13 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list 
 
     m_pluginLoader = PluginLoader::Instance();
 
+
+    loadConfig();
+
     parseCmdLineOptions();
     slotUpdateCount();
+
+    connect( kapp, SIGNAL( aboutToQuit() ), this, SLOT( saveConfig() ) );
 }
 
 KRenameImpl::~KRenameImpl()
@@ -80,7 +85,7 @@ KRenameImpl::~KRenameImpl()
 
 QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list, bool loadprofile )
 {
-    KConfig* config = kapp->sessionConfig();
+    KSharedConfigPtr config = KGlobal::config();
 
     KConfigGroup groupGui = config->group( QString("GUISettings") );
     bool firststart  = groupGui.readEntry( "firststart4", QVariant(true) ).toBool();
@@ -140,6 +145,9 @@ void KRenameImpl::setupSlots()
                       &m_renamer, SLOT(setExtensionTemplate(const QString &)));
     QObject::connect( m_window, SIGNAL(overwriteFilesChanged(bool)), 
                       &m_renamer, SLOT(setOverwriteExistingFiles(bool)));
+
+    QObject::connect( m_window, SIGNAL(startIndexChanged(int)), 
+                      &m_renamer, SLOT(setNumberStartIndex(int)));
 
     connect( m_window, SIGNAL(extensionSplitModeChanged(ESplitMode,int)), SLOT(slotExtensionSplitModeChanged(ESplitMode,int)));
 
@@ -399,6 +407,8 @@ void KRenameImpl::slotAdvancedNumberingDlg()
         m_renamer.setNumberReset( dialog.resetCounter() );
         m_renamer.setNumberSkipList( dialog.skipNumbers() );
 
+	m_window->setNumberStartIndex( dialog.startIndex() );
+
         slotUpdatePreview();
     }
 }
@@ -552,7 +562,7 @@ void KRenameImpl::slotStart()
     m_window = NULL;
  
     // save the configuration
-    //saveConfig();
+    saveConfig();
 
     // Process files with addiational properties which were not 
     // necessary or available in the preview
@@ -563,6 +573,66 @@ void KRenameImpl::slotStart()
 
     // We are done - ProgressDialog will restart us if necessary
     //delete this;
+}
+
+
+void KRenameImpl::loadConfig() 
+{
+    KSharedConfigPtr config = KGlobal::config();
+
+    KConfigGroup groupGui = config->group( QString("GUISettings") );
+    //groupGui.readEntry( "firststart4", QVariant(true) ).toBool();
+    m_window->setPreviewEnabled( 
+	groupGui.readEntry( "ImagePreview", QVariant(false) ).toBool() );
+
+    m_window->setPreviewNamesEnabled( 
+	groupGui.readEntry( "ImagePreviewName", QVariant(false) ).toBool() );
+
+    m_window->setAdvancedMode( 
+	groupGui.readEntry( "Advanced", QVariant(false) ).toBool() );
+
+    int index = groupGui.readEntry( "StartIndex", QVariant(1) ).toInt();
+    int step  = groupGui.readEntry( "Stepping", QVariant(1) ).toInt();
+
+    m_renamer.setNumberStepping( step );
+    // Will call batch renamer
+    m_window->setNumberStartIndex( index );
+
+    int sortMode = groupGui.readEntry( "FileListSorting", QVariant(0) ).toInt();
+    m_window->setSortMode( sortMode );
+
+    int width = groupGui.readEntry( "Column0", QVariant(m_window->previewColumnWidth( 0 )) ).toInt();
+    m_window->setPreviewColumnWidth( 0, width );
+
+    width = groupGui.readEntry( "Column1", QVariant(m_window->previewColumnWidth( 1 )) ).toInt();
+    m_window->setPreviewColumnWidth( 1, width );
+
+}
+
+void KRenameImpl::saveConfig() 
+{
+    KSharedConfigPtr config = KGlobal::config();
+
+    KConfigGroup groupGui = config->group( QString("GUISettings") );
+    groupGui.writeEntry( "firststart4", false );
+    groupGui.writeEntry( "ImagePreview", m_window->isPreviewEnabled() );
+    groupGui.writeEntry( "ImagePreviewName", m_window->isPreviewNamesEnabled() );
+    groupGui.writeEntry( "StartIndex", m_window->numberStartIndex() );
+    groupGui.writeEntry( "Stepping", m_renamer.numberStepping() );
+    groupGui.writeEntry( "FileListSorting", m_window->sortMode() );
+    groupGui.writeEntry( "Column0", m_window->previewColumnWidth( 0 ) );
+    groupGui.writeEntry( "Column1", m_window->previewColumnWidth( 1 ) );
+    groupGui.writeEntry( "Advanced", m_window->isAdvancedMode() );
+
+    KConfigGroup groupWindow = config->group( QString("WindowSettings") );
+
+    groupWindow.writeEntry( "Maximized", m_window->isMaximized() );
+    groupWindow.writeEntry( "Width", m_window->width() );
+    groupWindow.writeEntry( "Height", m_window->height() );
+    groupWindow.writeEntry( "XPos", m_window->x() );
+    groupWindow.writeEntry( "YPos", m_window->y() );
+
+    config->sync();
 }
 
 #if 0

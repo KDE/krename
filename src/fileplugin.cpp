@@ -30,6 +30,7 @@ FilePlugin::FilePlugin( KService* service )
 {
     m_name = service->name();
     m_icon = service->icon();
+    m_comment = QString::null;
 }
 
 FilePlugin::FilePlugin()
@@ -40,12 +41,6 @@ FilePlugin::FilePlugin()
 FilePlugin::~FilePlugin()
 {
 
-}
-
-QString FilePlugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType )
-{
-
-    return QString::null;
 }
 
 bool FilePlugin::supports( const QString & token )
@@ -80,8 +75,10 @@ void FilePlugin::createUI( QWidget* parent ) const
     hbox->addWidget( new QLabel( "<qt><b>"+name()+"</b></qt>", parent  ) );
     hbox->addItem( spacer );
 
+    QLabel* comment = new QLabel( m_comment, parent );
+    comment->setWordWrap( true );
     l->addLayout( hbox );    
-    l->addWidget( new QLabel( "KOMMENTAR", parent  ) );
+    l->addWidget( comment );
     l->addWidget( new QLabel( i18n("Supported tokens:"), parent  ) );
 
     KListWidget* list = new KListWidget( parent  );

@@ -101,7 +101,7 @@ class KRenameWindow : public KMainWindow {
      */
     void setModel( KRenameModel* model );
 
-    /** Set the preview mode
+    /** Set the preview model
      *
      * @param model a preview model
      */
@@ -123,6 +123,62 @@ class KRenameWindow : public KMainWindow {
      *          in the preview
      */
     QList<int> selectedFileItemsPreview() const;
+
+    /** 
+     * \returns if file preview is enabled in the file tab
+     */
+    bool isPreviewEnabled() const;
+
+    /**
+     * \param bPreview enable/disable file preview in the file tab
+     */
+    void setPreviewEnabled( bool bPreview );
+
+    /** 
+     * \returns if name display is enabled in the file tab
+     */
+    bool isPreviewNamesEnabled() const;
+
+    /**
+     * \param bPreview enable/disable file name display in the file tab
+     */
+    void setPreviewNamesEnabled( bool bPreview );
+
+    /**
+     * \returns the start index for numbers
+     */
+    int numberStartIndex() const;
+
+    /**
+     * \param index start index for numbers
+     */
+    void setNumberStartIndex( int index );
+
+    /**
+     * \returns the current sort mode in the file tab
+     */
+    int sortMode() const;
+
+    /** 
+     * \param sortMode sets the current sort mode in the file tab
+     */
+    void setSortMode( int sortMode );
+
+    /**
+     * \param index (0 or 1) index of the column
+     * \returns the column width of column index
+     */
+    int previewColumnWidth( int index );
+
+    /**
+     * Set the width of the specified colum
+     * \param index (0 or 1) index of the column
+     * \param width width in pixels
+     */
+    void setPreviewColumnWidth( int index, int width );
+
+    bool isAdvancedMode() const;
+    void setAdvancedMode( bool bAdvanced );
 
  public slots:
     /** Resets the enabled/disabled state of all GUI elements correctly
@@ -163,6 +219,12 @@ class KRenameWindow : public KMainWindow {
      */
     void extensionSplitModeChanged( ESplitMode splitMode, int dot );
 
+    /** Called whenever the user changes the start index
+     *
+     *  @param index the new start index for numberings
+     */
+    void startIndexChanged( int index );
+
     /** Called whenever the user changes the file preview state
      *
      *  @param enable if true display previews 
@@ -200,7 +262,8 @@ class KRenameWindow : public KMainWindow {
      *  \see selectedFileItems() to retrieve the selected files
      */
     void removeFiles();
-    
+
+
     /** Show a token help dialog which inserts a token
      *  into a KLineEdit
      *
@@ -319,6 +382,11 @@ class KRenameWindow : public KMainWindow {
      */
     void slotPluginEnabled();
 
+    /** Called when the user changes the start index
+     *  in the gui
+     */
+    void slotSimpleStartIndexChanged();
+   
  private:
     /** Configures the GUI for the current GUI mode
      */
