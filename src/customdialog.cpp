@@ -65,7 +65,7 @@ bool CustomDialog::hasManualChanges() const
     return !(m_widget.radioKRename->isChecked());
 }
 
-const QString & CustomDialog::manualChanges() const
+const QString CustomDialog::manualChanges() const
 {
     if( m_widget.radioCustom->isChecked() )
         return m_widget.lineEdit->text();

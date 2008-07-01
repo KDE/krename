@@ -270,13 +270,17 @@ void KRenameTest::testBatchRenamer()
     RUN_TOKEN_TEST( "[$4] Test", "[$4]", filename, QString( filename[3] ) );
     RUN_TOKEN_TEST( "[%4] Test", "[%4]", filename, QString( filename[3].toLower()) );
     RUN_TOKEN_TEST( "[*4] Test", "[*4]", filename, QString( filename[3].toUpper()) );
-    RUN_TOKEN_TEST( "[\\1] Test", "[\\1]", filename, "" );
     RUN_TOKEN_TEST( "[4-] Test", "[4-]", filename, filename.right( filename.length() - 3 ) );
     RUN_TOKEN_TEST( "[&4-] Test", "[&4-]", filename, filename.right( filename.length() - 3 ).toUpper() );
     RUN_TOKEN_TEST( "[$4-] Test", "[$4-]", filename, filename.right( filename.length() - 3 ) );
     RUN_TOKEN_TEST( "[%4-] Test", "[%4-]", filename, filename.right( filename.length() - 3 ).toLower() );
     RUN_TOKEN_TEST( "[*4-] Test", "[*4-]", filename, "St File Name " );
-    RUN_TOKEN_TEST( "[\\4-] Test", "[\\4-]", filename, filename.right( filename.length() - 3 ).trimmed() );
+    RUN_TOKEN_TEST( "[4-] Test", "[4-]", filename, filename.right( filename.length() - 3 ) );
+    RUN_TOKEN_TEST( "[&4-[length]] Test", "[&4-[length]]", filename, filename.right( filename.length() - 3 ).toUpper() );
+    RUN_TOKEN_TEST( "[$4-[length]] Test", "[$4-[length]]", filename, filename.right( filename.length() - 3 ) );
+    RUN_TOKEN_TEST( "[%4-[length]] Test", "[%4-[length]]", filename, filename.right( filename.length() - 3 ).toLower() );
+    RUN_TOKEN_TEST( "[*4-[length]] Test", "[*4-[length]]", filename, "St File Name " );
+    RUN_TOKEN_TEST( "[trimmed;[4-]] Test", "[trimmed;[4-]]", filename, filename.right( filename.length() - 3 ).trimmed() );
     RUN_TOKEN_TEST( "[trimmed] Test", "[trimmed]", filename, filename.trimmed() );
     RUN_TOKEN_TEST( "[length] Test", "[length]", filename, QString::number( filename.length() ) );
     RUN_TOKEN_TEST( "[length-0] Test", "[length-0]", filename, QString::number( filename.length() ) );
@@ -295,31 +299,40 @@ void KRenameTest::testBatchRenamer()
     RUN_TOKEN_TEST( "[$6-9] Test", "[$6-9]", filename, filename.mid( 5, 4 ) );
     RUN_TOKEN_TEST( "[%6-9] Test", "[%6-9]", filename, filename.mid( 5, 4 ).toLower() );
     RUN_TOKEN_TEST( "[*6-9] Test", "[*6-9]", filename, filename.mid( 5, 4 ) );
-    RUN_TOKEN_TEST( "[\\6-9] Test", "[\\6-9]", filename, filename.mid( 5, 4 ).trimmed() );
+    RUN_TOKEN_TEST( "[trimmed;[6-9]] Test", "[trimmed;[6-9]]", filename, filename.mid( 5, 4 ).trimmed() );
     RUN_TOKEN_TEST( "[6;4] Test", "[6;4]", filename, filename.mid( 5, 4 ) );
     RUN_TOKEN_TEST( "[&6;4] Test", "[&6;4]", filename, filename.mid( 5, 4 ).toUpper() );
     RUN_TOKEN_TEST( "[$6;4] Test", "[$6;4]", filename, filename.mid( 5, 4 ) );
     RUN_TOKEN_TEST( "[%6;4] Test", "[%6;4]", filename, filename.mid( 5, 4 ).toLower() );
     RUN_TOKEN_TEST( "[*6;4] Test", "[*6;4]", filename, filename.mid( 5, 4 ) );
-    RUN_TOKEN_TEST( "[\\6;4] Test", "[\\6;4]", filename, filename.mid( 5, 4 ).trimmed() );
+    RUN_TOKEN_TEST( "[1;1{[length]}] Test", "[1;1{[length]}]", filename,  "1" );    
+    RUN_TOKEN_TEST( "[trimmed;[6;4]] Test", "[trimmed;[6;4]]", filename, filename.mid( 5, 4 ).trimmed() );
+    RUN_TOKEN_TEST( "[trimmed; Hallo ] Test", "[trimmed; Hallo ]", filename, "Hallo" );
     RUN_TOKEN_TEST( "[dirname] Test", "[dirname]", filename, directory1 );
     RUN_TOKEN_TEST( "[&dirname] Test", "[&dirname]", filename, directory1.toUpper() );
     RUN_TOKEN_TEST( "[$dirname] Test", "[$dirname]", filename, directory1 );
     RUN_TOKEN_TEST( "[%dirname] Test", "[%dirname]", filename, directory1.toLower() );
     RUN_TOKEN_TEST( "[*dirname] Test", "[*dirname]", filename, "Krename" );
-    RUN_TOKEN_TEST( "[\\dirname] Test", "[\\dirname]", filename, directory1 );
+    RUN_TOKEN_TEST( "[trimmed;[dirname]] Test", "[trimmed;[dirname]]", filename, directory1 );
     RUN_TOKEN_TEST( "[dirname.] Test", "[dirname.]", filename, directory2 );
     RUN_TOKEN_TEST( "[&dirname.] Test", "[&dirname.]", filename, directory2.toUpper() );
     RUN_TOKEN_TEST( "[$dirname.] Test", "[$dirname.]", filename, directory2 );
     RUN_TOKEN_TEST( "[%dirname.] Test", "[%dirname.]", filename, directory2.toLower() );
     RUN_TOKEN_TEST( "[*dirname.] Test", "[*dirname.]", filename, "Home" );
-    RUN_TOKEN_TEST( "[\\dirname.] Test", "[\\dirname.]", filename, directory2 );
+    RUN_TOKEN_TEST( "[trimmed;[dirname.]] Test", "[trimmed;[dirname.]]", filename, directory2 );
     RUN_TOKEN_TEST( "[dirname..] Test", "[dirname..]", filename, "" );
     RUN_TOKEN_TEST( "[&dirname..] Test", "[&dirname..]", filename, "" );
     RUN_TOKEN_TEST( "[$dirname..] Test", "[$dirname..]", filename, "" );
     RUN_TOKEN_TEST( "[%dirname..] Test", "[%dirname..]", filename, "" );
     RUN_TOKEN_TEST( "[*dirname..] Test", "[*dirname..]", filename, "" );
-    RUN_TOKEN_TEST( "[\\dirname..] Test", "[\\dirname..]", filename, "" );
+    // TODO: This test has strange effects that only occur if [dirname..] is QString::null
+    //RUN_TOKEN_TEST( "[trimmed;[dirname..]] Test", "[trimmed;[dirname..]]", filename, filename.trimmed() );
+    RUN_TOKEN_TEST( "Complex Test1", "&[2-5]", filename, filename.toUpper() + "Test" );
+    RUN_TOKEN_TEST( "Complex Test2", "%[2-5]", filename, filename.toLower() + "Test" );
+    RUN_TOKEN_TEST( "Complex Test3", "$[2-5]", filename, filename + "Test" );
+    RUN_TOKEN_TEST( "Complex Test4", "*[2-5]", filename, " Test File Name Test" );
+    RUN_TOKEN_TEST( "Complex Test5", "[trimmed][2-5]", filename, filename.trimmed() + "Test" );
+    RUN_TOKEN_TEST( "Complex Test6", "[&2-5]\\&[length-2]\\&[1;1{Hallo}]", filename, "TEST&14&H" );
 
     // Testing all special Characters in KRename
     RUN_TOKEN_TEST( "\\/ Test", "\\/", filename, "%2f" ); // this is displayed as a slash,

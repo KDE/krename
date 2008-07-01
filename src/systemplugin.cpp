@@ -101,9 +101,12 @@ QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & f
         return tmp.sprintf("%0*i", 2, d.month() );
     else if( token == "day" )
         return tmp.sprintf("%0*i", 2, d.day() );
-    else if( token == "time" )
-        return QString( "%1-%2-%3" ).arg( t.hour() ).arg( QString().sprintf("%0*i", 2, t.minute() ) ).arg( QString().sprintf("%0*i", 2, t.second() ) );
-    else if( token == "hour" )
+    else if( token == "time" ) {
+	QString hour   = QString().sprintf("%0*i", 2, t.hour() );
+	QString minute = QString().sprintf("%0*i", 2, t.minute() );
+	QString second = QString().sprintf("%0*i", 2, t.second() );
+	return QString( "%1-%2-%3" ).arg( hour ).arg( minute ).arg( second );
+    } else if( token == "hour" )
         return tmp.sprintf("%0*i", 2, t.hour() );
     else if( token == "minute" )
         return tmp.sprintf("%0*i", 2, t.minute() );

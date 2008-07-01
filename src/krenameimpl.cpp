@@ -460,6 +460,7 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
     help.append("[$dirname.];;" + i18n("insert name of parent directory") );
     help.append("[#length-0];;" + i18n("insert the length of the input filename") );
     help.append("[trimmed];;" + i18n("strip whitespaces leading and trailing") );
+    help.append("[trimmed;.*];;" + i18n("strip whitespaces leading and trailing of an arbitrary string") );
     dialog.add( i18n("Built-in Functions" ), help, SmallIcon("krename"), true );
 
     help.clear();

@@ -38,7 +38,7 @@ class CustomDialog : public QDialog {
     /**
      * \returns the manually changed filename
      */
-    const QString & manualChanges() const;
+    const QString manualChanges() const;
 
  private slots:
     void slotEnableControls();

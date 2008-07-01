@@ -55,7 +55,7 @@ const QPixmap DateTimePlugin::icon() const
     return KIconLoader::global()->loadIcon( "chronometer", KIconLoader::NoGroup, KIconLoader::SizeSmall );
 }
 
-QString DateTimePlugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType )
+QString DateTimePlugin::processFile( BatchRenamer*, int, const QString & filenameOrToken, EPluginType )
 {
     const QString & filename = filenameOrToken;
     bool  bModification = m_widget->checkModification->isChecked(); 

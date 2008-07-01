@@ -29,15 +29,6 @@ class QProgressDialog;
 class QString;
 class QTextStream;
 
-/* How many diferrent users and groups
- * KRename supports. Values over 1000
- * make KRename slow, but it may be
- * necessary on bigger systems to
- * increase this value.
- * MAXENTRIES must be < sizeof(int)
- */
-#define MAXENTRIES 1000
-
 /*
  * Changes made by hand by the user
  * in the preview list view are
@@ -53,8 +44,6 @@ typedef struct tCounterValues {
     int start;  // start value of this counter (for findResetCounter)
     int step;   // stepping value of this counter;
 };
-
-
 
 /** A structure describing a string or regular
  *  expression that is to be found in the final/resulting
@@ -187,23 +176,24 @@ class BatchRenamer : public QObject {
         inline void setMode( int m) { m_mode = m; }
         inline int mode() const { return m_mode; }
 
-        // Since 2.1 public, because plugins may want to access them to:
-        QString findAndProcess( const QString & token, QString text, const QString & replace );
-
-        QString findNumbers( QString text, int count, int i );
-        QString findStar( const QString & oldname, QString text );
-        QString findBrackets( QString oldname, QString text, int i );
         QString findToken( const QString & oldname, QString token, int i );
-        QString processToken( QString token, QString oldname, int i );
         QString findPartStrings( QString oldname, QString token );
         static QString findDirName( QString token, QString path );
 
-        static QString & doEscape( QString & text, bool filename = true );
+        static QString & doEscape( QString & text );
         static QString & unEscape( QString & text );
         static void escape( QString & text, const QString & token, const QString & sequence );
 
-        //static QString buildFilename( fileentry* entry, bool dir = true );
 
+        /** Capitalize a string.
+         *
+         *  Used to implement the * token.
+         *
+         *  @param a text string
+         *  @return a capitalized version of this string (every first letter is a capital letter now)
+         */
+        QString capitalize( const QString & text ) const;
+        
         /** Handle the [length] tokens
          *
          *  @param token a token found in square brackets
@@ -217,14 +207,16 @@ class BatchRenamer : public QObject {
          *
          *  @param token a token found in square brackets
          *  @param name the filename of the current file
+	 *  @param index index of the current file
          *
          *  @return QString::null if no length token was found or the a new string
          */
-        QString findTrimmed( const QString & token, const QString & name );
+        QString findTrimmed( const QString & token, const QString & name, int index );
 
         QString processString( QString text, const QString & originalName, int i );
         QString processBrackets( QString text, int* length, const QString & oldname, int index );
         QString processNumber( int length, const QString & appendix );
+        QString processToken( QString token, QString oldname, int i );
 
     public slots:
 
@@ -319,14 +311,6 @@ class BatchRenamer : public QObject {
         QString doReplace( const QString & text, const QString & find, const QString & replace, bool reg );
 
     private:
-        /** 
-         * Returns the length of the string when int n is converted to
-         * a string.
-         * @param n   a number whose length as string is needed
-         * @returns stringlength of n converted to a string 
-         */
-        int getCharacters( int n ) ;
-
         /** Execute all plugins of a certain type
          *
          *  @param index the current index
@@ -342,7 +326,7 @@ class BatchRenamer : public QObject {
         void work( ProgressDialog* p );
         void writeUndoScript( QTextStream* t );
         //void parseSubdirs( data* f );
-        void findNumberAppendix( QString & text, int pos, int* start, int* step );
+
 	/** resets all counters to there start value if the directory name at @p i
 	 *  in m_files changes.
 	 *  The caller has to check m_reset before calling this function.
@@ -404,13 +388,11 @@ ERenameMode BatchRenamer::renameMode() const
 void BatchRenamer::setFilenameTemplate( const QString & t ) 
 { 
     text = t;
-    doEscape( text, false ); 
 }
 
 void BatchRenamer::setExtensionTemplate( const QString & t ) 
 { 
     extext = t;
-    doEscape( extext, false ); 
 }
 
 int BatchRenamer::numberStartIndex() const
