@@ -159,11 +159,32 @@ void BatchRenamer::processFilenames()
         m_files[i].dst.name = BatchRenamer::buildFilename( &m_files[i].dst, true );
         */
 
-#if 0      
         /*
          * take care of renamed directories and
          * correct the paths of their contents
          */
+	if( (m_renameMode == eRenameMode_Rename ||
+	     m_renameMode == eRenameMode_Move) &&
+	    (*m_files)[i].isDirectory() )
+	{
+	    const QString & topDir = (*m_files)[i].srcDirectory();
+	    qDebug("TOPFILE=%s", (*m_files)[i].srcFilename().toUtf8().data() );
+
+	    for( int z = i; z < m_files->count(); z++ ) 
+	    {
+		const QString & dir = (*m_files)[z].srcDirectory();
+		qDebug("DIR=%s\n", dir.toUtf8().data() );
+		qDebug("SRC=%s\n", topDir.toUtf8().data() );
+		if( dir.startsWith( topDir ) )
+		{
+		    QString newDir = topDir + "/" + dir.right( dir.length() - topDir.length() );
+		    qDebug("newDir=%s", newDir.toUtf8().data() );
+		    //(*m_files[z])
+		}
+	    }
+	}
+	    
+#if 0      
         if( m_files[i].dir && (m_mode == RENAME || m_mode == MOVE) ) {
             for( unsigned int c = i; c < m_files.count(); c++ ) {
                 if( m_files[c].src.directory.left( m_files[i].src.name.length() + 1 )

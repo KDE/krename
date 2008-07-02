@@ -550,6 +550,10 @@ void KRenameImpl::slotStart()
 
     m_renamer.setDestinationDir( destination );
 
+    // save the configuration
+    // requires access to the window
+    saveConfig();
+
     // show the progress dialog
     progress->show();
     progress->raise();
@@ -560,9 +564,6 @@ void KRenameImpl::slotStart()
     //m_window = NULL;
     m_window->hide();
     m_window = NULL;
- 
-    // save the configuration
-    saveConfig();
 
     // Process files with addiational properties which were not 
     // necessary or available in the preview

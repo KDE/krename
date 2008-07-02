@@ -170,7 +170,7 @@ void ProgressDialog::error( const QString & text )
 
 void ProgressDialog::warning( const QString & text )
 {
-    this->print( text, "idea" );
+    this->print( text, "help-hint" );
 }
 
 #include "progressdialog.moc"
