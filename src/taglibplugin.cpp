@@ -62,8 +62,8 @@ QString TagLibPlugin::processFile( BatchRenamer* b, int index, const QString & f
     TagLib::FileRef g( TagLib::FileName(filename.toUtf8().data()) );
     TagLib::String result;
 
-    if( !g.tag() ) 
-	return QString::null;
+    if( g.isNull() )
+	return QString("");
 
     if( token == "tagtitle" )
 	result = g.tag()->title();
