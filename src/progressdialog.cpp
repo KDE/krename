@@ -30,12 +30,14 @@ ProgressDialog::ProgressDialog( QWidget* parent )
 {
     m_widget.setupUi( this );
 
-    m_buttonMore = m_widget.buttonBox->addButton( i18n("&Rename more..."), QDialogButtonBox::ActionRole );
-    m_buttonUndo = m_widget.buttonBox->addButton( i18n("&Undo"), QDialogButtonBox::ActionRole );
-    m_buttonDest = m_widget.buttonBox->addButton( i18n("&Open Destination..."), QDialogButtonBox::ActionRole );
+    m_buttonMore  = m_widget.buttonBox->addButton( i18n("&Rename more..."), QDialogButtonBox::ActionRole );
+    m_buttonUndo  = m_widget.buttonBox->addButton( i18n("&Undo"), QDialogButtonBox::ActionRole );
+    m_buttonDest  = m_widget.buttonBox->addButton( i18n("&Open Destination..."), QDialogButtonBox::ActionRole );
+    m_buttonClose = m_widget.buttonBox->button( QDialogButtonBox::Close );
 
     m_buttonUndo->setEnabled( false );
     m_buttonMore->setEnabled( false );
+    m_buttonClose->setEnabled( false );
 
     connect( m_widget.buttonCancel, SIGNAL(clicked(bool)), SLOT(slotCancelled()));
     connect( m_buttonDest,          SIGNAL(clicked(bool)), SLOT(slotOpenDestination()));
@@ -149,6 +151,7 @@ void ProgressDialog::renamingDone( bool enableUndo, BatchRenamer* renamer, int e
 
     m_buttonUndo->setEnabled( enableUndo );
     m_buttonMore->setEnabled( true );
+    m_buttonClose->setEnabled( true );
 
     m_actProcessed->setEnabled  ( renamer->files()->count() != errors );
     m_actUnprocessed->setEnabled( 0 != errors );

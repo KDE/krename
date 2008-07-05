@@ -426,10 +426,10 @@ int KRenamePreviewModel::columnCount ( const QModelIndex & ) const
 
 QVariant KRenamePreviewModel::headerData ( int section, Qt::Orientation orientation, int role ) const
 {
-    if (orientation != Qt::Horizontal || section >= 2 || role != Qt::DisplayRole )
+    if (orientation != Qt::Horizontal || section > 1 || role != Qt::DisplayRole )
         return QVariant();
 
-    return section ? i18n("Origin") : i18n("Renamed");
+    return (section == 1) ? i18n("Origin") : i18n("Renamed");
 } 
 
 QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
@@ -475,7 +475,7 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
 
         if( file.isDirectory() )
         {
-            filename = index.column() ? file.dstDirectory() : file.srcDirectory();
+            filename = (index.column() ? file.dstDirectory() : file.srcDirectory()) + '/' + filename;
         }
 
         return filename;

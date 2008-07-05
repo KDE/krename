@@ -140,6 +140,7 @@ class ProgressDialog : public QDialog {
     QPushButton* m_buttonUndo;
     QPushButton* m_buttonMore;
     QPushButton* m_buttonDest;
+    QPushButton* m_buttonClose;
 
     QAction*     m_actProcessed;
     QAction*     m_actUnprocessed;

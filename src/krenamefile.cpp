@@ -202,6 +202,10 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const KU
     {
         if( rDescription.directory.endsWith( '/' ) )
             rDescription.directory = rDescription.directory.left( rDescription.directory.length() - 1 );
+
+	int lastSlash = rDescription.directory.lastIndexOf('/');
+	rDescription.filename  = rDescription.directory.right( rDescription.directory.length() - lastSlash - 1 );
+	rDescription.directory = rDescription.directory.left( lastSlash );
     }
 
     /*
@@ -236,5 +240,24 @@ int KRenameFile::dots() const
     return dots;
 }
 
+const KUrl KRenameFile::srcUrl() const 
+{
+    if( m_overrideDir.isNull() )
+	return m_src.url;
+    else
+    {
+	KUrl changed = m_src.url;
+	changed.setDirectory( m_overrideDir );
+	QString filename = m_src.filename;
+	if( !m_src.extension.isEmpty() )
+	{
+	    filename += '.';
+	    filename += m_src.extension;
+	}
+
+	changed.setFileName( filename );
+	return changed;
+    }
+}
 
 

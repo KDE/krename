@@ -217,6 +217,19 @@ class KRenameFile {
         m_manual = manual;
     }
 
+    /** 
+     * \returns always the original source directory
+     */
+    inline const QString & realSrcDirectory() const 
+    {
+            return m_src.directory;
+    }
+
+    inline void setOverrideSrcDirectory( const QString & dir ) 
+    {
+	m_overrideDir = dir;
+    }
+
     inline const QString & srcFilename() const 
     {
         return m_src.filename;
@@ -229,13 +242,10 @@ class KRenameFile {
 
     inline const QString & srcDirectory() const 
         {
-            return m_src.directory;
+            return (m_overrideDir.isNull() ? m_src.directory : m_overrideDir);
         }
 
-    inline const KUrl & srcUrl() const 
-        {
-            return m_src.url;
-        }
+    const KUrl srcUrl() const; 
 
     inline void setDstFilename( const QString & filename ) 
         {
@@ -293,6 +303,8 @@ class KRenameFile {
  private:
     TFileDescription m_src;
     TFileDescription m_dst;
+
+    QString          m_overrideDir;  ///< A changed sourcedirectory (required when renaming directories)
 
     bool             m_bDirectory;   ///< If true this is a directory
     bool             m_bValid;       ///< If true this item is valid

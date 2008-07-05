@@ -47,7 +47,7 @@ ThreadedLister::~ThreadedLister()
 void ThreadedLister::run()
 {
     s_mutex.lock();
-    if( m_listDirnames ) 
+    if( m_listDirnames || m_listDirnamesOnly ) 
     {
         QString name = m_dirname.fileName();
         if( !m_listHiddenFiles && !name.startsWith(".") )        
