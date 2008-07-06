@@ -35,9 +35,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 
-#ifndef VERSION
-    #define VERSION "3.9.1"
-#endif
+#include "../config-krename.h"
 
 int main(int argc, char *argv[])
 {
@@ -61,7 +59,7 @@ int main(int argc, char *argv[])
                               "Testing, bug fixes and feature request are as welcome\n"
                               "as financial support (everybody needs money ;)\nSee help files for details.\n" ),
                           KAboutData::License_GPL, ki18n("KRename Build:" __DATE__ " " __TIME__ )
-                          , ki18n("(c) 2001-2007, Dominik Seichter\n"),
+                          , ki18n("(c) 2001-2008, Dominik Seichter\n"),
                           "http://www.krename.net", "domseichter@web.de" );
 
     aboutData.addAuthor( ki18n("Dominik Seichter"), ki18n("developer and maintainer"), "domseichter@web.de",
