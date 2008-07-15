@@ -36,8 +36,8 @@
 // increase if you need more
 #define MAXENTRIES 1000
 
-PermissionsPlugin::PermissionsPlugin()
-    : QObject( NULL ), m_curPermission( S_IRUSR | S_IWUSR | S_IRGRP )
+PermissionsPlugin::PermissionsPlugin( PluginLoader* loader )
+    : QObject( NULL ), Plugin( loader ), m_curPermission( S_IRUSR | S_IWUSR | S_IRGRP )
 {
     m_widget = new Ui::PermissionsPluginWidget();
 

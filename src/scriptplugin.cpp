@@ -30,7 +30,8 @@
 #include <kjs/interpreter.h>
 #include <kjs/value.h>
 */
-ScriptPlugin::ScriptPlugin()
+ScriptPlugin::ScriptPlugin( PluginLoader* loader )
+    : Plugin( loader )
 {
     m_name = "ScriptPlugin";
     /*

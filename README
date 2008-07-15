@@ -19,6 +19,9 @@ Visit the Krename Homepage at: http://www.krename.net
            HAVE FUN!
            Dominik Seichter <domseichter@web.de>
 
+If compilation fails with a message saying that automoc was not found,
+run export CMAKE_PREFIX_PATH=/opt/kde-nightly/ before running cmake.
+
 ==============================
 Old Version of the text above:
 ==============================

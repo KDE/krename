@@ -26,14 +26,16 @@
 #include <QLabel>
 #include <QHBoxLayout>
 
-FilePlugin::FilePlugin( KService* service )
+FilePlugin::FilePlugin( PluginLoader* loader, KService* service )
+    : Plugin( loader )
 {
     m_name = service->name();
     m_icon = service->icon();
     m_comment = QString::null;
 }
 
-FilePlugin::FilePlugin()
+FilePlugin::FilePlugin( PluginLoader* loader )
+    : Plugin( loader )
 {
     m_name = "FilePlugin";
 }

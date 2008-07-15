@@ -68,7 +68,7 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list 
     m_model->addFiles( list );
 
     m_pluginLoader = PluginLoader::Instance();
-
+    m_pluginLoader->registerForUpdates( this );
 
     loadConfig();
 
@@ -80,6 +80,7 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list 
 
 KRenameImpl::~KRenameImpl()
 {
+    m_pluginLoader->deregisterForUpdates( this );
     delete m_model;
 }
 

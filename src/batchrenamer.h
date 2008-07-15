@@ -317,7 +317,7 @@ class BatchRenamer : public QObject {
          *  @param filenameOrPath the current filename or path
          *  @param type the type of the plugins to run
          *  @param errorCount the number of errors will be written to this value
-         *  @param p dialog for error reporting
+         *  @param p dialog for error reporting (maybe NULL)
          *
          *  @returns either a new filename or an error message (depends on plugin type)
          */

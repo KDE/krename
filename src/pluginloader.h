@@ -21,10 +21,12 @@
 #include <QHash>
 #include <QList>
 #include <QMap>
+#include <QObject>
 
 class Plugin;
+class KRenameImpl;
 
-class PluginLoader {
+class PluginLoader  {
  public:
     ~PluginLoader();
 
@@ -45,6 +47,16 @@ class PluginLoader {
      */
     inline const QList<Plugin*> & plugins() const { return m_plugins; }
 
+    /** This maybe called by plugins,
+     *  if a setting in their UI was changed
+     *  so that the preview in KRename
+     *  should be updated.
+     */
+    void sendUpdatePreview();
+
+    void registerForUpdates( KRenameImpl* kreanme );
+    void deregisterForUpdates( KRenameImpl* kreanme );
+    
  private:
     PluginLoader();
 
@@ -64,6 +76,8 @@ class PluginLoader {
 
     QMap<QString,Plugin*>  m_tokenMap;   ///< All supported tokens in brackets are listed here
     QHash<QString,Plugin*> m_tokenCache; ///< All used tokens are listed here
+
+    QList<KRenameImpl*>  m_observers;    ///< A list of KRenameImpls that should be notified on updates
 };
 
 #endif // _PLUGIN_LOADER_H_

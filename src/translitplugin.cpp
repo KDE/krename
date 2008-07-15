@@ -85,8 +85,8 @@ const QString TranslitPlugin::s_strEngl[]= {"a","b","v","g","d","e","yo","zh","z
 
 QHash<QString,QString> TranslitPlugin::s_mapFromUTF8;
 
-TranslitPlugin::TranslitPlugin()
-    : FilePlugin()
+TranslitPlugin::TranslitPlugin( PluginLoader* loader )
+    : FilePlugin( loader )
 {
     this->addSupportedToken("transliterated");
     this->addSupportedToken("transliterated;.*");

@@ -17,8 +17,8 @@
 
 #include "plugin.h"
 
-Plugin::Plugin()
-    : m_enabled( false )
+Plugin::Plugin( PluginLoader* loader )
+    : m_pluginLoader( loader ), m_enabled( false )
 {
 }
 

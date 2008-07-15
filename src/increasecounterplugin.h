@@ -1,8 +1,8 @@
 /***************************************************************************
-                          plugin.h  -  description
+                   increasecounterplugin.h  -  description
                              -------------------
-    begin                : Sun Dec 30 2001
-    copyright            : (C) 2001 by Dominik Seichter
+    begin                : Tue Jul 15 2008
+    copyright            : (C) 2008 by Dominik Seichter
     email                : domseichter@web.de
  ***************************************************************************/
 
@@ -15,38 +15,31 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _PLUGIN_H_
-#define _PLUGIN_H_
+#ifndef _INCREASE_COUNTER_PLUGIN_H_
+#define _INCREASE_COUNTER_PLUGIN_H_
 
-#include <QPixmap>
-#include <QString>
+#include <plugin.h>
 
-class BatchRenamer;
-class PluginLoader;
-
-/** An enum to determine the correct plugin type.
- * 
- *  A plugin may be of different types at a time.
- */
-enum EPluginType {
-    ePluginType_Token     = 0x01, ///< A plugin that handles a token in brackets [ ]
-    ePluginType_Filename  = 0x02, ///< A plugin that transforms the complete final filename
-    ePluginType_File      = 0x04  ///< A plugin that changes the finally renamed file
+namespace Ui {
+    class IncreaseCounterPluginWidget;
 };
 
 /** This is the abstract interface that has to be implemented
  *  by all KRename plugins.
  */
-class Plugin {
+class IncreaseCounterPlugin : public QObject, public Plugin {
+
+ Q_OBJECT
+
  public:
-    Plugin( PluginLoader* loader );
-    virtual ~Plugin();
+    IncreaseCounterPlugin( PluginLoader* loader );
+    virtual ~IncreaseCounterPlugin();
 
     /** 
      * @returns a name of the plugin that can be displayed
      *          to the user. This name should be internationalized.
      */
-    virtual const QString name() const = 0;
+    virtual const QString name() const;
 
     /** 
      * Determines the type of the plugin.
@@ -54,27 +47,12 @@ class Plugin {
      *
      * @returns the type of the plugin.
      */
-    virtual int type() const = 0;
+    inline virtual int type() const;
 
     /**
      * @returns an icon for this plugin.
      */
-    virtual const QPixmap icon() const = 0;
-
-    /** Set the enabled state of a plugin
-     *  so that it can be used.
-     *
-     *  \param b the enabled state of the plugin.
-     *
-     *  This has no effect if alwaysEnabled returns true
-     */
-    inline void setEnabled( bool b );
-
-    /** 
-     * @returns true if this plugin is enabled.
-     * Only use it if it is enabled.
-     */
-    inline bool isEnabled() const;
+    virtual const QPixmap icon() const;
 
     /**
      * @returns true if this plugins is always enabled
@@ -82,7 +60,7 @@ class Plugin {
      * Warning: If you return true here, the user has no possibility to
      *          disable this plugin.
      */
-    virtual bool alwaysEnabled() const = 0;
+    inline virtual bool alwaysEnabled() const;
     
     /**
      * This function is the core of your plugin.
@@ -111,7 +89,7 @@ class Plugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType ) = 0;
+    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
 
     /** Get a list of all tokens supported by this plugin. 
      *
@@ -120,7 +98,7 @@ class Plugin {
      *  @returns a list of all supported tokens. The returned strings will be treated
      *           as regular expressions to find a plugin which supports a token.
      */
-    virtual const QStringList & supportedTokens() const = 0;
+    inline virtual const QStringList & supportedTokens() const;
 
     /** Returns help descriptions for the supported tokens
      *
@@ -129,45 +107,51 @@ class Plugin {
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    virtual const QStringList & help() const = 0;
+    inline virtual const QStringList & help() const;
 
     /** Create a user interface for this plugin
      *
      *  @param parent the parent widget of this plugin
      */
-    virtual void createUI( QWidget* parent ) const = 0;
+    virtual void createUI( QWidget* parent ) const;
 
-    /*
-        virtual bool checkError() = 0;
-        virtual void drawInterface( QWidget* w, QVBoxLayout* l ) = 0;
-        virtual void fillStructure() { }
-        virtual QString processFile( BatchRenamer* b, int i, QString token, int mode ) = 0;
-        virtual void finished() { }
-        
-        virtual void addHelp( HelpDialogData* data );
-        virtual void removeHelp(  HelpDialogData* data );
-
-        virtual void clearCache();
-        
-        virtual const QPixmap getIcon() const;
-        virtual const QStringList getKeys() const;
-    */
-
- protected:
-    PluginLoader* m_pluginLoader;
+ private slots:
+    /**
+     * Called when the user changes the offset through the UI
+     *
+     * @param offset the new offset
+     */
+    void slotOffsetChanged( int offset );
 
  private:
-    bool m_enabled;
+    Ui::IncreaseCounterPluginWidget* m_widget;
+    
+    int m_offset;         ///< Increase counter by this offset
+
+    QStringList m_tmp;    ///< Dummy empty list so that we can return a reference for supported tokens and help
+    QStringList m_users;  ///< List of all usernames on the system
+    QStringList m_groups; ///< List of all groups on the system
 };
 
-inline void Plugin::setEnabled( bool b )
+inline int IncreaseCounterPlugin::type() const
 {
-    m_enabled = b;
+    return ePluginType_Filename;
 }
 
-inline bool Plugin::isEnabled() const
+inline bool IncreaseCounterPlugin::alwaysEnabled() const
 {
-    return this->alwaysEnabled() || m_enabled;
+    return false;
 }
 
-#endif // _PLUGIN_H_
+inline const QStringList & IncreaseCounterPlugin::supportedTokens() const
+{
+    return m_tmp;
+}
+
+inline const QStringList & IncreaseCounterPlugin::help() const
+{
+    return m_tmp;
+}
+
+#endif // _INCREASE_COUNTER_PLUGIN_H_
+

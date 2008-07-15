@@ -24,7 +24,7 @@ class SystemPlugin : public FilePlugin {
  public:
     /** Create a new SystemPlugin
      */
-    SystemPlugin();
+    SystemPlugin( PluginLoader* loader );
 
     virtual ~SystemPlugin();
 

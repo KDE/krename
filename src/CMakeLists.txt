@@ -22,6 +22,7 @@ SET(krename_SRCS
   exthistorycombo.cpp
   filedialogextwidget.cpp
   fileplugin.cpp
+  increasecounterplugin.cpp
   krenamefile.cpp 
   krenameimpl.cpp 
   krenamemodel.cpp
@@ -47,6 +48,7 @@ SET(krename_SRCS
 kde4_add_ui_files( krename_SRCS 
   customfilenamedlg.ui		
   datetimepluginwidget.ui
+  increasecounterpluginwidget.ui
   guimodeselector.ui 
   partfilenamewidget.ui
   krenamefiles.ui 

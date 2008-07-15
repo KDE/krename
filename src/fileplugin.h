@@ -28,7 +28,7 @@ class FilePlugin : public Plugin {
      *
      *  @param service pointer to a KService
      */
-    FilePlugin( KService* service );
+    FilePlugin( PluginLoader* loader, KService* service );
 
     virtual ~FilePlugin();
 
@@ -111,7 +111,7 @@ class FilePlugin : public Plugin {
     void createUI( QWidget* parent ) const;
 
  protected:
-    FilePlugin();
+    FilePlugin( PluginLoader* loader );
 
     /** 
      *  Checks if a token is supported by this plugin.

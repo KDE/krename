@@ -17,10 +17,12 @@
 
 #include "pluginloader.h"
 
+#include "krenameimpl.h"
 #include "plugin.h"
 
 #include "datetimeplugin.h"
 #include "fileplugin.h"
+#include "increasecounterplugin.h"
 #include "permissionsplugin.h"
 #include "scriptplugin.h"
 #include "systemplugin.h"
@@ -100,12 +102,13 @@ void PluginLoader::clear()
 
 void PluginLoader::load()
 {
-    m_plugins.append( new DateTimePlugin() );
-    m_plugins.append( new PermissionsPlugin() );
-    m_plugins.append( new ScriptPlugin() );
-    m_plugins.append( new SystemPlugin() );
-    m_plugins.append( new TagLibPlugin() );
-    m_plugins.append( new TranslitPlugin() );
+    m_plugins.append( new DateTimePlugin( this ) );
+    m_plugins.append( new IncreaseCounterPlugin( this ) );
+    m_plugins.append( new PermissionsPlugin( this ) );
+    m_plugins.append( new ScriptPlugin( this ) );
+    m_plugins.append( new SystemPlugin( this ) );
+    m_plugins.append( new TagLibPlugin( this ) );
+    m_plugins.append( new TranslitPlugin( this ) );
     //this->loadFilePlugins();
 
 
@@ -125,6 +128,28 @@ void PluginLoader::load()
         }
 
         ++it;
+    }
+}
+
+void PluginLoader::registerForUpdates( KRenameImpl* krename )
+{
+    m_observers.prepend( krename );
+}
+
+void PluginLoader::deregisterForUpdates( KRenameImpl* krename )
+{
+    m_observers.removeOne( krename );
+}
+
+void PluginLoader::sendUpdatePreview()
+{
+    QList<KRenameImpl*>::iterator it = m_observers.begin();
+
+    while( it != m_observers.end() )
+    {
+	(*it)->slotUpdatePreview();
+	
+	++it;
     }
 }
 

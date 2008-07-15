@@ -165,8 +165,10 @@ void KRenameModel::setEnablePreview( bool preview, bool filenames )
     m_text    = filenames;
 
     if( update )
+    {
         // TODO: update the model
         ;
+    }
 }
 
 class KRenamePreviewModel : public QAbstractTableModel {

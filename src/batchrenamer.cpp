@@ -146,6 +146,13 @@ void BatchRenamer::processFilenames()
         qDebug("DSTFILENAME IS    : %s", (*m_files)[i].dstFilename().toUtf8().data());
         (*m_files)[i].setDstExtension( processString( extext, (*m_files)[i].srcExtension(), i ) );
 
+        // Let's run the plugins that change the final filename,
+        // i.e the encodingsplugin
+	int errors = 0;
+	QString name = executePlugin( i, (*m_files)[i].dstFilename(), ePluginType_Filename, errors, NULL );
+	if( !name.isNull() ) 
+	    (*m_files)[i].setDstFilename( name );
+
         (void)applyManualChanges( i );
 
         // Assemble filenames
@@ -155,9 +162,6 @@ void BatchRenamer::processFilenames()
         /*
         m_files[i].src.name = BatchRenamer::buildFilename( &m_files[i].src, true );
 
-        // Let's run the plugins that change the final filename,
-        // i.e the encodingsplugin
-        m_files[i].dst.name = parsePlugins( i, m_files[i].dst.name, TYPE_FINAL_FILENAME );
 
         m_files[i].dst.name = BatchRenamer::buildFilename( &m_files[i].dst, true );
         */
@@ -624,17 +628,17 @@ QString BatchRenamer::executePlugin( int index, const QString & filenameOrPath, 
     QString ret = filenameOrPath;
     while( it != plugins.end() ) 
     {
-        qDebug("Checking %s", (*it)->name().toUtf8().data() );
         if( (*it)->isEnabled() && ((*it)->type() & type) )
         {
             // Every plugin should use the return value of the previous as the new filename to work on
             ret = (*it)->processFile( this, index, ret, static_cast<EPluginType>(type) );
             if( type == ePluginType_File ) 
             {
-                if( ret != QString::null  ) 
+                if( ret != QString::null ) 
                 {
                     // An error occurred -> report it
-                    p->error( ret );
+		    if( p != NULL )
+			p->error( ret );
                     ++errorCount;
                 }
 

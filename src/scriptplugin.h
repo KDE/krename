@@ -29,7 +29,7 @@ class ScriptPlugin : public Plugin {
     /** Create a new ScriptPlugin from
      *
      */
-    ScriptPlugin();
+    ScriptPlugin( PluginLoader* loader );
 
     virtual ~ScriptPlugin();
 

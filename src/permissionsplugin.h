@@ -35,7 +35,7 @@ class PermissionsPlugin : public QObject, public Plugin {
  Q_OBJECT
 
  public:
-    PermissionsPlugin();
+    PermissionsPlugin( PluginLoader* loader );
     virtual ~PermissionsPlugin();
 
     /** 

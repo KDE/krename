@@ -34,8 +34,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-DateTimePlugin::DateTimePlugin()
-    : QObject( NULL )
+DateTimePlugin::DateTimePlugin( PluginLoader* loader )
+    : QObject( NULL ), Plugin( loader )
 {
     m_widget = new Ui::DateTimePluginWidget;
 }

@@ -37,7 +37,7 @@ class DateTimePlugin : public QObject, public Plugin {
  Q_OBJECT
 
  public:
-    DateTimePlugin();
+    DateTimePlugin( PluginLoader* loader );
     virtual ~DateTimePlugin();
 
     /** 

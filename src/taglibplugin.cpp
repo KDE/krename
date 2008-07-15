@@ -27,8 +27,8 @@
 
 #include "batchrenamer.h"
 
-TagLibPlugin::TagLibPlugin()
-    : FilePlugin()
+TagLibPlugin::TagLibPlugin( PluginLoader* loader )
+    : FilePlugin( loader )
 {
     this->addSupportedToken("tagTitle");
     this->addSupportedToken("tagArtist");

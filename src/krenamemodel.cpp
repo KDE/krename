@@ -179,7 +179,7 @@ QStringList KRenameModel::mimeTypes() const
 
 bool KRenameModel::dropMimeData(const QMimeData *data,
                                 Qt::DropAction action,
-                                int row, int,
+                                int, int,
                                 const QModelIndex &)
 {
     if (action == Qt::IgnoreAction)

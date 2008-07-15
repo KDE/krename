@@ -41,6 +41,11 @@ class KRenameImpl : public QObject {
 
     static QWidget* launch( const QRect & rect, const KRenameFile::List & list, bool loadprofile = true );
 
+ public slots:
+    /** Updates the preview of the filenames after renaming
+     */
+    void slotUpdatePreview();
+
  private:
     KRenameImpl( KRenameWindow* window, const KRenameFile::List & list );
 
@@ -120,10 +125,6 @@ class KRenameImpl : public QObject {
      *  in the file list of KRename
      */
     void slotUpdateCount();
-
-    /** Updates the preview of the filenames after renaming
-     */
-    void slotUpdatePreview();
 
     /** This slot shows a dialog with advanced numbering settings
      *  - start index

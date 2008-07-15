@@ -26,8 +26,8 @@
 #include <kio/netaccess.h>
 #include <klocale.h>
 
-SystemPlugin::SystemPlugin()
-    : FilePlugin()
+SystemPlugin::SystemPlugin(  PluginLoader* loader )
+    : FilePlugin( loader )
 {
     this->addSupportedToken("date");
     this->addSupportedToken("date;.*");
