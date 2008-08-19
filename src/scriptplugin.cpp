@@ -19,13 +19,18 @@
 
 #include <kapplication.h>
 #include <kconfiggroup.h>
+#include <kfiledialog.h>
 #include <kiconloader.h>
 #include <klistwidget.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 
+#include <kio/netaccess.h>
+
+#include <QFile>
 #include <QLabel>
 #include <QHBoxLayout>
+#include <QTextStream>
 
 #include <kjs/kjsinterpreter.h>
 
@@ -110,6 +115,16 @@ void ScriptPlugin::createUI( QWidget* parent ) const
     connect( m_widget->buttonTest,    SIGNAL(clicked(bool)), SLOT(slotTest()) );
 
     const_cast<ScriptPlugin*>(this)->slotEnableControls();
+
+    QPixmap openIcon   = KIconLoader::global()->loadIcon( "document-open", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+    QPixmap saveIcon   = KIconLoader::global()->loadIcon( "document-save", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+    QPixmap removeIcon = KIconLoader::global()->loadIcon( "list-remove", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+    QPixmap addIcon    = KIconLoader::global()->loadIcon( "list-add", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+
+    m_widget->buttonLoad->setIcon( openIcon );
+    m_widget->buttonSave->setIcon( saveIcon );
+    m_widget->buttonAdd->setIcon( addIcon );
+    m_widget->buttonRemove->setIcon( removeIcon );
 }
 
 void ScriptPlugin::initKRenameVars( const KRenameFile & file, int index )
@@ -179,6 +194,45 @@ void ScriptPlugin::slotRemove()
 
 void ScriptPlugin::slotLoad()
 {
+    if( !m_widget->textCode->toPlainText().isEmpty() && 
+	KMessageBox::questionYesNo( m_parent, 
+				    i18n("All currently entered definitions will be lost. Do you want to continue?") ) 
+	== KMessageBox::No )
+    {
+	return;
+    }
+
+    KFileDialog dialog( KUrl("kfiledialog://krenamejscript"), 
+			i18n("*|All files and directories"), 
+			m_parent );
+    dialog.setOperationMode( KFileDialog::Opening );
+    dialog.setMode( KFile::File | KFile::ExistingOnly );
+
+    if( dialog.exec() == QDialog::Accepted ) 
+    {
+	// Also support remote files
+	QString tmpFile;
+	if( KIO::NetAccess::download( dialog.selectedUrl(), tmpFile, m_parent ) )
+	{
+	    QFile file(tmpFile);
+	    if( file.open(QFile::ReadOnly | QFile::Text) )
+	    {
+		QTextStream in(&file);
+		QString text = in.readAll();
+		m_widget->textCode->setPlainText( text );
+
+		file.close();
+	    }
+	    else
+		KMessageBox::error(m_parent, i18n("Unable to open %1 for reading.", tmpFile ) );
+
+	    KIO::NetAccess::removeTempFile( tmpFile );
+	}
+	else 
+	{
+	    KMessageBox::error(m_parent, KIO::NetAccess::lastErrorString() );
+	}
+    }
 }
 
 void ScriptPlugin::slotSave()
