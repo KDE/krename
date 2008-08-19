@@ -153,3 +153,25 @@ void PluginLoader::sendUpdatePreview()
     }
 }
 
+
+void PluginLoader::loadConfig( KConfigGroup & group ) 
+{
+    QList<Plugin*>::const_iterator it = m_plugins.begin();
+    while( it != m_plugins.end() )
+    {
+	(*it)->loadConfig( group );
+        ++it;
+    }
+
+}
+
+void PluginLoader::saveConfig( KConfigGroup & group ) 
+{
+    QList<Plugin*>::const_iterator it = m_plugins.begin();
+    while( it != m_plugins.end() )
+    {
+	(*it)->saveConfig( group );
+        ++it;
+    }
+
+}

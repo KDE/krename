@@ -37,12 +37,12 @@
 DateTimePlugin::DateTimePlugin( PluginLoader* loader )
     : QObject( NULL ), Plugin( loader )
 {
-    m_widget = new Ui::DateTimePluginWidget;
+    m_widget = new Ui::DateTimePluginWidget();
 }
 
 DateTimePlugin::~DateTimePlugin()
 {
-
+    delete m_widget;
 }
 
 const QString DateTimePlugin::name() const

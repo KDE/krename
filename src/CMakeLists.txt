@@ -60,6 +60,8 @@ kde4_add_ui_files( krename_SRCS
   progressdialog.ui
   replacewidget.ui
   replaceitemdlg.ui
+  scriptpluginwidget.ui
+  scriptplugindialog.ui
   tokenhelpwidget.ui
   )
 
@@ -82,7 +84,7 @@ TARGET_LINK_LIBRARIES(krename ${KDE4_KDECORE_LIBS}
                               ${KDE4_KDEUI_LIBS}
 			      ${KDE4_KIO_LIBS} 
 			      ${KDE4_KMETADATA}
-			      ${KDE4_KJS_LIBS} 
+			      ${KDE4_KJSAPI_LIBS} 
 			      ${TAGLIB_LIBRARIES} )
 
 INSTALL(TARGETS krename DESTINATION ${BIN_INSTALL_DIR})

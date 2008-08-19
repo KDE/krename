@@ -610,6 +610,10 @@ void KRenameImpl::loadConfig()
     width = groupGui.readEntry( "Column1", QVariant(m_window->previewColumnWidth( 1 )) ).toInt();
     m_window->setPreviewColumnWidth( 1, width );
 
+
+    // save Plugin configuration
+    KConfigGroup groupPlugins = config->group( QString("PluginSettings") );
+    m_pluginLoader->loadConfig( groupPlugins );
 }
 
 void KRenameImpl::saveConfig() 
@@ -634,6 +638,10 @@ void KRenameImpl::saveConfig()
     groupWindow.writeEntry( "Height", m_window->height() );
     groupWindow.writeEntry( "XPos", m_window->x() );
     groupWindow.writeEntry( "YPos", m_window->y() );
+
+    // save Plugin configuration
+    KConfigGroup groupPlugins = config->group( QString("PluginSettings") );
+    m_pluginLoader->saveConfig( groupPlugins );
 
     config->sync();
 }

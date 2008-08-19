@@ -24,6 +24,7 @@
 #include <QObject>
 
 class Plugin;
+class KConfigGroup;
 class KRenameImpl;
 
 class PluginLoader  {
@@ -53,6 +54,22 @@ class PluginLoader  {
      *  should be updated.
      */
     void sendUpdatePreview();
+
+    /** Save the plugin configuration.
+     *
+     *  Called when plugins should save their configuration.
+     *
+     *  @param group config group where the configuration should be stored
+     */
+    void saveConfig( KConfigGroup & group );
+
+    /** Load the plugin configuration.
+     *
+     *  Called when plugins should load their configuration.
+     *
+     *  @param group config group where the configuration should be read from
+     */
+    void loadConfig( KConfigGroup & group );
 
     void registerForUpdates( KRenameImpl* kreanme );
     void deregisterForUpdates( KRenameImpl* kreanme );

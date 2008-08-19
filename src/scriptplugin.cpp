@@ -18,59 +18,72 @@
 #include "scriptplugin.h"
 
 #include <kapplication.h>
+#include <kconfiggroup.h>
 #include <kiconloader.h>
 #include <klistwidget.h>
 #include <klocale.h>
+#include <kmessagebox.h>
 
 #include <QLabel>
 #include <QHBoxLayout>
 
-/*
-#include <kjs/completion.h>
-#include <kjs/interpreter.h>
-#include <kjs/value.h>
-*/
+#include <kjs/kjsinterpreter.h>
+
+#include "ui_scriptplugindialog.h"
+#include "ui_scriptpluginwidget.h"
+#include "batchrenamer.h"
+#include "krenamefile.h"
+
 ScriptPlugin::ScriptPlugin( PluginLoader* loader )
-    : Plugin( loader )
+    : QObject(), 
+      Plugin( loader ), m_parent( NULL )
 {
-    m_name = "ScriptPlugin";
-    /*
-    m_interpreter = new KJS::Interpreter();
+    m_name = i18n("JavaScript Plugin");
+    m_icon = "applications-development";
+    m_interpreter = new KJSInterpreter();
+    m_widget = new Ui::ScriptPluginWidget();
 
-    QString script = "alert(\"Hello\"); 4 + 6;";
+    this->addSupportedToken("js;.*");
 
-    KJS::Completion comp = m_interpreter->evaluate( KJS::UString(), 0, KJS::UString( script.toUtf8().data() ) );
-    if( comp.complType() == KJS::ReturnValue )
-    {
-        qDebug( comp.value()->toString( m_interpreter->globalExec() ).cstring().c_str() ); 
-    }
-    else
-        qDebug("compType=%i\n", comp.complType() ); 
-    */
+    m_help.append( "[js;4+5];;" + i18n("Insert a snippet of JavaScript code (4+5 in this case)") );
 }
 
 ScriptPlugin::~ScriptPlugin()
 {
-
+    delete m_widget;
+    delete m_interpreter;
 }
 
-QString ScriptPlugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType )
+QString ScriptPlugin::processFile( BatchRenamer* b, int index, 
+				   const QString & filenameOrToken, EPluginType )
 {
+    QString token( filenameOrToken );
+    QString script;
+
+    if( token.contains( ";" ) )
+    {
+        script = token.section( ';', 1 ); // all sections from 1 to the last
+        token  = token.section( ';', 0, 0 ).toLower();
+    } else 
+        token = token.toLower();
+
+    if( token == "js" ) 
+    {
+	// Setup interpreter
+	const KRenameFile & file = b->files()->at( index );
+	initKRenameVars( file, index );
+
+	KJSResult result = m_interpreter->evaluate( script, NULL );
+	if( result.isException() )
+	{
+	    qDebug( "JavaScript Error: %s", result.errorMessage().toUtf8().data() );
+	    return QString::null;
+	}
+
+	return result.value().toString( m_interpreter->globalContext() );
+    }
 
     return QString::null;
-}
-
-bool ScriptPlugin::supports( const QString & token )
-{
-    QString lower = token.toLower();
-
-    for( int i = 0; i < m_keys.count(); i++ )
-        // TODO: Maybe we can optimize by putting all tokens
-        //       already converted to lowercase into m_keys
-        if( QRegExp( m_keys[i].toLower() ).exactMatch( lower ) )
-            return true;
-            
-    return false;
 }
 
 const QPixmap ScriptPlugin::icon() const
@@ -80,31 +93,109 @@ const QPixmap ScriptPlugin::icon() const
 
 void ScriptPlugin::createUI( QWidget* parent ) const
 {
-    QSpacerItem* spacer = new QSpacerItem( 20, 20, QSizePolicy::Expanding, QSizePolicy::Expanding );
-    
-    QVBoxLayout* l    = new QVBoxLayout( parent );
-    QHBoxLayout* hbox = new QHBoxLayout( parent );
-    
-    QLabel* pix = new QLabel( parent );
-    pix->setPixmap( KIconLoader::global()->loadIcon( m_icon, KIconLoader::Desktop ) );
-    
-    hbox->addWidget( pix );
-    hbox->addWidget( new QLabel( "<qt><b>"+name()+"</b></qt>", parent  ) );
-    hbox->addItem( spacer );
+    QStringList labels;
+    labels << i18n("Variable Name");
+    labels << i18n("Initial Value");
 
-    l->addLayout( hbox );    
-    l->addWidget( new QLabel( i18n("This plugin can execute custom scripts."), parent  ) );
-    l->addWidget( new QLabel( i18n("Supported tokens:"), parent  ) );
+    const_cast<ScriptPlugin*>(this)->m_parent = parent;
+    m_widget->setupUi( parent );
+    m_widget->listVariables->setColumnCount( 2 );
+    m_widget->listVariables->setHeaderLabels( labels );
 
-    KListWidget* list = new KListWidget( parent  );
-    //list->setColumnMode( KListBox::FitToWidth );
-    
-    const QStringList & keys = supportedTokens();
+    connect( m_widget->listVariables, SIGNAL(itemSelectionChanged()), SLOT(slotEnableControls()) );
+    connect( m_widget->buttonAdd,     SIGNAL(clicked(bool)), SLOT(slotAdd()) );
+    connect( m_widget->buttonRemove,  SIGNAL(clicked(bool)), SLOT(slotRemove()) );
+    connect( m_widget->buttonLoad,    SIGNAL(clicked(bool)), SLOT(slotLoad()) );
+    connect( m_widget->buttonSave,    SIGNAL(clicked(bool)), SLOT(slotSave()) );
+    connect( m_widget->buttonTest,    SIGNAL(clicked(bool)), SLOT(slotTest()) );
 
-    for( unsigned int i = 0; i < keys.count(); i++ )
-        list->insertItem( 0, "[" + keys[i] + "]" );
-    
-    l->addWidget( list );
-    l->setStretchFactor( list, 2 );
+    const_cast<ScriptPlugin*>(this)->slotEnableControls();
 }
 
+void ScriptPlugin::initKRenameVars( const KRenameFile & file, int index )
+{
+    m_interpreter->globalObject().setProperty( m_interpreter->globalContext(), 
+					       "krename_index", index );
+    m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
+					       "krename_url", file.srcUrl().url() );
+    m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
+					       "krename_filename", file.srcFilename() );
+    m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
+					       "krename_extension", file.srcExtension() );
+    m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
+					       "krename_directory", file.srcDirectory() );
+}
+
+void ScriptPlugin::slotEnableControls()
+{
+    bool bEnable = (m_widget->listVariables->selectedItems().count() != 0);
+
+    m_widget->buttonRemove->setEnabled( bEnable );
+}
+
+void ScriptPlugin::slotAdd()
+{
+    QDialog                dialog;
+    Ui::ScriptPluginDialog dlg;
+
+    dlg.setupUi( &dialog );
+    
+    if( dialog.exec() == QDialog::Accepted ) 
+    {
+	QString name  = dlg.lineName->text();
+	QString value = dlg.lineValue->text();
+
+	// Build a Java script statement
+	QString script = name + " = " + value + ";";
+	
+	KJSInterpreter interpreter;
+	KJSResult result = m_interpreter->evaluate( script, NULL );
+	if( result.isException() )
+	{
+	    KMessageBox::error( m_parent, 
+				i18n("A JavaScript error has occured: ") +
+				result.errorMessage(), this->name() );
+	}
+	else
+	{
+	    QTreeWidgetItem* item = new QTreeWidgetItem();
+	    item->setText( 0, name );
+	    item->setText( 1, value );
+
+	    m_widget->listVariables->addTopLevelItem( item );
+	}
+    }
+}
+
+void ScriptPlugin::slotRemove()
+{
+    QTreeWidgetItem* item = m_widget->listVariables->currentItem();
+    if( item ) 
+    {
+	m_widget->listVariables->invisibleRootItem()->removeChild( item );
+	delete item;
+    }
+}
+
+void ScriptPlugin::slotLoad()
+{
+}
+
+void ScriptPlugin::slotSave()
+{
+}
+
+void ScriptPlugin::slotTest()
+{
+}
+
+
+void ScriptPlugin::loadConfig( KConfigGroup & group )
+{
+
+}
+
+void ScriptPlugin::saveConfig( KConfigGroup & group ) const
+{
+
+}

@@ -103,7 +103,7 @@ PermissionsPlugin::PermissionsPlugin( PluginLoader* loader )
 
 PermissionsPlugin::~PermissionsPlugin()
 {
-
+    delete m_widget;
 }
 
 const QString PermissionsPlugin::name() const

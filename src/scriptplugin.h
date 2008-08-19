@@ -20,11 +20,15 @@
 
 #include "plugin.h"
 
-namespace KJS {
-    class Interpreter;
+class KJSInterpreter;
+class KRenameFile;
+
+namespace Ui {
+    class ScriptPluginWidget;
 };
 
-class ScriptPlugin : public Plugin {
+class ScriptPlugin : public QObject, public Plugin {
+ Q_OBJECT
  public:
     /** Create a new ScriptPlugin from
      *
@@ -111,17 +115,23 @@ class ScriptPlugin : public Plugin {
      */
     void createUI( QWidget* parent ) const;
 
- protected:
-    /** 
-     *  Checks if a token is supported by this plugin.
+    /** Load the plugin configuration.
      *
-     *  @param token a token
-     *  @returns true if the token is supported
+     *  Called when plugins should load their configuration.
      *
-     *  @see addSupportedToken
+     *  @param group config group where the configuration should be read from
      */
-    bool supports( const QString & token );
-    
+    virtual void loadConfig( KConfigGroup & group );
+
+    /** Save the plugin configuration.
+     *
+     *  Called when plugins should save their configuration.
+     *
+     *  @param group config group where the configuration should be stored
+     */
+    virtual void saveConfig( KConfigGroup & group ) const;
+
+ protected:
     /**
      *  Adds a token to the list of supported tokens
      *
@@ -130,15 +140,34 @@ class ScriptPlugin : public Plugin {
      *  @see supports
      */
     inline void addSupportedToken( const QString & token ) { m_keys.append( token ); }
- 
- protected:
 
-    QString m_name;
-    QString m_icon;
+    /** 
+     * Set all KRename internal variables on the internal
+     * Interpreter object.
+     *
+     * @param file the KRenameFile where the values can be retrieved
+     * @param index index of the current file
+     */
+    void initKRenameVars( const KRenameFile & file, int index ); 
+
+ private slots:
+    void slotEnableControls();
+    void slotAdd();
+    void slotRemove();
+    void slotSave();
+    void slotLoad();
+    void slotTest();
 
  private:
-    QStringList       m_keys;
-    //KJS::Interpreter* m_interpreter;
+    QString             m_name;
+    QString             m_icon;
+
+    QStringList         m_keys;
+    QStringList         m_help;
+    KJSInterpreter*     m_interpreter;
+    QWidget*            m_parent;
+
+    Ui::ScriptPluginWidget* m_widget;
 };
 
 
@@ -164,7 +193,7 @@ inline const QStringList & ScriptPlugin::supportedTokens() const
 
 inline const QStringList & ScriptPlugin::help() const 
 { 
-    return m_keys; 
+    return m_help; 
 }
 
 #endif // _FILE_PLUGIN_H_

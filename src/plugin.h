@@ -22,6 +22,7 @@
 #include <QString>
 
 class BatchRenamer;
+class KConfigGroup;
 class PluginLoader;
 
 /** An enum to determine the correct plugin type.
@@ -136,6 +137,22 @@ class Plugin {
      *  @param parent the parent widget of this plugin
      */
     virtual void createUI( QWidget* parent ) const = 0;
+
+    /** Load the plugin configuration.
+     *
+     *  Called when plugins should load their configuration.
+     *
+     *  @param group config group where the configuration should be read from
+     */
+    virtual void loadConfig( KConfigGroup & group );
+
+    /** Save the plugin configuration.
+     *
+     *  Called when plugins should save their configuration.
+     *
+     *  @param group config group where the configuration should be stored
+     */
+    virtual void saveConfig( KConfigGroup & group ) const;
 
     /*
         virtual bool checkError() = 0;

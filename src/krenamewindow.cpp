@@ -170,6 +170,8 @@ void KRenameWindow::setupPlugins()
 
         ++it;
     }
+
+    m_pagePlugins->listPlugins->sortColumn();
 }
 
 void KRenameWindow::setupIcons()

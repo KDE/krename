@@ -26,3 +26,13 @@ Plugin::~Plugin()
 {
 
 }
+
+void Plugin::loadConfig( KConfigGroup & )
+{
+    /* Do nothing by default */
+}
+
+void Plugin::saveConfig( KConfigGroup & ) const
+{
+    /* Do nothing by default */
+}

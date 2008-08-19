@@ -33,6 +33,7 @@ IncreaseCounterPlugin::IncreaseCounterPlugin( PluginLoader* loader )
 
 IncreaseCounterPlugin::~IncreaseCounterPlugin()
 {
+    delete m_widget;
 }
 
 const QString IncreaseCounterPlugin::name() const
