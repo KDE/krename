@@ -20,6 +20,8 @@
 
 #include "plugin.h"
 
+class QMenu;
+
 class KJSInterpreter;
 class KRenameFile;
 
@@ -150,6 +152,14 @@ class ScriptPlugin : public QObject, public Plugin {
      */
     void initKRenameVars( const KRenameFile & file, int index ); 
 
+    /**
+     * Insert a variable in the definitions textfield
+     * at the current cursor position
+     *
+     * @param name variable name
+     */
+    void insertVariable( const char* name );
+
  private slots:
     void slotEnableControls();
     void slotAdd();
@@ -157,6 +167,12 @@ class ScriptPlugin : public QObject, public Plugin {
     void slotSave();
     void slotLoad();
     void slotTest();
+
+    void slotInsertIndex();
+    void slotInsertUrl();
+    void slotInsertFilename();
+    void slotInsertExtension();
+    void slotInsertDirectory();
 
  private:
     QString             m_name;
@@ -166,10 +182,16 @@ class ScriptPlugin : public QObject, public Plugin {
     QStringList         m_help;
     KJSInterpreter*     m_interpreter;
     QWidget*            m_parent;
+    QMenu*              m_menu;
 
     Ui::ScriptPluginWidget* m_widget;
 
     static const char*  s_pszFileDialogLocation; ///< Static URL for KFileDialog
+    static const char* s_pszVarNameIndex;
+    static const char* s_pszVarNameUrl;
+    static const char* s_pszVarNameFilename;
+    static const char* s_pszVarNameExtension;
+    static const char* s_pszVarNameDirectory;
 };
 
 

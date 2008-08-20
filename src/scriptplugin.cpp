@@ -31,6 +31,7 @@
 #include <QFile>
 #include <QLabel>
 #include <QHBoxLayout>
+#include <QMenu>
 #include <QTextStream>
 
 #include <kjs/kjsinterpreter.h>
@@ -41,6 +42,12 @@
 #include "krenamefile.h"
 
 const char* ScriptPlugin::s_pszFileDialogLocation = "kfiledialog://krenamejscript";
+const char* ScriptPlugin::s_pszVarNameIndex       = "krename_index";
+const char* ScriptPlugin::s_pszVarNameUrl         = "krename_url";
+const char* ScriptPlugin::s_pszVarNameFilename    = "krename_filename";
+const char* ScriptPlugin::s_pszVarNameExtension   = "krename_extension";
+const char* ScriptPlugin::s_pszVarNameDirectory   = "krename_directory";
+
 
 ScriptPlugin::ScriptPlugin( PluginLoader* loader )
     : QObject(), 
@@ -49,16 +56,24 @@ ScriptPlugin::ScriptPlugin( PluginLoader* loader )
     m_name = i18n("JavaScript Plugin");
     m_icon = "applications-development";
     m_interpreter = new KJSInterpreter();
+    m_menu   = new QMenu();
     m_widget = new Ui::ScriptPluginWidget();
 
     this->addSupportedToken("js;.*");
 
     m_help.append( "[js;4+5];;" + i18n("Insert a snippet of JavaScript code (4+5 in this case)") );
+
+    m_menu->addAction( i18n("Index of the current file"),     this, SLOT(slotInsertIndex()));
+    m_menu->addAction( i18n("URL of the current file"),       this, SLOT(slotInsertUrl()));
+    m_menu->addAction( i18n("Filename of the current file"),  this, SLOT(slotInsertFilename()));
+    m_menu->addAction( i18n("Extension of the current file"), this, SLOT(slotInsertExtension()));
+    m_menu->addAction( i18n("Directory of the current file"), this, SLOT(slotInsertDirectory()));
 }
 
 ScriptPlugin::~ScriptPlugin()
 {
     delete m_widget;
+    delete m_menu;
     delete m_interpreter;
 }
 
@@ -67,6 +82,7 @@ QString ScriptPlugin::processFile( BatchRenamer* b, int index,
 {
     QString token( filenameOrToken );
     QString script;
+    QString definitions = m_widget->textCode->toPlainText();
 
     if( token.contains( ";" ) )
     {
@@ -80,6 +96,9 @@ QString ScriptPlugin::processFile( BatchRenamer* b, int index,
 	// Setup interpreter
 	const KRenameFile & file = b->files()->at( index );
 	initKRenameVars( file, index );
+
+	// Make sure definitions are executed first
+	script = definitions + "\n" + script;
 
 	KJSResult result = m_interpreter->evaluate( script, NULL );
 	if( result.isException() )
@@ -128,20 +147,50 @@ void ScriptPlugin::createUI( QWidget* parent ) const
     m_widget->buttonSave->setIcon( saveIcon );
     m_widget->buttonAdd->setIcon( addIcon );
     m_widget->buttonRemove->setIcon( removeIcon );
+
+    m_widget->buttonInsert->setMenu( m_menu );
 }
 
 void ScriptPlugin::initKRenameVars( const KRenameFile & file, int index )
 {
+    // KRename definitions
     m_interpreter->globalObject().setProperty( m_interpreter->globalContext(), 
-					       "krename_index", index );
+					       ScriptPlugin::s_pszVarNameIndex,
+					       index );
     m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
-					       "krename_url", file.srcUrl().url() );
+					       ScriptPlugin::s_pszVarNameUrl,
+					       file.srcUrl().url() );
     m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
-					       "krename_filename", file.srcFilename() );
+					       ScriptPlugin::s_pszVarNameFilename,
+					       file.srcFilename() );
     m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
-					       "krename_extension", file.srcExtension() );
+					       ScriptPlugin::s_pszVarNameExtension,
+					       file.srcExtension() );
     m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
-					       "krename_directory", file.srcDirectory() );
+					       ScriptPlugin::s_pszVarNameDirectory, 
+					       file.srcDirectory() );
+
+
+    // User definitions, set them only on first file
+    if( index == 0 ) 
+    {
+	for( int i=0; i<m_widget->listVariables->topLevelItemCount(); i++ )
+	{
+	    // TODO, we have to know the type of the variable!
+	    QTreeWidgetItem* item = m_widget->listVariables->topLevelItem( i );
+	    if( item ) 
+	    {
+		m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
+							   item->text( 0 ),
+							   item->text( 1 ).toUtf8().data() );
+	    }
+	}
+    }
+}
+
+void ScriptPlugin::insertVariable( const char* name )
+{
+    m_widget->textCode->insertPlainText( QString( name ) );
 }
 
 void ScriptPlugin::slotEnableControls()
@@ -299,13 +348,70 @@ void ScriptPlugin::slotTest()
 {
 }
 
+void ScriptPlugin::slotInsertIndex()
+{
+    this->insertVariable( ScriptPlugin::s_pszVarNameIndex ); 
+}
+
+void ScriptPlugin::slotInsertUrl()
+{
+    this->insertVariable( ScriptPlugin::s_pszVarNameUrl ); 
+}
+
+void ScriptPlugin::slotInsertFilename()
+{
+    this->insertVariable( ScriptPlugin::s_pszVarNameFilename ); 
+}
+
+void ScriptPlugin::slotInsertExtension()
+{
+    this->insertVariable( ScriptPlugin::s_pszVarNameExtension ); 
+}
+
+void ScriptPlugin::slotInsertDirectory()
+{
+    this->insertVariable( ScriptPlugin::s_pszVarNameDirectory ); 
+}
 
 void ScriptPlugin::loadConfig( KConfigGroup & group )
 {
+    QStringList variableNames;
+    QStringList variableValues;
 
+    variableNames  = group.readEntry( "JavaScriptVariableNames",  variableNames );
+    variableValues = group.readEntry( "JavaScriptVariableValues", variableValues );
+
+    int min = qMin( variableNames.count(), variableValues.count() );
+
+    for( int i=0; i < min; i++ )
+    {
+	QTreeWidgetItem* item = new QTreeWidgetItem();
+	item->setText( 0, variableNames[i] );
+	item->setText( 1, variableValues[i] );
+	
+	m_widget->listVariables->addTopLevelItem( item );
+    }
+
+    m_widget->textCode->setPlainText( group.readEntry( "JavaScriptDefinitions", QString() ) );
 }
 
 void ScriptPlugin::saveConfig( KConfigGroup & group ) const
 {
+    QStringList variableNames;
+    QStringList variableValues;
+    
+    for( int i=0; i<m_widget->listVariables->topLevelItemCount(); i++ )
+    {
+	QTreeWidgetItem* item = m_widget->listVariables->topLevelItem( i );
+	if( item ) 
+	{
+	    variableNames  << item->text( 0 );
+	    variableValues << item->text( 1 );
+	}
+    }
 
+    group.writeEntry( "JavaScriptVariableNames",  variableNames );
+    group.writeEntry( "JavaScriptVariableValues", variableValues );
+    group.writeEntry( "JavaScriptDefinitions", m_widget->textCode->toPlainText() );
 }
+
