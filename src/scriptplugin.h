@@ -168,6 +168,8 @@ class ScriptPlugin : public QObject, public Plugin {
     QWidget*            m_parent;
 
     Ui::ScriptPluginWidget* m_widget;
+
+    static const char*  s_pszFileDialogLocation; ///< Static URL for KFileDialog
 };
 
 

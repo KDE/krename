@@ -171,6 +171,8 @@ void KRenameWindow::setupPlugins()
         ++it;
     }
 
+    m_pagePlugins->splitter->setStretchFactor( 0, 0 );
+    m_pagePlugins->splitter->setStretchFactor( 1, 8 );
     m_pagePlugins->listPlugins->sortColumn();
 }
 

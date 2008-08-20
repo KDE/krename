@@ -24,6 +24,7 @@
 #include <klistwidget.h>
 #include <klocale.h>
 #include <kmessagebox.h>
+#include <ktemporaryfile.h>
 
 #include <kio/netaccess.h>
 
@@ -38,6 +39,8 @@
 #include "ui_scriptpluginwidget.h"
 #include "batchrenamer.h"
 #include "krenamefile.h"
+
+const char* ScriptPlugin::s_pszFileDialogLocation = "kfiledialog://krenamejscript";
 
 ScriptPlugin::ScriptPlugin( PluginLoader* loader )
     : QObject(), 
@@ -112,12 +115,12 @@ void ScriptPlugin::createUI( QWidget* parent ) const
     connect( m_widget->buttonRemove,  SIGNAL(clicked(bool)), SLOT(slotRemove()) );
     connect( m_widget->buttonLoad,    SIGNAL(clicked(bool)), SLOT(slotLoad()) );
     connect( m_widget->buttonSave,    SIGNAL(clicked(bool)), SLOT(slotSave()) );
-    connect( m_widget->buttonTest,    SIGNAL(clicked(bool)), SLOT(slotTest()) );
+    connect( m_widget->textCode,      SIGNAL(textChanged()), SLOT(slotEnableControls()) );
 
     const_cast<ScriptPlugin*>(this)->slotEnableControls();
 
     QPixmap openIcon   = KIconLoader::global()->loadIcon( "document-open", KIconLoader::NoGroup, KIconLoader::SizeSmall );
-    QPixmap saveIcon   = KIconLoader::global()->loadIcon( "document-save", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+    QPixmap saveIcon   = KIconLoader::global()->loadIcon( "document-save-as", KIconLoader::NoGroup, KIconLoader::SizeSmall );
     QPixmap removeIcon = KIconLoader::global()->loadIcon( "list-remove", KIconLoader::NoGroup, KIconLoader::SizeSmall );
     QPixmap addIcon    = KIconLoader::global()->loadIcon( "list-add", KIconLoader::NoGroup, KIconLoader::SizeSmall );
 
@@ -144,8 +147,10 @@ void ScriptPlugin::initKRenameVars( const KRenameFile & file, int index )
 void ScriptPlugin::slotEnableControls()
 {
     bool bEnable = (m_widget->listVariables->selectedItems().count() != 0);
-
     m_widget->buttonRemove->setEnabled( bEnable );
+
+    bEnable = !m_widget->textCode->toPlainText().isEmpty();
+    m_widget->buttonSave->setEnabled( bEnable );
 }
 
 void ScriptPlugin::slotAdd()
@@ -202,7 +207,7 @@ void ScriptPlugin::slotLoad()
 	return;
     }
 
-    KFileDialog dialog( KUrl("kfiledialog://krenamejscript"), 
+    KFileDialog dialog( KUrl(ScriptPlugin::s_pszFileDialogLocation), 
 			i18n("*|All files and directories"), 
 			m_parent );
     dialog.setOperationMode( KFileDialog::Opening );
@@ -229,14 +234,65 @@ void ScriptPlugin::slotLoad()
 	    KIO::NetAccess::removeTempFile( tmpFile );
 	}
 	else 
-	{
 	    KMessageBox::error(m_parent, KIO::NetAccess::lastErrorString() );
-	}
     }
+
+    slotEnableControls();
 }
 
 void ScriptPlugin::slotSave()
 {
+    KFileDialog dialog( KUrl(ScriptPlugin::s_pszFileDialogLocation), 
+			i18n("*|All files and directories"), 
+			m_parent );
+    dialog.setOperationMode( KFileDialog::Saving );
+    dialog.setMode( KFile::File );
+
+    if( dialog.exec() == QDialog::Accepted ) 
+    {
+	const KUrl url = dialog.selectedUrl();
+	if( KIO::NetAccess::exists( url, KIO::NetAccess::DestinationSide, m_parent ) )
+	{
+	    int m = KMessageBox::warningYesNo( m_parent, i18n("The file %1 does already exists. "
+							      "Do you want to overwrite it?", url.prettyUrl()) );
+
+	    if( m == KMessageBox::No )
+		return;
+	}
+
+	QString tmpName = url.path();
+	if( !url.isLocalFile() )
+	{
+	    KTemporaryFile temp;
+	    tmpName = temp.fileName();
+	}
+
+
+	QFile file(tmpName);
+	if( file.open(QIODevice::WriteOnly | QIODevice::Text) )
+	{
+	    QTextStream out(&file);
+	    out << m_widget->textCode->toPlainText();
+	    out.flush();
+	    file.close();
+
+	    if( !url.isLocalFile() )
+	    {
+		if( !KIO::NetAccess::upload( tmpName, url, m_parent ) )
+		    KMessageBox::error(m_parent, KIO::NetAccess::lastErrorString() );
+
+		file.remove();
+	    }
+	}
+	else
+	{
+	    KMessageBox::error(m_parent, i18n("Unable to open %1 for writing.", tmpName ) );
+	    if( !url.isLocalFile() )
+		file.remove();
+	}
+    }
+
+    slotEnableControls();
 }
 
 void ScriptPlugin::slotTest()
