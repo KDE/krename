@@ -33,6 +33,7 @@
 #include <QHBoxLayout>
 #include <QMenu>
 #include <QTextStream>
+#include <QVariant>
 
 #include <kjs/kjsinterpreter.h>
 
@@ -48,6 +49,12 @@ const char* ScriptPlugin::s_pszVarNameFilename    = "krename_filename";
 const char* ScriptPlugin::s_pszVarNameExtension   = "krename_extension";
 const char* ScriptPlugin::s_pszVarNameDirectory   = "krename_directory";
 
+enum EVarType {
+    eVarType_String = 0,
+    eVarType_Int,
+    eVarType_Double,
+    eVarType_Bool
+};
 
 ScriptPlugin::ScriptPlugin( PluginLoader* loader )
     : QObject(), 
@@ -180,9 +187,31 @@ void ScriptPlugin::initKRenameVars( const KRenameFile & file, int index )
 	    QTreeWidgetItem* item = m_widget->listVariables->topLevelItem( i );
 	    if( item ) 
 	    {
-		m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
-							   item->text( 0 ),
-							   item->text( 1 ).toUtf8().data() );
+		EVarType eVarType = static_cast<EVarType>(item->data( 1, Qt::UserRole ).toInt());
+		const QString & name  = item->text( 0 );
+		const QString & value = item->text( 1 );
+		switch( eVarType ) 
+		{
+		    default: 
+		    case eVarType_String:
+			m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
+								   name, value.toUtf8().data() );
+			break;
+		    case eVarType_Int:
+			m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
+								   name, value.toInt() );
+			break;			
+		    case eVarType_Double:
+			m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
+								   name, value.toDouble() );
+			break;
+		    case eVarType_Bool:
+			m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
+								   name, 
+								   (value.toLower() == "true" ? true : false ) );
+			break;
+
+		}
 	    }
 	}
     }
@@ -207,7 +236,15 @@ void ScriptPlugin::slotAdd()
     QDialog                dialog;
     Ui::ScriptPluginDialog dlg;
 
+    QStringList types;
+    
+    types << i18n("String");
+    types << i18n("Int");
+    types << i18n("Double");
+    types << i18n("Boolean");
+
     dlg.setupUi( &dialog );
+    dlg.comboType->addItems( types );
     
     if( dialog.exec() == QDialog::Accepted ) 
     {
@@ -230,6 +267,7 @@ void ScriptPlugin::slotAdd()
 	    QTreeWidgetItem* item = new QTreeWidgetItem();
 	    item->setText( 0, name );
 	    item->setText( 1, value );
+	    item->setData( 1, Qt::UserRole, QVariant( dlg.comboType->currentIndex() ) );
 
 	    m_widget->listVariables->addTopLevelItem( item );
 	}
@@ -375,19 +413,23 @@ void ScriptPlugin::slotInsertDirectory()
 
 void ScriptPlugin::loadConfig( KConfigGroup & group )
 {
-    QStringList variableNames;
-    QStringList variableValues;
+    QStringList  variableNames;
+    QStringList  variableValues;
+    QVariantList variableTypes;
 
     variableNames  = group.readEntry( "JavaScriptVariableNames",  variableNames );
     variableValues = group.readEntry( "JavaScriptVariableValues", variableValues );
+    variableTypes  = group.readEntry( "JavaScriptVariableTypes", variableTypes );
 
     int min = qMin( variableNames.count(), variableValues.count() );
+    min = qMin( min, variableTypes.count() );
 
     for( int i=0; i < min; i++ )
     {
 	QTreeWidgetItem* item = new QTreeWidgetItem();
 	item->setText( 0, variableNames[i] );
 	item->setText( 1, variableValues[i] );
+	item->setData( 1, Qt::UserRole, variableTypes[i] );
 	
 	m_widget->listVariables->addTopLevelItem( item );
     }
@@ -397,8 +439,9 @@ void ScriptPlugin::loadConfig( KConfigGroup & group )
 
 void ScriptPlugin::saveConfig( KConfigGroup & group ) const
 {
-    QStringList variableNames;
-    QStringList variableValues;
+    QStringList  variableNames;
+    QStringList  variableValues;
+    QVariantList variableTypes;
     
     for( int i=0; i<m_widget->listVariables->topLevelItemCount(); i++ )
     {
@@ -407,11 +450,13 @@ void ScriptPlugin::saveConfig( KConfigGroup & group ) const
 	{
 	    variableNames  << item->text( 0 );
 	    variableValues << item->text( 1 );
+	    variableTypes  << item->data( 1, Qt::UserRole );
 	}
     }
 
     group.writeEntry( "JavaScriptVariableNames",  variableNames );
     group.writeEntry( "JavaScriptVariableValues", variableValues );
+    group.writeEntry( "JavaScriptVariableTypes",  variableTypes );
     group.writeEntry( "JavaScriptDefinitions", m_widget->textCode->toPlainText() );
 }
 
