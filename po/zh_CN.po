@@ -1,0 +1,1687 @@
+# translation of zh_CN.po to Simplified Chinese
+# Copyright (C) 2007 Free Software Foundation, Inc.
+#
+# Roy Qu <royqh1979@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: zh_CN\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-07 16:42+0200\n"
+"PO-Revision-Date: 2007-07-30 11:31+0800\n"
+"Last-Translator: Roy Qu <royqh1979@gmail.com>\n"
+"Language-Team: Simplified Chinese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: batchrenamer.cpp:297 batchrenamer.cpp:420
+#, fuzzy
+msgid "%1 errors occurred!"
+msgstr "%2错误发生！"
+
+#: batchrenamer.cpp:754
+msgid "%2 errors occurred!"
+msgstr "%2错误发生！"
+
+#: krenameimpl.cpp:947 previewlist.cpp:36
+msgid "&Add..."
+msgstr "添加(&A)..."
+
+#: previewlist.cpp:32
+#, fuzzy
+msgid "&Change filename manually..."
+msgstr "手工修改文件名(&C)"
+
+#: krenamewindow.cpp:132
+msgid "&Close"
+msgstr ""
+
+#: krenameimpl.cpp:1061
+msgid "&Create an undo script"
+msgstr "生成撤消重命名脚本"
+
+#: krenamewindow.cpp:48
+#, fuzzy
+msgid "&Destination"
+msgstr "目标(&T)"
+
+#: krenameimpl.cpp:974
+msgid "&Display name"
+msgstr "显示文件名(&D)"
+
+#: krenameimpl.cpp:1287
+msgid "&Extension:"
+msgstr "扩展名(&E)"
+
+#: krenameimpl.cpp:1257
+msgid "&Filename"
+msgstr "文件名(&F)"
+
+#: krenamewindow.cpp:47
+#, fuzzy
+msgid "&Files"
+msgstr "文件(&i)"
+
+#: krenameimpl.cpp:1307
+msgid "&Find and Replace..."
+msgstr "查找与替换(&F)..."
+
+#: krenamewindow.cpp:131
+#, fuzzy
+msgid "&Finish..."
+msgstr "开始重命名(&F)"
+
+#: krenameimpl.cpp:1159
+msgid "&Functions..."
+msgstr "函数(&F)..."
+
+#: tokenhelpdialog.cpp:31
+#, fuzzy
+msgid "&Insert"
+msgstr "插入 '$'"
+
+#: krenameimpl.cpp:1172
+msgid "&Insert Part of Filename..."
+msgstr "插入文件名的一部分(&I)..."
+
+#: krenameimpl.cpp:1038
+msgid "&Move files to destination directory"
+msgstr "移动文件至目的目录(&M)"
+
+#: krenameimpl.cpp:1277
+msgid "&Name:"
+msgstr "文件名(&N):"
+
+#: krenameimpl.cpp:1298
+msgid "&Number"
+msgstr "数字(&N)"
+
+#: krenameimpl.cpp:1304
+msgid "&Number of digits:"
+msgstr "数字位数(&N)"
+
+#: krenameimpl.cpp:1171
+msgid "&Numbering..."
+msgstr "编号(&N)..."
+
+#: previewlist.cpp:34
+msgid "&Open"
+msgstr ""
+
+#: progressdialog.cpp:35
+msgid "&Open Destination..."
+msgstr "打开目标(&O)..."
+
+#: krenameimpl.cpp:1048
+msgid "&Overwrite existing files"
+msgstr "覆盖已存在的文件(&O)"
+
+#: krenamewindow.cpp:49
+#, fuzzy
+msgid "&Plugins"
+msgstr "插件(&P)"
+
+#: krenameimpl.cpp:1260
+msgid "&Prefix:"
+msgstr "前缀(&P)"
+
+#: krenameimpl.cpp:963
+msgid "&Preview"
+msgstr "预览(&P)"
+
+#: krenameimpl.cpp:122
+msgid "&Profiles..."
+msgstr "配置文件(&P)..."
+
+#: previewlist.cpp:37
+#, fuzzy
+msgid "&Remove"
+msgstr "删除(&M)"
+
+#: progressdialog.cpp:51
+#, fuzzy
+msgid "&Rename All Files Again..."
+msgstr "重新重命名所有文件(&A)"
+
+#: krenameimpl.cpp:1031
+msgid "&Rename input files"
+msgstr "直接重命名原始文件(&R)"
+
+#: progressdialog.cpp:33
+#, fuzzy
+msgid "&Rename more..."
+msgstr "重命名更多(&R)..."
+
+#: krenameimpl.cpp:1266
+msgid "&Suffix:"
+msgstr "后缀(&S)"
+
+#: krenameimpl.cpp:1148
+msgid "&Template:"
+msgstr "模板(&T):"
+
+#: progressdialog.cpp:34
+#, fuzzy
+msgid "&Undo"
+msgstr "撤消: "
+
+#: krenameimpl.cpp:1059
+msgid "&Undo Renaming"
+msgstr "撤消重命名"
+
+#: krenameimpl.cpp:1163
+msgid "&Use extension of the input file"
+msgstr "使用输入文件的扩展名(&U)"
+
+#: krenameimpl.cpp:1500
+msgid "&Use this plugin"
+msgstr "使用此插件(&U)"
+
+#: main.cpp:62
+msgid "(c) 2001-2008, Dominik Seichter\n"
+msgstr ""
+
+#: krenameimpl.cpp:1066
+msgid ""
+"*.krename|KRename undo scripts (*.krename)\n"
+"*|All Files (*)"
+msgstr ""
+"*.krename|KRename撤销脚本 (*.krename)\n"
+"*|全部文件 (*)"
+
+#: krenameimpl.cpp:335 scriptplugin.cpp:298 scriptplugin.cpp:333
+#, fuzzy
+msgid "*|All files and directories"
+msgstr "添加隐藏目录(&H)"
+
+#: krenamewindow.cpp:323
+#, fuzzy
+msgid "<b>Files:<b> %1"
+msgstr "文件数：<b>%1</b>"
+
+#: main.cpp:119
+msgid ""
+"<b>Krename was started from root!</b><br>When started from root, Krename may "
+"damage your system if you do not know exactly what you are doing!"
+msgstr ""
+"<b>Krename以root开始！</b><br>当以root开始时，若您不太确定您在做何事时，"
+"Krename 可能会危害到您的系统！"
+
+#: krenameimpl.cpp:1138 krenameimpl.cpp:1139
+msgid ""
+"<qt>Find and replace characters or part string of the source filename in the "
+"destination filename.</qt>"
+msgstr "<qt>在文件名中查找替换字符串.</qt>"
+
+#: krenameimpl.cpp:1344
+msgid ""
+"<qt>Insert a special KRename command which inserts file information into the "
+"filename.</qt>"
+msgstr "<qt>插入一个特殊的KRename命令，用于在文件名中插入文件信息</qt>"
+
+#: translitplugin.cpp:102
+#, fuzzy
+msgid ""
+"<qt>This plugin can transcribe a filename into English (i.e. perform "
+"transliteration).</qt>"
+msgstr "<qt>此插件翻译用非英文字母写成的文件名。</qt>"
+
+#: systemplugin.cpp:70
+msgid ""
+"<qt>This plugin contains tokens to get the creation, modification and last "
+"access time of files and the current system time and date.</qt>"
+msgstr ""
+
+#: taglibplugin.cpp:51
+msgid ""
+"<qt>This plugin supports reading tags for MP3, Ogg Vorbis, FLAC, MPC, Speex "
+"WavPack and TrueAudio files.</qt>"
+msgstr ""
+
+#: krenameimpl.cpp:1140
+msgid ""
+"<qt>You can use \".gz\" and \".tar.gz\" as file extension of the file backup."
+"tar.gz depending on this setting.</qt>"
+msgstr "<qt>例如，您可使用 \".gz\" 或者 \".tar.gz\" 作文件的扩展名</qt>"
+
+#: scriptplugin.cpp:262
+msgid "A JavaScript error has occured: "
+msgstr ""
+
+#: permissionsplugin.cpp:181
+msgid "Access permissions"
+msgstr "存取权限"
+
+#: filedialogextwidget.cpp:35
+msgid "Add &hidden directories"
+msgstr "添加隐藏目录(&H)"
+
+#: krenameimpl.cpp:1132
+msgid ""
+"Add a template for the file extension.<br>It behaves like the filename "
+"template."
+msgstr "设定扩展名模板。<br>与文件名模板类似"
+
+#: krenameimpl.cpp:1131
+msgid "Add a template.<br>Example: <i>picture###</i>"
+msgstr "设定文件重命名模板。<br>范例：<i>file###</i>"
+
+#: filedialogextwidget.cpp:33
+msgid "Add directory names &with filenames"
+msgstr "在文件名中加入目录名(&W)"
+
+#: filedialogextwidget.cpp:36
+msgid "Add directory names only"
+msgstr "仅添加目录名"
+
+#: krenameimpl.cpp:1003
+msgid "Add one or more files or directories"
+msgstr "添加一或多个文件/目录"
+
+#: filedialogextwidget.cpp:53
+msgid ""
+"Add only the directory names and not the names of the files in the directory "
+"to KRename."
+msgstr "仅增加目录名称到KRename,不添加目录中的文件名"
+
+#: filedialogextwidget.cpp:34
+msgid "Add subdirectories &recursively"
+msgstr "递归添加子目录(&R)"
+
+#: scriptplugin.cpp:291
+msgid ""
+"All currently entered definitions will be lost. Do you want to continue?"
+msgstr ""
+
+#: main.cpp:78
+msgid "Andreas Pour"
+msgstr ""
+
+#: main.cpp:103
+msgid "Asim Husanovic"
+msgstr ""
+
+#: scriptplugin.cpp:244
+msgid "Boolean"
+msgstr ""
+
+#: main.cpp:88
+msgid "Brandon Low"
+msgstr ""
+
+#: krenameimpl.cpp:480
+#, fuzzy
+msgid "Built-in Functions"
+msgstr "内置函数:"
+
+#: krenameimpl.cpp:1191
+msgid "Built-in Functions:"
+msgstr "内置函数:"
+
+#: datetimeplugin.cpp:112
+#, fuzzy
+msgid "Can't change date of file %1. (Cannot mktime)"
+msgstr "无法变更文件%1的日期"
+
+#: datetimeplugin.cpp:117
+#, fuzzy
+msgid "Can't change date of file %1. (Cannot stat the file)"
+msgstr "无法变更文件%1的日期"
+
+#: datetimeplugin.cpp:126
+#, fuzzy
+msgid "Can't change date of file %1. (utime failed)"
+msgstr "无法变更文件%1的日期"
+
+#: permissionsplugin.cpp:129
+msgid "Can't chmod %1."
+msgstr "无法chmod%1"
+
+#: permissionsplugin.cpp:138
+msgid "Can't chown %1."
+msgstr "无法chown%1"
+
+#: batchrenamer.cpp:666
+msgid "Can't create undo script :"
+msgstr "无法生成撤消脚本："
+
+#: batchrenamer.cpp:768
+msgid "Can't set executable bit on undo script."
+msgstr "不能为撤消脚本设置可执行位"
+
+#: batchrenamer.cpp:264
+#, fuzzy
+msgid "Cannot create symlink to non-local URL: %1"
+msgstr "无法建立在其它主机上为文件%1创建符号链接。"
+
+#: krenameimpl.cpp:1275
+msgid "Capitalize"
+msgstr "大写字母"
+
+#: main.cpp:80
+msgid "Charles Samuels"
+msgstr ""
+
+#: krenameimpl.cpp:1133
+msgid ""
+"Checking this checkbox is the same as setting the extension template to $"
+msgstr "选择此选项与设定扩展名模板为$是相同的"
+
+#: permissionsplugin.cpp:186
+msgid "Class"
+msgstr "类别"
+
+#: main.cpp:97
+msgid "Contributed a Spanish translation"
+msgstr "贡献了西班牙语翻译"
+
+#: krenameimpl.cpp:1273
+msgid "Convert to lower case "
+msgstr "转换为小写"
+
+#: krenameimpl.cpp:1274
+msgid "Convert to upper case"
+msgstr "转换为大写"
+
+#: krenameimpl.cpp:1035
+msgid "Cop&y files to destination directory"
+msgstr "复制文件至目的目录(&C)"
+
+#: krenameimpl.cpp:1077
+msgid "Copies all files to the destination directory and renames them."
+msgstr "复制所有文件至目的目录并重命名"
+
+#: krenameimpl.cpp:1041
+msgid "Create symbolic &links in destination directory"
+msgstr "建立符号链接于目的目录(&C)"
+
+#: main.cpp:86
+msgid "Created the Gentoo Ebuild scripts for Krename."
+msgstr "建立了Krename的Gentoo Ebuild的脚本。"
+
+#: krenameimpl.cpp:1291
+msgid "Custom extension"
+msgstr "自定义扩展名"
+
+#: krenameimpl.cpp:1281
+msgid "Custom name"
+msgstr "自定义文件名"
+
+#: main.cpp:92
+msgid "Daniele Medri"
+msgstr ""
+
+#: krenameimpl.cpp:1315 krenameimpl.cpp:1319
+msgid "Date"
+msgstr "日期"
+
+#: datetimeplugin.cpp:50
+#, fuzzy
+msgid "Date & Time Plugin"
+msgstr "日期与时间"
+
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Date and system functions"
+msgstr "系统函数"
+
+#: datetimeplugin.cpp:70
+msgid "DateTimePlugin works only with local files. %1 is a remote file."
+msgstr ""
+
+#: scriptplugin.cpp:77
+#, fuzzy
+msgid "Directory of the current file"
+msgstr "插入当前时间"
+
+#: krenameimpl.cpp:1007
+msgid "Displays the number of files in the list."
+msgstr "显视列表中文件的数目"
+
+#: krenameimpl.cpp:361
+#, fuzzy
+msgid "Do you really want to remove all files from the list?"
+msgstr "您确实要删除此配置: %1吗？"
+
+#: main.cpp:65
+msgid "Dominik Seichter"
+msgstr ""
+
+#: scriptplugin.cpp:243
+msgid "Double"
+msgstr ""
+
+#: krenameimpl.cpp:1136
+msgid "Double click on an item to modify it."
+msgstr "双击一项目以更改它"
+
+#: krenameimpl.cpp:118
+msgid "E&xtras"
+msgstr "额外功能(&F)"
+
+#: batchrenamer.cpp:756
+msgid "Elapsed time: %1 seconds"
+msgstr "耗时%1秒"
+
+#: krenameimpl.cpp:1010
+msgid "Enable/disable display of file name."
+msgstr "启用/禁用文件名显示"
+
+#: krenameimpl.cpp:1006
+msgid "Enable/disable preview of pictures."
+msgstr "启用/禁用图片预览"
+
+#: main.cpp:123
+#, fuzzy
+msgid "Error"
+msgstr "错误: %1"
+
+#: batchrenamer.cpp:277
+msgid "Error during renaming %1 (from %2)"
+msgstr ""
+
+#: batchrenamer.cpp:413
+msgid "Error during undoing %1"
+msgstr ""
+
+#: permissionsplugin.cpp:195
+msgid "Exec"
+msgstr "执行"
+
+#: scriptplugin.cpp:76
+#, fuzzy
+msgid "Extension of the current file"
+msgstr "使用输入文件的扩展名(&U)"
+
+#: krenameimpl.cpp:1240
+msgid "File extension starts at:"
+msgstr "扩展名起始于:"
+
+#: krenamewindow.cpp:50
+msgid "File&name"
+msgstr "文件重命名(&N)"
+
+#: scriptplugin.cpp:75
+#, fuzzy
+msgid "Filename of the current file"
+msgstr "插入当前时间"
+
+#: batchrenamer.cpp:366
+msgid "Filenames Processed after %1 seconds."
+msgstr "文件名处理耗时%1秒"
+
+#: batchrenamer.cpp:225 batchrenamer.cpp:679
+msgid "Files will be copied to: %1"
+msgstr "文件将复制至：%1"
+
+#: batchrenamer.cpp:228 batchrenamer.cpp:681
+msgid "Files will be moved to: %1"
+msgstr "文件将移动至：%1"
+
+#: krenameimpl.cpp:1667
+msgid "Files: <b>%1</b>"
+msgstr "文件数：<b>%1</b>"
+
+#: krenameimpl.cpp:1168
+msgid "Find &and Replace..."
+msgstr "查找与替换(&A)..."
+
+#: krenameimpl.cpp:2311
+msgid "First Dot"
+msgstr "第一个点"
+
+#: main.cpp:76
+msgid "Fixed a bug that caused krename not closing open files."
+msgstr "修正一个能够导致Krename不会关闭所开启文件的臭虫。"
+
+#: main.cpp:73
+msgid ""
+"Fixed a bug with startIndex and added the BatchRenamer class\n"
+"to his excellent image viewer showimg."
+msgstr ""
+"修正一些startIndex的臭虫及添加BatchRenamer类别至他的超棒图片显视器showimg。"
+
+#: main.cpp:95
+msgid ""
+"Fixed problems with the spec file and contributed rpms for every SuSE "
+"version you can imagine and is also the new Gentoo maintainer for KRename"
+msgstr ""
+"修正了与spec文件有关的问题，并为所有你能想到的SuSE版本发布了rpm包。 同时，还"
+"是新的Gentoo维护者。"
+
+#: main.cpp:82
+msgid "Franz Schmid"
+msgstr ""
+
+#: permissionsplugin.cpp:216
+msgid "GID"
+msgstr "GID"
+
+#: main.cpp:82
+msgid "Gave me a good start into writing plugins with his application scribus."
+msgstr "用他的scribus应用程序，在我写插件时给我一个好的开始点。"
+
+#: main.cpp:73
+msgid "Groult Richard"
+msgstr ""
+
+#: permissionsplugin.cpp:207
+msgid "Group"
+msgstr "群组"
+
+#: krenameimpl.cpp:1137
+msgid "Help Dialog with all tokens supported by KRename."
+msgstr "KRename支持的所有记号"
+
+#: filedialogextwidget.cpp:51
+msgid ""
+"If not checked, KRename will ignore directories starting with a dot during "
+"recursive adding."
+msgstr "如果未选此项, KRename在递归添加时会忽略以\".\"开头的目录（隐藏目录）"
+
+#: main.cpp:102
+msgid "Ilya Ivkov"
+msgstr ""
+
+#: increasecounterplugin.cpp:41
+msgid "Increase Counter"
+msgstr ""
+
+#: scriptplugin.cpp:73
+#, fuzzy
+msgid "Index of the current file"
+msgstr "插入当前时间"
+
+#: scriptplugin.cpp:132
+msgid "Initial Value"
+msgstr ""
+
+#: krenameimpl.cpp:1076 batchrenamer.cpp:222 batchrenamer.cpp:685
+msgid "Input files will be renamed."
+msgstr "输入文件将会被重命名"
+
+#: krenameimpl.cpp:491 krenameimpl.cpp:1202
+#, fuzzy
+msgid "Insert '#'"
+msgstr "插入 '$'"
+
+#: krenameimpl.cpp:483 krenameimpl.cpp:1194
+msgid "Insert '$'"
+msgstr "插入 '$'"
+
+#: krenameimpl.cpp:484 krenameimpl.cpp:1195
+msgid "Insert '%'"
+msgstr "插入 '%'"
+
+#: krenameimpl.cpp:485 krenameimpl.cpp:1196
+msgid "Insert '&'"
+msgstr "插入 '&'"
+
+#: krenameimpl.cpp:486 krenameimpl.cpp:1197
+msgid "Insert '*'"
+msgstr "插入 '*'"
+
+#: krenameimpl.cpp:487 krenameimpl.cpp:1198
+msgid "Insert '/'"
+msgstr "插入 '/'"
+
+#: krenameimpl.cpp:489 krenameimpl.cpp:1200
+msgid "Insert '['"
+msgstr "插入 '['"
+
+#: krenameimpl.cpp:488 krenameimpl.cpp:1199
+msgid "Insert '\\\\'"
+msgstr "插入 '\\\\'"
+
+#: krenameimpl.cpp:490 krenameimpl.cpp:1201
+msgid "Insert ']'"
+msgstr "插入 ']'"
+
+#: scriptplugin.cpp:71
+msgid "Insert a snippet of JavaScript code (4+5 in this case)"
+msgstr ""
+
+#: taglibplugin.cpp:43
+#, fuzzy
+msgid "Insert the album of a track"
+msgstr "插入访问日期"
+
+#: taglibplugin.cpp:42
+#, fuzzy
+msgid "Insert the artist of a track"
+msgstr "取得当前日期及时间(&G)"
+
+#: taglibplugin.cpp:44
+#, fuzzy
+msgid "Insert the comment of a track"
+msgstr "取得当前日期及时间(&G)"
+
+#: systemplugin.cpp:50
+msgid "Insert the current date"
+msgstr "取得当前日期及时间(&G)"
+
+#: systemplugin.cpp:51
+msgid "Insert the current date using the formatting string yyyy-MM-dd"
+msgstr "用格式化字符串yyyy-MM-dd插入当前日期"
+
+#: systemplugin.cpp:54
+msgid "Insert the current day as number"
+msgstr "插入当前日期数字"
+
+#: systemplugin.cpp:56
+msgid "Insert the current hour as number"
+msgstr "插入当前小时数"
+
+#: systemplugin.cpp:57
+msgid "Insert the current minute as number"
+msgstr "插入当前分钟数"
+
+#: systemplugin.cpp:53
+msgid "Insert the current month as number"
+msgstr "插入当前月份数字"
+
+#: systemplugin.cpp:58
+msgid "Insert the current second as number"
+msgstr "插入当前秒数"
+
+#: systemplugin.cpp:55
+msgid "Insert the current time"
+msgstr "插入当前时间"
+
+#: systemplugin.cpp:52
+msgid "Insert the current year"
+msgstr "插入当前年份数字"
+
+#: systemplugin.cpp:65
+msgid "Insert the date of the last file access"
+msgstr "插入访问日期"
+
+#: systemplugin.cpp:61
+msgid "Insert the files creation date"
+msgstr "插入文件生成日期"
+
+#: systemplugin.cpp:63
+msgid "Insert the files modification date"
+msgstr "插入文件修改日期"
+
+#: systemplugin.cpp:66
+msgid "Insert the formatted date of the last file access"
+msgstr "插入格式化的访问日期"
+
+#: systemplugin.cpp:62
+msgid "Insert the formatted file creation date"
+msgstr "插入格式化的文件生成日期"
+
+#: systemplugin.cpp:64
+msgid "Insert the formatted modification date"
+msgstr "插入格式化的文件修改日期"
+
+#: taglibplugin.cpp:45
+#, fuzzy
+msgid "Insert the genre of a track"
+msgstr "取得当前日期及时间(&G)"
+
+#: taglibplugin.cpp:47
+#, fuzzy
+msgid "Insert the number of a track"
+msgstr "取得当前日期及时间(&G)"
+
+#: taglibplugin.cpp:48
+msgid "Insert the number of a track formatted with a leading 0"
+msgstr ""
+
+#: taglibplugin.cpp:41
+#, fuzzy
+msgid "Insert the title of a track"
+msgstr "插入文件生成日期"
+
+#: taglibplugin.cpp:46
+#, fuzzy
+msgid "Insert the year of a track"
+msgstr "插入访问日期"
+
+#: translitplugin.cpp:94
+#, fuzzy
+msgid "Inserts the transliterated original filename"
+msgstr "插入格式化的文件修改日期"
+
+#: translitplugin.cpp:97
+msgid "Inserts the transliterated original filename capitalized"
+msgstr ""
+
+#: translitplugin.cpp:95
+#, fuzzy
+msgid "Inserts the transliterated original filename converted to lower case"
+msgstr "原文件名转变为小写"
+
+#: translitplugin.cpp:96
+#, fuzzy
+msgid "Inserts the transliterated original filename converted to upper case"
+msgstr "原文件名转变为大写"
+
+#: scriptplugin.cpp:242
+msgid "Int"
+msgstr ""
+
+#: main.cpp:92
+msgid "Italian translation"
+msgstr "意大利语翻译"
+
+#: scriptplugin.cpp:63
+msgid "JavaScript Plugin"
+msgstr ""
+
+#: main.cpp:97
+msgid "Jose Rodriguez"
+msgstr ""
+
+#: main.cpp:55 krenameimpl.cpp:362
+msgid "KRename"
+msgstr "KRename"
+
+#: main.cpp:61
+#, fuzzy
+msgid "KRename Build:"
+msgstr "KRename"
+
+#: batchrenamer.cpp:299 batchrenamer.cpp:757
+msgid "KRename finished the renaming process."
+msgstr "重命名处理完毕！"
+
+#: batchrenamer.cpp:422
+#, fuzzy
+msgid "KRename finished the undo process."
+msgstr "重命名处理完毕！"
+
+#: main.cpp:56
+msgid ""
+"KRename is a batch file renamer which can rename a\n"
+"list of files based on a set of expressions.\n"
+"\n"
+"If you like KRename you may want to support it.\n"
+"Testing, bug fixes and feature request are as welcome\n"
+"as financial support (everybody needs money ;)\n"
+"See help files for details.\n"
+msgstr ""
+"Krename是一个批量文件重命名程序，它可以基于一系列表达式为多个文件重命名。 \n"
+"若您喜欢Krename，也许您想支持它。\n"
+"欢迎参与测试、除虫，以及提出功能需求。\n"
+"也可以提供经济上的支持(任何人都需要钱;)) \n"
+"请查看帮助文件以获取详情。\n"
+
+#: main.cpp:101
+msgid "Krzysztof Pawlak"
+msgstr ""
+
+#: krenameimpl.cpp:2312
+msgid "Last Dot"
+msgstr "最后一个点"
+
+#: main.cpp:96
+msgid "Mark Volkert"
+msgstr ""
+
+#: main.cpp:76
+msgid "Michael Elvers"
+msgstr ""
+
+#: main.cpp:94
+msgid "Michael Zugaro"
+msgstr ""
+
+#: main.cpp:86
+msgid "Michael v.Ostheim"
+msgstr ""
+
+#: krenameimpl.cpp:1011
+msgid "Move selected items (select the new location with the mouse)"
+msgstr "移动选择项 (用鼠标选择新位置)"
+
+#: krenameimpl.cpp:1009 krenameimpl.cpp:1135
+msgid "Move selected items down"
+msgstr "向下移动选取的项目"
+
+#: krenameimpl.cpp:1008 krenameimpl.cpp:1134
+msgid "Move selected items up"
+msgstr "向上移动选取的项目"
+
+#: krenameimpl.cpp:1078
+msgid "Moves all files to the destination directory and renames them."
+msgstr "移动所有文件至目的目录并重命名"
+
+#: main.cpp:100
+msgid "Nicolas Benoit"
+msgstr ""
+
+#: krenameimpl.cpp:1314 krenameimpl.cpp:1318
+msgid "Number"
+msgstr "编号"
+
+#: krenameimpl.cpp:1023
+msgid "O&ptions"
+msgstr "选项(&O)"
+
+#: krenameimpl.cpp:1106 krenamemodel.cpp:432
+msgid "Origin"
+msgstr "原始文件"
+
+#: permissionsplugin.cpp:210
+msgid "Others"
+msgstr "其他"
+
+#: systemplugin.cpp:59
+#, fuzzy
+msgid "Owner of the file"
+msgstr "第一个文件的编号"
+
+#: systemplugin.cpp:60
+msgid "Owning group of the file"
+msgstr ""
+
+#: main.cpp:84
+msgid ""
+"Parts of the PNG support are copied from his KFile plugin for png support."
+msgstr "部份的PNG支持是从他的KFile给png支持的插件处抄过来的。"
+
+#: main.cpp:90
+msgid "Per Ovind Karlsen"
+msgstr ""
+
+#: permissionsplugin.cpp:111
+msgid "Permissions"
+msgstr "权限"
+
+#: permissionsplugin.cpp:124
+msgid "PermissionsPlugin works only with local files. %1 is a remote file."
+msgstr ""
+
+#: krenameimpl.cpp:1652
+msgid "Please give a destination directory !"
+msgstr "请指定目的目录！"
+
+#: krenameimpl.cpp:1657
+msgid "Please give the name of the undo script!"
+msgstr "请给出撤消脚本的文件名"
+
+#: batchrenamer.cpp:300 batchrenamer.cpp:423 batchrenamer.cpp:758
+msgid "Press close to quit!"
+msgstr "请按下关闭退出！"
+
+#: main.cpp:96
+msgid "Provided SuSE RPMs and very good suggestions"
+msgstr "提供了SuSE RPM包以及很多好的建议"
+
+#: main.cpp:98
+msgid "Provided a RedHat RPM and was big help in improving KRename"
+msgstr "提供了RedHat RPM包并为改进KRename提供了很大的帮助"
+
+#: main.cpp:93
+msgid "Provided a gcc3.x namespace patch"
+msgstr "提供了gcc3.x命名空间补丁"
+
+#: main.cpp:94
+msgid "Provided the new preview and move features"
+msgstr "提供了新的预览和移动功能"
+
+#: krenameimpl.cpp:953
+msgid "R&emove All"
+msgstr "全部删除(&E)"
+
+#: krenameimpl.cpp:950
+msgid "Re&move"
+msgstr "删除(&M)"
+
+#: permissionsplugin.cpp:189
+msgid "Read"
+msgstr "读取"
+
+#: krenameimpl.cpp:1005
+msgid "Remove all files"
+msgstr "删除所有文件"
+
+#: krenameimpl.cpp:1004
+msgid "Remove selected files"
+msgstr "删除选中的文件"
+
+#: progressdialog.cpp:50
+#, fuzzy
+msgid "Rename &Unprocessed Files &Again..."
+msgstr "重新重命名未处理的文件(&U)..."
+
+#: progressdialog.cpp:49
+msgid "Rename Processed Files &Again..."
+msgstr "重新重命名已处理的文件(&P)..."
+
+#: krenameimpl.cpp:1107 krenamemodel.cpp:432
+msgid "Renamed"
+msgstr "重命名后的文件"
+
+#: batchrenamer.cpp:750
+msgid "Renamed %1 files successfully."
+msgstr "成功重命名文件%1"
+
+#: main.cpp:95
+msgid "Rene Gass"
+msgstr ""
+
+#: progressdialog.cpp:47
+#, fuzzy
+msgid "Restart &KRename..."
+msgstr "重新启动KRename..."
+
+#: main.cpp:84
+msgid "Rolf Magnus"
+msgstr ""
+
+#: main.cpp:88
+msgid "Some GCC 3.1 fixes for Gentoo."
+msgstr "为Gentoo中的GCC 3.1做的一些修正"
+
+#: krenameimpl.cpp:957
+msgid "Sort: Ascending"
+msgstr "排序: 升序"
+
+#: krenameimpl.cpp:958
+msgid "Sort: Descending"
+msgstr "排序: 降序"
+
+#: krenameimpl.cpp:960
+msgid "Sort: Numeric"
+msgstr "排序: 数字"
+
+#: krenameimpl.cpp:959
+msgid "Sort: Random"
+msgstr "排序: 随机"
+
+#: krenameimpl.cpp:956
+msgid "Sort: Unsorted"
+msgstr "排序: 无"
+
+#: permissionsplugin.cpp:201
+msgid "Special"
+msgstr "特殊"
+
+#: krenameimpl.cpp:492
+#, fuzzy
+msgid "Special Characters"
+msgstr "特殊字符:"
+
+#: krenameimpl.cpp:1203
+msgid "Special Characters:"
+msgstr "特殊字符:"
+
+#: krenameimpl.cpp:1648
+msgid "Specify a template to use for renaming files."
+msgstr "指定重命名文件使用的模板"
+
+#: krenameimpl.cpp:1301
+msgid "Start &index:"
+msgstr "起始编号："
+
+#: krenameimpl.cpp:533 krenameimpl.cpp:1606
+msgid "Starting conversion of %1 files."
+msgstr "开始转换%1个文件"
+
+#: main.cpp:67
+msgid "Stefan \"Stonki\" Onken"
+msgstr ""
+
+#: main.cpp:93
+msgid "Stephan Johach"
+msgstr ""
+
+#: main.cpp:98
+msgid "Steven P. Ulrick"
+msgstr ""
+
+#: permissionsplugin.cpp:219
+msgid "Sticky"
+msgstr "粘性"
+
+#: scriptplugin.cpp:241
+msgid "String"
+msgstr ""
+
+#: fileplugin.cpp:84
+msgid "Supported tokens:"
+msgstr "支持的记号："
+
+#: batchrenamer.cpp:231 batchrenamer.cpp:683
+msgid "Symbolic links will be created in: %1"
+msgstr "符号链接将生成于：%1"
+
+#: taglibplugin.cpp:50
+msgid "TagLib (MP3/Ogg) Plugin"
+msgstr ""
+
+#: main.cpp:90
+msgid "Thanks for creating the Mandrake RPM"
+msgstr "感谢创建了Mandrake RPM包"
+
+#: main.cpp:78
+msgid ""
+"Thanks for his great job at apps.kde.com and help with contributing krename "
+"to apps.kde.com."
+msgstr ""
+"感谢他在apps.kde.com里的功劳，同时也感谢他帮助我把Krename贡献予apps.kde.com。"
+
+#: main.cpp:80
+msgid ""
+"Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
+msgstr "感谢noatun及ID3/Ogg，标签程序码是基于他的noatun模块。"
+
+#: main.cpp:71
+msgid "Thanks to him for creating RedHat 7.x packages and some other help."
+msgstr "感谢他因为建立RedHat 7.X套件及一些其他的帮助。"
+
+#: krenameimpl.cpp:552
+#, fuzzy
+msgid "The directory %1 could not be created."
+msgstr "配置文件 \"%1\" 找不到"
+
+#: krenameimpl.cpp:544
+#, fuzzy
+msgid ""
+"The directory %1 does not exist. Do you want KRename to create it for you?"
+msgstr "目录 %1 不存在. KRename 会生成此目录."
+
+#: krenameimpl.cpp:1766
+msgid "The directory %1 does not exist. KRename will create it for you."
+msgstr "目录 %1 不存在. KRename 会生成此目录."
+
+#: scriptplugin.cpp:343
+#, fuzzy
+msgid "The file %1 does already exists. Do you want to overwrite it?"
+msgstr "同名配置已存在，请输入另一个名称"
+
+#: filedialogextwidget.cpp:55
+msgid ""
+"This option causes KRename to add also the name of the base directory of the "
+"selected files to its list."
+msgstr "此选项让KRename将选中的文件所在的目录名也添加到列表中。"
+
+#: main.cpp:103
+msgid "Translated KRename into Bosnian"
+msgstr "将KRename翻译成波斯尼亚语"
+
+#: main.cpp:100
+msgid "Translated KRename into French"
+msgstr "将KRename翻译成法语"
+
+#: main.cpp:101
+msgid "Translated KRename into Polish"
+msgstr "将KRename翻译成波兰语"
+
+#: main.cpp:102
+msgid "Translated KRename into Russian"
+msgstr "将KRename翻译成俄语"
+
+#: main.cpp:99
+msgid "Translated KRename to Japanese"
+msgstr "将KRename翻译成日语"
+
+#: translitplugin.cpp:98
+msgid "Transliterates the string following the semicolon"
+msgstr ""
+
+#: translitplugin.cpp:100
+#, fuzzy
+msgid "Transliteration"
+msgstr "翻译插件"
+
+#: main.cpp:71
+msgid "Trevor Semeniuk"
+msgstr ""
+
+#: permissionsplugin.cpp:213
+msgid "UID"
+msgstr "UID"
+
+#: scriptplugin.cpp:74
+#, fuzzy
+msgid "URL of the current file"
+msgstr "插入当前时间"
+
+#: main.cpp:99
+msgid "UTUMI Hirosi"
+msgstr ""
+
+#: scriptplugin.cpp:319
+msgid "Unable to open %1 for reading."
+msgstr ""
+
+#: scriptplugin.cpp:376
+msgid "Unable to open %1 for writing."
+msgstr ""
+
+#: batchrenamer.cpp:738
+msgid "Undo is not possible for remote file: %1"
+msgstr "远程文件不能撤消重命名: %1"
+
+#: batchrenamer.cpp:381
+msgid "Undoing all renamed files."
+msgstr ""
+
+#: krenameimpl.cpp:1289
+msgid "Use original extension"
+msgstr "使用原始扩展名"
+
+#: krenameimpl.cpp:1279
+msgid "Use original name"
+msgstr "使用原始文件名"
+
+#: permissionsplugin.cpp:204
+msgid "User"
+msgstr "所有者"
+
+#: scriptplugin.cpp:131
+#, fuzzy
+msgid "Variable Name"
+msgstr "配置名称"
+
+#: filedialogextwidget.cpp:49
+msgid ""
+"Walk recursively through the directory tree and add also the content of all "
+"subdirectories to the list of files to rename."
+msgstr "递归访问目录数，并将所有子目录中的文件添加到重命名文件列表中。"
+
+#: main.cpp:68
+msgid "Website, testing, very good ideas and keeping me coding!"
+msgstr "网站、测试、好点子及让我继续写程序！"
+
+#: permissionsplugin.cpp:192
+msgid "Write"
+msgstr "写入"
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr "royqh1979@gmail.com"
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr "Roy Qu"
+
+#: main.cpp:44
+msgid "add directory recursively"
+msgstr "递归添加目录"
+
+#: krenameimpl.cpp:473 krenameimpl.cpp:1186
+msgid "character x to y of old filename"
+msgstr "原文件名中第x到第y个字符"
+
+#: main.cpp:48
+msgid "copy files to directory"
+msgstr "复制文件至目录(&C)"
+
+#: krenameimpl.cpp:471 krenameimpl.cpp:1183
+msgid "counter with custom start value 0 and custom stepping 1"
+msgstr "起始值为0,步长为1的计数器"
+
+#: krenameimpl.cpp:472 krenameimpl.cpp:1184
+msgid "create a subdirectory"
+msgstr "创建子目录"
+
+#: main.cpp:65
+msgid "developer and maintainer"
+msgstr ""
+
+#: main.cpp:47
+msgid "enable a plugin for use"
+msgstr "启用插件"
+
+#: main.cpp:43
+msgid "file will be added to the list of files for renaming"
+msgstr "文件将会被加入到待重命名的文件列表中"
+
+#: krenameimpl.cpp:468 krenameimpl.cpp:1180
+msgid "first letter of every word upper case"
+msgstr "每个词的第一个字母大写"
+
+#: krenameimpl.cpp:469 krenameimpl.cpp:1181
+msgid "first letter of filename upper case"
+msgstr "文件名的第一个字母大写"
+
+#: krenameimpl.cpp:475 krenameimpl.cpp:1188
+msgid "insert name of directory"
+msgstr "插入目录名"
+
+#: krenameimpl.cpp:476 krenameimpl.cpp:1189
+msgid "insert name of parent directory"
+msgstr "插入上级目录的目录名"
+
+#: krenameimpl.cpp:477 krenameimpl.cpp:1190
+msgid "insert the length of the input filename"
+msgstr "插入文件大小"
+
+#: main.cpp:50
+msgid "load the profile named [profile] on startup"
+msgstr "在启动时载入配置文件名[profile]"
+
+#: main.cpp:49
+msgid "move files to directory"
+msgstr "移动文件至目录(&M)"
+
+#: krenameimpl.cpp:470 krenameimpl.cpp:1182
+msgid "number (try also ##, ###, ... for leading zeros)"
+msgstr "编号 (用 ##, ###, ... 前置补零)"
+
+#: krenameimpl.cpp:465 krenameimpl.cpp:1177
+msgid "old filename"
+msgstr "原文件名"
+
+#: krenameimpl.cpp:466 krenameimpl.cpp:1178
+msgid "old filename converted to lower case"
+msgstr "原文件名转变为小写"
+
+#: krenameimpl.cpp:467 krenameimpl.cpp:1179
+msgid "old filename converted to upper case"
+msgstr "原文件名转变为大写"
+
+#: main.cpp:53
+msgid "only show <num> preview items"
+msgstr ""
+
+#: main.cpp:45
+msgid "set a template"
+msgstr "设置模板"
+
+#: main.cpp:46
+msgid "set a template for the file extension"
+msgstr "设置扩展名模板"
+
+#: main.cpp:52
+msgid "start KRename's selftest (developers only)"
+msgstr ""
+
+#: main.cpp:51
+msgid "start renaming immediately"
+msgstr "立即开始重命名！"
+
+#: krenameimpl.cpp:478 krenameimpl.cpp:1185
+msgid "strip whitespaces leading and trailing"
+msgstr "删除首尾空格"
+
+#: krenameimpl.cpp:479
+#, fuzzy
+msgid "strip whitespaces leading and trailing of an arbitrary string"
+msgstr "删除首尾空格"
+
+#: krenameimpl.cpp:474 krenameimpl.cpp:1187
+msgid "y characters of old filename starting at x"
+msgstr "原文件名开始于x的y个字符"
+
+#~ msgid " - Step %1 of %2"
+#~ msgstr " - 步骤 %1 / %2"
+
+#~ msgid " exited with error: %1"
+#~ msgstr "发生错误: %1，退出"
+
+#~ msgid "&Add"
+#~ msgstr "添加(&A)"
+
+#~ msgid "&Add Number"
+#~ msgstr "添加编号(&A)"
+
+#~ msgid "&Command Plugin"
+#~ msgstr "命令插件(&D)"
+
+#~ msgid "&Delete Profile"
+#~ msgstr "删除配置(&D)"
+
+#~ msgid "&Dir Plugin"
+#~ msgstr "目录插件(&D)"
+
+#~ msgid "&Edit..."
+#~ msgstr "编辑(&E)..."
+
+#~ msgid "&Encoding Conversion Plugin"
+#~ msgstr "编码转换插件(&E)"
+
+#~ msgid "&Execute without blocking (not recommended)"
+#~ msgstr "非阻塞执行（不推荐）(&E)"
+
+#~ msgid "&Get Current Date && Time"
+#~ msgstr "取得目前日期及时间(&G)"
+
+#~ msgid "&Invert selection"
+#~ msgstr "反向选择(&I)"
+
+#~ msgid "&Load KDE file plugins"
+#~ msgstr "加载KDE文件插件(&L)"
+
+#~ msgid "&Load Profile"
+#~ msgstr "加载配置(&L)"
+
+#~ msgid "&Load file plugins on start"
+#~ msgstr "启动时加载文件插件"
+
+#~ msgid "&Number of template history items:"
+#~ msgstr "模板历史项的数量"
+
+#~ msgid "&Numbering"
+#~ msgstr "编号"
+
+#~ msgid "&Ok"
+#~ msgstr "确定(&O)"
+
+#~ msgid "&Permissions"
+#~ msgstr "权限(&P)"
+
+#~ msgid "&Regular expression"
+#~ msgstr "正则表达式"
+
+#~ msgid "&Reload Plugin Data"
+#~ msgstr "重新加载插件数据(&R)"
+
+#~ msgid "&Remove Number"
+#~ msgstr "删除编号(&R)"
+
+#~ msgid "&Reset counter for every directory"
+#~ msgstr "为每个目录重设计数器(&R)"
+
+#~ msgid "&Revert Changes"
+#~ msgstr "反向改变(&R)"
+
+#~ msgid "&Save As Profile..."
+#~ msgstr "另存配置为(&C)..."
+
+#~ msgid "&System Functions"
+#~ msgstr "系统函数(&S)"
+
+#~ msgid "&Thumbnail size:"
+#~ msgstr "略缩图大小(&T)"
+
+#~ msgid "&Transliteration Plugin"
+#~ msgstr "翻译插件(&T)"
+
+#~ msgid "&Undo Old Renaming Action..."
+#~ msgstr "撤消以前的重命名操作(&U)..."
+
+#~ msgid "&Use as default profile on startup"
+#~ msgstr "作为启动时使用的缺省配置(&U)"
+
+#~ msgid "&Use local encoding: %1"
+#~ msgstr "使用本地编码(&U):%1"
+
+#~ msgid "<b>Command Plugin</b>"
+#~ msgstr "<b>命令插件</b>"
+
+#~ msgid ""
+#~ "<qt>Executes a shell command on every file after it has been renamed. Add "
+#~ "%1 to the command line arguments to get the filename of the renamed file."
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>在每个文件重命名后执行一个shell命令，请在命令参数中加入%1用于获取重命"
+#~ "名后的文件名</qt>"
+
+#~ msgid "<qt>Load all settings stored in this profile.</qt>"
+#~ msgstr "<qt>加载此配置文件中包含的所有设置</qt>"
+
+#~ msgid ""
+#~ "<qt>Save KRename's current settings as a new profile. The settings are "
+#~ "saved and can be restored with Load Profile later.</qt>"
+#~ msgstr ""
+#~ "<qt>将KRename的当前设置保存为新的配置文件。这些设置将来可以用\"加载配置"
+#~ "\"恢复。</qt>"
+
+#~ msgid ""
+#~ "<qt>The counter is set to the start index in every directory. This "
+#~ "setting applies to all used counters.</qt>"
+#~ msgstr ""
+#~ "<qt>计数器在每个目录中都被重设到起始编号。此设置对正在使用的全部计数器有"
+#~ "效。</qt>"
+
+#~ msgid ""
+#~ "<qt>This plugin is able to convert filenames between different encodings. "
+#~ "For example you can convert filenames from KOI8-R to UTF-8 encoding.</qt>"
+#~ msgstr ""
+#~ "<qt>此插件可以把文件名重命名为不同编码。例如可以把文件名从GB2312编码更改为"
+#~ "UTF-8编码</qt>"
+
+#~ msgid "<qt>This plugin sorts files after renaming in subdirectories.</qt>"
+#~ msgstr "此插件在子目录中的文件重命名后对文件进行排序"
+
+#~ msgid ""
+#~ "<qt>Undo Scripts are normal shell scripts which can also be executed "
+#~ "manually from the command line.</qt>"
+#~ msgstr "<qt>撤消脚本是普通的shell脚本，也可以从命令行执行。</qt>"
+
+#~ msgid "Aborting..."
+#~ msgstr "正在终止..."
+
+#~ msgid "Add a text that should be replaced."
+#~ msgstr "添加一段将被替换的文本。"
+
+#~ msgid ""
+#~ "Add all numbers that should be skipped by krename during the rename "
+#~ "process.<br>E.g.: If 2 is skipped files will be numbered: file0, file1, "
+#~ "file3, ..."
+#~ msgstr ""
+#~ "添加所有在Krename处理过程中将被跳过的编号。 <br>例如：若2将被跳过，则文件"
+#~ "将会被标示为：文件0、文件1、文件3、..."
+
+#~ msgid "Auto &resize columns in preview"
+#~ msgstr "自动调整预览栏的大小"
+
+#~ msgid "Change &Owner"
+#~ msgstr "变更所有者(&O)"
+
+#~ msgid "Change &Permissions"
+#~ msgstr "变更权限(&P)"
+
+#~ msgid "Change &access date && time"
+#~ msgstr "变更存取日期及时间(&A)"
+
+#~ msgid "Change &modification date && time"
+#~ msgstr "变更修改日期及时间(&M)"
+
+#~ msgid "Command Plugin"
+#~ msgstr "命令插件"
+
+#~ msgid "Command:"
+#~ msgstr "命令:"
+
+#~ msgid "Configure the look and feel of the KRename GUI:<br>"
+#~ msgstr "配置KRename的外观"
+
+#~ msgid "Date && &Time"
+#~ msgstr "日期与时间(&T)"
+
+#~ msgid "Description"
+#~ msgstr "描述"
+
+#~ msgid "Dir Plugin"
+#~ msgstr "目录插件"
+
+#~ msgid ""
+#~ "Disabling this option decreases KRename's startup time, because no "
+#~ "KFilePlugins are loaded."
+#~ msgstr "禁用此选项会减少KRename的启动时间, 但是将不会加载KFilePlugins插件."
+
+#~ msgid ""
+#~ "Do you really want to load the profile and overwrite the current "
+#~ "settings: %1"
+#~ msgstr "是否加载配置并覆盖当前的设置: %1？"
+
+#~ msgid "Encoding Conversion Plugin"
+#~ msgstr "编码转换插件"
+
+#~ msgid "Encoding of Input Files:"
+#~ msgstr "输入文件的编码"
+
+#~ msgid "Encoding of Output Files:"
+#~ msgstr "输出文件的编码"
+
+#~ msgid "File %1 exists already!"
+#~ msgstr "文件%1已存在！"
+
+#~ msgid "Files per directory:"
+#~ msgstr "每个目录的文件："
+
+#~ msgid "Find"
+#~ msgstr "查找"
+
+#~ msgid "Find and Replace"
+#~ msgstr "查找与替换"
+
+#~ msgid "Find:"
+#~ msgstr "查找："
+
+#~ msgid "Finished successfully"
+#~ msgstr "成功完成"
+
+#~ msgid "Group:"
+#~ msgstr "群组："
+
+#~ msgid "Insert your groupname"
+#~ msgstr "插入您的组名"
+
+#~ msgid "Insert your username"
+#~ msgstr "插入您的用户名"
+
+#~ msgid "KRename: Tabbed default profile"
+#~ msgstr "KRename: 缺省标签页视图配置"
+
+#~ msgid "KRename: Wizard default profile"
+#~ msgstr "KRename: 缺省向导视图配置"
+
+#~ msgid "Look and Feel"
+#~ msgstr "外观"
+
+#~ msgid "Messages"
+#~ msgstr "消息"
+
+#~ msgid "Output &Directory"
+#~ msgstr "输出目录(&D)"
+
+#~ msgid "Ownership"
+#~ msgstr "所有"
+
+#~ msgid "P&icture Plugin"
+#~ msgstr "图像插件(&I)"
+
+#~ msgid "Picture Plugin"
+#~ msgstr "图像插件"
+
+#~ msgid "Please add some files..."
+#~ msgstr "请添加文件..."
+
+#~ msgid "Please enter a name for the new profile:"
+#~ msgstr "请为新的配置文件输入一个名称："
+
+#~ msgid "Please input a new filename:"
+#~ msgstr "请输入一个新的文件名："
+
+#~ msgid "Please select the text you want to insert:"
+#~ msgstr "请选择你想插入的文本"
+
+#~ msgid "Preview: "
+#~ msgstr "预览: "
+
+#~ msgid "Profiles"
+#~ msgstr "配置文件"
+
+#~ msgid "Progress"
+#~ msgstr "处理"
+
+#~ msgid "Regular Expression"
+#~ msgstr "正则表达式"
+
+#~ msgid "Regular expression"
+#~ msgstr "正则表达式"
+
+#~ msgid "Replace With"
+#~ msgstr "替换为"
+
+#~ msgid "Replace with:"
+#~ msgstr "替换为："
+
+#~ msgid "S&kip Numbers"
+#~ msgstr "跳过编号"
+
+#~ msgid "Start index:"
+#~ msgstr "开始索引："
+
+#~ msgid "Step &by:"
+#~ msgstr "步长(&B)："
+
+#~ msgid "The counter is increased/decreased by this value."
+#~ msgstr "编号按此数值递增/递减"
+
+#~ msgid ""
+#~ "This script does not seem to be a Krename undo script. Execution of this "
+#~ "script can be dangerous. Continue ?"
+#~ msgstr ""
+#~ "此脚本似乎不是Krename撤消脚本，执行此脚本可能会产生危险的结果，是否继续?"
+
+#~ msgid "Time:"
+#~ msgstr "时间："
+
+#~ msgid "Token"
+#~ msgstr "记号"
+
+#~ msgid "Unable to start the given undo script!"
+#~ msgstr "无法启动所给的撤销脚本！"
+
+#~ msgid "Undo Renaming"
+#~ msgstr "撤消重命名"
+
+#~ msgid "Undo script:"
+#~ msgstr "撤消脚本:"
+
+#~ msgid "Undoing the renaming operation has been completed."
+#~ msgstr "已完成对重命名操作的撤销！"
+
+#~ msgid "Use &Input Filename"
+#~ msgstr "使用输入的文件名(&I)"
+
+#~ msgid "Use &tabbed GUI (advanced users)"
+#~ msgstr "使用标签页界面(&t)(高级用户使用)"
+
+#~ msgid "Use &wizard style GUI (beginners)"
+#~ msgstr "使用向导界面(&w)"
+
+#~ msgid ""
+#~ "Use the filename that is generated by KRename instead of your changes."
+#~ msgstr "使用由Krename所产生的文件名以替换您的更改"
+
+#~ msgid "User pressed cancel!"
+#~ msgstr "使用者按下了取消键！"
+
+#~ msgid "User:"
+#~ msgstr "用户："
+
+#~ msgid "Warning: %1"
+#~ msgstr "警告: %1"
+
+#~ msgid "You can't replace the same text twice."
+#~ msgstr "无法重复替换同样的文本！"
+
+#~ msgid "You cannot delete default profiles!"
+#~ msgstr "不能删除缺省配置！"
+
+#~ msgid "You did not specify a command to execute."
+#~ msgstr "未指定执行的命令"
+
+#~ msgid "create no realtime preview"
+#~ msgstr "建立非实时预览"
+
+#~ msgid "h"
+#~ msgstr "小时"
+
+#~ msgid "min"
+#~ msgstr "分钟"
+
+#~ msgid "no"
+#~ msgstr "否"
+
+#~ msgid "s"
+#~ msgstr "秒"
+
+#~ msgid "yes"
+#~ msgstr "是"

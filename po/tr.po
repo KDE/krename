@@ -1,0 +1,1734 @@
+# translation of krename.po to
+# Emre Aladağ <emre@emrealadag.com>, 2006.
+# Koray Löker <loker@pardus.org.tr>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: krename\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-07 16:42+0200\n"
+"PO-Revision-Date: 2006-09-18 19:14+0300\n"
+"Last-Translator: Koray Löker <loker@pardus.org.tr>\n"
+"Language-Team:  <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: batchrenamer.cpp:297 batchrenamer.cpp:420
+#, fuzzy
+msgid "%1 errors occurred!"
+msgstr "%2 hata oluştu!"
+
+#: batchrenamer.cpp:754
+msgid "%2 errors occurred!"
+msgstr "%2 hata oluştu!"
+
+#: krenameimpl.cpp:947 previewlist.cpp:36
+msgid "&Add..."
+msgstr "&Ekle..."
+
+#: previewlist.cpp:32
+#, fuzzy
+msgid "&Change filename manually..."
+msgstr "Dosya Adını Elle &Değiştir"
+
+#: krenamewindow.cpp:132
+msgid "&Close"
+msgstr ""
+
+#: krenameimpl.cpp:1061
+msgid "&Create an undo script"
+msgstr "Geri alma &betiği oluştur"
+
+#: krenamewindow.cpp:48
+#, fuzzy
+msgid "&Destination"
+msgstr "&Hedef"
+
+#: krenameimpl.cpp:974
+msgid "&Display name"
+msgstr "&Görüntüleme ismi"
+
+#: krenameimpl.cpp:1287
+msgid "&Extension:"
+msgstr "&Uzantı:"
+
+#: krenameimpl.cpp:1257
+msgid "&Filename"
+msgstr "&Dosya adı"
+
+#: krenamewindow.cpp:47
+#, fuzzy
+msgid "&Files"
+msgstr "&Dosyalar"
+
+#: krenameimpl.cpp:1307
+msgid "&Find and Replace..."
+msgstr "&Bul ve Değiştir..."
+
+#: krenamewindow.cpp:131
+#, fuzzy
+msgid "&Finish..."
+msgstr "&Bitiş"
+
+#: krenameimpl.cpp:1159
+msgid "&Functions..."
+msgstr "&İşlevler..."
+
+#: tokenhelpdialog.cpp:31
+#, fuzzy
+msgid "&Insert"
+msgstr "'$' Ekle"
+
+#: krenameimpl.cpp:1172
+msgid "&Insert Part of Filename..."
+msgstr "D&osya adından bir parça kullan..."
+
+#: krenameimpl.cpp:1038
+msgid "&Move files to destination directory"
+msgstr "Dosyaları hedef dizine &taşı"
+
+#: krenameimpl.cpp:1277
+msgid "&Name:"
+msgstr "&İsim:"
+
+#: krenameimpl.cpp:1298
+msgid "&Number"
+msgstr "&Sayı"
+
+#: krenameimpl.cpp:1304
+msgid "&Number of digits:"
+msgstr "&Hane sayısı:"
+
+#: krenameimpl.cpp:1171
+msgid "&Numbering..."
+msgstr "&Numaralama..."
+
+#: previewlist.cpp:34
+msgid "&Open"
+msgstr ""
+
+#: progressdialog.cpp:35
+msgid "&Open Destination..."
+msgstr "Hedef &Aç..."
+
+#: krenameimpl.cpp:1048
+msgid "&Overwrite existing files"
+msgstr "&Üzerine yaz"
+
+#: krenamewindow.cpp:49
+#, fuzzy
+msgid "&Plugins"
+msgstr "&Eklentiler"
+
+#: krenameimpl.cpp:1260
+msgid "&Prefix:"
+msgstr "&Önek:"
+
+#: krenameimpl.cpp:963
+msgid "&Preview"
+msgstr "&Önizleme"
+
+#: krenameimpl.cpp:122
+msgid "&Profiles..."
+msgstr "&Profiller..."
+
+#: previewlist.cpp:37
+#, fuzzy
+msgid "&Remove"
+msgstr "&Kaldır"
+
+#: progressdialog.cpp:51
+#, fuzzy
+msgid "&Rename All Files Again..."
+msgstr "Tüm Dosyaları &Tekrar yeniden adlandır..."
+
+#: krenameimpl.cpp:1031
+msgid "&Rename input files"
+msgstr "Girdi dosyalarını yeniden &adlandır"
+
+#: progressdialog.cpp:33
+#, fuzzy
+msgid "&Rename more..."
+msgstr "Daha Fazla &Yeniden Adlandır..."
+
+#: krenameimpl.cpp:1266
+msgid "&Suffix:"
+msgstr "&Sonek:"
+
+#: krenameimpl.cpp:1148
+msgid "&Template:"
+msgstr "&Şablon:"
+
+#: progressdialog.cpp:34
+#, fuzzy
+msgid "&Undo"
+msgstr "Geri al: "
+
+#: krenameimpl.cpp:1059
+msgid "&Undo Renaming"
+msgstr "Adlandırmayı &Geri Al"
+
+#: krenameimpl.cpp:1163
+msgid "&Use extension of the input file"
+msgstr "Girdi dosyasının &uzantısını kullan"
+
+#: krenameimpl.cpp:1500
+msgid "&Use this plugin"
+msgstr "Bu eklentiyi &kullan"
+
+#: main.cpp:62
+msgid "(c) 2001-2008, Dominik Seichter\n"
+msgstr ""
+
+#: krenameimpl.cpp:1066
+msgid ""
+"*.krename|KRename undo scripts (*.krename)\n"
+"*|All Files (*)"
+msgstr ""
+"*.krename|Krename geri al betikleri (*.krename)\n"
+"*|Tüm Dosyalar (*)"
+
+#: krenameimpl.cpp:335 scriptplugin.cpp:298 scriptplugin.cpp:333
+#, fuzzy
+msgid "*|All files and directories"
+msgstr "&Gizli dizinleri ekle"
+
+#: krenamewindow.cpp:323
+#, fuzzy
+msgid "<b>Files:<b> %1"
+msgstr "Dosya sayısı: <b>%1</b>"
+
+#: main.cpp:119
+msgid ""
+"<b>Krename was started from root!</b><br>When started from root, Krename may "
+"damage your system if you do not know exactly what you are doing!"
+msgstr ""
+"<b>Krename kök dizinden(root) başlatıldı!</b><br>Eğer ne yaptığınızı tam "
+"olarak bilmiyorsanız,Krename kök dizinden başlatılınca sisteminize zarar "
+"verebilir!"
+
+#: krenameimpl.cpp:1138 krenameimpl.cpp:1139
+msgid ""
+"<qt>Find and replace characters or part string of the source filename in the "
+"destination filename.</qt>"
+msgstr ""
+"<qt>Özgün ismin bir bölümünü ya da bir karakterini otomatik olarak değiştir</"
+"qt>"
+
+#: krenameimpl.cpp:1344
+msgid ""
+"<qt>Insert a special KRename command which inserts file information into the "
+"filename.</qt>"
+msgstr ""
+"<qt>Dosya bilgisini dosya adı içerisine ekleyen özel bir KRename komudu ekle."
+"</qt>"
+
+#: translitplugin.cpp:102
+#, fuzzy
+msgid ""
+"<qt>This plugin can transcribe a filename into English (i.e. perform "
+"transliteration).</qt>"
+msgstr ""
+"<qt>Bu eklenti, latin olmayan harflerle yazılan isimleri, seslerine "
+"bakmaksızın latin harflerle yazılı biçime çevirir.</ qt>"
+
+#: systemplugin.cpp:70
+msgid ""
+"<qt>This plugin contains tokens to get the creation, modification and last "
+"access time of files and the current system time and date.</qt>"
+msgstr ""
+
+#: taglibplugin.cpp:51
+msgid ""
+"<qt>This plugin supports reading tags for MP3, Ogg Vorbis, FLAC, MPC, Speex "
+"WavPack and TrueAudio files.</qt>"
+msgstr ""
+
+#: krenameimpl.cpp:1140
+#, fuzzy
+msgid ""
+"<qt>You can use \".gz\" and \".tar.gz\" as file extension of the file backup."
+"tar.gz depending on this setting.</qt>"
+msgstr ""
+"<qt>Yedek dosyasının uzantısı olarak \".gz\" ve \"tar.gz\" "
+"kullanabilirsiniz. Bu ayar ile tar.gz kullanılır.</qt>"
+
+#: scriptplugin.cpp:262
+msgid "A JavaScript error has occured: "
+msgstr ""
+
+#: permissionsplugin.cpp:181
+msgid "Access permissions"
+msgstr "Erişim izinleri"
+
+#: filedialogextwidget.cpp:35
+msgid "Add &hidden directories"
+msgstr "&Gizli dizinleri ekle"
+
+#: krenameimpl.cpp:1132
+msgid ""
+"Add a template for the file extension.<br>It behaves like the filename "
+"template."
+msgstr ""
+"Dosya eklentisi için bir şablon ekle.<br>Dosya adı şablonu gibi davranır."
+
+#: krenameimpl.cpp:1131
+msgid "Add a template.<br>Example: <i>picture###</i>"
+msgstr "Bir şablon ekle.<br>Örnek: <i>resim###</i>"
+
+#: filedialogextwidget.cpp:33
+msgid "Add directory names &with filenames"
+msgstr "Dosya adlarıyla &birlikte dizin adlarını ekle"
+
+#: filedialogextwidget.cpp:36
+msgid "Add directory names only"
+msgstr "Sadece dizin isimlerini ekle"
+
+#: krenameimpl.cpp:1003
+msgid "Add one or more files or directories"
+msgstr "Bir veya daha fazla dosya/dizin ekle"
+
+#: filedialogextwidget.cpp:53
+msgid ""
+"Add only the directory names and not the names of the files in the directory "
+"to KRename."
+msgstr ""
+"KRename'e bir dizinin içindeki dosyaların isimlerini değil, sadece o dizinin "
+"ismini ekleyin."
+
+#: filedialogextwidget.cpp:34
+msgid "Add subdirectories &recursively"
+msgstr "Alt dizinleri &özyinelemeli olarak ekle"
+
+#: scriptplugin.cpp:291
+msgid ""
+"All currently entered definitions will be lost. Do you want to continue?"
+msgstr ""
+
+#: main.cpp:78
+msgid "Andreas Pour"
+msgstr ""
+
+#: main.cpp:103
+msgid "Asim Husanovic"
+msgstr ""
+
+#: scriptplugin.cpp:244
+msgid "Boolean"
+msgstr ""
+
+#: main.cpp:88
+msgid "Brandon Low"
+msgstr ""
+
+#: krenameimpl.cpp:480
+#, fuzzy
+msgid "Built-in Functions"
+msgstr "Yerleşik İşlevler:"
+
+#: krenameimpl.cpp:1191
+msgid "Built-in Functions:"
+msgstr "Yerleşik İşlevler:"
+
+#: datetimeplugin.cpp:112
+#, fuzzy
+msgid "Can't change date of file %1. (Cannot mktime)"
+msgstr "%1 dosyasının tarihi değiştirilemiyor."
+
+#: datetimeplugin.cpp:117
+#, fuzzy
+msgid "Can't change date of file %1. (Cannot stat the file)"
+msgstr "%1 dosyasının tarihi değiştirilemiyor."
+
+#: datetimeplugin.cpp:126
+#, fuzzy
+msgid "Can't change date of file %1. (utime failed)"
+msgstr "%1 dosyasının tarihi değiştirilemiyor."
+
+#: permissionsplugin.cpp:129
+msgid "Can't chmod %1."
+msgstr "%1 dosyasının izinleri değiştirilemedi."
+
+#: permissionsplugin.cpp:138
+msgid "Can't chown %1."
+msgstr "%1 dosyasının sahibi değiştirilemedi."
+
+#: batchrenamer.cpp:666
+msgid "Can't create undo script :"
+msgstr "Geri alma betiği oluşturulamıyor:"
+
+#: batchrenamer.cpp:768
+msgid "Can't set executable bit on undo script."
+msgstr "Geri alma betiğinde çalıştırılabilir bit koyamam."
+
+#: batchrenamer.cpp:264
+#, fuzzy
+msgid "Cannot create symlink to non-local URL: %1"
+msgstr "%1 dosyası için farklı makinede simgesel bağ oluşturulamadı."
+
+#: krenameimpl.cpp:1275
+msgid "Capitalize"
+msgstr "Baş harflerini büyük yap"
+
+#: main.cpp:80
+msgid "Charles Samuels"
+msgstr ""
+
+#: krenameimpl.cpp:1133
+msgid ""
+"Checking this checkbox is the same as setting the extension template to $"
+msgstr "Bu kutuyu seçmek uzantı şablonunu $ yapmakla aynıdır"
+
+#: permissionsplugin.cpp:186
+msgid "Class"
+msgstr "Sınıf"
+
+#: main.cpp:97
+msgid "Contributed a Spanish translation"
+msgstr "İspanyolca çeviriyle katkıda bulundu"
+
+#: krenameimpl.cpp:1273
+msgid "Convert to lower case "
+msgstr "Küçük harflere çevir"
+
+#: krenameimpl.cpp:1274
+msgid "Convert to upper case"
+msgstr "Büyük harflere çevir"
+
+#: krenameimpl.cpp:1035
+msgid "Cop&y files to destination directory"
+msgstr "Dosyaları hedef dizine kop&yala"
+
+#: krenameimpl.cpp:1077
+msgid "Copies all files to the destination directory and renames them."
+msgstr "Tüm dosyaları hedef dizine kopyalar ve yeniden adlandırır."
+
+#: krenameimpl.cpp:1041
+msgid "Create symbolic &links in destination directory"
+msgstr "Hedef dizinde simgesel &bağ oluştur"
+
+#: main.cpp:86
+msgid "Created the Gentoo Ebuild scripts for Krename."
+msgstr "Krename için Gentoo Ebuild betikleri oluşturuldu."
+
+#: krenameimpl.cpp:1291
+msgid "Custom extension"
+msgstr "Özel uzantı"
+
+#: krenameimpl.cpp:1281
+msgid "Custom name"
+msgstr "Özel isim"
+
+#: main.cpp:92
+msgid "Daniele Medri"
+msgstr ""
+
+#: krenameimpl.cpp:1315 krenameimpl.cpp:1319
+msgid "Date"
+msgstr "Tarih"
+
+#: datetimeplugin.cpp:50
+#, fuzzy
+msgid "Date & Time Plugin"
+msgstr "Tarih & Saat"
+
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Date and system functions"
+msgstr "Sistem İşlevleri"
+
+#: datetimeplugin.cpp:70
+msgid "DateTimePlugin works only with local files. %1 is a remote file."
+msgstr ""
+
+#: scriptplugin.cpp:77
+#, fuzzy
+msgid "Directory of the current file"
+msgstr "Şu anki saati ekleyin"
+
+#: krenameimpl.cpp:1007
+msgid "Displays the number of files in the list."
+msgstr "Listedeki dosyaların sayısını gösterir."
+
+#: krenameimpl.cpp:361
+#, fuzzy
+msgid "Do you really want to remove all files from the list?"
+msgstr "%1 profilini silmek istediğinize gerçekten emin misiniz?"
+
+#: main.cpp:65
+msgid "Dominik Seichter"
+msgstr ""
+
+#: scriptplugin.cpp:243
+msgid "Double"
+msgstr ""
+
+#: krenameimpl.cpp:1136
+msgid "Double click on an item to modify it."
+msgstr "Bir öğe üzerinde değişiklik yapmak için üzerine çift tıklayın."
+
+#: krenameimpl.cpp:118
+msgid "E&xtras"
+msgstr "İ&laveler"
+
+#: batchrenamer.cpp:756
+msgid "Elapsed time: %1 seconds"
+msgstr "Geçen zaman: %1 saniye"
+
+#: krenameimpl.cpp:1010
+msgid "Enable/disable display of file name."
+msgstr "Dosya adının görüntülenmesine izin ver/verme."
+
+#: krenameimpl.cpp:1006
+msgid "Enable/disable preview of pictures."
+msgstr "Resimlerin önizlemesini etkinleştir/kapat."
+
+#: main.cpp:123
+#, fuzzy
+msgid "Error"
+msgstr "Hata: %1"
+
+#: batchrenamer.cpp:277
+msgid "Error during renaming %1 (from %2)"
+msgstr ""
+
+#: batchrenamer.cpp:413
+msgid "Error during undoing %1"
+msgstr ""
+
+#: permissionsplugin.cpp:195
+msgid "Exec"
+msgstr "Çalıştır"
+
+#: scriptplugin.cpp:76
+#, fuzzy
+msgid "Extension of the current file"
+msgstr "Girdi dosyasının &uzantısını kullan"
+
+#: krenameimpl.cpp:1240
+msgid "File extension starts at:"
+msgstr "Dosya uzantısının başladığı yer:"
+
+#: krenamewindow.cpp:50
+msgid "File&name"
+msgstr "Dosya &Adı"
+
+#: scriptplugin.cpp:75
+#, fuzzy
+msgid "Filename of the current file"
+msgstr "Şu anki saati ekleyin"
+
+#: batchrenamer.cpp:366
+msgid "Filenames Processed after %1 seconds."
+msgstr "Dosya adları %1 saniyede işlendi."
+
+#: batchrenamer.cpp:225 batchrenamer.cpp:679
+msgid "Files will be copied to: %1"
+msgstr "Dosyalar şuraya kopyalanacak: %1"
+
+#: batchrenamer.cpp:228 batchrenamer.cpp:681
+msgid "Files will be moved to: %1"
+msgstr "Dosyalar şuraya taşınacak: %1"
+
+#: krenameimpl.cpp:1667
+msgid "Files: <b>%1</b>"
+msgstr "Dosya sayısı: <b>%1</b>"
+
+#: krenameimpl.cpp:1168
+msgid "Find &and Replace..."
+msgstr "Bul &ve Değiştir..."
+
+#: krenameimpl.cpp:2311
+msgid "First Dot"
+msgstr "İlk Nokta"
+
+#: main.cpp:76
+msgid "Fixed a bug that caused krename not closing open files."
+msgstr "Krename'in açık dosyaları kapatmasını engelleyen hata kapatıldı."
+
+#: main.cpp:73
+msgid ""
+"Fixed a bug with startIndex and added the BatchRenamer class\n"
+"to his excellent image viewer showimg."
+msgstr ""
+"startIndex işlevinde bir hata düzeltti ve BatchRenamer sınıfını\n"
+"harika resim gösterici showmimg'e ekledi"
+
+#: main.cpp:95
+msgid ""
+"Fixed problems with the spec file and contributed rpms for every SuSE "
+"version you can imagine and is also the new Gentoo maintainer for KRename"
+msgstr ""
+"Spec dosyasındaki sorunları çözdü, SuSE'nin aklınıza gelebilecek tüm "
+"sürümleri için rpm hazırladı ve şimdi de Gentoo paketlerini yapıyor"
+
+#: main.cpp:82
+msgid "Franz Schmid"
+msgstr ""
+
+#: permissionsplugin.cpp:216
+msgid "GID"
+msgstr "GID"
+
+#: main.cpp:82
+msgid "Gave me a good start into writing plugins with his application scribus."
+msgstr ""
+"Uygulaması scribus ile eklenti yazmaya iyi bir başlangıç yapmamı sağladı."
+
+#: main.cpp:73
+msgid "Groult Richard"
+msgstr ""
+
+#: permissionsplugin.cpp:207
+msgid "Group"
+msgstr "Grup"
+
+#: krenameimpl.cpp:1137
+msgid "Help Dialog with all tokens supported by KRename."
+msgstr ""
+"KRename Yardım menüsü tüm sembollerle çalışacak şekilde desteklenmektedir."
+
+#: filedialogextwidget.cpp:51
+msgid ""
+"If not checked, KRename will ignore directories starting with a dot during "
+"recursive adding."
+msgstr ""
+"Eğer seçili değilse, KRename özyinelemeli ekleme süresince bir nokta ile "
+"başlayan dizinleri önemsemeyecektir."
+
+#: main.cpp:102
+msgid "Ilya Ivkov"
+msgstr ""
+
+#: increasecounterplugin.cpp:41
+msgid "Increase Counter"
+msgstr ""
+
+#: scriptplugin.cpp:73
+#, fuzzy
+msgid "Index of the current file"
+msgstr "Şu anki saati ekleyin"
+
+#: scriptplugin.cpp:132
+msgid "Initial Value"
+msgstr ""
+
+#: krenameimpl.cpp:1076 batchrenamer.cpp:222 batchrenamer.cpp:685
+msgid "Input files will be renamed."
+msgstr "Girdi dosyaları yeniden adlandırılacak."
+
+#: krenameimpl.cpp:491 krenameimpl.cpp:1202
+#, fuzzy
+msgid "Insert '#'"
+msgstr "'$' Ekle"
+
+#: krenameimpl.cpp:483 krenameimpl.cpp:1194
+msgid "Insert '$'"
+msgstr "'$' Ekle"
+
+#: krenameimpl.cpp:484 krenameimpl.cpp:1195
+msgid "Insert '%'"
+msgstr "'%' Ekle"
+
+#: krenameimpl.cpp:485 krenameimpl.cpp:1196
+msgid "Insert '&'"
+msgstr "'&' Ekle"
+
+#: krenameimpl.cpp:486 krenameimpl.cpp:1197
+msgid "Insert '*'"
+msgstr "'*' Ekle"
+
+#: krenameimpl.cpp:487 krenameimpl.cpp:1198
+msgid "Insert '/'"
+msgstr "'/' Ekle"
+
+#: krenameimpl.cpp:489 krenameimpl.cpp:1200
+msgid "Insert '['"
+msgstr "'[' Ekle"
+
+#: krenameimpl.cpp:488 krenameimpl.cpp:1199
+msgid "Insert '\\\\'"
+msgstr "'\\\\' Ekle"
+
+#: krenameimpl.cpp:490 krenameimpl.cpp:1201
+msgid "Insert ']'"
+msgstr "']' Ekle"
+
+#: scriptplugin.cpp:71
+msgid "Insert a snippet of JavaScript code (4+5 in this case)"
+msgstr ""
+
+#: taglibplugin.cpp:43
+#, fuzzy
+msgid "Insert the album of a track"
+msgstr "Dosyaya son erişimin tarihini girin"
+
+#: taglibplugin.cpp:42
+#, fuzzy
+msgid "Insert the artist of a track"
+msgstr "Günün tarihini ekle"
+
+#: taglibplugin.cpp:44
+#, fuzzy
+msgid "Insert the comment of a track"
+msgstr "Günün tarihini ekle"
+
+#: systemplugin.cpp:50
+msgid "Insert the current date"
+msgstr "Günün tarihini ekle"
+
+#: systemplugin.cpp:51
+msgid "Insert the current date using the formatting string yyyy-MM-dd"
+msgstr "Günün tarihini yyyy-AA-gg biçiminde ekleyin"
+
+#: systemplugin.cpp:54
+msgid "Insert the current day as number"
+msgstr "Şu anki günü sayı olarak ekleyin"
+
+#: systemplugin.cpp:56
+msgid "Insert the current hour as number"
+msgstr "Şu anki saati sayı olarak ekleyin"
+
+#: systemplugin.cpp:57
+msgid "Insert the current minute as number"
+msgstr "Şu anki dakikayı sayı olarak ekleyin"
+
+#: systemplugin.cpp:53
+msgid "Insert the current month as number"
+msgstr "Şu anki ayı sayı olarak ekleyin"
+
+#: systemplugin.cpp:58
+msgid "Insert the current second as number"
+msgstr "Şu anki saniyeyi sayı olarak ekleyin"
+
+#: systemplugin.cpp:55
+msgid "Insert the current time"
+msgstr "Şu anki saati ekleyin"
+
+#: systemplugin.cpp:52
+msgid "Insert the current year"
+msgstr "Şu anki yılı ekleyin"
+
+#: systemplugin.cpp:65
+msgid "Insert the date of the last file access"
+msgstr "Dosyaya son erişimin tarihini girin"
+
+#: systemplugin.cpp:61
+msgid "Insert the files creation date"
+msgstr "Dosyaların oluşturulma tarihlerini ekleyin"
+
+#: systemplugin.cpp:63
+msgid "Insert the files modification date"
+msgstr "Dosyaların değiştirilme tarihlerini ekleyin"
+
+#: systemplugin.cpp:66
+msgid "Insert the formatted date of the last file access"
+msgstr "Dosyaya son erişimin tarihini biçemli olarak girin"
+
+#: systemplugin.cpp:62
+msgid "Insert the formatted file creation date"
+msgstr "Dosyaların biçemli oluşturulma tarihlerini ekleyin"
+
+#: systemplugin.cpp:64
+msgid "Insert the formatted modification date"
+msgstr "Biçemli deştirilme tarihini ekleyin"
+
+#: taglibplugin.cpp:45
+#, fuzzy
+msgid "Insert the genre of a track"
+msgstr "Günün tarihini ekle"
+
+#: taglibplugin.cpp:47
+#, fuzzy
+msgid "Insert the number of a track"
+msgstr "Günün tarihini ekle"
+
+#: taglibplugin.cpp:48
+msgid "Insert the number of a track formatted with a leading 0"
+msgstr ""
+
+#: taglibplugin.cpp:41
+#, fuzzy
+msgid "Insert the title of a track"
+msgstr "Dosyaların oluşturulma tarihlerini ekleyin"
+
+#: taglibplugin.cpp:46
+#, fuzzy
+msgid "Insert the year of a track"
+msgstr "Dosyaya son erişimin tarihini girin"
+
+#: translitplugin.cpp:94
+#, fuzzy
+msgid "Inserts the transliterated original filename"
+msgstr "Biçemli deştirilme tarihini ekleyin"
+
+#: translitplugin.cpp:97
+msgid "Inserts the transliterated original filename capitalized"
+msgstr ""
+
+#: translitplugin.cpp:95
+#, fuzzy
+msgid "Inserts the transliterated original filename converted to lower case"
+msgstr "eski dosya adı küçük harfli yapıldı"
+
+#: translitplugin.cpp:96
+#, fuzzy
+msgid "Inserts the transliterated original filename converted to upper case"
+msgstr "eski dosya adı büyük harfli yapıldı"
+
+#: scriptplugin.cpp:242
+msgid "Int"
+msgstr ""
+
+#: main.cpp:92
+msgid "Italian translation"
+msgstr "İtalyanca çeviri"
+
+#: scriptplugin.cpp:63
+msgid "JavaScript Plugin"
+msgstr ""
+
+#: main.cpp:97
+msgid "Jose Rodriguez"
+msgstr ""
+
+#: main.cpp:55 krenameimpl.cpp:362
+msgid "KRename"
+msgstr "KRename"
+
+#: main.cpp:61
+#, fuzzy
+msgid "KRename Build:"
+msgstr "KRename"
+
+#: batchrenamer.cpp:299 batchrenamer.cpp:757
+msgid "KRename finished the renaming process."
+msgstr "KRename yeniden adlandırma işlemini bitirdi."
+
+#: batchrenamer.cpp:422
+#, fuzzy
+msgid "KRename finished the undo process."
+msgstr "KRename yeniden adlandırma işlemini bitirdi."
+
+#: main.cpp:56
+msgid ""
+"KRename is a batch file renamer which can rename a\n"
+"list of files based on a set of expressions.\n"
+"\n"
+"If you like KRename you may want to support it.\n"
+"Testing, bug fixes and feature request are as welcome\n"
+"as financial support (everybody needs money ;)\n"
+"See help files for details.\n"
+msgstr ""
+"KRename bir liste içerisindeki dosyaları, belirli ifadelere dayanarak "
+"topluca yeniden adlandıran bir programdır. \n"
+"\n"
+"Eğer KRename'i severseniz, destekte bulunmak isteyebilirsiniz.\n"
+"Test yardımı, hata düzeltmeleri ve özellik talepleri kabul edildiği gibi "
+"maddi destek de çok makbule geçer (herkes paraya ihtiyaç duyar;)\n"
+"Detaylar için yardım dosyalarına bakın.\n"
+
+#: main.cpp:101
+msgid "Krzysztof Pawlak"
+msgstr ""
+
+#: krenameimpl.cpp:2312
+msgid "Last Dot"
+msgstr "Son Nokta"
+
+#: main.cpp:96
+msgid "Mark Volkert"
+msgstr ""
+
+#: main.cpp:76
+msgid "Michael Elvers"
+msgstr ""
+
+#: main.cpp:94
+msgid "Michael Zugaro"
+msgstr ""
+
+#: main.cpp:86
+msgid "Michael v.Ostheim"
+msgstr ""
+
+#: krenameimpl.cpp:1011
+msgid "Move selected items (select the new location with the mouse)"
+msgstr "Seçilen öğeleri taşı (yeni konumu fare ile seçin)"
+
+#: krenameimpl.cpp:1009 krenameimpl.cpp:1135
+msgid "Move selected items down"
+msgstr "Seçilen öğeleri aşağıya indir"
+
+#: krenameimpl.cpp:1008 krenameimpl.cpp:1134
+msgid "Move selected items up"
+msgstr "Seçilen öğeleri yukarıya çıkar"
+
+#: krenameimpl.cpp:1078
+msgid "Moves all files to the destination directory and renames them."
+msgstr "Tüm dosyaları hedef dizine taşır ve yeniden adlandırır."
+
+#: main.cpp:100
+msgid "Nicolas Benoit"
+msgstr ""
+
+#: krenameimpl.cpp:1314 krenameimpl.cpp:1318
+msgid "Number"
+msgstr "Sayı"
+
+#: krenameimpl.cpp:1023
+msgid "O&ptions"
+msgstr "A&yarlar"
+
+#: krenameimpl.cpp:1106 krenamemodel.cpp:432
+msgid "Origin"
+msgstr "İlk hali"
+
+#: permissionsplugin.cpp:210
+msgid "Others"
+msgstr "Diğerleri"
+
+#: systemplugin.cpp:59
+#, fuzzy
+msgid "Owner of the file"
+msgstr "İlk dosyanın numarası."
+
+#: systemplugin.cpp:60
+msgid "Owning group of the file"
+msgstr ""
+
+#: main.cpp:84
+msgid ""
+"Parts of the PNG support are copied from his KFile plugin for png support."
+msgstr ""
+"PNG desteğinin bir bölümü, onun KFile eklentisinden alınan bölümler "
+"sayesinde gerçekleştirildi."
+
+#: main.cpp:90
+msgid "Per Ovind Karlsen"
+msgstr ""
+
+#: permissionsplugin.cpp:111
+msgid "Permissions"
+msgstr "İzinler"
+
+#: permissionsplugin.cpp:124
+msgid "PermissionsPlugin works only with local files. %1 is a remote file."
+msgstr ""
+
+#: krenameimpl.cpp:1652
+msgid "Please give a destination directory !"
+msgstr "Lütfen bir hedef dizini belirtin!"
+
+#: krenameimpl.cpp:1657
+msgid "Please give the name of the undo script!"
+msgstr "Lütfen geri alma betiğinin ismini belirtin!"
+
+#: batchrenamer.cpp:300 batchrenamer.cpp:423 batchrenamer.cpp:758
+msgid "Press close to quit!"
+msgstr "Çıkmak için kapat tuşuna basın!"
+
+#: main.cpp:96
+msgid "Provided SuSE RPMs and very good suggestions"
+msgstr "Suse RPM'leri oluşturdu ve güzel önerilerde bulundu"
+
+#: main.cpp:98
+msgid "Provided a RedHat RPM and was big help in improving KRename"
+msgstr ""
+"Bir RedHat RPM'i sağladı ve KRename'i geliştirmede çok büyük yardımı dokundu"
+
+#: main.cpp:93
+msgid "Provided a gcc3.x namespace patch"
+msgstr "gcc 3.* sürümleri için namespace yaması hazırladı"
+
+#: main.cpp:94
+msgid "Provided the new preview and move features"
+msgstr "Yeni önizleme ve taşıma özellikleri eklendi"
+
+#: krenameimpl.cpp:953
+msgid "R&emove All"
+msgstr "&Tümünü Kaldır"
+
+#: krenameimpl.cpp:950
+msgid "Re&move"
+msgstr "&Kaldır"
+
+#: permissionsplugin.cpp:189
+msgid "Read"
+msgstr "Oku"
+
+#: krenameimpl.cpp:1005
+msgid "Remove all files"
+msgstr "Tüm dosyaları kaldır"
+
+#: krenameimpl.cpp:1004
+msgid "Remove selected files"
+msgstr "Seçilen dosyaları kaldır"
+
+#: progressdialog.cpp:50
+#, fuzzy
+msgid "Rename &Unprocessed Files &Again..."
+msgstr "İşlenmemiş Dosyaları &Tekrar Yeniden Adlandır..."
+
+#: progressdialog.cpp:49
+msgid "Rename Processed Files &Again..."
+msgstr "İşlenmiş Dosyaları &Tekrar Yeniden Adlandır..."
+
+#: krenameimpl.cpp:1107 krenamemodel.cpp:432
+msgid "Renamed"
+msgstr "Adlandırılmış hali"
+
+#: batchrenamer.cpp:750
+msgid "Renamed %1 files successfully."
+msgstr "%1 dosya başarıyla yeniden adlandırıldı."
+
+#: main.cpp:95
+msgid "Rene Gass"
+msgstr ""
+
+#: progressdialog.cpp:47
+#, fuzzy
+msgid "Restart &KRename..."
+msgstr "KRename'i yeniden başlat..."
+
+#: main.cpp:84
+msgid "Rolf Magnus"
+msgstr ""
+
+#: main.cpp:88
+msgid "Some GCC 3.1 fixes for Gentoo."
+msgstr "Gentoo için bazı GCC 3.1 düzeltmeleri."
+
+#: krenameimpl.cpp:957
+msgid "Sort: Ascending"
+msgstr "Sıralama: Artan"
+
+#: krenameimpl.cpp:958
+msgid "Sort: Descending"
+msgstr "Sıralama: Azalan"
+
+#: krenameimpl.cpp:960
+msgid "Sort: Numeric"
+msgstr "Sıralama: Sayısal"
+
+#: krenameimpl.cpp:959
+msgid "Sort: Random"
+msgstr "Sıralama: Rastgele"
+
+#: krenameimpl.cpp:956
+msgid "Sort: Unsorted"
+msgstr "Sıralama: Sırasız"
+
+#: permissionsplugin.cpp:201
+msgid "Special"
+msgstr "Özel"
+
+#: krenameimpl.cpp:492
+#, fuzzy
+msgid "Special Characters"
+msgstr "Özel Karakterler:"
+
+#: krenameimpl.cpp:1203
+msgid "Special Characters:"
+msgstr "Özel Karakterler:"
+
+#: krenameimpl.cpp:1648
+msgid "Specify a template to use for renaming files."
+msgstr "Dosyaları yeniden adlandırmada kullanılmak üzere bir şablon belirtin."
+
+#: krenameimpl.cpp:1301
+msgid "Start &index:"
+msgstr "Başlangıç &indeksi:"
+
+#: krenameimpl.cpp:533 krenameimpl.cpp:1606
+msgid "Starting conversion of %1 files."
+msgstr "%1 dosyanın çevrimine başlanıyor."
+
+#: main.cpp:67
+msgid "Stefan \"Stonki\" Onken"
+msgstr ""
+
+#: main.cpp:93
+msgid "Stephan Johach"
+msgstr ""
+
+#: main.cpp:98
+msgid "Steven P. Ulrick"
+msgstr ""
+
+#: permissionsplugin.cpp:219
+msgid "Sticky"
+msgstr "Yapışkan"
+
+#: scriptplugin.cpp:241
+msgid "String"
+msgstr ""
+
+#: fileplugin.cpp:84
+msgid "Supported tokens:"
+msgstr "Desteklenen semboller:"
+
+#: batchrenamer.cpp:231 batchrenamer.cpp:683
+msgid "Symbolic links will be created in: %1"
+msgstr "Simgesel bağlar %1 içerisinde oluşturulacak"
+
+#: taglibplugin.cpp:50
+msgid "TagLib (MP3/Ogg) Plugin"
+msgstr ""
+
+#: main.cpp:90
+msgid "Thanks for creating the Mandrake RPM"
+msgstr "Manrake RPM'ini oluşturduğu için teşekkürler"
+
+#: main.cpp:78
+msgid ""
+"Thanks for his great job at apps.kde.com and help with contributing krename "
+"to apps.kde.com."
+msgstr ""
+"apps.kde.com'daki harika katkıları ve krename'in apps.kde.com'da bulunmasına "
+"yardımları için teşekkürler"
+
+#: main.cpp:80
+msgid ""
+"Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
+msgstr ""
+"Onun noatun birimleriyle gerçekleştirilen ID3/Ogg etiket düzenlemeleri için "
+"teşekkürler..."
+
+#: main.cpp:71
+msgid "Thanks to him for creating RedHat 7.x packages and some other help."
+msgstr ""
+"RedHat 7.x paketlerini oluşturduğu için ve başka bazı yardımları sebebiyle "
+"kendisine teşekkür ediyoruz."
+
+#: krenameimpl.cpp:552
+#, fuzzy
+msgid "The directory %1 could not be created."
+msgstr "\"%1\" profili bulunamadı."
+
+#: krenameimpl.cpp:544
+#, fuzzy
+msgid ""
+"The directory %1 does not exist. Do you want KRename to create it for you?"
+msgstr "%1 dizini mevcut değil. KRename sizin için bu dizini oluşturacak."
+
+#: krenameimpl.cpp:1766
+msgid "The directory %1 does not exist. KRename will create it for you."
+msgstr "%1 dizini mevcut değil. KRename sizin için bu dizini oluşturacak."
+
+#: scriptplugin.cpp:343
+#, fuzzy
+msgid "The file %1 does already exists. Do you want to overwrite it?"
+msgstr "Profil zaten mevcut. Lütfen farklı bir isim seçin."
+
+#: filedialogextwidget.cpp:55
+msgid ""
+"This option causes KRename to add also the name of the base directory of the "
+"selected files to its list."
+msgstr ""
+"Bu seçenek KRename'in seçilen dosyaların ait olduğu temel dizinin ismini de "
+"listeye eklemesini sağlar."
+
+#: main.cpp:103
+msgid "Translated KRename into Bosnian"
+msgstr "KRename'i Boşnakça'ya çevirdi"
+
+#: main.cpp:100
+msgid "Translated KRename into French"
+msgstr "KRename'i Fransızca'ya çevirdi"
+
+#: main.cpp:101
+msgid "Translated KRename into Polish"
+msgstr "KRename'i Lehçe'ye çevirdi"
+
+#: main.cpp:102
+msgid "Translated KRename into Russian"
+msgstr "KRename'i Rusça'ya çevirdi"
+
+#: main.cpp:99
+msgid "Translated KRename to Japanese"
+msgstr "KRename'i Japonca'ya çevirdi"
+
+#: translitplugin.cpp:98
+msgid "Transliterates the string following the semicolon"
+msgstr ""
+
+#: translitplugin.cpp:100
+#, fuzzy
+msgid "Transliteration"
+msgstr "Harf çevrimi eklentisi"
+
+#: main.cpp:71
+msgid "Trevor Semeniuk"
+msgstr ""
+
+#: permissionsplugin.cpp:213
+msgid "UID"
+msgstr "UID"
+
+#: scriptplugin.cpp:74
+#, fuzzy
+msgid "URL of the current file"
+msgstr "Şu anki saati ekleyin"
+
+#: main.cpp:99
+msgid "UTUMI Hirosi"
+msgstr ""
+
+#: scriptplugin.cpp:319
+msgid "Unable to open %1 for reading."
+msgstr ""
+
+#: scriptplugin.cpp:376
+msgid "Unable to open %1 for writing."
+msgstr ""
+
+#: batchrenamer.cpp:738
+msgid "Undo is not possible for remote file: %1"
+msgstr "Geri alma işlemi %1 dosyası için mümkün değil"
+
+#: batchrenamer.cpp:381
+msgid "Undoing all renamed files."
+msgstr ""
+
+#: krenameimpl.cpp:1289
+msgid "Use original extension"
+msgstr "Özgün uzantıyı kullan"
+
+#: krenameimpl.cpp:1279
+msgid "Use original name"
+msgstr "Özgün ismini kullan"
+
+#: permissionsplugin.cpp:204
+msgid "User"
+msgstr "Kullanıcı"
+
+#: scriptplugin.cpp:131
+#, fuzzy
+msgid "Variable Name"
+msgstr "Profil İsmi"
+
+#: filedialogextwidget.cpp:49
+msgid ""
+"Walk recursively through the directory tree and add also the content of all "
+"subdirectories to the list of files to rename."
+msgstr ""
+"Dizin ağacı boyunca özyinelemeli ilerle ve tüm alt dizinlerin içeriğini de "
+"yeniden adlandırılacak dosyalar listesine ekle."
+
+#: main.cpp:68
+msgid "Website, testing, very good ideas and keeping me coding!"
+msgstr ""
+"Websitesi, testler, bana kod yazdırmaya devam ettiği ve güzel fikirleri için!"
+
+#: permissionsplugin.cpp:192
+msgid "Write"
+msgstr "Yaz"
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr "emre@emrealadag.com"
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr "Emre Aladağ"
+
+#: main.cpp:44
+msgid "add directory recursively"
+msgstr "Dizini özyinelemeli olarak ekle"
+
+#: krenameimpl.cpp:473 krenameimpl.cpp:1186
+msgid "character x to y of old filename"
+msgstr "eski dosya adındaki x - y karakterleri arası"
+
+#: main.cpp:48
+msgid "copy files to directory"
+msgstr "dosyaları dizine kopyala"
+
+#: krenameimpl.cpp:471 krenameimpl.cpp:1183
+msgid "counter with custom start value 0 and custom stepping 1"
+msgstr "Özel başlangıç değeri olarak 0 ve artım değeri olarak 1 kullanan sayaç"
+
+#: krenameimpl.cpp:472 krenameimpl.cpp:1184
+msgid "create a subdirectory"
+msgstr "alt dizin oluştur"
+
+#: main.cpp:65
+msgid "developer and maintainer"
+msgstr ""
+
+#: main.cpp:47
+msgid "enable a plugin for use"
+msgstr "kullanılmak üzere bir eklentiyi etkinleştir"
+
+#: main.cpp:43
+msgid "file will be added to the list of files for renaming"
+msgstr ""
+"dosya adlandırılmak üzere, yeniden adlandırılacaklar listesine eklenecektir"
+
+#: krenameimpl.cpp:468 krenameimpl.cpp:1180
+msgid "first letter of every word upper case"
+msgstr "her kelimenin ilk harfi büyük"
+
+#: krenameimpl.cpp:469 krenameimpl.cpp:1181
+msgid "first letter of filename upper case"
+msgstr "dosya adının ilk harfi büyük"
+
+#: krenameimpl.cpp:475 krenameimpl.cpp:1188
+msgid "insert name of directory"
+msgstr "dizinin adını girin"
+
+#: krenameimpl.cpp:476 krenameimpl.cpp:1189
+msgid "insert name of parent directory"
+msgstr "üst dizinin adını girin"
+
+#: krenameimpl.cpp:477 krenameimpl.cpp:1190
+msgid "insert the length of the input filename"
+msgstr "girilen dosya adının uzunluğunu girin"
+
+#: main.cpp:50
+msgid "load the profile named [profile] on startup"
+msgstr "açılışta [profile] adlı profili yükle"
+
+#: main.cpp:49
+msgid "move files to directory"
+msgstr "dosyaları dizine taşı"
+
+#: krenameimpl.cpp:470 krenameimpl.cpp:1182
+msgid "number (try also ##, ###, ... for leading zeros)"
+msgstr "numara (başa sıfır koymak için ##, ###, ... seçeneklerini de deneyin)"
+
+#: krenameimpl.cpp:465 krenameimpl.cpp:1177
+msgid "old filename"
+msgstr "eski dosya adı"
+
+#: krenameimpl.cpp:466 krenameimpl.cpp:1178
+msgid "old filename converted to lower case"
+msgstr "eski dosya adı küçük harfli yapıldı"
+
+#: krenameimpl.cpp:467 krenameimpl.cpp:1179
+msgid "old filename converted to upper case"
+msgstr "eski dosya adı büyük harfli yapıldı"
+
+#: main.cpp:53
+msgid "only show <num> preview items"
+msgstr ""
+
+#: main.cpp:45
+msgid "set a template"
+msgstr "bir şablon seç"
+
+#: main.cpp:46
+msgid "set a template for the file extension"
+msgstr "dosya uzantısı için bir şablon seç"
+
+#: main.cpp:52
+msgid "start KRename's selftest (developers only)"
+msgstr ""
+
+#: main.cpp:51
+msgid "start renaming immediately"
+msgstr "adlandırmayı derhal başlat"
+
+#: krenameimpl.cpp:478 krenameimpl.cpp:1185
+msgid "strip whitespaces leading and trailing"
+msgstr "İsmin baş ve sonundaki boşlukları göz ardı et"
+
+#: krenameimpl.cpp:479
+#, fuzzy
+msgid "strip whitespaces leading and trailing of an arbitrary string"
+msgstr "İsmin baş ve sonundaki boşlukları göz ardı et"
+
+#: krenameimpl.cpp:474 krenameimpl.cpp:1187
+msgid "y characters of old filename starting at x"
+msgstr "Eski dosya adının x'ten başlayan y karakteri"
+
+#~ msgid " - Step %1 of %2"
+#~ msgstr " - %2 Adımdan %1."
+
+#~ msgid " exited with error: %1"
+#~ msgstr "%1 hatasıyla çıkıldı"
+
+#~ msgid "&Add"
+#~ msgstr "&Ekle"
+
+#~ msgid "&Add Number"
+#~ msgstr "Sayı &Ekle"
+
+#~ msgid "&Command Plugin"
+#~ msgstr "&Komut Eklendisi"
+
+#~ msgid "&Delete Profile"
+#~ msgstr "Profil &Sil"
+
+#~ msgid "&Dir Plugin"
+#~ msgstr "&Dizin Eklentisi"
+
+#~ msgid "&Edit..."
+#~ msgstr "Dü&zenle..."
+
+#~ msgid "&Encoding Conversion Plugin"
+#~ msgstr "&Karakter kodlaması dönüştürme eklentisi"
+
+#~ msgid "&Execute without blocking (not recommended)"
+#~ msgstr "E&ngellemeden çalıştır (tavsiye edilmez)"
+
+#~ msgid "&Get Current Date && Time"
+#~ msgstr "Şu anki Tarihi && Saati &Al"
+
+#~ msgid "&Invert selection"
+#~ msgstr "Seçimi &tersine çevir"
+
+#~ msgid "&Load KDE file plugins"
+#~ msgstr "KDE dosya eklentilerini &yükle"
+
+#~ msgid "&Load Profile"
+#~ msgstr "Profil &Yükle"
+
+#~ msgid "&Load file plugins on start"
+#~ msgstr "Eklentileri açılışta &yükle"
+
+#~ msgid "&Number of template history items:"
+#~ msgstr "&Şablon geçmişi öğelerinin sayısı:"
+
+#~ msgid "&Numbering"
+#~ msgstr "&Numaralandırma"
+
+#~ msgid "&Ok"
+#~ msgstr "&Tamam"
+
+#~ msgid "&Permissions"
+#~ msgstr "&İzinler"
+
+#~ msgid "&Regular expression"
+#~ msgstr "&Düzenli ifade"
+
+#~ msgid "&Reload Plugin Data"
+#~ msgstr "Eklenti Verilerini Ye&niden Yükle"
+
+#~ msgid "&Remove Number"
+#~ msgstr "Sayı &Kaldır"
+
+#~ msgid "&Reset counter for every directory"
+#~ msgstr "&Her dizin için sayacı sıfırla"
+
+#~ msgid "&Revert Changes"
+#~ msgstr "Değişiklikleri &Geri Al"
+
+#~ msgid "&Save As Profile..."
+#~ msgstr "Profili &Farklı Kaydet..."
+
+#~ msgid "&System Functions"
+#~ msgstr "&Sistem İşlevleri"
+
+#~ msgid "&Thumbnail size:"
+#~ msgstr "&Önizleme boyutu:"
+
+#~ msgid "&Transliteration Plugin"
+#~ msgstr "&Harf çevrimi eklentisi"
+
+#~ msgid "&Undo Old Renaming Action..."
+#~ msgstr "Önceki Adlandırma İşlemini &Geri al..."
+
+#~ msgid "&Use as default profile on startup"
+#~ msgstr "Açılışta öntanımlı profil olarak &kullan"
+
+#~ msgid "&Use local encoding: %1"
+#~ msgstr "&Yerel kodlamayı kullan: %1"
+
+#~ msgid "<b>Command Plugin</b>"
+#~ msgstr "<b>Komut Eklentisi</b>"
+
+#~ msgid ""
+#~ "<qt>Executes a shell command on every file after it has been renamed. Add "
+#~ "%1 to the command line arguments to get the filename of the renamed file."
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Her dosya yeniden adlandırıldıktan sonra bir kabuk komutu çalıştırır. "
+#~ "Komut satırı argümanlarına %1 ekleyerek dosyayı yeniden "
+#~ "adlandırabilirsiniz.</qt>"
+
+#~ msgid "<qt>Load all settings stored in this profile.</qt>"
+#~ msgstr "<qt>Bu profil içinde saklanan tüm ayarları yükle</qt>"
+
+#~ msgid ""
+#~ "<qt>Save KRename's current settings as a new profile. The settings are "
+#~ "saved and can be restored with Load Profile later.</qt>"
+#~ msgstr ""
+#~ "<qt>KRename'in mevcut ayarlarını yeni bir profil olarak kaydet. Ayarlar "
+#~ "kaydedildikten sonra Profil Yükle ile geri getirilebilir.</qt>"
+
+#~ msgid ""
+#~ "<qt>The counter is set to the start index in every directory. This "
+#~ "setting applies to all used counters.</qt>"
+#~ msgstr ""
+#~ "<qt>Sayaç, her dizinde başlangıç indeksine eşitlenir. Bu ayar, kullanılan "
+#~ "tüm sayaçlara uygulanır.</qt>"
+
+#~ msgid ""
+#~ "<qt>This plugin is able to convert filenames between different encodings. "
+#~ "For example you can convert filenames from KOI8-R to UTF-8 encoding.</qt>"
+#~ msgstr ""
+#~ "<qt>Bu eklenti, dosya adlarının sahip oldukları kodlamaları başka "
+#~ "kodlamalara dönüştürebilir. Örneğin dosya adlarının kodlamasını KO18-"
+#~ "R'den UTF-8'e dönüştürebilirsiniz.</qt>"
+
+#~ msgid "<qt>This plugin sorts files after renaming in subdirectories.</qt>"
+#~ msgstr ""
+#~ "<qt>Bu eklenti altdizinlerde yeniden adlandırmadan sonra dosyaları "
+#~ "sıralar.</qt>"
+
+#~ msgid ""
+#~ "<qt>Undo Scripts are normal shell scripts which can also be executed "
+#~ "manually from the command line.</qt>"
+#~ msgstr ""
+#~ "<qt>Geri alma betikleri, aynı zamanda komut satırından el ile "
+#~ "çalıştırılabilen sıradan kabuk betikleridir.</qt>"
+
+#~ msgid "Aborting..."
+#~ msgstr "Durduruluyor..."
+
+#~ msgid "Add a text that should be replaced."
+#~ msgstr "Değiştirilecek bir metin ekleyin."
+
+#~ msgid ""
+#~ "Add all numbers that should be skipped by krename during the rename "
+#~ "process.<br>E.g.: If 2 is skipped files will be numbered: file0, file1, "
+#~ "file3, ..."
+#~ msgstr ""
+#~ "Krename tarafından atlanması gereken tüm sayıları ekleyin.<br> Örn: Eeğr "
+#~ "2 atlanırsa, dosyalar dosya0, dosya1, dosya3, ... şeklinde "
+#~ "numaralanacaktır."
+
+#~ msgid "Auto &resize columns in preview"
+#~ msgstr "Önizlemedeki sütunları kendiliğinden &boyutlandır"
+
+#~ msgid "Change &Owner"
+#~ msgstr "&Sahibi Değiştir"
+
+#~ msgid "Change &Permissions"
+#~ msgstr "&İzinleri Değiştir"
+
+#~ msgid "Change &access date && time"
+#~ msgstr "&Erişim tarihini && saatini değiştirin"
+
+#~ msgid "Change &modification date && time"
+#~ msgstr "&Değiştirilme tarihini && saatini değiştirin"
+
+#~ msgid "Command Plugin"
+#~ msgstr "Komut Eklentisi"
+
+#~ msgid "Command:"
+#~ msgstr "Komut:"
+
+#~ msgid "Configure the look and feel of the KRename GUI:<br>"
+#~ msgstr "KRename arayüzünün görünüm ve hissini yapılandır:<br>"
+
+#~ msgid "Date && &Time"
+#~ msgstr "Tarih && &Saat"
+
+#~ msgid "Description"
+#~ msgstr "Açıklama"
+
+#~ msgid "Dir Plugin"
+#~ msgstr "Dizin Eklentisi"
+
+#~ msgid ""
+#~ "Disabling this option decreases KRename's startup time, because no "
+#~ "KFilePlugins are loaded."
+#~ msgstr ""
+#~ "Bu seçeneği kapatmak, eklentiler açılışta yüklenmeyeceği için KRename'in "
+#~ "açılış süresini kısaltır."
+
+#~ msgid ""
+#~ "Do you really want to load the profile and overwrite the current "
+#~ "settings: %1"
+#~ msgstr ""
+#~ "Gerçekten bu profili yüklemek ve mevcut ayarların üzerine yazmak istiyor "
+#~ "musunuz: %1"
+
+#~ msgid "Encoding Conversion Plugin"
+#~ msgstr "Karakter kodlaması dönüştürme eklentisi"
+
+#~ msgid "Encoding of Input Files:"
+#~ msgstr "Girdi Dosyalarının Kodlaması:"
+
+#~ msgid "Encoding of Output Files:"
+#~ msgstr "Çıktı Dosyalarının Kodlaması:"
+
+#~ msgid "File %1 exists already!"
+#~ msgstr "%1 dosyası zaten var!"
+
+#~ msgid "Files per directory:"
+#~ msgstr "Dizin başına dosya:"
+
+#~ msgid "Find"
+#~ msgstr "Bul"
+
+#~ msgid "Find and Replace"
+#~ msgstr "Bul ve Değiştir"
+
+#~ msgid "Find:"
+#~ msgstr "Bul:"
+
+#~ msgid "Finished successfully"
+#~ msgstr "Başarıyla bitti"
+
+#~ msgid "Group:"
+#~ msgstr "Grup:"
+
+#~ msgid "Insert your groupname"
+#~ msgstr "Grup adınızı ekleyin"
+
+#~ msgid "Insert your username"
+#~ msgstr "Kullanıcı adınızı ekleyin"
+
+#~ msgid "KRename: Tabbed default profile"
+#~ msgstr "KRename: Öntanımlı sekmeli profil"
+
+#~ msgid "KRename: Wizard default profile"
+#~ msgstr "KRename: Öntanımlı sihirbaz profili"
+
+#~ msgid "Look and Feel"
+#~ msgstr "Bak ve Hisset"
+
+#~ msgid "Messages"
+#~ msgstr "İletiler"
+
+#~ msgid "Output &Directory"
+#~ msgstr "Çıktı &Dizini"
+
+#~ msgid "Ownership"
+#~ msgstr "Sahiplik"
+
+#~ msgid "P&icture Plugin"
+#~ msgstr "Res&im Eklentisi"
+
+#~ msgid "Picture Plugin"
+#~ msgstr "Resim Eklentisi"
+
+#~ msgid "Please add some files..."
+#~ msgstr "Lütfen birkaç dosya ekleyin..."
+
+#~ msgid "Please enter a name for the new profile:"
+#~ msgstr "Lütfen yeni profil için bir isim girin:"
+
+#~ msgid "Please input a new filename:"
+#~ msgstr "Lütfen yeni bir dosya adı girin:"
+
+#~ msgid "Please select the text you want to insert:"
+#~ msgstr "Lütfen eklemek istediğiniz metni seçin:"
+
+#~ msgid "Preview: "
+#~ msgstr "Önizleme: "
+
+#~ msgid "Profiles"
+#~ msgstr "Profiller"
+
+#~ msgid "Progress"
+#~ msgstr "Süreç"
+
+#~ msgid "Regular Expression"
+#~ msgstr "Düzenli İfade"
+
+#~ msgid "Regular expression"
+#~ msgstr "Düzenli ifade"
+
+#~ msgid "Replace With"
+#~ msgstr "Bununla Değiştir"
+
+#~ msgid "Replace with:"
+#~ msgstr "Bununla Değiştir:"
+
+#~ msgid "S&kip Numbers"
+#~ msgstr "Sayıları A&tla"
+
+#~ msgid "Start index:"
+#~ msgstr "Başlangıç indeksi:"
+
+#~ msgid "Step &by:"
+#~ msgstr "Başlangıç &konumu:"
+
+#~ msgid "The counter is increased/decreased by this value."
+#~ msgstr "Sayaç bu değere göre arttırılır/azaltılır."
+
+#~ msgid ""
+#~ "This script does not seem to be a Krename undo script. Execution of this "
+#~ "script can be dangerous. Continue ?"
+#~ msgstr ""
+#~ "Bu betik Krename geri alma betiğine benzemiyor. Bu betiğin çalıştırılması "
+#~ "tehlikeli olabilir. Devam edilsin mi?"
+
+#~ msgid "Time:"
+#~ msgstr "Saat:"
+
+#~ msgid "Token"
+#~ msgstr "Sembol"
+
+#~ msgid "Unable to start the given undo script!"
+#~ msgstr "Verilen geri alma betiği çalıştırılamadı!"
+
+#~ msgid "Undo Renaming"
+#~ msgstr "Adlandırmayı Geri Al"
+
+#~ msgid "Undo script:"
+#~ msgstr "Betiği geri al:"
+
+#~ msgid "Undoing the renaming operation has been completed."
+#~ msgstr "Yeniden adlandırmayı geri alma işlemi tamamlandı."
+
+#~ msgid "Use &Input Filename"
+#~ msgstr "&Girdi Dosya Adını Kullan"
+
+#~ msgid "Use &tabbed GUI (advanced users)"
+#~ msgstr "Se&kmeli arayüz kullan (uzmanlar için)"
+
+#~ msgid "Use &wizard style GUI (beginners)"
+#~ msgstr "&Sihirbaz şeklinde arayüz kullan (acemiler için)"
+
+#~ msgid ""
+#~ "Use the filename that is generated by KRename instead of your changes."
+#~ msgstr ""
+#~ "Kendi değişiklikleriniz yerine KRename tarafından oluşturulan dosya adını "
+#~ "kullanın."
+
+#~ msgid "User pressed cancel!"
+#~ msgstr "Kullanıcı iptal tuşuna bastı!"
+
+#~ msgid "User:"
+#~ msgstr "Kullanıcı:"
+
+#~ msgid "Warning: %1"
+#~ msgstr "Uyarı: %1"
+
+#~ msgid "You can't replace the same text twice."
+#~ msgstr "Aynı metni iki kez değiştiremezsiniz."
+
+#~ msgid "You cannot delete default profiles!"
+#~ msgstr "Öntanımlı profilleri silemezsiniz!"
+
+#~ msgid "You did not specify a command to execute."
+#~ msgstr "Çalıştırılmak üzere bir komut belirtmediniz."
+
+#~ msgid "create no realtime preview"
+#~ msgstr "gerçek zamanlı önizleme oluşturma"
+
+#~ msgid "h"
+#~ msgstr "sa"
+
+#~ msgid "min"
+#~ msgstr "dak"
+
+#~ msgid "no"
+#~ msgstr "hayır"
+
+#~ msgid "s"
+#~ msgstr "s"
+
+#~ msgid "yes"
+#~ msgstr "evet"
