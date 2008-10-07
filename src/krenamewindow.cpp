@@ -128,11 +128,11 @@ void KRenameWindow::setupGui()
 
     m_guiMode    = &tAdvancedMode;
 
-    m_buttonFinish = new KPushButton( KIcon( "finish" ), i18n("&Finish...") );
-    m_buttonClose  = new KPushButton( KIcon( "cancel" ), i18n("&Close") );
+    m_buttonFinish = new KPushButton( KIcon( "dialog-ok" ),    i18n("&Finish...") );
+    m_buttonClose  = new KPushButton( KIcon( "dialog-close" ), i18n("&Close") );
     
     m_buttons->addButton( m_buttonFinish, QDialogButtonBox::AcceptRole );
-    m_buttons->addButton( m_buttonClose, QDialogButtonBox::RejectRole );
+    m_buttons->addButton( m_buttonClose,  QDialogButtonBox::RejectRole );
 
     setupSlots();
     slotEnableControls();

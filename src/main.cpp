@@ -87,11 +87,11 @@ int main(int argc, char *argv[])
                          "MvOstheim@web.de", "http://www.vonostheim.de" );
     aboutData.addCredit( ki18n("Brandon Low"), ki18n("Some GCC 3.1 fixes for Gentoo."),
                          "lostlogic@gentoo.org", "http://www.gentoo.org" );
-    aboutData.addCredit( ki18n("Per �vind Karlsen"), ki18n("Thanks for creating the Mandrake RPM"),
+    aboutData.addCredit( ki18n("Per Ovind Karlsen"), ki18n("Thanks for creating the Mandrake RPM"),
                          "peroyvind@delonic.no" );
     aboutData.addCredit( ki18n("Daniele Medri"), ki18n("Italian translation"), "madrid@linuxmeeting.net" );
     aboutData.addCredit( ki18n("Stephan Johach"), ki18n("Provided a gcc3.x namespace patch"), "lucardus@onlinehome.de" );
-    aboutData.addCredit( ki18n("Micha� Zugaro"), ki18n("Provided the new preview and move features") , "michael.zugaro@college-de-france.fr" );
+    aboutData.addCredit( ki18n("Michael Zugaro"), ki18n("Provided the new preview and move features") , "michael.zugaro@college-de-france.fr" );
     aboutData.addCredit( ki18n("Rene Gass"), ki18n("Fixed problems with the spec file and contributed rpms for every SuSE version you can imagine and is also the new Gentoo maintainer for KRename"), "kde-package@gmx.de" );
     aboutData.addCredit( ki18n("Mark Volkert"), ki18n("Provided SuSE RPMs and very good suggestions"), "mark.volkert@rakekniven.de" );
     aboutData.addCredit( ki18n("Jose Rodriguez"), ki18n("Contributed a Spanish translation"), "chmpmi@eresmas.net" );

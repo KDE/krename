@@ -12,8 +12,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
 
 SET(KRENAME_VERSION "3.9.1")
 
-include (KDE4Defaults)
-include (MacroLibrary)
+INCLUDE (KDE4Defaults)
+INCLUDE (MacroLibrary)
+INCLUDE (FindGettext)
 
 # Find taglib
 set(TAGLIB_MIN_VERSION "1.5")
@@ -22,4 +23,24 @@ macro_log_feature( TAGLIB_FOUND "taglib" "Read and write tags in audio files" "h
 
 CONFIGURE_FILE(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h )
 
+# Directories
+
 add_subdirectory(src)
+add_subdirectory(po)
+
+# Message stuff 
+
+FILE(GLOB _POFILES po/*.po)
+FOREACH(_p ${_POFILES})
+  SET(POFILES "${_p} ${POFILES}")
+ENDFOREACH(_p)
+
+SET(MESSAGES_DIR ${CMAKE_SOURCE_DIR}/src)
+CONFIGURE_FILE(
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmakemodules/package_messages.sh.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/package_messages.sh"
+    IMMEDIATE
+    @ONLY)
+ADD_CUSTOM_TARGET(package-messages
+    "${CMAKE_CURRENT_BINARY_DIR}/package_messages.sh")
+
