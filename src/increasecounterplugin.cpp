@@ -51,12 +51,9 @@ QString IncreaseCounterPlugin::processFile( BatchRenamer*, int, const QString & 
     // Split string into prenum, number and postnum parts
     QRegExp splitit("(\\D*)(\\d+)(.*)");
 
-    qDebug("plugin running: offset=%i\n", m_offset );
     // Is there anything to increment ?
     if( splitit.exactMatch(filenameOrToken) )
     {
-	qDebug("GOT MATCH\n");
-
         QString prenum  = splitit.cap(1);
 	long    tmp     = splitit.cap(2).toLong();
         QString postnum = splitit.cap(3);

@@ -140,7 +140,7 @@ class KRenameFile {
 
     /** Get a preview icon of the KRenameFile
      *  
-     *  \returns a QPixmap containing a preview of this KRenameFile.
+     *  @returns a QPixmap containing a preview of this KRenameFile.
      *           This might be only a mimetype icon depending on the current KDE settings.
      */
     inline const QPixmap & icon() const

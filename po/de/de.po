@@ -1,0 +1,1451 @@
+# translation of de.po to
+# German translation of Krename.
+#
+# Dominik Seichter <domseichter@web.de>, 2001,2003, 2004, 2005, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: de\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-10-16 10:49+0200\n"
+"PO-Revision-Date: 2006-06-18 11:35+0200\n"
+"Last-Translator: Dominik Seichter <domseichter@web.de>\n"
+"Language-Team:  <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.2\n"
+
+#: batchrenamer.cpp:126
+msgid "Filenames Processed after %1 seconds."
+msgstr "Dateinamen in %1 Sekunden verarbeitet."
+
+#: batchrenamer.cpp:248
+msgid "Can't create undo script :"
+msgstr "Kann Undo-Skript nicht erstellen :"
+
+#: batchrenamer.cpp:261
+msgid "Files will be copied to: %1"
+msgstr "Dateien werden nach %1 kopiert"
+
+#: batchrenamer.cpp:263
+msgid "Files will be moved to: %1"
+msgstr "Dateien werden nach %1 verschoben"
+
+#: batchrenamer.cpp:265
+msgid "Symbolic links will be created in: %1"
+msgstr "Symbolische Verknüpfungen werden in %1 erstellt."
+
+#: batchrenamer.cpp:267 krenameimpl.cpp:477
+msgid "Input files will be renamed."
+msgstr "Eingangsdateien werden umbenannt."
+
+#: batchrenamer.cpp:320
+msgid "Undo is not possible for remote file: %1"
+msgstr "Rückgängig machen geht nur bei lokalen Dateien: %1"
+
+#: batchrenamer.cpp:332
+msgid "Renamed %1 files successfully."
+msgstr "%1 Dateien erfolgreich umbenannt."
+
+#: batchrenamer.cpp:336
+msgid "%2 errors occurred!"
+msgstr "%2 Fehler sind aufgetreten!"
+
+#: batchrenamer.cpp:338
+msgid "Elapsed time: %1 seconds"
+msgstr "Benötigte Zeit: %1 Sekunden"
+
+#: batchrenamer.cpp:339
+msgid "KRename finished the renaming process."
+msgstr "KRename hat das Umbenennen beendet."
+
+#: batchrenamer.cpp:340
+msgid "Press close to quit!"
+msgstr "Klicken Sie auf Schließen um KRename zu beenden!"
+
+#: batchrenamer.cpp:350
+msgid "Can't set executable bit on undo script."
+msgstr "Kann das Undo-Skript nicht ausführbar machen."
+
+#: commandplugin.cpp:38
+msgid "Command Plugin"
+msgstr "Befehls-Plugin"
+
+#: commandplugin.cpp:43
+msgid "&Command Plugin"
+msgstr "&Befehls-Plugin"
+
+#: commandplugin.cpp:54
+msgid "You did not specify a command to execute."
+msgstr "Sie haben keinen Befehl zum Ausführen angegeben."
+
+#: commandplugin.cpp:69
+msgid "<b>Command Plugin</b>"
+msgstr "<b>Befehls-Plugin</b>"
+
+#: commandplugin.cpp:73
+msgid ""
+"<qt>Executes a shell command on every file after it has been renamed. Add %1 "
+"to the command line arguments to get the filename of the renamed file.</qt>"
+msgstr ""
+"<qt>Dieses Plugin führt einen Shell-Befehl für jede Datei aus, nachdem sie "
+"umbenannt wurde. Fügen Sie %1 zum Befehl hinzu um den Dateinamen der Datei "
+"zu erhalten.</qt>"
+
+#: commandplugin.cpp:76
+msgid "Command:"
+msgstr "Befehl:"
+
+#: commandplugin.cpp:81
+msgid "&Execute without blocking (not recommended)"
+msgstr "&Befehl ausführen ohne zu warten (nicht empfohlen)"
+
+#: commandplugin.cpp:84 replacedialog.cpp:71 helpdialog.cpp:98
+msgid "&Add"
+msgstr "&Hinzufügen"
+
+#: commandplugin.cpp:149
+msgid " exited with error: %1"
+msgstr " mit Fehler beendet: %1"
+
+#: replacedialog.cpp:39
+msgid "Find and Replace"
+msgstr "Suchen und Ersetzen"
+
+#: replacedialog.cpp:45
+msgid "Find"
+msgstr "Suche"
+
+#: replacedialog.cpp:46
+msgid "Replace With"
+msgstr "Ersetzen Durch"
+
+#: replacedialog.cpp:47
+msgid "Regular Expression"
+msgstr "Regulärer Ausdruck"
+
+#: replacedialog.cpp:58
+msgid "Find:"
+msgstr "Suche:"
+
+#: replacedialog.cpp:60
+msgid "Replace with:"
+msgstr "Ersetzen durch:"
+
+#: replacedialog.cpp:65
+msgid "&Regular expression"
+msgstr "&Regulärer Ausdruck"
+
+#: replacedialog.cpp:67
+msgid "&Edit..."
+msgstr "&Bearbeiten ..."
+
+#: replacedialog.cpp:117 replacedialog.cpp:147
+msgid "yes"
+msgstr "ja"
+
+#: replacedialog.cpp:117 replacedialog.cpp:147
+msgid "no"
+msgstr "nein"
+
+#: replacedialog.cpp:131
+msgid "Add a text that should be replaced."
+msgstr "Geben Sie einen Text ein, der ersetzt werden soll."
+
+#: replacedialog.cpp:138
+msgid "You can't replace the same text twice."
+msgstr "Sie können den selben Text nicht zweimal ersetzen."
+
+#: replacedialog.cpp:144
+msgid "Regular expression"
+msgstr "Regulärer Ausdruck"
+
+#: translitplugin.cpp:29
+msgid "Transliteration Plugin"
+msgstr "Transliteration Plugin"
+
+#: translitplugin.cpp:34
+msgid "&Transliteration Plugin"
+msgstr "&Transliteration Plugin"
+
+#: translitplugin.cpp:50
+msgid ""
+"<qt>This plugin transliterates names written with non-english characters.</"
+"qt>"
+msgstr ""
+"<qt>Dieses Plugin ersetzt nicht englische Buchstaben in Dateinamen.</qt>"
+
+#: ProgressDialog.cpp:57
+msgid "Progress"
+msgstr "Fortschritt"
+
+#: ProgressDialog.cpp:70
+msgid "Messages"
+msgstr "Meldungen"
+
+#: ProgressDialog.cpp:85
+msgid "Restart KRename..."
+msgstr "KRename neu starten ..."
+
+#: ProgressDialog.cpp:87
+msgid "Rename Processed Files &Again..."
+msgstr "&Verarbeitete Dateien noch einmal umbenennen ..."
+
+#: ProgressDialog.cpp:88
+msgid "Rename Unprocessed Files &Again..."
+msgstr "&Nicht verarbeitete Dateien noch einmal umbenennen ..."
+
+#: ProgressDialog.cpp:89
+msgid "Rename All Files &Again..."
+msgstr "&Alle Dateien noch einmal umbenennen ..."
+
+#: ProgressDialog.cpp:91
+msgid "&Rename More..."
+msgstr "&Andere Dateien umbenennen ..."
+
+#: ProgressDialog.cpp:96
+msgid "&Open Destination..."
+msgstr "&Ziel Verzeichnis Öffnen ..."
+
+#: ProgressDialog.cpp:164
+msgid "Error: %1"
+msgstr "Fehler: %1"
+
+#: ProgressDialog.cpp:177
+msgid "Warning: %1"
+msgstr "Achtung: %1"
+
+#: ProgressDialog.cpp:288
+msgid "User pressed cancel!"
+msgstr "Abbruch durch Benutzer"
+
+#: ProgressDialog.cpp:289
+msgid "Aborting..."
+msgstr "Abbrechen ..."
+
+#: ProgressDialog.cpp:344
+msgid "Undo: "
+msgstr "Rückgängig: "
+
+#: ProgressDialog.cpp:348
+msgid "Undoing the renaming operation has been completed."
+msgstr "Das Umbenennen wurde rückgängig gemacht."
+
+#: confdialog.cpp:49 guimodeselector.cpp:52
+msgid "Look and Feel"
+msgstr "Erscheinungsbild & Design"
+
+#: confdialog.cpp:59 guimodeselector.cpp:65
+msgid "Use &wizard style GUI (beginners)"
+msgstr "&Assistenten-Benutzeroberfläche verwenden (Anfänger)"
+
+#: confdialog.cpp:61 guimodeselector.cpp:67
+msgid "Use &tabbed GUI (advanced users)"
+msgstr "&Tabbed Benutzeroberfläche benutzen (Fortgeschrittene Benutzer)"
+
+#: confdialog.cpp:63 guimodeselector.cpp:69
+msgid "Configure the look and feel of the KRename GUI:<br>"
+msgstr ""
+"Erscheinungsbild und Design der KRename-Benutzeroberfläche einstellen:<br>"
+
+#: confdialog.cpp:74 main.cpp:49
+msgid "KRename"
+msgstr "KRename"
+
+#: confdialog.cpp:79
+msgid "&Load file plugins on start"
+msgstr "KDE-Datei-Plugins beim Programmstart &laden"
+
+#: confdialog.cpp:80
+msgid "Auto &resize columns in preview"
+msgstr "Automatische &Spaltengröße in der Vorschau"
+
+#: confdialog.cpp:84
+msgid "&Thumbnail size:"
+msgstr "&Größe der Vorschau:"
+
+#: confdialog.cpp:88
+msgid "&Number of template history items:"
+msgstr "&Anzahl der Text-Ergänzungseinträge für das Muster:"
+
+#: confdialog.cpp:97
+msgid ""
+"Disabling this option decreases KRename's startup time, because no "
+"KFilePlugins are loaded."
+msgstr ""
+"KRename startet ohne diese Option schneller, da keine Plugins geladen werden."
+
+#: fileoperation.cpp:57
+msgid "File %1 exists already!"
+msgstr "Die Ausgabedatei %1 existiert bereits."
+
+#: fileoperation.cpp:79
+msgid "Can't create symlinks on different hosts for file %1."
+msgstr ""
+"Kann keine symbolischen Verknüpfungen auf verschiedenen Computern für %1 "
+"erstellen."
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr "Dominik Seichter"
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr "domseichter@web.de"
+
+#: numberdialog.cpp:48
+msgid "&Numbering"
+msgstr "&Nummerierung"
+
+#: numberdialog.cpp:57 krenameimpl.cpp:701
+msgid "Start &index:"
+msgstr "Start &Index:"
+
+#: numberdialog.cpp:62
+msgid "Step &by:"
+msgstr "Sch&rittweite:"
+
+#: numberdialog.cpp:64
+msgid "&Reset counter for every directory"
+msgstr "&Zähler bei jedem neuen Verzeichnis zurücksetzten"
+
+#: numberdialog.cpp:67
+msgid "S&kip Numbers"
+msgstr "&Zahlen überspringen"
+
+#: numberdialog.cpp:77
+msgid "&Add Number"
+msgstr "Zahl &hinzufügen"
+
+#: numberdialog.cpp:80
+msgid "&Remove Number"
+msgstr "Zahl &entfernen"
+
+#: numberdialog.cpp:104
+msgid "Number of the first file."
+msgstr "Die erste Datei beim umbenennen bekommt diese Nummer."
+
+#: numberdialog.cpp:105
+msgid "The counter is increased/decreased by this value."
+msgstr "Zahlen werden um diesen Wert erhöht/erniedrigt."
+
+#: numberdialog.cpp:106
+msgid ""
+"Add all numbers that should be skipped by krename during the rename process."
+"<br>E.g.: If 2 is skipped files will be numbered: file0, file1, file3, ..."
+msgstr ""
+"Fügen Sie alle Zahlen hinzu, die KRename während des Umbenennens "
+"überspringen soll.<br>Z.B.: Wenn 2 übersprungen wird, werden die Dateien "
+"folgendermaßen umbenannt: file0, file1, file3, ..."
+
+#: numberdialog.cpp:108
+msgid ""
+"<qt>The counter is set to the start index in every directory. This setting "
+"applies to all used counters.</qt>"
+msgstr ""
+"<qt>Der Zähler wird in jedem neuen Verzeichnis der eingangs Dateien auf den "
+"Start Wert zurück gesetzt. Diese Einstellung betrifft alle verwendeten "
+"Zähler.</qt>"
+
+#: main.cpp:50
+msgid ""
+"KRename is a batch file renamer which can rename a\n"
+"list of files based on a set of expressions.\n"
+"\n"
+"If you like KRename you may want to support it.\n"
+"Testing, bug fixes and feature request are as welcome\n"
+"as financial support (everybody needs money ;)\n"
+"See help files for details.\n"
+msgstr ""
+"KRename ist ein Batch-Umbenenner, der eine Liste von Dateien anhand\n"
+"eines vorgegebenen Musters umbenennt.\n"
+"Wenn Ihnen KRename gefällt, sollten Sie überlegen KRename zu unterstützen.\n"
+"Die Hilfe enthält mehr Details.\n"
+
+#: main.cpp:62
+msgid "file will be added to the list of files for renaming"
+msgstr "Die Datei wird an die Liste der umzubenennenden Dateien angehängt."
+
+#: main.cpp:63
+msgid "add directory recursively"
+msgstr "Verzeichnis rekursiv hinzufügen"
+
+#: main.cpp:64
+msgid "set a template"
+msgstr "als Muster verwenden"
+
+#: main.cpp:65
+msgid "set a template for the file extension"
+msgstr "als Muster für die Dateierweiterung verwenden"
+
+#: main.cpp:66
+msgid "enable a plugin for use"
+msgstr "ein Plugin benutzen"
+
+#: main.cpp:67
+msgid "copy files to directory"
+msgstr "Dateien in Verzeichnis kopieren"
+
+#: main.cpp:68
+msgid "move files to directory"
+msgstr "Dateien in Verzeichnis verschieben"
+
+#: main.cpp:69
+msgid "load the profile named [profile] on startup"
+msgstr "das Profile [profile] beim Start laden"
+
+#: main.cpp:70
+msgid "start renaming immediately"
+msgstr "sofort umbenennen"
+
+#: main.cpp:71
+msgid "create no realtime preview"
+msgstr "Keine Echtzeit-Vorschau erstellen"
+
+#: main.cpp:80
+msgid "Website, testing, very good ideas and keeping me coding!"
+msgstr ""
+"Hat die Webseite erstellt, KRename getestet und mich mit guten Ideen "
+"versorgt."
+
+#: main.cpp:83
+msgid "Thanks to him for creating RedHat 7.x packages and some other help."
+msgstr "Danke für das Erstellen der RedHat 7.x Rpm's und anderer Hilfe."
+
+#: main.cpp:85
+msgid ""
+"Fixed a bug with startIndex and added the BatchRenamer class\n"
+"to his excellent image viewer showimg."
+msgstr ""
+"Hat einen Fehler mit dem startIndex behoben und hat die BatchRenamer Klasse\n"
+"zu seinem tollen Bildbetrachter showimg hinzugefügt."
+
+#: main.cpp:88
+msgid "Fixed a bug that caused krename not closing open files."
+msgstr ""
+"Hat einen Fehler behoben, weswegen KRename offene Dateien nicht geschlossen "
+"hat."
+
+#: main.cpp:90
+msgid ""
+"Thanks for his great job at apps.kde.com and help with contributing krename "
+"to apps.kde.com."
+msgstr ""
+"Danke für seine großartige Arbeit an der Seite apps.kde.com und Hilfe mit "
+"KRename."
+
+#: main.cpp:92
+msgid ""
+"Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
+msgstr ""
+"Danke für noatun und der ID3/Ogg-Tag-Editor basiert auf Teilen von noatun."
+
+#: main.cpp:94
+msgid "Gave me a good start into writing plugins with his application scribus."
+msgstr ""
+"Dank seiner Anwendung Scribus hab ich leichter verstanden wie man Plugin "
+"schreibt."
+
+#: main.cpp:96
+msgid ""
+"Parts of the PNG support are copied from his KFile plugin for png support."
+msgstr "Teile der PNG-Unterstützung wurden von seinem KFile-Plugin kopiert."
+
+#: main.cpp:98
+msgid "Created the Gentoo Ebuild scripts for Krename."
+msgstr "Erstellt die Gentoo Ebuild Skripts für KRename."
+
+#: main.cpp:100
+msgid "Some GCC 3.1 fixes for Gentoo."
+msgstr "Hat einige Fehler mit GCC 3.1 in Gentoo behoben"
+
+#: main.cpp:102
+msgid "Thanks for creating the Mandrake RPM"
+msgstr "Erstellt das Mandrake RPM"
+
+#: main.cpp:104
+msgid "Italian translation"
+msgstr "Italienische Übersetzung"
+
+#: main.cpp:105
+msgid "Provided a gcc3.x namespace patch"
+msgstr "behob ein Problem mit gcc3.x und namespaces"
+
+#: main.cpp:106
+msgid "Provided the new preview and move features"
+msgstr "Hat die neue Vorschau und das neue Verschieben geschrieben"
+
+#: main.cpp:107
+msgid ""
+"Fixed problems with the spec file and contributed rpms for every SuSE "
+"version you can imagine and is also the new Gentoo maintainer for KRename"
+msgstr ""
+"Hat Probleme im Spec File behoben und erstellt rpms für jede erdenkliche "
+"SuSE-Version und ist auch der neue Gentoo-Maintainer von KRename."
+
+#: main.cpp:108
+msgid "Provided SuSE RPMs and very good suggestions"
+msgstr "Erstellte SuSE-RPMs und hatte zahlreiche gute Vorschläge"
+
+#: main.cpp:109
+msgid "Contributed a Spanish translation"
+msgstr "Hat die spanische Übersetzung beigesteuert"
+
+#: main.cpp:110
+msgid "Provided a RedHat RPM and was big help in improving KRename"
+msgstr "Hat ein RedHat-RPM erstellt und sehr geholfen KRename zu verbessern"
+
+#: main.cpp:111
+msgid "Translated KRename to Japanese"
+msgstr "Hat KRename ins Japanische übersetzt"
+
+#: main.cpp:112
+msgid "Translated KRename into French"
+msgstr "Hat KRename ins Französische übersetzt"
+
+#: main.cpp:113
+msgid "Translated KRename into Polish"
+msgstr "Hat KRename ins Polnische übersetzt"
+
+#: main.cpp:114
+msgid "Translated KRename into Russian"
+msgstr "Hat KRename ins Russische übersetzt"
+
+#: main.cpp:115
+msgid "Translated KRename into Bosnian"
+msgstr "Hat KRename ins Bosnische übersetzt"
+
+#: main.cpp:133
+msgid ""
+"<b>Krename was started from root!</b><br>When started from root, Krename may "
+"damage your system if you do not know exactly what you are doing!"
+msgstr ""
+"<b>Root hat KRename gestartet!</b><br>Sie können mit KRename ihr System "
+"beschädigen, wenn Sie es als root starten und nicht genau wissen was Sie tun!"
+
+#: pictureplugin.cpp:41
+msgid "Picture Plugin"
+msgstr "Bilder-Plugin"
+
+#: pictureplugin.cpp:46
+msgid "P&icture Plugin"
+msgstr "&Bilder-Plugin"
+
+#: encodingplugin.cpp:37
+msgid "Encoding Conversion Plugin"
+msgstr "Text-Encodig-Plugin"
+
+#: encodingplugin.cpp:42
+msgid "&Encoding Conversion Plugin"
+msgstr "Text-&Encoding-Plugin"
+
+#: encodingplugin.cpp:64
+msgid ""
+"<qt>This plugin is able to convert filenames between different encodings. "
+"For example you can convert filenames from KOI8-R to UTF-8 encoding.</qt>"
+msgstr ""
+"<qt>Dieses Plugin kann Dateinamen zwischen verschiedenen Textkodierungen "
+"konvertieren. Zum Beispiel kann man Dateinamen von KOI8-R nach UTF-8 "
+"konvertieren.</qt>"
+
+#: encodingplugin.cpp:72
+msgid "Encoding of Input Files:"
+msgstr "Kodierung der Eingangsdateien:"
+
+#: encodingplugin.cpp:73 encodingplugin.cpp:78
+msgid "&Use local encoding: %1"
+msgstr "&Lokale Kodierung benutzen: %1"
+
+#: encodingplugin.cpp:77
+msgid "Encoding of Output Files:"
+msgstr "Kodierung der Ausgangsdateien:"
+
+#: helpdialog.cpp:89
+msgid "Token"
+msgstr "Befehl"
+
+#: helpdialog.cpp:90
+msgid "Description"
+msgstr "Beschreibung"
+
+#: krenameimpl.cpp:80
+msgid "F&iles"
+msgstr "Date&ien"
+
+#: krenameimpl.cpp:81
+msgid "Des&tination"
+msgstr "&Ziel"
+
+#: krenameimpl.cpp:82
+msgid "P&lugins"
+msgstr "P&lugins"
+
+#: krenameimpl.cpp:83
+msgid "File&name"
+msgstr "Datei&name"
+
+#: krenameimpl.cpp:302
+msgid "E&xtras"
+msgstr "E&xtras"
+
+#: krenameimpl.cpp:303
+msgid "&Profiles..."
+msgstr "&Profile ..."
+
+#: krenameimpl.cpp:305
+msgid "&Undo Old Renaming Action..."
+msgstr "A&lte Aktion rückgängig Machen ..."
+
+#: krenameimpl.cpp:311
+msgid "&Load KDE file plugins"
+msgstr "KDE Datei Plugins &laden"
+
+#: krenameimpl.cpp:312
+msgid "&Reload Plugin Data"
+msgstr "&Plugins neu laden"
+
+#: krenameimpl.cpp:348 kmylistview.cpp:86
+msgid "&Add..."
+msgstr "&Hinzufügen ..."
+
+#: krenameimpl.cpp:351
+msgid "Re&move"
+msgstr "&Entfernen"
+
+#: krenameimpl.cpp:354
+msgid "R&emove All"
+msgstr "&Alle Dateien entfernen"
+
+#: krenameimpl.cpp:357
+msgid "Sort: Unsorted"
+msgstr "Sortierung: Unsortiert"
+
+#: krenameimpl.cpp:358
+msgid "Sort: Ascending"
+msgstr "Sortierung: Aufsteigend"
+
+#: krenameimpl.cpp:359
+msgid "Sort: Descending"
+msgstr "Sortierung: Absteigend"
+
+#: krenameimpl.cpp:360
+msgid "Sort: Random"
+msgstr "Sortierung: Zufällig"
+
+#: krenameimpl.cpp:361
+msgid "Sort: Numeric"
+msgstr "Sortiere: Nach Zahlen"
+
+#: krenameimpl.cpp:364
+msgid "&Preview"
+msgstr "&Vorschau"
+
+#: krenameimpl.cpp:375
+msgid "&Display name"
+msgstr "&Namen Anzeigen"
+
+#: krenameimpl.cpp:404
+msgid "Add one or more files or directories"
+msgstr "Eine oder mehrere Dateien oder Verzeichnisse hinzufügen"
+
+#: krenameimpl.cpp:405
+msgid "Remove selected files"
+msgstr "Ausgewählte Dateien entfernen"
+
+#: krenameimpl.cpp:406
+msgid "Remove all files"
+msgstr "Alle Dateien entfernen"
+
+#: krenameimpl.cpp:407
+msgid "Enable/disable preview of pictures."
+msgstr "Bild Vorschau an/ab schalten."
+
+#: krenameimpl.cpp:408
+msgid "Displays the number of files in the list."
+msgstr "Zeige die Anzahl der Dateien in der Liste an."
+
+#: krenameimpl.cpp:409 krenameimpl.cpp:535
+msgid "Move selected items up"
+msgstr "Ausgewählte Dateien nach oben schieben."
+
+#: krenameimpl.cpp:410 krenameimpl.cpp:536
+msgid "Move selected items down"
+msgstr "Ausgewählte Dateien nach unten schieben."
+
+#: krenameimpl.cpp:411
+msgid "Enable/disable display of file name."
+msgstr "Anzeigen von Dateinamen an/ab-schalten."
+
+#: krenameimpl.cpp:412
+msgid "Move selected items (select the new location with the mouse)"
+msgstr ""
+"Ausgewählte Dateien verschieben (wählen Sie den neuen Platz mit der Maus)"
+
+#: krenameimpl.cpp:424
+msgid "O&ptions"
+msgstr "O&ptionen"
+
+#: krenameimpl.cpp:432
+msgid "&Rename input files"
+msgstr "Dateien einfach &umbenennen"
+
+#: krenameimpl.cpp:436
+msgid "Cop&y files to destination directory"
+msgstr "Dateien umbenannt ins Zielverzeichnis &kopieren"
+
+#: krenameimpl.cpp:439
+msgid "&Move files to destination directory"
+msgstr "Dateien umbenannt ins Zielverzeichnis &verschieben"
+
+#: krenameimpl.cpp:442
+msgid "Create symbolic &links in destination directory"
+msgstr "&Symbolische Verknüpfungen im Zielverzeichniss erstellen"
+
+#: krenameimpl.cpp:449
+msgid "&Overwrite existing files"
+msgstr "Existierende &Dateien überschreiben"
+
+#: krenameimpl.cpp:460
+msgid "&Undo Renaming"
+msgstr "&Umbenennen rückgängig machen."
+
+#: krenameimpl.cpp:462
+msgid "&Create an undo script"
+msgstr "Undo S&kript erstellen"
+
+#: krenameimpl.cpp:467 undodialog.cpp:46
+msgid ""
+"*.krename|KRename undo scripts (*.krename)\n"
+"*|All Files (*)"
+msgstr ""
+"*.krename|KRename Undo Skripte (*.krename)\n"
+"*|Alle Dateien (*)"
+
+#: krenameimpl.cpp:478
+msgid "Copies all files to the destination directory and renames them."
+msgstr "Alle Dateien werden in das Zielverzeichnis kopiert und umbenannt."
+
+#: krenameimpl.cpp:479
+msgid "Moves all files to the destination directory and renames them."
+msgstr "Alle Dateien werden in das Zielverzeichnis verschoben und umbenannt."
+
+#: krenameimpl.cpp:507
+msgid "Origin"
+msgstr "Ursprünglich"
+
+#: krenameimpl.cpp:508
+msgid "Renamed"
+msgstr "Umbenannt"
+
+#: krenameimpl.cpp:532
+msgid "Add a template.<br>Example: <i>picture###</i>"
+msgstr "Fügen Sie ein Muster ein.<br>Beispiel: <i>picture###</i>"
+
+#: krenameimpl.cpp:533
+msgid ""
+"Add a template for the file extension.<br>It behaves like the filename "
+"template."
+msgstr ""
+"Ein Muster für die Dateiendung.<br>Dieses Feld verhält sich wie das "
+"Dateinamenmuster."
+
+#: krenameimpl.cpp:534
+msgid ""
+"Checking this checkbox is the same as setting the extension template to $"
+msgstr ""
+"Diese CheckBox bewirkt das selbe, wie die Dateinamenserweiterung $ zu nennen."
+
+#: krenameimpl.cpp:537
+msgid "Double click on an item to modify it."
+msgstr "Klicken Sie doppelt auf einen Dateinamen um ihn zu ändern."
+
+#: krenameimpl.cpp:538
+msgid "Help Dialog with all tokens supported by KRename."
+msgstr "Hilfe Fenster mit allen von KRename unterstützten Befehlen."
+
+#: krenameimpl.cpp:539 krenameimpl.cpp:540
+msgid ""
+"<qt>Find and replace characters or part string of the source filename in the "
+"destination filename.</qt>"
+msgstr ""
+"<qt>Suche und ersetze Zeichen oder Zeichenketten aus dem Eingangsdateinamen "
+"im Ausgangsdateinamen.</qt>"
+
+#: krenameimpl.cpp:541
+msgid ""
+"<qt>You can use \".gz\" and \".tar.gz\" as file extension of the file backup."
+"tar.gz depending on this setting.</qt>"
+msgstr ""
+"<qt>Man kann entweder \".gz\" oder \".tar.gz\" als Dateiendung der Datei "
+"backup.tar.gz abhängig von dieser Einstellung verwenden.</qt>"
+
+#: krenameimpl.cpp:549
+msgid "&Template:"
+msgstr "&Muster:"
+
+#: krenameimpl.cpp:560
+msgid "&Functions..."
+msgstr "&Funktionen ..."
+
+#: krenameimpl.cpp:564
+msgid "&Use extension of the input file"
+msgstr "Ursprüngliche Dateiendung &benutzen."
+
+#: krenameimpl.cpp:569
+msgid "Find &and Replace..."
+msgstr "Suchen und &Ersetzen ..."
+
+#: krenameimpl.cpp:572
+msgid "&Numbering..."
+msgstr "&Nummerierung ..."
+
+#: krenameimpl.cpp:573
+msgid "&Insert Part of Filename..."
+msgstr "&Teil eines Dateinamens einfügen ..."
+
+#: krenameimpl.cpp:578
+msgid "old filename"
+msgstr "Alter Dateiname"
+
+#: krenameimpl.cpp:579
+msgid "old filename converted to lower case"
+msgstr "Alter Dateiname in Kleinbuchstaben"
+
+#: krenameimpl.cpp:580
+msgid "old filename converted to upper case"
+msgstr "Alter Dateiname in Großbuchstaben"
+
+#: krenameimpl.cpp:581
+msgid "first letter of every word upper case"
+msgstr "Erster Buchstabe jedes Worts groß"
+
+#: krenameimpl.cpp:582
+msgid "first letter of filename upper case"
+msgstr "Erster Buchstabe des Dateinamens groß"
+
+#: krenameimpl.cpp:583
+msgid "number (try also ##, ###, ... for leading zeros)"
+msgstr "Zahlen (probieren Sie auch ##, ##, ... für führende Nullen)"
+
+#: krenameimpl.cpp:584
+msgid "counter with custom start value 0 and custom stepping 1"
+msgstr "Zähler mit benutzerspezifischen Startwert 0 und der Schrittweite 1"
+
+#: krenameimpl.cpp:585
+msgid "create a subdirectory"
+msgstr "Unterverzeichnis erstellen"
+
+#: krenameimpl.cpp:586
+msgid "strip whitespaces leading and trailing"
+msgstr "Leerzeichen am Anfang und Ende entfernen"
+
+#: krenameimpl.cpp:587
+msgid "character x to y of old filename"
+msgstr "Zeichen x bis y des Dateinamens"
+
+#: krenameimpl.cpp:588
+msgid "y characters of old filename starting at x"
+msgstr "y Zeichen ab dem x-ten Zeichen des Dateinamens"
+
+#: krenameimpl.cpp:589
+msgid "insert name of directory"
+msgstr "Verzeichnis Name einfügen"
+
+#: krenameimpl.cpp:590
+msgid "insert name of parent directory"
+msgstr "Verzeichnisnamen des übergeordneten Verzeichnis einfügen"
+
+#: krenameimpl.cpp:591
+msgid "insert the length of the input filename"
+msgstr "die Länge des Eingabedateinamens einfügen"
+
+#: krenameimpl.cpp:592
+msgid "Built-in Functions:"
+msgstr "Eingebaute Funktionen:"
+
+#: krenameimpl.cpp:595
+msgid "Insert '$'"
+msgstr "Fügen '$' ein"
+
+#: krenameimpl.cpp:596
+msgid "Insert '%'"
+msgstr "Füge '%' ein"
+
+#: krenameimpl.cpp:597
+msgid "Insert '&'"
+msgstr "Füge '&' ein"
+
+#: krenameimpl.cpp:598
+msgid "Insert '*'"
+msgstr "Füge '*' ein"
+
+#: krenameimpl.cpp:599
+msgid "Insert '/'"
+msgstr "Füge '/' ein"
+
+#: krenameimpl.cpp:600
+msgid "Insert '\\\\'"
+msgstr "Füge ' \\\\' ein"
+
+#: krenameimpl.cpp:601
+msgid "Insert '['"
+msgstr "Füge '[' ein"
+
+#: krenameimpl.cpp:602
+msgid "Insert ']'"
+msgstr "Füge ']' ein"
+
+#: krenameimpl.cpp:603
+msgid "Special Characters:"
+msgstr "Sonderzeichen:"
+
+#: krenameimpl.cpp:640
+msgid "File extension starts at:"
+msgstr "Dateiendung beginnt ab:"
+
+#: krenameimpl.cpp:657
+msgid "&Filename"
+msgstr "Datei&name"
+
+#: krenameimpl.cpp:660
+msgid "&Prefix:"
+msgstr "&Präfix:"
+
+#: krenameimpl.cpp:666
+msgid "&Suffix:"
+msgstr "&Suffix:"
+
+#: krenameimpl.cpp:673
+msgid "Convert to lower case "
+msgstr "Alter Dateiname in Kleinbuchstaben "
+
+#: krenameimpl.cpp:674
+msgid "Convert to upper case"
+msgstr "Alter Dateiname in Großbuchstaben"
+
+#: krenameimpl.cpp:675
+msgid "Capitalize"
+msgstr "Kapitalisieren"
+
+#: krenameimpl.cpp:677
+msgid "&Name:"
+msgstr "&Name:"
+
+#: krenameimpl.cpp:679
+msgid "Use original name"
+msgstr "ursprünglichen Dateinamen verwenden"
+
+#: krenameimpl.cpp:681
+msgid "Custom name"
+msgstr "Benutzerspezifischer Name"
+
+#: krenameimpl.cpp:687
+msgid "&Extension:"
+msgstr "&Endung:"
+
+#: krenameimpl.cpp:689
+msgid "Use original extension"
+msgstr "ursprünglichen Dateiendung verwenden"
+
+#: krenameimpl.cpp:691
+msgid "Custom extension"
+msgstr "Benutzerspezifische Dateiendung"
+
+#: krenameimpl.cpp:698
+msgid "&Number"
+msgstr "&Nummerierung"
+
+#: krenameimpl.cpp:704
+msgid "&Number of digits:"
+msgstr "&Anzahl der Stellen:"
+
+#: krenameimpl.cpp:707
+msgid "&Find and Replace..."
+msgstr "Suchen und &Ersetzen ..."
+
+#: krenameimpl.cpp:714 krenameimpl.cpp:718
+msgid "Number"
+msgstr "Zahl"
+
+#: krenameimpl.cpp:715 krenameimpl.cpp:719
+msgid "Date"
+msgstr "Datum"
+
+#: krenameimpl.cpp:744
+msgid ""
+"<qt>Insert a special KRename command which inserts file information into the "
+"filename.</qt>"
+msgstr ""
+"<qt>Einen KRename Befehl zum Verwenden von Dateiinformationen einfügen.</qt>"
+
+#: krenameimpl.cpp:900
+msgid "&Use this plugin"
+msgstr "Plugin &benutzen"
+
+#: krenameimpl.cpp:1005
+msgid "Starting conversion of %1 files."
+msgstr "Benenne %1 Dateien um."
+
+#: krenameimpl.cpp:1049
+msgid "Specify a template to use for renaming files."
+msgstr "Bitte geben Sie ein Muster an."
+
+#: krenameimpl.cpp:1053
+msgid "Please give a destination directory !"
+msgstr "Bitte wählen Sie ein Zielverzeichnis !"
+
+#: krenameimpl.cpp:1058
+msgid "Please give the name of the undo script!"
+msgstr "Bitte geben Sie einen Namen für das Undo-Skript an!"
+
+#: krenameimpl.cpp:1068
+msgid "Files: <b>%1</b>"
+msgstr "Dateien: <b>%1</b>"
+
+#: krenameimpl.cpp:1165
+msgid "The directory %1 does not exist. KRename will create it for you."
+msgstr "Das Verzeichnis %1 existiert nicht. KRename wird es für Sie erstellen."
+
+#: krenameimpl.cpp:1701
+msgid "First Dot"
+msgstr "Erster Punkt"
+
+#: krenameimpl.cpp:1702
+msgid "Last Dot"
+msgstr "Letzter Punkt"
+
+#: tabs.cpp:46
+msgid "&Finish"
+msgstr "&Abschließen"
+
+#: profiledlg.cpp:55
+msgid "KRename: Wizard default profile"
+msgstr "KRename: Assistenten Standard Profil"
+
+#: profiledlg.cpp:56
+msgid "KRename: Tabbed default profile"
+msgstr "KRename: Tabbed Standard Profil"
+
+#: profiledlg.cpp:395
+msgid "Profiles"
+msgstr "Profile"
+
+#: profiledlg.cpp:407
+msgid "&Save As Profile..."
+msgstr "&Speichere als Profil ..."
+
+#: profiledlg.cpp:408
+msgid "&Load Profile"
+msgstr "Profil &Laden ..."
+
+#: profiledlg.cpp:409
+msgid "&Delete Profile"
+msgstr "&Profil Löschen"
+
+#: profiledlg.cpp:410
+msgid "&Use as default profile on startup"
+msgstr "Als &Standard Profil beim Start verwenden"
+
+#: profiledlg.cpp:427
+msgid ""
+"<qt>Save KRename's current settings as a new profile. The settings are saved "
+"and can be restored with Load Profile later.</qt>"
+msgstr ""
+"<qt>Erstellt ein neues Benutzerprofil aus den aktuellen Einstellungen von "
+"KRename. Die Einstellungen können später mit Profil Laden wieder hergestellt "
+"werden.</qt>"
+
+#: profiledlg.cpp:429
+msgid "<qt>Load all settings stored in this profile.</qt>"
+msgstr "<qt>Lädt alle Einstellungen aus diesem Profil.</qt>"
+
+#: profiledlg.cpp:503
+msgid ""
+"Do you really want to load the profile and overwrite the current settings: %1"
+msgstr ""
+"Wollen Sie das Profil wirklich laden und die aktuellen Einstellungen "
+"überschreiben: %1"
+
+#: profiledlg.cpp:509
+msgid "The profile \"%1\" could not be found."
+msgstr "Das Profil \"%1\" wurde nicht gefunden."
+
+#: profiledlg.cpp:529
+msgid "Profile Name"
+msgstr "Profil Name"
+
+#: profiledlg.cpp:529
+msgid "Please enter a name for the new profile:"
+msgstr "Bitte geben Sie einen Namen für das Profil ein:"
+
+#: profiledlg.cpp:537
+msgid "This profile does already exist. Please choose another name."
+msgstr "Dieses Profil existiert bereits. Bitte wählen Sie einen anderen Namen."
+
+#: profiledlg.cpp:552
+msgid "You cannot delete default profiles!"
+msgstr "Sie können keine Standard-Profile löschen."
+
+#: profiledlg.cpp:557
+msgid "Do you really want to delete the profile: %1"
+msgstr "Wollen Sie das Profil wirklich löschen: %1"
+
+#: undodialog.cpp:33
+msgid "Undo Renaming"
+msgstr "Umbenennen rückgängig machen."
+
+#: undodialog.cpp:39
+msgid "Undo script:"
+msgstr "Undo-Skript:"
+
+#: undodialog.cpp:51
+msgid ""
+"<qt>Undo Scripts are normal shell scripts which can also be executed "
+"manually from the command line.</qt>"
+msgstr ""
+"<qt>Undo-Skripte sind normale Shell-Skripte die auch per Hand von der "
+"Kommandozeile aus ausgeführt werden können.</qt>"
+
+# FIXME: remove space at end of msgid
+#: undodialog.cpp:74
+msgid ""
+"This script does not seem to be a Krename undo script. Execution of this "
+"script can be dangerous. Continue ?"
+msgstr ""
+"Dieses Skript scheint kein KRename Undo-Skript zu sein. Es kann gefährlich "
+"sein dieses Skript auszuführen. Fortsetzen?"
+
+#: undodialog.cpp:86
+msgid "Unable to start the given undo script!"
+msgstr "Kann das gewählte Undo-Skript nicht starten!"
+
+#: undodialog.cpp:118
+msgid "Finished successfully"
+msgstr "Erfolgreich abgeschlossen"
+
+#: dsdirselectdialog.cpp:46
+msgid "Add directory names &with filenames"
+msgstr "&Verzeichnisnamen mit Inhalt zur Liste hinzufügen"
+
+#: dsdirselectdialog.cpp:47
+msgid "Add subdirectories &recursively"
+msgstr "Unterverzeichnisse &rekursiv hinzufügen"
+
+#: dsdirselectdialog.cpp:51
+msgid "Add &hidden directories"
+msgstr "Vers&teckte Verzeichnisse hinzufügen"
+
+#: dsdirselectdialog.cpp:53
+msgid "Add directory names only"
+msgstr "Nur Verzeichnisnamen hinzufügen"
+
+#: dsdirselectdialog.cpp:56
+msgid ""
+"Walk recursively through the directory tree and add also the content of all "
+"subdirectories to the list of files to rename."
+msgstr ""
+"Läuft rekursiv durch den Verzeichnisbaum und fügt den Inhalt aller "
+"Verzeichnisse und ihrer Unterverzeichnisse zu KRename hinzu."
+
+#: dsdirselectdialog.cpp:57
+msgid ""
+"If not checked, KRename will ignore directories starting with a dot during "
+"recursive adding."
+msgstr ""
+"KRename ignoriert versteckte Verzeichnisse beim rekursiven hinzufügen, wenn "
+"diese Option nicht aktiviert ist."
+
+#: dsdirselectdialog.cpp:58
+msgid ""
+"Add only the directory names and not the names of the files in the directory "
+"to KRename."
+msgstr ""
+"Nur die Verzeichnisnamen zu KRename hinzufügen, aber nicht den Inhalt der "
+"Verzeichnisse."
+
+#: dsdirselectdialog.cpp:59
+msgid ""
+"This option causes KRename to add also the name of the base directory of the "
+"selected files to its list."
+msgstr ""
+"Diese Option veranlasst KRename dazu, auch den Namen des Basisverzeichnisses "
+"der Liste der umzubenennenden Dateien hinzuzufügen."
+
+#: permission.cpp:42
+msgid "Permissions"
+msgstr "Berechtigungen"
+
+#: permission.cpp:47
+msgid "&Permissions"
+msgstr "&Berechtigungen"
+
+#: permission.cpp:78
+msgid "Access permissions"
+msgstr "Zugriffsberechtigungen"
+
+#: permission.cpp:84
+msgid "Change &Permissions"
+msgstr "&Berechtigungen ändern"
+
+#: permission.cpp:86
+msgid "Class"
+msgstr "Klasse"
+
+#: permission.cpp:89
+msgid "Read"
+msgstr "Lesen"
+
+#: permission.cpp:92
+msgid "Write"
+msgstr "Schreiben"
+
+#: permission.cpp:95
+msgid "Exec"
+msgstr "Ausführen"
+
+#: permission.cpp:101
+msgid "Special"
+msgstr "Spezialattribut"
+
+#: permission.cpp:104
+msgid "User"
+msgstr "Benutzer"
+
+#: permission.cpp:107
+msgid "Group"
+msgstr "Gruppe"
+
+#: permission.cpp:110
+msgid "Others"
+msgstr "Sonstige"
+
+#: permission.cpp:113
+msgid "UID"
+msgstr "UID"
+
+#: permission.cpp:116
+msgid "GID"
+msgstr "GID"
+
+#: permission.cpp:119
+msgid "Sticky"
+msgstr "Haftend (Sticky)"
+
+#: permission.cpp:135
+msgid "Change &Owner"
+msgstr "&Eigentümer ändern"
+
+#: permission.cpp:137
+msgid "Ownership"
+msgstr "Eigentümer"
+
+#: permission.cpp:149
+msgid "User:"
+msgstr "Benutzer:"
+
+#: permission.cpp:151
+msgid "Group:"
+msgstr "Gruppe:"
+
+#: permission.cpp:248
+msgid "Can't chmod %1."
+msgstr "Berechtigungen von %1 können nicht geändert werden."
+
+#: permission.cpp:252
+msgid "Can't chown %1."
+msgstr "Kann Eigentümer von %1 nicht ändern."
+
+#: myinputdialog.cpp:37
+msgid "Please input a new filename:"
+msgstr "Bitte geben Sie einen neuen Dateinamen ein:"
+
+#: myinputdialog.cpp:45
+msgid "&Revert Changes"
+msgstr "Änderungen &rückgängig machen"
+
+#: myinputdialog.cpp:49
+msgid "Use &Input Filename"
+msgstr "&Eingangsdateinamen verwenden"
+
+#: myinputdialog.cpp:52
+msgid "&Ok"
+msgstr "&Ok"
+
+#: myinputdialog.cpp:75
+msgid "Use the filename that is generated by KRename instead of your changes."
+msgstr "Den von KRename erzeugten Dateinamen verwenden."
+
+#: mydirplugin.cpp:37
+msgid "Dir Plugin"
+msgstr "Verzeichnis-Plugin"
+
+#: mydirplugin.cpp:42
+msgid "&Dir Plugin"
+msgstr "&Verzeichnis-Plugin"
+
+#: mydirplugin.cpp:71
+msgid "<qt>This plugin sorts files after renaming in subdirectories.</qt>"
+msgstr ""
+"<qt>Dieses Plugin sortiert die Dateien nach dem Umbenennen in "
+"Unterverzeichnisse ein.</qt>"
+
+#: mydirplugin.cpp:83
+msgid "Files per directory:"
+msgstr "Dateien pro Verzeichnis:"
+
+#: mydirplugin.cpp:90
+msgid "Start index:"
+msgstr "Start-Index:"
+
+#: mydirplugin.cpp:105
+msgid "Output &Directory"
+msgstr "Ausgabe&verzeichnis"
+
+#: wizard.cpp:81
+msgid " - Step %1 of %2"
+msgstr " - Schritt %1 von %2"
+
+#: kmylistbox.cpp:54
+msgid "Please add some files..."
+msgstr "Bitte fügen Sie Dateien hinzu ..."
+
+#: dateplugin.cpp:111
+msgid "&System Functions"
+msgstr "&System-Funktionen"
+
+#: dateplugin.cpp:116
+msgid "System Functions"
+msgstr "System-Funktionen"
+
+#: dateplugin.cpp:134
+msgid "Insert the current date"
+msgstr "Das aktuelle Datum einfügen"
+
+#: dateplugin.cpp:135
+msgid "Insert the current date using the formatting string yyyy-MM-dd"
+msgstr "Das aktuelle Datum im Format yyyy-MM-dd einfügen"
+
+#: dateplugin.cpp:136
+msgid "Insert the current year"
+msgstr "Das aktuelle Jahr einfügen"
+
+#: dateplugin.cpp:137
+msgid "Insert the current month as number"
+msgstr "Den aktuellen Monat als Zahl einfügen"
+
+#: dateplugin.cpp:138
+msgid "Insert the current day as number"
+msgstr "Den aktuellen Tag als Zahl einfügen"
+
+#: dateplugin.cpp:139
+msgid "Insert the current time"
+msgstr "Die aktuelle Zeit einfügen"
+
+#: dateplugin.cpp:140
+msgid "Insert the current hour as number"
+msgstr "Die aktuelle Stunde als Zahl einfügen"
+
+#: dateplugin.cpp:141
+msgid "Insert the current minute as number"
+msgstr "Die aktuelle Minute als Zahl einfügen"
+
+#: dateplugin.cpp:142
+msgid "Insert the current second as number"
+msgstr "Die aktuelle Sekunde als Zahl einfügen"
+
+#: dateplugin.cpp:143
+msgid "Insert your username"
+msgstr "Ihren Benutzernamen einfügen"
+
+#: dateplugin.cpp:144
+msgid "Insert your groupname"
+msgstr "Den Namen Ihrer Gruppe einfügen"
+
+#: dateplugin.cpp:145
+msgid "Insert the files creation date"
+msgstr "Das Erstellungsdatum der Datei einfügen"
+
+#: dateplugin.cpp:146
+msgid "Insert the formatted file creation date"
+msgstr "Das formatierte Erstellungsdatum der Datei einfügen"
+
+#: dateplugin.cpp:147
+msgid "Insert the files modification date"
+msgstr "Das Datum der letzten Änderung einer Datei einfügen"
+
+#: dateplugin.cpp:148
+msgid "Insert the formatted modification date"
+msgstr "Das Datum der letzten Änderung einer Datei formatiert einfügen"
+
+#: dateplugin.cpp:149
+msgid "Insert the date of the last file access"
+msgstr "Das Datum des letzten Zugriffs auf eine Datei einfügen"
+
+#: dateplugin.cpp:150
+msgid "Insert the formatted date of the last file access"
+msgstr "Das Datum des letzten Zugriffs auf eine Datei formatiert einfügen"
+
+#: kmylistview.cpp:81
+msgid "&Change Filename Manually"
+msgstr "Dateiname &manuell ändern"
+
+#: coorddialog.cpp:63
+msgid "&Invert selection"
+msgstr "&Auswahl umkehren"
+
+#: coorddialog.cpp:66
+msgid "Please select the text you want to insert:"
+msgstr "Bitte wählen Sie einen Text zum Einfügen aus:"
+
+#: coorddialog.cpp:129
+msgid "Preview: "
+msgstr "Vorschau: "
+
+#: datetime.cpp:44
+msgid "Date & Time"
+msgstr "Datum & Zeit"
+
+#: datetime.cpp:49
+msgid "Date && &Time"
+msgstr "Datum && &Zeit"
+
+#: datetime.cpp:81
+msgid "Change &access date && time"
+msgstr "&Zugriffs Datum && Zeit verändern"
+
+#: datetime.cpp:84
+msgid "Change &modification date && time"
+msgstr "&Modifikations-Datum und -Zeit verändern"
+
+#: datetime.cpp:87
+msgid "Time:"
+msgstr "Zeit:"
+
+#: datetime.cpp:90
+msgid "h"
+msgstr "h"
+
+#: datetime.cpp:94
+msgid "min"
+msgstr "min"
+
+#: datetime.cpp:98
+msgid "s"
+msgstr "s"
+
+#: datetime.cpp:102
+msgid "&Get Current Date && Time"
+msgstr "&Aktuelles Datum && Zeit"
+
+#: datetime.cpp:152 datetime.cpp:168 datetime.cpp:171 datetime.cpp:177
+#: datetime.cpp:192 datetime.cpp:207 datetime.cpp:210 datetime.cpp:223
+msgid "Can't change date of file %1."
+msgstr "Kann Datum der Datei %1 nicht ändern."
+
+#: fileplugin.cpp:140
+msgid "Supported tokens:"
+msgstr "Unterstützte Funktionen:"

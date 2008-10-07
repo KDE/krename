@@ -41,28 +41,23 @@ public:
     {
         return KIO::pixmapForUrl( url );
 
-        // TODO: Use preview job to load a real preview delayed
-        //       and to replace the icon
-
-        /*
+	/*
         KIO::UDSEntry entry;
         KIO::NetAccess::stat( url, entry, NULL );
         KFileItem item( entry, url );
         QList<KFileItem> list;
         list.append( item );
 
-        KJob* job = new KIO::PreviewJob( list, 64, 64, 0, 0, true, false, NULL ); 
+        KIO::PreviewJob* job = new KIO::PreviewJob( list, 64, 64, 0, 0, true, false, NULL ); 
         if( !job->exec() ) 
         {
             return item.pixmap( 64 );
         }
         else
         {
-            return item.pixmap( 64 );
+	    return KIO::pixmapForUrl( url );
         }
-
-        delete job;
-        */
+	*/
     }
 
 private:

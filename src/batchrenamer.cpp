@@ -140,10 +140,10 @@ void BatchRenamer::processFilenames()
         if( i > 0 && m_reset )
             findCounterReset( i );
 
-	qDebug("SRCFILENAME       : %s", (*m_files)[i].srcFilename().toUtf8().data() );
-        qDebug("DSTFILENAME SHOULD: %s", processString( text, (*m_files)[i].srcFilename(), i ).toUtf8().data() );
+	//qDebug("SRCFILENAME       : %s", (*m_files)[i].srcFilename().toUtf8().data() );
+        //qDebug("DSTFILENAME SHOULD: %s", processString( text, (*m_files)[i].srcFilename(), i ).toUtf8().data() );
         (*m_files)[i].setDstFilename( processString( text, (*m_files)[i].srcFilename(), i ) );
-        qDebug("DSTFILENAME IS    : %s", (*m_files)[i].dstFilename().toUtf8().data());
+        //qDebug("DSTFILENAME IS    : %s", (*m_files)[i].dstFilename().toUtf8().data());
         (*m_files)[i].setDstExtension( processString( extext, (*m_files)[i].srcExtension(), i ) );
 
         // Let's run the plugins that change the final filename,
@@ -174,21 +174,15 @@ void BatchRenamer::processFilenames()
 	     m_renameMode == eRenameMode_Move) &&
 	    (*m_files)[i].isDirectory() )
 	{
-	    qDebug("Names=%s %s", (*m_files)[i].srcFilename().toUtf8().data(), (*m_files)[i].dstFilename().toUtf8().data() );
 	    const QString topDir  = (*m_files)[i].srcDirectory() + '/' + (*m_files)[i].srcFilename();
 	    const QString replace = (*m_files)[i].dstDirectory() + '/' + (*m_files)[i].dstFilename();
-	    qDebug("TOPFILE=%s", topDir.toUtf8().data() );
-	    qDebug("REPALCE=%s", replace.toUtf8().data() );
 
 	    for( int z = i + 1; z < m_files->count(); z++ ) 
 	    {
 		const QString & dir = (*m_files)[z].realSrcDirectory();
-		qDebug("DIR=%s\n", dir.toUtf8().data() );
-		qDebug("SRC=%s\n", topDir.toUtf8().data() );
 		if( dir.startsWith( topDir ) )
 		{
 		    QString newDir = replace + "/" + dir.right( dir.length() - topDir.length() );
-		    qDebug("newDir=%s", newDir.toUtf8().data() );
 		    (*m_files)[z].setOverrideSrcDirectory( newDir ); 
 		}
 	    }

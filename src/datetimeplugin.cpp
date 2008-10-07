@@ -125,8 +125,6 @@ QString DateTimePlugin::changeDateTime( const QString & filename, bool bModifica
     if(utime( filename.toUtf8().data(), &buf ) != 0)
         return QString( i18n("Can't change date of file %1. (utime failed)") ).arg(filename);
 
-    qDebug("Changed %s\n", filename.toUtf8().data() );
-
     return QString::null;
 }
 

@@ -177,6 +177,8 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
     
     while( it != list.end() )
     {
+	qDebug("Number of items: %s", (*it).prettyUrl().toUtf8().data() );
+
         KRenameFile item( *it );
         if( item.isDirectory() )
         {
@@ -333,11 +335,13 @@ void KRenameImpl::slotAddFiles()
     KFileDialog dialog( KUrl("kfiledialog://krename"), i18n("*|All files and directories"), 
 			m_window, widget );
     dialog.setOperationMode( KFileDialog::Opening );
-    dialog.setMode( KFile::Files | KFile::Directory | KFile::ExistingOnly );
+    dialog.setMode( KFile::File | KFile::Files | KFile::Directory | KFile::ExistingOnly );
 
     if( dialog.exec() == QDialog::Accepted ) 
     {
-        this->addFilesOrDirs( dialog.selectedUrls(), dialog.currentFilter(), widget->addRecursively(), widget->addDirsWithFiles(),
+	qDebug("Number of items: %i", dialog.selectedUrls().count() );
+        this->addFilesOrDirs( dialog.selectedUrls(), dialog.currentFilter(), 
+			      widget->addRecursively(), widget->addDirsWithFiles(),
                               widget->addDirsOnly(), widget->addHidden() );
     }
 }
@@ -1769,7 +1773,6 @@ bool KRenameImpl::setupBatchRenamer( BatchRenamer* b, bool preview )
             while( (d += url.section( "/", i, i, QString::SectionSkipEmpty )) && ! d.isEmpty() ) { // asignment here!
                 if( !KIO::NetAccess::exists( d ) && !KIO::NetAccess::mkdir( d ) )
                 {
-                    qDebug( "Can't create %s", d.latin1() );
                     break;
                 }
                 d.append( "/" );

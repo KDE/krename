@@ -87,11 +87,9 @@ TARGET_LINK_LIBRARIES(krename ${KDE4_KDECORE_LIBS}
 			      ${KDE4_KJSAPI_LIBS} 
 			      ${TAGLIB_LIBRARIES} )
 
+
+# Others Files to install
+
 INSTALL(TARGETS krename DESTINATION ${BIN_INSTALL_DIR})
+INSTALL(FILES krename.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
-
-########### install files ###############
-
-#install( FILES  krename.desktop DESTINATION ${XDG_APPS_DIR} )
-
-kde4_install_icons( ${ICON_INSTALL_DIR} )
