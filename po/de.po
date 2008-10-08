@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-07 16:42+0200\n"
-"PO-Revision-Date: 2008-10-08 16:53+0200\n"
+"PO-Revision-Date: 2008-10-08 17:01+0200\n"
 "Last-Translator: Dominik Seichter <domseichter@web.de>\n"
 "Language-Team:  <de@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -1156,11 +1156,11 @@ msgstr "Alle Umbenennungen werden rückgängig gemacht."
 
 #: krenameimpl.cpp:1289
 msgid "Use original extension"
-msgstr "Ursprünglichen Dateiendung"
+msgstr "Ursprüngliche Dateiendung"
 
 #: krenameimpl.cpp:1279
 msgid "Use original name"
-msgstr "Ursprünglichen Dateinamen"
+msgstr "Ursprünglicher Dateinamen"
 
 #: permissionsplugin.cpp:204
 msgid "User"
