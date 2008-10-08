@@ -10,7 +10,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
                       ${CMAKE_SOURCE_DIR}/cmake/modules )
 
 
-SET(KRENAME_VERSION "3.9.1")
+SET(KRENAME_VERSION "3.9.2")
 
 INCLUDE (KDE4Defaults)
 INCLUDE (MacroLibrary)
