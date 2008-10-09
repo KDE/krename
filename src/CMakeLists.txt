@@ -7,9 +7,12 @@ INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}
 		     ${QT_INCLUDES} 
 		     ${CMAKE_CURRENT_SOURCE_DIR} 
 		     ${CMAKE_CURRENT_BINARY_DIR}
-		     ${TAGLIB_INCLUDE_DIR} )
+		     ${TAGLIB_INCLUDE_DIR}
+		     ${EXIV2_INCLUDE_DIR} )
 
-ADD_DEFINITIONS(${TAGLIB_CFLAGS} ${KDE4_DEFINITIONS} )
+ADD_DEFINITIONS(${TAGLIB_CFLAGS} ${EXIV2_CFLAGS} ${KDE4_DEFINITIONS} )
+# Exiv2 needs exceptions
+ADD_DEFINITIONS(${KDE4_ENABLE_EXCEPTIONS})
 
 ########### next target ###############
 
@@ -19,6 +22,7 @@ SET(krename_SRCS
   batchrenamer.cpp
   customdialog.cpp
   datetimeplugin.cpp
+  exiv2plugin.cpp
   exthistorycombo.cpp
   filedialogextwidget.cpp
   fileplugin.cpp
@@ -71,6 +75,7 @@ kde4_add_executable(krename ${krename_SRCS})
 # find Nepomuk's libkmetadata
 find_path(KMETADATA_INCLUDE_DIR NAMES kmetadata/kmetadata.h PATHS ${KDE4_INCLUDE_DIR})
 find_library(KMETADATA_LIBRARY NAMES kmetadata PATHS ${KDE4_LIB_DIR})
+
 if(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
   set(KDE4_KMETADATA kmetadata)
   set(HAVE_KMETADATA 1)
@@ -85,7 +90,8 @@ TARGET_LINK_LIBRARIES(krename ${KDE4_KDECORE_LIBS}
 			      ${KDE4_KIO_LIBS} 
 			      ${KDE4_KMETADATA}
 			      ${KDE4_KJSAPI_LIBS} 
-			      ${TAGLIB_LIBRARIES} )
+			      ${TAGLIB_LIBRARIES}
+			      ${EXIV2_LIBRARIES} )
 
 
 # Others Files to install

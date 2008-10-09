@@ -66,21 +66,21 @@ QString TagLibPlugin::processFile( BatchRenamer* b, int index, const QString & f
 	return QString("");
 
     if( token == "tagtitle" )
-	result = g.tag()->title();
+        result = g.tag()->title();
     else if( token == "tagartist" )
-	result = g.tag()->artist();
+        result = g.tag()->artist();
     else if( token == "tagalbum" )
-	result = g.tag()->album();
+        result = g.tag()->album();
     else if( token == "tagcomment" )
-	result = g.tag()->comment();
+        result = g.tag()->comment();
     else if( token == "taggenre" )
-	result = g.tag()->genre();
+        result = g.tag()->genre();
     else if( token == "tagyear" ) {
-	unsigned int year = g.tag()->year();
-	return QString::number( year );
+        unsigned int year = g.tag()->year();
+        return QString::number( year );
     } else if( token == "tagtrack" ) {
-	unsigned int track = g.tag()->track();
-	return QString::number( track );
+        unsigned int track = g.tag()->track();
+        return QString::number( track );
     } 
  
     return TStringToQString( result );

@@ -21,6 +21,7 @@
 #include "plugin.h"
 
 #include "datetimeplugin.h"
+#include "exiv2plugin.h"
 #include "fileplugin.h"
 #include "increasecounterplugin.h"
 #include "permissionsplugin.h"
@@ -103,6 +104,7 @@ void PluginLoader::clear()
 void PluginLoader::load()
 {
     m_plugins.append( new DateTimePlugin( this ) );
+    m_plugins.append( new Exiv2Plugin( this ) );
     m_plugins.append( new IncreaseCounterPlugin( this ) );
     m_plugins.append( new PermissionsPlugin( this ) );
     m_plugins.append( new ScriptPlugin( this ) );
