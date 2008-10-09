@@ -101,6 +101,9 @@ int main(int argc, char *argv[])
     aboutData.addCredit( ki18n("Krzysztof Pawlak"), ki18n("Translated KRename into Polish"), "jmnemonic@gazeta.pl" );
     aboutData.addCredit( ki18n("Ilya Ivkov"), ki18n("Translated KRename into Russian"), "ilya-ivkov@yandex.ru" );    
     aboutData.addCredit( ki18n("Asim Husanovic"), ki18n("Translated KRename into Bosnian"), "asim.h@megatel.ba" );    
+    aboutData.addCredit( ki18n("Michal Smoczyk"), ki18n("Polish Translation"), "msmoczyk@wp.pl" );    
+
+ 
 
     KCmdLineArgs::init( argc, argv, &aboutData );
     KCmdLineArgs::addCmdLineOptions( options );
