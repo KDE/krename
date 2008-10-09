@@ -547,7 +547,7 @@ bool KRenameTest::replaceTest( const QString & token, const QString & filename, 
 
     QList<TReplaceItem> replaceList;
 
-    struct TReplaceItem strings;
+    TReplaceItem strings;
     strings.find    = replace;
     strings.replace = with;
     strings.reg     = regExp;

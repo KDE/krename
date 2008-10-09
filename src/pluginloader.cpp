@@ -103,10 +103,14 @@ void PluginLoader::clear()
 
 void PluginLoader::load()
 {
+#ifndef _WIN32
     m_plugins.append( new DateTimePlugin( this ) );
+#endif // _WIN32
     m_plugins.append( new Exiv2Plugin( this ) );
     m_plugins.append( new IncreaseCounterPlugin( this ) );
-    m_plugins.append( new PermissionsPlugin( this ) );
+#ifndef _WIN32
+	m_plugins.append( new PermissionsPlugin( this ) );
+#endif // _WIN32
     m_plugins.append( new ScriptPlugin( this ) );
     m_plugins.append( new SystemPlugin( this ) );
     m_plugins.append( new TagLibPlugin( this ) );

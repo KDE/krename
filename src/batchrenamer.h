@@ -34,26 +34,26 @@ class QTextStream;
  * in the preview list view are
  * stored here.
  */
-typedef struct manualchanges {
+typedef struct __tag_manualchanges {
     KUrl url;      // input filename
     QString user;  // name the user wants
-};
+} manualchanges;
 
-typedef struct tCounterValues {
+typedef struct __tag_tCounterValues {
     int value;  // current value of this counter
     int start;  // start value of this counter (for findResetCounter)
     int step;   // stepping value of this counter;
-};
+} tCounterValues;
 
 /** A structure describing a string or regular
  *  expression that is to be found in the final/resulting
  *  filename and to be replaced with another string.
  */
-typedef struct TReplaceItem {
+typedef struct __tag_TReplaceItem {
     QString find;      ///< Text to replace
     QString replace;   ///< Replace with
     bool reg;          ///< is it a reg expression ?
-};
+} TReplaceItem;
 
 /** An enum to set the renaming mode of KRename
  */

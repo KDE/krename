@@ -32,7 +32,9 @@
 #include "krenameimpl.h"
 
 // OS includes
+#ifndef _WIN32
 #include <unistd.h>
+#endif // _WIN32
 #include <sys/types.h>
 
 #include "../config-krename.h"
@@ -113,7 +115,8 @@ int main(int argc, char *argv[])
 
     QWidget* krename = KRenameImpl::launch( QRect( 0, 0, 0, 0 ), KRenameFile::List() );
 
-    /* Check if Krename
+#ifndef _WIN32
+	/* Check if Krename
      * was started from root!
      */
     unsigned int uid = geteuid();
@@ -124,6 +127,7 @@ int main(int argc, char *argv[])
             "system if you do not know exactly what you are "
             "doing!"
         ), i18n("Error"), "KrenameRootWarning" );
+#endif // _WIN32
 
 /*
  * Activate this warning message for unstable development releases.

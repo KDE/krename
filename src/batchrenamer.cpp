@@ -19,13 +19,18 @@
 #include <config.h>
 #endif
 
-#ifndef VERSION
-    #define VERSION "unknown"
-#endif
+#ifdef _WIN32
+#include <windows.h>
+#endif // _WIN32
 
 // OS includes
 #include <stdio.h>
+#ifndef _WIN32
 #include <unistd.h>
+#endif // _WIN32
+
+#include "../config-krename.h"
+
 // chmod:
 #include <sys/types.h>
 #include <sys/stat.h>

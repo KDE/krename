@@ -15,6 +15,7 @@
  *                                                                         *
  ***************************************************************************/
 
+#ifndef _WIN32
 #include "datetimeplugin.h"
 
 #include <kiconloader.h>
@@ -129,5 +130,4 @@ QString DateTimePlugin::changeDateTime( const QString & filename, bool bModifica
 }
 
 #include "datetimeplugin.moc"
-
-
+#endif // _WIN32
