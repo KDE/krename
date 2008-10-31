@@ -1,9 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
+Actions=Krename;
+Type=Service
+Icon=
+Name=
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin,all/allfiles,inode/directory
+X-KDE-ExcludeServiceTypes=kdedevice/*
+X-KDE-Protocol=!file
 ServiceTypes=all/allfiles
-Actions=Rename
-
-ExcludeServiceTypes=kdedevice/*
  
 [Desktop Action Rename]
 Name=Rename with KRename
@@ -11,6 +15,6 @@ Name[de]=Mit KRename umbenennen
 Name[es]=Renombrar con KRename
 Name[fr]=Renommer avec KRename 
 Name[pt_BR]=Renomear com KRename
-Exec=krename %F
+Exec=krename %U
 Icon=krename
 

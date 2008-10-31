@@ -1,7 +1,10 @@
 [Desktop Entry]
 Actions=Rename
 Encoding=UTF-8
-ServiceTypes=inode/directory
+Type=Service
+X-KDE-ServiceTypes=inode/directory
+X-KDE-ExcludeServiceTypes=kdedevice/*
+X-KDE-Protocol=!file
 
 [Desktop Action Rename]
 Exec=krename -r %U
@@ -10,3 +13,4 @@ Name[de]=Mit KRename umbenennen
 Name[es]=Renombrar con KRename
 Name[fr]=Renommer avec KRename 
 Icon=krename 
+

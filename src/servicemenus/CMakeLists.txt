@@ -1,3 +1,2 @@
 
-INSTALL( FILES krename_dir.desktop krenameservicemenu.desktop DESTINATION ${DATA_INSTALL_DIR}/dolphin/servicemenus )
-
+INSTALL( FILES krename_dir.desktop krenameservicemenu.desktop DESTINATION ${SERVICES_INSTALL_DIR}/ServiceMenus )

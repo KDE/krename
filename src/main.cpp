@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
     aboutData.addCredit( ki18n("Stephan Johach"), ki18n("Provided a gcc3.x namespace patch"), "lucardus@onlinehome.de" );
     aboutData.addCredit( ki18n("Michael Zugaro"), ki18n("Provided the new preview and move features") , "michael.zugaro@college-de-france.fr" );
     aboutData.addCredit( ki18n("Rene Gass"), ki18n("Fixed problems with the spec file and contributed rpms for every SuSE version you can imagine and is also the new Gentoo maintainer for KRename"), "kde-package@gmx.de" );
-    aboutData.addCredit( ki18n("Mark Volkert"), ki18n("Provided SuSE RPMs and very good suggestions"), "mark.volkert@rakekniven.de" );
+    aboutData.addCredit( ki18n("Mark Ziegler"), ki18n("Provided SuSE RPMs and very good suggestions"), "mark.ziegler@rakekniven.de" );
     aboutData.addCredit( ki18n("Jose Rodriguez"), ki18n("Contributed a Spanish translation"), "chmpmi@eresmas.net" );
     aboutData.addCredit( ki18n("Steven P. Ulrick"), ki18n("Provided a RedHat RPM and was big help in improving KRename"), "steve@afolkey2.net" );
     aboutData.addCredit( ki18n("UTUMI Hirosi"), ki18n("Translated KRename to Japanese"), "utuhiro@mx12.freecom.ne.jp" );
