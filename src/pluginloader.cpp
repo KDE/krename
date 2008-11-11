@@ -106,8 +106,10 @@ void PluginLoader::load()
 #ifndef _WIN32
     m_plugins.append( new DateTimePlugin( this ) );
 #endif // _WIN32
+#ifdef HAVE_EXIV2
     m_plugins.append( new Exiv2Plugin( this ) );
-    m_plugins.append( new IncreaseCounterPlugin( this ) );
+#endif // HAVE_EXIV2
+	m_plugins.append( new IncreaseCounterPlugin( this ) );
 #ifndef _WIN32
 	m_plugins.append( new PermissionsPlugin( this ) );
 #endif // _WIN32

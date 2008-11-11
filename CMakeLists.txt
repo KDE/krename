@@ -23,9 +23,8 @@ macro_log_feature( TAGLIB_FOUND "taglib" "Read and write tags in audio files" "h
 
 # Find exiv2
 set(EXIV2_MIN_VERSION "0.13") # AccessMode was added in 0.13
-find_package(Exiv2 REQUIRED)
+find_package(Exiv2)
 macro_log_feature(EXIV2_FOUND "Exiv2" "A library to access image metadata" "http://www.exiv2.org" FALSE "")
-
 
 CONFIGURE_FILE(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h )
 

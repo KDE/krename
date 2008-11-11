@@ -98,7 +98,10 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list
 
     KRenameWindow* w  = new KRenameWindow( NULL );
     KRenameImpl* impl = new KRenameImpl( w, list );
-    w->setGeometry( rect );
+	// Windows shows KRename otherwise outside of the visible
+	// screen area
+	if( !rect.isNull() )
+		w->setGeometry( rect );
 
     /*
     // it is time to load a default profile now (if the user has specified one)
@@ -609,10 +612,12 @@ void KRenameImpl::loadConfig()
     m_window->setSortMode( sortMode );
 
     int width = groupGui.readEntry( "Column0", QVariant(m_window->previewColumnWidth( 0 )) ).toInt();
-    m_window->setPreviewColumnWidth( 0, width );
+    if( width > 0 )
+		m_window->setPreviewColumnWidth( 0, width );
 
     width = groupGui.readEntry( "Column1", QVariant(m_window->previewColumnWidth( 1 )) ).toInt();
-    m_window->setPreviewColumnWidth( 1, width );
+    if( width > 0 )
+	    m_window->setPreviewColumnWidth( 1, width );
 
 
     // save Plugin configuration

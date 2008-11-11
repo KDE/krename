@@ -15,6 +15,7 @@
  *                                                                         *
  ***************************************************************************/
 
+#ifdef HAVE_EXIV2
 #include "exiv2plugin.h"
 
 #include <klocale.h>
@@ -415,3 +416,5 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
 
     return QString("");
 }
+
+#endif // HAVE_EXIV2

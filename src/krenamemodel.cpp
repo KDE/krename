@@ -429,7 +429,7 @@ QVariant KRenamePreviewModel::headerData ( int section, Qt::Orientation orientat
     if (orientation != Qt::Horizontal || section > 1 || role != Qt::DisplayRole )
         return QVariant();
 
-    return (section == 1) ? i18n("Origin") : i18n("Renamed");
+    return (section == 0) ? i18n("Origin") : i18n("Renamed");
 } 
 
 QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const

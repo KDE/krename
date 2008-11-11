@@ -4,11 +4,14 @@ add_subdirectory( servicemenus )
 
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR} 
                      ${KDE4_INCLUDE_DIR} 
-		     ${QT_INCLUDES} 
-		     ${CMAKE_CURRENT_SOURCE_DIR} 
-		     ${CMAKE_CURRENT_BINARY_DIR}
-		     ${TAGLIB_INCLUDE_DIR}
-		     ${EXIV2_INCLUDE_DIR} )
+				     ${QT_INCLUDES} 
+				     ${CMAKE_CURRENT_SOURCE_DIR} 
+					 ${CMAKE_CURRENT_BINARY_DIR}
+					 ${TAGLIB_INCLUDE_DIR} )
+
+IF(EXIV2_FOUND)
+  INCLUDE_DIRECTORIES( ${EXIV2_INCLUDE_DIR} )
+ENDIF(EXIV2_FOUND)
 
 ADD_DEFINITIONS(${TAGLIB_CFLAGS} ${EXIV2_CFLAGS} ${KDE4_DEFINITIONS} )
 # Exiv2 needs exceptions
@@ -85,13 +88,23 @@ endif(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
 
 #configure_file(config-kmetadata.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kmetadata.h )
 
-TARGET_LINK_LIBRARIES(krename ${KDE4_KDECORE_LIBS} 
+
+IF(EXIV2_FOUND)
+	TARGET_LINK_LIBRARIES(krename ${KDE4_KDECORE_LIBS} 
                               ${KDE4_KDEUI_LIBS}
-			      ${KDE4_KIO_LIBS} 
-			      ${KDE4_KMETADATA}
-			      ${KDE4_KJSAPI_LIBS} 
-			      ${TAGLIB_LIBRARIES}
-			      ${EXIV2_LIBRARIES} )
+						      ${KDE4_KIO_LIBS} 
+							  ${KDE4_KMETADATA}
+							  ${KDE4_KJSAPI_LIBS} 
+							  ${TAGLIB_LIBRARIES}
+							  ${EXIV2_LIBRARIES} )
+ELSE(EXIV2_FOUND)
+	TARGET_LINK_LIBRARIES(krename ${KDE4_KDECORE_LIBS} 
+                              ${KDE4_KDEUI_LIBS}
+						      ${KDE4_KIO_LIBS} 
+							  ${KDE4_KMETADATA}
+							  ${KDE4_KJSAPI_LIBS} 
+							  ${TAGLIB_LIBRARIES} )
+ENDIF(EXIV2_FOUND)
 
 
 # Others Files to install
