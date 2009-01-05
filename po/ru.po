@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-07 16:42+0200\n"
+"POT-Creation-Date: 2009-01-05 15:15+0100\n"
 "PO-Revision-Date: 2005-04-22 23:26+0400\n"
 "Last-Translator: Alexey Kouznetsov <kouznetsov@phtf.stu.neva.ru>\n"
 "Language-Team: Русский <ru@li.org>\n"
@@ -16,18 +16,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: batchrenamer.cpp:297 batchrenamer.cpp:420
+#: rc.cpp:87 rc.cpp:96
+msgid "$"
+msgstr ""
+
+#: batchrenamer.cpp:302 batchrenamer.cpp:425
 #, fuzzy
 msgid "%1 errors occurred!"
 msgstr "Произошло %2 ошибок!"
 
-#: batchrenamer.cpp:754
+#: batchrenamer.cpp:759
 msgid "%2 errors occurred!"
 msgstr "Произошло %2 ошибок!"
 
-#: krenameimpl.cpp:947 previewlist.cpp:36
+#: rc.cpp:318
+msgid "&Add Number"
+msgstr "&Добавить номер"
+
+#: rc.cpp:3 rc.cpp:372 rc.cpp:522 previewlist.cpp:36
 msgid "&Add..."
 msgstr "&Добавить..."
+
+#: rc.cpp:81
+#, fuzzy
+msgid "&Advanced Filename"
+msgstr "&Имя файла"
+
+#: rc.cpp:357
+msgid "&Cancel"
+msgstr ""
+
+#: rc.cpp:477
+#, fuzzy
+msgid "&Change Owner"
+msgstr "Изменить &владельца и группу"
 
 #: previewlist.cpp:32
 #, fuzzy
@@ -38,24 +60,53 @@ msgstr "&Изменить имя файла вручную"
 msgid "&Close"
 msgstr ""
 
-#: krenameimpl.cpp:1061
-msgid "&Create an undo script"
-msgstr "Создат&ь сценарий отката"
+#: rc.cpp:333
+#, fuzzy
+msgid "&Convert selection:"
+msgstr "&Обратить выделение"
+
+#: rc.cpp:66
+#, fuzzy
+msgid "&Copy files to destination directory"
+msgstr "&Копировать файлы в каталог назначения"
+
+#: rc.cpp:528
+#, fuzzy
+msgid "&Definitions"
+msgstr "Н&азначение"
+
+#: rc.cpp:525
+#, fuzzy
+msgid "&Delete"
+msgstr "&Удалить профиль"
 
 #: krenamewindow.cpp:48
 #, fuzzy
 msgid "&Destination"
 msgstr "Н&азначение"
 
-#: krenameimpl.cpp:974
+#: rc.cpp:30
 msgid "&Display name"
 msgstr "&Отображать имя"
 
-#: krenameimpl.cpp:1287
+#: rc.cpp:198 rc.cpp:297
+msgid "&Down"
+msgstr ""
+
+#: rc.cpp:375
+msgid "&Edit..."
+msgstr "Пр&авка..."
+
+#: rc.cpp:207
+#, fuzzy
+msgid "&Enable Plugin"
+msgstr "&Папки"
+
+#: rc.cpp:159 rc.cpp:258
 msgid "&Extension:"
 msgstr "&Расширение:"
 
-#: krenameimpl.cpp:1257
+#: rc.cpp:126 rc.cpp:213
 msgid "&Filename"
 msgstr "&Имя файла"
 
@@ -64,47 +115,75 @@ msgstr "&Имя файла"
 msgid "&Files"
 msgstr "&Файлы"
 
-#: krenameimpl.cpp:1307
-msgid "&Find and Replace..."
-msgstr "Н&айти и заменить..."
+#: rc.cpp:384
+#, fuzzy
+msgid "&Find:"
+msgstr "Найти:"
 
 #: krenamewindow.cpp:131
 #, fuzzy
 msgid "&Finish..."
 msgstr "В&ыполнить"
 
-#: krenameimpl.cpp:1159
+#: rc.cpp:99
 msgid "&Functions..."
 msgstr "Ф&ункции..."
+
+#: rc.cpp:486
+#, fuzzy
+msgid "&Group:"
+msgstr "Группа:"
+
+#: rc.cpp:561
+msgid "&Increase Counter"
+msgstr ""
+
+#: rc.cpp:552
+msgid "&Initial Value:"
+msgstr ""
 
 #: tokenhelpdialog.cpp:31
 #, fuzzy
 msgid "&Insert"
 msgstr "Вставить '$'"
 
-#: krenameimpl.cpp:1172
+#: rc.cpp:120
 msgid "&Insert Part of Filename..."
 msgstr "&Вставить часть имени файла..."
 
-#: krenameimpl.cpp:1038
+#: rc.cpp:540
+#, fuzzy
+msgid "&Insert Variable"
+msgstr "Вставить '$'"
+
+#: rc.cpp:330
+msgid "&Invert selection"
+msgstr "&Обратить выделение"
+
+#: rc.cpp:537
+#, fuzzy
+msgid "&Load from File..."
+msgstr "&Загрузить профиль"
+
+#: rc.cpp:69
 msgid "&Move files to destination directory"
 msgstr "Пе&реместить файлы в каталог назначения"
 
-#: krenameimpl.cpp:1277
+#: rc.cpp:549
 msgid "&Name:"
 msgstr "&Имя:"
 
-#: krenameimpl.cpp:1298
-msgid "&Number"
-msgstr "Н&омер"
+#: rc.cpp:303
+msgid "&Numbering"
+msgstr "&Нумерация"
 
-#: krenameimpl.cpp:1304
-msgid "&Number of digits:"
-msgstr "&Количество цифр:"
-
-#: krenameimpl.cpp:1171
+#: rc.cpp:117
 msgid "&Numbering..."
 msgstr "Нум&ерация..."
+
+#: rc.cpp:572
+msgid "&Offset:"
+msgstr ""
 
 #: previewlist.cpp:34
 msgid "&Open"
@@ -114,7 +193,12 @@ msgstr ""
 msgid "&Open Destination..."
 msgstr "&Открыть папку..."
 
-#: krenameimpl.cpp:1048
+#: rc.cpp:60
+#, fuzzy
+msgid "&Options"
+msgstr "&Параметры"
+
+#: rc.cpp:75
 msgid "&Overwrite existing files"
 msgstr "Пере&записать существующие файлы"
 
@@ -123,29 +207,33 @@ msgstr "Пере&записать существующие файлы"
 msgid "&Plugins"
 msgstr "&Модули"
 
-#: krenameimpl.cpp:1260
+#: rc.cpp:156 rc.cpp:255
 msgid "&Prefix:"
 msgstr "&Префикс:"
 
-#: krenameimpl.cpp:963
+#: rc.cpp:27
 msgid "&Preview"
 msgstr "&Просмотр"
 
-#: krenameimpl.cpp:122
+#: krenameimpl.cpp:125
 msgid "&Profiles..."
 msgstr "&Профили..."
 
-#: previewlist.cpp:37
+#: rc.cpp:378 previewlist.cpp:37
 #, fuzzy
 msgid "&Remove"
 msgstr "&Удалить"
+
+#: rc.cpp:321
+msgid "&Remove Number"
+msgstr "&Удалить номер"
 
 #: progressdialog.cpp:51
 #, fuzzy
 msgid "&Rename All Files Again..."
 msgstr "Переименовать все файлы &снова..."
 
-#: krenameimpl.cpp:1031
+#: rc.cpp:63
 msgid "&Rename input files"
 msgstr "П&ереименовать исходные файлы"
 
@@ -154,12 +242,51 @@ msgstr "П&ереименовать исходные файлы"
 msgid "&Rename more..."
 msgstr "&Новое переименование..."
 
-#: krenameimpl.cpp:1266
+#: rc.cpp:387
+#, fuzzy
+msgid "&Replace With:"
+msgstr "Заменить на"
+
+#: rc.cpp:312
+msgid "&Reset counter for every directory"
+msgstr "В каждом &каталоге начинать нумерацию заново"
+
+#: rc.cpp:534
+#, fuzzy
+msgid "&Save to File..."
+msgstr "&Сохранить профиль..."
+
+#: rc.cpp:123
+#, fuzzy
+msgid "&Simple Filename"
+msgstr "&Имя файла"
+
+#: rc.cpp:315
+#, fuzzy
+msgid "&Skip Numbers"
+msgstr "&Пропустить номера"
+
+#: rc.cpp:309
+#, fuzzy
+msgid "&Step by:"
+msgstr "&Шаг:"
+
+#: rc.cpp:129 rc.cpp:216
 msgid "&Suffix:"
 msgstr "&Суффикс:"
 
-#: krenameimpl.cpp:1148
+#: rc.cpp:84
 msgid "&Template:"
+msgstr "&Шаблон:"
+
+#: rc.cpp:543
+#, fuzzy
+msgid "&Test..."
+msgstr "Пр&авка..."
+
+#: rc.cpp:555
+#, fuzzy
+msgid "&Type:"
 msgstr "&Шаблон:"
 
 #: progressdialog.cpp:34
@@ -167,41 +294,67 @@ msgstr "&Шаблон:"
 msgid "&Undo"
 msgstr "Откат: "
 
-#: krenameimpl.cpp:1059
-msgid "&Undo Renaming"
-msgstr "&Откат переименования"
+#: rc.cpp:195 rc.cpp:294
+msgid "&Up"
+msgstr ""
 
-#: krenameimpl.cpp:1163
+#: rc.cpp:102
 msgid "&Use extension of the input file"
 msgstr "&Использовать расширение исходного файла"
 
-#: krenameimpl.cpp:1500
-msgid "&Use this plugin"
-msgstr "И&спользовать этот модуль"
+#: rc.cpp:483
+#, fuzzy
+msgid "&User:"
+msgstr "Владелец:"
 
-#: main.cpp:62
+#: rc.cpp:513
+#, fuzzy
+msgid "&Variables"
+msgstr "Имя профиля"
+
+#: main.cpp:64
 msgid "(c) 2001-2008, Dominik Seichter\n"
 msgstr ""
 
-#: krenameimpl.cpp:1066
-msgid ""
-"*.krename|KRename undo scripts (*.krename)\n"
-"*|All Files (*)"
-msgstr ""
-"*.krename|Сценарии отката KRename (*.krename)\n"
-"*|Все файлы (*)"
-
-#: krenameimpl.cpp:335 scriptplugin.cpp:298 scriptplugin.cpp:333
+#: krenameimpl.cpp:338 scriptplugin.cpp:298 scriptplugin.cpp:333
 #, fuzzy
 msgid "*|All files and directories"
 msgstr "Добавить с&крытые каталоги"
+
+#: rc.cpp:519
+msgid "1"
+msgstr ""
+
+#: rc.cpp:564
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">This plugin searches for a number in a filename "
+"and adds a given offset to it. </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">E.g. you "
+"have the filenames: <span style=\" font-style:italic;\">img014</span>, <span "
+"style=\" font-style:italic;\">img015</span>, <span style=\" font-style:"
+"italic;\">img023</span> which should be named<span style=\" font-style:"
+"italic;\"> img010</span>, <span style=\" font-style:italic;\">img011</span> "
+"and <span style=\" font-style:italic;\">img019. </span>Using this plugin, "
+"you can easily add an offset of -5 to get the desired result.</p></body></"
+"html>"
+msgstr ""
 
 #: krenamewindow.cpp:323
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "Файлов: <b>%1</b>"
 
-#: main.cpp:119
+#: main.cpp:125
 msgid ""
 "<b>Krename was started from root!</b><br>When started from root, Krename may "
 "damage your system if you do not know exactly what you are doing!"
@@ -209,20 +362,23 @@ msgstr ""
 "<b>Krename был запущен от root!</b><br>При запуске от root, Krename может "
 "повредить вашу систему, если вы точно не знаете, что делаете!"
 
-#: krenameimpl.cpp:1138 krenameimpl.cpp:1139
+#: rc.cpp:90
 msgid ""
-"<qt>Find and replace characters or part string of the source filename in the "
-"destination filename.</qt>"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">.</span></p></body></html>"
 msgstr ""
-"<qt>Найти и заменить символы или часть строки исходного имени файла в новом "
-"имени.</qt>"
 
-#: krenameimpl.cpp:1344
+#: rc.cpp:327
 msgid ""
-"<qt>Insert a special KRename command which inserts file information into the "
-"filename.</qt>"
+"<qt>Please select the part of the old filename  which should be inserted "
+"into the new filename in the textbox below:</qt>"
 msgstr ""
-"<qt>Вставить символы подстановки, представляющие сведения о файле.</qt>"
 
 #: translitplugin.cpp:102
 #, fuzzy
@@ -244,36 +400,37 @@ msgid ""
 "WavPack and TrueAudio files.</qt>"
 msgstr ""
 
-#: krenameimpl.cpp:1140
-msgid ""
-"<qt>You can use \".gz\" and \".tar.gz\" as file extension of the file backup."
-"tar.gz depending on this setting.</qt>"
+#: exiv2plugin.cpp:346
+#, fuzzy
+msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
 msgstr ""
-"<qt>Вы можете использовать и \".gz\", и \".tar.gz\" как расширение файла "
-"резервный.tar.gz Это зависит от этой установки.</qt>"
+"<qt>Этот модуль сортирует файлы в подкаталогах после переименования.</qt>"
+
+#: rc.cpp:219 rc.cpp:222 rc.cpp:243 rc.cpp:252
+msgid "?"
+msgstr ""
 
 #: scriptplugin.cpp:262
 msgid "A JavaScript error has occured: "
 msgstr ""
 
-#: permissionsplugin.cpp:181
+#: rc.cpp:474
+#, fuzzy
+msgid "A&dvanced Permissions"
+msgstr "Изменить &права доступа"
+
+#: rc.cpp:429 rc.cpp:507
+#, fuzzy
+msgid "Access Permissions"
+msgstr "Права доступа"
+
+#: permissionsplugin.cpp:182
 msgid "Access permissions"
 msgstr "Права доступа"
 
 #: filedialogextwidget.cpp:35
 msgid "Add &hidden directories"
 msgstr "Добавить с&крытые каталоги"
-
-#: krenameimpl.cpp:1132
-msgid ""
-"Add a template for the file extension.<br>It behaves like the filename "
-"template."
-msgstr ""
-"Добавить шаблон для расширения файла.<br>Работает как шаблон имени файла."
-
-#: krenameimpl.cpp:1131
-msgid "Add a template.<br>Example: <i>picture###</i>"
-msgstr "Добавить шаблон.<br>Пример: <i>изображение###</i>"
 
 #: filedialogextwidget.cpp:33
 msgid "Add directory names &with filenames"
@@ -282,10 +439,6 @@ msgstr "Добавить имена каталогов &с именами фай
 #: filedialogextwidget.cpp:36
 msgid "Add directory names only"
 msgstr "Добавить только имена каталогов"
-
-#: krenameimpl.cpp:1003
-msgid "Add one or more files or directories"
-msgstr "Добавить один или более файлов или каталогов"
 
 #: filedialogextwidget.cpp:53
 msgid ""
@@ -302,11 +455,17 @@ msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr ""
 
-#: main.cpp:78
+#: rc.cpp:396
+msgid ""
+"All supported tokens (commands) are listed is this dialog. You can search "
+"for tokens and insert a found token into the pattern for the filename."
+msgstr ""
+
+#: main.cpp:80
 msgid "Andreas Pour"
 msgstr ""
 
-#: main.cpp:103
+#: main.cpp:105
 msgid "Asim Husanovic"
 msgstr ""
 
@@ -314,117 +473,137 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
-#: main.cpp:88
+#: main.cpp:90
 msgid "Brandon Low"
 msgstr ""
 
-#: krenameimpl.cpp:480
+#: krenameimpl.cpp:483
 #, fuzzy
 msgid "Built-in Functions"
 msgstr "Встроенные функции:"
 
-#: krenameimpl.cpp:1191
-msgid "Built-in Functions:"
-msgstr "Встроенные функции:"
+#: rc.cpp:438 rc.cpp:450 rc.cpp:462
+#, fuzzy
+msgid "Can Read"
+msgstr "Чтение"
 
-#: datetimeplugin.cpp:112
+#: rc.cpp:441 rc.cpp:453 rc.cpp:465
+msgid "Can Read & Write"
+msgstr ""
+
+#: datetimeplugin.cpp:113
 #, fuzzy
 msgid "Can't change date of file %1. (Cannot mktime)"
 msgstr "Невозможно изменить дату файла %1."
 
-#: datetimeplugin.cpp:117
+#: datetimeplugin.cpp:118
 #, fuzzy
 msgid "Can't change date of file %1. (Cannot stat the file)"
 msgstr "Невозможно изменить дату файла %1."
 
-#: datetimeplugin.cpp:126
+#: datetimeplugin.cpp:127
 #, fuzzy
 msgid "Can't change date of file %1. (utime failed)"
 msgstr "Невозможно изменить дату файла %1."
 
-#: permissionsplugin.cpp:129
+#: permissionsplugin.cpp:130
 msgid "Can't chmod %1."
 msgstr "Невозможно выполнить chmod %1."
 
-#: permissionsplugin.cpp:138
+#: permissionsplugin.cpp:139
 msgid "Can't chown %1."
 msgstr "Невозможно выполнить chown %1."
 
-#: batchrenamer.cpp:666
+#: batchrenamer.cpp:671
 msgid "Can't create undo script :"
 msgstr "Не удалось создать сценарий отката :"
 
-#: batchrenamer.cpp:768
+#: batchrenamer.cpp:773
 msgid "Can't set executable bit on undo script."
 msgstr "Невозможно установить бит выполнения на сценарий отката."
 
-#: batchrenamer.cpp:264
+#: batchrenamer.cpp:269
 #, fuzzy
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "Невозможно создать символические ссылки на разных узлах для файла %1."
 
-#: krenameimpl.cpp:1275
+#: rc.cpp:141 rc.cpp:177 rc.cpp:234 rc.cpp:276 rc.cpp:345
 msgid "Capitalize"
 msgstr "Первая буква каждого слова в верхнем регистре"
 
-#: main.cpp:80
+#: rc.cpp:399
+msgid "Category"
+msgstr ""
+
+#: rc.cpp:426
+msgid "Change &Permissions"
+msgstr "Изменить &права доступа"
+
+#: rc.cpp:492
+msgid "Change &access date && time"
+msgstr "Изменить дату и время последнего д&оступа"
+
+#: rc.cpp:495
+#, fuzzy
+msgid "Change &modifcation date && time"
+msgstr "Изменить дату и время и&зменения"
+
+#: main.cpp:82
 msgid "Charles Samuels"
 msgstr ""
 
-#: krenameimpl.cpp:1133
-msgid ""
-"Checking this checkbox is the same as setting the extension template to $"
-msgstr "То же, что установка шаблона расширения в $"
-
-#: permissionsplugin.cpp:186
+#: permissionsplugin.cpp:187
 msgid "Class"
 msgstr "Класс"
 
-#: main.cpp:97
+#: rc.cpp:51
+#, fuzzy
+msgid "Configure the look and feel of the KRename GUI:"
+msgstr "Настройка интерфейса KRename:<br>"
+
+#: main.cpp:99
 msgid "Contributed a Spanish translation"
 msgstr "Испанский перевод"
 
-#: krenameimpl.cpp:1273
-msgid "Convert to lower case "
+#: rc.cpp:135 rc.cpp:171 rc.cpp:228 rc.cpp:270 rc.cpp:339
+#, fuzzy
+msgid "Convert to lower case"
 msgstr "Преобразовать в нижний регистр "
 
-#: krenameimpl.cpp:1274
+#: rc.cpp:138 rc.cpp:174 rc.cpp:231 rc.cpp:273 rc.cpp:342
 msgid "Convert to upper case"
 msgstr "Преобразовать в верхний регистр"
 
-#: krenameimpl.cpp:1035
-msgid "Cop&y files to destination directory"
-msgstr "&Копировать файлы в каталог назначения"
-
-#: krenameimpl.cpp:1077
-msgid "Copies all files to the destination directory and renames them."
-msgstr "Скопировать все файлы в каталог назначения и переименовать их."
-
-#: krenameimpl.cpp:1041
+#: rc.cpp:72
 msgid "Create symbolic &links in destination directory"
 msgstr "Создать символьные ссы&лки в каталоге назначения"
 
-#: main.cpp:86
+#: main.cpp:88
 msgid "Created the Gentoo Ebuild scripts for Krename."
 msgstr "Создал скрипты Gentoo Ebuild для Krename."
 
-#: krenameimpl.cpp:1291
+#: rc.cpp:180 rc.cpp:279
 msgid "Custom extension"
 msgstr "Другое расширение"
 
-#: krenameimpl.cpp:1281
+#: rc.cpp:408
+#, fuzzy
+msgid "Custom filename"
+msgstr "Другое имя"
+
+#: rc.cpp:144 rc.cpp:237
 msgid "Custom name"
 msgstr "Другое имя"
 
-#: main.cpp:92
+#: main.cpp:94
 msgid "Daniele Medri"
 msgstr ""
 
-#: krenameimpl.cpp:1315 krenameimpl.cpp:1319
+#: rc.cpp:153 rc.cpp:165 rc.cpp:249 rc.cpp:264
 msgid "Date"
 msgstr "Дата"
 
-#: datetimeplugin.cpp:50
+#: datetimeplugin.cpp:51
 #, fuzzy
 msgid "Date & Time Plugin"
 msgstr "Дата и время"
@@ -434,8 +613,16 @@ msgstr "Дата и время"
 msgid "Date and system functions"
 msgstr "Системные функции"
 
-#: datetimeplugin.cpp:70
+#: datetimeplugin.cpp:71
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
+msgstr ""
+
+#: rc.cpp:405
+msgid "Description"
+msgstr "Описание"
+
+#: rc.cpp:504 rc.cpp:546
+msgid "Dialog"
 msgstr ""
 
 #: scriptplugin.cpp:77
@@ -443,16 +630,12 @@ msgstr ""
 msgid "Directory of the current file"
 msgstr "Вставить текущее время"
 
-#: krenameimpl.cpp:1007
-msgid "Displays the number of files in the list."
-msgstr "Показывает количество файлов в списке."
-
-#: krenameimpl.cpp:361
+#: krenameimpl.cpp:364
 #, fuzzy
 msgid "Do you really want to remove all files from the list?"
 msgstr "Удалить профиль %1"
 
-#: main.cpp:65
+#: main.cpp:67
 msgid "Dominik Seichter"
 msgstr ""
 
@@ -460,54 +643,56 @@ msgstr ""
 msgid "Double"
 msgstr ""
 
-#: krenameimpl.cpp:1136
-msgid "Double click on an item to modify it."
-msgstr "Двойной щелчок по элементу для его изменения."
+#: rc.cpp:42
+msgid "Down"
+msgstr ""
 
-#: krenameimpl.cpp:118
+#: krenameimpl.cpp:121
 msgid "E&xtras"
 msgstr "&Дополнительно"
 
-#: batchrenamer.cpp:756
+#: batchrenamer.cpp:761
 msgid "Elapsed time: %1 seconds"
 msgstr "Затраченное время: %1 сек"
 
-#: krenameimpl.cpp:1010
-msgid "Enable/disable display of file name."
-msgstr "Включить/выключить отображение имени файла."
-
-#: krenameimpl.cpp:1006
-msgid "Enable/disable preview of pictures."
-msgstr "Включить/выключить предварительный просмотр изображений."
-
-#: main.cpp:123
+#: main.cpp:129
 #, fuzzy
 msgid "Error"
 msgstr "Ошибка: %1"
 
-#: batchrenamer.cpp:277
+#: batchrenamer.cpp:282
 msgid "Error during renaming %1 (from %2)"
 msgstr ""
 
-#: batchrenamer.cpp:413
+#: batchrenamer.cpp:418
 msgid "Error during undoing %1"
 msgstr ""
 
-#: permissionsplugin.cpp:195
+#: permissionsplugin.cpp:196
 msgid "Exec"
 msgstr "Выполнение"
+
+#: exiv2plugin.cpp:345
+msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
+msgstr ""
 
 #: scriptplugin.cpp:76
 #, fuzzy
 msgid "Extension of the current file"
 msgstr "&Использовать расширение исходного файла"
 
-#: krenameimpl.cpp:1240
-msgid "File extension starts at:"
+#: rc.cpp:105
+#, fuzzy
+msgid "File extension &starts at:"
 msgstr "Расширение файла начинается с:"
 
 #: krenamewindow.cpp:50
 msgid "File&name"
+msgstr "&Имя файла"
+
+#: rc.cpp:147 rc.cpp:240
+#, fuzzy
+msgid "File&name:"
 msgstr "&Имя файла"
 
 #: scriptplugin.cpp:75
@@ -515,35 +700,49 @@ msgstr "&Имя файла"
 msgid "Filename of the current file"
 msgstr "Вставить текущее время"
 
-#: batchrenamer.cpp:366
+#: batchrenamer.cpp:371
 msgid "Filenames Processed after %1 seconds."
 msgstr "Имена файлов будут обработаны через %1 секунд."
 
-#: batchrenamer.cpp:225 batchrenamer.cpp:679
+#: batchrenamer.cpp:230 batchrenamer.cpp:684
 msgid "Files will be copied to: %1"
 msgstr "Файлы будут скопированы в: %1"
 
-#: batchrenamer.cpp:228 batchrenamer.cpp:681
+#: batchrenamer.cpp:233 batchrenamer.cpp:686
 msgid "Files will be moved to: %1"
 msgstr "Файлы будут перемещены в: %1"
 
-#: krenameimpl.cpp:1667
-msgid "Files: <b>%1</b>"
+#: rc.cpp:33
+#, fuzzy
+msgid "Files: <b>0</b>"
 msgstr "Файлов: <b>%1</b>"
 
-#: krenameimpl.cpp:1168
+#: rc.cpp:366
+msgid "Find"
+msgstr "Найти"
+
+#: rc.cpp:114 rc.cpp:192 rc.cpp:291
 msgid "Find &and Replace..."
 msgstr "Н&айти и заменить..."
 
-#: krenameimpl.cpp:2311
+#: rc.cpp:360 rc.cpp:381
+msgid "Find and Replace"
+msgstr "Поиск и замена"
+
+#: rc.cpp:390
+#, fuzzy
+msgid "Find is a Regular &Expression"
+msgstr "Регулярное выражение"
+
+#: rc.cpp:108
 msgid "First Dot"
 msgstr "Первая точка"
 
-#: main.cpp:76
+#: main.cpp:78
 msgid "Fixed a bug that caused krename not closing open files."
 msgstr "Исправил ошибку, из-за которой KRename не закрывал открытые файлы."
 
-#: main.cpp:73
+#: main.cpp:75
 msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
@@ -551,7 +750,7 @@ msgstr ""
 "Исправил ошибку с начальным индексом и добавил класс BatchRenamer\n"
 "в свой просмотрщик изображений showimg."
 
-#: main.cpp:95
+#: main.cpp:97
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
@@ -559,30 +758,45 @@ msgstr ""
 "Исправил проблемы со SPEC-файлом и содействовал с rpm для каждой версии "
 "SuSE, также является новым сборщиком Gentoo для KRename"
 
-#: main.cpp:82
+#: rc.cpp:435 rc.cpp:447 rc.cpp:459
+msgid "Forbidden"
+msgstr ""
+
+#: rc.cpp:45 rc.cpp:78 rc.cpp:201 rc.cpp:210 rc.cpp:300 rc.cpp:324 rc.cpp:423
+#: rc.cpp:489 rc.cpp:510 rc.cpp:558
+msgid "Form"
+msgstr ""
+
+#: main.cpp:84
 msgid "Franz Schmid"
 msgstr ""
 
-#: permissionsplugin.cpp:216
+#: permissionsplugin.cpp:217
 msgid "GID"
 msgstr "Бит GID"
 
-#: main.cpp:82
+#: main.cpp:84
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr ""
 "Дал мне хорошее начало в написании модулей с заметок своего приложения."
 
-#: main.cpp:73
+#: rc.cpp:501
+#, fuzzy
+msgid "Get &Current Time"
+msgstr "&Получить текущую дату и время"
+
+#: rc.cpp:444
+#, fuzzy
+msgid "Gro&up:"
+msgstr "Группа:"
+
+#: main.cpp:75
 msgid "Groult Richard"
 msgstr ""
 
-#: permissionsplugin.cpp:207
+#: permissionsplugin.cpp:208
 msgid "Group"
 msgstr "Группа"
-
-#: krenameimpl.cpp:1137
-msgid "Help Dialog with all tokens supported by KRename."
-msgstr "Диалог помощи со всеми знаками, поддерживаемыми KRename."
 
 #: filedialogextwidget.cpp:51
 msgid ""
@@ -592,7 +806,7 @@ msgstr ""
 "Если не выбрано, KRename будет игнорировать каталоги начинающиеся с точки, в "
 "течении рекурсивного добавления."
 
-#: main.cpp:102
+#: main.cpp:104
 msgid "Ilya Ivkov"
 msgstr ""
 
@@ -609,44 +823,44 @@ msgstr "Вставить текущее время"
 msgid "Initial Value"
 msgstr ""
 
-#: krenameimpl.cpp:1076 batchrenamer.cpp:222 batchrenamer.cpp:685
+#: batchrenamer.cpp:227 batchrenamer.cpp:690
 msgid "Input files will be renamed."
 msgstr "Исходные файлы будут переименованы."
 
-#: krenameimpl.cpp:491 krenameimpl.cpp:1202
+#: krenameimpl.cpp:494
 #, fuzzy
 msgid "Insert '#'"
 msgstr "Вставить '$'"
 
-#: krenameimpl.cpp:483 krenameimpl.cpp:1194
+#: krenameimpl.cpp:486
 msgid "Insert '$'"
 msgstr "Вставить '$'"
 
-#: krenameimpl.cpp:484 krenameimpl.cpp:1195
+#: krenameimpl.cpp:487
 msgid "Insert '%'"
 msgstr "Вставить '%'"
 
-#: krenameimpl.cpp:485 krenameimpl.cpp:1196
+#: krenameimpl.cpp:488
 msgid "Insert '&'"
 msgstr "Вставить '&'"
 
-#: krenameimpl.cpp:486 krenameimpl.cpp:1197
+#: krenameimpl.cpp:489
 msgid "Insert '*'"
 msgstr "Вставить '*'"
 
-#: krenameimpl.cpp:487 krenameimpl.cpp:1198
+#: krenameimpl.cpp:490
 msgid "Insert '/'"
 msgstr "Вставить '/'"
 
-#: krenameimpl.cpp:489 krenameimpl.cpp:1200
+#: krenameimpl.cpp:492
 msgid "Insert '['"
 msgstr "Вставить '['"
 
-#: krenameimpl.cpp:488 krenameimpl.cpp:1199
+#: krenameimpl.cpp:491
 msgid "Insert '\\\\'"
 msgstr "Вставить '\\\\'"
 
-#: krenameimpl.cpp:490 krenameimpl.cpp:1201
+#: krenameimpl.cpp:493
 msgid "Insert ']'"
 msgstr "Вставить ']'"
 
@@ -667,6 +881,11 @@ msgstr "Вставить текущую дату"
 #: taglibplugin.cpp:44
 #, fuzzy
 msgid "Insert the comment of a track"
+msgstr "Вставить текущую дату"
+
+#: exiv2plugin.cpp:304
+#, fuzzy
+msgid "Insert the comment of an image"
 msgstr "Вставить текущую дату"
 
 #: systemplugin.cpp:50
@@ -776,7 +995,11 @@ msgstr "старое имя файла в верхнем регистре"
 msgid "Int"
 msgstr ""
 
-#: main.cpp:92
+#: rc.cpp:471
+msgid "Is Executable/Only owner &can rename and delete folder content"
+msgstr ""
+
+#: main.cpp:94
 msgid "Italian translation"
 msgstr "Итальянский перевод"
 
@@ -784,29 +1007,34 @@ msgstr "Итальянский перевод"
 msgid "JavaScript Plugin"
 msgstr ""
 
-#: main.cpp:97
+#: main.cpp:99
 msgid "Jose Rodriguez"
 msgstr ""
 
-#: main.cpp:55 krenameimpl.cpp:362
+#: main.cpp:57 krenameimpl.cpp:365
 msgid "KRename"
 msgstr "KRename"
 
-#: main.cpp:61
+#: main.cpp:63
 #, fuzzy
 msgid "KRename Build:"
 msgstr "KRename"
 
-#: batchrenamer.cpp:299 batchrenamer.cpp:757
+#: rc.cpp:393
+#, fuzzy
+msgid "KRename Help"
+msgstr "KRename"
+
+#: batchrenamer.cpp:304 batchrenamer.cpp:762
 msgid "KRename finished the renaming process."
 msgstr "KRename завершил переименование."
 
-#: batchrenamer.cpp:422
+#: batchrenamer.cpp:427
 #, fuzzy
 msgid "KRename finished the undo process."
 msgstr "KRename завершил переименование."
 
-#: main.cpp:56
+#: main.cpp:58
 msgid ""
 "KRename is a batch file renamer which can rename a\n"
 "list of files based on a set of expressions.\n"
@@ -824,63 +1052,80 @@ msgstr ""
 "как и финансовая помощь (всем нужны деньги ;)\n"
 "Смотрите файлы помощи для получения более подробной информации.\n"
 
-#: main.cpp:101
+#: main.cpp:103
 msgid "Krzysztof Pawlak"
 msgstr ""
 
-#: krenameimpl.cpp:2312
+#: rc.cpp:111
 msgid "Last Dot"
 msgstr "Последняя точка"
 
-#: main.cpp:96
-msgid "Mark Volkert"
+#: rc.cpp:48
+msgid "Look and Feel"
+msgstr "Интерфейс"
+
+#: main.cpp:98
+msgid "Mark Ziegler"
 msgstr ""
 
-#: main.cpp:76
+#: main.cpp:78
 msgid "Michael Elvers"
 msgstr ""
 
-#: main.cpp:94
+#: main.cpp:96
 msgid "Michael Zugaro"
 msgstr ""
 
-#: main.cpp:86
+#: main.cpp:88
 msgid "Michael v.Ostheim"
 msgstr ""
 
-#: krenameimpl.cpp:1011
-msgid "Move selected items (select the new location with the mouse)"
-msgstr "Переместить выделенные элементы (выбрать новое размещение мышью)"
+#: main.cpp:106
+msgid "Michal Smoczyk"
+msgstr ""
 
-#: krenameimpl.cpp:1009 krenameimpl.cpp:1135
-msgid "Move selected items down"
-msgstr "Переместить выделенные элементы вниз"
+#: rc.cpp:39
+msgid "Move"
+msgstr ""
 
-#: krenameimpl.cpp:1008 krenameimpl.cpp:1134
-msgid "Move selected items up"
-msgstr "Переместить выделенные элементы вверх"
+#: rc.cpp:183 rc.cpp:282
+#, fuzzy
+msgid "N&umber"
+msgstr "Номер"
 
-#: krenameimpl.cpp:1078
-msgid "Moves all files to the destination directory and renames them."
-msgstr "Переместить все файлы в каталог назначения и переименовать их."
-
-#: main.cpp:100
+#: main.cpp:102
 msgid "Nicolas Benoit"
 msgstr ""
 
-#: krenameimpl.cpp:1314 krenameimpl.cpp:1318
+#: rc.cpp:336
+#, fuzzy
+msgid "No Conversion"
+msgstr "Кодировка"
+
+#: rc.cpp:150 rc.cpp:162 rc.cpp:246 rc.cpp:261
 msgid "Number"
 msgstr "Номер"
 
-#: krenameimpl.cpp:1023
-msgid "O&ptions"
-msgstr "&Параметры"
+#: rc.cpp:186 rc.cpp:285
+#, fuzzy
+msgid "Number of &digits:"
+msgstr "&Количество цифр:"
 
-#: krenameimpl.cpp:1106 krenamemodel.cpp:432
+#: rc.cpp:432
+#, fuzzy
+msgid "O&wner:"
+msgstr "Владелец и группа"
+
+#: krenamemodel.cpp:432
 msgid "Origin"
 msgstr "Исходное"
 
-#: permissionsplugin.cpp:210
+#: rc.cpp:456
+#, fuzzy
+msgid "Ot&hers:"
+msgstr "Все остальные"
+
+#: permissionsplugin.cpp:211
 msgid "Others"
 msgstr "Все остальные"
 
@@ -889,74 +1134,91 @@ msgstr "Все остальные"
 msgid "Owner of the file"
 msgstr "&Количество элементов в истории шаблонов:"
 
+#: rc.cpp:480
+msgid "Ownership"
+msgstr "Владелец и группа"
+
 #: systemplugin.cpp:60
 msgid "Owning group of the file"
 msgstr ""
 
-#: main.cpp:84
+#: main.cpp:86
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr "Части поддержки PNG скопированы с его модуля поддержки png KFile."
 
-#: main.cpp:90
+#: main.cpp:92
 msgid "Per Ovind Karlsen"
 msgstr ""
 
-#: permissionsplugin.cpp:111
+#: permissionsplugin.cpp:112
 msgid "Permissions"
 msgstr "Права доступа"
 
-#: permissionsplugin.cpp:124
+#: permissionsplugin.cpp:125
 msgid "PermissionsPlugin works only with local files. %1 is a remote file."
 msgstr ""
 
-#: krenameimpl.cpp:1652
-msgid "Please give a destination directory !"
-msgstr "Укажите каталог назначения!"
+#: rc.cpp:411
+#, fuzzy
+msgid "Please input a new filename"
+msgstr "Введите новое имя файла:"
 
-#: krenameimpl.cpp:1657
-msgid "Please give the name of the undo script!"
-msgstr "Укажите имя сценария отката."
+#: rc.cpp:204
+#, fuzzy
+msgid "Plugins"
+msgstr "&Модули"
 
-#: batchrenamer.cpp:300 batchrenamer.cpp:423 batchrenamer.cpp:758
+#: main.cpp:106
+#, fuzzy
+msgid "Polish Translation"
+msgstr "Итальянский перевод"
+
+#: batchrenamer.cpp:305 batchrenamer.cpp:428 batchrenamer.cpp:763
 msgid "Press close to quit!"
 msgstr "Нажмите \"Закрыть\" для выхода!"
 
-#: main.cpp:96
+#: rc.cpp:348
+msgid "Preview of the generated KRename command:"
+msgstr ""
+
+#: rc.cpp:354
+msgid "Progress"
+msgstr "Ход выполнения"
+
+#: main.cpp:98
 msgid "Provided SuSE RPMs and very good suggestions"
 msgstr "Предоставил пакеты RPM для SuSE и очень хорошие предложения"
 
-#: main.cpp:98
+#: main.cpp:100
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr "Предоставил RPM для RedHat и оказал большую помощь в улучшении KRename"
 
-#: main.cpp:93
+#: main.cpp:95
 msgid "Provided a gcc3.x namespace patch"
 msgstr "Предоставил заплатку пространства имён gcc3.x"
 
-#: main.cpp:94
+#: main.cpp:96
 msgid "Provided the new preview and move features"
 msgstr "Предоставил новые возможности предосмотра и перемещения"
 
-#: krenameimpl.cpp:953
-msgid "R&emove All"
-msgstr "Удалить &все"
-
-#: krenameimpl.cpp:950
+#: rc.cpp:6
 msgid "Re&move"
 msgstr "&Удалить"
 
-#: permissionsplugin.cpp:189
+#: rc.cpp:9
+#, fuzzy
+msgid "Re&move All"
+msgstr "Удалить &все"
+
+#: permissionsplugin.cpp:190
 msgid "Read"
 msgstr "Чтение"
 
-#: krenameimpl.cpp:1005
-msgid "Remove all files"
-msgstr "Удалить все файлы"
-
-#: krenameimpl.cpp:1004
-msgid "Remove selected files"
-msgstr "Удалить выделенные файлы"
+#: rc.cpp:363
+#, fuzzy
+msgid "Reg. Expression"
+msgstr "Регулярное выражение"
 
 #: progressdialog.cpp:50
 #, fuzzy
@@ -967,89 +1229,90 @@ msgstr "Переименовать необработанные файлы &сн
 msgid "Rename Processed Files &Again..."
 msgstr "Переименовать обработанные файлы &снова..."
 
-#: krenameimpl.cpp:1107 krenamemodel.cpp:432
+#: krenamemodel.cpp:432
 msgid "Renamed"
 msgstr "Переименованное"
 
-#: batchrenamer.cpp:750
+#: batchrenamer.cpp:755
 msgid "Renamed %1 files successfully."
 msgstr "Переименовано %1 файлов."
 
-#: main.cpp:95
+#: main.cpp:97
 msgid "Rene Gass"
 msgstr ""
+
+#: rc.cpp:369
+msgid "Replace With"
+msgstr "Заменить на"
 
 #: progressdialog.cpp:47
 #, fuzzy
 msgid "Restart &KRename..."
 msgstr "Перезапустить KRename..."
 
-#: main.cpp:84
+#: main.cpp:86
 msgid "Rolf Magnus"
 msgstr ""
 
-#: main.cpp:88
+#: main.cpp:90
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "Некоторые исправления GCC 3.1 для Gentoo."
 
-#: krenameimpl.cpp:957
+#: rc.cpp:15
 msgid "Sort: Ascending"
 msgstr "Сортировка: по возрастанию"
 
-#: krenameimpl.cpp:958
+#: rc.cpp:18
 msgid "Sort: Descending"
 msgstr "Сортировка: по убыванию"
 
-#: krenameimpl.cpp:960
+#: rc.cpp:21
 msgid "Sort: Numeric"
 msgstr "Сортировка: числовая"
 
-#: krenameimpl.cpp:959
+#: rc.cpp:24
 msgid "Sort: Random"
 msgstr "Сортировка: случайная"
 
-#: krenameimpl.cpp:956
+#: rc.cpp:12
 msgid "Sort: Unsorted"
 msgstr "Сортировка: без сортировки"
 
-#: permissionsplugin.cpp:201
+#: permissionsplugin.cpp:202
 msgid "Special"
 msgstr "Специальный"
 
-#: krenameimpl.cpp:492
+#: krenameimpl.cpp:495
 #, fuzzy
 msgid "Special Characters"
 msgstr "Специальные символы:"
 
-#: krenameimpl.cpp:1203
-msgid "Special Characters:"
-msgstr "Специальные символы:"
+#: rc.cpp:189 rc.cpp:288
+#, fuzzy
+msgid "Start  &index:"
+msgstr "&Начать с:"
 
-#: krenameimpl.cpp:1648
-msgid "Specify a template to use for renaming files."
-msgstr "Определите шаблон для переименования файлов."
-
-#: krenameimpl.cpp:1301
+#: rc.cpp:306
 msgid "Start &index:"
 msgstr "&Начать с:"
 
-#: krenameimpl.cpp:533 krenameimpl.cpp:1606
+#: krenameimpl.cpp:536
 msgid "Starting conversion of %1 files."
 msgstr "Начинается преобразование %1 файлов."
 
-#: main.cpp:67
+#: main.cpp:69
 msgid "Stefan \"Stonki\" Onken"
 msgstr ""
 
-#: main.cpp:93
+#: main.cpp:95
 msgid "Stephan Johach"
 msgstr ""
 
-#: main.cpp:98
+#: main.cpp:100
 msgid "Steven P. Ulrick"
 msgstr ""
 
-#: permissionsplugin.cpp:219
+#: permissionsplugin.cpp:220
 msgid "Sticky"
 msgstr "Фиксация"
 
@@ -1061,7 +1324,7 @@ msgstr ""
 msgid "Supported tokens:"
 msgstr "Поддерживаемые знаки:"
 
-#: batchrenamer.cpp:231 batchrenamer.cpp:683
+#: batchrenamer.cpp:236 batchrenamer.cpp:688
 msgid "Symbolic links will be created in: %1"
 msgstr "Символические ссылки будут созданы в: %1"
 
@@ -1069,11 +1332,15 @@ msgstr "Символические ссылки будут созданы в: %1
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr ""
 
-#: main.cpp:90
+#: rc.cpp:351 rc.cpp:516 rc.cpp:531
+msgid "TextLabel"
+msgstr ""
+
+#: main.cpp:92
 msgid "Thanks for creating the Mandrake RPM"
 msgstr "Благодарность за создание RPM для Mandrake"
 
-#: main.cpp:78
+#: main.cpp:80
 msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
 "to apps.kde.com."
@@ -1081,31 +1348,27 @@ msgstr ""
 "Благодарность за его великую работу на apps.kde.com и за помощь с "
 "содействием krename на apps.kde.com."
 
-#: main.cpp:80
+#: main.cpp:82
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
 msgstr ""
 "Благодарность за код noatun и сводок ID3/Ogg, базирующийся на его модулях "
 "noatun."
 
-#: main.cpp:71
+#: main.cpp:73
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr ""
 "Благодарность за создание пакетов RedHat 7.x и некоторую другую помощь."
 
-#: krenameimpl.cpp:552
+#: krenameimpl.cpp:555
 #, fuzzy
 msgid "The directory %1 could not be created."
 msgstr "Не удалось найти профиль \"%1\"."
 
-#: krenameimpl.cpp:544
+#: krenameimpl.cpp:547
 #, fuzzy
 msgid ""
 "The directory %1 does not exist. Do you want KRename to create it for you?"
-msgstr "Каталог %1 не существует. KRename создаст его."
-
-#: krenameimpl.cpp:1766
-msgid "The directory %1 does not exist. KRename will create it for you."
 msgstr "Каталог %1 не существует. KRename создаст его."
 
 #: scriptplugin.cpp:343
@@ -1113,29 +1376,41 @@ msgstr "Каталог %1 не существует. KRename создаст ег
 msgid "The file %1 does already exists. Do you want to overwrite it?"
 msgstr "Профиль с таким именем уже существует. Выберите другое."
 
+#: rc.cpp:468
+msgid "This file uses advanced permissions"
+msgstr ""
+
 #: filedialogextwidget.cpp:55
 msgid ""
 "This option causes KRename to add also the name of the base directory of the "
 "selected files to its list."
 msgstr "Также добавлять имя базового каталога выделенных файлов."
 
-#: main.cpp:103
+#: rc.cpp:498
+msgid "Time:"
+msgstr "Время:"
+
+#: rc.cpp:402
+msgid "Token"
+msgstr "Знак"
+
+#: main.cpp:105
 msgid "Translated KRename into Bosnian"
 msgstr "Перевёл KRename на боснийский"
 
-#: main.cpp:100
+#: main.cpp:102
 msgid "Translated KRename into French"
 msgstr "Перевёл KRename на французкий"
 
-#: main.cpp:101
+#: main.cpp:103
 msgid "Translated KRename into Polish"
 msgstr "Перевёл KRename на польский"
 
-#: main.cpp:102
+#: main.cpp:104
 msgid "Translated KRename into Russian"
 msgstr "Перевёл KRename на русский"
 
-#: main.cpp:99
+#: main.cpp:101
 msgid "Translated KRename to Japanese"
 msgstr "Перевёл KRename на японский"
 
@@ -1147,11 +1422,11 @@ msgstr ""
 msgid "Transliteration"
 msgstr ""
 
-#: main.cpp:71
+#: main.cpp:73
 msgid "Trevor Semeniuk"
 msgstr ""
 
-#: permissionsplugin.cpp:213
+#: permissionsplugin.cpp:214
 msgid "UID"
 msgstr "Бит UID"
 
@@ -1160,7 +1435,7 @@ msgstr "Бит UID"
 msgid "URL of the current file"
 msgstr "Вставить текущее время"
 
-#: main.cpp:99
+#: main.cpp:101
 msgid "UTUMI Hirosi"
 msgstr ""
 
@@ -1172,23 +1447,50 @@ msgstr ""
 msgid "Unable to open %1 for writing."
 msgstr ""
 
-#: batchrenamer.cpp:738
+#: batchrenamer.cpp:743
 msgid "Undo is not possible for remote file: %1"
 msgstr "Откат невозможен для удалённого файла: %1"
 
-#: batchrenamer.cpp:381
+#: batchrenamer.cpp:386
 msgid "Undoing all renamed files."
 msgstr ""
 
-#: krenameimpl.cpp:1289
+#: rc.cpp:36
+msgid "Up"
+msgstr ""
+
+#: rc.cpp:420
+#, fuzzy
+msgid "Use &custom filename"
+msgstr "Использовать &исходное имя файла"
+
+#: rc.cpp:417
+#, fuzzy
+msgid "Use &input filename"
+msgstr "Использовать &исходное имя файла"
+
+#: rc.cpp:57
+#, fuzzy
+msgid "Use &tabbed style GUI (advanced users)"
+msgstr "&Окно параметров с вкладками"
+
+#: rc.cpp:54
+msgid "Use &wizard style GUI (beginners)"
+msgstr "&Мастера (для начинающих)"
+
+#: rc.cpp:414
+msgid "Use filename created by &KRename"
+msgstr ""
+
+#: rc.cpp:168 rc.cpp:267
 msgid "Use original extension"
 msgstr "Использовать исходное расширение"
 
-#: krenameimpl.cpp:1279
+#: rc.cpp:132 rc.cpp:225
 msgid "Use original name"
 msgstr "Использовать исходное имя"
 
-#: permissionsplugin.cpp:204
+#: permissionsplugin.cpp:205
 msgid "User"
 msgstr "Владелец"
 
@@ -1203,12 +1505,12 @@ msgid ""
 "subdirectories to the list of files to rename."
 msgstr "Добавить также файлы из всех подкаталогов."
 
-#: main.cpp:68
+#: main.cpp:70
 msgid "Website, testing, very good ideas and keeping me coding!"
 msgstr ""
 "Веб-сайт, тестирование, очень хорошие идеи и поддержка в написании кода!"
 
-#: permissionsplugin.cpp:192
+#: permissionsplugin.cpp:193
 msgid "Write"
 msgstr "Запись"
 
@@ -1224,114 +1526,114 @@ msgid ""
 "Your names"
 msgstr "Илья Ивков,Николай Шафоростов"
 
-#: main.cpp:44
+#: main.cpp:46
 msgid "add directory recursively"
 msgstr "добавить каталог рекурсивно"
 
-#: krenameimpl.cpp:473 krenameimpl.cpp:1186
+#: krenameimpl.cpp:476
 msgid "character x to y of old filename"
 msgstr "символы с x по y старого имени файла"
 
-#: main.cpp:48
+#: main.cpp:50
 msgid "copy files to directory"
 msgstr "копировать файлы в каталог"
 
-#: krenameimpl.cpp:471 krenameimpl.cpp:1183
+#: krenameimpl.cpp:474
 msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "счётчик с начальным значением 0 и шагом 1"
 
-#: krenameimpl.cpp:472 krenameimpl.cpp:1184
+#: krenameimpl.cpp:475
 msgid "create a subdirectory"
 msgstr "создать подкаталог"
 
-#: main.cpp:65
+#: main.cpp:67
 msgid "developer and maintainer"
 msgstr ""
 
-#: main.cpp:47
+#: main.cpp:49
 msgid "enable a plugin for use"
 msgstr "включить модуль"
 
-#: main.cpp:43
+#: main.cpp:45
 msgid "file will be added to the list of files for renaming"
 msgstr "файл будет добавлен в список для переименования"
 
-#: krenameimpl.cpp:468 krenameimpl.cpp:1180
+#: krenameimpl.cpp:471
 msgid "first letter of every word upper case"
 msgstr "первая буква каждого слова в верхнем регистре"
 
-#: krenameimpl.cpp:469 krenameimpl.cpp:1181
+#: krenameimpl.cpp:472
 msgid "first letter of filename upper case"
 msgstr "первая буква каждого имени файла в верхнем регистре"
 
-#: krenameimpl.cpp:475 krenameimpl.cpp:1188
+#: krenameimpl.cpp:478
 msgid "insert name of directory"
 msgstr "вставить имя каталога"
 
-#: krenameimpl.cpp:476 krenameimpl.cpp:1189
+#: krenameimpl.cpp:479
 #, fuzzy
 msgid "insert name of parent directory"
 msgstr "вставить имя родительского каталога"
 
-#: krenameimpl.cpp:477 krenameimpl.cpp:1190
+#: krenameimpl.cpp:480
 msgid "insert the length of the input filename"
 msgstr "вставить длину исходных имён файлов"
 
-#: main.cpp:50
+#: main.cpp:52
 #, fuzzy
 msgid "load the profile named [profile] on startup"
 msgstr "&Использовать по умолчанию"
 
-#: main.cpp:49
+#: main.cpp:51
 msgid "move files to directory"
 msgstr "переместить файлы в каталог"
 
-#: krenameimpl.cpp:470 krenameimpl.cpp:1182
+#: krenameimpl.cpp:473
 msgid "number (try also ##, ###, ... for leading zeros)"
 msgstr "номер (попробуйте также ##, ###, ... для значащих нулей)"
 
-#: krenameimpl.cpp:465 krenameimpl.cpp:1177
+#: krenameimpl.cpp:468
 msgid "old filename"
 msgstr "старое имя файла"
 
-#: krenameimpl.cpp:466 krenameimpl.cpp:1178
+#: krenameimpl.cpp:469
 msgid "old filename converted to lower case"
 msgstr "старое имя файла в нижнем регистре"
 
-#: krenameimpl.cpp:467 krenameimpl.cpp:1179
+#: krenameimpl.cpp:470
 msgid "old filename converted to upper case"
 msgstr "старое имя файла в верхнем регистре"
 
-#: main.cpp:53
+#: main.cpp:55
 msgid "only show <num> preview items"
 msgstr ""
 
-#: main.cpp:45
+#: main.cpp:47
 msgid "set a template"
 msgstr "установить шаблон"
 
-#: main.cpp:46
+#: main.cpp:48
 msgid "set a template for the file extension"
 msgstr "установить шаблон для расширения файла"
 
-#: main.cpp:52
+#: main.cpp:54
 msgid "start KRename's selftest (developers only)"
 msgstr ""
 
-#: main.cpp:51
+#: main.cpp:53
 msgid "start renaming immediately"
 msgstr "начать переименование"
 
-#: krenameimpl.cpp:478 krenameimpl.cpp:1185
+#: krenameimpl.cpp:481
 msgid "strip whitespaces leading and trailing"
 msgstr "удалить пробелы в начале и конце"
 
-#: krenameimpl.cpp:479
+#: krenameimpl.cpp:482
 #, fuzzy
 msgid "strip whitespaces leading and trailing of an arbitrary string"
 msgstr "удалить пробелы в начале и конце"
 
-#: krenameimpl.cpp:474 krenameimpl.cpp:1187
+#: krenameimpl.cpp:477
 msgid "y characters of old filename starting at x"
 msgstr "\"y\" символов старого имени файла с позиции x"
 
@@ -1344,20 +1646,11 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgid "&Add"
 #~ msgstr "&Добавить"
 
-#~ msgid "&Add Number"
-#~ msgstr "&Добавить номер"
-
 #~ msgid "&Command Plugin"
 #~ msgstr "&Команда"
 
-#~ msgid "&Delete Profile"
-#~ msgstr "&Удалить профиль"
-
-#~ msgid "&Dir Plugin"
-#~ msgstr "&Папки"
-
-#~ msgid "&Edit..."
-#~ msgstr "Пр&авка..."
+#~ msgid "&Create an undo script"
+#~ msgstr "Создат&ь сценарий отката"
 
 #~ msgid "&Encoding Conversion Plugin"
 #~ msgstr "&Кодировка"
@@ -1365,26 +1658,20 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgid "&Execute without blocking (not recommended)"
 #~ msgstr "&Выполнять без блокирования (не рекомендуется)"
 
-#~ msgid "&Get Current Date && Time"
-#~ msgstr "&Получить текущую дату и время"
-
-#~ msgid "&Invert selection"
-#~ msgstr "&Обратить выделение"
+#~ msgid "&Find and Replace..."
+#~ msgstr "Н&айти и заменить..."
 
 #~ msgid "&Load KDE file plugins"
 #~ msgstr "&Загрузить файловые модули KDE"
 
-#~ msgid "&Load Profile"
-#~ msgstr "&Загрузить профиль"
-
 #~ msgid "&Load file plugins on start"
 #~ msgstr "&Загружать файловые модули при запуске"
 
+#~ msgid "&Number"
+#~ msgstr "Н&омер"
+
 #~ msgid "&Number of template history items:"
 #~ msgstr "&Количество элементов в истории шаблонов:"
-
-#~ msgid "&Numbering"
-#~ msgstr "&Нумерация"
 
 #~ msgid "&Ok"
 #~ msgstr "&Ok"
@@ -1398,17 +1685,8 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgid "&Reload Plugin Data"
 #~ msgstr "&Обновить данные модуля"
 
-#~ msgid "&Remove Number"
-#~ msgstr "&Удалить номер"
-
-#~ msgid "&Reset counter for every directory"
-#~ msgstr "В каждом &каталоге начинать нумерацию заново"
-
 #~ msgid "&Revert Changes"
 #~ msgstr "&Вернуть изменения"
-
-#~ msgid "&Save As Profile..."
-#~ msgstr "&Сохранить профиль..."
 
 #~ msgid "&System Functions"
 #~ msgstr "&Системные функции"
@@ -1419,11 +1697,24 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgid "&Undo Old Renaming Action..."
 #~ msgstr "&Откат старого переименования..."
 
+#~ msgid "&Undo Renaming"
+#~ msgstr "&Откат переименования"
+
 #~ msgid "&Use as default profile on startup"
 #~ msgstr "&Использовать по умолчанию"
 
 #~ msgid "&Use local encoding: %1"
 #~ msgstr "И&спользовать локальную кодировку: %1"
+
+#~ msgid "&Use this plugin"
+#~ msgstr "И&спользовать этот модуль"
+
+#~ msgid ""
+#~ "*.krename|KRename undo scripts (*.krename)\n"
+#~ "*|All Files (*)"
+#~ msgstr ""
+#~ "*.krename|Сценарии отката KRename (*.krename)\n"
+#~ "*|Все файлы (*)"
 
 #~ msgid "<b>Command Plugin</b>"
 #~ msgstr "<b>Команда</b>"
@@ -1436,6 +1727,19 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ "<qt>Выполняет команду оболочки для каждого файла после переименования. "
 #~ "Добавьте %1 к аргументам командной строки для получения имени "
 #~ "переименованного файла.</qt>"
+
+#~ msgid ""
+#~ "<qt>Find and replace characters or part string of the source filename in "
+#~ "the destination filename.</qt>"
+#~ msgstr ""
+#~ "<qt>Найти и заменить символы или часть строки исходного имени файла в "
+#~ "новом имени.</qt>"
+
+#~ msgid ""
+#~ "<qt>Insert a special KRename command which inserts file information into "
+#~ "the filename.</qt>"
+#~ msgstr ""
+#~ "<qt>Вставить символы подстановки, представляющие сведения о файле.</qt>"
 
 #~ msgid "<qt>Load all settings stored in this profile.</qt>"
 #~ msgstr "<qt>Загрузить все параметры, находящиеся в этом профиле.</qt>"
@@ -1460,10 +1764,6 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ "<qt>Этот модуль преобразовывает имена файлов между разными кодировками. "
 #~ "Например, вы можете преобразовать имена файлов из KOI8-R в UTF-8.</qt>"
 
-#~ msgid "<qt>This plugin sorts files after renaming in subdirectories.</qt>"
-#~ msgstr ""
-#~ "<qt>Этот модуль сортирует файлы в подкаталогах после переименования.</qt>"
-
 #~ msgid ""
 #~ "<qt>Undo Scripts are normal shell scripts which can also be executed "
 #~ "manually from the command line.</qt>"
@@ -1471,8 +1771,24 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ "<qt>Сценарии отката - это обыкновенные сценарии оболочки, которые также "
 #~ "могут быть выполнены вручную из командной строки.</qt>"
 
+#~ msgid ""
+#~ "<qt>You can use \".gz\" and \".tar.gz\" as file extension of the file "
+#~ "backup.tar.gz depending on this setting.</qt>"
+#~ msgstr ""
+#~ "<qt>Вы можете использовать и \".gz\", и \".tar.gz\" как расширение файла "
+#~ "резервный.tar.gz Это зависит от этой установки.</qt>"
+
 #~ msgid "Aborting..."
 #~ msgstr "Останов..."
+
+#~ msgid ""
+#~ "Add a template for the file extension.<br>It behaves like the filename "
+#~ "template."
+#~ msgstr ""
+#~ "Добавить шаблон для расширения файла.<br>Работает как шаблон имени файла."
+
+#~ msgid "Add a template.<br>Example: <i>picture###</i>"
+#~ msgstr "Добавить шаблон.<br>Пример: <i>изображение###</i>"
 
 #~ msgid "Add a text that should be replaced."
 #~ msgstr "Введите текст для замены."
@@ -1486,20 +1802,18 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ "переименования.<br>Пример: Если 2 пропущен, файлы будут пронумерованы "
 #~ "так: файл0, файл1, файл3, ..."
 
+#~ msgid "Add one or more files or directories"
+#~ msgstr "Добавить один или более файлов или каталогов"
+
 #~ msgid "Auto &resize columns in preview"
 #~ msgstr "Автоматически &изменять размер столбцов в предварительном просмотре"
 
-#~ msgid "Change &Owner"
-#~ msgstr "Изменить &владельца и группу"
+#~ msgid "Built-in Functions:"
+#~ msgstr "Встроенные функции:"
 
-#~ msgid "Change &Permissions"
-#~ msgstr "Изменить &права доступа"
-
-#~ msgid "Change &access date && time"
-#~ msgstr "Изменить дату и время последнего д&оступа"
-
-#~ msgid "Change &modification date && time"
-#~ msgstr "Изменить дату и время и&зменения"
+#~ msgid ""
+#~ "Checking this checkbox is the same as setting the extension template to $"
+#~ msgstr "То же, что установка шаблона расширения в $"
 
 #~ msgid "Command Plugin"
 #~ msgstr "Команда"
@@ -1507,14 +1821,11 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgid "Command:"
 #~ msgstr "Команда:"
 
-#~ msgid "Configure the look and feel of the KRename GUI:<br>"
-#~ msgstr "Настройка интерфейса KRename:<br>"
+#~ msgid "Copies all files to the destination directory and renames them."
+#~ msgstr "Скопировать все файлы в каталог назначения и переименовать их."
 
 #~ msgid "Date && &Time"
 #~ msgstr "Дата и &время"
-
-#~ msgid "Description"
-#~ msgstr "Описание"
 
 #~ msgid "Dir Plugin"
 #~ msgstr "Папки"
@@ -1526,13 +1837,22 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ "Отключение этого параметра увеличивает время начала выполнения KRename, т."
 #~ "к. файловые модули ещё не загружены."
 
+#~ msgid "Displays the number of files in the list."
+#~ msgstr "Показывает количество файлов в списке."
+
 #~ msgid ""
 #~ "Do you really want to load the profile and overwrite the current "
 #~ "settings: %1"
 #~ msgstr "Загрузить профиль с потерей текущих параметров: %1"
 
-#~ msgid "Encoding Conversion Plugin"
-#~ msgstr "Кодировка"
+#~ msgid "Double click on an item to modify it."
+#~ msgstr "Двойной щелчок по элементу для его изменения."
+
+#~ msgid "Enable/disable display of file name."
+#~ msgstr "Включить/выключить отображение имени файла."
+
+#~ msgid "Enable/disable preview of pictures."
+#~ msgstr "Включить/выключить предварительный просмотр изображений."
 
 #~ msgid "Encoding of Input Files:"
 #~ msgstr "Кодировка исходных файлов:"
@@ -1546,20 +1866,11 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgid "Files per directory:"
 #~ msgstr "Файлов в каталоге:"
 
-#~ msgid "Find"
-#~ msgstr "Найти"
-
-#~ msgid "Find and Replace"
-#~ msgstr "Поиск и замена"
-
-#~ msgid "Find:"
-#~ msgstr "Найти:"
-
 #~ msgid "Finished successfully"
 #~ msgstr "Завершено удачно"
 
-#~ msgid "Group:"
-#~ msgstr "Группа:"
+#~ msgid "Help Dialog with all tokens supported by KRename."
+#~ msgstr "Диалог помощи со всеми знаками, поддерживаемыми KRename."
 
 #~ msgid "Insert your groupname"
 #~ msgstr "Вставить вашу основную группу"
@@ -1576,11 +1887,20 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgid "Krename"
 #~ msgstr "Krename"
 
-#~ msgid "Look and Feel"
-#~ msgstr "Интерфейс"
-
 #~ msgid "Messages"
 #~ msgstr "Сообщения"
+
+#~ msgid "Move selected items (select the new location with the mouse)"
+#~ msgstr "Переместить выделенные элементы (выбрать новое размещение мышью)"
+
+#~ msgid "Move selected items down"
+#~ msgstr "Переместить выделенные элементы вниз"
+
+#~ msgid "Move selected items up"
+#~ msgstr "Переместить выделенные элементы вверх"
+
+#~ msgid "Moves all files to the destination directory and renames them."
+#~ msgstr "Переместить все файлы в каталог назначения и переименовать их."
 
 #~ msgid ""
 #~ "Number of the first file.<br>The files are always numbered the same way "
@@ -1591,9 +1911,6 @@ msgstr "\"y\" символов старого имени файла с пози�
 
 #~ msgid "Output &Directory"
 #~ msgstr "&Каталог назначения"
-
-#~ msgid "Ownership"
-#~ msgstr "Владелец и группа"
 
 #~ msgid "P&icture Plugin"
 #~ msgstr "&Изображение"
@@ -1607,8 +1924,11 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgid "Please enter a name for the new profile:"
 #~ msgstr "Укажите имя  нового профиля :"
 
-#~ msgid "Please input a new filename:"
-#~ msgstr "Введите новое имя файла:"
+#~ msgid "Please give a destination directory !"
+#~ msgstr "Укажите каталог назначения!"
+
+#~ msgid "Please give the name of the undo script!"
+#~ msgstr "Укажите имя сценария отката."
 
 #~ msgid "Please select the text you want to insert:"
 #~ msgstr "Выделите текст, который хотите вставить:"
@@ -1619,32 +1939,32 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgid "Profiles"
 #~ msgstr "Профили"
 
-#~ msgid "Progress"
-#~ msgstr "Ход выполнения"
-
-#~ msgid "Regular Expression"
-#~ msgstr "Регулярное выражение"
-
 #~ msgid "Regular expression"
 #~ msgstr "Регулярное выражение"
 
-#~ msgid "Replace With"
-#~ msgstr "Заменить на"
+#~ msgid "Remove all files"
+#~ msgstr "Удалить все файлы"
+
+#~ msgid "Remove selected files"
+#~ msgstr "Удалить выделенные файлы"
 
 #~ msgid "Replace with:"
 #~ msgstr "Заменить на:"
 
-#~ msgid "S&kip Numbers"
-#~ msgstr "&Пропустить номера"
+#~ msgid "Special Characters:"
+#~ msgstr "Специальные символы:"
+
+#~ msgid "Specify a template to use for renaming files."
+#~ msgstr "Определите шаблон для переименования файлов."
 
 #~ msgid "Start index:"
 #~ msgstr "Начальный номер:"
 
-#~ msgid "Step &by:"
-#~ msgstr "&Шаг:"
-
 #~ msgid "The counter is increased/decreased by this value."
 #~ msgstr "Счётчик увеличивается/уменьшается на это значение."
+
+#~ msgid "The directory %1 does not exist. KRename will create it for you."
+#~ msgstr "Каталог %1 не существует. KRename создаст его."
 
 #~ msgid ""
 #~ "This script does not seem to be a Krename undo script. Execution of this "
@@ -1652,12 +1972,6 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgstr ""
 #~ "Этот сценарий, вероятно, не является сценарием отката Krename. Его "
 #~ "выполнение может быть небезопасно. Продолжить?"
-
-#~ msgid "Time:"
-#~ msgstr "Время:"
-
-#~ msgid "Token"
-#~ msgstr "Знак"
 
 #~ msgid "Unable to start the given undo script!"
 #~ msgstr "Невозможно запустить сценарий отката."
@@ -1671,15 +1985,6 @@ msgstr "\"y\" символов старого имени файла с пози�
 #~ msgid "Undoing the renaming operation has been completed."
 #~ msgstr "Откат операции переименования выполнен."
 
-#~ msgid "Use &Input Filename"
-#~ msgstr "Использовать &исходное имя файла"
-
-#~ msgid "Use &tabbed GUI (advanced users)"
-#~ msgstr "&Окно параметров с вкладками"
-
-#~ msgid "Use &wizard style GUI (beginners)"
-#~ msgstr "&Мастера (для начинающих)"
-
 #~ msgid ""
 #~ "Use the filename that is generated by KRename instead of your changes."
 #~ msgstr ""
@@ -1687,9 +1992,6 @@ msgstr "\"y\" символов старого имени файла с пози�
 
 #~ msgid "User pressed cancel!"
 #~ msgstr "Отменено пользователем!"
-
-#~ msgid "User:"
-#~ msgstr "Владелец:"
 
 #~ msgid "Warning: %1"
 #~ msgstr "Предупреждение: %1"
