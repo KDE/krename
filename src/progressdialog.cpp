@@ -47,7 +47,7 @@ ProgressDialog::ProgressDialog( QWidget* parent )
     menu->addAction( i18n("Restart &KRename..."), this, SLOT(slotRestartKRename()) );
     menu->addSeparator();
     m_actProcessed   = menu->addAction( i18n("Rename Processed Files &Again..."),    this, SLOT(slotRenameProcessedAgain()));
-    m_actUnprocessed = menu->addAction( i18n("Rename &Unprocessed Files &Again..."), this, SLOT(slotRenameUnprocessedAgain()));
+    m_actUnprocessed = menu->addAction( i18n("Rename &Unprocessed Files Again..."), this, SLOT(slotRenameUnprocessedAgain()));
     menu->addAction( i18n("&Rename All Files Again..."),          this, SLOT(slotRenameAllAgain()));
 
     m_buttonMore->setMenu( menu );

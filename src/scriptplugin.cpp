@@ -340,7 +340,7 @@ void ScriptPlugin::slotSave()
 	const KUrl url = dialog.selectedUrl();
 	if( KIO::NetAccess::exists( url, KIO::NetAccess::DestinationSide, m_parent ) )
 	{
-	    int m = KMessageBox::warningYesNo( m_parent, i18n("The file %1 does already exists. "
+	    int m = KMessageBox::warningYesNo( m_parent, i18n("The file %1 already exists. "
 							      "Do you want to overwrite it?", url.prettyUrl()) );
 
 	    if( m == KMessageBox::No )

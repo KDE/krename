@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
                          "MvOstheim@web.de", "http://www.vonostheim.de" );
     aboutData.addCredit( ki18n("Brandon Low"), ki18n("Some GCC 3.1 fixes for Gentoo."),
                          "lostlogic@gentoo.org", "http://www.gentoo.org" );
-    aboutData.addCredit( ki18n("Per Ovind Karlsen"), ki18n("Thanks for creating the Mandrake RPM"),
+    aboutData.addCredit( ki18n("Per Oyvind Karlsen"), ki18n("Thanks for creating the Mandrake RPM"),
                          "peroyvind@delonic.no" );
     aboutData.addCredit( ki18n("Daniele Medri"), ki18n("Italian translation"), "madrid@linuxmeeting.net" );
     aboutData.addCredit( ki18n("Stephan Johach"), ki18n("Provided a gcc3.x namespace patch"), "lucardus@onlinehome.de" );

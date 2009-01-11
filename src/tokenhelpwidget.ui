@@ -16,7 +16,7 @@
    <item>
     <widget class="QLabel" name="label" >
      <property name="text" >
-      <string>All supported tokens (commands) are listed is this dialog. You can search for tokens and insert a found token into the pattern for the filename.</string>
+      <string>All supported tokens (commands) are listed in this dialog. You can search for tokens and insert a found token into the pattern for the filename.</string>
      </property>
      <property name="wordWrap" >
       <bool>true</bool>

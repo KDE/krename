@@ -279,7 +279,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
 
         if( job && !NetAccess::synchronousRun( job, p ) ) 
         {
-            p->error( i18n("Error during renaming %1 (from %2)", dstUrl.prettyUrl(), srcUrl.prettyUrl()) );
+            p->error( i18n("Error renaming %2 (to %1)", dstUrl.prettyUrl(), srcUrl.prettyUrl()) );
             (*m_files)[i].setError( 1 );
             errors++;
         } 
