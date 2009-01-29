@@ -104,7 +104,9 @@ int main(int argc, char *argv[])
     aboutData.addCredit( ki18n("Ilya Ivkov"), ki18n("Translated KRename into Russian"), "ilya-ivkov@yandex.ru" );    
     aboutData.addCredit( ki18n("Asim Husanovic"), ki18n("Translated KRename into Bosnian"), "asim.h@megatel.ba" );    
     aboutData.addCredit( ki18n("Michal Smoczyk"), ki18n("Polish Translation"), "msmoczyk@wp.pl" );    
-
+    aboutData.addCredit( ki18n("Pavel Fric"), ki18n("Czech Translation"), "pavelfric@seznam.cz" );    
+    aboutData.setTranslator(ki18nc("_: NAME OF TRANSLATORS", "Your names"),
+                            ki18nc("_: EMAIL OF TRANSLATORS", "Your emails"));
  
 
     KCmdLineArgs::init( argc, argv, &aboutData );

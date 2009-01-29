@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-05 15:15+0100\n"
+"POT-Creation-Date: 2009-01-29 22:06+0100\n"
 "PO-Revision-Date: 2005-07-01 17:45+0200\n"
 "Last-Translator: Dominik Seichter <domseichter@web.de>\n"
 "Language-Team:  <de@li.org>\n"
@@ -335,10 +335,10 @@ msgid ""
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; "
 "font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
-"style=\" font-weight:600;\">This plugin searches for a number in a filename "
-"and adds a given offset to it. </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">This plugin adds a given offset to numbers in filenames.</"
+"span></p>\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
 "left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">E.g. you "
 "have the filenames: <span style=\" font-style:italic;\">img014</span>, <span "
@@ -346,7 +346,7 @@ msgid ""
 "italic;\">img023</span> which should be named<span style=\" font-style:"
 "italic;\"> img010</span>, <span style=\" font-style:italic;\">img011</span> "
 "and <span style=\" font-style:italic;\">img019. </span>Using this plugin, "
-"you can easily add an offset of -5 to get the desired result.</p></body></"
+"you can easily add an offset of -4 to get the desired result.</p></body></"
 "html>"
 msgstr ""
 
@@ -355,7 +355,7 @@ msgstr ""
 msgid "<b>Files:<b> %1"
 msgstr "Arquivos: <b>%1</b>"
 
-#: main.cpp:125
+#: main.cpp:126
 msgid ""
 "<b>Krename was started from root!</b><br>When started from root, Krename may "
 "damage your system if you do not know exactly what you are doing!"
@@ -462,7 +462,7 @@ msgstr ""
 
 #: rc.cpp:396
 msgid ""
-"All supported tokens (commands) are listed is this dialog. You can search "
+"All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
 msgstr ""
 
@@ -661,17 +661,17 @@ msgstr "E&xtras"
 msgid "Elapsed time: %1 seconds"
 msgstr "Tempo decorrido: %1 segundos"
 
-#: main.cpp:129
+#: main.cpp:130
 #, fuzzy
 msgid "Error"
 msgstr "Erro: %1"
 
-#: batchrenamer.cpp:282
-msgid "Error during renaming %1 (from %2)"
-msgstr ""
-
 #: batchrenamer.cpp:418
 msgid "Error during undoing %1"
+msgstr ""
+
+#: batchrenamer.cpp:282
+msgid "Error renaming %2 (to %1)"
 msgstr ""
 
 #: permissionsplugin.cpp:196
@@ -1160,7 +1160,7 @@ msgstr ""
 "png."
 
 #: main.cpp:92
-msgid "Per Ovind Karlsen"
+msgid "Per Oyvind Karlsen"
 msgstr ""
 
 #: permissionsplugin.cpp:112
@@ -1234,7 +1234,7 @@ msgstr "Expressão Regular"
 
 #: progressdialog.cpp:50
 #, fuzzy
-msgid "Rename &Unprocessed Files &Again..."
+msgid "Rename &Unprocessed Files Again..."
 msgstr "Renomear arquivos não processados &agora..."
 
 #: progressdialog.cpp:49
@@ -1384,7 +1384,7 @@ msgstr "O diretório %1 não existe. KRename o criará para você."
 
 #: scriptplugin.cpp:343
 #, fuzzy
-msgid "The file %1 does already exists. Do you want to overwrite it?"
+msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "Este perfil já existe. Por favor, escolha outro nome."
 
 #: rc.cpp:468
