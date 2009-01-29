@@ -1,23 +1,25 @@
+# , 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-05 15:15+0100\n"
-"PO-Revision-Date: 2007-03-25 11:33+0100\n"
-"Last-Translator: Tomáš Bambas <conyx@seznam.cz>\n"
-"Language-Team: Tomáš Bambas <conyx@seznam.cz>\n"
+"PO-Revision-Date: 2009-01-24 10:33+0100\n"
+"Last-Translator: \n"
+"Language-Team: American English <kde-i18n-doc@lists.kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: rc.cpp:87 rc.cpp:96
 msgid "$"
-msgstr ""
+msgstr "$"
 
 #: batchrenamer.cpp:302 batchrenamer.cpp:425
-#, fuzzy
 msgid "%1 errors occurred!"
-msgstr "Vyskytlo se %2 chyb!"
+msgstr "Vyskytlo se %1 chyb!"
 
 #: batchrenamer.cpp:759
 msgid "%2 errors occurred!"
@@ -25,59 +27,51 @@ msgstr "Vyskytlo se %2 chyb!"
 
 #: rc.cpp:318
 msgid "&Add Number"
-msgstr "Přidat &číslo"
+msgstr "&Přidat číslo"
 
 #: rc.cpp:3 rc.cpp:372 rc.cpp:522 previewlist.cpp:36
 msgid "&Add..."
 msgstr "&Přidat..."
 
 #: rc.cpp:81
-#, fuzzy
 msgid "&Advanced Filename"
-msgstr "&Jméno souboru"
+msgstr "&Pokročilý název souboru"
 
 #: rc.cpp:357
 msgid "&Cancel"
-msgstr ""
+msgstr "&Zrušit"
 
 #: rc.cpp:477
-#, fuzzy
 msgid "&Change Owner"
-msgstr "Změnit &vlastníka"
+msgstr "&Změnit vlastníka"
 
 #: previewlist.cpp:32
-#, fuzzy
 msgid "&Change filename manually..."
-msgstr "&Změnit název souboru ručně"
+msgstr "&Změnit název souboru ručně..."
 
 #: krenamewindow.cpp:132
 msgid "&Close"
-msgstr ""
+msgstr "&Zavřít"
 
 #: rc.cpp:333
-#, fuzzy
 msgid "&Convert selection:"
-msgstr "&Inverzní výběr"
+msgstr "&Invertovat výběr"
 
 #: rc.cpp:66
-#, fuzzy
 msgid "&Copy files to destination directory"
-msgstr "&Kopírovat soubory do cílové složky"
+msgstr "&Kopírovat soubory do cílového adresáře"
 
 #: rc.cpp:528
-#, fuzzy
 msgid "&Definitions"
-msgstr "U&místění"
+msgstr "&Definice"
 
 #: rc.cpp:525
-#, fuzzy
 msgid "&Delete"
-msgstr "&Smazat profil"
+msgstr "&Smazat"
 
 #: krenamewindow.cpp:48
-#, fuzzy
 msgid "&Destination"
-msgstr "U&místění"
+msgstr "&Cíl"
 
 #: rc.cpp:30
 msgid "&Display name"
@@ -85,16 +79,15 @@ msgstr "&Zobrazit jméno"
 
 #: rc.cpp:198 rc.cpp:297
 msgid "&Down"
-msgstr ""
+msgstr "&Dolů"
 
 #: rc.cpp:375
 msgid "&Edit..."
 msgstr "&Upravit..."
 
 #: rc.cpp:207
-#, fuzzy
 msgid "&Enable Plugin"
-msgstr "&Adresářový plugin"
+msgstr "&Povolit plugin (zástrčku)"
 
 #: rc.cpp:159 rc.cpp:258
 msgid "&Extension:"
@@ -102,70 +95,63 @@ msgstr "Příp&ona:"
 
 #: rc.cpp:126 rc.cpp:213
 msgid "&Filename"
-msgstr "&Jméno souboru"
+msgstr "Název &souboru"
 
 #: krenamewindow.cpp:47
-#, fuzzy
 msgid "&Files"
-msgstr "S&oubory"
+msgstr "&Soubory"
 
 #: rc.cpp:384
-#, fuzzy
 msgid "&Find:"
-msgstr "Najít:"
+msgstr "&Najít:"
 
 #: krenamewindow.cpp:131
-#, fuzzy
 msgid "&Finish..."
-msgstr "&Dokončit"
+msgstr "&Dokončit..."
 
 #: rc.cpp:99
 msgid "&Functions..."
 msgstr "&Funkce..."
 
 #: rc.cpp:486
-#, fuzzy
 msgid "&Group:"
-msgstr "Skupina:"
+msgstr "&Skupina:"
 
 #: rc.cpp:561
 msgid "&Increase Counter"
-msgstr ""
+msgstr "&Nárůstový čítač"
 
 #: rc.cpp:552
 msgid "&Initial Value:"
-msgstr ""
+msgstr "&Počáteční hodnota:"
 
 #: tokenhelpdialog.cpp:31
-#, fuzzy
 msgid "&Insert"
-msgstr "Vložit '$'"
+msgstr "&Vložit"
 
 #: rc.cpp:120
 msgid "&Insert Part of Filename..."
 msgstr "&Vložit část jména souboru..."
 
 #: rc.cpp:540
-#, fuzzy
 msgid "&Insert Variable"
-msgstr "Vložit '$'"
+msgstr "&Vložit proměnnou"
 
 #: rc.cpp:330
 msgid "&Invert selection"
-msgstr "&Inverzní výběr"
+msgstr "&Invertovat výběr"
 
 #: rc.cpp:537
-#, fuzzy
 msgid "&Load from File..."
-msgstr "&Načíst profil"
+msgstr "&Načíst ze souboru..."
 
 #: rc.cpp:69
 msgid "&Move files to destination directory"
-msgstr "Pře&sunout soubory do cílové složky"
+msgstr "&Přesunout soubory do cílového adresáře"
 
 #: rc.cpp:549
 msgid "&Name:"
-msgstr "&Jméno:"
+msgstr "&Název:"
 
 #: rc.cpp:303
 msgid "&Numbering"
@@ -177,33 +163,31 @@ msgstr "Čí&slování..."
 
 #: rc.cpp:572
 msgid "&Offset:"
-msgstr ""
+msgstr "&Vyrovnat:"
 
 #: previewlist.cpp:34
 msgid "&Open"
-msgstr ""
+msgstr "&Otevřít"
 
 #: progressdialog.cpp:35
 msgid "&Open Destination..."
-msgstr "&Otevřít umístění..."
+msgstr "&Otevřít cíl..."
 
 #: rc.cpp:60
-#, fuzzy
 msgid "&Options"
 msgstr "&Volby"
 
 #: rc.cpp:75
 msgid "&Overwrite existing files"
-msgstr "Přepsat &existující soubory"
+msgstr "&Přepsat existující soubory"
 
 #: krenamewindow.cpp:49
-#, fuzzy
 msgid "&Plugins"
-msgstr "P&luginy"
+msgstr "&Pluginy (zástrčky)"
 
 #: rc.cpp:156 rc.cpp:255
 msgid "&Prefix:"
-msgstr "&Prefix:"
+msgstr "&Předpona (prefix):"
 
 #: rc.cpp:27
 msgid "&Preview"
@@ -214,7 +198,6 @@ msgid "&Profiles..."
 msgstr "&Profily..."
 
 #: rc.cpp:378 previewlist.cpp:37
-#, fuzzy
 msgid "&Remove"
 msgstr "&Odstranit"
 
@@ -223,7 +206,6 @@ msgid "&Remove Number"
 msgstr "&Odstranit číslo"
 
 #: progressdialog.cpp:51
-#, fuzzy
 msgid "&Rename All Files Again..."
 msgstr "&Znovu přejmenovat všechny soubory..."
 
@@ -232,92 +214,80 @@ msgid "&Rename input files"
 msgstr "&Přejmenovat vstupní soubory"
 
 #: progressdialog.cpp:33
-#, fuzzy
 msgid "&Rename more..."
 msgstr "&Přejmenovat více..."
 
 #: rc.cpp:387
-#, fuzzy
 msgid "&Replace With:"
-msgstr "Nahradit čím"
+msgstr "&Nahradit (čím):"
 
 #: rc.cpp:312
 msgid "&Reset counter for every directory"
-msgstr "&Vyresetovat počítadlo pro každou složku"
+msgstr "&Znovu nastavit čítač pro každý adresář"
 
 #: rc.cpp:534
-#, fuzzy
 msgid "&Save to File..."
-msgstr "&Uložit jako profil..."
+msgstr "&Uložit do souboru..."
 
 #: rc.cpp:123
-#, fuzzy
 msgid "&Simple Filename"
-msgstr "&Jméno souboru"
+msgstr "&Jednoduchý název souboru"
 
 #: rc.cpp:315
-#, fuzzy
 msgid "&Skip Numbers"
 msgstr "&Přeskočit čísla"
 
 #: rc.cpp:309
-#, fuzzy
 msgid "&Step by:"
-msgstr "&Krokování:"
+msgstr "&Krok prostřednictvím:"
 
 #: rc.cpp:129 rc.cpp:216
 msgid "&Suffix:"
-msgstr "&Sufix:"
+msgstr "&Přípona (sufix):"
 
 #: rc.cpp:84
 msgid "&Template:"
-msgstr "&Vzor:"
+msgstr "&Šablona:"
 
 #: rc.cpp:543
-#, fuzzy
 msgid "&Test..."
-msgstr "&Upravit..."
+msgstr "&Provést zkoušku..."
 
 #: rc.cpp:555
-#, fuzzy
 msgid "&Type:"
-msgstr "&Vzor:"
+msgstr "&Druh:"
 
 #: progressdialog.cpp:34
-#, fuzzy
 msgid "&Undo"
-msgstr "Zpět: "
+msgstr "&Vrátit zpět: "
 
 #: rc.cpp:195 rc.cpp:294
 msgid "&Up"
-msgstr ""
+msgstr "&Nahoru"
 
 #: rc.cpp:102
 msgid "&Use extension of the input file"
 msgstr "&Použít příponu vstupního souboru"
 
 #: rc.cpp:483
-#, fuzzy
 msgid "&User:"
-msgstr "Uživatel:"
+msgstr "&Uživatel:"
 
 #: rc.cpp:513
-#, fuzzy
 msgid "&Variables"
-msgstr "Jméno profilu"
+msgstr "&Proměnná"
 
 #: main.cpp:64
 msgid "(c) 2001-2008, Dominik Seichter\n"
-msgstr ""
+msgstr "(c) 2001-2008, Dominik Seichter\n"
 
 #: krenameimpl.cpp:338 scriptplugin.cpp:298 scriptplugin.cpp:333
-#, fuzzy
 msgid "*|All files and directories"
-msgstr "Přidat &skryté složky"
+msgstr "*|Všechny soubory a adresáře"
 
 #: rc.cpp:519
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: rc.cpp:564
 msgid ""
@@ -342,19 +312,39 @@ msgid ""
 "you can easily add an offset of -5 to get the desired result.</p></body></"
 "html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-weight:600;\">Tento plugin (zástrčka) hledá v souboru číslo a "
+"přidává k němu stanovený odskok. </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> Jinak "
+"řečeno, Vy máte názvy souborů: <span style=\" font-style:italic;\">img014</"
+"span>, <span style=\" font-style:italic;\">img015</span>, <span style=\" "
+"font-style:italic;\">img023</span> , které by se měly přejmenovat<span style="
+"\" font-style:italic;\"> img010</span>, <span style=\" font-style:italic;"
+"\">img011</span> a <span style=\" font-style:italic;\">img019. </span>když "
+"použijete tento plugin (zástrčku), snadno můžete přidat odskok o -5 , abyste "
+"dostali požadovaný výsledek</p></body></html>"
 
 #: krenamewindow.cpp:323
-#, fuzzy
 msgid "<b>Files:<b> %1"
-msgstr "Soubory: <b>%1</b>"
+msgstr "<b>Soubory:<b> %1"
 
 #: main.cpp:125
 msgid ""
 "<b>Krename was started from root!</b><br>When started from root, Krename may "
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
-"<b>KRename byl spuštěn pod rootem!</b><br>Když spustíte KRename pod rootem, "
-"můžete si zničit systém, jestliže přesně nevíte, co děláte."
+"<b>KRename byl spuštěn pod superuživatelem (root)!</b><br>Když je KRename "
+"spuštěn pod superuživatelem, může poškodit systém, jestliže přesně nevíte, "
+"co děláte!"
 
 #: rc.cpp:90
 msgid ""
@@ -367,52 +357,67 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">.</span></p></body></html>"
 msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">.</span></p></body></html>"
 
 #: rc.cpp:327
 msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
 msgstr ""
+"<qt>Prosím, vyberte tu část starého názvu, která by měla být vložena do "
+"nového názvu souboru níže v textovém poli.:</qt>"
 
 #: translitplugin.cpp:102
-#, fuzzy
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
 "transliteration).</qt>"
-msgstr "<qt>Tento plugin přepíše jména napsaná v neanglických znacích</qt>"
+msgstr ""
+"<qt>Tento plugin (zástrčka) může přepsat názvy souborů do angličtiny (to "
+"jest zdokonalit transliteraci - přepis jinou abecedou)</qt>"
 
 #: systemplugin.cpp:70
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
 msgstr ""
+"<qt>Tento plugin (zástrčka) obsahuje výrazy pro získání informací o "
+"vytvoření, úpravách a časech posledních přístupů k souborům a o současném "
+"systémovém čase a datu.</qt>"
 
 #: taglibplugin.cpp:51
 msgid ""
 "<qt>This plugin supports reading tags for MP3, Ogg Vorbis, FLAC, MPC, Speex "
 "WavPack and TrueAudio files.</qt>"
 msgstr ""
+"<qt>Tento plugin (zástrčka) podporuje čtení značek (tagů) souborů MP3, Ogg "
+"Vorbis, FLAC, MPC, Speex WavPack and TrueAudio.</qt>"
 
 #: exiv2plugin.cpp:346
-#, fuzzy
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
-msgstr "<qt>Tento plugin setřídí soubory po přejmenování v podložkách.</qt>"
+msgstr ""
+"<qt>Tento plugin (zástrčka) podporuje čtení značek (tagů) souborů JPEG and "
+"TIFF.</qt>"
 
 #: rc.cpp:219 rc.cpp:222 rc.cpp:243 rc.cpp:252
 msgid "?"
-msgstr ""
+msgstr "?"
 
 #: scriptplugin.cpp:262
 msgid "A JavaScript error has occured: "
-msgstr ""
+msgstr "Nastala chyba JavaScriptu:"
 
 #: rc.cpp:474
-#, fuzzy
 msgid "A&dvanced Permissions"
-msgstr "&Změnit práva"
+msgstr "&Pokročilá oprávnění"
 
 #: rc.cpp:429 rc.cpp:507
-#, fuzzy
 msgid "Access Permissions"
 msgstr "Přístupová práva"
 
@@ -422,21 +427,21 @@ msgstr "Přístupová práva"
 
 #: filedialogextwidget.cpp:35
 msgid "Add &hidden directories"
-msgstr "Přidat &skryté složky"
+msgstr "Přidat &skryté adresáře"
 
 #: filedialogextwidget.cpp:33
 msgid "Add directory names &with filenames"
-msgstr "Přidat jména složek s&e jmény souborů"
+msgstr "Přidat názvy adresářů &s názvy souborů"
 
 #: filedialogextwidget.cpp:36
 msgid "Add directory names only"
-msgstr "Přidat pouze jména složek"
+msgstr "Přidat pouze názvy adresářů"
 
 #: filedialogextwidget.cpp:53
 msgid ""
 "Add only the directory names and not the names of the files in the directory "
 "to KRename."
-msgstr "Přidat pouze jména složek a ne jména souborů ve složce."
+msgstr "Přidat do KRename pouze názvy adresářů a ne názvy souborů v adresáři."
 
 #: filedialogextwidget.cpp:34
 msgid "Add subdirectories &recursively"
@@ -445,143 +450,135 @@ msgstr "Přidat podadresáře &rekurzivně"
 #: scriptplugin.cpp:291
 msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
-msgstr ""
+msgstr "Všechny nyní používané definice budou ztraceny. Přejete si pokračovat?"
 
 #: rc.cpp:396
 msgid ""
 "All supported tokens (commands) are listed is this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
 msgstr ""
+"Všechny podporované výrazy (příkazy) jsou uvedeny v tomto dialogu. Můžete "
+"hledat tyto výrazy a nalezený výraz vložit do vzoru pro název souboru."
 
 #: main.cpp:80
 msgid "Andreas Pour"
-msgstr ""
+msgstr "Andreas Pour"
 
 #: main.cpp:105
 msgid "Asim Husanovic"
-msgstr ""
+msgstr "Asim Husanovic"
 
 #: scriptplugin.cpp:244
 msgid "Boolean"
-msgstr ""
+msgstr "Boolean"
 
 #: main.cpp:90
 msgid "Brandon Low"
-msgstr ""
+msgstr "Brandon Low"
 
 #: krenameimpl.cpp:483
-#, fuzzy
 msgid "Built-in Functions"
-msgstr "Zabudované funkce:"
+msgstr "Vestavěné funkce"
 
 #: rc.cpp:438 rc.cpp:450 rc.cpp:462
-#, fuzzy
 msgid "Can Read"
-msgstr "Čtení"
+msgstr "Může číst"
 
 #: rc.cpp:441 rc.cpp:453 rc.cpp:465
 msgid "Can Read & Write"
-msgstr ""
+msgstr "Může číst & zapisovat"
 
 #: datetimeplugin.cpp:113
-#, fuzzy
 msgid "Can't change date of file %1. (Cannot mktime)"
-msgstr "Nemohu změnit datum souboru %1."
+msgstr "Nelze změnit datum souboru %1. (nejde mktime)"
 
 #: datetimeplugin.cpp:118
-#, fuzzy
 msgid "Can't change date of file %1. (Cannot stat the file)"
-msgstr "Nemohu změnit datum souboru %1."
+msgstr "Nelze změnit datum souboru %1."
 
 #: datetimeplugin.cpp:127
-#, fuzzy
 msgid "Can't change date of file %1. (utime failed)"
-msgstr "Nemohu změnit datum souboru %1."
+msgstr "Nelze změnit datum souboru %1. (utime selhal)"
 
 #: permissionsplugin.cpp:130
 msgid "Can't chmod %1."
-msgstr "Nemůžu změnit práva souboru %1"
+msgstr "Nelze změnit práva souboru (chmod) %1"
 
 #: permissionsplugin.cpp:139
 msgid "Can't chown %1."
-msgstr "Nemůžu změnit vlastníka souboru %1"
+msgstr "Nelze změnit vlastníka souboru (chown) %1"
 
 #: batchrenamer.cpp:671
 msgid "Can't create undo script :"
-msgstr "Nemohu vytvořit undo-script :"
+msgstr "Nelze vytvořit undo-script :"
 
 #: batchrenamer.cpp:773
 msgid "Can't set executable bit on undo script."
-msgstr "Nemohu nastavit undo-scriptu právo spouštění."
+msgstr "Nelze nastavit právo spouštění pro undo-scriptu."
 
 #: batchrenamer.cpp:269
-#, fuzzy
 msgid "Cannot create symlink to non-local URL: %1"
-msgstr "Nemohu vytvořit symbolické odkazy na rozdílné hostitele pro soubor %1."
+msgstr "Nelze vytvořit symbolické odkazy pro ne-místní URL: %1."
 
 #: rc.cpp:141 rc.cpp:177 rc.cpp:234 rc.cpp:276 rc.cpp:345
 msgid "Capitalize"
-msgstr "První písmeno velké"
+msgstr "Psát s velkým začátečním písmenem"
 
 #: rc.cpp:399
 msgid "Category"
-msgstr ""
+msgstr "Kategorie"
 
 #: rc.cpp:426
 msgid "Change &Permissions"
-msgstr "&Změnit práva"
+msgstr "Změnit &oprávnění"
 
 #: rc.cpp:492
 msgid "Change &access date && time"
-msgstr "Změnit datum a čas &přístupu"
+msgstr "Změnit datum &a čas &přístupu"
 
 #: rc.cpp:495
-#, fuzzy
 msgid "Change &modifcation date && time"
-msgstr "Změnit datum a čas &modifikace"
+msgstr "Změnit &datum a čas úprav"
 
 #: main.cpp:82
 msgid "Charles Samuels"
-msgstr ""
+msgstr "Charles Samuels"
 
 #: permissionsplugin.cpp:187
 msgid "Class"
 msgstr "Třída"
 
 #: rc.cpp:51
-#, fuzzy
 msgid "Configure the look and feel of the KRename GUI:"
-msgstr "Nastavte vzhled grafického rozhraní KRename:<br>"
+msgstr "Nastavit vzhled grafického rozhraní KRename:"
 
 #: main.cpp:99
 msgid "Contributed a Spanish translation"
-msgstr "Poskytnutí španělského překladu"
+msgstr "Poskytnul španělský překlad"
 
 #: rc.cpp:135 rc.cpp:171 rc.cpp:228 rc.cpp:270 rc.cpp:339
-#, fuzzy
 msgid "Convert to lower case"
-msgstr "Předělat na malá písmena"
+msgstr "Převést na malá písmena"
 
 #: rc.cpp:138 rc.cpp:174 rc.cpp:231 rc.cpp:273 rc.cpp:342
 msgid "Convert to upper case"
-msgstr "Předělat na velká písmena"
+msgstr "Převést na velká písmena"
 
 #: rc.cpp:72
 msgid "Create symbolic &links in destination directory"
-msgstr "Vytvořit sy&mbolické odkazy v cílové složce"
+msgstr "Vytvořit symbolické &odkazy v cílovém adresáři"
 
 #: main.cpp:88
 msgid "Created the Gentoo Ebuild scripts for Krename."
-msgstr "Vytvořil Gentoo Ebuild skripty pro KRename."
+msgstr "Vytvořené Gentoo Ebuild skripty pro KRename."
 
 #: rc.cpp:180 rc.cpp:279
 msgid "Custom extension"
 msgstr "Vlastní přípona"
 
 #: rc.cpp:408
-#, fuzzy
 msgid "Custom filename"
-msgstr "Vlastní jméno"
+msgstr "Název souboru dle zvyklosti"
 
 #: rc.cpp:144 rc.cpp:237
 msgid "Custom name"
@@ -589,25 +586,25 @@ msgstr "Vlastní jméno"
 
 #: main.cpp:94
 msgid "Daniele Medri"
-msgstr ""
+msgstr "Daniele Medri"
 
 #: rc.cpp:153 rc.cpp:165 rc.cpp:249 rc.cpp:264
 msgid "Date"
 msgstr "Datum"
 
 #: datetimeplugin.cpp:51
-#, fuzzy
 msgid "Date & Time Plugin"
-msgstr "Datum & čas"
+msgstr "Plugin (zástrčka) Datum a čas"
 
 #: systemplugin.cpp:68
-#, fuzzy
 msgid "Date and system functions"
-msgstr "Systémové funkce"
+msgstr "Funkce data a systémové funkce"
 
 #: datetimeplugin.cpp:71
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
+"Plugin (zástrčka) pro datum a čas pracuje pouze s místními soubory. %1 je "
+"vzdálený soubor."
 
 #: rc.cpp:405
 msgid "Description"
@@ -615,50 +612,47 @@ msgstr "Popis"
 
 #: rc.cpp:504 rc.cpp:546
 msgid "Dialog"
-msgstr ""
+msgstr "Dialog"
 
 #: scriptplugin.cpp:77
-#, fuzzy
 msgid "Directory of the current file"
-msgstr "Vložit aktuální čas"
+msgstr "Adresář nynějšího souboru"
 
 #: krenameimpl.cpp:364
-#, fuzzy
 msgid "Do you really want to remove all files from the list?"
-msgstr "Opravdu chcete smazat profil: %1"
+msgstr "Skutečně chcete odstranit všechny soubory ze seznamu?"
 
 #: main.cpp:67
 msgid "Dominik Seichter"
-msgstr ""
+msgstr "Dominik Seichter"
 
 #: scriptplugin.cpp:243
 msgid "Double"
-msgstr ""
+msgstr "Zdvojnásobit"
 
 #: rc.cpp:42
 msgid "Down"
-msgstr ""
+msgstr "Dolů"
 
 #: krenameimpl.cpp:121
 msgid "E&xtras"
-msgstr "E&xtra"
+msgstr "D&oplňková výbava"
 
 #: batchrenamer.cpp:761
 msgid "Elapsed time: %1 seconds"
 msgstr "Uplynulý čas: %1 sekund"
 
 #: main.cpp:129
-#, fuzzy
 msgid "Error"
-msgstr "Chyba: %1"
+msgstr "Chyba"
 
 #: batchrenamer.cpp:282
 msgid "Error during renaming %1 (from %2)"
-msgstr ""
+msgstr "Během přejmenovávání nastala chyba %1 (from %2)"
 
 #: batchrenamer.cpp:418
 msgid "Error during undoing %1"
-msgstr ""
+msgstr "Během kroku zpět došlo k chybě %1"
 
 #: permissionsplugin.cpp:196
 msgid "Exec"
@@ -666,31 +660,27 @@ msgstr "Spouštění"
 
 #: exiv2plugin.cpp:345
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
-msgstr ""
+msgstr "Exiv2 (JPEG/TIFF Exif) plugin (zástrčka)"
 
 #: scriptplugin.cpp:76
-#, fuzzy
 msgid "Extension of the current file"
-msgstr "&Použít příponu vstupního souboru"
+msgstr "Přípona současného souboru"
 
 #: rc.cpp:105
-#, fuzzy
 msgid "File extension &starts at:"
-msgstr "Přípona souboru začíná:"
+msgstr "Přípona souboru &začíná:"
 
 #: krenamewindow.cpp:50
 msgid "File&name"
-msgstr "Název &souboru"
+msgstr "Název&souboru"
 
 #: rc.cpp:147 rc.cpp:240
-#, fuzzy
 msgid "File&name:"
-msgstr "Název &souboru"
+msgstr "Název&souboru:"
 
 #: scriptplugin.cpp:75
-#, fuzzy
 msgid "Filename of the current file"
-msgstr "Vložit aktuální čas"
+msgstr "Souborový název současného souboru"
 
 #: batchrenamer.cpp:371
 msgid "Filenames Processed after %1 seconds."
@@ -705,9 +695,8 @@ msgid "Files will be moved to: %1"
 msgstr "Soubory budou přesunuty do: %1"
 
 #: rc.cpp:33
-#, fuzzy
 msgid "Files: <b>0</b>"
-msgstr "Soubory: <b>%1</b>"
+msgstr "Soubory: <b>0</b>"
 
 #: rc.cpp:366
 msgid "Find"
@@ -719,12 +708,11 @@ msgstr "Najít &a nahradit..."
 
 #: rc.cpp:360 rc.cpp:381
 msgid "Find and Replace"
-msgstr "Najít a Nahradit"
+msgstr "Najít a nahradit"
 
 #: rc.cpp:390
-#, fuzzy
 msgid "Find is a Regular &Expression"
-msgstr "Regulární výraz"
+msgstr "Najít je regulérní &výraz"
 
 #: rc.cpp:108
 msgid "First Dot"
@@ -733,35 +721,38 @@ msgstr "První tečkou"
 #: main.cpp:78
 msgid "Fixed a bug that caused krename not closing open files."
 msgstr ""
-"Opravil chybu, která způsobovala, že KRename nezavíral otevřené soubory."
+"Byla opravena chyba, která způsobovala, že KRename nezavíral otevřené "
+"soubory."
 
 #: main.cpp:75
 msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
 msgstr ""
+"Byla opravena chyba týkající se startu indexu a přidán BatchRenamer class\n"
+"výbornému prohlížeči obrázků showimg."
 
 #: main.cpp:97
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 msgstr ""
-"Opravil problémy se spec souborem a vytvářel RPM balíčky pro každou verzi "
-"SuSE, jakou si jen můžete představit a je také novým správcem KRename pro "
-"Gentoo"
+"Byly jím opraveny problémy se spec souborem a vytvořeny RPM balíčky pro "
+"každou verzi SuSE, jakou si jen můžete představit a je také novým správcem "
+"KRename pro Gentoo"
 
 #: rc.cpp:435 rc.cpp:447 rc.cpp:459
 msgid "Forbidden"
-msgstr ""
+msgstr "Zakázáno"
 
 #: rc.cpp:45 rc.cpp:78 rc.cpp:201 rc.cpp:210 rc.cpp:300 rc.cpp:324 rc.cpp:423
 #: rc.cpp:489 rc.cpp:510 rc.cpp:558
 msgid "Form"
-msgstr ""
+msgstr "Formulář"
 
 #: main.cpp:84
 msgid "Franz Schmid"
-msgstr ""
+msgstr "Franz Schmid"
 
 #: permissionsplugin.cpp:217
 msgid "GID"
@@ -769,21 +760,19 @@ msgstr "GID"
 
 #: main.cpp:84
 msgid "Gave me a good start into writing plugins with his application scribus."
-msgstr "Připravil mě na psaní pluginů s jeho aplikací scribus."
+msgstr "Pomohl mi se startem při psaní pluginů pro jeho aplikací Scribus."
 
 #: rc.cpp:501
-#, fuzzy
 msgid "Get &Current Time"
-msgstr "&Získat aktuální datum && čas"
+msgstr "Získat &aktuální čas"
 
 #: rc.cpp:444
-#, fuzzy
 msgid "Gro&up:"
-msgstr "Skupina:"
+msgstr "Sku&pina:"
 
 #: main.cpp:75
 msgid "Groult Richard"
-msgstr ""
+msgstr "Groult Richard"
 
 #: permissionsplugin.cpp:208
 msgid "Group"
@@ -794,34 +783,32 @@ msgid ""
 "If not checked, KRename will ignore directories starting with a dot during "
 "recursive adding."
 msgstr ""
-"Pokud nezaškrtnete, KRename bude během rekurzivního procházení ignorovat "
-"složky začínající tečkou."
+"Pokud nebude nezatrženo, KRename bude během rekurzivního přidávání ignorovat "
+"adresáře začínající tečkou."
 
 #: main.cpp:104
 msgid "Ilya Ivkov"
-msgstr ""
+msgstr "Ilya Ivkov"
 
 #: increasecounterplugin.cpp:41
 msgid "Increase Counter"
-msgstr ""
+msgstr "Nárůstový čítač"
 
 #: scriptplugin.cpp:73
-#, fuzzy
 msgid "Index of the current file"
-msgstr "Vložit aktuální čas"
+msgstr "Index současného souboru"
 
 #: scriptplugin.cpp:132
 msgid "Initial Value"
-msgstr ""
+msgstr "Počáteční hodnota"
 
 #: batchrenamer.cpp:227 batchrenamer.cpp:690
 msgid "Input files will be renamed."
 msgstr "Vstupní soubory budou přejmenovány."
 
 #: krenameimpl.cpp:494
-#, fuzzy
 msgid "Insert '#'"
-msgstr "Vložit '$'"
+msgstr "Vložit '#'"
 
 #: krenameimpl.cpp:486
 msgid "Insert '$'"
@@ -857,27 +844,23 @@ msgstr "Vložit ']'"
 
 #: scriptplugin.cpp:71
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
-msgstr ""
+msgstr "Vložit kousek JavaScript kódu (v tomto případě 4+5)"
 
 #: taglibplugin.cpp:43
-#, fuzzy
 msgid "Insert the album of a track"
-msgstr "Vložit datum posledního přístupu k souboru"
+msgstr "Vložit název alba ke stopě"
 
 #: taglibplugin.cpp:42
-#, fuzzy
 msgid "Insert the artist of a track"
-msgstr "Vložit aktuální datum"
+msgstr "Vložit jméno umělce ke stopě"
 
 #: taglibplugin.cpp:44
-#, fuzzy
 msgid "Insert the comment of a track"
-msgstr "Vložit aktuální datum"
+msgstr "Vložit komentář ke stopě"
 
 #: exiv2plugin.cpp:304
-#, fuzzy
 msgid "Insert the comment of an image"
-msgstr "Vložit aktuální datum"
+msgstr "Vložit komentář k obrázku"
 
 #: systemplugin.cpp:50
 msgid "Insert the current date"
@@ -885,7 +868,7 @@ msgstr "Vložit aktuální datum"
 
 #: systemplugin.cpp:51
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
-msgstr "Vložit aktuální datum ve formátu rrrr-mm-dd"
+msgstr "Vložit aktuální datum ve formátu řetězce rrrr-mm-dd"
 
 #: systemplugin.cpp:54
 msgid "Insert the current day as number"
@@ -925,7 +908,7 @@ msgstr "Vložit datum vytvoření souboru"
 
 #: systemplugin.cpp:63
 msgid "Insert the files modification date"
-msgstr "Vložit datum modifikace souboru"
+msgstr "Vložit datum úprav souboru"
 
 #: systemplugin.cpp:66
 msgid "Insert the formatted date of the last file access"
@@ -937,58 +920,58 @@ msgstr "Vložit naformátované datum vytvoření souboru"
 
 #: systemplugin.cpp:64
 msgid "Insert the formatted modification date"
-msgstr "Vložit formátované datum modifikace souboru"
+msgstr "Vložit formátované datum úprav souboru"
 
 #: taglibplugin.cpp:45
-#, fuzzy
 msgid "Insert the genre of a track"
-msgstr "Vložit aktuální datum"
+msgstr "Vložit žánr vztahující se ke stopě"
 
 #: taglibplugin.cpp:47
-#, fuzzy
 msgid "Insert the number of a track"
-msgstr "Vložit aktuální datum"
+msgstr "Vložit číslo stopy"
 
 #: taglibplugin.cpp:48
 msgid "Insert the number of a track formatted with a leading 0"
-msgstr ""
+msgstr "Vložit číslo stopy formátované tak, že začíná nulou"
 
 #: taglibplugin.cpp:41
-#, fuzzy
 msgid "Insert the title of a track"
-msgstr "Vložit datum vytvoření souboru"
+msgstr "Vložit název stopy"
 
 #: taglibplugin.cpp:46
-#, fuzzy
 msgid "Insert the year of a track"
-msgstr "Vložit datum posledního přístupu k souboru"
+msgstr "Vložit rok vztahující se ke stopě"
 
 #: translitplugin.cpp:94
-#, fuzzy
 msgid "Inserts the transliterated original filename"
-msgstr "Vložit formátované datum modifikace souboru"
+msgstr "Vloží transliterovaný (přepsaný v jiné abecedě) původní název souboru"
 
 #: translitplugin.cpp:97
 msgid "Inserts the transliterated original filename capitalized"
 msgstr ""
+"Vloží transliterovaný (přepsaný v jiné abecedě) původní název souboru "
+"zapsaný s velkým začátečním písmenem"
 
 #: translitplugin.cpp:95
-#, fuzzy
 msgid "Inserts the transliterated original filename converted to lower case"
-msgstr "staré jméno souboru převedené na malá písmena"
+msgstr ""
+"Vloží transliterovaný (přepsaný v jiné abecedě) původní název souboru "
+"převedený na malá písmena"
 
 #: translitplugin.cpp:96
-#, fuzzy
 msgid "Inserts the transliterated original filename converted to upper case"
-msgstr "staré jméno souboru převedené na velká písmena"
+msgstr ""
+"Vloží transliterovaný (přepsaný v jiné abecedě) původní název souboru "
+"převedený na velká písmena"
 
 #: scriptplugin.cpp:242
 msgid "Int"
-msgstr ""
+msgstr "Int"
 
 #: rc.cpp:471
 msgid "Is Executable/Only owner &can rename and delete folder content"
 msgstr ""
+"Je vykonatelný/pouze vlastník &může přejmenovat nebo smazat obsah složky"
 
 #: main.cpp:94
 msgid "Italian translation"
@@ -996,34 +979,31 @@ msgstr "Italský překlad"
 
 #: scriptplugin.cpp:63
 msgid "JavaScript Plugin"
-msgstr ""
+msgstr "JavaScript plugin (zástrčka)"
 
 #: main.cpp:99
 msgid "Jose Rodriguez"
-msgstr ""
+msgstr "Jose Rodriguez"
 
 #: main.cpp:57 krenameimpl.cpp:365
 msgid "KRename"
 msgstr "KRename"
 
 #: main.cpp:63
-#, fuzzy
 msgid "KRename Build:"
-msgstr "KRename"
+msgstr "Sestavení aplikace KRename:"
 
 #: rc.cpp:393
-#, fuzzy
 msgid "KRename Help"
-msgstr "KRename"
+msgstr "Nápověda k aplikaci KRename"
 
 #: batchrenamer.cpp:304 batchrenamer.cpp:762
 msgid "KRename finished the renaming process."
 msgstr "KRename dokončil proces přejmenování."
 
 #: batchrenamer.cpp:427
-#, fuzzy
 msgid "KRename finished the undo process."
-msgstr "KRename dokončil proces přejmenování."
+msgstr "KRename dokončil proces vracení zpět o krok."
 
 #: main.cpp:58
 msgid ""
@@ -1035,18 +1015,18 @@ msgid ""
 "as financial support (everybody needs money ;)\n"
 "See help files for details.\n"
 msgstr ""
-"KRename je nástroj na dávkové přejmenování souborů.\n"
-"Může přejmenovat velké množství souborů pomocí nastavených\n"
-"výrazů.\n"
+"KRename je nástroj na dávkové přejmenování souborů,\n"
+" který může přejmenovat seznam souborů za pomoci nastavených\n"
+" výrazů.\n"
 "\n"
 "Jestliže se vám KRename líbí, můžete ho podpořit.\n"
 "Testování, opravy chyb a požadavky na funkce jsou vítány\n"
-"stejně jako finanční podpora (každý potřebuje peníze ;).\n"
-"Podrobnosti v nápovědě/dokumentaci.\n"
+"stejně jako finanční podpora (každý potřebuje peníze :=).\n"
+"Kvůli podrobnostem si prohlédněte nápovědu.\n"
 
 #: main.cpp:103
 msgid "Krzysztof Pawlak"
-msgstr ""
+msgstr "Krzysztof Pawlak"
 
 #: rc.cpp:111
 msgid "Last Dot"
@@ -1058,73 +1038,67 @@ msgstr "Vzhled"
 
 #: main.cpp:98
 msgid "Mark Ziegler"
-msgstr ""
+msgstr "Mark Ziegler"
 
 #: main.cpp:78
 msgid "Michael Elvers"
-msgstr ""
+msgstr "Michael Elvers"
 
 #: main.cpp:96
 msgid "Michael Zugaro"
-msgstr ""
+msgstr "Michael Zugaro"
 
 #: main.cpp:88
 msgid "Michael v.Ostheim"
-msgstr ""
+msgstr "Michael v. Ostheim"
 
 #: main.cpp:106
 msgid "Michal Smoczyk"
-msgstr ""
+msgstr "Michal Smoczyk"
 
 #: rc.cpp:39
 msgid "Move"
-msgstr ""
+msgstr "Přemístit"
 
 #: rc.cpp:183 rc.cpp:282
-#, fuzzy
 msgid "N&umber"
-msgstr "Číslo"
+msgstr "Č&íslo"
 
 #: main.cpp:102
 msgid "Nicolas Benoit"
-msgstr ""
+msgstr "Nicolas Benoit"
 
 #: rc.cpp:336
-#, fuzzy
 msgid "No Conversion"
-msgstr "Plugin na Konverzi Kódování"
+msgstr "Žádná konverze"
 
 #: rc.cpp:150 rc.cpp:162 rc.cpp:246 rc.cpp:261
 msgid "Number"
 msgstr "Číslo"
 
 #: rc.cpp:186 rc.cpp:285
-#, fuzzy
 msgid "Number of &digits:"
-msgstr "Počet čísli&c:"
+msgstr "Počet &číslic:"
 
 #: rc.cpp:432
-#, fuzzy
 msgid "O&wner:"
-msgstr "Vlastnictví"
+msgstr "&Vlastník:"
 
 #: krenamemodel.cpp:432
 msgid "Origin"
 msgstr "Původní"
 
 #: rc.cpp:456
-#, fuzzy
 msgid "Ot&hers:"
-msgstr "Ostatní"
+msgstr "O&statní:"
 
 #: permissionsplugin.cpp:211
 msgid "Others"
 msgstr "Ostatní"
 
 #: systemplugin.cpp:59
-#, fuzzy
 msgid "Owner of the file"
-msgstr "Číslo prvního souboru."
+msgstr "Vlastník souboru"
 
 #: rc.cpp:480
 msgid "Ownership"
@@ -1132,40 +1106,40 @@ msgstr "Vlastnictví"
 
 #: systemplugin.cpp:60
 msgid "Owning group of the file"
-msgstr ""
+msgstr "Skupina vlastníků souboru"
 
 #: main.cpp:86
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr ""
-"Části z PNG podpory jsou zkopírovány z jeho KFile pluginu pro png podporu."
+"Části PNG podpory jsou zkopírovány z jeho KFile pluginu (zástrčky) pro png "
+"podporu."
 
 #: main.cpp:92
 msgid "Per Ovind Karlsen"
-msgstr ""
+msgstr "Per Ovind Karlsen"
 
 #: permissionsplugin.cpp:112
 msgid "Permissions"
-msgstr "Práva"
+msgstr "Oprávnění"
 
 #: permissionsplugin.cpp:125
 msgid "PermissionsPlugin works only with local files. %1 is a remote file."
 msgstr ""
+"Plugin (zástrčka) Oprávnění pracuje pouze s místními soubory. %1 je vzdálený "
+"soubor."
 
 #: rc.cpp:411
-#, fuzzy
 msgid "Please input a new filename"
-msgstr "Prosím zadejte nové jméno souboru:"
+msgstr "Prosím, zadejte nový název souboru"
 
 #: rc.cpp:204
-#, fuzzy
 msgid "Plugins"
-msgstr "P&luginy"
+msgstr "Pluginy (zástrčky)"
 
 #: main.cpp:106
-#, fuzzy
 msgid "Polish Translation"
-msgstr "Italský překlad"
+msgstr "Polský překlad"
 
 #: batchrenamer.cpp:305 batchrenamer.cpp:428 batchrenamer.cpp:763
 msgid "Press close to quit!"
@@ -1173,51 +1147,48 @@ msgstr "Pro ukončení stiskněte Zavřít!"
 
 #: rc.cpp:348
 msgid "Preview of the generated KRename command:"
-msgstr ""
+msgstr "Náhled vygenerovaného KRename příkazu:"
 
 #: rc.cpp:354
 msgid "Progress"
-msgstr "Pokrok"
+msgstr "Průběh"
 
 #: main.cpp:98
 msgid "Provided SuSE RPMs and very good suggestions"
-msgstr "Poskytnutí SuSE RPM balíčků a velmi dobré náměty"
+msgstr "Poskytnul SuSE RPM balíčků a velmi dobré návrhy"
 
 #: main.cpp:100
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr ""
-"Poskytnul balíček pro RedHat a byl mi velkou pomocí při vylepšování KRename"
+"Poskytnul balíček pro RedHat a byl mi velkou pomocí během vylepšování KRename"
 
 #: main.cpp:95
 msgid "Provided a gcc3.x namespace patch"
-msgstr "Poskytl gcc3.x namespace patch"
+msgstr "Poskytnul gcc3.x namespace patch"
 
 #: main.cpp:96
 msgid "Provided the new preview and move features"
-msgstr "Poskytl nový náhled a funkce přesunu"
+msgstr "Poskytnul nový náhled a zvláštní program pro přesun"
 
 #: rc.cpp:6
 msgid "Re&move"
 msgstr "&Odstranit"
 
 #: rc.cpp:9
-#, fuzzy
 msgid "Re&move All"
 msgstr "Odstranit &vše"
 
 #: permissionsplugin.cpp:190
 msgid "Read"
-msgstr "Čtení"
+msgstr "Číst"
 
 #: rc.cpp:363
-#, fuzzy
 msgid "Reg. Expression"
 msgstr "Regulární výraz"
 
 #: progressdialog.cpp:50
-#, fuzzy
 msgid "Rename &Unprocessed Files &Again..."
-msgstr "&Znovu přejmenovat nezpracované soubory..."
+msgstr "Znovu přejmenovat &nezpracované soubory..."
 
 #: progressdialog.cpp:49
 msgid "Rename Processed Files &Again..."
@@ -1233,20 +1204,19 @@ msgstr "Úspěšně přejmenováno %1 souborů."
 
 #: main.cpp:97
 msgid "Rene Gass"
-msgstr ""
+msgstr "Rene Gass"
 
 #: rc.cpp:369
 msgid "Replace With"
-msgstr "Nahradit čím"
+msgstr "Nahradit (čím)"
 
 #: progressdialog.cpp:47
-#, fuzzy
 msgid "Restart &KRename..."
-msgstr "Restartovat KRename..."
+msgstr "Restartovat &KRename..."
 
 #: main.cpp:86
 msgid "Rolf Magnus"
-msgstr ""
+msgstr "Rolf Magnus"
 
 #: main.cpp:90
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1270,19 +1240,17 @@ msgstr "Třídit: Náhodně"
 
 #: rc.cpp:12
 msgid "Sort: Unsorted"
-msgstr "Třídit: Netřízeno"
+msgstr "Třídit: Neroztříděno"
 
 #: permissionsplugin.cpp:202
 msgid "Special"
 msgstr "Speciální"
 
 #: krenameimpl.cpp:495
-#, fuzzy
 msgid "Special Characters"
-msgstr "Speciální symboly:"
+msgstr "Speciální symboly"
 
 #: rc.cpp:189 rc.cpp:288
-#, fuzzy
 msgid "Start  &index:"
 msgstr "Startovní &index:"
 
@@ -1296,27 +1264,27 @@ msgstr "Začínám konverzi %1 souborů."
 
 #: main.cpp:69
 msgid "Stefan \"Stonki\" Onken"
-msgstr ""
+msgstr "Stefan \"Stonki\" Onken"
 
 #: main.cpp:95
 msgid "Stephan Johach"
-msgstr ""
+msgstr "Stephan Johach"
 
 #: main.cpp:100
 msgid "Steven P. Ulrick"
-msgstr ""
+msgstr "Steven P. Ulrick"
 
 #: permissionsplugin.cpp:220
 msgid "Sticky"
-msgstr "Sticky"
+msgstr "Nejistý"
 
 #: scriptplugin.cpp:241
 msgid "String"
-msgstr ""
+msgstr "Řada"
 
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
-msgstr "Podporované symboly:"
+msgstr "Podporované výrazy:"
 
 #: batchrenamer.cpp:236 batchrenamer.cpp:688
 msgid "Symbolic links will be created in: %1"
@@ -1324,11 +1292,11 @@ msgstr "Symbolické odkazy budou vytvořeny v: %1"
 
 #: taglibplugin.cpp:50
 msgid "TagLib (MP3/Ogg) Plugin"
-msgstr ""
+msgstr "TagLib (MP3/Ogg) plugin (zástrčka)"
 
 #: rc.cpp:351 rc.cpp:516 rc.cpp:531
 msgid "TextLabel"
-msgstr ""
+msgstr "Textové návěští"
 
 #: main.cpp:92
 msgid "Thanks for creating the Mandrake RPM"
@@ -1346,39 +1314,37 @@ msgstr ""
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
 msgstr ""
-"Poděkování za noatun a za ID3/OggTag kód založený na jeho noatunních modulech"
+"Poděkování za noatun a za ID3/OggTag kód založený na jeho noatunních "
+"modulech."
 
 #: main.cpp:73
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "Poděkování za vytváření balíčků pro RedHat 7.x a za další pomoc."
 
 #: krenameimpl.cpp:555
-#, fuzzy
 msgid "The directory %1 could not be created."
-msgstr "Profil \"%1\" nebyl nalezen."
+msgstr "Adresář %1 nemohl být vytvořen."
 
 #: krenameimpl.cpp:547
-#, fuzzy
 msgid ""
 "The directory %1 does not exist. Do you want KRename to create it for you?"
-msgstr "Složka %1 neexistuje. KRename ji pro vás vytvoří."
+msgstr "Adresář %1 neexistuje. Přejete si, aby jej pro Vás KRename vytvořil?"
 
 #: scriptplugin.cpp:343
-#, fuzzy
 msgid "The file %1 does already exists. Do you want to overwrite it?"
-msgstr "Tento profil už existuje. Prosím vyberte jiné jméno."
+msgstr "Soubor %1 již existuje. Přejete si jej přepsat?"
 
 #: rc.cpp:468
 msgid "This file uses advanced permissions"
-msgstr ""
+msgstr "Tento soubor používá pokročílá oprávnění"
 
 #: filedialogextwidget.cpp:55
 msgid ""
 "This option causes KRename to add also the name of the base directory of the "
 "selected files to its list."
 msgstr ""
-"Tato volba způsobí, že KRename přidá jméno složky vybraných souborů na "
-"seznam."
+"Tato volba způsobí, že KRename přidá název základního adresáře vybraných "
+"souborů na svůjseznam."
 
 #: rc.cpp:498
 msgid "Time:"
@@ -1386,7 +1352,7 @@ msgstr "Čas:"
 
 #: rc.cpp:402
 msgid "Token"
-msgstr "Symbol"
+msgstr "Výraz"
 
 #: main.cpp:105
 msgid "Translated KRename into Bosnian"
@@ -1411,63 +1377,59 @@ msgstr "Přeložil KRename do japonštiny"
 #: translitplugin.cpp:98
 msgid "Transliterates the string following the semicolon"
 msgstr ""
+"Transliteruje řetězec (přepíše v jiné abecedě), který následuje za středníkem"
 
 #: translitplugin.cpp:100
-#, fuzzy
 msgid "Transliteration"
-msgstr "Přepisný Plugin"
+msgstr "Transliterace (přepis v jiné abecedě)"
 
 #: main.cpp:73
 msgid "Trevor Semeniuk"
-msgstr ""
+msgstr "Trevor Semeniuk"
 
 #: permissionsplugin.cpp:214
 msgid "UID"
 msgstr "UID"
 
 #: scriptplugin.cpp:74
-#, fuzzy
 msgid "URL of the current file"
-msgstr "Vložit aktuální čas"
+msgstr "URL aktuálního souboru"
 
 #: main.cpp:101
 msgid "UTUMI Hirosi"
-msgstr ""
+msgstr "UTUMI Hirosi"
 
 #: scriptplugin.cpp:319
 msgid "Unable to open %1 for reading."
-msgstr ""
+msgstr "Neschopen otevřít %1 pro čtení"
 
 #: scriptplugin.cpp:376
 msgid "Unable to open %1 for writing."
-msgstr ""
+msgstr "Neschopen otevřít %1 pro psaní"
 
 #: batchrenamer.cpp:743
 msgid "Undo is not possible for remote file: %1"
-msgstr "Návrat není možný pro vzdálený soubor: %1"
+msgstr "Návrat o krok zpět není možný pro vzdálený soubor: %1"
 
 #: batchrenamer.cpp:386
 msgid "Undoing all renamed files."
-msgstr ""
+msgstr "Návrat o krok zpět u všech přejmenovaných souborů."
 
 #: rc.cpp:36
 msgid "Up"
-msgstr ""
+msgstr "Nahoru"
 
 #: rc.cpp:420
-#, fuzzy
 msgid "Use &custom filename"
-msgstr "Použít &vstupní jméno souboru"
+msgstr "Použít &název souboru podle zvyklosti"
 
 #: rc.cpp:417
-#, fuzzy
 msgid "Use &input filename"
-msgstr "Použít &vstupní jméno souboru"
+msgstr "Použít &vstupní název souboru"
 
 #: rc.cpp:57
-#, fuzzy
 msgid "Use &tabbed style GUI (advanced users)"
-msgstr "Použít GUI se &záložkami (pokročilí uživatelé)"
+msgstr "Použít GUI styl se &záložkami (pokročilí uživatelé)"
 
 #: rc.cpp:54
 msgid "Use &wizard style GUI (beginners)"
@@ -1475,7 +1437,7 @@ msgstr "Použít GUI styl &průvodce (začátečníci)"
 
 #: rc.cpp:414
 msgid "Use filename created by &KRename"
-msgstr ""
+msgstr "Použít název souboru vytvořený &KRename"
 
 #: rc.cpp:168 rc.cpp:267
 msgid "Use original extension"
@@ -1483,78 +1445,81 @@ msgstr "Použít původní příponu"
 
 #: rc.cpp:132 rc.cpp:225
 msgid "Use original name"
-msgstr "Použít původní jméno"
+msgstr "Použít původní název"
 
 #: permissionsplugin.cpp:205
 msgid "User"
 msgstr "Uživatel"
 
 #: scriptplugin.cpp:131
-#, fuzzy
 msgid "Variable Name"
-msgstr "Jméno profilu"
+msgstr "Název proměnné"
 
 #: filedialogextwidget.cpp:49
 msgid ""
 "Walk recursively through the directory tree and add also the content of all "
 "subdirectories to the list of files to rename."
 msgstr ""
-"Projde rekurzivně stromovou strukturu složky a přidá obsah všech podsložek "
-"na seznam souborů k přejmenování."
+"Projde rekurzivně stromovou strukturu adresáře a přidá obsah všech "
+"podadresářůna seznam souborů k přejmenování."
 
 #: main.cpp:70
 msgid "Website, testing, very good ideas and keeping me coding!"
 msgstr ""
 "Webové stránky, testování, velmi dobré nápady a podporování mě v "
-"programování!!"
+"programování!"
 
 #: permissionsplugin.cpp:193
 msgid "Write"
-msgstr "Zápis"
+msgstr "Zapsat"
 
 #: _translatorinfo.cpp:3
 msgid ""
 "_: EMAIL OF TRANSLATORS\n"
 "Your emails"
-msgstr "conyx@seznam.cz"
+msgstr ""
+"_: E-mail překladatelů\n"
+"Vaše e-maily"
 
 #: _translatorinfo.cpp:1
 msgid ""
 "_: NAME OF TRANSLATORS\n"
 "Your names"
-msgstr "Tomáš Bambas"
+msgstr ""
+"_: Jména překladatelů\n"
+"Vaše jména"
 
 #: main.cpp:46
 msgid "add directory recursively"
-msgstr "přidat složku rekurzivně"
+msgstr "přidat adresář rekurzivně"
 
 #: krenameimpl.cpp:476
 msgid "character x to y of old filename"
-msgstr "znaky x až y starého jména souboru"
+msgstr "znaky x až y starého názvu souboru"
 
 #: main.cpp:50
 msgid "copy files to directory"
-msgstr "zkopírovat soubory do složky"
+msgstr "zkopírovat soubory do adresáře"
 
 #: krenameimpl.cpp:474
 msgid "counter with custom start value 0 and custom stepping 1"
-msgstr "počítadlo s vlastní počáteční hodnotou 0 a s vlastním krokováním 1"
+msgstr "čítač s vlastní počáteční hodnotou 0 a s vlastním krokováním 1"
 
 #: krenameimpl.cpp:475
 msgid "create a subdirectory"
-msgstr "vytvoří podsložku"
+msgstr "vytvořit podadresář"
 
 #: main.cpp:67
 msgid "developer and maintainer"
-msgstr ""
+msgstr "vývojář a správce programu"
 
 #: main.cpp:49
 msgid "enable a plugin for use"
-msgstr "povolit použití pluginu"
+msgstr "povolit použití pluginu (zástrčky)"
 
 #: main.cpp:45
 msgid "file will be added to the list of files for renaming"
-msgstr "soubor bude přidán do seznamu souborů k přejmenování"
+msgstr "soubor bude přidán do seznamu souborů určených k přejmenování"
 
 #: krenameimpl.cpp:471
 msgid "first letter of every word upper case"
@@ -1562,27 +1527,27 @@ msgstr "první písmeno každého slova bude velké"
 
 #: krenameimpl.cpp:472
 msgid "first letter of filename upper case"
-msgstr "první písmeno jména souboru bude velké"
+msgstr "první písmeno názvu souboru bude velké"
 
 #: krenameimpl.cpp:478
 msgid "insert name of directory"
-msgstr "vloží jméno složky"
+msgstr "vložit název adresáře"
 
 #: krenameimpl.cpp:479
 msgid "insert name of parent directory"
-msgstr "vloží jméno nadřazené složky"
+msgstr "vložit název rodičovského adresáře"
 
 #: krenameimpl.cpp:480
 msgid "insert the length of the input filename"
-msgstr "vloží délku jména vstupního souboru"
+msgstr "vložit délku názvu vstupního souboru"
 
 #: main.cpp:52
 msgid "load the profile named [profile] on startup"
-msgstr "načíst profil [profile] při startu"
+msgstr "při startu načíst profil nazvaný [profile]"
 
 #: main.cpp:51
 msgid "move files to directory"
-msgstr "přesunout soubory do složky"
+msgstr "přesunout soubory do adresáře"
 
 #: krenameimpl.cpp:473
 msgid "number (try also ##, ###, ... for leading zeros)"
@@ -1590,48 +1555,49 @@ msgstr "číslo (zkuste také ##, ###, ... pro předsazení nulami"
 
 #: krenameimpl.cpp:468
 msgid "old filename"
-msgstr "staré jméno souboru"
+msgstr "starý název souboru"
 
 #: krenameimpl.cpp:469
 msgid "old filename converted to lower case"
-msgstr "staré jméno souboru převedené na malá písmena"
+msgstr "starý název souboru převedený na malá písmena"
 
 #: krenameimpl.cpp:470
 msgid "old filename converted to upper case"
-msgstr "staré jméno souboru převedené na velká písmena"
+msgstr "starý název souboru převedený na velká písmena"
 
 #: main.cpp:55
 msgid "only show <num> preview items"
-msgstr ""
+msgstr "ukázat pouze<num>náhled položek"
 
 #: main.cpp:47
 msgid "set a template"
-msgstr "nastavit vzor"
+msgstr "nastavit šablonu"
 
 #: main.cpp:48
 msgid "set a template for the file extension"
-msgstr "nastavit vzor pro příponu souboru"
+msgstr "nastavit šablonu pro příponu souboru"
 
 #: main.cpp:54
 msgid "start KRename's selftest (developers only)"
-msgstr ""
+msgstr "začít s testováním KRename (pouze vývojáři)"
 
 #: main.cpp:53
 msgid "start renaming immediately"
-msgstr "začít přejmenování okamžitě"
+msgstr "začít okamžitě přejmenování"
 
 #: krenameimpl.cpp:481
 msgid "strip whitespaces leading and trailing"
-msgstr "odstraní počáteční a koncové bílé znaky"
+msgstr "odebere počáteční a koncové \"bílé\" znaky (prázdná místa)"
 
 #: krenameimpl.cpp:482
-#, fuzzy
 msgid "strip whitespaces leading and trailing of an arbitrary string"
-msgstr "odstraní počáteční a koncové bílé znaky"
+msgstr ""
+"odebere počáteční a koncové \"bílé\" znaky (prázdná místa) zcela náhodného "
+"řetězce"
 
 #: krenameimpl.cpp:477
 msgid "y characters of old filename starting at x"
-msgstr "y znaků starého jména souboru začínající pozicí x"
+msgstr "y znaků starého názvu souboru začínající pozicí x"
 
 #~ msgid " - Step %1 of %2"
 #~ msgstr " - Krok %1 ze %2"
