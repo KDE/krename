@@ -15,6 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
+#include "../config-krename.h"
+
 #ifdef HAVE_EXIV2
 #include "exiv2plugin.h"
 

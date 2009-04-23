@@ -14,6 +14,17 @@ DOM: Kontext menü im advance mode für alle text boxen:
 	    -> ...
 
 ========================================
+I forgot to mention in my prior e-mail, but I also noticed that the
+encoding conversion plugin seems to be missing from KRename for KDE 4.
+
+If it's not, I'd like to request a more discoverable interface. If it
+is, I'd like to request that it be re-added.
+
+Thanks
+
+-- 
+Stephan Sokolow
+========================================
 
 Stonki: Thumbnails auch im rename-tab fenster
 ========================================

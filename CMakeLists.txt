@@ -21,10 +21,22 @@ set(TAGLIB_MIN_VERSION "1.5")
 find_package(Taglib REQUIRED)
 macro_log_feature( TAGLIB_FOUND "taglib" "Read and write tags in audio files" "http://www.freshmeat.net/projects/taglib" TRUE "1.5.0" "")
 
+IF(TAGLIB_FOUND)
+  MESSAGE("-- The tablib library was found. KRename will be built with tablib support.")
+ELSE(TAGLIB_FOUND)
+  MESSAGE("-- The tablib library was not found. KRename will not be built with tablib support.")
+ENDIF(TAGLIB_FOUND)
+
 # Find exiv2
 set(EXIV2_MIN_VERSION "0.13") # AccessMode was added in 0.13
 find_package(Exiv2)
 macro_log_feature(EXIV2_FOUND "Exiv2" "A library to access image metadata" "http://www.exiv2.org" FALSE "")
+
+IF(EXIV2_FOUND)
+  MESSAGE("-- The exiv2 library was found. KRename will be built with exiv2 support.")
+ELSE(EXIV2_FOUND)
+  MESSAGE("-- The exiv2 library was not found. KRename will not be built with exiv2 support.")
+ENDIF(EXIV2_FOUND)
 
 CONFIGURE_FILE(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h )
 

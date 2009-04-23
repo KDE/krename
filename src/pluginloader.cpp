@@ -30,6 +30,8 @@
 #include "taglibplugin.h"
 #include "translitplugin.h"
 
+#include "../config-krename.h"
+
 #include <kservice.h>
 
 PluginLoader* PluginLoader::s_instance = NULL;

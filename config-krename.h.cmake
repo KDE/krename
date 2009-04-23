@@ -9,4 +9,7 @@
 /* have TagLib */
 #define HAVE_TAGLIB 1
 
+/* have Exiv2 */
+#define HAVE_EXIV2 ${EXIV2_FOUND}
+
 #define VERSION "${KRENAME_VERSION}"
