@@ -17,28 +17,25 @@
 
 #include "tokenhelpdialog.h"
 
-#include <QDialogButtonBox>
-#include <QPushButton>
+#include <kpushbutton.h>
 
 TokenHelpDialog::TokenHelpDialog( QLineEdit* edit, QWidget* parent )
-    : QDialog( parent ), m_edit( edit )
+    : KDialog( parent ), m_edit( edit )
 {
-    QVBoxLayout* layout = new QVBoxLayout( this );
-    QWidget*     widget = new QWidget( this );
+    m_widget.setupUi( mainWidget() );
 
-    m_widget.setupUi( widget );
-    m_buttons = new QDialogButtonBox( QDialogButtonBox::Close, Qt::Horizontal, this );
-    QPushButton* insert = m_buttons->addButton( i18n("&Insert"), QDialogButtonBox::YesRole );
+    this->setButtons( KDialog::Close | KDialog::User1 ); 
+    this->setButtonText( KDialog::User1, i18n("&Insert") ); 
+
+    KPushButton* insert = this->button( KDialog::User1 );
+    KPushButton* close = this->button( KDialog::Close );
     
     m_widget.searchCategory->searchLine()->setTreeWidget( m_widget.listCategories );
     m_widget.searchToken   ->searchLine()->setTreeWidget( m_widget.listTokens );
 
-
-    layout->addWidget( widget );
-    layout->addWidget( m_buttons );
-
     connect(insert, SIGNAL(clicked(bool)), SLOT(slotInsert()));
-    connect(m_buttons, SIGNAL(rejected()), SLOT(reject()));
+    connect(this, SIGNAL(rejected()), SLOT(reject()));
+    connect(close, SIGNAL(clicked(bool)), SLOT(saveConfig()));
 
     connect(m_widget.listCategories, SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(slotCategoryChanged(QTreeWidgetItem*)));
     connect(m_widget.listTokens,     SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(slotInsert()));
@@ -58,6 +55,8 @@ void TokenHelpDialog::add( const QString & headline, const QStringList & command
 
 int TokenHelpDialog::exec()
 {
+    loadConfig();
+
     if( !m_first.isEmpty() ) 
     {
         for( int i=0;i<m_widget.listCategories->topLevelItemCount(); i++ ) 
@@ -87,12 +86,43 @@ void TokenHelpDialog::slotCategoryChanged( QTreeWidgetItem* item )
 
 void TokenHelpDialog::slotInsert()
 {
+    saveConfig();
+
     QTreeWidgetItem* item = m_widget.listTokens->currentItem();
     
     if( item ) 
         m_edit->insert( item->text( 0 ) );
 
     this->accept();
+}
+
+void TokenHelpDialog::loadConfig() 
+{
+    KSharedConfigPtr config = KGlobal::config();
+
+    KConfigGroup groupGui = config->group( QString("TokenHelpDialog") );
+
+    int width = groupGui.readEntry( "Column0", QVariant(m_widget.listTokens->columnWidth( 0 )) ).toInt();
+    if( width > 0 )
+		m_widget.listTokens->setColumnWidth( 0, width );
+
+    width = groupGui.readEntry( "Column1", QVariant(m_widget.listTokens->columnWidth( 1 )) ).toInt();
+    if( width > 0 )
+	    m_widget.listTokens->setColumnWidth( 1, width );
+
+    this->restoreDialogSize( groupGui );
+}
+
+void TokenHelpDialog::saveConfig() 
+{
+    KSharedConfigPtr config = KGlobal::config();
+
+    KConfigGroup groupGui = config->group( QString("TokenHelpDialog") );
+
+    groupGui.writeEntry( "Column0", m_widget.listTokens->columnWidth( 0 ) );
+    groupGui.writeEntry( "Column1", m_widget.listTokens->columnWidth( 1 ) );
+    
+    this->saveDialogSize( groupGui );
 }
 
 #include "tokenhelpdialog.moc"

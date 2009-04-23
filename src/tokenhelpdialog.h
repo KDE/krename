@@ -18,15 +18,14 @@
 #ifndef _TOKEN_HELP_DIALOG_H_
 #define _TOKEN_HELP_DIALOG_H_
 
-#include <QDialog>
+#include <kdialog.h>
 
 #include "ui_tokenhelpwidget.h"
 
-class QDialogButtonBox;
 class QLineEdit;
 class QTreeWidgetItem;
 
-class TokenHelpDialog : public QDialog {
+class TokenHelpDialog : public KDialog {
  Q_OBJECT
  public:
     TokenHelpDialog( QLineEdit* edit, QWidget* parent = NULL );
@@ -49,10 +48,13 @@ class TokenHelpDialog : public QDialog {
     void slotInsert();
 
     void slotCategoryChanged( QTreeWidgetItem* item );
+    void saveConfig();
+
+ private:
+    void loadConfig();
 
  private:
     Ui::TokenHelpWidget m_widget;
-    QDialogButtonBox*   m_buttons;
 
     QLineEdit*          m_edit;
 
