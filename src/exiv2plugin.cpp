@@ -311,9 +311,19 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
     token = exifTags;
     while( *token ) 
     {
+        ExifKey key( *token );
+        QString help;
+        try {
+            help = QString::fromUtf8(key.tagLabel().c_str());
+        } catch( std::exception e ) {
+            help = "";
+            // exiv2 throws sometimes exceptions 
+            // because it trys to create std::string from NULL pointers
+        }
+
         QString cur( *token );
         this->addSupportedToken( prefix + cur );
-        m_help.append( QString("[") + prefix + cur + QString("];;") );
+        m_help.append( QString("[") + prefix + cur + QString("];;") + help );
 
         m_mapRealKeys[QString( prefix + cur ).toLower()] = cur;
         ++token;
@@ -323,9 +333,19 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
     token = xmpTags;
     while( *token ) 
     {
+        XmpKey key( *token );
+        QString help;
+        try {
+            help = QString::fromUtf8(key.tagLabel().c_str());
+        } catch( std::exception e ) {
+            help = "";
+            // exiv2 throws sometimes exceptions 
+            // because it trys to create std::string from NULL pointers
+        }
+        
         QString cur( *token );
         this->addSupportedToken( prefix + cur );
-        m_help.append( QString("[") + prefix + cur + QString("];;") );
+        m_help.append( QString("[") + prefix + cur + QString("];;") + help );
 
         m_mapRealKeys[QString( prefix + cur ).toLower()] = cur;
         ++token;
@@ -335,9 +355,19 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
     token = iptcTags;
     while( *token ) 
     {
+        IptcKey key( *token );
+        QString help;
+        try {
+            help = QString::fromUtf8(key.tagLabel().c_str());
+        } catch( std::exception e ) {
+            help = "";
+            // exiv2 throws sometimes exceptions 
+            // because it trys to create std::string from NULL pointers
+        }
+
         QString cur( *token );
         this->addSupportedToken( prefix + cur );
-        m_help.append( QString("[") + prefix + cur + QString("];;") );
+        m_help.append( QString("[") + prefix + cur + QString("];;") + help );
 
         m_mapRealKeys[QString( prefix + cur ).toLower()] = cur;
         ++token;

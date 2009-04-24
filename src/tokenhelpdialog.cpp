@@ -111,6 +111,11 @@ void TokenHelpDialog::loadConfig()
 	    m_widget.listTokens->setColumnWidth( 1, width );
 
     this->restoreDialogSize( groupGui );
+
+    QList<int> sizes = groupGui.readEntry( "Splitter", QList<int>() );
+    if( sizes.size() == 2 ) {
+        m_widget.splitter->setSizes( sizes );
+    }
 }
 
 void TokenHelpDialog::saveConfig() 
@@ -121,7 +126,7 @@ void TokenHelpDialog::saveConfig()
 
     groupGui.writeEntry( "Column0", m_widget.listTokens->columnWidth( 0 ) );
     groupGui.writeEntry( "Column1", m_widget.listTokens->columnWidth( 1 ) );
-    
+    groupGui.writeEntry( "Splitter", m_widget.splitter->sizes() );
     this->saveDialogSize( groupGui );
 }
 
