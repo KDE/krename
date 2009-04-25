@@ -17,7 +17,6 @@
 
 #include "krenamefile.h"
 
-#include <kfileitem.h>
 #include <kio/netaccess.h>
 #include <kio/previewjob.h>
 
@@ -40,8 +39,7 @@ public:
     QPixmap loadIcon( const KUrl & url ) 
     {
         return KIO::pixmapForUrl( url );
-
-	/*
+        /*
         KIO::UDSEntry entry;
         KIO::NetAccess::stat( url, entry, NULL );
         KFileItem item( entry, url );
@@ -55,9 +53,9 @@ public:
         }
         else
         {
-	    return KIO::pixmapForUrl( url );
+            return KIO::pixmapForUrl( url );
         }
-	*/
+        */
     }
 
 private:
@@ -78,6 +76,9 @@ private:
 KRenamePreviewProvider* KRenamePreviewProvider::s_instance = NULL;
 
 
+const int KRenameFile::DEFAULT_ICON_SIZE = 64;
+const char* KRenameFile::EXTRA_DATA_KEY = "KRenameFile::EXTRA_DATA_KEY";
+
 KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int dot )
     : m_bValid( false ), m_error( 0 )
 {
@@ -88,6 +89,7 @@ KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int 
     m_bValid     = file.isReadable();
     m_bDirectory = file.isDir();
 
+    m_fileItem = file;
     initFileDescription( m_src, src, eSplitMode, dot );
 }
 
@@ -100,6 +102,8 @@ KRenameFile::KRenameFile( const KUrl & src, bool directory, ESplitMode eSplitMod
 KRenameFile::KRenameFile( const KFileItem& item, ESplitMode eSplitMode, unsigned int dot )
     : m_bDirectory( item.isDir() ), m_bValid( item.isReadable() ), m_error( 0 )
 {
+    m_fileItem = item;
+
     initFileDescription( m_src, item.url(), eSplitMode, dot );
 }
 
@@ -255,4 +259,24 @@ const KUrl KRenameFile::srcUrl() const
     }
 }
 
+const KFileItem & KRenameFile::fileItem() const
+{
+    if( m_fileItem.isNull() )
+    {
+        // No file item has been constructed
+        // create one first.
 
+        KIO::UDSEntry entry;
+        KIO::NetAccess::stat( m_src.url, entry, NULL );
+        KFileItem file( entry, m_src.url );
+        
+        const_cast<KRenameFile*>(this)->m_fileItem = file;
+    }
+
+    // Update extra as often as possible
+    // As the address is changed through sorting and moving files
+    // It is only valid if no moving of data has happened!
+    const_cast<KRenameFile*>(this)->m_fileItem.setExtraData( KRenameFile::EXTRA_DATA_KEY, 
+                                                             const_cast<KRenameFile*>(this) );
+    return m_fileItem;
+}

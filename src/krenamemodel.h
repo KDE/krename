@@ -22,7 +22,13 @@
 
 #include <QAbstractListModel>
 
+namespace KIO {
+    class KJob;
+};
+
 class ThreadedLister;
+class KFileItem;
+class QPixmap;
 
 /** This enum is used to specify a sorting mode
  */
@@ -133,7 +139,9 @@ class KRenameModel : public QAbstractListModel {
    void filesDropped();
    
  private slots:
-     void slotListerDone( ThreadedLister* lister );
+   void slotListerDone( ThreadedLister* lister );
+   void gotPreview (const KFileItem &item, const QPixmap &preview);
+   void slotPreviewResult( KIO::KJob* );
 
  private:
    KRenameFile::List* m_vector;

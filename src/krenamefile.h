@@ -20,6 +20,7 @@
 
 #include <QVector>
 
+#include <kfileitem.h>
 #include <kurl.h>
 #include <QPixmap>
 
@@ -54,6 +55,10 @@ class KRenameFile {
     };
 
  public:
+    
+    static const int DEFAULT_ICON_SIZE;
+    static const char* EXTRA_DATA_KEY;
+
     /** A list of KRenameFile objects
      */
     typedef QVector<KRenameFile> List;
@@ -227,7 +232,7 @@ class KRenameFile {
 
     inline void setOverrideSrcDirectory( const QString & dir ) 
     {
-	m_overrideDir = dir;
+        m_overrideDir = dir;
     }
 
     inline const QString & srcFilename() const 
@@ -236,61 +241,68 @@ class KRenameFile {
     }
 
     inline const QString & srcExtension() const 
-        {
-            return m_src.extension;
-        }
-
+    {
+        return m_src.extension;
+    }
+    
     inline const QString & srcDirectory() const 
-        {
-            return (m_overrideDir.isNull() ? m_src.directory : m_overrideDir);
-        }
-
+    {
+        return (m_overrideDir.isNull() ? m_src.directory : m_overrideDir);
+    }
+    
     const KUrl srcUrl() const; 
-
+    
     inline void setDstFilename( const QString & filename ) 
-        {
-            m_dst.filename = filename;
-        }
-
+    {
+        m_dst.filename = filename;
+    }
+    
     inline const QString & dstFilename() const 
-        {
-            return m_dst.filename;
-        }
-
+    {
+        return m_dst.filename;
+    }
+    
     inline void setDstExtension( const QString & extension ) 
-        {
-            m_dst.extension = extension;
-        }
-
+    {
+        m_dst.extension = extension;
+    }
+    
     inline const QString & dstExtension() const 
-        {
-            return m_dst.extension;
-        }
-
+    {
+        return m_dst.extension;
+    }
+    
     inline void setDstDirectory( const QString & directory ) 
-        {
-            m_dst.directory = directory;
-        }
-
+    {
+        m_dst.directory = directory;
+    }
+    
     inline const QString & dstDirectory() const 
-        {
-            return m_dst.directory;
-        }
-
+    {
+        return m_dst.directory;
+    }
+    
     inline void setDstUrl( const KUrl & url ) 
-        {
-            m_dst.url = url;
-        }
+    {
+        m_dst.url = url;
+    }
 
     inline const KUrl & dstUrl() const 
-        {
-            return m_dst.url;
-        }
-
+    {
+        return m_dst.url;
+    }
+    
     inline bool isDirectory() const
-        {
-            return m_bDirectory;
-        }
+    {
+        return m_bDirectory;
+    }
+
+    /**
+     * Get access to the internal file item
+     *
+     * @returns a KFileItem
+     */
+    const KFileItem & fileItem() const;
 
  private:
     void initFileDescription( TFileDescription & rDescription, const KUrl & url, ESplitMode eSplitMode, unsigned int dot ) const;
@@ -301,6 +313,8 @@ class KRenameFile {
     void loadPreviewIcon();
 
  private:
+    KFileItem        m_fileItem;
+
     TFileDescription m_src;
     TFileDescription m_dst;
 

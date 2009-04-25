@@ -400,6 +400,8 @@ bool KRenameWindow::isPreviewEnabled() const
 void KRenameWindow::setPreviewEnabled( bool bPreview )
 {
     m_pageFiles->checkPreview->setChecked( bPreview );
+
+    slotPreviewChanged();
 }
 
 bool KRenameWindow::isPreviewNamesEnabled() const
@@ -410,6 +412,8 @@ bool KRenameWindow::isPreviewNamesEnabled() const
 void KRenameWindow::setPreviewNamesEnabled( bool bPreview )
 {
     m_pageFiles->checkName->setChecked( bPreview );
+
+    slotPreviewChanged();
 }
 
 int KRenameWindow::numberStartIndex() const
@@ -743,6 +747,7 @@ void KRenameWindow::slotPreviewChanged()
     model->setEnablePreview( m_pageFiles->checkPreview->isChecked(), m_pageFiles->checkName->isChecked() );
     emit filePreviewChanged( m_pageFiles->checkPreview->isChecked(), m_pageFiles->checkName->isChecked() );
 
+    m_pageFiles->fileList->setAcceptDrops( true );
     m_pageFiles->fileList->repaint();
     this->slotEnableControls();
 }

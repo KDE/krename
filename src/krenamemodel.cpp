@@ -25,9 +25,10 @@
 #include <klocale.h>
 #include <krandom.h>
 #include <krun.h>
+#include <kio/previewjob.h>
 
 // Helper functions for sorting
-const QString findNumInString( unsigned int pos, const QString & s )
+static const QString findNumInString( unsigned int pos, const QString & s )
 {
     QString num;
     
@@ -47,7 +48,7 @@ const QString findNumInString( unsigned int pos, const QString & s )
     return num;
 }
 
-int compareNummeric( const QString & s1, const QString & s2 )
+static int compareNummeric( const QString & s1, const QString & s2 )
 {
     int z = 0;
     int max = ( s1.length() > s2.length() ? s1.length() : s2.length() );
@@ -83,17 +84,17 @@ int compareNummeric( const QString & s1, const QString & s2 )
 }
 
 // Less than functions for sorting
-bool ascendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
+static bool ascendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
 {
     return file1.srcUrl() < file2.srcUrl();
 }
 
-bool descendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
+static bool descendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
 {
     return !(file1.srcUrl() < file2.srcUrl());
 }
 
-bool numericKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
+static bool numericKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
 {
     KUrl url1 = file1.srcUrl();
     KUrl url2 = file2.srcUrl();
@@ -108,7 +109,7 @@ bool numericKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & 
     return false;
 }
 
-bool randomKRenameFileLessThan( const KRenameFile &, const KRenameFile & ) 
+static bool randomKRenameFileLessThan( const KRenameFile &, const KRenameFile & ) 
 {
     return static_cast<double>(KRandom::random()) / static_cast<double>(RAND_MAX) < 0.5;
 }
@@ -288,7 +289,49 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
 
         if( m_maxDots > oldMaxDots ) 
             emit maxDotsChanged( m_maxDots );
+ 
+        if( m_preview ) 
+        {
+            // Construct a list of KFileItems
+            // Only do this is necessary,
+            // as this might create new KFileItems which is slow.
+            KFileItemList fileItems;
+            it = files.begin();
+            while( it != files.end() )
+            {
+                fileItems << (*it).fileItem();
+
+                ++it;
+            }
+
+            // TODO: Enable this job, it currently crashes for me
+            /*
+             // Start a job to create the real file previews
+            KIO::PreviewJob* job = KIO::filePreview( fileItems, KRenameFile::DEFAULT_ICON_SIZE );
+            
+            connect( job, SIGNAL(gotPreview(const KFileItem &,const QPixmap &)),
+                     this, SLOT(gotPreview(const KFileItem &,const QPixmap &)) );
+            connect( job, SIGNAL( result( KIO::KJob * ) ),
+                     this, SLOT( slotPreviewResult( KIO::KJob * ) ) );
+            job->start();
+            */
+        }
     }
+}
+
+void KRenameModel::gotPreview (const KFileItem &item, const QPixmap &preview)
+{
+    const KRenameFile* file = static_cast<const KRenameFile*>(item.extraData(KRenameFile::EXTRA_DATA_KEY));
+
+    if( file != NULL && file->fileItem() == item ) 
+    {
+        const_cast<KRenameFile*>(file)->setIcon( preview );
+    }
+}
+
+void KRenameModel::slotPreviewResult( KIO::KJob* )
+{
+    this->reset();
 }
 
 void KRenameModel::removeFiles( const QList<int> & remove )

@@ -46,6 +46,7 @@ CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
         m_widget.radioInput->setChecked( false );
     }
 
+    m_widget.labelPreview->setPixmap( file.icon() );
     m_widget.lineEdit->setText( filename );
     slotEnableControls();
 }
