@@ -416,7 +416,7 @@ void KRenameImpl::slotAdvancedNumberingDlg()
         m_renamer.setNumberReset( dialog.resetCounter() );
         m_renamer.setNumberSkipList( dialog.skipNumbers() );
 
-	m_window->setNumberStartIndex( dialog.startIndex() );
+        m_window->setNumberStartIndex( dialog.startIndex() );
 
         slotUpdatePreview();
     }
@@ -627,7 +627,13 @@ void KRenameImpl::loadConfig()
 
 void KRenameImpl::saveConfig() 
 {
+    // Me might get a saveConfig signal because of signals and slots
+    // even if m_window was already delted. So ignore these events
+    if(!m_window) 
+        return;
+
     KSharedConfigPtr config = KGlobal::config();
+
 
     KConfigGroup groupGui = config->group( QString("GUISettings") );
     groupGui.writeEntry( "firststart4", false );
