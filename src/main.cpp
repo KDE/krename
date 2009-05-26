@@ -47,8 +47,9 @@ int main(int argc, char *argv[])
     options.add( "template +", ki18n("set a template") );
     options.add( "extension +", ki18n("set a template for the file extension") );
     options.add( "use-plugin +", ki18n("enable a plugin for use") );
-    options.add( "copy +[dir]", ki18n("copy files to directory") );
-    options.add( "move +[dir]", ki18n("move files to directory") );
+    options.add( "copy +[dir]", ki18n("copy files to directory or url") );
+    options.add( "move +[dir]", ki18n("move files to directory or url") );
+    options.add( "link +[dir]", ki18n("link files to directory or url") );
     options.add( "profile +[profile]", ki18n("load the profile named [profile] on startup") );
     options.add( "start", ki18n("start renaming immediately") );
     options.add( "test", ki18n("start KRename's selftest (developers only)") );

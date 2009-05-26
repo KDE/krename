@@ -183,6 +183,8 @@ class KRenameImpl : public QObject {
     int                   m_lastDot;       ///< The last used dot value for splitmode
 
     PluginLoader*         m_pluginLoader;  ///< Global plugin loader instance
+
+    int                   m_runningThreadedListersCount; ///< Count of running threaded listers
 };
 
 #if 0 

@@ -51,7 +51,8 @@
 
 KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list )
     : QObject( (QObject*)window ), m_window( window ),
-      m_lastSplitMode( eSplitMode_FirstDot ), m_lastDot( 0 )
+      m_lastSplitMode( eSplitMode_FirstDot ), m_lastDot( 0 ),
+      m_runningThreadedListersCount( 0 )
 {
     setupActions();
     setupSlots();
@@ -97,7 +98,8 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list
     }
 
     KRenameWindow* w  = new KRenameWindow( NULL );
-    KRenameImpl* impl = new KRenameImpl( w, list );
+    //KRenameImpl* impl = new KRenameImpl( w, list );
+    new KRenameImpl( w, list );
 	// Windows shows KRename otherwise outside of the visible
 	// screen area
 	if( !rect.isNull() )
@@ -180,7 +182,7 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
     
     while( it != list.end() )
     {
-	qDebug("Number of items: %s", (*it).prettyUrl().toUtf8().data() );
+        qDebug("Number of items: %s", (*it).prettyUrl().toUtf8().data() );
 
         KRenameFile item( *it );
         if( item.isDirectory() )
@@ -195,6 +197,8 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
             thl->setListHidden( hidden );
             thl->setListRecursively( recursively );
             thl->setListDirnames( dirsWithFiles );
+
+            m_runningThreadedListersCount++;
 
             thl->start();
         }
@@ -217,26 +221,41 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
 
 void KRenameImpl::parseCmdLineOptions()
 {
+    bool gotFilenames = false;
     KCmdLineArgs* args = KCmdLineArgs::parsedArgs();
 
     if( args->isSet( "test" ) )
         QTimer::singleShot( 0, this, SLOT( selfTest() ) );
 
-    /*
-    QCStringList optlist = args->getOptionList ( "r" );
-    for (QCStringList::ConstIterator it=optlist.begin(); it!=optlist.end(); ++it)
+    // Add all recursive directoris
+    KUrl::List recursiveList;
+    QStringList optlist = args->getOptionList ( "r" );
+    for (QStringList::ConstIterator it=optlist.begin(); it!=optlist.end(); ++it)
     {
 
-        KURL url;
+        KUrl url;
         url.setPath( *it );
-        fileList->addDir( url, "*", false, true, false );
+
+        recursiveList.append( url  );
     }
-    */
+
+    if( !recursiveList.isEmpty() ) 
+    {
+        gotFilenames = true;
+        // Add all directories recursive, but no hiden files
+        this->addFilesOrDirs( recursiveList, "*", true, false, false, false );
+    }
+
 
     // Add all files from the commandline options
     KUrl::List list;
     for( int i = 0; i < args->count(); i++)
         list.append( args->url( i ) );
+
+    if( !list.isEmpty() ) 
+    {
+        gotFilenames = true;
+    }
 
     this->addFilesOrDirs( list );
 
@@ -249,37 +268,43 @@ void KRenameImpl::parseCmdLineOptions()
         m_hasCommandlineProfile = true;
         ProfileManager::loadProfile( QString( templ ), this );
     }
-
+    
     if( !args->isSet( "previewitems" ) )
         numRealTimePreview = -1;
     else
         numRealTimePreview = QString( args->getOption( "previewitems" ) ).toInt();
+    */
 
-    templ = args->getOption( "template" );
+    QString templ = args->getOption( "template" );
     if( !templ.isEmpty() )
-        filename->setText( templ );
+        m_window->setFilenameTemplate( templ, false );
 
-    templ = args->getOption( "extension" );
-    if( !templ.isEmpty() ) 
+    QString extension = args->getOption( "extension" );
+    if( !extension.isEmpty() ) 
+        m_window->setExtensionTemplate( extension, false );
+
+    QString copyDir = args->getOption( "copy" );
+    if( !copyDir.isEmpty() )
     {
-        extemplate->setText( templ );
-        checkExtension->setChecked( false );
+        m_window->setRenameMode( eRenameMode_Copy );
+        m_window->setDestinationUrl( KUrl( copyDir ) );
     }
 
-    templ = args->getOption( "copy" );
-    if( !templ.isEmpty() ) 
+    QString moveDir = args->getOption( "move" );
+    if( !moveDir.isEmpty() )
     {
-        urlrequester->setURL( templ );
-        optionCopy->setChecked( true );
+        m_window->setRenameMode( eRenameMode_Move );
+        m_window->setDestinationUrl( KUrl( moveDir ) );
     }
 
-    templ = args->getOption( "move" );
-    if( !templ.isEmpty() ) 
+    QString linkDir = args->getOption( "link" );
+    if( !linkDir.isEmpty() )
     {
-        urlrequester->setURL( templ );
-        optionMove->setChecked( true );
+        m_window->setRenameMode( eRenameMode_Link );
+        m_window->setDestinationUrl( KUrl( linkDir ) );
     }
-        
+
+/*        
     QCStringList uselist = args->getOptionList ( "use-plugin" );
     if( !uselist.isEmpty() ) 
     {
@@ -297,21 +322,19 @@ void KRenameImpl::parseCmdLineOptions()
 
         pluginHelpChanged();
     }
-    
+
+*/
     bool startnow = args->isSet( "start" );
-    
+
     // Free some memory
     args->clear();      
 
-    enableControls();
-    updateCount();
-    updatePreview();
     
-    if( fileList->count() )
+    if( gotFilenames )
     {
         // we got already filenames over the commandline, so show directly the last
         // page of the wizard
-        emit showPage( m_wizard ? 3 : 4 );
+        m_window->showFilenameTab();
     }
 
     if( startnow ) 
@@ -321,14 +344,13 @@ void KRenameImpl::parseCmdLineOptions()
         // all files in the list.
         // so let's wait for file adding to finish first
         // before starting.
-        while( fileList->runningAddListeners() > 0 )
+        while( m_runningThreadedListersCount > 0 )
             kapp->processEvents();
 
-        if( fileList->count() ) 
+        if( m_vector.count() > 0 )
             // start renaming
-            QTimer::singleShot( 200, this, SLOT( start() ) );
+            QTimer::singleShot( 200, this, SLOT( slotStart() ) );
     }
-    */
 }
 
 
@@ -457,6 +479,15 @@ void KRenameImpl::slotListerDone( ThreadedLister* lister )
     // update preview
     slotUpdateCount();
     slotUpdatePreview();
+
+    m_runningThreadedListersCount--;
+
+    if( m_runningThreadedListersCount < 0 ) 
+    {
+        // To be safe
+        qDebug("m_runningThreadedListersCount=%i", m_runningThreadedListersCount);
+        m_runningThreadedListersCount = 0;
+    }
 } 
 
 void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)

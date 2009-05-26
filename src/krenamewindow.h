@@ -91,6 +91,27 @@ class KRenameWindow : public KMainWindow {
      */
     void setFilenameTemplate( const QString & templ, bool insert = false );
 
+    /** Set the template for the filename extension.
+     *
+     *  @param templ the new template
+     *  @param insert if true the template string will be inserted into the current
+     *         template otherwise it will be replaced
+     */
+    void setExtensionTemplate( const QString & templ, bool insert = false );
+
+    /** Change the renmae mode 
+     *
+     *  @param mode the renaming mode to use
+     */
+    void setRenameMode( ERenameMode mode );
+
+    /** Set the destination url
+     * 
+     * @param url destination url for eRenameMode_Copy, 
+     * eRenameMode_Move and eRenameMode_Link
+     */
+    void setDestinationUrl( const KUrl & url );
+
     /** Reset the display of the internal file list
      */
     void resetFileList();
@@ -179,6 +200,15 @@ class KRenameWindow : public KMainWindow {
 
     bool isAdvancedMode() const;
     void setAdvancedMode( bool bAdvanced );
+
+    /**
+     * Shows the filename tab
+     * This might be useful, if the user
+     * passed filenames via the commandline
+     * and wants to immediately work with the 
+     * filename template.
+     */
+    void showFilenameTab();
 
  public slots:
     /** Resets the enabled/disabled state of all GUI elements correctly

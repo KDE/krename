@@ -333,6 +333,56 @@ void KRenameWindow::setFilenameTemplate( const QString & templ, bool insert )
         m_pageFilename->filenameTemplate->lineEdit()->setText( templ );
 }
 
+void KRenameWindow::setExtensionTemplate( const QString & templ, bool insert )
+{
+    m_pageFilename->checkExtension->setChecked( true );
+    m_pageFilename->comboExtensionSimple->setCurrentIndex( 
+        m_pageFilename->comboExtensionSimple->count() - 1 );
+
+    if( insert )
+        m_pageFilename->extensionTemplate->lineEdit()->insert( templ );
+    else
+        m_pageFilename->extensionTemplate->lineEdit()->setText( templ );
+}
+
+void KRenameWindow::setRenameMode( ERenameMode eMode ) 
+{
+    ERenameMode mode = eRenameMode_Rename;
+
+    m_pageDests->optionRename->setChecked( false );
+    m_pageDests->optionCopy->setChecked( false );
+    m_pageDests->optionMove->setChecked( false );
+    m_pageDests->optionLink->setChecked( false );
+    
+    switch( eMode ) 
+    {
+        case eRenameMode_Rename:
+            m_pageDests->optionRename->setChecked( true );
+            break;
+        case eRenameMode_Copy:
+            m_pageDests->optionCopy->setChecked( true );
+            break;
+        case eRenameMode_Move:
+            m_pageDests->optionMove->setChecked( true );
+            break;
+        case eRenameMode_Link:
+            m_pageDests->optionLink->setChecked( true );
+            break;
+        default:
+            // Default
+            m_pageDests->optionRename->setChecked( true );
+            break;
+    }
+
+    this->slotEnableControls();
+    emit renameModeChanged( eMode );
+}
+
+void KRenameWindow::setDestinationUrl( const KUrl & url )
+{
+    m_pageDests->urlrequester->setUrl( url );
+}
+
 void KRenameWindow::resetFileList() 
 {
     m_pageFiles->fileList->reset();
@@ -454,6 +504,11 @@ bool KRenameWindow::isAdvancedMode() const
 void KRenameWindow::setAdvancedMode( bool bAdvanced )
 {
     m_pageFilename->tabWidget->setCurrentIndex( bAdvanced ? 0 : 1 );
+}
+
+void KRenameWindow::showFilenameTab()
+{
+    m_tabBar->setCurrentIndex( MAX_PAGES - 1 );
 }
 
 void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom, const QString & templ ) 
