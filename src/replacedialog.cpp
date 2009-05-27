@@ -75,7 +75,7 @@ void ReplaceDialog::slotEdit()
     replace.setupUi( &dlg );
 
     int row = m_widget.list->currentRow();
-    replace.checkRegular->setChecked( m_widget.list->item( row, 1 )->checkState() == Qt::Checked );
+    replace.checkRegular->setChecked( m_widget.list->item( row, 0 )->checkState() == Qt::Checked );
     replace.lineFind->setText( m_widget.list->item( row, 1 )->text() );
     replace.lineReplace->setText( m_widget.list->item( row, 2 )->text() );
 
