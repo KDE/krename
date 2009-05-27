@@ -126,6 +126,11 @@ const KRenameFile & KRenameFile::operator=( const KRenameFile & rhs )
     return *this;
 }
 
+bool KRenameFile::operator==( const KFileItem & item ) const
+{
+    return this->fileItem() == item;
+}
+
 void KRenameFile::setCurrentSplitMode( ESplitMode eSplitMode, unsigned int dot )
 {
     KUrl    url      = m_src.url;
@@ -265,7 +270,6 @@ const KFileItem & KRenameFile::fileItem() const
     {
         // No file item has been constructed
         // create one first.
-
         KIO::UDSEntry entry;
         KIO::NetAccess::stat( m_src.url, entry, NULL );
         KFileItem file( entry, m_src.url );
@@ -273,10 +277,12 @@ const KFileItem & KRenameFile::fileItem() const
         const_cast<KRenameFile*>(this)->m_fileItem = file;
     }
 
+    /*
     // Update extra as often as possible
     // As the address is changed through sorting and moving files
     // It is only valid if no moving of data has happened!
     const_cast<KRenameFile*>(this)->m_fileItem.setExtraData( KRenameFile::EXTRA_DATA_KEY, 
                                                              const_cast<KRenameFile*>(this) );
+    */
     return m_fileItem;
 }

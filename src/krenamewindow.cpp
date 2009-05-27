@@ -347,8 +347,6 @@ void KRenameWindow::setExtensionTemplate( const QString & templ, bool insert )
 
 void KRenameWindow::setRenameMode( ERenameMode eMode ) 
 {
-    ERenameMode mode = eRenameMode_Rename;
-
     m_pageDests->optionRename->setChecked( false );
     m_pageDests->optionCopy->setChecked( false );
     m_pageDests->optionMove->setChecked( false );

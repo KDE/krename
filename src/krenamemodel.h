@@ -22,10 +22,6 @@
 
 #include <QAbstractListModel>
 
-namespace KIO {
-    class KJob;
-};
-
 class ThreadedLister;
 class KFileItem;
 class QPixmap;
@@ -141,7 +137,6 @@ class KRenameModel : public QAbstractListModel {
  private slots:
    void slotListerDone( ThreadedLister* lister );
    void gotPreview (const KFileItem &item, const QPixmap &preview);
-   void slotPreviewResult( KIO::KJob* );
 
  private:
    KRenameFile::List* m_vector;

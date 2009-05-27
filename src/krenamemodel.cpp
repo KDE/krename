@@ -305,33 +305,43 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
             }
 
             // TODO: Enable this job, it currently crashes for me
-            /*
-             // Start a job to create the real file previews
+            
+            // Start a job to create the real file previews
             KIO::PreviewJob* job = KIO::filePreview( fileItems, KRenameFile::DEFAULT_ICON_SIZE );
             
             connect( job, SIGNAL(gotPreview(const KFileItem &,const QPixmap &)),
                      this, SLOT(gotPreview(const KFileItem &,const QPixmap &)) );
-            connect( job, SIGNAL( result( KIO::KJob * ) ),
-                     this, SLOT( slotPreviewResult( KIO::KJob * ) ) );
             job->start();
-            */
         }
     }
 }
 
 void KRenameModel::gotPreview (const KFileItem &item, const QPixmap &preview)
 {
-    const KRenameFile* file = static_cast<const KRenameFile*>(item.extraData(KRenameFile::EXTRA_DATA_KEY));
+    /*
+    const KRenameFile* file = 
+        static_cast<const KRenameFile*>(item.extraData(KRenameFile::EXTRA_DATA_KEY));
+    */
 
-    if( file != NULL && file->fileItem() == item ) 
+    KRenameFile* file = NULL;
+    // TODO: Find a more optimal "search algorithm" ....
+    KRenameFile::List::iterator it = m_vector->begin();
+    while( it != m_vector->end() ) 
     {
-        const_cast<KRenameFile*>(file)->setIcon( preview );
-    }
-}
+        if( (*it).srcUrl() == item.url() ) 
+        {
+            file = &(*it);
+            break;
+        } 
 
-void KRenameModel::slotPreviewResult( KIO::KJob* )
-{
-    this->reset();
+        ++it;
+    }
+
+    //it = find( m_vector->begin(), m_vector->end(), item );
+    if( file != NULL ) // && file->fileItem() == item ) 
+    {
+        file->setIcon( preview );
+    }
 }
 
 void KRenameModel::removeFiles( const QList<int> & remove )

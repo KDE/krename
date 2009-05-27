@@ -195,6 +195,13 @@ class KRenameFile {
      */
     const KRenameFile & operator=( const KRenameFile & rhs );
 
+    /** Compare a KRenameFile object to a KFileItem
+     * 
+     *  \returns true if the file item of this KRenameFile
+     *           is identical to the parameter
+     */
+    bool operator==( const KFileItem & item ) const;
+
     /** 
      * \returns true if this file references 
      *               an existing file or directory
