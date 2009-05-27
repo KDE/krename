@@ -539,6 +539,13 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
         if( !file.manualChanges().isNull() )
             return QVariant( Qt::blue );
     }
+    /*
+      Icons are to large, so this is disabled
+    else if( role == Qt::DecorationRole && index.column() == 0 ) 
+    {
+        return m_vector->at(index.row()).icon();
+    }
+    */
 
     return QVariant();
     

@@ -22,6 +22,7 @@
 
 #include <QAbstractListModel>
 
+
 class ThreadedLister;
 class KFileItem;
 class QPixmap;
