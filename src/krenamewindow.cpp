@@ -218,7 +218,7 @@ void KRenameWindow::setupSlots()
     connect( m_pageFiles->checkPreview,    SIGNAL(clicked(bool)), SLOT( slotPreviewChanged()));
     connect( m_pageFiles->checkName,       SIGNAL(clicked(bool)), SLOT( slotPreviewChanged()));
     connect( m_pageFiles->comboSort,       SIGNAL(currentIndexChanged(int)), SLOT( slotSortChanged(int)));
-    connect( m_pageFiles->fileList,        SIGNAL(activated(const QModelIndex&)), SLOT( slotOpenFile(const QModelIndex&)));
+    connect( m_pageFiles->fileList,        SIGNAL(doubleClicked(const QModelIndex&)), SLOT( slotOpenFile(const QModelIndex&)));
     connect( m_pageFiles->buttonUp,        SIGNAL(clicked(bool)), SLOT( slotMoveUp() ) );
     connect( m_pageFiles->buttonDown,      SIGNAL(clicked(bool)), SLOT( slotMoveDown() ) );
 

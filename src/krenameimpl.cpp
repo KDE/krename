@@ -182,8 +182,6 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
     
     while( it != list.end() )
     {
-        qDebug("Number of items: %s", (*it).prettyUrl().toUtf8().data() );
-
         KRenameFile item( *it );
         if( item.isDirectory() )
         {
@@ -199,7 +197,6 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
             thl->setListDirnames( dirsWithFiles );
 
             m_runningThreadedListersCount++;
-            qDebug("ListenersCount: %i", m_runningThreadedListersCount);
             thl->start();
         }
         else 
