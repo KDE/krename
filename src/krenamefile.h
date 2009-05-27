@@ -36,7 +36,7 @@ enum ESplitMode {
 };
 
 class KRenameFile {
-    typedef struct TFileDescription {
+    struct TFileDescription {
         QString filename;
         QString extension;
         QString directory;

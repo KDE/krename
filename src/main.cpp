@@ -53,7 +53,8 @@ int main(int argc, char *argv[])
     options.add( "profile +[profile]", ki18n("load the profile named [profile] on startup") );
     options.add( "start", ki18n("start renaming immediately") );
     options.add( "test", ki18n("start KRename's selftest (developers only)") );
-    options.add( "previewitems <num>",  ki18n("only show <num> preview items") );
+    // This option was never implemented in the KDE4 version:
+    //options.add( "previewitems <num>",  ki18n("only show <num> preview items") );
 
     KAboutData aboutData( "krename", "krename", ki18n("KRename"), VERSION, ki18n(
                               "KRename is a batch file renamer which can rename a\n"
@@ -62,7 +63,7 @@ int main(int argc, char *argv[])
                               "Testing, bug fixes and feature request are as welcome\n"
                               "as financial support (everybody needs money ;)\nSee help files for details.\n" ),
                           KAboutData::License_GPL, ki18n("KRename Build:" __DATE__ " " __TIME__ )
-                          , ki18n("(c) 2001-2008, Dominik Seichter\n"),
+                          , ki18n("(c) 2001-2009, Dominik Seichter\n"),
                           "http://www.krename.net", "domseichter@web.de" );
 
     aboutData.addAuthor( ki18n("Dominik Seichter"), ki18n("developer and maintainer"), "domseichter@web.de",

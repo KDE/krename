@@ -79,8 +79,7 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
     QRegExp filter( m_filter );
     filter.setPatternSyntax( QRegExp::Wildcard );
 
-    KRenameFile::List files ;
-    files.reserve( list.count() ); 
+    m_files.reserve( m_files.count() + list.count() ); 
     
     KIO::UDSEntryList::const_iterator it = list.begin();
     while( it != list.end() ) 
@@ -101,24 +100,31 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
             {
                 // Filter out parent and current directory
                 if( displayName != "." && displayName != ".." )
-                    files.append( KRenameFile( KFileItem( *it, url ) ) );
+                    m_files.append( KRenameFile( KFileItem( *it, url ) ) );
             }
             else if( !m_listDirnamesOnly && !(*it).isDir() )
             {
-                files.append( KRenameFile( KFileItem( *it, url ) ) );
+                m_files.append( KRenameFile( KFileItem( *it, url ) ) );
             }
  
             ++it;
         }
     }
-    
-    s_mutex.lock();
-    m_model->addFiles( files );
-    s_mutex.unlock();
 }
 
 void ThreadedLister::completed()
 {
+    if( m_files.count() > 0 ) 
+    {
+        // We add the files in the completed slot
+        // and not directly in the foundItem slot,
+        // as the latter can produce deadlocks if
+        // we get a signal while we keep the mutex!
+        s_mutex.lock();
+        m_model->addFiles( m_files );
+        s_mutex.unlock();
+    }
+
     emit listerDone( this );
 }
 

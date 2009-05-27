@@ -199,7 +199,7 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
             thl->setListDirnames( dirsWithFiles );
 
             m_runningThreadedListersCount++;
-
+            qDebug("ListenersCount: %i", m_runningThreadedListersCount);
             thl->start();
         }
         else 
@@ -236,6 +236,7 @@ void KRenameImpl::parseCmdLineOptions()
         KUrl url;
         url.setPath( *it );
 
+        qDebug("Adding recursive: %s", (*it).toUtf8().data());
         recursiveList.append( url  );
     }
 
@@ -268,11 +269,6 @@ void KRenameImpl::parseCmdLineOptions()
         m_hasCommandlineProfile = true;
         ProfileManager::loadProfile( QString( templ ), this );
     }
-    
-    if( !args->isSet( "previewitems" ) )
-        numRealTimePreview = -1;
-    else
-        numRealTimePreview = QString( args->getOption( "previewitems" ) ).toInt();
     */
 
     QString templ = args->getOption( "template" );
@@ -339,6 +335,7 @@ void KRenameImpl::parseCmdLineOptions()
 
     if( startnow ) 
     {
+        qDebug("Waiting for listenters: %i\n", m_runningThreadedListersCount );
         // As file adding runs in a another trhread,
         // there might be adding in progress but not yet
         // all files in the list.
@@ -364,9 +361,8 @@ void KRenameImpl::slotAddFiles()
 
     if( dialog.exec() == QDialog::Accepted ) 
     {
-	qDebug("Number of items: %i", dialog.selectedUrls().count() );
         this->addFilesOrDirs( dialog.selectedUrls(), dialog.currentFilter(), 
-			      widget->addRecursively(), widget->addDirsWithFiles(),
+                              widget->addRecursively(), widget->addDirsWithFiles(),
                               widget->addDirsOnly(), widget->addHidden() );
     }
 }
@@ -479,6 +475,8 @@ void KRenameImpl::slotListerDone( ThreadedLister* lister )
     // update preview
     slotUpdateCount();
     slotUpdatePreview();
+
+    qDebug("Listener Done ListenersCount: %i", m_runningThreadedListersCount);
 
     m_runningThreadedListersCount--;
 

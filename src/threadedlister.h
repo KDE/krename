@@ -24,6 +24,8 @@
 
 #include <kfileitem.h>
 
+#include "krenamefile.h"
+
 class KRenameModel;
 class QMutex;
 class QWidget;
@@ -83,6 +85,7 @@ class ThreadedLister : public QObject
 
         QWidget*          m_cache;
         KRenameModel*     m_model;
+        KRenameFile::List m_files;
 };
 
 void ThreadedLister::setListDirnames( bool names )
