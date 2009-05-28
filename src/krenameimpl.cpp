@@ -352,10 +352,11 @@ void KRenameImpl::parseCmdLineOptions()
 void KRenameImpl::slotAddFiles()
 {
     FileDialogExtWidget* widget = new FileDialogExtWidget();
-    KFileDialog dialog( KUrl("kfiledialog://krename"), i18n("*|All files and directories"), 
-			m_window, widget );
+    KFileDialog dialog( KUrl("kfiledialog://krename"), 
+                        i18n("*|All files and directories"), 
+                        m_window, widget );
     dialog.setOperationMode( KFileDialog::Opening );
-    dialog.setMode( KFile::File | KFile::Files | KFile::Directory | KFile::ExistingOnly );
+    dialog.setMode( KFile::Files | KFile::Directory | KFile::ExistingOnly );
 
     if( dialog.exec() == QDialog::Accepted ) 
     {

@@ -120,9 +120,9 @@ void ThreadedLister::completed()
         // and not directly in the foundItem slot,
         // as the latter can produce deadlocks if
         // we get a signal while we keep the mutex!
-        s_mutex.lock();
+        //s_mutex.lock();
         m_model->addFiles( m_files );
-        s_mutex.unlock();
+        //s_mutex.unlock();
     }
 
     emit listerDone( this );
