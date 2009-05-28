@@ -68,6 +68,8 @@ void PreviewList::slotRemove()
     list.append( this->currentIndex().row() );
 
     m_model->removeFiles( list );
+
+    emit updateCount();
 }
 
 void PreviewList::slotManually()

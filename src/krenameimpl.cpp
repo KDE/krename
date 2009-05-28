@@ -141,6 +141,7 @@ void KRenameImpl::setupSlots()
     connect( m_window, SIGNAL(removeAllFiles()), SLOT(slotRemoveAllFiles()));
 
     connect( m_window, SIGNAL(updatePreview()),  SLOT(slotUpdatePreview()));
+    connect( m_window, SIGNAL(updateCount()),    SLOT(slotUpdateCount()));
 
     connect( m_window, SIGNAL(accepted()),       SLOT(slotStart()));
 

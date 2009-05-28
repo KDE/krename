@@ -216,6 +216,12 @@ class KRenameWindow : public KMainWindow {
     void slotEnableControls();
 
  signals:
+    /** Called when the krenamewindow 
+     *  needs an update of the file cound
+     *
+     *  \see setCount 
+     */
+    void updateCount();
 
     /** Called whenever the user changes the rename mode
      *

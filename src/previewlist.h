@@ -37,6 +37,7 @@ class PreviewList : public QTreeView {
 
  signals:
     void addFiles();
+    void updateCount();
 
  private slots:
      void slotOpen();

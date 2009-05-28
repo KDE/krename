@@ -246,6 +246,7 @@ void KRenameWindow::setupSlots()
     connect( m_pageFilename->buttonDown,         SIGNAL(clicked(bool)), SLOT( slotMoveDownPreview() ) );
 
     connect( m_pageFilename->listPreview,        SIGNAL(addFiles()),    SIGNAL(addFiles()));
+    connect( m_pageFilename->listPreview,        SIGNAL(updateCount()), SIGNAL(updateCount()));
 
     connect( m_pageFilename->comboFilenameCustom,  SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
     connect( m_pageFilename->comboSuffixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
