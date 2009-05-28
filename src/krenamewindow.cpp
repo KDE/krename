@@ -283,8 +283,12 @@ void KRenameWindow::showPage( int index )
 
 void KRenameWindow::slotEnableControls()
 {
-    if( m_buttonFinish )
-        m_buttonFinish->setEnabled( m_curPage == m_guiMode->numPages - 1 );
+    if( m_buttonFinish ) 
+    {
+        bool enable = (m_curPage == m_guiMode->numPages - 1)
+            && m_fileCount > 0;
+        m_buttonFinish->setEnabled( enable );
+    }
 
     // enable gui controls
     m_pageFiles->buttonRemove->setEnabled( m_fileCount );
