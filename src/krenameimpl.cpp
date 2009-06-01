@@ -120,18 +120,19 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list
 
 void KRenameImpl::setupActions()
 {
-    KMenu* mnuExtra    = new KMenu( i18n("E&xtras"), m_window );
+    // Disabled profiles as they are not implemented right now
+    //KMenu* mnuExtra    = new KMenu( i18n("E&xtras"), m_window );
 
     KMenu* mnuHelp     = m_window->helpMenu( QString::null, true );
 
-    KAction* actProfiles = new KAction( i18n("&Profiles..."), m_window );
+    //KAction* actProfiles = new KAction( i18n("&Profiles..."), m_window );
 
-    m_window->menuBar()->addMenu( mnuExtra );
+    //m_window->menuBar()->addMenu( mnuExtra );
     m_window->menuBar()->addMenu( mnuHelp );
 
-    mnuExtra->addAction( actProfiles );
+    //mnuExtra->addAction( actProfiles );
 
-    connect(actProfiles, SIGNAL(triggered(bool)), SLOT(slotManageProfiles()));
+    //connect(actProfiles, SIGNAL(triggered(bool)), SLOT(slotManageProfiles()));
 }
 
 void KRenameImpl::setupSlots()
