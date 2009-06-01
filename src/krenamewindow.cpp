@@ -113,6 +113,8 @@ KRenameWindow::KRenameWindow( QWidget* parent )
     connect( m_buttonClose, SIGNAL(clicked(bool)), SLOT(close()));
     connect( m_buttons, SIGNAL(accepted()), SLOT(slotFinish()));
 
+    
+    this->setAutoSaveSettings( "KRenameWindowSettings", true );
 
     // Show the first page in any mode
     showPage( 0 );

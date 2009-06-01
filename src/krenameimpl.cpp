@@ -648,7 +648,7 @@ void KRenameImpl::loadConfig()
 	    m_window->setPreviewColumnWidth( 1, width );
 
 
-    // save Plugin configuration
+    // load Plugin configuration
     KConfigGroup groupPlugins = config->group( QString("PluginSettings") );
     m_pluginLoader->loadConfig( groupPlugins );
 }
@@ -673,14 +673,6 @@ void KRenameImpl::saveConfig()
     groupGui.writeEntry( "Column0", m_window->previewColumnWidth( 0 ) );
     groupGui.writeEntry( "Column1", m_window->previewColumnWidth( 1 ) );
     groupGui.writeEntry( "Advanced", m_window->isAdvancedMode() );
-
-    KConfigGroup groupWindow = config->group( QString("WindowSettings") );
-
-    groupWindow.writeEntry( "Maximized", m_window->isMaximized() );
-    groupWindow.writeEntry( "Width", m_window->width() );
-    groupWindow.writeEntry( "Height", m_window->height() );
-    groupWindow.writeEntry( "XPos", m_window->x() );
-    groupWindow.writeEntry( "YPos", m_window->y() );
 
     // save Plugin configuration
     KConfigGroup groupPlugins = config->group( QString("PluginSettings") );
