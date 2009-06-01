@@ -125,14 +125,13 @@ void BatchRenamer::processFilenames()
     for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++) 
     {
         m_counter_index = 0;
-
         if( m_renameMode == eRenameMode_Rename ) // final Path = source Path
         {
             (*m_files)[i].setDstDirectory( (*m_files)[i].srcDirectory() );
-
+            
             KUrl url = (*m_files)[i].srcUrl();
             url.setFileName( QString::null );
-
+            
             (*m_files)[i].setDstUrl( url );
             
         } 
@@ -141,58 +140,58 @@ void BatchRenamer::processFilenames()
             (*m_files)[i].setDstUrl( m_destination );
             (*m_files)[i].setDstDirectory( m_destination.path() );
         }
-
+        
         if( i > 0 && m_reset )
             findCounterReset( i );
-
-	//qDebug("SRCFILENAME       : %s", (*m_files)[i].srcFilename().toUtf8().data() );
+        
+        //qDebug("SRCFILENAME       : %s", (*m_files)[i].srcFilename().toUtf8().data() );
         //qDebug("DSTFILENAME SHOULD: %s", processString( text, (*m_files)[i].srcFilename(), i ).toUtf8().data() );
         (*m_files)[i].setDstFilename( processString( text, (*m_files)[i].srcFilename(), i ) );
         //qDebug("DSTFILENAME IS    : %s", (*m_files)[i].dstFilename().toUtf8().data());
         (*m_files)[i].setDstExtension( processString( extext, (*m_files)[i].srcExtension(), i ) );
-
+        
         // Let's run the plugins that change the final filename,
         // i.e the encodingsplugin
-	int errors = 0;
-	QString name = executePlugin( i, (*m_files)[i].dstFilename(), ePluginType_Filename, errors, NULL );
-	if( !name.isNull() ) 
-	    (*m_files)[i].setDstFilename( name );
-
+        int errors = 0;
+        QString name = executePlugin( i, (*m_files)[i].dstFilename(), ePluginType_Filename, errors, NULL );
+        if( !name.isNull() ) 
+            (*m_files)[i].setDstFilename( name );
+        
         (void)applyManualChanges( i );
-
+        
         // Assemble filenames
         //parseSubdirs( &m_files[i] );
         // TODO: DOM 
         // ESCAPE HERE
         /*
-        m_files[i].src.name = BatchRenamer::buildFilename( &m_files[i].src, true );
-
-
-        m_files[i].dst.name = BatchRenamer::buildFilename( &m_files[i].dst, true );
+          m_files[i].src.name = BatchRenamer::buildFilename( &m_files[i].src, true );
+          
+          
+          m_files[i].dst.name = BatchRenamer::buildFilename( &m_files[i].dst, true );
         */
-
+        
         /*
          * take care of renamed directories and
          * correct the paths of their contents
          */
-	if( (m_renameMode == eRenameMode_Rename ||
-	     m_renameMode == eRenameMode_Move) &&
-	    (*m_files)[i].isDirectory() )
-	{
-	    const QString topDir  = (*m_files)[i].srcDirectory() + '/' + (*m_files)[i].srcFilename();
-	    const QString replace = (*m_files)[i].dstDirectory() + '/' + (*m_files)[i].dstFilename();
-
-	    for( int z = i + 1; z < m_files->count(); z++ ) 
-	    {
-		const QString & dir = (*m_files)[z].realSrcDirectory();
-		if( dir.startsWith( topDir ) )
-		{
-		    QString newDir = replace + "/" + dir.right( dir.length() - topDir.length() );
-		    (*m_files)[z].setOverrideSrcDirectory( newDir ); 
-		}
-	    }
-	}
-	    
+        if( (m_renameMode == eRenameMode_Rename ||
+             m_renameMode == eRenameMode_Move) &&
+            (*m_files)[i].isDirectory() )
+        {
+            const QString topDir  = (*m_files)[i].srcDirectory() + '/' + (*m_files)[i].srcFilename();
+            const QString replace = (*m_files)[i].dstDirectory() + '/' + (*m_files)[i].dstFilename();
+            
+            for( int z = i + 1; z < m_files->count(); z++ ) 
+            {
+                const QString & dir = (*m_files)[z].realSrcDirectory();
+                if( dir.startsWith( topDir ) )
+                {
+                    QString newDir = replace + "/" + dir.right( dir.length() - topDir.length() );
+                    (*m_files)[z].setOverrideSrcDirectory( newDir ); 
+                }
+            }
+        }
+        
 #if 0      
         if( m_files[i].dir && (m_mode == RENAME || m_mode == MOVE) ) {
             for( unsigned int c = i; c < m_files.count(); c++ ) {
@@ -547,8 +546,8 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
             int length = 0;
             QString substitute = processBrackets( text.right( text.length() - pos ), &length, oldname, index );
             text.replace( pos - 1, length, substitute );
-	    if( substitute.length() > 0 )
-		pos += substitute.length() - 1;
+            if( substitute.length() > 0 )
+                pos += substitute.length() - 1;
         }
         else if( token == "]" ) 
         {
@@ -636,11 +635,11 @@ QString BatchRenamer::executePlugin( int index, const QString & filenameOrPath, 
                 if( ret != QString::null ) 
                 {
                     // An error occurred -> report it
-		    if( p != NULL )
-			p->error( ret );
+                    if( p != NULL )
+                        p->error( ret );
                     ++errorCount;
                 }
-
+                
                 ret = filenameOrPath;
             }
         }

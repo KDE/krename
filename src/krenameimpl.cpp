@@ -490,7 +490,7 @@ void KRenameImpl::slotListerDone( ThreadedLister* lister )
 
 void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
 {
-    TokenHelpDialog dialog( edit, m_window );
+    TokenHelpDialog dialog( m_model, &m_renamer, edit, m_window );
 
     // add built-in tokens
     QStringList help;

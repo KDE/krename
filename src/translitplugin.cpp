@@ -212,10 +212,8 @@ QString TranslitPlugin::transliterate(const QString & unicoded)
     for(i=0; i<(int)unicoded.length(); i++) 
     {
         QString charIn = unicoded.mid(i, 1);
-        qDebug("Found: looking for=%s\n", charIn.toUtf8().data() );
         if( TranslitPlugin::s_mapFromUTF8.contains( charIn.toUtf8() ) )
         {
-            qDebug("Found: charIn=%s\n", charIn.toUtf8().data() );
             QString charTrans = TranslitPlugin::s_mapFromUTF8[charIn.toUtf8()];
             transed.append(charTrans);
         }

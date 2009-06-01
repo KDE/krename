@@ -5,14 +5,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>491</width>
-    <height>355</height>
+    <width>494</width>
+    <height>379</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>KRename Help</string>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QVBoxLayout" name="verticalLayout" >
    <item>
     <widget class="QLabel" name="label" >
      <property name="text" >
@@ -87,6 +87,9 @@
          <property name="allColumnsShowFocus" >
           <bool>true</bool>
          </property>
+         <property name="headerHidden" >
+          <bool>false</bool>
+         </property>
          <column>
           <property name="text" >
            <string>Token</string>
@@ -97,19 +100,77 @@
            <string>Description</string>
           </property>
          </column>
+         <column>
+          <property name="text" >
+           <string>Preview</string>
+          </property>
+         </column>
         </widget>
        </item>
       </layout>
      </widget>
     </widget>
    </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" >
+     <item>
+      <widget class="QCheckBox" name="checkPreview" >
+       <property name="text" >
+        <string>Token &amp;Preview</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType" >
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelPreview" >
+       <property name="text" >
+        <string>Preview File:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboPreview" >
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="sizeIncrement" >
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="editable" >
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
   </layout>
  </widget>
  <customwidgets>
   <customwidget>
    <class>KTreeWidgetSearchLineWidget</class>
-   <extends>QLineEdit</extends>
-   <header location="global" >ktreewidgetsearchline.h</header>
+   <extends>QWidget</extends>
+   <header>ktreewidgetsearchline.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

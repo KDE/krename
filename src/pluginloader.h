@@ -42,6 +42,13 @@ class PluginLoader  {
      */
     Plugin* findPlugin( const QString & token );
 
+    /** Find a plugin by its name
+     *
+     *  @param name as returned by Plugin::name()
+     *  @returns a plugin or NULL
+     */
+    Plugin* findPluginByName( const QString & name );
+
     /** A read-only list of all plugins
      *
      *  @returns a list of all plugins;

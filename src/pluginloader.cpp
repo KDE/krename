@@ -87,6 +87,21 @@ Plugin* PluginLoader::findPlugin( const QString & token )
     return NULL;
 }
 
+Plugin* PluginLoader::findPluginByName( const QString & name )
+{
+    QList<Plugin*>::iterator it = m_plugins.begin();
+
+    while( it != m_plugins.end() )
+    {
+        if( (*it)->name() == name ) 
+            return *it;
+
+        ++it;
+    }
+
+    return NULL;
+}
+
 void PluginLoader::clear()
 {
     QList<Plugin*>::iterator it = m_plugins.begin();

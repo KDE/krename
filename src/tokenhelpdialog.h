@@ -25,10 +25,14 @@
 class QLineEdit;
 class QTreeWidgetItem;
 
+class BatchRenamer;
+class KRenameModel;
+
 class TokenHelpDialog : public KDialog {
  Q_OBJECT
  public:
-    TokenHelpDialog( QLineEdit* edit, QWidget* parent = NULL );
+    TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer, 
+                     QLineEdit* edit, QWidget* parent = NULL );
 
     /** Adds a category to the help dialog.
      *  The category will be added and all its commands will also be added to the "All" category.
@@ -50,6 +54,10 @@ class TokenHelpDialog : public KDialog {
     void slotCategoryChanged( QTreeWidgetItem* item );
     void saveConfig();
 
+    void slotEnableControls();
+    void slotPreviewClicked(bool bPreview);
+    void slotUpdatePreview();
+
  private:
     void loadConfig();
 
@@ -57,6 +65,8 @@ class TokenHelpDialog : public KDialog {
     Ui::TokenHelpWidget m_widget;
 
     QLineEdit*          m_edit;
+    KRenameModel*       m_model;
+    BatchRenamer*       m_renamer;
 
     QMap<QString,QStringList> m_map;
 

@@ -17,10 +17,17 @@
 
 #include "tokenhelpdialog.h"
 
+#include "batchrenamer.h"
+#include "krenamemodel.h"
+
+#include <kapplication.h>
 #include <kpushbutton.h>
 
-TokenHelpDialog::TokenHelpDialog( QLineEdit* edit, QWidget* parent )
-    : KDialog( parent ), m_edit( edit )
+#define COLUMN_PREVIEW 2
+
+TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
+                                  QLineEdit* edit, QWidget* parent )
+    : KDialog( parent ), m_edit( edit ), m_model(model), m_renamer(renamer)
 {
     m_widget.setupUi( mainWidget() );
 
@@ -32,6 +39,7 @@ TokenHelpDialog::TokenHelpDialog( QLineEdit* edit, QWidget* parent )
     
     m_widget.searchCategory->searchLine()->setTreeWidget( m_widget.listCategories );
     m_widget.searchToken   ->searchLine()->setTreeWidget( m_widget.listTokens );
+    m_widget.comboPreview->setModel( model );
 
     connect(insert, SIGNAL(clicked(bool)), SLOT(slotInsert()));
     connect(this, SIGNAL(rejected()), SLOT(reject()));
@@ -39,6 +47,10 @@ TokenHelpDialog::TokenHelpDialog( QLineEdit* edit, QWidget* parent )
 
     connect(m_widget.listCategories, SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(slotCategoryChanged(QTreeWidgetItem*)));
     connect(m_widget.listTokens,     SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(slotInsert()));
+    connect(m_widget.checkPreview,   SIGNAL(clicked(bool)), this, SLOT(slotPreviewClicked(bool)));
+    connect(m_widget.comboPreview,   SIGNAL(activated(int)), this, SLOT(slotUpdatePreview()));
+
+    slotEnableControls();
 }
 
 void TokenHelpDialog::add( const QString & headline, const QStringList & commands, const QPixmap & icon, bool first )
@@ -82,6 +94,8 @@ void TokenHelpDialog::slotCategoryChanged( QTreeWidgetItem* item )
         item->setText( 0, commands[i].section(";;", 0, 0 ) );
         item->setText( 1, commands[i].section(";;", 1, 1 ) );
     }
+
+    slotUpdatePreview();
 }
 
 void TokenHelpDialog::slotInsert()
@@ -102,6 +116,9 @@ void TokenHelpDialog::loadConfig()
 
     KConfigGroup groupGui = config->group( QString("TokenHelpDialog") );
 
+    bool preview = groupGui.readEntry( "Preview",  m_widget.checkPreview->isChecked() );
+    m_widget.checkPreview->setChecked( preview );
+
     int width = groupGui.readEntry( "Column0", QVariant(m_widget.listTokens->columnWidth( 0 )) ).toInt();
     if( width > 0 )
 		m_widget.listTokens->setColumnWidth( 0, width );
@@ -109,6 +126,10 @@ void TokenHelpDialog::loadConfig()
     width = groupGui.readEntry( "Column1", QVariant(m_widget.listTokens->columnWidth( 1 )) ).toInt();
     if( width > 0 )
 	    m_widget.listTokens->setColumnWidth( 1, width );
+
+    width = groupGui.readEntry( "Column2", QVariant(m_widget.listTokens->columnWidth( 2 )) ).toInt();
+    if( width > 0 )
+	    m_widget.listTokens->setColumnWidth( 2, width );
 
     this->restoreDialogSize( groupGui );
 
@@ -124,11 +145,66 @@ void TokenHelpDialog::saveConfig()
 
     KConfigGroup groupGui = config->group( QString("TokenHelpDialog") );
 
-    groupGui.writeEntry( "Column0", m_widget.listTokens->columnWidth( 0 ) );
-    groupGui.writeEntry( "Column1", m_widget.listTokens->columnWidth( 1 ) );
+    groupGui.writeEntry( "Column0",  m_widget.listTokens->columnWidth( 0 ) );
+    groupGui.writeEntry( "Column1",  m_widget.listTokens->columnWidth( 1 ) );
+    groupGui.writeEntry( "Column2",  m_widget.listTokens->columnWidth( 2 ) );
     groupGui.writeEntry( "Splitter", m_widget.splitter->sizes() );
+    groupGui.writeEntry( "Preview",  m_widget.checkPreview->isChecked() );
     this->saveDialogSize( groupGui );
 }
+
+void TokenHelpDialog::slotEnableControls()
+{
+    m_widget.comboPreview->setEnabled( m_widget.checkPreview->isChecked() );
+    m_widget.labelPreview->setEnabled( m_widget.checkPreview->isChecked() );
+}
+
+void TokenHelpDialog::slotPreviewClicked(bool bPreview)
+{
+    slotEnableControls();
+
+    if( bPreview ) 
+    {
+        m_widget.listTokens->setColumnHidden( COLUMN_PREVIEW, false );
+        slotUpdatePreview();
+
+        // make sure preview column is visible
+		m_widget.listTokens->resizeColumnToContents( 0 );
+		m_widget.listTokens->resizeColumnToContents( 1 );
+    }
+    else
+    {
+        m_widget.listTokens->setColumnHidden( COLUMN_PREVIEW, true );
+    }
+}
+
+void TokenHelpDialog::slotUpdatePreview()
+{
+    if( !m_widget.checkPreview->isChecked() )
+        return;
+
+    int index = m_widget.comboPreview->currentIndex();
+    if( index >= 0 && m_widget.listCategories->currentItem() != NULL ) 
+    {
+        QString       name   = m_widget.listCategories->currentItem()->text(0);
+
+        const KRenameFile & file = m_model->file( index );
+        KApplication::setOverrideCursor( Qt::WaitCursor );
+
+        QString token;
+        for( int i=0;i<m_widget.listTokens->topLevelItemCount();i++ )
+        {
+            QTreeWidgetItem* item = m_widget.listTokens->topLevelItem( i );
+            if( item ) 
+            { 
+                token = m_renamer->processString( item->text( 0 ), file.srcFilename(), index );
+                item->setText( COLUMN_PREVIEW, token );
+            }
+        }
+        KApplication::restoreOverrideCursor();
+    }
+}
+
 
 #include "tokenhelpdialog.moc"
 
