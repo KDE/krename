@@ -60,10 +60,11 @@ class KRenameTest : public QWidget {
      *  \param extension the expected extension
      *  \param eSplitMode the splitmode to use
      *  \param dot the dot to use as splitter
+     *  \param isDir test a file or a directory
      */
     bool testKRenameFileInternal( const KUrl & url, const QString & directory, 
                                   const QString & filename, const QString & extension,
-                                  ESplitMode eSplitMode, int dot );
+                                  ESplitMode eSplitMode, int dot, bool isDir );
 
 
     /** Test the BatchRenamer class

@@ -39,23 +39,6 @@ public:
     QPixmap loadIcon( const KUrl & url ) 
     {
         return KIO::pixmapForUrl( url );
-        /*
-        KIO::UDSEntry entry;
-        KIO::NetAccess::stat( url, entry, NULL );
-        KFileItem item( entry, url );
-        QList<KFileItem> list;
-        list.append( item );
-
-        KIO::PreviewJob* job = new KIO::PreviewJob( list, 64, 64, 0, 0, true, false, NULL ); 
-        if( !job->exec() ) 
-        {
-            return item.pixmap( 64 );
-        }
-        else
-        {
-            return KIO::pixmapForUrl( url );
-        }
-        */
     }
 
 private:
@@ -207,9 +190,9 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const KU
         if( rDescription.directory.endsWith( '/' ) )
             rDescription.directory = rDescription.directory.left( rDescription.directory.length() - 1 );
 
-	int lastSlash = rDescription.directory.lastIndexOf('/');
-	rDescription.filename  = rDescription.directory.right( rDescription.directory.length() - lastSlash - 1 );
-	rDescription.directory = rDescription.directory.left( lastSlash );
+        int lastSlash = rDescription.directory.lastIndexOf('/');
+        rDescription.filename  = rDescription.directory.right( rDescription.directory.length() - lastSlash - 1 );
+        rDescription.directory = rDescription.directory.left( lastSlash );
     }
 
     /*
