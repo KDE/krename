@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-29 22:06+0100\n"
+"POT-Creation-Date: 2009-06-01 11:02+0200\n"
 "PO-Revision-Date: 2005-01-27 20:39+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team:  <ja@li.org>\n"
@@ -12,10 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-
-#: rc.cpp:87 rc.cpp:96
-msgid "$"
-msgstr ""
 
 #: batchrenamer.cpp:302 batchrenamer.cpp:425
 #, fuzzy
@@ -26,27 +22,10 @@ msgstr "%2 個のエラーが発生"
 msgid "%2 errors occurred!"
 msgstr "%2 個のエラーが発生"
 
-#: rc.cpp:318
-msgid "&Add Number"
-msgstr "番号を追加(&A)"
-
-#: rc.cpp:3 rc.cpp:372 rc.cpp:522 previewlist.cpp:36
+#: rc.cpp:3 previewlist.cpp:36
+#, no-c-format
 msgid "&Add..."
 msgstr "追加(&A)..."
-
-#: rc.cpp:81
-#, fuzzy
-msgid "&Advanced Filename"
-msgstr "ファイル名(&F)"
-
-#: rc.cpp:357
-msgid "&Cancel"
-msgstr ""
-
-#: rc.cpp:477
-#, fuzzy
-msgid "&Change Owner"
-msgstr "所有者を変更(&O)"
 
 #: previewlist.cpp:32
 #, fuzzy
@@ -57,130 +36,30 @@ msgstr "手動でファイル名を変更(&C)"
 msgid "&Close"
 msgstr ""
 
-#: rc.cpp:333
-#, fuzzy
-msgid "&Convert selection:"
-msgstr "選択を反転(&I)"
-
-#: rc.cpp:66
-#, fuzzy
-msgid "&Copy files to destination directory"
-msgstr "ディレクトリにファイルをコピー(&y)"
-
-#: rc.cpp:528
-#, fuzzy
-msgid "&Definitions"
-msgstr "対象(&t)"
-
-#: rc.cpp:525
-#, fuzzy
-msgid "&Delete"
-msgstr "プロファイルを削除(&D)"
-
 #: krenamewindow.cpp:48
 #, fuzzy
 msgid "&Destination"
 msgstr "対象(&t)"
 
 #: rc.cpp:30
+#, no-c-format
 msgid "&Display name"
 msgstr "名前を表示する(&D)"
-
-#: rc.cpp:198 rc.cpp:297
-msgid "&Down"
-msgstr ""
-
-#: rc.cpp:375
-msgid "&Edit..."
-msgstr "編集(&E).."
-
-#: rc.cpp:207
-#, fuzzy
-msgid "&Enable Plugin"
-msgstr "ディレクトリ(&D)"
-
-#: rc.cpp:159 rc.cpp:258
-msgid "&Extension:"
-msgstr "拡張子(&E):"
-
-#: rc.cpp:126 rc.cpp:213
-msgid "&Filename"
-msgstr "ファイル名(&F)"
 
 #: krenamewindow.cpp:47
 #, fuzzy
 msgid "&Files"
 msgstr "ファイル(&i)"
 
-#: rc.cpp:384
-#, fuzzy
-msgid "&Find:"
-msgstr "検索語句:"
-
 #: krenamewindow.cpp:131
 #, fuzzy
 msgid "&Finish..."
 msgstr "開始(&F)"
 
-#: rc.cpp:99
-msgid "&Functions..."
-msgstr "機能(&F)"
-
-#: rc.cpp:486
-#, fuzzy
-msgid "&Group:"
-msgstr "グループ:"
-
-#: rc.cpp:561
-msgid "&Increase Counter"
-msgstr ""
-
-#: rc.cpp:552
-msgid "&Initial Value:"
-msgstr ""
-
-#: tokenhelpdialog.cpp:31
+#: tokenhelpdialog.cpp:28
 #, fuzzy
 msgid "&Insert"
 msgstr "'$' を挿入"
-
-#: rc.cpp:120
-msgid "&Insert Part of Filename..."
-msgstr "ファイル名の一部を挿入(&I)"
-
-#: rc.cpp:540
-#, fuzzy
-msgid "&Insert Variable"
-msgstr "'$' を挿入"
-
-#: rc.cpp:330
-msgid "&Invert selection"
-msgstr "選択を反転(&I)"
-
-#: rc.cpp:537
-#, fuzzy
-msgid "&Load from File..."
-msgstr "プロファイルをロード(&L)"
-
-#: rc.cpp:69
-msgid "&Move files to destination directory"
-msgstr "ディレクトリにファイルを移動(&M)"
-
-#: rc.cpp:549
-msgid "&Name:"
-msgstr "名前(&N):"
-
-#: rc.cpp:303
-msgid "&Numbering"
-msgstr "番号(&N)"
-
-#: rc.cpp:117
-msgid "&Numbering..."
-msgstr "番号付け(&N)"
-
-#: rc.cpp:572
-msgid "&Offset:"
-msgstr ""
 
 #: previewlist.cpp:34
 msgid "&Open"
@@ -190,193 +69,61 @@ msgstr ""
 msgid "&Open Destination..."
 msgstr "対象を開く(&O)"
 
-#: rc.cpp:60
-#, fuzzy
-msgid "&Options"
-msgstr "オプション(&p)"
-
-#: rc.cpp:75
-msgid "&Overwrite existing files"
-msgstr "ファイルを上書きする(&O)"
-
 #: krenamewindow.cpp:49
 #, fuzzy
 msgid "&Plugins"
 msgstr "プラグイン(&l)"
 
-#: rc.cpp:156 rc.cpp:255
-msgid "&Prefix:"
-msgstr "接頭語(&P):"
-
 #: rc.cpp:27
+#, no-c-format
 msgid "&Preview"
 msgstr "プレビュー(&P)"
 
-#: krenameimpl.cpp:125
+#: krenameimpl.cpp:127
 msgid "&Profiles..."
 msgstr "プロファイル(&P)"
 
-#: rc.cpp:378 previewlist.cpp:37
+#: previewlist.cpp:37
 #, fuzzy
 msgid "&Remove"
 msgstr "削除(&m)"
-
-#: rc.cpp:321
-msgid "&Remove Number"
-msgstr "番号を削除(&R)"
 
 #: progressdialog.cpp:51
 #, fuzzy
 msgid "&Rename All Files Again..."
 msgstr "全てのファイルを再リネーム(&A)"
 
-#: rc.cpp:63
-msgid "&Rename input files"
-msgstr "ファイルをリネーム(&R)"
-
 #: progressdialog.cpp:33
 #, fuzzy
 msgid "&Rename more..."
 msgstr "別のファイルをリネーム(&R)"
-
-#: rc.cpp:387
-#, fuzzy
-msgid "&Replace With:"
-msgstr "以下で置換"
-
-#: rc.cpp:312
-#, fuzzy
-msgid "&Reset counter for every directory"
-msgstr "ディレクトリ名を挿入"
-
-#: rc.cpp:534
-#, fuzzy
-msgid "&Save to File..."
-msgstr "プロファイルを作成(&C)"
-
-#: rc.cpp:123
-#, fuzzy
-msgid "&Simple Filename"
-msgstr "ファイル名(&F)"
-
-#: rc.cpp:315
-#, fuzzy
-msgid "&Skip Numbers"
-msgstr "スキップする番号(&k)"
-
-#: rc.cpp:309
-#, fuzzy
-msgid "&Step by:"
-msgstr "増加数(&b):"
-
-#: rc.cpp:129 rc.cpp:216
-msgid "&Suffix:"
-msgstr "接尾語(&S):"
-
-#: rc.cpp:84
-msgid "&Template:"
-msgstr "書式(&T):"
-
-#: rc.cpp:543
-#, fuzzy
-msgid "&Test..."
-msgstr "編集(&E).."
-
-#: rc.cpp:555
-#, fuzzy
-msgid "&Type:"
-msgstr "書式(&T):"
 
 #: progressdialog.cpp:34
 #, fuzzy
 msgid "&Undo"
 msgstr "元に戻す: "
 
-#: rc.cpp:195 rc.cpp:294
-msgid "&Up"
+#: main.cpp:66
+msgid "(c) 2001-2009, Dominik Seichter\n"
 msgstr ""
 
-#: rc.cpp:102
-msgid "&Use extension of the input file"
-msgstr "入力ファイルの拡張子を使う(&U)"
-
-#: rc.cpp:483
-#, fuzzy
-msgid "&User:"
-msgstr "ユーザ:"
-
-#: rc.cpp:513
-#, fuzzy
-msgid "&Variables"
-msgstr "プロファイルの名前"
-
-#: main.cpp:64
-msgid "(c) 2001-2008, Dominik Seichter\n"
-msgstr ""
-
-#: krenameimpl.cpp:338 scriptplugin.cpp:298 scriptplugin.cpp:333
+#: krenameimpl.cpp:356 scriptplugin.cpp:298 scriptplugin.cpp:333
 #, fuzzy
 msgid "*|All files and directories"
 msgstr "隠しディレクトリを追加(&h)"
 
-#: rc.cpp:519
-msgid "1"
-msgstr ""
-
-#: rc.cpp:564
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; "
-"font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">This plugin adds a given offset to numbers in filenames.</"
-"span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">E.g. you "
-"have the filenames: <span style=\" font-style:italic;\">img014</span>, <span "
-"style=\" font-style:italic;\">img015</span>, <span style=\" font-style:"
-"italic;\">img023</span> which should be named<span style=\" font-style:"
-"italic;\"> img010</span>, <span style=\" font-style:italic;\">img011</span> "
-"and <span style=\" font-style:italic;\">img019. </span>Using this plugin, "
-"you can easily add an offset of -4 to get the desired result.</p></body></"
-"html>"
-msgstr ""
-
-#: krenamewindow.cpp:323
+#: krenamewindow.cpp:328
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "ファイル: <b>%1</b>"
 
-#: main.cpp:126
+#: main.cpp:129
 msgid ""
 "<b>Krename was started from root!</b><br>When started from root, Krename may "
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
 "<b>rootでKRenameを起動しています。</b><br>rootで起動するとシステムを破壊する"
 "恐れがあります"
-
-#: rc.cpp:90
-msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
-"weight:400; font-style:normal; text-decoration:none;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">.</span></p></body></html>"
-msgstr ""
-
-#: rc.cpp:327
-msgid ""
-"<qt>Please select the part of the old filename  which should be inserted "
-"into the new filename in the textbox below:</qt>"
-msgstr ""
 
 #: translitplugin.cpp:102
 #, fuzzy
@@ -397,28 +144,14 @@ msgid ""
 "WavPack and TrueAudio files.</qt>"
 msgstr ""
 
-#: exiv2plugin.cpp:346
+#: exiv2plugin.cpp:378
 #, fuzzy
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
 msgstr "<qt>リネームしたファイルをサブディレクトリに振り分ける</qt>"
 
-#: rc.cpp:219 rc.cpp:222 rc.cpp:243 rc.cpp:252
-msgid "?"
-msgstr ""
-
 #: scriptplugin.cpp:262
 msgid "A JavaScript error has occured: "
 msgstr ""
-
-#: rc.cpp:474
-#, fuzzy
-msgid "A&dvanced Permissions"
-msgstr "権限を変更(&P)"
-
-#: rc.cpp:429 rc.cpp:507
-#, fuzzy
-msgid "Access Permissions"
-msgstr "アクセス権限"
 
 #: permissionsplugin.cpp:182
 msgid "Access permissions"
@@ -451,17 +184,11 @@ msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr ""
 
-#: rc.cpp:396
-msgid ""
-"All supported tokens (commands) are listed in this dialog. You can search "
-"for tokens and insert a found token into the pattern for the filename."
-msgstr ""
-
-#: main.cpp:80
+#: main.cpp:82
 msgid "Andreas Pour"
 msgstr ""
 
-#: main.cpp:105
+#: main.cpp:107
 msgid "Asim Husanovic"
 msgstr ""
 
@@ -469,23 +196,14 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
-#: main.cpp:90
+#: main.cpp:92
 msgid "Brandon Low"
 msgstr ""
 
-#: krenameimpl.cpp:483
+#: krenameimpl.cpp:511
 #, fuzzy
 msgid "Built-in Functions"
 msgstr "内蔵機能:"
-
-#: rc.cpp:438 rc.cpp:450 rc.cpp:462
-#, fuzzy
-msgid "Can Read"
-msgstr "読み"
-
-#: rc.cpp:441 rc.cpp:453 rc.cpp:465
-msgid "Can Read & Write"
-msgstr ""
 
 #: datetimeplugin.cpp:113
 #, fuzzy
@@ -523,28 +241,7 @@ msgstr "取消スクリプトを実行ファイルにセットできません"
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "異なるホストにはファイル %1 のsymlinkを作れません"
 
-#: rc.cpp:141 rc.cpp:177 rc.cpp:234 rc.cpp:276 rc.cpp:345
-msgid "Capitalize"
-msgstr "先頭のみ大文字"
-
-#: rc.cpp:399
-msgid "Category"
-msgstr ""
-
-#: rc.cpp:426
-msgid "Change &Permissions"
-msgstr "権限を変更(&P)"
-
-#: rc.cpp:492
-msgid "Change &access date && time"
-msgstr "アクセス日時を変更(&a)"
-
-#: rc.cpp:495
-#, fuzzy
-msgid "Change &modifcation date && time"
-msgstr "変更日時を変更(&m)"
-
-#: main.cpp:82
+#: main.cpp:84
 msgid "Charles Samuels"
 msgstr ""
 
@@ -552,52 +249,22 @@ msgstr ""
 msgid "Class"
 msgstr "クラス"
 
-#: rc.cpp:51
-#, fuzzy
-msgid "Configure the look and feel of the KRename GUI:"
-msgstr "KRenameの外観を設定:<br>"
-
-#: main.cpp:99
+#: main.cpp:101
 msgid "Contributed a Spanish translation"
 msgstr "Contributed a Spanish translation"
 
-#: rc.cpp:135 rc.cpp:171 rc.cpp:228 rc.cpp:270 rc.cpp:339
-#, fuzzy
-msgid "Convert to lower case"
-msgstr "小文字に変換 "
-
-#: rc.cpp:138 rc.cpp:174 rc.cpp:231 rc.cpp:273 rc.cpp:342
-msgid "Convert to upper case"
-msgstr "大文字に変換"
-
-#: rc.cpp:72
-msgid "Create symbolic &links in destination directory"
-msgstr "ディレクトリにsymlinkを作成(&l)"
-
-#: main.cpp:88
+#: main.cpp:90
 msgid "Created the Gentoo Ebuild scripts for Krename."
 msgstr "Created the Gentoo Ebuild scripts for Krename."
 
-#: rc.cpp:180 rc.cpp:279
-msgid "Custom extension"
-msgstr "カスタム拡張子"
-
-#: rc.cpp:408
+#: main.cpp:109
 #, fuzzy
-msgid "Custom filename"
-msgstr "カスタム名"
+msgid "Czech Translation"
+msgstr "Italian translation"
 
-#: rc.cpp:144 rc.cpp:237
-msgid "Custom name"
-msgstr "カスタム名"
-
-#: main.cpp:94
+#: main.cpp:96
 msgid "Daniele Medri"
 msgstr ""
-
-#: rc.cpp:153 rc.cpp:165 rc.cpp:249 rc.cpp:264
-msgid "Date"
-msgstr "日付"
 
 #: datetimeplugin.cpp:51
 #, fuzzy
@@ -613,25 +280,17 @@ msgstr "システムの機能"
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
 
-#: rc.cpp:405
-msgid "Description"
-msgstr "説明"
-
-#: rc.cpp:504 rc.cpp:546
-msgid "Dialog"
-msgstr ""
-
 #: scriptplugin.cpp:77
 #, fuzzy
 msgid "Directory of the current file"
 msgstr "現在の時刻を挿入"
 
-#: krenameimpl.cpp:364
+#: krenameimpl.cpp:381
 #, fuzzy
 msgid "Do you really want to remove all files from the list?"
 msgstr "このプロファイルを削除しますか: %1"
 
-#: main.cpp:67
+#: main.cpp:69
 msgid "Dominik Seichter"
 msgstr ""
 
@@ -640,10 +299,11 @@ msgid "Double"
 msgstr ""
 
 #: rc.cpp:42
+#, no-c-format
 msgid "Down"
 msgstr ""
 
-#: krenameimpl.cpp:121
+#: krenameimpl.cpp:123
 msgid "E&xtras"
 msgstr "特別(&x)"
 
@@ -651,7 +311,7 @@ msgstr "特別(&x)"
 msgid "Elapsed time: %1 seconds"
 msgstr "経過時間: %1 秒"
 
-#: main.cpp:130
+#: main.cpp:133
 #, fuzzy
 msgid "Error"
 msgstr "エラー: %1"
@@ -668,7 +328,7 @@ msgstr ""
 msgid "Exec"
 msgstr "実行"
 
-#: exiv2plugin.cpp:345
+#: exiv2plugin.cpp:377
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
 msgstr ""
 
@@ -677,18 +337,8 @@ msgstr ""
 msgid "Extension of the current file"
 msgstr "入力ファイルの拡張子を使う(&U)"
 
-#: rc.cpp:105
-#, fuzzy
-msgid "File extension &starts at:"
-msgstr "ファイルの拡張子の場所:"
-
 #: krenamewindow.cpp:50
 msgid "File&name"
-msgstr "ファイル名(&n)"
-
-#: rc.cpp:147 rc.cpp:240
-#, fuzzy
-msgid "File&name:"
 msgstr "ファイル名(&n)"
 
 #: scriptplugin.cpp:75
@@ -709,37 +359,15 @@ msgid "Files will be moved to: %1"
 msgstr "Files will be moved to: %1"
 
 #: rc.cpp:33
-#, fuzzy
+#, fuzzy, no-c-format
 msgid "Files: <b>0</b>"
 msgstr "ファイル: <b>%1</b>"
 
-#: rc.cpp:366
-msgid "Find"
-msgstr "検索語句"
-
-#: rc.cpp:114 rc.cpp:192 rc.cpp:291
-#, fuzzy
-msgid "Find &and Replace..."
-msgstr "検索と置換(&F)"
-
-#: rc.cpp:360 rc.cpp:381
-msgid "Find and Replace"
-msgstr "検索と置換"
-
-#: rc.cpp:390
-#, fuzzy
-msgid "Find is a Regular &Expression"
-msgstr "正規表現"
-
-#: rc.cpp:108
-msgid "First Dot"
-msgstr "最初のドット"
-
-#: main.cpp:78
+#: main.cpp:80
 msgid "Fixed a bug that caused krename not closing open files."
 msgstr "Fixed a bug that caused krename not closing open files."
 
-#: main.cpp:75
+#: main.cpp:77
 msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
@@ -747,7 +375,7 @@ msgstr ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
 
-#: main.cpp:97
+#: main.cpp:99
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
@@ -755,16 +383,7 @@ msgstr ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 
-#: rc.cpp:435 rc.cpp:447 rc.cpp:459
-msgid "Forbidden"
-msgstr ""
-
-#: rc.cpp:45 rc.cpp:78 rc.cpp:201 rc.cpp:210 rc.cpp:300 rc.cpp:324 rc.cpp:423
-#: rc.cpp:489 rc.cpp:510 rc.cpp:558
-msgid "Form"
-msgstr ""
-
-#: main.cpp:84
+#: main.cpp:86
 msgid "Franz Schmid"
 msgstr ""
 
@@ -772,22 +391,12 @@ msgstr ""
 msgid "GID"
 msgstr "GID"
 
-#: main.cpp:84
+#: main.cpp:86
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr ""
 "Gave me a good start into writing plugins with his application scribus."
 
-#: rc.cpp:501
-#, fuzzy
-msgid "Get &Current Time"
-msgstr "現在の日付と時間を取得(&G)"
-
-#: rc.cpp:444
-#, fuzzy
-msgid "Gro&up:"
-msgstr "グループ:"
-
-#: main.cpp:75
+#: main.cpp:77
 msgid "Groult Richard"
 msgstr ""
 
@@ -801,7 +410,7 @@ msgid ""
 "recursive adding."
 msgstr ""
 
-#: main.cpp:104
+#: main.cpp:106
 msgid "Ilya Ivkov"
 msgstr ""
 
@@ -822,40 +431,40 @@ msgstr ""
 msgid "Input files will be renamed."
 msgstr "入力ファイルをリネームします"
 
-#: krenameimpl.cpp:494
+#: krenameimpl.cpp:522
 #, fuzzy
 msgid "Insert '#'"
 msgstr "'$' を挿入"
 
-#: krenameimpl.cpp:486
+#: krenameimpl.cpp:514
 msgid "Insert '$'"
 msgstr "'$' を挿入"
 
-#: krenameimpl.cpp:487
+#: krenameimpl.cpp:515
 msgid "Insert '%'"
 msgstr "'%' を挿入"
 
-#: krenameimpl.cpp:488
+#: krenameimpl.cpp:516
 msgid "Insert '&'"
 msgstr "'&' を挿入"
 
-#: krenameimpl.cpp:489
+#: krenameimpl.cpp:517
 msgid "Insert '*'"
 msgstr "'*' を挿入"
 
-#: krenameimpl.cpp:490
+#: krenameimpl.cpp:518
 msgid "Insert '/'"
 msgstr "'/' を挿入"
 
-#: krenameimpl.cpp:492
+#: krenameimpl.cpp:520
 msgid "Insert '['"
 msgstr "'[' を挿入"
 
-#: krenameimpl.cpp:491
+#: krenameimpl.cpp:519
 msgid "Insert '\\\\'"
 msgstr "'\\\\' を挿入"
 
-#: krenameimpl.cpp:493
+#: krenameimpl.cpp:521
 msgid "Insert ']'"
 msgstr "']' を挿入"
 
@@ -878,7 +487,7 @@ msgstr "現在の月日を挿入"
 msgid "Insert the comment of a track"
 msgstr "現在の月日を挿入"
 
-#: exiv2plugin.cpp:304
+#: exiv2plugin.cpp:306
 #, fuzzy
 msgid "Insert the comment of an image"
 msgstr "現在の月日を挿入"
@@ -990,11 +599,7 @@ msgstr "大文字に変換された現在のファイル名"
 msgid "Int"
 msgstr ""
 
-#: rc.cpp:471
-msgid "Is Executable/Only owner &can rename and delete folder content"
-msgstr ""
-
-#: main.cpp:94
+#: main.cpp:96
 msgid "Italian translation"
 msgstr "Italian translation"
 
@@ -1002,22 +607,17 @@ msgstr "Italian translation"
 msgid "JavaScript Plugin"
 msgstr ""
 
-#: main.cpp:99
+#: main.cpp:101
 msgid "Jose Rodriguez"
 msgstr ""
 
-#: main.cpp:57 krenameimpl.cpp:365
+#: main.cpp:59 krenameimpl.cpp:382
 msgid "KRename"
 msgstr "KRename"
 
-#: main.cpp:63
+#: main.cpp:65
 #, fuzzy
 msgid "KRename Build:"
-msgstr "KRename"
-
-#: rc.cpp:393
-#, fuzzy
-msgid "KRename Help"
 msgstr "KRename"
 
 #: batchrenamer.cpp:304 batchrenamer.cpp:762
@@ -1029,7 +629,7 @@ msgstr "リネームを完了しました"
 msgid "KRename finished the undo process."
 msgstr "リネームを完了しました"
 
-#: main.cpp:58
+#: main.cpp:60
 msgid ""
 "KRename is a batch file renamer which can rename a\n"
 "list of files based on a set of expressions.\n"
@@ -1046,78 +646,42 @@ msgstr ""
 "もちろん経済的な援助も(誰にとってもお金は必要です;)\n"
 "詳細についてはヘルプファイルをご覧ください。\n"
 
-#: main.cpp:103
+#: main.cpp:105
 msgid "Krzysztof Pawlak"
 msgstr ""
 
-#: rc.cpp:111
-msgid "Last Dot"
-msgstr "最後のドット"
-
-#: rc.cpp:48
-msgid "Look and Feel"
-msgstr "外観"
-
-#: main.cpp:98
+#: main.cpp:100
 msgid "Mark Ziegler"
 msgstr ""
 
-#: main.cpp:78
+#: main.cpp:80
 msgid "Michael Elvers"
 msgstr ""
 
-#: main.cpp:96
+#: main.cpp:98
 msgid "Michael Zugaro"
 msgstr ""
 
-#: main.cpp:88
+#: main.cpp:90
 msgid "Michael v.Ostheim"
 msgstr ""
 
-#: main.cpp:106
+#: main.cpp:108
 msgid "Michal Smoczyk"
 msgstr ""
 
 #: rc.cpp:39
+#, no-c-format
 msgid "Move"
 msgstr ""
 
-#: rc.cpp:183 rc.cpp:282
-#, fuzzy
-msgid "N&umber"
-msgstr "番号"
-
-#: main.cpp:102
+#: main.cpp:104
 msgid "Nicolas Benoit"
 msgstr ""
 
-#: rc.cpp:336
-#, fuzzy
-msgid "No Conversion"
-msgstr "エンコーディング変換プラグイン"
-
-#: rc.cpp:150 rc.cpp:162 rc.cpp:246 rc.cpp:261
-msgid "Number"
-msgstr "番号"
-
-#: rc.cpp:186 rc.cpp:285
-#, fuzzy
-msgid "Number of &digits:"
-msgstr "桁数(&N):"
-
-#: rc.cpp:432
-#, fuzzy
-msgid "O&wner:"
-msgstr "所有者"
-
-#: krenamemodel.cpp:432
+#: krenamemodel.cpp:485
 msgid "Origin"
 msgstr "現在"
-
-#: rc.cpp:456
-#, fuzzy
-msgid "Ot&hers:"
-msgstr "その他"
 
 #: permissionsplugin.cpp:211
 msgid "Others"
@@ -1128,21 +692,21 @@ msgstr "その他"
 msgid "Owner of the file"
 msgstr "テンプレート履歴の数(&N):"
 
-#: rc.cpp:480
-msgid "Ownership"
-msgstr "所有者"
-
 #: systemplugin.cpp:60
 msgid "Owning group of the file"
 msgstr ""
 
-#: main.cpp:86
+#: main.cpp:88
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 
-#: main.cpp:92
+#: main.cpp:109
+msgid "Pavel Fric"
+msgstr ""
+
+#: main.cpp:94
 msgid "Per Oyvind Karlsen"
 msgstr ""
 
@@ -1154,17 +718,7 @@ msgstr "権限"
 msgid "PermissionsPlugin works only with local files. %1 is a remote file."
 msgstr ""
 
-#: rc.cpp:411
-#, fuzzy
-msgid "Please input a new filename"
-msgstr "新しいファイル名を入力してください:"
-
-#: rc.cpp:204
-#, fuzzy
-msgid "Plugins"
-msgstr "プラグイン(&l)"
-
-#: main.cpp:106
+#: main.cpp:108
 #, fuzzy
 msgid "Polish Translation"
 msgstr "Italian translation"
@@ -1173,47 +727,35 @@ msgstr "Italian translation"
 msgid "Press close to quit!"
 msgstr "終了するには「閉じる」を押してください"
 
-#: rc.cpp:348
-msgid "Preview of the generated KRename command:"
-msgstr ""
-
-#: rc.cpp:354
-msgid "Progress"
-msgstr "進行状況"
-
-#: main.cpp:98
+#: main.cpp:100
 msgid "Provided SuSE RPMs and very good suggestions"
 msgstr "Provided SuSE RPMs and very good suggestions"
 
-#: main.cpp:100
+#: main.cpp:102
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr "Provided a RedHat RPM and was big help in improving KRename"
 
-#: main.cpp:95
+#: main.cpp:97
 msgid "Provided a gcc3.x namespace patch"
 msgstr "Provided a gcc3.x namespace patch"
 
-#: main.cpp:96
+#: main.cpp:98
 msgid "Provided the new preview and move features"
 msgstr "Provided the new preview and move features"
 
 #: rc.cpp:6
+#, no-c-format
 msgid "Re&move"
 msgstr "削除(&m)"
 
 #: rc.cpp:9
-#, fuzzy
+#, fuzzy, no-c-format
 msgid "Re&move All"
 msgstr "リストを全て削除(&e)"
 
 #: permissionsplugin.cpp:190
 msgid "Read"
 msgstr "読み"
-
-#: rc.cpp:363
-#, fuzzy
-msgid "Reg. Expression"
-msgstr "正規表現"
 
 #: progressdialog.cpp:50
 #, fuzzy
@@ -1224,7 +766,7 @@ msgstr "処理しなかったファイルを再リネーム(&A)"
 msgid "Rename Processed Files &Again..."
 msgstr "処理したファイルを再リネーム(&A)"
 
-#: krenamemodel.cpp:432
+#: krenamemodel.cpp:485
 msgid "Renamed"
 msgstr "リネーム後"
 
@@ -1232,44 +774,45 @@ msgstr "リネーム後"
 msgid "Renamed %1 files successfully."
 msgstr "%1 個のファイルをリネームしました"
 
-#: main.cpp:97
+#: main.cpp:99
 msgid "Rene Gass"
 msgstr ""
-
-#: rc.cpp:369
-msgid "Replace With"
-msgstr "以下で置換"
 
 #: progressdialog.cpp:47
 #, fuzzy
 msgid "Restart &KRename..."
 msgstr "KRenameを再起動"
 
-#: main.cpp:86
+#: main.cpp:88
 msgid "Rolf Magnus"
 msgstr ""
 
-#: main.cpp:90
+#: main.cpp:92
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "Some GCC 3.1 fixes for Gentoo."
 
 #: rc.cpp:15
+#, no-c-format
 msgid "Sort: Ascending"
 msgstr "ソート: 昇順"
 
 #: rc.cpp:18
+#, no-c-format
 msgid "Sort: Descending"
 msgstr "ソート: 降順"
 
 #: rc.cpp:21
+#, no-c-format
 msgid "Sort: Numeric"
 msgstr "ソート: 数字を後"
 
 #: rc.cpp:24
+#, no-c-format
 msgid "Sort: Random"
 msgstr "ソート: ランダム"
 
 #: rc.cpp:12
+#, no-c-format
 msgid "Sort: Unsorted"
 msgstr "ソート: なし"
 
@@ -1277,33 +820,24 @@ msgstr "ソート: なし"
 msgid "Special"
 msgstr "特別"
 
-#: krenameimpl.cpp:495
+#: krenameimpl.cpp:523
 #, fuzzy
 msgid "Special Characters"
 msgstr "特殊な文字:"
 
-#: rc.cpp:189 rc.cpp:288
-#, fuzzy
-msgid "Start  &index:"
-msgstr "開始番号(&i):"
-
-#: rc.cpp:306
-msgid "Start &index:"
-msgstr "開始番号(&i):"
-
-#: krenameimpl.cpp:536
+#: krenameimpl.cpp:564
 msgid "Starting conversion of %1 files."
 msgstr "%1 個のファイルの変換を開始"
 
-#: main.cpp:69
+#: main.cpp:71
 msgid "Stefan \"Stonki\" Onken"
 msgstr ""
 
-#: main.cpp:95
+#: main.cpp:97
 msgid "Stephan Johach"
 msgstr ""
 
-#: main.cpp:100
+#: main.cpp:102
 msgid "Steven P. Ulrick"
 msgstr ""
 
@@ -1327,38 +861,34 @@ msgstr "Symlinkを作成します: %1"
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr ""
 
-#: rc.cpp:351 rc.cpp:516 rc.cpp:531
-msgid "TextLabel"
-msgstr ""
-
-#: main.cpp:92
+#: main.cpp:94
 msgid "Thanks for creating the Mandrake RPM"
 msgstr "Thanks for creating the Mandrake RPM"
 
-#: main.cpp:80
-msgid ""
-"Thanks for his great job at apps.kde.com and help with contributing krename "
-"to apps.kde.com."
-msgstr ""
-"Thanks for his great job at apps.kde.com and help with contributing krename "
-"to apps.kde.com."
-
 #: main.cpp:82
 msgid ""
+"Thanks for his great job at apps.kde.com and help with contributing krename "
+"to apps.kde.com."
+msgstr ""
+"Thanks for his great job at apps.kde.com and help with contributing krename "
+"to apps.kde.com."
+
+#: main.cpp:84
+msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
 msgstr ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
 
-#: main.cpp:73
+#: main.cpp:75
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "Thanks to him for creating RedHat 7.x packages and some other help."
 
-#: krenameimpl.cpp:555
+#: krenameimpl.cpp:583
 #, fuzzy
 msgid "The directory %1 could not be created."
 msgstr "プロファイル \"%1\" はありません"
 
-#: krenameimpl.cpp:547
+#: krenameimpl.cpp:575
 #, fuzzy
 msgid ""
 "The directory %1 does not exist. Do you want KRename to create it for you?"
@@ -1369,41 +899,29 @@ msgstr "ディレクトリ %1 は存在しません。KRenameが作成します�
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "このプロファイルは既に存在します。別の名前を入力してください"
 
-#: rc.cpp:468
-msgid "This file uses advanced permissions"
-msgstr ""
-
 #: filedialogextwidget.cpp:55
 msgid ""
 "This option causes KRename to add also the name of the base directory of the "
 "selected files to its list."
 msgstr ""
 
-#: rc.cpp:498
-msgid "Time:"
-msgstr "時間:"
-
-#: rc.cpp:402
-msgid "Token"
-msgstr "項目"
-
-#: main.cpp:105
+#: main.cpp:107
 msgid "Translated KRename into Bosnian"
 msgstr "Translated KRename into Bosnian"
 
-#: main.cpp:102
+#: main.cpp:104
 msgid "Translated KRename into French"
 msgstr "Translated KRename into French"
 
-#: main.cpp:103
+#: main.cpp:105
 msgid "Translated KRename into Polish"
 msgstr "Translated KRename into Polish"
 
-#: main.cpp:104
+#: main.cpp:106
 msgid "Translated KRename into Russian"
 msgstr "Translated KRename into Russian"
 
-#: main.cpp:101
+#: main.cpp:103
 msgid "Translated KRename to Japanese"
 msgstr "KRenameを日本語に翻訳"
 
@@ -1415,7 +933,7 @@ msgstr ""
 msgid "Transliteration"
 msgstr ""
 
-#: main.cpp:73
+#: main.cpp:75
 msgid "Trevor Semeniuk"
 msgstr ""
 
@@ -1428,7 +946,7 @@ msgstr "UID"
 msgid "URL of the current file"
 msgstr "現在の時刻を挿入"
 
-#: main.cpp:101
+#: main.cpp:103
 msgid "UTUMI Hirosi"
 msgstr ""
 
@@ -1449,39 +967,9 @@ msgid "Undoing all renamed files."
 msgstr ""
 
 #: rc.cpp:36
+#, no-c-format
 msgid "Up"
 msgstr ""
-
-#: rc.cpp:420
-#, fuzzy
-msgid "Use &custom filename"
-msgstr "入力ファイル名を使う(&I)"
-
-#: rc.cpp:417
-#, fuzzy
-msgid "Use &input filename"
-msgstr "入力ファイル名を使う(&I)"
-
-#: rc.cpp:57
-#, fuzzy
-msgid "Use &tabbed style GUI (advanced users)"
-msgstr "タブ形式のGUIを使う(上級者向け)(&t)"
-
-#: rc.cpp:54
-msgid "Use &wizard style GUI (beginners)"
-msgstr "ウィザード形式のGUIを使う(初心者向け)(&w)"
-
-#: rc.cpp:414
-msgid "Use filename created by &KRename"
-msgstr ""
-
-#: rc.cpp:168 rc.cpp:267
-msgid "Use original extension"
-msgstr "元の拡張子を使う"
-
-#: rc.cpp:132 rc.cpp:225
-msgid "Use original name"
-msgstr "元の名前を使う"
 
 #: permissionsplugin.cpp:205
 msgid "User"
@@ -1498,7 +986,7 @@ msgid ""
 "subdirectories to the list of files to rename."
 msgstr ""
 
-#: main.cpp:70
+#: main.cpp:72
 msgid "Website, testing, very good ideas and keeping me coding!"
 msgstr "Website, testing, very good ideas and keeping me coding!"
 
@@ -1522,23 +1010,24 @@ msgstr "UTUMI Hirosi"
 msgid "add directory recursively"
 msgstr "ディレクトリを再帰的に追加する"
 
-#: krenameimpl.cpp:476
+#: krenameimpl.cpp:504
 msgid "character x to y of old filename"
 msgstr "現在のファイル名のx番目からy番目までの文字"
 
 #: main.cpp:50
-msgid "copy files to directory"
+#, fuzzy
+msgid "copy files to directory or url"
 msgstr "ディレクトリにファイルをコピー"
 
-#: krenameimpl.cpp:474
+#: krenameimpl.cpp:502
 msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "0 で始めて 1 ずつ番号を上げる"
 
-#: krenameimpl.cpp:475
+#: krenameimpl.cpp:503
 msgid "create a subdirectory"
 msgstr "サブディレクトリを作成"
 
-#: main.cpp:67
+#: main.cpp:69
 msgid "developer and maintainer"
 msgstr ""
 
@@ -1550,53 +1039,55 @@ msgstr "プラグインを使用する"
 msgid "file will be added to the list of files for renaming"
 msgstr "リネーム用のファイルリストにファイルを追加する"
 
-#: krenameimpl.cpp:471
+#: krenameimpl.cpp:499
 msgid "first letter of every word upper case"
 msgstr "単語の頭をそれぞれ大文字にする"
 
-#: krenameimpl.cpp:472
+#: krenameimpl.cpp:500
 msgid "first letter of filename upper case"
 msgstr "ファイル名の頭をそれぞれ大文字にする"
 
-#: krenameimpl.cpp:478
+#: krenameimpl.cpp:506
 msgid "insert name of directory"
 msgstr "ディレクトリ名を挿入"
 
-#: krenameimpl.cpp:479
+#: krenameimpl.cpp:507
 msgid "insert name of parent directory"
 msgstr "親ディレクトリ名を挿入"
 
-#: krenameimpl.cpp:480
+#: krenameimpl.cpp:508
 msgid "insert the length of the input filename"
 msgstr "入力ファイル名を挿入する文字数"
 
 #: main.cpp:52
+#, fuzzy
+msgid "link files to directory or url"
+msgstr "ディレクトリにファイルをコピー"
+
+#: main.cpp:53
 msgid "load the profile named [profile] on startup"
 msgstr ""
 
 #: main.cpp:51
-msgid "move files to directory"
+#, fuzzy
+msgid "move files to directory or url"
 msgstr "ディレクトリにファイルを移動"
 
-#: krenameimpl.cpp:473
+#: krenameimpl.cpp:501
 msgid "number (try also ##, ###, ... for leading zeros)"
 msgstr "番号(##だと01, ###だと001 のように桁が増える)"
 
-#: krenameimpl.cpp:468
+#: krenameimpl.cpp:496
 msgid "old filename"
 msgstr "現在のファイル名"
 
-#: krenameimpl.cpp:469
+#: krenameimpl.cpp:497
 msgid "old filename converted to lower case"
 msgstr "小文字に変換された現在のファイル名"
 
-#: krenameimpl.cpp:470
+#: krenameimpl.cpp:498
 msgid "old filename converted to upper case"
 msgstr "大文字に変換された現在のファイル名"
-
-#: main.cpp:55
-msgid "only show <num> preview items"
-msgstr ""
 
 #: main.cpp:47
 msgid "set a template"
@@ -1606,24 +1097,24 @@ msgstr "書式を設定"
 msgid "set a template for the file extension"
 msgstr "ファイル拡張子の書式を設定"
 
-#: main.cpp:54
+#: main.cpp:55
 msgid "start KRename's selftest (developers only)"
 msgstr ""
 
-#: main.cpp:53
+#: main.cpp:54
 msgid "start renaming immediately"
 msgstr "リネームをすぐに開始"
 
-#: krenameimpl.cpp:481
+#: krenameimpl.cpp:509
 msgid "strip whitespaces leading and trailing"
 msgstr "前後の空白を詰める"
 
-#: krenameimpl.cpp:482
+#: krenameimpl.cpp:510
 #, fuzzy
 msgid "strip whitespaces leading and trailing of an arbitrary string"
 msgstr "前後の空白を詰める"
 
-#: krenameimpl.cpp:477
+#: krenameimpl.cpp:505
 msgid "y characters of old filename starting at x"
 msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 
@@ -1636,11 +1127,45 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "&Add"
 #~ msgstr "追加(&A)"
 
+#~ msgid "&Add Number"
+#~ msgstr "番号を追加(&A)"
+
+#, fuzzy
+#~ msgid "&Advanced Filename"
+#~ msgstr "ファイル名(&F)"
+
+#, fuzzy
+#~ msgid "&Change Owner"
+#~ msgstr "所有者を変更(&O)"
+
 #~ msgid "&Command Plugin"
 #~ msgstr "コマンド(&C)"
 
+#, fuzzy
+#~ msgid "&Convert selection:"
+#~ msgstr "選択を反転(&I)"
+
+#, fuzzy
+#~ msgid "&Copy files to destination directory"
+#~ msgstr "ディレクトリにファイルをコピー(&y)"
+
 #~ msgid "&Create an undo script"
 #~ msgstr "取消スクリプトを作成(&C)"
+
+#, fuzzy
+#~ msgid "&Definitions"
+#~ msgstr "対象(&t)"
+
+#, fuzzy
+#~ msgid "&Delete"
+#~ msgstr "プロファイルを削除(&D)"
+
+#~ msgid "&Edit..."
+#~ msgstr "編集(&E).."
+
+#, fuzzy
+#~ msgid "&Enable Plugin"
+#~ msgstr "ディレクトリ(&D)"
 
 #~ msgid "&Encoding Conversion Plugin"
 #~ msgstr "エンコーディング変換プラグイン(&E)"
@@ -1648,8 +1173,35 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "&Execute without blocking (not recommended)"
 #~ msgstr "KRenameを止めずにコマンドを実行(おすすめしません)(&E)"
 
+#~ msgid "&Extension:"
+#~ msgstr "拡張子(&E):"
+
+#~ msgid "&Filename"
+#~ msgstr "ファイル名(&F)"
+
 #~ msgid "&Find and Replace..."
 #~ msgstr "検索と置換(&F)"
+
+#, fuzzy
+#~ msgid "&Find:"
+#~ msgstr "検索語句:"
+
+#~ msgid "&Functions..."
+#~ msgstr "機能(&F)"
+
+#, fuzzy
+#~ msgid "&Group:"
+#~ msgstr "グループ:"
+
+#~ msgid "&Insert Part of Filename..."
+#~ msgstr "ファイル名の一部を挿入(&I)"
+
+#, fuzzy
+#~ msgid "&Insert Variable"
+#~ msgstr "'$' を挿入"
+
+#~ msgid "&Invert selection"
+#~ msgstr "選択を反転(&I)"
 
 #~ msgid "&Load KDE file plugins"
 #~ msgstr "KDEファイルプラグインをロード(&L)"
@@ -1657,17 +1209,43 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "&Load file plugins on start"
 #~ msgstr "起動時にファイルプラグインをロードする(&L)"
 
+#, fuzzy
+#~ msgid "&Load from File..."
+#~ msgstr "プロファイルをロード(&L)"
+
+#~ msgid "&Move files to destination directory"
+#~ msgstr "ディレクトリにファイルを移動(&M)"
+
+#~ msgid "&Name:"
+#~ msgstr "名前(&N):"
+
 #~ msgid "&Number"
 #~ msgstr "番号(&N)"
 
 #~ msgid "&Number of template history items:"
 #~ msgstr "テンプレート履歴の数(&N):"
 
+#~ msgid "&Numbering"
+#~ msgstr "番号(&N)"
+
+#~ msgid "&Numbering..."
+#~ msgstr "番号付け(&N)"
+
 #~ msgid "&Ok"
 #~ msgstr "&OK"
 
+#, fuzzy
+#~ msgid "&Options"
+#~ msgstr "オプション(&p)"
+
+#~ msgid "&Overwrite existing files"
+#~ msgstr "ファイルを上書きする(&O)"
+
 #~ msgid "&Permissions"
 #~ msgstr "権限(&P)"
+
+#~ msgid "&Prefix:"
+#~ msgstr "接頭語(&P):"
 
 #~ msgid "&Regular expression"
 #~ msgstr "正規表現(&R)"
@@ -1675,14 +1253,58 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "&Reload Plugin Data"
 #~ msgstr "プラグインデータをリロード(&R)"
 
+#~ msgid "&Remove Number"
+#~ msgstr "番号を削除(&R)"
+
+#~ msgid "&Rename input files"
+#~ msgstr "ファイルをリネーム(&R)"
+
+#, fuzzy
+#~ msgid "&Replace With:"
+#~ msgstr "以下で置換"
+
+#, fuzzy
+#~ msgid "&Reset counter for every directory"
+#~ msgstr "ディレクトリ名を挿入"
+
 #~ msgid "&Revert Changes"
 #~ msgstr "変更を元に戻す(&R)"
+
+#, fuzzy
+#~ msgid "&Save to File..."
+#~ msgstr "プロファイルを作成(&C)"
+
+#, fuzzy
+#~ msgid "&Simple Filename"
+#~ msgstr "ファイル名(&F)"
+
+#, fuzzy
+#~ msgid "&Skip Numbers"
+#~ msgstr "スキップする番号(&k)"
+
+#, fuzzy
+#~ msgid "&Step by:"
+#~ msgstr "増加数(&b):"
+
+#~ msgid "&Suffix:"
+#~ msgstr "接尾語(&S):"
 
 #~ msgid "&System Functions"
 #~ msgstr "システムの機能(&S)"
 
+#~ msgid "&Template:"
+#~ msgstr "書式(&T):"
+
+#, fuzzy
+#~ msgid "&Test..."
+#~ msgstr "編集(&E).."
+
 #~ msgid "&Thumbnail size:"
 #~ msgstr "サムネールのサイズ(&T):"
+
+#, fuzzy
+#~ msgid "&Type:"
+#~ msgstr "書式(&T):"
 
 #~ msgid "&Undo Old Renaming Action..."
 #~ msgstr "リネームを元に戻す(&U).."
@@ -1690,11 +1312,22 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "&Undo Renaming"
 #~ msgstr "リネームを元に戻す(&U)"
 
+#~ msgid "&Use extension of the input file"
+#~ msgstr "入力ファイルの拡張子を使う(&U)"
+
 #~ msgid "&Use local encoding: %1"
 #~ msgstr "ローカルのエンコーディングを使う(&U): %1"
 
 #~ msgid "&Use this plugin"
 #~ msgstr "このプラグインを使う(&U)"
+
+#, fuzzy
+#~ msgid "&User:"
+#~ msgstr "ユーザ:"
+
+#, fuzzy
+#~ msgid "&Variables"
+#~ msgstr "プロファイルの名前"
 
 #~ msgid ""
 #~ "*.krename|KRename undo scripts (*.krename)\n"
@@ -1744,8 +1377,16 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ "<qt>取消スクリプトは一般的なシェルスクリプトです。手動でコマンドラインから"
 #~ "実行することもできます</qt>"
 
+#, fuzzy
+#~ msgid "A&dvanced Permissions"
+#~ msgstr "権限を変更(&P)"
+
 #~ msgid "Aborting..."
 #~ msgstr "中止.."
+
+#, fuzzy
+#~ msgid "Access Permissions"
+#~ msgstr "アクセス権限"
 
 #~ msgid ""
 #~ "Add a template for the file extension.<br>It behaves like the filename "
@@ -1777,17 +1418,64 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "Built-in Functions:"
 #~ msgstr "内蔵機能:"
 
+#, fuzzy
+#~ msgid "Can Read"
+#~ msgstr "読み"
+
+#~ msgid "Capitalize"
+#~ msgstr "先頭のみ大文字"
+
+#~ msgid "Change &Permissions"
+#~ msgstr "権限を変更(&P)"
+
+#~ msgid "Change &access date && time"
+#~ msgstr "アクセス日時を変更(&a)"
+
+#, fuzzy
+#~ msgid "Change &modifcation date && time"
+#~ msgstr "変更日時を変更(&m)"
+
 #~ msgid "Command Plugin"
 #~ msgstr "コマンド"
 
 #~ msgid "Command:"
 #~ msgstr "コマンド:"
 
+#, fuzzy
+#~ msgid "Configure the look and feel of the KRename GUI:"
+#~ msgstr "KRenameの外観を設定:<br>"
+
+#, fuzzy
+#~ msgid "Convert to lower case"
+#~ msgstr "小文字に変換 "
+
+#~ msgid "Convert to upper case"
+#~ msgstr "大文字に変換"
+
 #~ msgid "Copies all files to the destination directory and renames them."
 #~ msgstr "ディレクトリにファイルをコピーしてリネームする"
 
+#~ msgid "Create symbolic &links in destination directory"
+#~ msgstr "ディレクトリにsymlinkを作成(&l)"
+
+#~ msgid "Custom extension"
+#~ msgstr "カスタム拡張子"
+
+#, fuzzy
+#~ msgid "Custom filename"
+#~ msgstr "カスタム名"
+
+#~ msgid "Custom name"
+#~ msgstr "カスタム名"
+
+#~ msgid "Date"
+#~ msgstr "日付"
+
 #~ msgid "Date && &Time"
 #~ msgstr "日付と時間(&T)"
+
+#~ msgid "Description"
+#~ msgstr "説明"
 
 #~ msgid "Dir Plugin"
 #~ msgstr "ディレクトリ"
@@ -1825,11 +1513,44 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "File %1 exists already!"
 #~ msgstr "ファイル %1 は存在します"
 
+#, fuzzy
+#~ msgid "File extension &starts at:"
+#~ msgstr "ファイルの拡張子の場所:"
+
+#, fuzzy
+#~ msgid "File&name:"
+#~ msgstr "ファイル名(&n)"
+
 #~ msgid "Files per directory:"
 #~ msgstr "ディレクトリあたりのファイル数:"
 
+#~ msgid "Find"
+#~ msgstr "検索語句"
+
+#, fuzzy
+#~ msgid "Find &and Replace..."
+#~ msgstr "検索と置換(&F)"
+
+#~ msgid "Find and Replace"
+#~ msgstr "検索と置換"
+
+#, fuzzy
+#~ msgid "Find is a Regular &Expression"
+#~ msgstr "正規表現"
+
 #~ msgid "Finished successfully"
 #~ msgstr "成功しました"
+
+#~ msgid "First Dot"
+#~ msgstr "最初のドット"
+
+#, fuzzy
+#~ msgid "Get &Current Time"
+#~ msgstr "現在の日付と時間を取得(&G)"
+
+#, fuzzy
+#~ msgid "Gro&up:"
+#~ msgstr "グループ:"
 
 #~ msgid "Help Dialog with all tokens supported by KRename."
 #~ msgstr "Help Dialog with all tokens supported by KRename."
@@ -1840,6 +1561,10 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "Insert your username"
 #~ msgstr "ユーザ名を挿入"
 
+#, fuzzy
+#~ msgid "KRename Help"
+#~ msgstr "KRename"
+
 #~ msgid "KRename: Tabbed default profile"
 #~ msgstr "KRename: タブ形式のデフォルトプロファイル"
 
@@ -1848,6 +1573,12 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 
 #~ msgid "Krename"
 #~ msgstr "KRename"
+
+#~ msgid "Last Dot"
+#~ msgstr "最後のドット"
+
+#~ msgid "Look and Feel"
+#~ msgstr "外観"
 
 #~ msgid "Messages"
 #~ msgstr "メッセージ"
@@ -1864,14 +1595,40 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "Moves all files to the destination directory and renames them."
 #~ msgstr "ディレクトリにファイルを移動してリネームする"
 
+#, fuzzy
+#~ msgid "N&umber"
+#~ msgstr "番号"
+
+#, fuzzy
+#~ msgid "No Conversion"
+#~ msgstr "エンコーディング変換プラグイン"
+
+#~ msgid "Number"
+#~ msgstr "番号"
+
+#, fuzzy
+#~ msgid "Number of &digits:"
+#~ msgstr "桁数(&N):"
+
 #~ msgid ""
 #~ "Number of the first file.<br>The files are always numbered the same way "
 #~ "as they are shown in the result list."
 #~ msgstr ""
 #~ "ファイルの最初の番号<br>下のリストの要領でファイルに番号が振られます。"
 
+#, fuzzy
+#~ msgid "O&wner:"
+#~ msgstr "所有者"
+
+#, fuzzy
+#~ msgid "Ot&hers:"
+#~ msgstr "その他"
+
 #~ msgid "Output &Directory"
 #~ msgstr "出力ディレクトリ(&D)"
+
+#~ msgid "Ownership"
+#~ msgstr "所有者"
 
 #~ msgid "P&icture Plugin"
 #~ msgstr "画像(&i)"
@@ -1891,14 +1648,29 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "Please give the name of the undo script!"
 #~ msgstr "取消スクリプトに名前をつけてください"
 
+#, fuzzy
+#~ msgid "Please input a new filename"
+#~ msgstr "新しいファイル名を入力してください:"
+
 #~ msgid "Please select the text you want to insert:"
 #~ msgstr "挿入する語句を選んでください:"
+
+#, fuzzy
+#~ msgid "Plugins"
+#~ msgstr "プラグイン(&l)"
 
 #~ msgid "Preview: "
 #~ msgstr "プレビュー: "
 
 #~ msgid "Profiles"
 #~ msgstr "プロファイル"
+
+#~ msgid "Progress"
+#~ msgstr "進行状況"
+
+#, fuzzy
+#~ msgid "Reg. Expression"
+#~ msgstr "正規表現"
 
 #~ msgid "Regular expression"
 #~ msgstr "正規表現"
@@ -1909,6 +1681,9 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ msgid "Remove selected files"
 #~ msgstr "選択したファイルを削除"
 
+#~ msgid "Replace With"
+#~ msgstr "以下で置換"
+
 #~ msgid "Replace with:"
 #~ msgstr "以下で置換:"
 
@@ -1917,6 +1692,13 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 
 #~ msgid "Specify a template to use for renaming files."
 #~ msgstr "ファイルをリネームする際の書式を指定"
+
+#, fuzzy
+#~ msgid "Start  &index:"
+#~ msgstr "開始番号(&i):"
+
+#~ msgid "Start &index:"
+#~ msgstr "開始番号(&i):"
 
 #~ msgid "Start index:"
 #~ msgstr "開始番号:"
@@ -1934,6 +1716,12 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 #~ "このスクリプトはKRenameの取消スクリプトではないようです。このスクリプトを"
 #~ "実行するのは危険です。続けますか？"
 
+#~ msgid "Time:"
+#~ msgstr "時間:"
+
+#~ msgid "Token"
+#~ msgstr "項目"
+
 #~ msgid "Unable to start the given undo script!"
 #~ msgstr "指定した取消スクリプトを開始できません"
 
@@ -1945,6 +1733,27 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 
 #~ msgid "Undoing the renaming operation has been completed."
 #~ msgstr "リネーム操作の取り消しが完了しました"
+
+#, fuzzy
+#~ msgid "Use &custom filename"
+#~ msgstr "入力ファイル名を使う(&I)"
+
+#, fuzzy
+#~ msgid "Use &input filename"
+#~ msgstr "入力ファイル名を使う(&I)"
+
+#, fuzzy
+#~ msgid "Use &tabbed style GUI (advanced users)"
+#~ msgstr "タブ形式のGUIを使う(上級者向け)(&t)"
+
+#~ msgid "Use &wizard style GUI (beginners)"
+#~ msgstr "ウィザード形式のGUIを使う(初心者向け)(&w)"
+
+#~ msgid "Use original extension"
+#~ msgstr "元の拡張子を使う"
+
+#~ msgid "Use original name"
+#~ msgstr "元の名前を使う"
 
 #~ msgid ""
 #~ "Use the filename that is generated by KRename instead of your changes."
