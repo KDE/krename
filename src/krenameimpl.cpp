@@ -106,7 +106,7 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list
 		w->setGeometry( rect );
 
     /*
-    // it is time to load a default profile now (if the user has specified one)
+    // it is time to load a default profile now (if the user has specified one)
     if( loadprofile && !k->hasCommandlineProfile() && ProfileManager::hasDefaultProfile() )
 	ProfileManager::loadDefaultProfile( k );
     else if ( !k->hasCommandlineProfile() )

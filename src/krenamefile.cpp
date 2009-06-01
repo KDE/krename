@@ -160,6 +160,8 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const KU
             splitPos = file.indexOf( '.' );
         else if( eSplitMode == eSplitMode_LastDot )
             splitPos = file.lastIndexOf( '.' );
+        else if( eSplitMode == eSplitMode_NoExtension )
+            splitPos = file.length();
         else
         {
             if( dot ) 
@@ -181,6 +183,7 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const KU
             splitPos = file.length();
 
         rDescription.filename  = file.left( splitPos );
+        rDescription.extension = "";
         if( splitPos != file.length() )
             rDescription.extension = file.right( file.length() - splitPos - 1 );
         rDescription.directory = path;
@@ -193,6 +196,7 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const KU
         int lastSlash = rDescription.directory.lastIndexOf('/');
         rDescription.filename  = rDescription.directory.right( rDescription.directory.length() - lastSlash - 1 );
         rDescription.directory = rDescription.directory.left( lastSlash );
+        rDescription.extension = "";
     }
 
     /*
