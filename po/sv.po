@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sv\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-01 11:02+0200\n"
-"PO-Revision-Date: 2009-06-01 14:57+0200\n"
+"PO-Revision-Date: 2009-06-01 15:20+0200\n"
 "Last-Translator: Peter Landgren <peter.talken@telia.com>\n"
 "Language-Team: svenska <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -119,7 +119,7 @@ msgstr ""
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
 "transliteration).</qt>"
-msgstr "<qt>Denna plugin kan transkribera ett filnamn till engelska.</qt>"
+msgstr "<qt>Denna plugin kan transkribera ett filnamn till engelska (d. v. s. genomföra translitteration).</qt>"
 
 #: systemplugin.cpp:70
 msgid ""
@@ -555,11 +555,11 @@ msgstr "Skjut in det translittererade ursprungliga filnamnet med versaler"
 
 #: translitplugin.cpp:95
 msgid "Inserts the transliterated original filename converted to lower case"
-msgstr "Sätter in det omvandlade ursprungliga filnamnet omgjort till gemener"
+msgstr "Sätter in det translittererade ursprungliga filnamnet omgjort till gemener"
 
 #: translitplugin.cpp:96
 msgid "Inserts the transliterated original filename converted to upper case"
-msgstr "Sätter in det omvandlade ursprungliga filnamnet omgjort till versaler."
+msgstr "Sätter in det translittererade ursprungliga filnamnet omgjort till versaler."
 
 #: scriptplugin.cpp:242
 msgid "Int"
@@ -887,7 +887,7 @@ msgstr "Translittererar strängen, som följer semikolon"
 
 #: translitplugin.cpp:100
 msgid "Transliteration"
-msgstr "Transliteration"
+msgstr "Translitteration"
 
 #: main.cpp:75
 msgid "Trevor Semeniuk"
