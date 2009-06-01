@@ -120,6 +120,8 @@ void KRenameTest::testKRenameFile()
                           "/home/test", "simple", "txt", eSplitMode_FirstDot, 0, false );
     RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (last dot)", KUrl("file:///home/test/simple.txt"),
                           "/home/test", "simple", "txt", eSplitMode_LastDot, 0, false );
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (no extension)", KUrl("file:///home/test/simple.txt"),
+                          "/home/test", "simple.txt", "", eSplitMode_NoExtension, 0, false );
     RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (custom dot 0)", KUrl("file:///home/test/simple.txt"),
                           "/home/test", "simple.txt", "", eSplitMode_CustomDot, 0, false );
     RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (custom dot 1)", KUrl("file:///home/test/simple.txt"),

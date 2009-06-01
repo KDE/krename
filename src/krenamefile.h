@@ -30,9 +30,10 @@ class KFileItem;
  *  filename and extension.
  */
 enum ESplitMode {
-    eSplitMode_FirstDot, ///< Extension starts at the first dot found in the filename
-    eSplitMode_LastDot,  ///< Extension starts at the last dot found in the filename
-    eSplitMode_CustomDot ///< Extension starts at a user defined dot in the filename
+    eSplitMode_FirstDot,    ///< Extension starts at the first dot found in the filename
+    eSplitMode_LastDot,     ///< Extension starts at the last dot found in the filename
+    eSplitMode_NoExtension, ///< Do not use file extension handling
+    eSplitMode_CustomDot    ///< Extension starts at a user defined dot in the filename
 };
 
 class KRenameFile {

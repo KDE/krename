@@ -286,6 +286,10 @@ void KRenameWindow::showPage( int index )
 
 void KRenameWindow::slotEnableControls()
 {
+    // TODO: 
+    // Disable all extension widgets
+    // if splitMode is NOEXTENSION
+
     if( m_buttonFinish ) 
     {
         bool enable = (m_curPage == m_guiMode->numPages - 1)
@@ -787,6 +791,9 @@ void KRenameWindow::slotExtensionSplitModeChanged( int index )
         case 1:
             splitMode = eSplitMode_LastDot;
             break;
+        case 2:
+            splitMode = eSplitMode_NoExtension;
+            break;
         default:
             splitMode = eSplitMode_CustomDot;
             break;
@@ -838,8 +845,11 @@ void KRenameWindow::slotSortChanged( int index )
 void KRenameWindow::slotMaxDotsChanged( int dots )
 {
     int i;
+    const int FILE_EXTENSION_VARIABLE_ITEMS_START = 3;
 
-    for( i=2;i<m_pageFilename->comboExtension->count();i++ )
+    for( i=FILE_EXTENSION_VARIABLE_ITEMS_START;
+         i<m_pageFilename->comboExtension->count();
+         i++ )
         m_pageFilename->comboExtension->removeItem( i );
 
     for( i=1;i<=dots;i++ )
