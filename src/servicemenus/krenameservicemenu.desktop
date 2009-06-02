@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
-Actions=Krename;
+Actions=KRename;
 Type=Service
 Icon=
 Name=
@@ -9,7 +9,7 @@ X-KDE-ExcludeServiceTypes=kdedevice/*
 X-KDE-Protocol=!file
 ServiceTypes=all/allfiles
  
-[Desktop Action Rename]
+[Desktop Action KRename]
 Name=Rename with KRename
 Name[de]=Mit KRename umbenennen
 Name[es]=Renombrar con KRename
