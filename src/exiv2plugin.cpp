@@ -390,8 +390,9 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
     if( !this->supports( token ) )
         return QString("");
 
-    // QString::toStdString is not available everywhere
-    const QByteArray asc = filename.toAscii(); 
+    //const QByteArray asc = filename.toAscii(); 
+    // Use toUtf8 so that unicode filenames will work
+    const QByteArray asc = filename.toUtf8(); 
     std::string strFilename(asc.constData(), asc.length());
 
     try 
@@ -402,7 +403,7 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
             image->readMetadata();
             
             if( token == "exifcomment" )
-                return QString( image->comment().c_str() );
+                return QString::fromUtf8( image->comment().c_str() );
             /*
               else if( token =="exifwidth" )
               return QString::number( image->pixelWidth() );
@@ -416,7 +417,7 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
                 if( it != image->exifData().end() )
                 {
                     std::string val = (*it).toString();
-                    return QString( val.c_str() );
+                    return QString::fromUtf8( val.c_str() );
                 }
             }
             else if( token.startsWith("exifxmp.") )
@@ -426,7 +427,7 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
                 if( it != image->xmpData().end() )
                 {
                     std::string val = (*it).toString();
-                    return QString( val.c_str() );
+                    return QString::fromUtf8( val.c_str() );
                 }
             }
             else if( token.startsWith("exifiptc.") )
@@ -436,14 +437,14 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
                 if( it != image->iptcData().end() )
                 {
                     std::string val = (*it).toString();
-                    return QString( val.c_str() );
+                    return QString::fromUtf8( val.c_str() );
                 }
             }
         } 
     }
     catch( std::exception & err ) 
     {
-        return QString( err.what() );
+        return QString::fromUtf8( err.what() );
     }
 
     return QString("");
