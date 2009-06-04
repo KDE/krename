@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename-3.0.8-1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-01 11:02+0200\n"
+"POT-Creation-Date: 2009-06-04 08:57+0200\n"
 "PO-Revision-Date: 2005-10-14 01:11+0200\n"
 "Last-Translator: Matej Urbančič <matej.urban@gmail.com>\n"
 "Language-Team: Slovenian\n"
@@ -21,12 +21,17 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: KBabel 1.10.2\n"
 
-#: batchrenamer.cpp:302 batchrenamer.cpp:425
+#: rc.cpp:54 rc.cpp:63
+#, no-c-format
+msgid "$"
+msgstr ""
+
+#: batchrenamer.cpp:301 batchrenamer.cpp:424
 #, fuzzy
 msgid "%1 errors occurred!"
 msgstr "Pojavilo se je %2 napak"
 
-#: batchrenamer.cpp:759
+#: batchrenamer.cpp:758
 msgid "%2 errors occurred!"
 msgstr "Pojavilo se je %2 napak"
 
@@ -35,12 +40,17 @@ msgstr "Pojavilo se je %2 napak"
 msgid "&Add..."
 msgstr "&Dodaj"
 
+#: rc.cpp:48
+#, fuzzy, no-c-format
+msgid "&Advanced Filename"
+msgstr "&Ime datoteke"
+
 #: previewlist.cpp:32
 #, fuzzy
 msgid "&Change filename manually..."
 msgstr "&Ročno spremeni ime datoteke"
 
-#: krenamewindow.cpp:132
+#: krenamewindow.cpp:134
 msgid "&Close"
 msgstr ""
 
@@ -54,20 +64,50 @@ msgstr "C&ilj"
 msgid "&Display name"
 msgstr "&Prikaži ime"
 
+#: rc.cpp:168
+#, no-c-format
+msgid "&Down"
+msgstr ""
+
+#: rc.cpp:129
+#, no-c-format
+msgid "&Extension:"
+msgstr "&Končnica"
+
+#: rc.cpp:96
+#, no-c-format
+msgid "&Filename"
+msgstr "&Ime datoteke"
+
 #: krenamewindow.cpp:47
 #, fuzzy
 msgid "&Files"
 msgstr "&Izbor"
 
-#: krenamewindow.cpp:131
+#: krenamewindow.cpp:133
 #, fuzzy
 msgid "&Finish..."
 msgstr "&Končaj"
 
-#: tokenhelpdialog.cpp:28
+#: rc.cpp:66
+#, no-c-format
+msgid "&Functions..."
+msgstr "&Predloge"
+
+#: tokenhelpdialog.cpp:35
 #, fuzzy
 msgid "&Insert"
 msgstr "Vstavi '$'"
+
+#: rc.cpp:90
+#, no-c-format
+msgid "&Insert Part of Filename..."
+msgstr "Vstav&i del imena..."
+
+#: rc.cpp:87
+#, no-c-format
+msgid "&Numbering..."
+msgstr "&Številčenje ..."
 
 #: previewlist.cpp:34
 msgid "&Open"
@@ -82,14 +122,15 @@ msgstr "&Odpri cilj"
 msgid "&Plugins"
 msgstr "Vs&tavki"
 
+#: rc.cpp:126
+#, no-c-format
+msgid "&Prefix:"
+msgstr "&Predpona"
+
 #: rc.cpp:27
 #, no-c-format
 msgid "&Preview"
 msgstr "&Predogled"
-
-#: krenameimpl.cpp:127
-msgid "&Profiles..."
-msgstr "&Profili"
 
 #: previewlist.cpp:37
 #, fuzzy
@@ -106,21 +147,46 @@ msgstr "Znov&a preimenuj vse datoteke"
 msgid "&Rename more..."
 msgstr "P&reimenuj več ..."
 
+#: rc.cpp:93
+#, fuzzy, no-c-format
+msgid "&Simple Filename"
+msgstr "&Ime datoteke"
+
+#: rc.cpp:99
+#, no-c-format
+msgid "&Suffix:"
+msgstr "P&ripona"
+
+#: rc.cpp:51
+#, no-c-format
+msgid "&Template:"
+msgstr "&Predloga:"
+
 #: progressdialog.cpp:34
 #, fuzzy
 msgid "&Undo"
 msgstr "Razveljavi: "
 
+#: rc.cpp:165
+#, no-c-format
+msgid "&Up"
+msgstr ""
+
+#: rc.cpp:69
+#, no-c-format
+msgid "&Use extension of the input file"
+msgstr "&Uporabi izvorno končnico"
+
 #: main.cpp:66
 msgid "(c) 2001-2009, Dominik Seichter\n"
 msgstr ""
 
-#: krenameimpl.cpp:356 scriptplugin.cpp:298 scriptplugin.cpp:333
+#: krenameimpl.cpp:357 scriptplugin.cpp:298 scriptplugin.cpp:333
 #, fuzzy
 msgid "*|All files and directories"
 msgstr "Dodaj s&krite mape"
 
-#: krenamewindow.cpp:328
+#: krenamewindow.cpp:334
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "Število datotek: <b>%1</b>"
@@ -132,6 +198,19 @@ msgid ""
 msgstr ""
 "<b>KRename je bil zagnan preko skrbniškega računa!</b><br>Zaradi prevelikih "
 "pravic lahko tak zagon poškoduje vaš sistem, če ne veste natančno kaj delate!"
+
+#: rc.cpp:57
+#, no-c-format
+msgid ""
+"<html><head><meta name=&quot;qrichtext&quot; content=&quot;1&quot; /><style "
+"type=&quot;text/css&quot;>\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=&quot; font-family:'Sans Serif'; font-size:9pt; "
+"font-weight:400; font-style:normal; text-decoration:none;&quot;>\n"
+"<p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;&quot;><span style=&quot; "
+"font-weight:600;&quot;>.</span></p></body></html>"
+msgstr ""
 
 #: translitplugin.cpp:102
 #, fuzzy
@@ -208,7 +287,7 @@ msgstr ""
 msgid "Brandon Low"
 msgstr ""
 
-#: krenameimpl.cpp:511
+#: krenameimpl.cpp:512
 #, fuzzy
 msgid "Built-in Functions"
 msgstr "Izbrane predloge:"
@@ -236,20 +315,25 @@ msgstr "Ne morem chmod %1."
 msgid "Can't chown %1."
 msgstr "ne morem chown %1."
 
-#: batchrenamer.cpp:671
+#: batchrenamer.cpp:670
 msgid "Can't create undo script :"
 msgstr "Ne morem ustvariti razveljavitvenega skripta :"
 
-#: batchrenamer.cpp:773
+#: batchrenamer.cpp:772
 msgid "Can't set executable bit on undo script."
 msgstr "Ne morem določiti izvršljivega bita v skriptu za razveljavitev."
 
-#: batchrenamer.cpp:269
+#: batchrenamer.cpp:268
 #, fuzzy
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr ""
 "Ne morem ustvariti simboličnih povezav na različnih gostiteljih za datoteko %"
 "1."
+
+#: rc.cpp:111 rc.cpp:147
+#, no-c-format
+msgid "Capitalize"
+msgstr "Velike črke"
 
 #: main.cpp:84
 msgid "Charles Samuels"
@@ -263,9 +347,29 @@ msgstr "Razred"
 msgid "Contributed a Spanish translation"
 msgstr "Prevod programa v španščino"
 
+#: rc.cpp:105 rc.cpp:141
+#, fuzzy, no-c-format
+msgid "Convert to lower case"
+msgstr "Pretvori v male črke"
+
+#: rc.cpp:108 rc.cpp:144
+#, no-c-format
+msgid "Convert to upper case"
+msgstr "Pretvori v velike črke"
+
 #: main.cpp:90
 msgid "Created the Gentoo Ebuild scripts for Krename."
 msgstr "Ustvaril Gentoo Ebuild skripte za KRename."
+
+#: rc.cpp:150
+#, no-c-format
+msgid "Custom extension"
+msgstr "Končnica po meri"
+
+#: rc.cpp:114
+#, no-c-format
+msgid "Custom name"
+msgstr "Ime po meri"
 
 #: main.cpp:109
 #, fuzzy
@@ -275,6 +379,11 @@ msgstr "Italijanski prevod"
 #: main.cpp:96
 msgid "Daniele Medri"
 msgstr ""
+
+#: rc.cpp:123 rc.cpp:135
+#, no-c-format
+msgid "Date"
+msgstr "Datum"
 
 #: datetimeplugin.cpp:51
 #, fuzzy
@@ -295,7 +404,7 @@ msgstr ""
 msgid "Directory of the current file"
 msgstr "Vstavite trenutni čas"
 
-#: krenameimpl.cpp:381
+#: krenameimpl.cpp:382
 #, fuzzy
 msgid "Do you really want to remove all files from the list?"
 msgstr "Zares želite izbrisati profil: %1"
@@ -313,11 +422,7 @@ msgstr ""
 msgid "Down"
 msgstr ""
 
-#: krenameimpl.cpp:123
-msgid "E&xtras"
-msgstr "&Dodatno"
-
-#: batchrenamer.cpp:761
+#: batchrenamer.cpp:760
 msgid "Elapsed time: %1 seconds"
 msgstr "Pretečen čas: %1 sekund"
 
@@ -326,11 +431,11 @@ msgstr "Pretečen čas: %1 sekund"
 msgid "Error"
 msgstr "Napaka: %1"
 
-#: batchrenamer.cpp:418
+#: batchrenamer.cpp:417
 msgid "Error during undoing %1"
 msgstr ""
 
-#: batchrenamer.cpp:282
+#: batchrenamer.cpp:281
 msgid "Error renaming %2 (to %1)"
 msgstr ""
 
@@ -347,8 +452,18 @@ msgstr ""
 msgid "Extension of the current file"
 msgstr "&Uporabi izvorno končnico"
 
+#: rc.cpp:72
+#, fuzzy, no-c-format
+msgid "File extension &starts at:"
+msgstr "Končnica datoteke se začne pri:"
+
 #: krenamewindow.cpp:50
 msgid "File&name"
+msgstr "Pred&loge"
+
+#: rc.cpp:117
+#, fuzzy, no-c-format
+msgid "File&name:"
 msgstr "Pred&loge"
 
 #: scriptplugin.cpp:75
@@ -356,15 +471,15 @@ msgstr "Pred&loge"
 msgid "Filename of the current file"
 msgstr "Vstavite trenutni čas"
 
-#: batchrenamer.cpp:371
+#: batchrenamer.cpp:370
 msgid "Filenames Processed after %1 seconds."
 msgstr "Imena datotek obdelana po %1 sekundah"
 
-#: batchrenamer.cpp:230 batchrenamer.cpp:684
+#: batchrenamer.cpp:229 batchrenamer.cpp:683
 msgid "Files will be copied to: %1"
 msgstr "Datoteke bodo kopirane v %1"
 
-#: batchrenamer.cpp:233 batchrenamer.cpp:686
+#: batchrenamer.cpp:232 batchrenamer.cpp:685
 msgid "Files will be moved to: %1"
 msgstr "Datoteke bodo premaknjene v %1"
 
@@ -372,6 +487,16 @@ msgstr "Datoteke bodo premaknjene v %1"
 #, fuzzy, no-c-format
 msgid "Files: <b>0</b>"
 msgstr "Število datotek: <b>%1</b>"
+
+#: rc.cpp:84 rc.cpp:162
+#, no-c-format
+msgid "Find &and Replace..."
+msgstr "Poišči in z&amenjaj ..."
+
+#: rc.cpp:75
+#, no-c-format
+msgid "First Dot"
+msgstr "prvi piki"
 
 #: main.cpp:80
 msgid "Fixed a bug that caused krename not closing open files."
@@ -392,6 +517,11 @@ msgid ""
 msgstr ""
 "Odpravljen problemi spec datotek in izdelava paketov RPM za vse SuSe verzije "
 "in nov vzdrževalec KRename za Gentoo. "
+
+#: rc.cpp:45
+#, no-c-format
+msgid "Form"
+msgstr ""
 
 #: main.cpp:86
 msgid "Franz Schmid"
@@ -438,44 +568,44 @@ msgstr "Vstavite trenutni čas"
 msgid "Initial Value"
 msgstr ""
 
-#: batchrenamer.cpp:227 batchrenamer.cpp:690
+#: batchrenamer.cpp:226 batchrenamer.cpp:689
 msgid "Input files will be renamed."
 msgstr "Vključene datoteke bodo preimenovane."
 
-#: krenameimpl.cpp:522
+#: krenameimpl.cpp:523
 #, fuzzy
 msgid "Insert '#'"
 msgstr "Vstavi '$'"
 
-#: krenameimpl.cpp:514
+#: krenameimpl.cpp:515
 msgid "Insert '$'"
 msgstr "Vstavi '$'"
 
-#: krenameimpl.cpp:515
+#: krenameimpl.cpp:516
 msgid "Insert '%'"
 msgstr "Vstavi '%'"
 
-#: krenameimpl.cpp:516
+#: krenameimpl.cpp:517
 msgid "Insert '&'"
 msgstr "Vstavi '&'"
 
-#: krenameimpl.cpp:517
+#: krenameimpl.cpp:518
 msgid "Insert '*'"
 msgstr "Vstavi '*'"
 
-#: krenameimpl.cpp:518
+#: krenameimpl.cpp:519
 msgid "Insert '/'"
 msgstr "Vstavi '/'"
 
-#: krenameimpl.cpp:520
+#: krenameimpl.cpp:521
 msgid "Insert '['"
 msgstr "Vstavi '['"
 
-#: krenameimpl.cpp:519
+#: krenameimpl.cpp:520
 msgid "Insert '\\\\'"
 msgstr "Vstavi '\\\\'"
 
-#: krenameimpl.cpp:521
+#: krenameimpl.cpp:522
 msgid "Insert ']'"
 msgstr "Vstavi ']'"
 
@@ -622,7 +752,7 @@ msgstr ""
 msgid "Jose Rodriguez"
 msgstr ""
 
-#: main.cpp:59 krenameimpl.cpp:382
+#: main.cpp:59 krenameimpl.cpp:383
 msgid "KRename"
 msgstr "KRename"
 
@@ -631,11 +761,11 @@ msgstr "KRename"
 msgid "KRename Build:"
 msgstr "KRename"
 
-#: batchrenamer.cpp:304 batchrenamer.cpp:762
+#: batchrenamer.cpp:303 batchrenamer.cpp:761
 msgid "KRename finished the renaming process."
 msgstr "Krename je končal postopek preimenovanja"
 
-#: batchrenamer.cpp:427
+#: batchrenamer.cpp:426
 #, fuzzy
 msgid "KRename finished the undo process."
 msgstr "Krename je končal postopek preimenovanja"
@@ -662,6 +792,11 @@ msgstr ""
 msgid "Krzysztof Pawlak"
 msgstr ""
 
+#: rc.cpp:78
+#, no-c-format
+msgid "Last Dot"
+msgstr "zadnji piki"
+
 #: main.cpp:100
 msgid "Mark Ziegler"
 msgstr ""
@@ -687,9 +822,29 @@ msgstr ""
 msgid "Move"
 msgstr ""
 
+#: rc.cpp:153
+#, fuzzy, no-c-format
+msgid "N&umber"
+msgstr "Število"
+
 #: main.cpp:104
 msgid "Nicolas Benoit"
 msgstr ""
+
+#: rc.cpp:81
+#, fuzzy, no-c-format
+msgid "No File Extension"
+msgstr "Končnica po meri"
+
+#: rc.cpp:120 rc.cpp:132
+#, no-c-format
+msgid "Number"
+msgstr "Število"
+
+#: rc.cpp:156
+#, fuzzy, no-c-format
+msgid "Number of &digits:"
+msgstr "&Število cifer"
 
 #: krenamemodel.cpp:485
 msgid "Origin"
@@ -734,7 +889,7 @@ msgstr ""
 msgid "Polish Translation"
 msgstr "Italijanski prevod"
 
-#: batchrenamer.cpp:305 batchrenamer.cpp:428 batchrenamer.cpp:763
+#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:762
 msgid "Press close to quit!"
 msgstr "Pritisni zapri za izhod!"
 
@@ -781,7 +936,7 @@ msgstr "Znov&a preimenuj obdelane datoteke ..."
 msgid "Renamed"
 msgstr "Preimenovano"
 
-#: batchrenamer.cpp:755
+#: batchrenamer.cpp:754
 msgid "Renamed %1 files successfully."
 msgstr "Uspešno preimenovanih %1 datotek"
 
@@ -831,12 +986,17 @@ msgstr "Sortiranje: prosto"
 msgid "Special"
 msgstr "Posebno"
 
-#: krenameimpl.cpp:523
+#: krenameimpl.cpp:524
 #, fuzzy
 msgid "Special Characters"
 msgstr "Posebni znaki:"
 
-#: krenameimpl.cpp:564
+#: rc.cpp:159
+#, fuzzy, no-c-format
+msgid "Start  &index:"
+msgstr "Začetni &indeks:"
+
+#: krenameimpl.cpp:565
 msgid "Starting conversion of %1 files."
 msgstr "Začenjam preoblikovanje %1 datotek."
 
@@ -864,7 +1024,7 @@ msgstr ""
 msgid "Supported tokens:"
 msgstr "Podprti znaki:"
 
-#: batchrenamer.cpp:236 batchrenamer.cpp:688
+#: batchrenamer.cpp:235 batchrenamer.cpp:687
 msgid "Symbolic links will be created in: %1"
 msgstr "Simbolične povezave bodo ustvarjene v %1"
 
@@ -893,12 +1053,12 @@ msgstr "Hvala za noatun in ID3/Ogg zaznamek kreiran na noatun modulu."
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "Zahvala za RedHat pakete in drugo pomoč."
 
-#: krenameimpl.cpp:583
+#: krenameimpl.cpp:584
 #, fuzzy
 msgid "The directory %1 could not be created."
 msgstr "Ne najdem profila \"%1\"."
 
-#: krenameimpl.cpp:575
+#: krenameimpl.cpp:576
 #, fuzzy
 msgid ""
 "The directory %1 does not exist. Do you want KRename to create it for you?"
@@ -971,11 +1131,11 @@ msgstr ""
 msgid "Unable to open %1 for writing."
 msgstr ""
 
-#: batchrenamer.cpp:743
+#: batchrenamer.cpp:742
 msgid "Undo is not possible for remote file: %1"
 msgstr "Razveljavitev ni mogoča za oddaljeno datoteko: %1"
 
-#: batchrenamer.cpp:386
+#: batchrenamer.cpp:385
 msgid "Undoing all renamed files."
 msgstr ""
 
@@ -983,6 +1143,16 @@ msgstr ""
 #, no-c-format
 msgid "Up"
 msgstr ""
+
+#: rc.cpp:138
+#, no-c-format
+msgid "Use original extension"
+msgstr "Uporabi originalno končnico"
+
+#: rc.cpp:102
+#, no-c-format
+msgid "Use original name"
+msgstr "Uporabi originalno ime"
 
 #: permissionsplugin.cpp:205
 msgid "User"
@@ -1025,7 +1195,7 @@ msgstr "Matej Urbančič"
 msgid "add directory recursively"
 msgstr "dodaj mapo rekurzivno"
 
-#: krenameimpl.cpp:504
+#: krenameimpl.cpp:505
 msgid "character x to y of old filename"
 msgstr "znaki od x do y starega imena"
 
@@ -1034,11 +1204,11 @@ msgstr "znaki od x do y starega imena"
 msgid "copy files to directory or url"
 msgstr "kopiraj datoteke v mapo"
 
-#: krenameimpl.cpp:502
+#: krenameimpl.cpp:503
 msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "števec z privzeto vrednostjo 0 in privzeti korak 1"
 
-#: krenameimpl.cpp:503
+#: krenameimpl.cpp:504
 msgid "create a subdirectory"
 msgstr "ustvari podmapo"
 
@@ -1054,23 +1224,23 @@ msgstr "omogoči vstavek za uporabo"
 msgid "file will be added to the list of files for renaming"
 msgstr "datoteka bo dodana listi datotek za preimenovanje"
 
-#: krenameimpl.cpp:499
+#: krenameimpl.cpp:500
 msgid "first letter of every word upper case"
 msgstr "prva črka vsake besede je velika"
 
-#: krenameimpl.cpp:500
+#: krenameimpl.cpp:501
 msgid "first letter of filename upper case"
 msgstr "prva črka imena datoteke je velika"
 
-#: krenameimpl.cpp:506
+#: krenameimpl.cpp:507
 msgid "insert name of directory"
 msgstr "vnesi ime mape"
 
-#: krenameimpl.cpp:507
+#: krenameimpl.cpp:508
 msgid "insert name of parent directory"
 msgstr "vnesi ime vrhnje mape"
 
-#: krenameimpl.cpp:508
+#: krenameimpl.cpp:509
 msgid "insert the length of the input filename"
 msgstr "vnesi dolžino imena datoteke"
 
@@ -1088,19 +1258,19 @@ msgstr "zaženi profil z imenom [profile] ob zagonu"
 msgid "move files to directory or url"
 msgstr "premakni datoteke v mapo"
 
-#: krenameimpl.cpp:501
+#: krenameimpl.cpp:502
 msgid "number (try also ##, ###, ... for leading zeros)"
 msgstr "število (poskusi ##, ###, ... za vodilne ničle"
 
-#: krenameimpl.cpp:496
+#: krenameimpl.cpp:497
 msgid "old filename"
 msgstr "staro ime"
 
-#: krenameimpl.cpp:497
+#: krenameimpl.cpp:498
 msgid "old filename converted to lower case"
 msgstr "staro ime spremenjeno v male črke"
 
-#: krenameimpl.cpp:498
+#: krenameimpl.cpp:499
 msgid "old filename converted to upper case"
 msgstr "staro ime spremenjeno v velike črke"
 
@@ -1120,16 +1290,16 @@ msgstr ""
 msgid "start renaming immediately"
 msgstr "takoj prični s preimenovanjem"
 
-#: krenameimpl.cpp:509
+#: krenameimpl.cpp:510
 msgid "strip whitespaces leading and trailing"
 msgstr "odstrani vodilne in zadnje presledke"
 
-#: krenameimpl.cpp:510
+#: krenameimpl.cpp:511
 #, fuzzy
 msgid "strip whitespaces leading and trailing of an arbitrary string"
 msgstr "odstrani vodilne in zadnje presledke"
 
-#: krenameimpl.cpp:505
+#: krenameimpl.cpp:506
 msgid "y characters of old filename starting at x"
 msgstr "y znak starega imena, ki se prične pri x"
 
@@ -1144,10 +1314,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 
 #~ msgid "&Add Number"
 #~ msgstr "&Dodaj število"
-
-#, fuzzy
-#~ msgid "&Advanced Filename"
-#~ msgstr "&Ime datoteke"
 
 #, fuzzy
 #~ msgid "&Change Owner"
@@ -1188,12 +1354,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "&Execute without blocking (not recommended)"
 #~ msgstr "Izvedi brez oviranja (ni priporočljivo)"
 
-#~ msgid "&Extension:"
-#~ msgstr "&Končnica"
-
-#~ msgid "&Filename"
-#~ msgstr "&Ime datoteke"
-
 #~ msgid "&Find and Replace..."
 #~ msgstr "&Poišči in zamenjaj"
 
@@ -1201,15 +1361,9 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "&Find:"
 #~ msgstr "Poišči:"
 
-#~ msgid "&Functions..."
-#~ msgstr "&Predloge"
-
 #, fuzzy
 #~ msgid "&Group:"
 #~ msgstr "Skupina:"
-
-#~ msgid "&Insert Part of Filename..."
-#~ msgstr "Vstav&i del imena..."
 
 #, fuzzy
 #~ msgid "&Insert Variable"
@@ -1243,9 +1397,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "&Numbering"
 #~ msgstr "&Številčenje"
 
-#~ msgid "&Numbering..."
-#~ msgstr "&Številčenje ..."
-
 #~ msgid "&Ok"
 #~ msgstr "&OK"
 
@@ -1259,8 +1410,8 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "&Permissions"
 #~ msgstr "&Dovoljenja"
 
-#~ msgid "&Prefix:"
-#~ msgstr "&Predpona"
+#~ msgid "&Profiles..."
+#~ msgstr "&Profili"
 
 #~ msgid "&Regular expression"
 #~ msgstr "&Regularni izraz"
@@ -1289,10 +1440,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgstr "&Shrani kot profil ..."
 
 #, fuzzy
-#~ msgid "&Simple Filename"
-#~ msgstr "&Ime datoteke"
-
-#, fuzzy
 #~ msgid "&Skip Numbers"
 #~ msgstr "Pres&koči števila"
 
@@ -1300,14 +1447,8 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "&Step by:"
 #~ msgstr "Kora&k po:"
 
-#~ msgid "&Suffix:"
-#~ msgstr "P&ripona"
-
 #~ msgid "&System Functions"
 #~ msgstr "&Sistemska opravila"
-
-#~ msgid "&Template:"
-#~ msgstr "&Predloga:"
 
 #, fuzzy
 #~ msgid "&Test..."
@@ -1331,9 +1472,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 
 #~ msgid "&Use as default profile on startup"
 #~ msgstr "&Uporabi privzeti profil ob zagonu"
-
-#~ msgid "&Use extension of the input file"
-#~ msgstr "&Uporabi izvorno končnico"
 
 #~ msgid "&Use local encoding: %1"
 #~ msgstr "&Uporabi lokalno kodiranje: %1:"
@@ -1463,9 +1601,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "Can Read"
 #~ msgstr "Branje"
 
-#~ msgid "Capitalize"
-#~ msgstr "Velike črke"
-
 #~ msgid "Change &Permissions"
 #~ msgstr "S&premeni dovoljenja"
 
@@ -1490,31 +1625,15 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "Configure the look and feel of the KRename GUI:"
 #~ msgstr "Nastavite izgled in občutek programa KRename"
 
-#, fuzzy
-#~ msgid "Convert to lower case"
-#~ msgstr "Pretvori v male črke"
-
-#~ msgid "Convert to upper case"
-#~ msgstr "Pretvori v velike črke"
-
 #~ msgid "Copies all files to the destination directory and renames them."
 #~ msgstr "Kopiraj vse datoteke v ciljno mapo in jih preimenuj."
 
 #~ msgid "Create symbolic &links in destination directory"
 #~ msgstr "&Ustvari simbolične povezave v ciljni mapi"
 
-#~ msgid "Custom extension"
-#~ msgstr "Končnica po meri"
-
 #, fuzzy
 #~ msgid "Custom filename"
 #~ msgstr "Ime po meri"
-
-#~ msgid "Custom name"
-#~ msgstr "Ime po meri"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
 
 #~ msgid "Date && &Time"
 #~ msgstr "Datum && &Čas"
@@ -1543,6 +1662,9 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "Double click on an item to modify it."
 #~ msgstr "Dvoklik na vnosu dovoli spreminjanje."
 
+#~ msgid "E&xtras"
+#~ msgstr "&Dodatno"
+
 #~ msgid "Enable/disable display of file name."
 #~ msgstr "Omogoči/zavri prikaz imen datotek."
 
@@ -1558,22 +1680,11 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "File %1 exists already!"
 #~ msgstr "Datoteka %1 že obstaja"
 
-#, fuzzy
-#~ msgid "File extension &starts at:"
-#~ msgstr "Končnica datoteke se začne pri:"
-
-#, fuzzy
-#~ msgid "File&name:"
-#~ msgstr "Pred&loge"
-
 #~ msgid "Files per directory:"
 #~ msgstr "Datotek na mapo:"
 
 #~ msgid "Find"
 #~ msgstr "Poišči"
-
-#~ msgid "Find &and Replace..."
-#~ msgstr "Poišči in z&amenjaj ..."
 
 #~ msgid "Find and Replace"
 #~ msgstr "Poišči in zamenjaj"
@@ -1584,9 +1695,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 
 #~ msgid "Finished successfully"
 #~ msgstr "Uspešno zaključeno"
-
-#~ msgid "First Dot"
-#~ msgstr "prvi piki"
 
 #, fuzzy
 #~ msgid "Get &Current Time"
@@ -1615,9 +1723,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "KRename: Wizard default profile"
 #~ msgstr "KRename: Privzeti profil čarovnika"
 
-#~ msgid "Last Dot"
-#~ msgstr "zadnji piki"
-
 #~ msgid "Look and Feel"
 #~ msgstr "Izgled in občutek"
 
@@ -1637,19 +1742,8 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgstr "Premakni vse datoteke v ciljno mapo in jih preimenuj."
 
 #, fuzzy
-#~ msgid "N&umber"
-#~ msgstr "Število"
-
-#, fuzzy
 #~ msgid "No Conversion"
 #~ msgstr "Preoblikovanje kodiranja"
-
-#~ msgid "Number"
-#~ msgstr "Število"
-
-#, fuzzy
-#~ msgid "Number of &digits:"
-#~ msgstr "&Število cifer"
 
 #~ msgid ""
 #~ "Number of the first file.<br>The files are always numbered the same way "
@@ -1735,10 +1829,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgid "Specify a template to use for renaming files."
 #~ msgstr "Določite predlogo za uporabo pri preimenovanju datotek."
 
-#, fuzzy
-#~ msgid "Start  &index:"
-#~ msgstr "Začetni &indeks:"
-
 #~ msgid "Start &index:"
 #~ msgstr "Začetni &indeks:"
 
@@ -1790,12 +1880,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 
 #~ msgid "Use &wizard style GUI (beginners)"
 #~ msgstr "Uporabi &čarovnika (začetniki)"
-
-#~ msgid "Use original extension"
-#~ msgstr "Uporabi originalno končnico"
-
-#~ msgid "Use original name"
-#~ msgstr "Uporabi originalno ime"
 
 #~ msgid ""
 #~ "Use the filename that is generated by KRename instead of your changes."
