@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-04 08:57+0200\n"
+"POT-Creation-Date: 2009-06-04 09:00+0200\n"
 "PO-Revision-Date: 2005-04-07 15:59+0200\n"
 "Last-Translator: Nicolas BENOIT <nbenoit@tuxfamily.org>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -19,8 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10\n"
 
-#: rc.cpp:54 rc.cpp:63
-#, no-c-format
+#: rc.cpp:87 rc.cpp:96
 msgid "$"
 msgstr ""
 
@@ -33,15 +32,27 @@ msgstr "%2 erreur(s) se sont produite(s)!"
 msgid "%2 errors occurred!"
 msgstr "%2 erreur(s) se sont produite(s)!"
 
-#: rc.cpp:3 previewlist.cpp:36
-#, no-c-format
+#: rc.cpp:321
+msgid "&Add Number"
+msgstr "&Ajouter le nombre"
+
+#: rc.cpp:3 rc.cpp:375 rc.cpp:540 previewlist.cpp:36
 msgid "&Add..."
 msgstr "&Ajouter..."
 
-#: rc.cpp:48
-#, fuzzy, no-c-format
+#: rc.cpp:81
+#, fuzzy
 msgid "&Advanced Filename"
 msgstr "Nom de &fichier"
+
+#: rc.cpp:360
+msgid "&Cancel"
+msgstr ""
+
+#: rc.cpp:495
+#, fuzzy
+msgid "&Change Owner"
+msgstr "Changer le Pr&opriétaire"
 
 #: previewlist.cpp:32
 #, fuzzy
@@ -52,28 +63,53 @@ msgstr "&Changer le nom du fichier manuellement"
 msgid "&Close"
 msgstr ""
 
+#: rc.cpp:336
+#, fuzzy
+msgid "&Convert selection:"
+msgstr "&Inverser la séléction"
+
+#: rc.cpp:66
+#, fuzzy
+msgid "&Copy files to destination directory"
+msgstr "Cop&ier les fichiers dans le répertoire de destination"
+
+#: rc.cpp:546
+#, fuzzy
+msgid "&Definitions"
+msgstr "Des&tination"
+
+#: rc.cpp:543
+#, fuzzy
+msgid "&Delete"
+msgstr "&Supprimer un profil"
+
 #: krenamewindow.cpp:48
 #, fuzzy
 msgid "&Destination"
 msgstr "Des&tination"
 
 #: rc.cpp:30
-#, no-c-format
 msgid "&Display name"
 msgstr "A&fficher le nom"
 
-#: rc.cpp:168
-#, no-c-format
+#: rc.cpp:201 rc.cpp:300
 msgid "&Down"
 msgstr ""
 
-#: rc.cpp:129
-#, no-c-format
+#: rc.cpp:378
+msgid "&Edit..."
+msgstr "&Editer..."
+
+#: rc.cpp:210
+#, fuzzy
+msgid "&Enable Plugin"
+msgstr "Plugin &de Répertoire"
+
+#: rc.cpp:162 rc.cpp:261
 msgid "&Extension:"
 msgstr "&Extension:"
 
-#: rc.cpp:96
-#, no-c-format
+#: rc.cpp:129 rc.cpp:216
 msgid "&Filename"
 msgstr "Nom de &fichier"
 
@@ -82,30 +118,75 @@ msgstr "Nom de &fichier"
 msgid "&Files"
 msgstr "F&ichiers"
 
+#: rc.cpp:387
+#, fuzzy
+msgid "&Find:"
+msgstr "Trouver:"
+
 #: krenamewindow.cpp:133
 #, fuzzy
 msgid "&Finish..."
 msgstr "&Terminer"
 
-#: rc.cpp:66
-#, no-c-format
+#: rc.cpp:99
 msgid "&Functions..."
 msgstr "&Fonctions..."
+
+#: rc.cpp:504
+#, fuzzy
+msgid "&Group:"
+msgstr "Groupe:"
+
+#: rc.cpp:579
+msgid "&Increase Counter"
+msgstr ""
+
+#: rc.cpp:570
+msgid "&Initial Value:"
+msgstr ""
 
 #: tokenhelpdialog.cpp:35
 #, fuzzy
 msgid "&Insert"
 msgstr "Insérer '$'"
 
-#: rc.cpp:90
-#, no-c-format
+#: rc.cpp:123
 msgid "&Insert Part of Filename..."
 msgstr "&Insérer une Partie du Nom de Fichier..."
 
-#: rc.cpp:87
-#, no-c-format
+#: rc.cpp:558
+#, fuzzy
+msgid "&Insert Variable"
+msgstr "Insérer '$'"
+
+#: rc.cpp:333
+msgid "&Invert selection"
+msgstr "&Inverser la séléction"
+
+#: rc.cpp:555
+#, fuzzy
+msgid "&Load from File..."
+msgstr "&Charger un profil"
+
+#: rc.cpp:69
+msgid "&Move files to destination directory"
+msgstr "&Déplacer les fichiers vers le répertoire de destination"
+
+#: rc.cpp:567
+msgid "&Name:"
+msgstr "&Nombre:"
+
+#: rc.cpp:306
+msgid "&Numbering"
+msgstr "&Numérotation"
+
+#: rc.cpp:120
 msgid "&Numbering..."
 msgstr "&Numérotation..."
+
+#: rc.cpp:590
+msgid "&Offset:"
+msgstr ""
 
 #: previewlist.cpp:34
 msgid "&Open"
@@ -115,49 +196,96 @@ msgstr ""
 msgid "&Open Destination..."
 msgstr "&Ouvrir une Destination..."
 
+#: rc.cpp:60
+#, fuzzy
+msgid "&Options"
+msgstr "O&ptions"
+
+#: rc.cpp:75
+msgid "&Overwrite existing files"
+msgstr "&Effacer les fichiers existants"
+
 #: krenamewindow.cpp:49
 #, fuzzy
 msgid "&Plugins"
 msgstr "P&lugins"
 
-#: rc.cpp:126
-#, no-c-format
+#: rc.cpp:159 rc.cpp:258
 msgid "&Prefix:"
 msgstr "&Prefixe:"
 
 #: rc.cpp:27
-#, no-c-format
 msgid "&Preview"
 msgstr "A&perçu"
 
-#: previewlist.cpp:37
+#: rc.cpp:381 previewlist.cpp:37
 #, fuzzy
 msgid "&Remove"
 msgstr "R&etirer"
+
+#: rc.cpp:324
+msgid "&Remove Number"
+msgstr "&Enlever le nombre"
 
 #: progressdialog.cpp:51
 #, fuzzy
 msgid "&Rename All Files Again..."
 msgstr "Renommer tous les fichiers à &nouveau..."
 
+#: rc.cpp:63
+msgid "&Rename input files"
+msgstr "&Renommer les fichiers"
+
 #: progressdialog.cpp:33
 #, fuzzy
 msgid "&Rename more..."
 msgstr "&Renommer d'autres fichiers..."
 
-#: rc.cpp:93
-#, fuzzy, no-c-format
+#: rc.cpp:390
+#, fuzzy
+msgid "&Replace With:"
+msgstr "Remplacer Par"
+
+#: rc.cpp:315
+msgid "&Reset counter for every directory"
+msgstr "&Mettre à zero les compteurs pour tous les répertoires"
+
+#: rc.cpp:552
+#, fuzzy
+msgid "&Save to File..."
+msgstr "&Sauver sous..."
+
+#: rc.cpp:126
+#, fuzzy
 msgid "&Simple Filename"
 msgstr "Nom de &fichier"
 
-#: rc.cpp:99
-#, no-c-format
+#: rc.cpp:318
+#, fuzzy
+msgid "&Skip Numbers"
+msgstr "&Sauter les nombres"
+
+#: rc.cpp:312
+#, fuzzy
+msgid "&Step by:"
+msgstr "Incrémenter &de:"
+
+#: rc.cpp:132 rc.cpp:219
 msgid "&Suffix:"
 msgstr "&Suffixe:"
 
-#: rc.cpp:51
-#, no-c-format
+#: rc.cpp:84
 msgid "&Template:"
+msgstr "&Modèle:"
+
+#: rc.cpp:561
+#, fuzzy
+msgid "&Test..."
+msgstr "&Editer..."
+
+#: rc.cpp:573
+#, fuzzy
+msgid "&Type:"
 msgstr "&Modèle:"
 
 #: progressdialog.cpp:34
@@ -165,15 +293,23 @@ msgstr "&Modèle:"
 msgid "&Undo"
 msgstr "Annuler: "
 
-#: rc.cpp:165
-#, no-c-format
+#: rc.cpp:198 rc.cpp:297
 msgid "&Up"
 msgstr ""
 
-#: rc.cpp:69
-#, no-c-format
+#: rc.cpp:102
 msgid "&Use extension of the input file"
 msgstr "Conserver l'extension d&u nom de fichier"
+
+#: rc.cpp:501
+#, fuzzy
+msgid "&User:"
+msgstr "Utilisateur:"
+
+#: rc.cpp:531
+#, fuzzy
+msgid "&Variables"
+msgstr "Nom de Profil"
 
 #: main.cpp:66
 msgid "(c) 2001-2009, Dominik Seichter\n"
@@ -183,6 +319,34 @@ msgstr ""
 #, fuzzy
 msgid "*|All files and directories"
 msgstr "Ajouter les répertoires &cachés"
+
+#: rc.cpp:537
+msgid "1"
+msgstr ""
+
+#: rc.cpp:582
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">This plugin adds a given offset to numbers in filenames.</"
+"span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">E.g. you "
+"have the filenames: <span style=\" font-style:italic;\">img014</span>, <span "
+"style=\" font-style:italic;\">img015</span>, <span style=\" font-style:"
+"italic;\">img023</span> which should be named<span style=\" font-style:"
+"italic;\"> img010</span>, <span style=\" font-style:italic;\">img011</span> "
+"and <span style=\" font-style:italic;\">img019. </span>Using this plugin, "
+"you can easily add an offset of -4 to get the desired result.</p></body></"
+"html>"
+msgstr ""
 
 #: krenamewindow.cpp:334
 #, fuzzy
@@ -198,17 +362,22 @@ msgstr ""
 "KRename peut endommager votre système si vous ne savez pas exactement ce que "
 "vous faites!"
 
-#: rc.cpp:57
-#, no-c-format
+#: rc.cpp:90
 msgid ""
-"<html><head><meta name=&quot;qrichtext&quot; content=&quot;1&quot; /><style "
-"type=&quot;text/css&quot;>\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=&quot; font-family:'Sans Serif'; font-size:9pt; "
-"font-weight:400; font-style:normal; text-decoration:none;&quot;>\n"
-"<p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;&quot;><span style=&quot; "
-"font-weight:600;&quot;>.</span></p></body></html>"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">.</span></p></body></html>"
+msgstr ""
+
+#: rc.cpp:330
+msgid ""
+"<qt>Please select the part of the old filename  which should be inserted "
+"into the new filename in the textbox below:</qt>"
 msgstr ""
 
 #: translitplugin.cpp:102
@@ -239,9 +408,23 @@ msgstr ""
 "<qt>Ce plugin place les fichiers dans des sous-répertoires après les avoir "
 "renommé.</qt>"
 
+#: rc.cpp:222 rc.cpp:225 rc.cpp:246 rc.cpp:255
+msgid "?"
+msgstr ""
+
 #: scriptplugin.cpp:262
 msgid "A JavaScript error has occured: "
 msgstr ""
+
+#: rc.cpp:492
+#, fuzzy
+msgid "A&dvanced Permissions"
+msgstr "Changer les &Permissions"
+
+#: rc.cpp:447 rc.cpp:525
+#, fuzzy
+msgid "Access Permissions"
+msgstr "Autorisations d'accès"
 
 #: permissionsplugin.cpp:182
 msgid "Access permissions"
@@ -276,6 +459,12 @@ msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr ""
 
+#: rc.cpp:399
+msgid ""
+"All supported tokens (commands) are listed in this dialog. You can search "
+"for tokens and insert a found token into the pattern for the filename."
+msgstr ""
+
 #: main.cpp:82
 msgid "Andreas Pour"
 msgstr ""
@@ -296,6 +485,16 @@ msgstr ""
 #, fuzzy
 msgid "Built-in Functions"
 msgstr "Fonctions de base:"
+
+#: rc.cpp:456 rc.cpp:468 rc.cpp:480
+#, fuzzy
+msgid "Can Read"
+msgstr "Lecture"
+
+#: rc.cpp:459 rc.cpp:471 rc.cpp:483
+#, fuzzy
+msgid "Can Read & Write"
+msgstr "Lecture"
 
 #: datetimeplugin.cpp:113
 #, fuzzy
@@ -335,10 +534,26 @@ msgstr ""
 "Impossible de créer les liens symboliques sur différents hôtes pour le "
 "fichier: %1"
 
-#: rc.cpp:111 rc.cpp:147
-#, no-c-format
+#: rc.cpp:144 rc.cpp:180 rc.cpp:237 rc.cpp:279 rc.cpp:348
 msgid "Capitalize"
 msgstr "Mettre en lettres capitales"
+
+#: rc.cpp:402
+msgid "Category"
+msgstr ""
+
+#: rc.cpp:444
+msgid "Change &Permissions"
+msgstr "Changer les &Permissions"
+
+#: rc.cpp:510
+msgid "Change &access date && time"
+msgstr "Changer la date et l'horaire du dernier &accès"
+
+#: rc.cpp:513
+#, fuzzy
+msgid "Change &modifcation date && time"
+msgstr "Changer la date et l'horaire de la dernière &modification"
 
 #: main.cpp:84
 msgid "Charles Samuels"
@@ -348,31 +563,42 @@ msgstr ""
 msgid "Class"
 msgstr "Classe"
 
+#: rc.cpp:51
+#, fuzzy
+msgid "Configure the look and feel of the KRename GUI:"
+msgstr "Configurer l'apparence de l'interface de KRename:<br>"
+
 #: main.cpp:101
 msgid "Contributed a Spanish translation"
 msgstr "Il a contribué à la traduction espagnole"
 
-#: rc.cpp:105 rc.cpp:141
-#, fuzzy, no-c-format
+#: rc.cpp:138 rc.cpp:174 rc.cpp:231 rc.cpp:273 rc.cpp:342
+#, fuzzy
 msgid "Convert to lower case"
 msgstr "Convertir en minuscules"
 
-#: rc.cpp:108 rc.cpp:144
-#, no-c-format
+#: rc.cpp:141 rc.cpp:177 rc.cpp:234 rc.cpp:276 rc.cpp:345
 msgid "Convert to upper case"
 msgstr "Convertir en majuscules"
+
+#: rc.cpp:72
+msgid "Create symbolic &links in destination directory"
+msgstr "Créer des &liens symboliques dans le répertoire de destination"
 
 #: main.cpp:90
 msgid "Created the Gentoo Ebuild scripts for Krename."
 msgstr "Il a créé les scripts Gentoo Ebuild de KRename."
 
-#: rc.cpp:150
-#, no-c-format
+#: rc.cpp:183 rc.cpp:282
 msgid "Custom extension"
 msgstr "Extension personnalisée"
 
-#: rc.cpp:114
-#, no-c-format
+#: rc.cpp:420
+#, fuzzy
+msgid "Custom filename"
+msgstr "Nom personnalisé"
+
+#: rc.cpp:147 rc.cpp:240
 msgid "Custom name"
 msgstr "Nom personnalisé"
 
@@ -385,8 +611,7 @@ msgstr "Traduction Italienne."
 msgid "Daniele Medri"
 msgstr ""
 
-#: rc.cpp:123 rc.cpp:135
-#, no-c-format
+#: rc.cpp:156 rc.cpp:168 rc.cpp:252 rc.cpp:267
 msgid "Date"
 msgstr "Date"
 
@@ -402,6 +627,14 @@ msgstr "Fonctions du Système"
 
 #: datetimeplugin.cpp:71
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
+msgstr ""
+
+#: rc.cpp:408
+msgid "Description"
+msgstr "Description"
+
+#: rc.cpp:522 rc.cpp:564
+msgid "Dialog"
 msgstr ""
 
 #: scriptplugin.cpp:77
@@ -423,7 +656,6 @@ msgid "Double"
 msgstr ""
 
 #: rc.cpp:42
-#, no-c-format
 msgid "Down"
 msgstr ""
 
@@ -457,17 +689,22 @@ msgstr ""
 msgid "Extension of the current file"
 msgstr "Conserver l'extension d&u nom de fichier"
 
-#: rc.cpp:72
-#, fuzzy, no-c-format
+#: rc.cpp:105
+#, fuzzy
 msgid "File extension &starts at:"
 msgstr "Les extensions de fichiers commencent au:"
+
+#: rc.cpp:426
+#, fuzzy
+msgid "File preview"
+msgstr "A&perçu"
 
 #: krenamewindow.cpp:50
 msgid "File&name"
 msgstr "&Noms de fichiers"
 
-#: rc.cpp:117
-#, fuzzy, no-c-format
+#: rc.cpp:150 rc.cpp:243
+#, fuzzy
 msgid "File&name:"
 msgstr "&Noms de fichiers"
 
@@ -489,17 +726,28 @@ msgid "Files will be moved to: %1"
 msgstr "Les fichiers seront déplacés vers: %1"
 
 #: rc.cpp:33
-#, fuzzy, no-c-format
+#, fuzzy
 msgid "Files: <b>0</b>"
 msgstr "Fichiers: <b>%1</b>"
 
-#: rc.cpp:84 rc.cpp:162
-#, no-c-format
+#: rc.cpp:369
+msgid "Find"
+msgstr "Trouver"
+
+#: rc.cpp:117 rc.cpp:195 rc.cpp:294
 msgid "Find &and Replace..."
 msgstr "&Trouver et Remplacer..."
 
-#: rc.cpp:75
-#, no-c-format
+#: rc.cpp:363 rc.cpp:384
+msgid "Find and Replace"
+msgstr "Trouver et Remplacer"
+
+#: rc.cpp:393
+#, fuzzy
+msgid "Find is a Regular &Expression"
+msgstr "Expression Régulière"
+
+#: rc.cpp:108
 msgid "First Dot"
 msgstr "Premier Point"
 
@@ -525,8 +773,12 @@ msgstr ""
 "paquets SuSE pour toutes les versions imaginables et est aussi le nouveau "
 "mainteneur de KRename pour Gentoo"
 
-#: rc.cpp:45
-#, no-c-format
+#: rc.cpp:453 rc.cpp:465 rc.cpp:477
+msgid "Forbidden"
+msgstr ""
+
+#: rc.cpp:45 rc.cpp:78 rc.cpp:204 rc.cpp:213 rc.cpp:303 rc.cpp:327 rc.cpp:441
+#: rc.cpp:507 rc.cpp:528 rc.cpp:576
 msgid "Form"
 msgstr ""
 
@@ -543,6 +795,16 @@ msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr ""
 "Il m'a donné un point de départ pour l'écriture des plugins avec son "
 "programme scribus."
+
+#: rc.cpp:519
+#, fuzzy
+msgid "Get &Current Time"
+msgstr "&Récupérer la date et l'horaire actuelle."
+
+#: rc.cpp:462
+#, fuzzy
+msgid "Gro&up:"
+msgstr "Groupe:"
 
 #: main.cpp:77
 msgid "Groult Richard"
@@ -750,6 +1012,10 @@ msgstr "ancien nom de fichier converti en majuscules"
 msgid "Int"
 msgstr ""
 
+#: rc.cpp:489
+msgid "Is Executable/Only owner &can rename and delete folder content"
+msgstr ""
+
 #: main.cpp:96
 msgid "Italian translation"
 msgstr "Traduction Italienne."
@@ -769,6 +1035,11 @@ msgstr "KRename"
 #: main.cpp:65
 #, fuzzy
 msgid "KRename Build:"
+msgstr "KRename"
+
+#: rc.cpp:396
+#, fuzzy
+msgid "KRename Help"
 msgstr "KRename"
 
 #: batchrenamer.cpp:303 batchrenamer.cpp:761
@@ -804,10 +1075,13 @@ msgstr ""
 msgid "Krzysztof Pawlak"
 msgstr ""
 
-#: rc.cpp:78
-#, no-c-format
+#: rc.cpp:111
 msgid "Last Dot"
 msgstr "Dernier Point"
+
+#: rc.cpp:48
+msgid "Look and Feel"
+msgstr "Apparence"
 
 #: main.cpp:100
 msgid "Mark Ziegler"
@@ -830,12 +1104,11 @@ msgid "Michal Smoczyk"
 msgstr ""
 
 #: rc.cpp:39
-#, no-c-format
 msgid "Move"
 msgstr ""
 
-#: rc.cpp:153
-#, fuzzy, no-c-format
+#: rc.cpp:186 rc.cpp:285
+#, fuzzy
 msgid "N&umber"
 msgstr "Nombre"
 
@@ -843,24 +1116,38 @@ msgstr "Nombre"
 msgid "Nicolas Benoit"
 msgstr ""
 
-#: rc.cpp:81
-#, fuzzy, no-c-format
+#: rc.cpp:339
+#, fuzzy
+msgid "No Conversion"
+msgstr "Plugin de conversion de code de caractères"
+
+#: rc.cpp:114
+#, fuzzy
 msgid "No File Extension"
 msgstr "Extension personnalisée"
 
-#: rc.cpp:120 rc.cpp:132
-#, no-c-format
+#: rc.cpp:153 rc.cpp:165 rc.cpp:249 rc.cpp:264
 msgid "Number"
 msgstr "Nombre"
 
-#: rc.cpp:156
-#, fuzzy, no-c-format
+#: rc.cpp:189 rc.cpp:288
+#, fuzzy
 msgid "Number of &digits:"
 msgstr "&Nombre de chiffres:"
+
+#: rc.cpp:450
+#, fuzzy
+msgid "O&wner:"
+msgstr "Propriété"
 
 #: krenamemodel.cpp:485
 msgid "Origin"
 msgstr "Originaux"
+
+#: rc.cpp:474
+#, fuzzy
+msgid "Ot&hers:"
+msgstr "Autres"
 
 #: permissionsplugin.cpp:211
 msgid "Others"
@@ -870,6 +1157,10 @@ msgstr "Autres"
 #, fuzzy
 msgid "Owner of the file"
 msgstr "&Nombre de modèles dans l'historique:"
+
+#: rc.cpp:498
+msgid "Ownership"
+msgstr "Propriété"
 
 #: systemplugin.cpp:60
 msgid "Owning group of the file"
@@ -898,6 +1189,16 @@ msgstr "Permissions"
 msgid "PermissionsPlugin works only with local files. %1 is a remote file."
 msgstr ""
 
+#: rc.cpp:429
+#, fuzzy
+msgid "Please input a new filename"
+msgstr "Saissez s'il vous plait un nouveau nom de fichier:"
+
+#: rc.cpp:207
+#, fuzzy
+msgid "Plugins"
+msgstr "P&lugins"
+
 #: main.cpp:108
 #, fuzzy
 msgid "Polish Translation"
@@ -906,6 +1207,24 @@ msgstr "Traduction Italienne."
 #: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:762
 msgid "Press close to quit!"
 msgstr "Cliquer sur Fermer pour quitter!"
+
+#: rc.cpp:411
+#, fuzzy
+msgid "Preview"
+msgstr "A&perçu"
+
+#: rc.cpp:417
+#, fuzzy
+msgid "Preview File:"
+msgstr "Aperçu: "
+
+#: rc.cpp:351
+msgid "Preview of the generated KRename command:"
+msgstr ""
+
+#: rc.cpp:357
+msgid "Progress"
+msgstr "Progrès"
 
 #: main.cpp:100
 msgid "Provided SuSE RPMs and very good suggestions"
@@ -924,18 +1243,22 @@ msgid "Provided the new preview and move features"
 msgstr "Il m'a fourni les nouvelles possibilités d'aperçu et de déplacement"
 
 #: rc.cpp:6
-#, no-c-format
 msgid "Re&move"
 msgstr "R&etirer"
 
 #: rc.cpp:9
-#, fuzzy, no-c-format
+#, fuzzy
 msgid "Re&move All"
 msgstr "Enl&ever tous les Fichiers"
 
 #: permissionsplugin.cpp:190
 msgid "Read"
 msgstr "Lecture"
+
+#: rc.cpp:366
+#, fuzzy
+msgid "Reg. Expression"
+msgstr "Expression Régulière"
 
 #: progressdialog.cpp:50
 #, fuzzy
@@ -958,6 +1281,10 @@ msgstr "%1 fichiers ont été renommés avec succès."
 msgid "Rene Gass"
 msgstr ""
 
+#: rc.cpp:372
+msgid "Replace With"
+msgstr "Remplacer Par"
+
 #: progressdialog.cpp:47
 #, fuzzy
 msgid "Restart &KRename..."
@@ -972,27 +1299,22 @@ msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "Quelques corrections pour le GCC 3.1 de la Gentoo."
 
 #: rc.cpp:15
-#, no-c-format
 msgid "Sort: Ascending"
 msgstr "Trier: Ordre Ascendant"
 
 #: rc.cpp:18
-#, no-c-format
 msgid "Sort: Descending"
 msgstr "Tri: Ordre Descendant"
 
 #: rc.cpp:21
-#, no-c-format
 msgid "Sort: Numeric"
 msgstr "Tri: Numérique"
 
 #: rc.cpp:24
-#, no-c-format
 msgid "Sort: Random"
 msgstr "Tri: Hasard"
 
 #: rc.cpp:12
-#, no-c-format
 msgid "Sort: Unsorted"
 msgstr "Tri: Non trié"
 
@@ -1005,9 +1327,13 @@ msgstr "Spécial"
 msgid "Special Characters"
 msgstr "Caractères Spéciaux:"
 
-#: rc.cpp:159
-#, fuzzy, no-c-format
+#: rc.cpp:192 rc.cpp:291
+#, fuzzy
 msgid "Start  &index:"
+msgstr "&Index de départ:"
+
+#: rc.cpp:309
+msgid "Start &index:"
 msgstr "&Index de départ:"
 
 #: krenameimpl.cpp:565
@@ -1044,6 +1370,10 @@ msgstr "Les liens symboliques seront créés dans : %1"
 
 #: taglibplugin.cpp:50
 msgid "TagLib (MP3/Ogg) Plugin"
+msgstr ""
+
+#: rc.cpp:354 rc.cpp:423 rc.cpp:534 rc.cpp:549
+msgid "TextLabel"
 msgstr ""
 
 #: main.cpp:94
@@ -1085,6 +1415,11 @@ msgstr "Le répertoire %1 n'existe pas. KRename va le créé pour vous."
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "Ce profil existe déjà. Veuillez choisir un autre nom."
 
+#: rc.cpp:486
+#, fuzzy
+msgid "This file uses advanced permissions"
+msgstr "Changer les &Permissions"
+
 #: filedialogextwidget.cpp:55
 msgid ""
 "This option causes KRename to add also the name of the base directory of the "
@@ -1092,6 +1427,19 @@ msgid ""
 msgstr ""
 "Cette option force KRename à ajouter le nom du répertoire d'origine des "
 "fichiers sélectionnés dans sa liste."
+
+#: rc.cpp:516
+msgid "Time:"
+msgstr "Horaire:"
+
+#: rc.cpp:405
+msgid "Token"
+msgstr "Token"
+
+#: rc.cpp:414
+#, fuzzy
+msgid "Token &Preview"
+msgstr "A&perçu"
 
 #: main.cpp:107
 msgid "Translated KRename into Bosnian"
@@ -1155,17 +1503,37 @@ msgid "Undoing all renamed files."
 msgstr ""
 
 #: rc.cpp:36
-#, no-c-format
 msgid "Up"
 msgstr ""
 
-#: rc.cpp:138
-#, no-c-format
+#: rc.cpp:438
+#, fuzzy
+msgid "Use &custom filename"
+msgstr "Utiliser le nom de &fichier"
+
+#: rc.cpp:435
+#, fuzzy
+msgid "Use &input filename"
+msgstr "Utiliser le nom de &fichier"
+
+#: rc.cpp:57
+#, fuzzy
+msgid "Use &tabbed style GUI (advanced users)"
+msgstr "Utiliser l'interface &classique (utilisateurs avancés)"
+
+#: rc.cpp:54
+msgid "Use &wizard style GUI (beginners)"
+msgstr "Utiliser l' &assistant (conseillé pour les nouveaux utilisateurs)"
+
+#: rc.cpp:432
+msgid "Use filename created by &KRename"
+msgstr ""
+
+#: rc.cpp:171 rc.cpp:270
 msgid "Use original extension"
 msgstr "Utiliser l'extension du nom de fichier original"
 
-#: rc.cpp:102
-#, no-c-format
+#: rc.cpp:135 rc.cpp:228
 msgid "Use original name"
 msgstr "Utiliser le nom de fichier original"
 
@@ -1328,41 +1696,11 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ msgid "&Add"
 #~ msgstr "&Ajouter"
 
-#~ msgid "&Add Number"
-#~ msgstr "&Ajouter le nombre"
-
-#, fuzzy
-#~ msgid "&Change Owner"
-#~ msgstr "Changer le Pr&opriétaire"
-
 #~ msgid "&Command Plugin"
 #~ msgstr "&Plugin de Commande"
 
-#, fuzzy
-#~ msgid "&Convert selection:"
-#~ msgstr "&Inverser la séléction"
-
-#, fuzzy
-#~ msgid "&Copy files to destination directory"
-#~ msgstr "Cop&ier les fichiers dans le répertoire de destination"
-
 #~ msgid "&Create an undo script"
 #~ msgstr "Créer un script d'ann&ulation"
-
-#, fuzzy
-#~ msgid "&Definitions"
-#~ msgstr "Des&tination"
-
-#, fuzzy
-#~ msgid "&Delete"
-#~ msgstr "&Supprimer un profil"
-
-#~ msgid "&Edit..."
-#~ msgstr "&Editer..."
-
-#, fuzzy
-#~ msgid "&Enable Plugin"
-#~ msgstr "Plugin &de Répertoire"
 
 #~ msgid "&Encoding Conversion Plugin"
 #~ msgstr "Plugin de Conv&ersion de Code de Caractères"
@@ -1373,36 +1711,11 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ msgid "&Find and Replace..."
 #~ msgstr "&Trouver et Remplacer..."
 
-#, fuzzy
-#~ msgid "&Find:"
-#~ msgstr "Trouver:"
-
-#, fuzzy
-#~ msgid "&Group:"
-#~ msgstr "Groupe:"
-
-#, fuzzy
-#~ msgid "&Insert Variable"
-#~ msgstr "Insérer '$'"
-
-#~ msgid "&Invert selection"
-#~ msgstr "&Inverser la séléction"
-
 #~ msgid "&Load KDE file plugins"
 #~ msgstr "&Charger les plugins de fichier KDE"
 
 #~ msgid "&Load file plugins on start"
 #~ msgstr "&Charger les plugins de fichier au démarrage"
-
-#, fuzzy
-#~ msgid "&Load from File..."
-#~ msgstr "&Charger un profil"
-
-#~ msgid "&Move files to destination directory"
-#~ msgstr "&Déplacer les fichiers vers le répertoire de destination"
-
-#~ msgid "&Name:"
-#~ msgstr "&Nombre:"
 
 #~ msgid "&Number"
 #~ msgstr "&Nombre"
@@ -1410,18 +1723,8 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ msgid "&Number of template history items:"
 #~ msgstr "&Nombre de modèles dans l'historique:"
 
-#~ msgid "&Numbering"
-#~ msgstr "&Numérotation"
-
 #~ msgid "&Ok"
 #~ msgstr "&Ok"
-
-#, fuzzy
-#~ msgid "&Options"
-#~ msgstr "O&ptions"
-
-#~ msgid "&Overwrite existing files"
-#~ msgstr "&Effacer les fichiers existants"
 
 #~ msgid "&Permissions"
 #~ msgstr "&Permissions"
@@ -1435,47 +1738,14 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ msgid "&Reload Plugin Data"
 #~ msgstr "&Recharger les options du plugin"
 
-#~ msgid "&Remove Number"
-#~ msgstr "&Enlever le nombre"
-
-#~ msgid "&Rename input files"
-#~ msgstr "&Renommer les fichiers"
-
-#, fuzzy
-#~ msgid "&Replace With:"
-#~ msgstr "Remplacer Par"
-
-#~ msgid "&Reset counter for every directory"
-#~ msgstr "&Mettre à zero les compteurs pour tous les répertoires"
-
 #~ msgid "&Revert Changes"
 #~ msgstr "Inve&rser les Changements"
-
-#, fuzzy
-#~ msgid "&Save to File..."
-#~ msgstr "&Sauver sous..."
-
-#, fuzzy
-#~ msgid "&Skip Numbers"
-#~ msgstr "&Sauter les nombres"
-
-#, fuzzy
-#~ msgid "&Step by:"
-#~ msgstr "Incrémenter &de:"
 
 #~ msgid "&System Functions"
 #~ msgstr "Fonctions du &Système"
 
-#, fuzzy
-#~ msgid "&Test..."
-#~ msgstr "&Editer..."
-
 #~ msgid "&Thumbnail size:"
 #~ msgstr "&Taille de l'aperçu:"
-
-#, fuzzy
-#~ msgid "&Type:"
-#~ msgstr "&Modèle:"
 
 #~ msgid "&Undo Old Renaming Action..."
 #~ msgstr "Ann&uler les Opérations Précédentes..."
@@ -1491,14 +1761,6 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 
 #~ msgid "&Use this plugin"
 #~ msgstr "&Utiliser ce plugin"
-
-#, fuzzy
-#~ msgid "&User:"
-#~ msgstr "Utilisateur:"
-
-#, fuzzy
-#~ msgid "&Variables"
-#~ msgstr "Nom de Profil"
 
 #~ msgid ""
 #~ "*.krename|KRename undo scripts (*.krename)\n"
@@ -1573,16 +1835,8 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ "<qt>Vous pouvez utiliser \".gz\" et \".tar.gz\" comme extension de "
 #~ "fichier de sauvegarde. tar.gz dépendant de ce paramètre.</qt>"
 
-#, fuzzy
-#~ msgid "A&dvanced Permissions"
-#~ msgstr "Changer les &Permissions"
-
 #~ msgid "Aborting..."
 #~ msgstr "En train de stopper l'opération en cours..."
-
-#, fuzzy
-#~ msgid "Access Permissions"
-#~ msgstr "Autorisations d'accès"
 
 #~ msgid ""
 #~ "Add a template for the file extension.<br>It behaves like the filename "
@@ -1615,20 +1869,6 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ msgid "Built-in Functions:"
 #~ msgstr "Fonctions de base:"
 
-#, fuzzy
-#~ msgid "Can Read"
-#~ msgstr "Lecture"
-
-#~ msgid "Change &Permissions"
-#~ msgstr "Changer les &Permissions"
-
-#~ msgid "Change &access date && time"
-#~ msgstr "Changer la date et l'horaire du dernier &accès"
-
-#, fuzzy
-#~ msgid "Change &modifcation date && time"
-#~ msgstr "Changer la date et l'horaire de la dernière &modification"
-
 #~ msgid ""
 #~ "Checking this checkbox is the same as setting the extension template to $"
 #~ msgstr "Cocher cette case revient à choisir $ comme modèle d'extension"
@@ -1639,26 +1879,12 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ msgid "Command:"
 #~ msgstr "Commande:"
 
-#, fuzzy
-#~ msgid "Configure the look and feel of the KRename GUI:"
-#~ msgstr "Configurer l'apparence de l'interface de KRename:<br>"
-
 #~ msgid "Copies all files to the destination directory and renames them."
 #~ msgstr ""
 #~ "Copie tous les fichiers dans le répertoire de destination et les renomme."
 
-#~ msgid "Create symbolic &links in destination directory"
-#~ msgstr "Créer des &liens symboliques dans le répertoire de destination"
-
-#, fuzzy
-#~ msgid "Custom filename"
-#~ msgstr "Nom personnalisé"
-
 #~ msgid "Date && &Time"
 #~ msgstr "Date et &Horaire"
-
-#~ msgid "Description"
-#~ msgstr "Description"
 
 #~ msgid "Dir Plugin"
 #~ msgstr "Plugin de Répertoire"
@@ -1704,26 +1930,8 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ msgid "Files per directory:"
 #~ msgstr "Fichiers par répertoire:"
 
-#~ msgid "Find"
-#~ msgstr "Trouver"
-
-#~ msgid "Find and Replace"
-#~ msgstr "Trouver et Remplacer"
-
-#, fuzzy
-#~ msgid "Find is a Regular &Expression"
-#~ msgstr "Expression Régulière"
-
 #~ msgid "Finished successfully"
 #~ msgstr "Terminé avec succès"
-
-#, fuzzy
-#~ msgid "Get &Current Time"
-#~ msgstr "&Récupérer la date et l'horaire actuelle."
-
-#, fuzzy
-#~ msgid "Gro&up:"
-#~ msgstr "Groupe:"
 
 #~ msgid "Help Dialog with all tokens supported by KRename."
 #~ msgstr "Dialogue d'aide avec tous les tokens supportés par KRename."
@@ -1734,10 +1942,6 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ msgid "Insert your username"
 #~ msgstr "Insérer votre nom d'utilisateur"
 
-#, fuzzy
-#~ msgid "KRename Help"
-#~ msgstr "KRename"
-
 #~ msgid "KRename: Tabbed default profile"
 #~ msgstr "KRename: Profil par défault du mode Classique"
 
@@ -1746,9 +1950,6 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 
 #~ msgid "Krename"
 #~ msgstr "Krename"
-
-#~ msgid "Look and Feel"
-#~ msgstr "Apparence"
 
 #~ msgid "Messages"
 #~ msgstr "Messages"
@@ -1769,10 +1970,6 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ "Déplace tous les fichiers dans le répertoire de destination et les "
 #~ "renomme."
 
-#, fuzzy
-#~ msgid "No Conversion"
-#~ msgstr "Plugin de conversion de code de caractères"
-
 #~ msgid ""
 #~ "Number of the first file.<br>The files are always numbered the same way "
 #~ "as they are shown in the result list."
@@ -1780,19 +1977,8 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ "Numéro du premier fichier.<br>Les fichiers sont toujours renommés de la "
 #~ "même manière que dans la liste d'aperçu."
 
-#, fuzzy
-#~ msgid "O&wner:"
-#~ msgstr "Propriété"
-
-#, fuzzy
-#~ msgid "Ot&hers:"
-#~ msgstr "Autres"
-
 #~ msgid "Output &Directory"
 #~ msgstr "Répertoire &Destinataire"
-
-#~ msgid "Ownership"
-#~ msgstr "Propriété"
 
 #~ msgid "P&icture Plugin"
 #~ msgstr "Plug&in pour les Images"
@@ -1812,29 +1998,11 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ msgid "Please give the name of the undo script!"
 #~ msgstr "Veuillez donner le nom du script d'annulation!"
 
-#, fuzzy
-#~ msgid "Please input a new filename"
-#~ msgstr "Saissez s'il vous plait un nouveau nom de fichier:"
-
 #~ msgid "Please select the text you want to insert:"
 #~ msgstr "Sélectionnez le texte que vous souhaitez insérer:"
 
-#, fuzzy
-#~ msgid "Plugins"
-#~ msgstr "P&lugins"
-
-#~ msgid "Preview: "
-#~ msgstr "Aperçu: "
-
 #~ msgid "Profiles"
 #~ msgstr "Profils"
-
-#~ msgid "Progress"
-#~ msgstr "Progrès"
-
-#, fuzzy
-#~ msgid "Reg. Expression"
-#~ msgstr "Expression Régulière"
 
 #~ msgid "Regular expression"
 #~ msgstr "Expression régulière"
@@ -1845,9 +2013,6 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ msgid "Remove selected files"
 #~ msgstr "Retirer les fichiers sélectionnés"
 
-#~ msgid "Replace With"
-#~ msgstr "Remplacer Par"
-
 #~ msgid "Replace with:"
 #~ msgstr "Remplacer par:"
 
@@ -1856,9 +2021,6 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 
 #~ msgid "Specify a template to use for renaming files."
 #~ msgstr "Veuillez spécifier le modèle à utiliser pour renommer les fichiers."
-
-#~ msgid "Start &index:"
-#~ msgstr "&Index de départ:"
 
 #~ msgid "Start index:"
 #~ msgstr "Index de départ:"
@@ -1876,12 +2038,6 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 #~ "Ce script ne semble pas être un script d'annulation KRename, son "
 #~ "éxécution pourrait être dangereuse, continuer?"
 
-#~ msgid "Time:"
-#~ msgstr "Horaire:"
-
-#~ msgid "Token"
-#~ msgstr "Token"
-
 #~ msgid "Unable to start the given undo script!"
 #~ msgstr "Impossible de démarrer le script d'annulation fourni!"
 
@@ -1893,21 +2049,6 @@ msgstr "y caractères de l'ancien nom de fichier en commençant à x"
 
 #~ msgid "Undoing the renaming operation has been completed."
 #~ msgstr "L'annulation des changements de nom est terminée."
-
-#, fuzzy
-#~ msgid "Use &custom filename"
-#~ msgstr "Utiliser le nom de &fichier"
-
-#, fuzzy
-#~ msgid "Use &input filename"
-#~ msgstr "Utiliser le nom de &fichier"
-
-#, fuzzy
-#~ msgid "Use &tabbed style GUI (advanced users)"
-#~ msgstr "Utiliser l'interface &classique (utilisateurs avancés)"
-
-#~ msgid "Use &wizard style GUI (beginners)"
-#~ msgstr "Utiliser l' &assistant (conseillé pour les nouveaux utilisateurs)"
 
 #~ msgid ""
 #~ "Use the filename that is generated by KRename instead of your changes."

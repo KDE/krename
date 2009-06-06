@@ -15,6 +15,7 @@ Name[de]=Mit KRename umbenennen
 Name[es]=Renombrar con KRename
 Name[fr]=Renommer avec KRename 
 Name[pt_BR]=Renomear com KRename
+Name[uk]=Перейменувати з KRename
 Exec=krename %U
 Icon=krename
 
