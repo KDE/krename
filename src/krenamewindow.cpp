@@ -638,7 +638,7 @@ void KRenameWindow::slotSimpleStartIndexChanged()
 {
     emit startIndexChanged( m_pageFilename->spinIndex->value() );
 
-    updatePreview();
+    slotSimpleTemplateChanged();
 }
 
 void KRenameWindow::slotTemplateChanged()
