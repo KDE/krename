@@ -1,9 +1,8 @@
+# Sending all kinds of file to Krename
 [Desktop Entry]
 Encoding=UTF-8
-Actions=KRename;
+Actions=Krename
 Type=Service
-Icon=
-Name=
 X-KDE-ServiceTypes=KonqPopupMenu/Plugin,all/allfiles,inode/directory
 X-KDE-ExcludeServiceTypes=kdedevice/*
 X-KDE-Protocol=!file
@@ -18,4 +17,3 @@ Name[pt_BR]=Renomear com KRename
 Name[uk]=Перейменувати з KRename
 Exec=krename %U
 Icon=krename
-

@@ -8,9 +8,9 @@ X-KDE-ExcludeServiceTypes=kdedevice/*
 X-KDE-Protocol=!file
 
 [Desktop Action Rename]
-Exec=krename -r %U
-Name=Rename with KRename (with subfolders)
-Name[de]=Mit KRename umbenennen (mit Unterverzeichnissen)
+Exec=krename %U
+Name=Rename with KRename
+Name[de]=Mit KRename umbenennen
 Name[es]=Renombrar con KRename
 Name[fr]=Renommer avec KRename 
 Name[uk]=Перейменувати з KRename 

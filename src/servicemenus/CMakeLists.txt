@@ -1,2 +1,3 @@
 
-INSTALL( FILES krename_dir.desktop krenameservicemenu.desktop DESTINATION ${SERVICES_INSTALL_DIR}/ServiceMenus )
+INSTALL( FILES krename_dir.desktop krename_dirnonrec.desktop krenameservicemenu.desktop 
+  DESTINATION ${SERVICES_INSTALL_DIR}/ServiceMenus )
