@@ -61,6 +61,9 @@
      </property>
      <item>
       <widget class="QPushButton" name="buttonAdd">
+       <property name="toolTip">
+        <string>Add files for renaming.</string>
+       </property>
        <property name="text">
         <string>&amp;Add...</string>
        </property>
@@ -71,6 +74,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="buttonRemove">
+       <property name="toolTip">
+        <string>Remove selected files.</string>
+       </property>
        <property name="text">
         <string>Re&amp;move</string>
        </property>
@@ -78,6 +84,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="buttonRemoveAll">
+       <property name="toolTip">
+        <string>Remove all files.</string>
+       </property>
        <property name="text">
         <string>Re&amp;move All</string>
        </property>
@@ -114,6 +123,9 @@
      </item>
      <item>
       <widget class="QCheckBox" name="checkPreview">
+       <property name="toolTip">
+        <string>Display a preview image for each file.</string>
+       </property>
        <property name="text">
         <string>&amp;Preview</string>
        </property>
@@ -121,6 +133,9 @@
      </item>
      <item>
       <widget class="QCheckBox" name="checkName">
+       <property name="toolTip">
+        <string>Only display the preview, but not the filename.</string>
+       </property>
        <property name="text">
         <string>&amp;Display name</string>
        </property>
@@ -167,20 +182,19 @@
          </property>
          <item>
           <widget class="QPushButton" name="buttonUp">
+           <property name="toolTip">
+            <string>Move selected files upwards.</string>
+           </property>
            <property name="text">
             <string>Up</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="buttonMove">
-           <property name="text">
-            <string>Move</string>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QPushButton" name="buttonDown">
+           <property name="toolTip">
+            <string>Move selected files downwards.</string>
+           </property>
            <property name="text">
             <string>Down</string>
            </property>

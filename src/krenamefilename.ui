@@ -23,7 +23,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tabAdvanced">
       <attribute name="title">
@@ -56,6 +56,9 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="toolTip">
+            <string>&lt;qt&gt;Enter a temlate for renaming the filename.&lt;/qt&gt;</string>
+           </property>
            <property name="editable">
             <bool>true</bool>
            </property>
@@ -87,6 +90,9 @@ p, li { white-space: pre-wrap; }
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="toolTip">
+            <string>&lt;qt&gt;Enter a temlate for renaming the file extension.&lt;/qt&gt;</string>
+           </property>
            <property name="editable">
             <bool>true</bool>
            </property>
@@ -99,6 +105,9 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <widget class="QPushButton" name="buttonFunctions">
+           <property name="toolTip">
+            <string>&lt;qt&gt;Insert special functions like the artist of a mp3 or the creation date of an image.&lt;/qt&gt;</string>
+           </property>
            <property name="text">
             <string>&amp;Functions...</string>
            </property>
@@ -116,6 +125,9 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <widget class="QCheckBox" name="checkExtension">
+           <property name="toolTip">
+            <string>&lt;qt&gt;Keep the file extension as it is and do not change it.&lt;/qt&gt;</string>
+           </property>
            <property name="text">
             <string>&amp;Use extension of the input file</string>
            </property>
@@ -149,6 +161,9 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <widget class="QComboBox" name="comboExtension">
+           <property name="toolTip">
+            <string>&lt;qt&gt;Configure which part of the filename is considered to be the fileextension. E.g. &quot;First Dot&quot;, will consider &quot;.tar.gz&quot; as extension, &quot;Last Dot&quot; only &quot;.gz&quot;.&lt;/qt&gt;</string>
+           </property>
            <item>
             <property name="text">
              <string>First Dot</string>
@@ -181,6 +196,9 @@ p, li { white-space: pre-wrap; }
            <property name="enabled">
             <bool>false</bool>
            </property>
+           <property name="toolTip">
+            <string>&lt;qt&gt;Find and replace strings and regular expressions in the renamed filename.&lt;/qt&gt;</string>
+           </property>
            <property name="text">
             <string>Find &amp;and Replace...</string>
            </property>
@@ -191,6 +209,9 @@ p, li { white-space: pre-wrap; }
            <property name="enabled">
             <bool>false</bool>
            </property>
+           <property name="toolTip">
+            <string>&lt;qt&gt;Configure start index, stepping and skipping for numbering of filenames.&lt;/qt&gt;</string>
+           </property>
            <property name="text">
             <string>&amp;Numbering...</string>
            </property>
@@ -200,6 +221,9 @@ p, li { white-space: pre-wrap; }
           <widget class="QPushButton" name="buttonInsert">
            <property name="enabled">
             <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>&lt;qt&gt;Graphically select a part of a filename to insert.&lt;/qt&gt;</string>
            </property>
            <property name="text">
             <string>&amp;Insert Part of Filename...</string>
@@ -279,6 +303,9 @@ p, li { white-space: pre-wrap; }
               <property name="enabled">
                <bool>false</bool>
               </property>
+              <property name="toolTip">
+               <string>&lt;qt&gt;Insert special functions like the artist of a mp3 or the creation date of an image.&lt;/qt&gt;</string>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -288,6 +315,9 @@ p, li { white-space: pre-wrap; }
              <widget class="QPushButton" name="buttonHelp3">
               <property name="enabled">
                <bool>false</bool>
+              </property>
+              <property name="toolTip">
+               <string>&lt;qt&gt;Insert special functions like the artist of a mp3 or the creation date of an image.&lt;/qt&gt;</string>
               </property>
               <property name="text">
                <string/>
@@ -363,6 +393,9 @@ p, li { white-space: pre-wrap; }
             </item>
             <item row="1" column="3">
              <widget class="QPushButton" name="buttonHelp2">
+              <property name="toolTip">
+               <string>&lt;qt&gt;Insert special functions like the artist of a mp3 or the creation date of an image.&lt;/qt&gt;</string>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -414,6 +447,9 @@ p, li { white-space: pre-wrap; }
             </item>
             <item row="0" column="3">
              <widget class="QPushButton" name="buttonHelp1">
+              <property name="toolTip">
+               <string>&lt;qt&gt;Insert special functions like the artist of a mp3 or the creation date of an image.&lt;/qt&gt;</string>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -648,6 +684,9 @@ p, li { white-space: pre-wrap; }
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="toolTip">
+              <string>&lt;qt&gt;Find and replace strings and regular expressions in the renamed filename.&lt;/qt&gt;</string>
+             </property>
              <property name="text">
               <string>Find &amp;and Replace...</string>
              </property>
@@ -717,6 +756,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QPushButton" name="buttonUp">
+         <property name="toolTip">
+          <string>Move selected files upwards.</string>
+         </property>
          <property name="text">
           <string>&amp;Up</string>
          </property>
@@ -724,6 +766,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QPushButton" name="buttonDown">
+         <property name="toolTip">
+          <string>Move selected files downwards.</string>
+         </property>
          <property name="text">
           <string>&amp;Down</string>
          </property>

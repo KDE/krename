@@ -50,18 +50,18 @@ int main(int argc, char *argv[])
     options.add( "copy +[dir]", ki18n("copy files to directory or url") );
     options.add( "move +[dir]", ki18n("move files to directory or url") );
     options.add( "link +[dir]", ki18n("link files to directory or url") );
-    options.add( "profile +[profile]", ki18n("load the profile named [profile] on startup") );
+    //options.add( "profile +[profile]", ki18n("load the profile named [profile] on startup") );
     options.add( "start", ki18n("start renaming immediately") );
     options.add( "test", ki18n("start KRename's selftest (developers only)") );
     // This option was never implemented in the KDE4 version:
     //options.add( "previewitems <num>",  ki18n("only show <num> preview items") );
 
     KAboutData aboutData( "krename", "krename", ki18n("KRename"), VERSION, ki18n(
-                              "KRename is a batch file renamer which can rename a\n"
-                              "list of files based on a set of expressions.\n\n"
-                              "If you like KRename you may want to support it.\n"
-                              "Testing, bug fixes and feature request are as welcome\n"
-                              "as financial support (everybody needs money ;)\nSee help files for details.\n" ),
+                              "<qt><p>KRename is a batch file renamer which can rename a"
+                              "list of files based on a set of expressions.</p>"
+                              "<p>If you like KRename you may want to support it."
+                              "Testing, bug fixes and feature request are as welcome."
+                              "as financial support (everybody needs money ;) maSee help files for details.</p></qt>" ),
                           KAboutData::License_GPL, ki18n("KRename Build:" __DATE__ " " __TIME__ )
                           , ki18n("(c) 2001-2009, Dominik Seichter\n"),
                           "http://www.krename.net", "domseichter@web.de" );

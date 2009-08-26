@@ -303,7 +303,6 @@ void KRenameWindow::slotEnableControls()
     m_pageFiles->checkName->setEnabled( m_pageFiles->checkPreview->isChecked() );
    
     m_pageFiles->buttonUp->setEnabled( m_fileCount );
-    m_pageFiles->buttonMove->setEnabled( m_fileCount );
     m_pageFiles->buttonDown->setEnabled( m_fileCount );
 
     m_pageDests->urlrequester->setEnabled( !m_pageDests->optionRename->isChecked() );
