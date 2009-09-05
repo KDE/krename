@@ -1,0 +1,18 @@
+# Sending all kinds of files recursively from a directory to Krename
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin,inode/directory
+ExcludeServiceTypes=kdedevice/*
+Encoding=UTF-8
+Actions=rename
+
+[Desktop Action rename]
+Exec=krename -r %U
+Icon=krename 
+Name=Rename with KRename (with subfolders)
+Name[de]=Mit KRename umbenennen (mit Unterverzeichnissen)
+Name[es]=Renombrar con KRename
+Name[fr]=Renommer avec KRename
+Name[pl]=Zmień nazwę za pomocą KRename (z podkatalogami)
+Name[pt_BR]=Renomear com KRename
+Name[uk]=Перейменувати з KRename 

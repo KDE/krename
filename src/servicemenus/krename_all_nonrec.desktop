@@ -1,0 +1,18 @@
+# Sending all kinds of file to Krename
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin,all/allfiles,inode/directory
+ExcludeServiceTypes=kdedevice/*
+Encoding=UTF-8
+Actions=rename
+ 
+[Desktop Action rename]
+Exec=krename %U
+Icon=krename
+Name=Rename with KRename
+Name[de]=Mit KRename umbenennen
+Name[es]=Renombrar con KRename
+Name[fr]=Renommer avec KRename
+Name[pl]=Zmień nazwę za pomocą KRename
+Name[pt_BR]=Renomear com KRename
+Name[uk]=Перейменувати з KRename
