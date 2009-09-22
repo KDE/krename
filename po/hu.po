@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-04 09:00+0200\n"
+"POT-Creation-Date: 2009-09-22 20:28+0200\n"
 "PO-Revision-Date: 2009-01-10 12:25+0100\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: rc.cpp:87 rc.cpp:96
+#: rc.cpp:108 rc.cpp:120
 msgid "$"
 msgstr "$"
 
@@ -31,23 +31,23 @@ msgstr "%1 hiba lépett fel."
 msgid "%2 errors occurred!"
 msgstr "%2 hiba lépett fel."
 
-#: rc.cpp:321
+#: rc.cpp:384
 msgid "&Add Number"
 msgstr "Szám &felvétele"
 
-#: rc.cpp:3 rc.cpp:375 rc.cpp:540 previewlist.cpp:36
+#: rc.cpp:6 rc.cpp:438 rc.cpp:603 previewlist.cpp:36
 msgid "&Add..."
 msgstr "Fe&lvétel..."
 
-#: rc.cpp:81
+#: rc.cpp:99
 msgid "&Advanced Filename"
 msgstr "S&peciális fájlnévmegadás"
 
-#: rc.cpp:360
+#: rc.cpp:423
 msgid "&Cancel"
 msgstr "&Mégsem"
 
-#: rc.cpp:495
+#: rc.cpp:558
 msgid "&Change Owner"
 msgstr "&Tulajdonos módosítása"
 
@@ -59,19 +59,19 @@ msgstr "&Fájlnév kézi módosítása..."
 msgid "&Close"
 msgstr "&Bezárás"
 
-#: rc.cpp:336
+#: rc.cpp:399
 msgid "&Convert selection:"
 msgstr "Kijelölés át&alakítása:"
 
-#: rc.cpp:66
+#: rc.cpp:84
 msgid "&Copy files to destination directory"
 msgstr "Fájlok más&olása a célkönyvtárba"
 
-#: rc.cpp:546
+#: rc.cpp:609
 msgid "&Definitions"
 msgstr "Def&iníciók"
 
-#: rc.cpp:543
+#: rc.cpp:606
 msgid "&Delete"
 msgstr "&Törlés"
 
@@ -79,27 +79,27 @@ msgstr "&Törlés"
 msgid "&Destination"
 msgstr "&Cél"
 
-#: rc.cpp:30
+#: rc.cpp:45
 msgid "&Display name"
 msgstr "Név meg&jelenítése"
 
-#: rc.cpp:201 rc.cpp:300
+#: rc.cpp:264 rc.cpp:363
 msgid "&Down"
 msgstr "&Le"
 
-#: rc.cpp:378
+#: rc.cpp:441
 msgid "&Edit..."
 msgstr "&Szerkesztés..."
 
-#: rc.cpp:210
+#: rc.cpp:273
 msgid "&Enable Plugin"
 msgstr "Modul beka&pcsolása"
 
-#: rc.cpp:162 rc.cpp:261
+#: rc.cpp:216 rc.cpp:324
 msgid "&Extension:"
 msgstr "Fájlk&iterjesztés:"
 
-#: rc.cpp:129 rc.cpp:216
+#: rc.cpp:171 rc.cpp:279
 msgid "&Filename"
 msgstr "Fájlné&v"
 
@@ -107,7 +107,7 @@ msgstr "Fájlné&v"
 msgid "&Files"
 msgstr "&Fájlok"
 
-#: rc.cpp:387
+#: rc.cpp:450
 msgid "&Find:"
 msgstr "&Keresés:"
 
@@ -115,19 +115,19 @@ msgstr "&Keresés:"
 msgid "&Finish..."
 msgstr "Befeje&zés..."
 
-#: rc.cpp:99
+#: rc.cpp:126
 msgid "&Functions..."
 msgstr "Funkc&iók..."
 
-#: rc.cpp:504
+#: rc.cpp:567
 msgid "&Group:"
 msgstr "Cs&oport:"
 
-#: rc.cpp:579
+#: rc.cpp:642
 msgid "&Increase Counter"
 msgstr "Számláló nö&velése"
 
-#: rc.cpp:570
+#: rc.cpp:633
 msgid "&Initial Value:"
 msgstr "&Kezdőérték:"
 
@@ -135,39 +135,39 @@ msgstr "&Kezdőérték:"
 msgid "&Insert"
 msgstr "Beszú&rás"
 
-#: rc.cpp:123
+#: rc.cpp:165
 msgid "&Insert Part of Filename..."
 msgstr "Fájlnév &részének beillesztése..."
 
-#: rc.cpp:558
+#: rc.cpp:621
 msgid "&Insert Variable"
 msgstr "Változó beszú&rása"
 
-#: rc.cpp:333
+#: rc.cpp:396
 msgid "&Invert selection"
 msgstr "&Kijelölés megfordítása"
 
-#: rc.cpp:555
+#: rc.cpp:618
 msgid "&Load from File..."
 msgstr "Betöltés fá&jlból..."
 
-#: rc.cpp:69
+#: rc.cpp:87
 msgid "&Move files to destination directory"
 msgstr "Fájlok át&helyezése a célkönyvtárba"
 
-#: rc.cpp:567
+#: rc.cpp:630
 msgid "&Name:"
 msgstr "&Név:"
 
-#: rc.cpp:306
+#: rc.cpp:369
 msgid "&Numbering"
 msgstr "&Számozás"
 
-#: rc.cpp:120
+#: rc.cpp:159
 msgid "&Numbering..."
 msgstr "Szám&ozás..."
 
-#: rc.cpp:590
+#: rc.cpp:653
 msgid "&Offset:"
 msgstr "&Eltolás:"
 
@@ -179,11 +179,11 @@ msgstr "Meg&nyitás"
 msgid "&Open Destination..."
 msgstr "&Cél megnyitása..."
 
-#: rc.cpp:60
+#: rc.cpp:78
 msgid "&Options"
 msgstr "O&pciók"
 
-#: rc.cpp:75
+#: rc.cpp:93
 msgid "&Overwrite existing files"
 msgstr "Me&glevő fájlok felülírása"
 
@@ -191,19 +191,19 @@ msgstr "Me&glevő fájlok felülírása"
 msgid "&Plugins"
 msgstr "Mo&dulok"
 
-#: rc.cpp:159 rc.cpp:258
+#: rc.cpp:213 rc.cpp:321
 msgid "&Prefix:"
 msgstr "E&lőtag:"
 
-#: rc.cpp:27
+#: rc.cpp:39
 msgid "&Preview"
 msgstr "&Előnézet"
 
-#: rc.cpp:381 previewlist.cpp:37
+#: rc.cpp:444 previewlist.cpp:37
 msgid "&Remove"
 msgstr "El&távolítás"
 
-#: rc.cpp:324
+#: rc.cpp:387
 msgid "&Remove Number"
 msgstr "Szám &törlése"
 
@@ -211,7 +211,7 @@ msgstr "Szám &törlése"
 msgid "&Rename All Files Again..."
 msgstr "Az összes fájl i&smételt átnevezése..."
 
-#: rc.cpp:63
+#: rc.cpp:81
 msgid "&Rename input files"
 msgstr "Bemenet&i fájlok átnevezése"
 
@@ -219,43 +219,43 @@ msgstr "Bemenet&i fájlok átnevezése"
 msgid "&Rename more..."
 msgstr "&További átnevezések..."
 
-#: rc.cpp:390
+#: rc.cpp:453
 msgid "&Replace With:"
 msgstr "&Lecserélés erre:"
 
-#: rc.cpp:315
+#: rc.cpp:378
 msgid "&Reset counter for every directory"
 msgstr "Számláló &visszaállítása minden könyvtárnál"
 
-#: rc.cpp:552
+#: rc.cpp:615
 msgid "&Save to File..."
 msgstr "M&entés fájlba..."
 
-#: rc.cpp:126
+#: rc.cpp:168
 msgid "&Simple Filename"
 msgstr "E&gyszerű fájlnévmegadás"
 
-#: rc.cpp:318
+#: rc.cpp:381
 msgid "&Skip Numbers"
 msgstr "Ki&hagyandó számok"
 
-#: rc.cpp:312
+#: rc.cpp:375
 msgid "&Step by:"
 msgstr "&Lépésköz:"
 
-#: rc.cpp:132 rc.cpp:219
+#: rc.cpp:174 rc.cpp:282
 msgid "&Suffix:"
 msgstr "&Utótag:"
 
-#: rc.cpp:84
+#: rc.cpp:102
 msgid "&Template:"
 msgstr "S&ablon:"
 
-#: rc.cpp:561
+#: rc.cpp:624
 msgid "&Test..."
 msgstr "&Tesztelés..."
 
-#: rc.cpp:573
+#: rc.cpp:636
 msgid "&Type:"
 msgstr "&Típus:"
 
@@ -263,19 +263,19 @@ msgstr "&Típus:"
 msgid "&Undo"
 msgstr "V&isszavonás"
 
-#: rc.cpp:198 rc.cpp:297
+#: rc.cpp:258 rc.cpp:360
 msgid "&Up"
 msgstr "&Fel"
 
-#: rc.cpp:102
+#: rc.cpp:132
 msgid "&Use extension of the input file"
 msgstr "A bemeneti fájl kiter&jesztésének használata"
 
-#: rc.cpp:501
+#: rc.cpp:564
 msgid "&User:"
 msgstr "&Felhasználó:"
 
-#: rc.cpp:531
+#: rc.cpp:594
 msgid "&Variables"
 msgstr "&Változók"
 
@@ -288,11 +288,11 @@ msgstr "(c) 2001-2008, Dominik Seichter\n"
 msgid "*|All files and directories"
 msgstr "*|Összes fájl és könyvtár"
 
-#: rc.cpp:537
+#: rc.cpp:600
 msgid "1"
 msgstr "1"
 
-#: rc.cpp:582
+#: rc.cpp:645
 #, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -336,7 +336,7 @@ msgstr ""
 "illetve <span style=\" font-style:italic;\">img019 </span>névre, akkor "
 "alkalmazzon -4 értékű eltolást.</p></body></html>"
 
-#: krenamewindow.cpp:334
+#: krenamewindow.cpp:333
 msgid "<b>Files:<b> %1"
 msgstr "<b>Fájlok:</b> %1"
 
@@ -349,7 +349,7 @@ msgstr ""
 "jogokkal való használattal a felhasználó problémákat idézhet elő a "
 "rendszerben."
 
-#: rc.cpp:90
+#: rc.cpp:111
 #, fuzzy
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
@@ -370,7 +370,66 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">.</span></p></body></html>"
 
-#: rc.cpp:330
+#: main.cpp:60
+#, fuzzy
+msgid ""
+"<qt><p>KRename is a batch file renamer which can rename alist of files based "
+"on a set of expressions.</p><p>If you like KRename you may want to support "
+"it.Testing, bug fixes and feature request are as welcome.as financial "
+"support (everybody needs money ;) maSee help files for details.</p></qt>"
+msgstr ""
+"A KRename egy fájlátnevező, amellyel tömeges fájlátnevezés\n"
+"végezhető kifejezések alapján.\n"
+"\n"
+"Ha kedveli a KRename programot, támogathatja is azt.\n"
+"A tesztelést, hibajavításokat és fejlesztési kéréseket\n"
+"szívesen fogadjuk, akárcsak az anyagi támogatást (pénzre\n"
+"mindenkinek szüksége van).\n"
+"Részletek a dokumentációban.\n"
+
+#: rc.cpp:156
+msgid ""
+"<qt>Configure start index, stepping and skipping for numbering of filenames."
+"</qt>"
+msgstr ""
+
+#: rc.cpp:138
+msgid ""
+"<qt>Configure which part of the filename is considered to be the "
+"fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
+"\"Last Dot\" only \".gz\".</qt>"
+msgstr ""
+
+#: rc.cpp:117
+#, fuzzy
+msgid "<qt>Enter a temlate for renaming the file extension.</qt>"
+msgstr "Sablon beállítása a fájlnév-kiterjesztéshez"
+
+#: rc.cpp:105
+msgid "<qt>Enter a temlate for renaming the filename.</qt>"
+msgstr ""
+
+#: rc.cpp:150 rc.cpp:249
+msgid ""
+"<qt>Find and replace strings and regular expressions in the renamed filename."
+"</qt>"
+msgstr ""
+
+#: rc.cpp:162
+msgid "<qt>Graphically select a part of a filename to insert.</qt>"
+msgstr ""
+
+#: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
+msgid ""
+"<qt>Insert special functions like the artist of a mp3 or the creation date "
+"of an image.</qt>"
+msgstr ""
+
+#: rc.cpp:129
+msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
+msgstr ""
+
+#: rc.cpp:393
 msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
@@ -409,7 +468,7 @@ msgstr ""
 "<qt>A modul használatával címkéket lehet beolvasni JPEG- és TIFF-fájlokból.</"
 "qt>"
 
-#: rc.cpp:222 rc.cpp:225 rc.cpp:246 rc.cpp:255
+#: rc.cpp:285 rc.cpp:288 rc.cpp:309 rc.cpp:318
 msgid "?"
 msgstr "?"
 
@@ -417,11 +476,11 @@ msgstr "?"
 msgid "A JavaScript error has occured: "
 msgstr "JavaScript-hiba történt: "
 
-#: rc.cpp:492
+#: rc.cpp:555
 msgid "A&dvanced Permissions"
 msgstr "Kiterjes&ztett jogosultságok"
 
-#: rc.cpp:447 rc.cpp:525
+#: rc.cpp:510 rc.cpp:588
 msgid "Access Permissions"
 msgstr "Hozzáférési jogok"
 
@@ -441,6 +500,10 @@ msgstr "A &könyvtárnevek is legyenek felvéve"
 msgid "Add directory names only"
 msgstr "Csak könyvtárnevek felvétele"
 
+#: rc.cpp:3
+msgid "Add files for renaming."
+msgstr ""
+
 #: filedialogextwidget.cpp:53
 msgid ""
 "Add only the directory names and not the names of the files in the directory "
@@ -458,7 +521,7 @@ msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr "A jelenleg megadott összes definíció elvész. Szeretné folytatni?"
 
-#: rc.cpp:399
+#: rc.cpp:462
 #, fuzzy
 msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
@@ -487,11 +550,11 @@ msgstr "Brandon Low"
 msgid "Built-in Functions"
 msgstr "Beépített funkciók"
 
-#: rc.cpp:456 rc.cpp:468 rc.cpp:480
+#: rc.cpp:519 rc.cpp:531 rc.cpp:543
 msgid "Can Read"
 msgstr "Olvashatja"
 
-#: rc.cpp:459 rc.cpp:471 rc.cpp:483
+#: rc.cpp:522 rc.cpp:534 rc.cpp:546
 msgid "Can Read & Write"
 msgstr "Olvashatja és írhatja"
 
@@ -530,23 +593,23 @@ msgstr "Nem lehet beállítani a futtathatósági bitet a visszavonási szkriptr
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "Nem hozható létre szimbolikus link erre a távoli URL-re: %1"
 
-#: rc.cpp:144 rc.cpp:180 rc.cpp:237 rc.cpp:279 rc.cpp:348
+#: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
 msgstr "Nagy kezdőbetűsre"
 
-#: rc.cpp:402
+#: rc.cpp:465
 msgid "Category"
 msgstr "Kategória"
 
-#: rc.cpp:444
+#: rc.cpp:507
 msgid "Change &Permissions"
 msgstr "&Jogosultságok módosítása"
 
-#: rc.cpp:510
+#: rc.cpp:573
 msgid "Change &access date && time"
 msgstr "&Hozzáférési dátum és idő módosítása"
 
-#: rc.cpp:513
+#: rc.cpp:576
 msgid "Change &modifcation date && time"
 msgstr "Módosí&tási dátum és idő módosítása"
 
@@ -558,7 +621,7 @@ msgstr "Charles Samuels"
 msgid "Class"
 msgstr "Osztály"
 
-#: rc.cpp:51
+#: rc.cpp:69
 msgid "Configure the look and feel of the KRename GUI:"
 msgstr "A KRename felületének kinézetének beállítása:"
 
@@ -566,15 +629,15 @@ msgstr "A KRename felületének kinézetének beállítása:"
 msgid "Contributed a Spanish translation"
 msgstr "Spanyol fordítás."
 
-#: rc.cpp:138 rc.cpp:174 rc.cpp:231 rc.cpp:273 rc.cpp:342
+#: rc.cpp:186 rc.cpp:228 rc.cpp:294 rc.cpp:336 rc.cpp:405
 msgid "Convert to lower case"
 msgstr "Átalakítás kisbetűsre"
 
-#: rc.cpp:141 rc.cpp:177 rc.cpp:234 rc.cpp:276 rc.cpp:345
+#: rc.cpp:189 rc.cpp:231 rc.cpp:297 rc.cpp:339 rc.cpp:408
 msgid "Convert to upper case"
 msgstr "Átalakítás nagybetűsre"
 
-#: rc.cpp:72
+#: rc.cpp:90
 msgid "Create symbolic &links in destination directory"
 msgstr "Szimbolikus &linkek létrehozása a célkönyvtárban"
 
@@ -582,15 +645,15 @@ msgstr "Szimbolikus &linkek létrehozása a célkönyvtárban"
 msgid "Created the Gentoo Ebuild scripts for Krename."
 msgstr "Gentoo Ebuild-szkriptek létrehozása a KRename-hez."
 
-#: rc.cpp:183 rc.cpp:282
+#: rc.cpp:237 rc.cpp:345
 msgid "Custom extension"
 msgstr "Egyéni kiterjesztés"
 
-#: rc.cpp:420
+#: rc.cpp:483
 msgid "Custom filename"
 msgstr "Egyéni fájlnév"
 
-#: rc.cpp:147 rc.cpp:240
+#: rc.cpp:195 rc.cpp:303
 msgid "Custom name"
 msgstr "Egyéni név"
 
@@ -603,7 +666,7 @@ msgstr "Lengyel fordítás."
 msgid "Daniele Medri"
 msgstr "Daniele Medri"
 
-#: rc.cpp:156 rc.cpp:168 rc.cpp:252 rc.cpp:267
+#: rc.cpp:207 rc.cpp:222 rc.cpp:315 rc.cpp:330
 msgid "Date"
 msgstr "Dátum"
 
@@ -621,17 +684,21 @@ msgstr ""
 "A dátum- és időmodul csak helyi fájlokkal használható, \"%1\" viszont távoli "
 "fájl."
 
-#: rc.cpp:408
+#: rc.cpp:471
 msgid "Description"
 msgstr "Leírás"
 
-#: rc.cpp:522 rc.cpp:564
+#: rc.cpp:585 rc.cpp:627
 msgid "Dialog"
 msgstr "Párbeszédablak"
 
 #: scriptplugin.cpp:77
 msgid "Directory of the current file"
 msgstr "Az aktuális fájl könyvtára"
+
+#: rc.cpp:36
+msgid "Display a preview image for each file."
+msgstr ""
 
 #: krenameimpl.cpp:382
 msgid "Do you really want to remove all files from the list?"
@@ -645,7 +712,7 @@ msgstr "Dominik Seichter"
 msgid "Double"
 msgstr "Dupla pontosságú"
 
-#: rc.cpp:42
+#: rc.cpp:60
 msgid "Down"
 msgstr "Le"
 
@@ -678,11 +745,11 @@ msgstr "Exiv2 (JPEG/TIFF Exif) modul"
 msgid "Extension of the current file"
 msgstr "Az aktuális fájl kiterjesztése"
 
-#: rc.cpp:105
+#: rc.cpp:135
 msgid "File extension &starts at:"
 msgstr "A fájlkiterjesztés &kezdőpozíciója:"
 
-#: rc.cpp:426
+#: rc.cpp:489
 #, fuzzy
 msgid "File preview"
 msgstr "&Előnézet"
@@ -691,7 +758,7 @@ msgstr "&Előnézet"
 msgid "File&name"
 msgstr "Fájl&név"
 
-#: rc.cpp:150 rc.cpp:243
+#: rc.cpp:198 rc.cpp:306
 msgid "File&name:"
 msgstr "Fájl&név:"
 
@@ -711,27 +778,27 @@ msgstr "Fájlok másolása ide: %1"
 msgid "Files will be moved to: %1"
 msgstr "Fájlok áthelyezése ide: %1"
 
-#: rc.cpp:33
+#: rc.cpp:48
 msgid "Files: <b>0</b>"
 msgstr "Fájlok: <b>0</b>"
 
-#: rc.cpp:369
+#: rc.cpp:432
 msgid "Find"
 msgstr "Keresés"
 
-#: rc.cpp:117 rc.cpp:195 rc.cpp:294
+#: rc.cpp:153 rc.cpp:252 rc.cpp:357
 msgid "Find &and Replace..."
 msgstr "K&eresés és csere..."
 
-#: rc.cpp:363 rc.cpp:384
+#: rc.cpp:426 rc.cpp:447
 msgid "Find and Replace"
 msgstr "Keresés és csere"
 
-#: rc.cpp:393
+#: rc.cpp:456
 msgid "Find is a Regular &Expression"
 msgstr "A keresendő szöveg &reguláris kifejezés"
 
-#: rc.cpp:108
+#: rc.cpp:141
 msgid "First Dot"
 msgstr "Első pont"
 
@@ -755,12 +822,12 @@ msgstr ""
 "A spec-fájllal kapcsolatos problémák javítása, SUSE-hoz való RPM-ek, a "
 "KRename Gentoo alatti karbantartása."
 
-#: rc.cpp:453 rc.cpp:465 rc.cpp:477
+#: rc.cpp:516 rc.cpp:528 rc.cpp:540
 msgid "Forbidden"
 msgstr "Nincs hozzáférés"
 
-#: rc.cpp:45 rc.cpp:78 rc.cpp:204 rc.cpp:213 rc.cpp:303 rc.cpp:327 rc.cpp:441
-#: rc.cpp:507 rc.cpp:528 rc.cpp:576
+#: rc.cpp:63 rc.cpp:96 rc.cpp:267 rc.cpp:276 rc.cpp:366 rc.cpp:390 rc.cpp:504
+#: rc.cpp:570 rc.cpp:591 rc.cpp:639
 msgid "Form"
 msgstr "Űrlap"
 
@@ -776,11 +843,11 @@ msgstr "A GID beállítása"
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr "Modulok készítéséhez jó kiindulást adott a Scribus program."
 
-#: rc.cpp:519
+#: rc.cpp:582
 msgid "Get &Current Time"
 msgstr "Az aktuális idő &lekérdezése"
 
-#: rc.cpp:462
+#: rc.cpp:525
 msgid "Gro&up:"
 msgstr "Csopo&rt:"
 
@@ -977,7 +1044,7 @@ msgstr "Beilleszti az eredeti fájlnév átírt változatát nagybetűs formába
 msgid "Int"
 msgstr "Egész"
 
-#: rc.cpp:489
+#: rc.cpp:552
 msgid "Is Executable/Only owner &can rename and delete folder content"
 msgstr ""
 "&Végrehajtható/Csak a tulajdonos tudja átnevezni vagy törölni a könyvtár "
@@ -1003,7 +1070,7 @@ msgstr "KRename"
 msgid "KRename Build:"
 msgstr "A KRename verziója:"
 
-#: rc.cpp:396
+#: rc.cpp:459
 msgid "KRename Help"
 msgstr "KRename-súgó"
 
@@ -1015,34 +1082,15 @@ msgstr "A KRename befejezte az átnevezést."
 msgid "KRename finished the undo process."
 msgstr "A KRename befejezte a visszavonást."
 
-#: main.cpp:60
-msgid ""
-"KRename is a batch file renamer which can rename a\n"
-"list of files based on a set of expressions.\n"
-"\n"
-"If you like KRename you may want to support it.\n"
-"Testing, bug fixes and feature request are as welcome\n"
-"as financial support (everybody needs money ;)\n"
-"See help files for details.\n"
-msgstr ""
-"A KRename egy fájlátnevező, amellyel tömeges fájlátnevezés\n"
-"végezhető kifejezések alapján.\n"
-"\n"
-"Ha kedveli a KRename programot, támogathatja is azt.\n"
-"A tesztelést, hibajavításokat és fejlesztési kéréseket\n"
-"szívesen fogadjuk, akárcsak az anyagi támogatást (pénzre\n"
-"mindenkinek szüksége van).\n"
-"Részletek a dokumentációban.\n"
-
 #: main.cpp:105
 msgid "Krzysztof Pawlak"
 msgstr "Krzysztof Pawlak"
 
-#: rc.cpp:111
+#: rc.cpp:144
 msgid "Last Dot"
 msgstr "Utolsó pont"
 
-#: rc.cpp:48
+#: rc.cpp:66
 msgid "Look and Feel"
 msgstr "Kinézet"
 
@@ -1066,11 +1114,15 @@ msgstr "Michael v.Ostheim"
 msgid "Michal Smoczyk"
 msgstr "Michal Smoczyk"
 
-#: rc.cpp:39
-msgid "Move"
-msgstr "Áthelyezés"
+#: rc.cpp:57 rc.cpp:261
+msgid "Move selected files downwards."
+msgstr ""
 
-#: rc.cpp:186 rc.cpp:285
+#: rc.cpp:51 rc.cpp:255
+msgid "Move selected files upwards."
+msgstr ""
+
+#: rc.cpp:240 rc.cpp:348
 msgid "N&umber"
 msgstr "Szá&m"
 
@@ -1078,32 +1130,36 @@ msgstr "Szá&m"
 msgid "Nicolas Benoit"
 msgstr "Nicolas Benoit"
 
-#: rc.cpp:339
+#: rc.cpp:402
 msgid "No Conversion"
 msgstr "Nincs átalakítás"
 
-#: rc.cpp:114
+#: rc.cpp:147
 #, fuzzy
 msgid "No File Extension"
 msgstr "Egyéni kiterjesztés"
 
-#: rc.cpp:153 rc.cpp:165 rc.cpp:249 rc.cpp:264
+#: rc.cpp:204 rc.cpp:219 rc.cpp:312 rc.cpp:327
 msgid "Number"
 msgstr "Szám"
 
-#: rc.cpp:189 rc.cpp:288
+#: rc.cpp:243 rc.cpp:351
 msgid "Number of &digits:"
 msgstr "Számjeg&yek száma:"
 
-#: rc.cpp:450
+#: rc.cpp:513
 msgid "O&wner:"
 msgstr "T&ulajdonos:"
+
+#: rc.cpp:42
+msgid "Only display the preview, but not the filename."
+msgstr ""
 
 #: krenamemodel.cpp:485
 msgid "Origin"
 msgstr "Eredeti"
 
-#: rc.cpp:474
+#: rc.cpp:537
 msgid "Ot&hers:"
 msgstr "E&gyéb:"
 
@@ -1115,7 +1171,7 @@ msgstr "Egyéb"
 msgid "Owner of the file"
 msgstr "A fájl tulajdonosa"
 
-#: rc.cpp:498
+#: rc.cpp:561
 msgid "Ownership"
 msgstr "Tulajdonos"
 
@@ -1147,11 +1203,11 @@ msgstr ""
 "A jogosultságmodul csak helyi fájlokkal használható, \"%1\" viszont távoli "
 "fájl."
 
-#: rc.cpp:429
+#: rc.cpp:492
 msgid "Please input a new filename"
 msgstr "Adjon meg egy új fájlnevet"
 
-#: rc.cpp:207
+#: rc.cpp:270
 msgid "Plugins"
 msgstr "Modulok"
 
@@ -1163,21 +1219,21 @@ msgstr "Lengyel fordítás."
 msgid "Press close to quit!"
 msgstr "Kilépéshez kattintson a \"Bezárás\" gombra."
 
-#: rc.cpp:411
+#: rc.cpp:474
 #, fuzzy
 msgid "Preview"
 msgstr "&Előnézet"
 
-#: rc.cpp:417
+#: rc.cpp:480
 #, fuzzy
 msgid "Preview File:"
 msgstr "&Előnézet"
 
-#: rc.cpp:351
+#: rc.cpp:414
 msgid "Preview of the generated KRename command:"
 msgstr "Az előállított KRename-parancs előnézete:"
 
-#: rc.cpp:357
+#: rc.cpp:420
 msgid "Progress"
 msgstr "Folyamat"
 
@@ -1197,11 +1253,11 @@ msgstr "GCC 3.x alatti, névterekkel kapcsolatos javítás."
 msgid "Provided the new preview and move features"
 msgstr "Új előnézeti és áthelyezési lehetőségek."
 
-#: rc.cpp:6
+#: rc.cpp:12
 msgid "Re&move"
 msgstr "El&távolítás"
 
-#: rc.cpp:9
+#: rc.cpp:18
 msgid "Re&move All"
 msgstr "M&inden eltávolítása"
 
@@ -1209,9 +1265,18 @@ msgstr "M&inden eltávolítása"
 msgid "Read"
 msgstr "Olvasás"
 
-#: rc.cpp:366
+#: rc.cpp:429
 msgid "Reg. Expression"
 msgstr "Regul. kifejezés"
+
+#: rc.cpp:15
+#, fuzzy
+msgid "Remove all files."
+msgstr "M&inden eltávolítása"
+
+#: rc.cpp:9
+msgid "Remove selected files."
+msgstr ""
 
 #: progressdialog.cpp:50
 #, fuzzy
@@ -1234,7 +1299,7 @@ msgstr "%1 fájl átnevezve."
 msgid "Rene Gass"
 msgstr "Rene Gass"
 
-#: rc.cpp:372
+#: rc.cpp:435
 msgid "Replace With"
 msgstr "Lecserélés erre"
 
@@ -1250,23 +1315,23 @@ msgstr "Rolf Magnus"
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "GCC 3.1-gyel kapcsolatos javítások Gentoo-hoz."
 
-#: rc.cpp:15
+#: rc.cpp:24
 msgid "Sort: Ascending"
 msgstr "Rendezés: növekvő"
 
-#: rc.cpp:18
+#: rc.cpp:27
 msgid "Sort: Descending"
 msgstr "Rendezés: csökkenő"
 
-#: rc.cpp:21
+#: rc.cpp:30
 msgid "Sort: Numeric"
 msgstr "Rendezés: numerikus"
 
-#: rc.cpp:24
+#: rc.cpp:33
 msgid "Sort: Random"
 msgstr "Rendezés: véletlenszerű"
 
-#: rc.cpp:12
+#: rc.cpp:21
 msgid "Sort: Unsorted"
 msgstr "Rendezés: nincs"
 
@@ -1278,11 +1343,11 @@ msgstr "Speciális"
 msgid "Special Characters"
 msgstr "Speciális karakterek"
 
-#: rc.cpp:192 rc.cpp:291
+#: rc.cpp:246 rc.cpp:354
 msgid "Start  &index:"
 msgstr "&Kezdőindex:"
 
-#: rc.cpp:309
+#: rc.cpp:372
 msgid "Start &index:"
 msgstr "&Kezdőindex:"
 
@@ -1322,7 +1387,7 @@ msgstr "Szimbolikus linkek létrehozása itt: %1"
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr "TagLib (MP3/Ogg) modul"
 
-#: rc.cpp:354 rc.cpp:423 rc.cpp:534 rc.cpp:549
+#: rc.cpp:417 rc.cpp:486 rc.cpp:597 rc.cpp:612
 msgid "TextLabel"
 msgstr "Szövegcímke"
 
@@ -1363,7 +1428,7 @@ msgstr ""
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "Már létezik \"%1\" nevű fájl. Szeretné felülírni azt?"
 
-#: rc.cpp:486
+#: rc.cpp:549
 msgid "This file uses advanced permissions"
 msgstr "A fájl kiterjesztett jogosultságokat használ"
 
@@ -1375,15 +1440,15 @@ msgstr ""
 "Az opció hatása: a KRename a kijelölt fájlok alapkönyvtárának nevét is "
 "felveszi a listába"
 
-#: rc.cpp:516
+#: rc.cpp:579
 msgid "Time:"
 msgstr "Idő:"
 
-#: rc.cpp:405
+#: rc.cpp:468
 msgid "Token"
 msgstr "Token"
 
-#: rc.cpp:414
+#: rc.cpp:477
 #, fuzzy
 msgid "Token &Preview"
 msgstr "&Előnézet"
@@ -1448,35 +1513,35 @@ msgstr "Távoli fájlra nem lehetséges visszavonás: %1"
 msgid "Undoing all renamed files."
 msgstr "Fájlátnevezések visszavonása."
 
-#: rc.cpp:36
+#: rc.cpp:54
 msgid "Up"
 msgstr "Fel"
 
-#: rc.cpp:438
+#: rc.cpp:501
 msgid "Use &custom filename"
 msgstr "&Egyéni fájlnév használata"
 
-#: rc.cpp:435
+#: rc.cpp:498
 msgid "Use &input filename"
 msgstr "A &bemeneti fájlnév használata"
 
-#: rc.cpp:57
+#: rc.cpp:75
 msgid "Use &tabbed style GUI (advanced users)"
 msgstr "&Fülek használata (haladóknak)"
 
-#: rc.cpp:54
+#: rc.cpp:72
 msgid "Use &wizard style GUI (beginners)"
 msgstr "&Varázslók használata (kezdőknek)"
 
-#: rc.cpp:432
+#: rc.cpp:495
 msgid "Use filename created by &KRename"
 msgstr "A &KRename által előállított fájlnév használata"
 
-#: rc.cpp:171 rc.cpp:270
+#: rc.cpp:225 rc.cpp:333
 msgid "Use original extension"
 msgstr "Az eredeti kiterjesztés használata"
 
-#: rc.cpp:135 rc.cpp:228
+#: rc.cpp:183 rc.cpp:291
 msgid "Use original name"
 msgstr "Az eredeti név használata"
 
@@ -1574,10 +1639,6 @@ msgstr "a bemeneti fájlnév hosszának beillesztése"
 msgid "link files to directory or url"
 msgstr "Fájlok másolása egy könyvtárba"
 
-#: main.cpp:53
-msgid "load the profile named [profile] on startup"
-msgstr "A [profile] nevű profil betöltése indításkor"
-
 #: main.cpp:51
 #, fuzzy
 msgid "move files to directory or url"
@@ -1632,6 +1693,12 @@ msgstr "y darab karakter a korábbi fájlnévből az x-edik karaktertől kezdve"
 
 #~ msgid "E&xtras"
 #~ msgstr "E&xtrák"
+
+#~ msgid "Move"
+#~ msgstr "Áthelyezés"
+
+#~ msgid "load the profile named [profile] on startup"
+#~ msgstr "A [profile] nevű profil betöltése indításkor"
 
 #~ msgid "only show <num> preview items"
 #~ msgstr "Csak <num> darab előnézeti elem megjelenítése"
