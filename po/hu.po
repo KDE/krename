@@ -7,10 +7,10 @@
 # Arpad Biro <biro.arpad gmail>, 2008, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: hu\n"
+"Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-26 19:12+0200\n"
-"PO-Revision-Date: 2009-09-23 22:21+0200\n"
+"PO-Revision-Date: 2009-09-26 19:29+0200\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -112,9 +112,8 @@ msgid "&Find:"
 msgstr "&Keresés:"
 
 #: krenamewindow.cpp:149
-#, fuzzy
 msgid "&Finish"
-msgstr "Befeje&zés..."
+msgstr "Befeje&zés"
 
 #: rc.cpp:126
 msgid "&Functions..."
@@ -177,9 +176,8 @@ msgid "&Open"
 msgstr "Meg&nyitás"
 
 #: progressdialog.cpp:35
-#, fuzzy
 msgid "&Open Destination"
-msgstr "&Cél megnyitása..."
+msgstr "&Cél megnyitása"
 
 #: rc.cpp:78
 msgid "&Options"
@@ -370,7 +368,6 @@ msgstr ""
 "weight:600;\">.</span></p></body></html>"
 
 #: main.cpp:60
-#, fuzzy
 msgid ""
 "<qt><p>KRename is a batch file renamer which can rename a list of files "
 "based on a set of expressions.</p><p>If you like KRename you may want to "
@@ -403,12 +400,10 @@ msgstr ""
 "fájlkiterjesztésnek, az \"Utolsó pont\" viszont csak a \".gz\" részt.</qt>"
 
 #: rc.cpp:117
-#, fuzzy
 msgid "<qt>Enter a template for changing the file extension.</qt>"
 msgstr "<qt>Adjon meg egy sablont a fájlkiterjesztés módosításához.</qt>"
 
 #: rc.cpp:105
-#, fuzzy
 msgid "<qt>Enter a template for changing the filename.</qt>"
 msgstr "<qt>Adjon meg egy sablont a fájlnév módosításához.</qt>"
 
@@ -425,7 +420,6 @@ msgid "<qt>Graphically select a part of a filename to insert.</qt>"
 msgstr "<qt>Grafikus módon kijelölhető a fájlnév beillesztendő része.</qt>"
 
 #: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
-#, fuzzy
 msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
@@ -545,7 +539,7 @@ msgstr "Andreas Pour"
 
 #: main.cpp:75
 msgid "Arpad Biro"
-msgstr ""
+msgstr "Bíró Árpád"
 
 #: main.cpp:109
 msgid "Asim Husanovic"
@@ -714,7 +708,7 @@ msgstr "Előnézeti kép megjelenítése minden fájlhoz"
 
 #: rc.cpp:42
 msgid "Display the filename together with the preview."
-msgstr ""
+msgstr "Fájlnév megjelenítése az előnézettel együtt"
 
 #: krenameimpl.cpp:382
 msgid "Do you really want to remove all files from the list?"
@@ -1069,7 +1063,6 @@ msgid "Italian translation"
 msgstr "Olasz fordítás."
 
 #: main.cpp:98
-#, fuzzy
 msgid "Italian translation work"
 msgstr "Olasz fordítás."
 
@@ -1386,7 +1379,7 @@ msgstr "Szöveg"
 
 #: main.cpp:75
 msgid "Style guide issues and improvements of user messages."
-msgstr ""
+msgstr "Felhasználóifelület-üzenetek és stílus javítása"
 
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
@@ -1566,7 +1559,7 @@ msgstr "Változónév"
 
 #: main.cpp:97
 msgid "Vincenzo Reale"
-msgstr ""
+msgstr "Vincenzo Reale"
 
 #: filedialogextwidget.cpp:49
 msgid ""
