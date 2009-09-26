@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 16:55+0200\n"
+"POT-Creation-Date: 2009-09-26 17:04+0200\n"
 "PO-Revision-Date: 2009-09-22 20:58+0200\n"
 "Last-Translator: Dominik Seichter <domseichter@web.de>\n"
 "Language-Team:  <de@li.org>\n"
@@ -317,7 +317,7 @@ msgstr ""
 msgid "<b>Files:<b> %1"
 msgstr "<b>Dateien:</b> %1"
 
-#: main.cpp:129
+#: main.cpp:130
 msgid ""
 "<b>Krename was started from root!</b><br>When started from root, Krename may "
 "damage your system if you do not know exactly what you are doing!"
@@ -338,11 +338,13 @@ msgid ""
 msgstr ""
 
 #: main.cpp:60
+#, fuzzy
 msgid ""
-"<qt><p>KRename is a batch file renamer which can rename alist of files based "
-"on a set of expressions.</p><p>If you like KRename you may want to support "
-"it.Testing, bug fixes and feature request are as welcome.as financial "
-"support (everybody needs money ;) maSee help files for details.</p></qt>"
+"<qt><p>KRename is a batch file renamer which can rename a list of files "
+"based on a set of expressions.</p><p>If you like KRename you may want to "
+"support it. Testing, bug fixes and feature request are as welcome as "
+"financial support (everybody needs money ;). See help files for details.</"
+"p></qt>"
 msgstr ""
 "<qt><p>KRename ist ein Batch-Umbenenner, der eine Liste von Dateien "
 "anhandeines vorgegebenen Musters umbenennt.</p><p>Wenn Ihnen KRename "
@@ -368,11 +370,13 @@ msgstr ""
 "\"Letzter Punkt\" nur \".gz\".</qt>"
 
 #: rc.cpp:117
-msgid "<qt>Enter a temlate for renaming the file extension.</qt>"
+#, fuzzy
+msgid "<qt>Enter a template for changing the file extension.</qt>"
 msgstr "<qt>Geben Sie ein Muster für das Umbenennen der Erweiterung ein.</qt>"
 
 #: rc.cpp:105
-msgid "<qt>Enter a temlate for renaming the filename.</qt>"
+#, fuzzy
+msgid "<qt>Enter a template for changing the filename.</qt>"
 msgstr "<qt>Geben Sie ein Muster für das Umbenennen des Dateinamens ein.</qt>"
 
 #: rc.cpp:150 rc.cpp:249
@@ -501,11 +505,15 @@ msgid ""
 "for tokens and insert a found token into the pattern for the filename."
 msgstr ""
 
-#: main.cpp:82
+#: main.cpp:83
 msgid "Andreas Pour"
 msgstr "Andreas Pour"
 
-#: main.cpp:107
+#: main.cpp:75
+msgid "Arpad Biro"
+msgstr ""
+
+#: main.cpp:108
 msgid "Asim Husanovic"
 msgstr "Asim Husanovic"
 
@@ -513,7 +521,7 @@ msgstr "Asim Husanovic"
 msgid "Boolean"
 msgstr "Bool"
 
-#: main.cpp:92
+#: main.cpp:93
 msgid "Brandon Low"
 msgstr "Brandon Low"
 
@@ -583,7 +591,7 @@ msgstr "&Zugriffsdatum und -Zeit ändern"
 msgid "Change &modifcation date && time"
 msgstr "&Modifikationsdatum und -Zeit Ändern"
 
-#: main.cpp:84
+#: main.cpp:85
 msgid "Charles Samuels"
 msgstr "Charles Samuels"
 
@@ -595,7 +603,7 @@ msgstr "Klasse"
 msgid "Configure the look and feel of the KRename GUI:"
 msgstr ""
 
-#: main.cpp:101
+#: main.cpp:102
 msgid "Contributed a Spanish translation"
 msgstr "Hat die spanische Übersetzung beigesteuert"
 
@@ -611,7 +619,7 @@ msgstr "Alter Dateiname in Großbuchstaben"
 msgid "Create symbolic &links in destination directory"
 msgstr ""
 
-#: main.cpp:90
+#: main.cpp:91
 msgid "Created the Gentoo Ebuild scripts for Krename."
 msgstr "Erstellt die Gentoo Ebuild Skripts für KRename."
 
@@ -627,11 +635,11 @@ msgstr "Benutzerspezifischer Dateiname"
 msgid "Custom name"
 msgstr "Benutzerspezifischer Name"
 
-#: main.cpp:109
+#: main.cpp:110
 msgid "Czech Translation"
 msgstr "Tschechische Übersetzung"
 
-#: main.cpp:96
+#: main.cpp:97
 msgid "Daniele Medri"
 msgstr "Daniele Medri"
 
@@ -693,7 +701,7 @@ msgstr "Nach unten"
 msgid "Elapsed time: %1 seconds"
 msgstr "Benötigte Zeit: %1 Sekunden"
 
-#: main.cpp:133
+#: main.cpp:134
 msgid "Error"
 msgstr "Fehler"
 
@@ -773,13 +781,13 @@ msgstr "Suchfeld enthält einen Regulären Ausdruck"
 msgid "First Dot"
 msgstr "Erster Punkt"
 
-#: main.cpp:80
+#: main.cpp:81
 msgid "Fixed a bug that caused krename not closing open files."
 msgstr ""
 "Hat einen Fehler behoben, weswegen KRename offene Dateien nicht geschlossen "
 "hat."
 
-#: main.cpp:77
+#: main.cpp:78
 msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
@@ -787,7 +795,7 @@ msgstr ""
 "Hat einen Fehler mit dem startIndex behoben und hat die BatchRenamer Klasse\n"
 "zu seinem tollen Bildbetrachter showimg hinzugefügt."
 
-#: main.cpp:99
+#: main.cpp:100
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
@@ -804,7 +812,7 @@ msgstr ""
 msgid "Form"
 msgstr ""
 
-#: main.cpp:86
+#: main.cpp:87
 msgid "Franz Schmid"
 msgstr "Franz Schmid"
 
@@ -812,7 +820,7 @@ msgstr "Franz Schmid"
 msgid "GID"
 msgstr "GID"
 
-#: main.cpp:86
+#: main.cpp:87
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr ""
 "Dank seiner Anwendung Scribus hab ich leichter verstanden wie man Plugin "
@@ -826,7 +834,7 @@ msgstr "Die &aktuelle Zeit einfügen"
 msgid "Gro&up:"
 msgstr "&Gruppe:"
 
-#: main.cpp:77
+#: main.cpp:78
 msgid "Groult Richard"
 msgstr "Groult Richard"
 
@@ -842,7 +850,7 @@ msgstr ""
 "KRename ignoriert versteckte Verzeichnisse beim rekursiven hinzufügen, wenn "
 "diese Option nicht aktiviert ist."
 
-#: main.cpp:106
+#: main.cpp:107
 msgid "Ilya Ivkov"
 msgstr "Ilya Ivkov"
 
@@ -1024,7 +1032,7 @@ msgstr "Integer"
 msgid "Is Executable/Only owner &can rename and delete folder content"
 msgstr ""
 
-#: main.cpp:96
+#: main.cpp:97
 msgid "Italian translation"
 msgstr "Italienische Übersetzung"
 
@@ -1032,7 +1040,7 @@ msgstr "Italienische Übersetzung"
 msgid "JavaScript Plugin"
 msgstr "JavaScript Plugin"
 
-#: main.cpp:101
+#: main.cpp:102
 msgid "Jose Rodriguez"
 msgstr "Jose Rodriguez"
 
@@ -1056,7 +1064,7 @@ msgstr "KRename hat das Umbenennen beendet."
 msgid "KRename finished the undo process."
 msgstr "KRename hat das Rückgängigmachen beendet."
 
-#: main.cpp:105
+#: main.cpp:106
 msgid "Krzysztof Pawlak"
 msgstr "Krzysztof Pawlak"
 
@@ -1068,23 +1076,23 @@ msgstr "Letzter Punkt"
 msgid "Look and Feel"
 msgstr "Aussehen"
 
-#: main.cpp:100
+#: main.cpp:101
 msgid "Mark Ziegler"
 msgstr "Mark Ziegler"
 
-#: main.cpp:80
+#: main.cpp:81
 msgid "Michael Elvers"
 msgstr "Michael Elvers"
 
-#: main.cpp:98
+#: main.cpp:99
 msgid "Michael Zugaro"
 msgstr "Michael Zugaro"
 
-#: main.cpp:90
+#: main.cpp:91
 msgid "Michael v.Ostheim"
 msgstr "Michael v.Ostheim"
 
-#: main.cpp:108
+#: main.cpp:109
 msgid "Michal Smoczyk"
 msgstr "Michal Smoczyk"
 
@@ -1100,7 +1108,7 @@ msgstr "Ausgewählte Dateien nach oben verschieben."
 msgid "N&umber"
 msgstr "&Zähler"
 
-#: main.cpp:104
+#: main.cpp:105
 msgid "Nicolas Benoit"
 msgstr "Nicolas Benoit"
 
@@ -1148,16 +1156,16 @@ msgstr ""
 msgid "Owning group of the file"
 msgstr "Besitzergruppe der Datei"
 
-#: main.cpp:88
+#: main.cpp:89
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr "Teile der PNG-Unterstützung wurden von seinem KFile-Plugin kopiert."
 
-#: main.cpp:109
+#: main.cpp:110
 msgid "Pavel Fric"
 msgstr "Pavel Fric"
 
-#: main.cpp:94
+#: main.cpp:95
 msgid "Per Oyvind Karlsen"
 msgstr "Per Oyvind Karlsen"
 
@@ -1179,7 +1187,7 @@ msgstr "Bitte geben Sie einen neuen Dateinamen ein"
 msgid "Plugins"
 msgstr "Plugins"
 
-#: main.cpp:108
+#: main.cpp:109
 msgid "Polish Translation"
 msgstr "Polnische Übersetzung"
 
@@ -1203,19 +1211,19 @@ msgstr ""
 msgid "Progress"
 msgstr "Fortschritt"
 
-#: main.cpp:100
+#: main.cpp:101
 msgid "Provided SuSE RPMs and very good suggestions"
 msgstr "Erstellte SuSE-RPMs und hatte zahlreiche gute Vorschläge"
 
-#: main.cpp:102
+#: main.cpp:103
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr "Hat ein RedHat-RPM erstellt und sehr geholfen KRename zu verbessern"
 
-#: main.cpp:97
+#: main.cpp:98
 msgid "Provided a gcc3.x namespace patch"
 msgstr "behob ein Problem mit gcc3.x und namespaces"
 
-#: main.cpp:98
+#: main.cpp:99
 msgid "Provided the new preview and move features"
 msgstr "Hat die neue Vorschau und das neue Verschieben geschrieben"
 
@@ -1259,7 +1267,7 @@ msgstr "Umbenannt"
 msgid "Renamed %1 files successfully."
 msgstr "%1 Dateien erfolgreich umbenannt."
 
-#: main.cpp:99
+#: main.cpp:100
 msgid "Rene Gass"
 msgstr "Rene Gass"
 
@@ -1271,11 +1279,11 @@ msgstr ""
 msgid "Restart &KRename..."
 msgstr "&KRename neu starten..."
 
-#: main.cpp:88
+#: main.cpp:89
 msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
 
-#: main.cpp:92
+#: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "Hat einige Fehler mit GCC 3.1 in Gentoo behoben"
 
@@ -1323,11 +1331,11 @@ msgstr "Benenne %1 Dateien um."
 msgid "Stefan \"Stonki\" Onken"
 msgstr "Stefan \"Stonki\" Onken"
 
-#: main.cpp:97
+#: main.cpp:98
 msgid "Stephan Johach"
 msgstr "Stephan Johach"
 
-#: main.cpp:102
+#: main.cpp:103
 msgid "Steven P. Ulrick"
 msgstr "Steven P. Ulrick"
 
@@ -1338,6 +1346,10 @@ msgstr "Haftend (Sticky)"
 #: scriptplugin.cpp:241
 msgid "String"
 msgstr "String"
+
+#: main.cpp:75
+msgid "Style guide issues and improvements of user messages."
+msgstr ""
 
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
@@ -1355,11 +1367,11 @@ msgstr "TagLib (MP3/Ogg) Plugin"
 msgid "TextLabel"
 msgstr ""
 
-#: main.cpp:94
+#: main.cpp:95
 msgid "Thanks for creating the Mandrake RPM"
 msgstr "Erstellt das Mandrake RPM"
 
-#: main.cpp:82
+#: main.cpp:83
 msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
 "to apps.kde.com."
@@ -1367,13 +1379,13 @@ msgstr ""
 "Danke für seine großartige Arbeit an der Seite apps.kde.com und Hilfe mit "
 "KRename."
 
-#: main.cpp:84
+#: main.cpp:85
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
 msgstr ""
 "Danke für noatun und der ID3/Ogg-Tag-Editor basiert auf Teilen von noatun."
 
-#: main.cpp:75
+#: main.cpp:76
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "Danke für das Erstellen der RedHat 7.x Rpm's und anderer Hilfe."
 
@@ -1416,23 +1428,23 @@ msgstr ""
 msgid "Token &Preview"
 msgstr "&Vorschau"
 
-#: main.cpp:107
+#: main.cpp:108
 msgid "Translated KRename into Bosnian"
 msgstr "Hat KRename ins Bosnische übersetzt"
 
-#: main.cpp:104
+#: main.cpp:105
 msgid "Translated KRename into French"
 msgstr "Hat KRename ins Französische übersetzt"
 
-#: main.cpp:105
+#: main.cpp:106
 msgid "Translated KRename into Polish"
 msgstr "Hat KRename ins Polnische übersetzt"
 
-#: main.cpp:106
+#: main.cpp:107
 msgid "Translated KRename into Russian"
 msgstr "Hat KRename ins Russische übersetzt"
 
-#: main.cpp:103
+#: main.cpp:104
 msgid "Translated KRename to Japanese"
 msgstr "Hat KRename ins Japanische übersetzt"
 
@@ -1444,7 +1456,7 @@ msgstr "Transliteriert die Zeichenkette nach dem Strichpunkt"
 msgid "Transliteration"
 msgstr "Transliterierung"
 
-#: main.cpp:75
+#: main.cpp:76
 msgid "Trevor Semeniuk"
 msgstr "Trevor Semeniuk"
 
@@ -1456,7 +1468,7 @@ msgstr "UID"
 msgid "URL of the current file"
 msgstr "URL"
 
-#: main.cpp:103
+#: main.cpp:104
 msgid "UTUMI Hirosi"
 msgstr "UTUMI Hirosi"
 

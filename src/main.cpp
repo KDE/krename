@@ -57,11 +57,11 @@ int main(int argc, char *argv[])
     //options.add( "previewitems <num>",  ki18n("only show <num> preview items") );
 
     KAboutData aboutData( "krename", "krename", ki18n("KRename"), VERSION, ki18n(
-                              "<qt><p>KRename is a batch file renamer which can rename a"
+                              "<qt><p>KRename is a batch file renamer which can rename a "
                               "list of files based on a set of expressions.</p>"
-                              "<p>If you like KRename you may want to support it."
-                              "Testing, bug fixes and feature request are as welcome."
-                              "as financial support (everybody needs money ;) maSee help files for details.</p></qt>" ),
+                              "<p>If you like KRename you may want to support it. "
+                              "Testing, bug fixes and feature request are as welcome "
+                              "as financial support (everybody needs money ;). See help files for details.</p></qt>" ),
                           KAboutData::License_GPL, ki18n("KRename Build:" __DATE__ " " __TIME__ )
                           , ki18n("(c) 2001-2009, Dominik Seichter\n"),
                           "http://www.krename.net", "domseichter@web.de" );
@@ -72,6 +72,7 @@ int main(int argc, char *argv[])
                          ki18n("Website, testing, very good ideas and keeping me coding!"),
                          "support@stonki.de", "http://www.stonki.de" );
 
+    aboutData.addCredit( ki18n("Arpad Biro"), ki18n("Style guide issues and improvements of user messages."), "biro.arpad@gmail.com" );    
     aboutData.addCredit( ki18n("Trevor Semeniuk"),  ki18n("Thanks to him for creating RedHat 7.x packages and some other help."),
                          "semeniuk@ee.ualberta.ca", "http://www.semeniuk.net" );
     aboutData.addCredit( ki18n("Groult Richard"),   ki18n("Fixed a bug with startIndex and added the BatchRenamer class\n"
