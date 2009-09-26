@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 17:04+0200\n"
+"POT-Creation-Date: 2009-09-26 17:44+0200\n"
 "PO-Revision-Date: 2006-03-02 13:24+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
 "Language-Team: Italian <kde-i18n-it@mail.kde.org>\n"
@@ -53,7 +53,7 @@ msgstr "Cambia pr&oprietario"
 msgid "&Change filename manually..."
 msgstr "&Cambia manualmente il nome del file"
 
-#: krenamewindow.cpp:134
+#: krenamewindow.cpp:150
 msgid "&Close"
 msgstr ""
 
@@ -117,7 +117,7 @@ msgstr "F&ile"
 msgid "&Find:"
 msgstr "Trova:"
 
-#: krenamewindow.cpp:133
+#: krenamewindow.cpp:149
 #, fuzzy
 msgid "&Finish"
 msgstr "&Fine"
@@ -343,7 +343,7 @@ msgid ""
 "html>"
 msgstr ""
 
-#: krenamewindow.cpp:333
+#: krenamewindow.cpp:349
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "File: <br>%1</b>"
@@ -425,7 +425,7 @@ msgstr ""
 
 #: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
 msgid ""
-"<qt>Insert special functions like the artist of a mp3 or the creation date "
+"<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
 

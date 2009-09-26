@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 17:04+0200\n"
+"POT-Creation-Date: 2009-09-26 17:44+0200\n"
 "PO-Revision-Date: 2005-01-11 20:12+0100\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -59,7 +59,7 @@ msgstr "&Eigenaar wijzigen"
 msgid "&Change filename manually..."
 msgstr "Bestandsnamen handmatig wij&zigen"
 
-#: krenamewindow.cpp:134
+#: krenamewindow.cpp:150
 msgid "&Close"
 msgstr ""
 
@@ -123,7 +123,7 @@ msgstr "&Bestanden"
 msgid "&Find:"
 msgstr "Zoeken:"
 
-#: krenamewindow.cpp:133
+#: krenamewindow.cpp:149
 #, fuzzy
 msgid "&Finish"
 msgstr "&Voltooien"
@@ -350,7 +350,7 @@ msgid ""
 "html>"
 msgstr ""
 
-#: krenamewindow.cpp:333
+#: krenamewindow.cpp:349
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "Bestanden: <b>%1</b>"
@@ -430,7 +430,7 @@ msgstr ""
 
 #: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
 msgid ""
-"<qt>Insert special functions like the artist of a mp3 or the creation date "
+"<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
 

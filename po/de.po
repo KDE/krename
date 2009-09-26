@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 17:04+0200\n"
+"POT-Creation-Date: 2009-09-26 17:44+0200\n"
 "PO-Revision-Date: 2009-09-22 20:58+0200\n"
 "Last-Translator: Dominik Seichter <domseichter@web.de>\n"
 "Language-Team:  <de@li.org>\n"
@@ -51,7 +51,7 @@ msgstr "&Besitzer ändern"
 msgid "&Change filename manually..."
 msgstr "Dateinamen &nachträglich ändern..."
 
-#: krenamewindow.cpp:134
+#: krenamewindow.cpp:150
 msgid "&Close"
 msgstr "&Schließen"
 
@@ -107,7 +107,7 @@ msgstr "Date&ien"
 msgid "&Find:"
 msgstr "&Suchen:"
 
-#: krenamewindow.cpp:133
+#: krenamewindow.cpp:149
 #, fuzzy
 msgid "&Finish"
 msgstr "&Abschließen..."
@@ -313,7 +313,7 @@ msgid ""
 "html>"
 msgstr ""
 
-#: krenamewindow.cpp:333
+#: krenamewindow.cpp:349
 msgid "<b>Files:<b> %1"
 msgstr "<b>Dateien:</b> %1"
 
@@ -394,8 +394,9 @@ msgstr ""
 "eingefügt werden soll.</qt>"
 
 #: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
+#, fuzzy
 msgid ""
-"<qt>Insert special functions like the artist of a mp3 or the creation date "
+"<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
 "<qt>Fügen Sie spezielle Funktionen, wie den Künstler eines MP3s oder das "

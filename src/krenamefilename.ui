@@ -105,7 +105,7 @@ p, li { white-space: pre-wrap; }
          <item>
           <widget class="QPushButton" name="buttonFunctions" >
            <property name="toolTip" >
-            <string>&lt;qt>Insert special functions like the artist of a mp3 or the creation date of an image.&lt;/qt></string>
+            <string>&lt;qt>Insert special functions like the artist of an mp3 or the creation date of an image.&lt;/qt></string>
            </property>
            <property name="text" >
             <string>&amp;Functions...</string>
@@ -303,7 +303,7 @@ p, li { white-space: pre-wrap; }
                <bool>false</bool>
               </property>
               <property name="toolTip" >
-               <string>&lt;qt>Insert special functions like the artist of a mp3 or the creation date of an image.&lt;/qt></string>
+               <string>&lt;qt>Insert special functions like the artist of an mp3 or the creation date of an image.&lt;/qt></string>
               </property>
               <property name="text" >
                <string/>
@@ -316,7 +316,7 @@ p, li { white-space: pre-wrap; }
                <bool>false</bool>
               </property>
               <property name="toolTip" >
-               <string>&lt;qt>Insert special functions like the artist of a mp3 or the creation date of an image.&lt;/qt></string>
+               <string>&lt;qt>Insert special functions like the artist of an mp3 or the creation date of an image.&lt;/qt></string>
               </property>
               <property name="text" >
                <string/>
@@ -393,7 +393,7 @@ p, li { white-space: pre-wrap; }
             <item row="1" column="3" >
              <widget class="QPushButton" name="buttonHelp2" >
               <property name="toolTip" >
-               <string>&lt;qt>Insert special functions like the artist of a mp3 or the creation date of an image.&lt;/qt></string>
+               <string>&lt;qt>Insert special functions like the artist of an mp3 or the creation date of an image.&lt;/qt></string>
               </property>
               <property name="text" >
                <string/>
@@ -447,7 +447,7 @@ p, li { white-space: pre-wrap; }
             <item row="0" column="3" >
              <widget class="QPushButton" name="buttonHelp1" >
               <property name="toolTip" >
-               <string>&lt;qt>Insert special functions like the artist of a mp3 or the creation date of an image.&lt;/qt></string>
+               <string>&lt;qt>Insert special functions like the artist of an mp3 or the creation date of an image.&lt;/qt></string>
               </property>
               <property name="text" >
                <string/>

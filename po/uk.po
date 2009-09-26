@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 17:04+0200\n"
+"POT-Creation-Date: 2009-09-26 17:44+0200\n"
 "PO-Revision-Date: 2009-06-04 17:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -54,7 +54,7 @@ msgstr "З&мінити власника"
 msgid "&Change filename manually..."
 msgstr "&Змінити назву файла вручну..."
 
-#: krenamewindow.cpp:134
+#: krenamewindow.cpp:150
 msgid "&Close"
 msgstr "&Закрити"
 
@@ -110,7 +110,7 @@ msgstr "&Файли"
 msgid "&Find:"
 msgstr "З&найти:"
 
-#: krenamewindow.cpp:133
+#: krenamewindow.cpp:149
 #, fuzzy
 msgid "&Finish"
 msgstr "З&авершити..."
@@ -336,7 +336,7 @@ msgstr ""
 "span>За допомогою цього додатка ви можете вказати крок у -4 і отримати "
 "бажаний результат.</p></body></html>"
 
-#: krenamewindow.cpp:333
+#: krenamewindow.cpp:349
 msgid "<b>Files:<b> %1"
 msgstr "<b>Файли:<b> %1"
 
@@ -421,7 +421,7 @@ msgstr ""
 
 #: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
 msgid ""
-"<qt>Insert special functions like the artist of a mp3 or the creation date "
+"<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
 

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 17:04+0200\n"
+"POT-Creation-Date: 2009-09-26 17:44+0200\n"
 "PO-Revision-Date: 2009-01-31 15:24+0100\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@lists.kde.org>\n"
@@ -49,7 +49,7 @@ msgstr "&Změnit vlastníka"
 msgid "&Change filename manually..."
 msgstr "&Změnit název souboru ručně..."
 
-#: krenamewindow.cpp:134
+#: krenamewindow.cpp:150
 msgid "&Close"
 msgstr "&Zavřít"
 
@@ -105,7 +105,7 @@ msgstr "&Soubory"
 msgid "&Find:"
 msgstr "&Najít:"
 
-#: krenamewindow.cpp:133
+#: krenamewindow.cpp:149
 #, fuzzy
 msgid "&Finish"
 msgstr "&Dokončit..."
@@ -333,7 +333,7 @@ msgstr ""
 "použijete tento přídavný modul, snadno můžete přidat odskok o -5 , abyste "
 "dostali požadovaný výsledek</p></body></html>"
 
-#: krenamewindow.cpp:333
+#: krenamewindow.cpp:349
 msgid "<b>Files:<b> %1"
 msgstr "<b>Soubory:<b> %1"
 
@@ -423,7 +423,7 @@ msgstr ""
 
 #: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
 msgid ""
-"<qt>Insert special functions like the artist of a mp3 or the creation date "
+"<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
 

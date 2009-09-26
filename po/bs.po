@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 17:04+0200\n"
+"POT-Creation-Date: 2009-09-26 17:44+0200\n"
 "PO-Revision-Date: 2004-07-30 23:15+0200\n"
 "Last-Translator: Asim Husanovic <asim.h@megatel.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -55,7 +55,7 @@ msgstr "Promijeni &Vlasnika"
 msgid "&Change filename manually..."
 msgstr "&Promijeni ime datoteke ručno"
 
-#: krenamewindow.cpp:134
+#: krenamewindow.cpp:150
 msgid "&Close"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgstr "&Datoteke"
 msgid "&Find:"
 msgstr "Pronađi:"
 
-#: krenamewindow.cpp:133
+#: krenamewindow.cpp:149
 #, fuzzy
 msgid "&Finish"
 msgstr "&Kraj"
@@ -345,7 +345,7 @@ msgid ""
 "html>"
 msgstr ""
 
-#: krenamewindow.cpp:333
+#: krenamewindow.cpp:349
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "Datoteka: <b>%1</b>"
@@ -425,7 +425,7 @@ msgstr ""
 
 #: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
 msgid ""
-"<qt>Insert special functions like the artist of a mp3 or the creation date "
+"<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
 
