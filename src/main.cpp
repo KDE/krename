@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
                               "<qt><p>KRename is a batch file renamer which can rename a "
                               "list of files based on a set of expressions.</p>"
                               "<p>If you like KRename you may want to support it. "
-                              "Testing, bug fixes and feature request are as welcome "
+                              "Testing, bug fixes and feature requests are as welcome "
                               "as financial support (everybody needs money ;). See help files for details.</p></qt>" ),
                           KAboutData::License_GPL, ki18n("KRename Build:" __DATE__ " " __TIME__ )
                           , ki18n("(c) 2001-2009, Dominik Seichter\n"),
