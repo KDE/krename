@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2009-09-22 20:58+0200\n"
 "Last-Translator: Dominik Seichter <domseichter@web.de>\n"
 "Language-Team:  <de@li.org>\n"
@@ -108,7 +108,8 @@ msgid "&Find:"
 msgstr "&Suchen:"
 
 #: krenamewindow.cpp:133
-msgid "&Finish..."
+#, fuzzy
+msgid "&Finish"
 msgstr "&Abschließen..."
 
 #: rc.cpp:126
@@ -172,7 +173,8 @@ msgid "&Open"
 msgstr "&Öffnen"
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "&Ziel Verzeichnis Öffnen ..."
 
 #: rc.cpp:78
@@ -342,23 +344,28 @@ msgid ""
 "it.Testing, bug fixes and feature request are as welcome.as financial "
 "support (everybody needs money ;) maSee help files for details.</p></qt>"
 msgstr ""
-"<qt><p>KRename ist ein Batch-Umbenenner, der eine Liste von Dateien anhand"
-"eines vorgegebenen Musters umbenennt.</p><p>"
-"Wenn Ihnen KRename gefällt, sollten Sie überlegen KRename zu unterstützen."
-"Die Hilfe enthält mehr Details.</p></qt>"
+"<qt><p>KRename ist ein Batch-Umbenenner, der eine Liste von Dateien "
+"anhandeines vorgegebenen Musters umbenennt.</p><p>Wenn Ihnen KRename "
+"gefällt, sollten Sie überlegen KRename zu unterstützen.Die Hilfe enthält "
+"mehr Details.</p></qt>"
 
 #: rc.cpp:156
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
-msgstr "<qt>Einstellungen für Zähler und deren Startwert, Schrittweite und das überspringen von Zahlen in Dateinamen.</qt>"
+msgstr ""
+"<qt>Einstellungen für Zähler und deren Startwert, Schrittweite und das "
+"überspringen von Zahlen in Dateinamen.</qt>"
 
 #: rc.cpp:138
 msgid ""
 "<qt>Configure which part of the filename is considered to be the "
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
-msgstr "<qt>Einstellen welcher Teil des Dateinamens als Erweiterung behandelt wird. Bsp.: Bei \"Erster Punkt\" wird \".tar.gz\" als Erweiterung verwendet, bei \"Letzter Punkt\" nur \".gz\".</qt>"
+msgstr ""
+"<qt>Einstellen welcher Teil des Dateinamens als Erweiterung behandelt wird. "
+"Bsp.: Bei \"Erster Punkt\" wird \".tar.gz\" als Erweiterung verwendet, bei "
+"\"Letzter Punkt\" nur \".gz\".</qt>"
 
 #: rc.cpp:117
 msgid "<qt>Enter a temlate for renaming the file extension.</qt>"
@@ -372,17 +379,23 @@ msgstr "<qt>Geben Sie ein Muster für das Umbenennen des Dateinamens ein.</qt>"
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
-msgstr "<qt>Suchen und ersetzen sie Zeichenketten oder Reguläre Ausdrücke in den umbenannten Dateinamen.</qt>"
+msgstr ""
+"<qt>Suchen und ersetzen sie Zeichenketten oder Reguläre Ausdrücke in den "
+"umbenannten Dateinamen.</qt>"
 
 #: rc.cpp:162
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
-msgstr "<qt>Wählen Sie mit der Maus einen Teil des alten Dateinamens aus, der eingefügt werden soll.</qt>"
+msgstr ""
+"<qt>Wählen Sie mit der Maus einen Teil des alten Dateinamens aus, der "
+"eingefügt werden soll.</qt>"
 
 #: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
 msgid ""
 "<qt>Insert special functions like the artist of a mp3 or the creation date "
 "of an image.</qt>"
-msgstr "<qt>Fügen Sie spezielle Funktionen, wie den Künstler eines MP3s oder das Aufnahme Datum eines Fotos, ein.</qt>"
+msgstr ""
+"<qt>Fügen Sie spezielle Funktionen, wie den Künstler eines MP3s oder das "
+"Aufnahme Datum eines Fotos, ein.</qt>"
 
 #: rc.cpp:129
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
@@ -476,7 +489,8 @@ msgid "Add subdirectories &recursively"
 msgstr "Unterverzeichnisse &rekursiv hinzufügen"
 
 #: scriptplugin.cpp:291
-msgid "All currently entered definitions will be lost. Do you want to continue?"
+msgid ""
+"All currently entered definitions will be lost. Do you want to continue?"
 msgstr ""
 "Alle im Moment vorhandenen Definitionen gehen verloren. Wollen Sie "
 "fortfahren?"
@@ -654,6 +668,10 @@ msgstr "Dateipfad"
 #: rc.cpp:36
 msgid "Display a preview image for each file."
 msgstr "Ein Vorschaubild für jede Datei anzeigen."
+
+#: rc.cpp:42
+msgid "Display the filename together with the preview."
+msgstr ""
 
 #: krenameimpl.cpp:382
 msgid "Do you really want to remove all files from the list?"
@@ -1106,10 +1124,6 @@ msgstr "Anzahl der &Stellen:"
 msgid "O&wner:"
 msgstr "&Besitzer:"
 
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
-msgstr "Nur die Vorschau, aber nicht den Dateinamen, anzeigen."
-
 #: krenamemodel.cpp:485
 msgid "Origin"
 msgstr "Ursprünglich"
@@ -1135,7 +1149,8 @@ msgid "Owning group of the file"
 msgstr "Besitzergruppe der Datei"
 
 #: main.cpp:88
-msgid "Parts of the PNG support are copied from his KFile plugin for png support."
+msgid ""
+"Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr "Teile der PNG-Unterstützung wurden von seinem KFile-Plugin kopiert."
 
 #: main.cpp:109
@@ -1353,8 +1368,10 @@ msgstr ""
 "KRename."
 
 #: main.cpp:84
-msgid "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
-msgstr "Danke für noatun und der ID3/Ogg-Tag-Editor basiert auf Teilen von noatun."
+msgid ""
+"Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
+msgstr ""
+"Danke für noatun und der ID3/Ogg-Tag-Editor basiert auf Teilen von noatun."
 
 #: main.cpp:75
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
@@ -1365,8 +1382,10 @@ msgid "The directory %1 could not be created."
 msgstr "Das Verzeichnis %1 konnte nicht erstellt werden."
 
 #: krenameimpl.cpp:576
-msgid "The directory %1 does not exist. Do you want KRename to create it for you?"
-msgstr "Das Verzeichnis %1 existiert nicht. Soll KRename dieses für Sie erstellen?"
+msgid ""
+"The directory %1 does not exist. Do you want KRename to create it for you?"
+msgstr ""
+"Das Verzeichnis %1 existiert nicht. Soll KRename dieses für Sie erstellen?"
 
 #: scriptplugin.cpp:343
 msgid "The file %1 already exists. Do you want to overwrite it?"
@@ -1633,3 +1652,5 @@ msgstr "Leerzeichen am Anfang und Ende eine beliebigen Zeichenkette entfernen"
 msgid "y characters of old filename starting at x"
 msgstr "y Zeichen ab dem x-ten Zeichen des Dateinamens"
 
+#~ msgid "Only display the preview, but not the filename."
+#~ msgstr "Nur die Vorschau, aber nicht den Dateinamen, anzeigen."

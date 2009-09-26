@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -456,7 +456,7 @@ msgid "File&name"
 msgstr ""
 
 #: krenamewindow.cpp:133
-msgid "&Finish..."
+msgid "&Finish"
 msgstr ""
 
 #: krenamewindow.cpp:134
@@ -600,7 +600,7 @@ msgid "&Undo"
 msgstr ""
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+msgid "&Open Destination"
 msgstr ""
 
 #: progressdialog.cpp:47
@@ -680,7 +680,7 @@ msgid "&Preview"
 msgstr ""
 
 #: rc.cpp:42
-msgid "Only display the preview, but not the filename."
+msgid "Display the filename together with the preview."
 msgstr ""
 
 #: rc.cpp:45

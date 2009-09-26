@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2009-06-01 15:20+0200\n"
 "Last-Translator: Peter Landgren <peter.talken@telia.com>\n"
 "Language-Team: svenska <sv@li.org>\n"
@@ -116,7 +116,8 @@ msgid "&Find:"
 msgstr ""
 
 #: krenamewindow.cpp:133
-msgid "&Finish..."
+#, fuzzy
+msgid "&Finish"
 msgstr "Avs&lutning"
 
 #: rc.cpp:126
@@ -189,7 +190,8 @@ msgid "&Open"
 msgstr "&Öppna"
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "Öppna mål..."
 
 #: rc.cpp:78
@@ -687,6 +689,10 @@ msgstr "Mapp för aktuell fil"
 msgid "Display a preview image for each file."
 msgstr ""
 
+#: rc.cpp:42
+msgid "Display the filename together with the preview."
+msgstr ""
+
 #: krenameimpl.cpp:382
 msgid "Do you really want to remove all files from the list?"
 msgstr "Vill du verkligen ta bort alla filer i listan?"
@@ -1138,10 +1144,6 @@ msgstr ""
 
 #: rc.cpp:513
 msgid "O&wner:"
-msgstr ""
-
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
 msgstr ""
 
 #: krenamemodel.cpp:485

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2009-01-31 15:24+0100\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@lists.kde.org>\n"
@@ -106,7 +106,8 @@ msgid "&Find:"
 msgstr "&Najít:"
 
 #: krenamewindow.cpp:133
-msgid "&Finish..."
+#, fuzzy
+msgid "&Finish"
 msgstr "&Dokončit..."
 
 #: rc.cpp:126
@@ -170,7 +171,8 @@ msgid "&Open"
 msgstr "&Otevřít"
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "&Otevřít cíl..."
 
 #: rc.cpp:78
@@ -694,6 +696,11 @@ msgstr "Adresář nynějšího souboru"
 msgid "Display a preview image for each file."
 msgstr ""
 
+#: rc.cpp:42
+#, fuzzy
+msgid "Display the filename together with the preview."
+msgstr "Zobrazuje počet souborů na seznamu."
+
 #: krenameimpl.cpp:382
 msgid "Do you really want to remove all files from the list?"
 msgstr "Skutečně chcete odstranit všechny soubory ze seznamu?"
@@ -1154,10 +1161,6 @@ msgstr "Počet &číslic:"
 #: rc.cpp:513
 msgid "O&wner:"
 msgstr "&Vlastník:"
-
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
-msgstr ""
 
 #: krenamemodel.cpp:485
 msgid "Origin"
@@ -1906,9 +1909,6 @@ msgstr "y znaků starého názvu souboru začínající pozicí x"
 #~ msgstr ""
 #~ "Vypnutím této volby zrychlíte start KRename, protože se nebudou načítat "
 #~ "žádné pluginy."
-
-#~ msgid "Displays the number of files in the list."
-#~ msgstr "Zobrazuje počet souborů na seznamu."
 
 #~ msgid ""
 #~ "Do you really want to load the profile and overwrite the current "

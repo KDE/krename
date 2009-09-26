@@ -32,7 +32,7 @@ ProgressDialog::ProgressDialog( QWidget* parent )
 
     m_buttonMore  = m_widget.buttonBox->addButton( i18n("&Rename more..."), QDialogButtonBox::ActionRole );
     m_buttonUndo  = m_widget.buttonBox->addButton( i18n("&Undo"), QDialogButtonBox::ActionRole );
-    m_buttonDest  = m_widget.buttonBox->addButton( i18n("&Open Destination..."), QDialogButtonBox::ActionRole );
+    m_buttonDest  = m_widget.buttonBox->addButton( i18n("&Open Destination"), QDialogButtonBox::ActionRole );
     m_buttonClose = m_widget.buttonBox->button( QDialogButtonBox::Close );
 
     m_buttonUndo->setEnabled( false );

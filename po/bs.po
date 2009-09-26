@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2004-07-30 23:15+0200\n"
 "Last-Translator: Asim Husanovic <asim.h@megatel.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -120,7 +120,7 @@ msgstr "Pronađi:"
 
 #: krenamewindow.cpp:133
 #, fuzzy
-msgid "&Finish..."
+msgid "&Finish"
 msgstr "&Kraj"
 
 #: rc.cpp:126
@@ -188,7 +188,8 @@ msgid "&Open"
 msgstr ""
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "&Otvori odredište..."
 
 #: rc.cpp:78
@@ -704,6 +705,11 @@ msgstr "&Broj članova privremene historije:"
 msgid "Display a preview image for each file."
 msgstr ""
 
+#: rc.cpp:42
+#, fuzzy
+msgid "Display the filename together with the preview."
+msgstr "Prikaži brojeve datoteka u listi."
+
 #: krenameimpl.cpp:382
 msgid "Do you really want to remove all files from the list?"
 msgstr ""
@@ -1190,10 +1196,6 @@ msgstr "&Broj cifara:"
 #, fuzzy
 msgid "O&wner:"
 msgstr "Vlasnik"
-
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
-msgstr ""
 
 #: krenamemodel.cpp:485
 msgid "Origin"
@@ -1920,9 +1922,6 @@ msgstr "y karakter stare datoteke počinje s x"
 #~ msgstr ""
 #~ "Onemogući ovu opciju produživanja vremena pokretanja KRenamea, zato što "
 #~ "KFilePlugins nisu učitani"
-
-#~ msgid "Displays the number of files in the list."
-#~ msgstr "Prikaži brojeve datoteka u listi."
 
 #~ msgid "Double click on an item to modify it."
 #~ msgstr "Dvostruki klik na stavku za izmjenu."

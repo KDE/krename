@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename-3.0.8-1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2005-10-14 01:11+0200\n"
 "Last-Translator: Matej Urbančič <matej.urban@gmail.com>\n"
 "Language-Team: Slovenian\n"
@@ -127,7 +127,7 @@ msgstr "Poišči:"
 
 #: krenamewindow.cpp:133
 #, fuzzy
-msgid "&Finish..."
+msgid "&Finish"
 msgstr "&Končaj"
 
 #: rc.cpp:126
@@ -195,7 +195,8 @@ msgid "&Open"
 msgstr ""
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "&Odpri cilj"
 
 #: rc.cpp:78
@@ -707,6 +708,11 @@ msgstr "Vstavite trenutni čas"
 msgid "Display a preview image for each file."
 msgstr ""
 
+#: rc.cpp:42
+#, fuzzy
+msgid "Display the filename together with the preview."
+msgstr "Prikaži število datotek na listi."
+
 #: krenameimpl.cpp:382
 #, fuzzy
 msgid "Do you really want to remove all files from the list?"
@@ -1185,10 +1191,6 @@ msgstr "&Število cifer"
 #, fuzzy
 msgid "O&wner:"
 msgstr "Lastništvo"
-
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
-msgstr ""
 
 #: krenamemodel.cpp:485
 msgid "Origin"
@@ -1937,9 +1939,6 @@ msgstr "y znak starega imena, ki se prične pri x"
 #~ msgstr ""
 #~ "Onemogočenje te možnosti zmanjša zagonski čas. KFilePlugins ne bodo "
 #~ "samodejno naloženi."
-
-#~ msgid "Displays the number of files in the list."
-#~ msgstr "Prikaži število datotek na listi."
 
 #~ msgid ""
 #~ "Do you really want to load the profile and overwrite the current "

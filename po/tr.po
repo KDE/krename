@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2006-09-18 19:14+0300\n"
 "Last-Translator: Koray Löker <loker@pardus.org.tr>\n"
 "Language-Team:  <tr@li.org>\n"
@@ -120,7 +120,7 @@ msgstr "Bul:"
 
 #: krenamewindow.cpp:133
 #, fuzzy
-msgid "&Finish..."
+msgid "&Finish"
 msgstr "&Bitiş"
 
 #: rc.cpp:126
@@ -188,7 +188,8 @@ msgid "&Open"
 msgstr ""
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "Hedef &Aç..."
 
 #: rc.cpp:78
@@ -705,6 +706,11 @@ msgstr "Şu anki saati ekleyin"
 msgid "Display a preview image for each file."
 msgstr ""
 
+#: rc.cpp:42
+#, fuzzy
+msgid "Display the filename together with the preview."
+msgstr "Listedeki dosyaların sayısını gösterir."
+
 #: krenameimpl.cpp:382
 #, fuzzy
 msgid "Do you really want to remove all files from the list?"
@@ -1184,10 +1190,6 @@ msgstr "&Hane sayısı:"
 #, fuzzy
 msgid "O&wner:"
 msgstr "Sahiplik"
-
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
-msgstr ""
 
 #: krenamemodel.cpp:485
 msgid "Origin"
@@ -1949,9 +1951,6 @@ msgstr "Eski dosya adının x'ten başlayan y karakteri"
 #~ msgstr ""
 #~ "Bu seçeneği kapatmak, eklentiler açılışta yüklenmeyeceği için KRename'in "
 #~ "açılış süresini kısaltır."
-
-#~ msgid "Displays the number of files in the list."
-#~ msgstr "Listedeki dosyaların sayısını gösterir."
 
 #~ msgid ""
 #~ "Do you really want to load the profile and overwrite the current "

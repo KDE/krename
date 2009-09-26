@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2009-09-23 22:21+0200\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
@@ -112,7 +112,8 @@ msgid "&Find:"
 msgstr "&Keresés:"
 
 #: krenamewindow.cpp:133
-msgid "&Finish..."
+#, fuzzy
+msgid "&Finish"
 msgstr "Befeje&zés..."
 
 #: rc.cpp:126
@@ -176,7 +177,8 @@ msgid "&Open"
 msgstr "Meg&nyitás"
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "&Cél megnyitása..."
 
 #: rc.cpp:78
@@ -701,6 +703,10 @@ msgstr "Az aktuális fájl könyvtára"
 msgid "Display a preview image for each file."
 msgstr "Előnézeti kép megjelenítése minden fájlhoz"
 
+#: rc.cpp:42
+msgid "Display the filename together with the preview."
+msgstr ""
+
 #: krenameimpl.cpp:382
 msgid "Do you really want to remove all files from the list?"
 msgstr "Valóban szeretné eltávolítani az összes fájlt a listáról?"
@@ -1148,10 +1154,6 @@ msgstr "Számjeg&yek száma:"
 #: rc.cpp:513
 msgid "O&wner:"
 msgstr "T&ulajdonos:"
-
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
-msgstr "Csak az előnézet legyen megjelenítve, a fájlnév ne"
 
 #: krenamemodel.cpp:485
 msgid "Origin"
@@ -1684,6 +1686,9 @@ msgstr "y darab karakter a korábbi fájlnévből az x-edik karaktertől kezdve"
 
 #~ msgid "Move"
 #~ msgstr "Áthelyezés"
+
+#~ msgid "Only display the preview, but not the filename."
+#~ msgstr "Csak az előnézet legyen megjelenítve, a fájlnév ne"
 
 #~ msgid "load the profile named [profile] on startup"
 #~ msgstr "A [profile] nevű profil betöltése indításkor"

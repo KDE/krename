@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2005-07-01 17:45+0200\n"
 "Last-Translator: Dominik Seichter <domseichter@web.de>\n"
 "Language-Team:  <de@li.org>\n"
@@ -123,7 +123,7 @@ msgstr "Procurar:"
 
 #: krenamewindow.cpp:133
 #, fuzzy
-msgid "&Finish..."
+msgid "&Finish"
 msgstr "&Finalizar"
 
 #: rc.cpp:126
@@ -191,7 +191,8 @@ msgid "&Open"
 msgstr ""
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "&Abrir destino..."
 
 #: rc.cpp:78
@@ -708,6 +709,11 @@ msgstr "Insira a hora atual"
 msgid "Display a preview image for each file."
 msgstr ""
 
+#: rc.cpp:42
+#, fuzzy
+msgid "Display the filename together with the preview."
+msgstr "Exibir o número dos arquivos na lista."
+
 #: krenameimpl.cpp:382
 #, fuzzy
 msgid "Do you really want to remove all files from the list?"
@@ -1191,10 +1197,6 @@ msgstr "&Número de dígitos:"
 #, fuzzy
 msgid "O&wner:"
 msgstr "Propriedade"
-
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
-msgstr ""
 
 #: krenamemodel.cpp:485
 msgid "Origin"
@@ -1950,9 +1952,6 @@ msgstr "y caracter ou velho arquivo de nome iniciando em x"
 #~ msgstr ""
 #~ "Desativando a opção você diminui o tempo de início do KRename, porque os "
 #~ "plugins não são carregados."
-
-#~ msgid "Displays the number of files in the list."
-#~ msgstr "Exibir o número dos arquivos na lista."
 
 #~ msgid ""
 #~ "Do you really want to load the profile and overwrite the current "

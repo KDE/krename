@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_CN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2007-07-30 11:31+0800\n"
 "Last-Translator: Roy Qu <royqh1979@gmail.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -121,7 +121,7 @@ msgstr "查找："
 
 #: krenamewindow.cpp:133
 #, fuzzy
-msgid "&Finish..."
+msgid "&Finish"
 msgstr "开始重命名(&F)"
 
 #: rc.cpp:126
@@ -189,7 +189,8 @@ msgid "&Open"
 msgstr ""
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "打开目标(&O)..."
 
 #: rc.cpp:78
@@ -695,6 +696,11 @@ msgstr "插入当前时间"
 msgid "Display a preview image for each file."
 msgstr ""
 
+#: rc.cpp:42
+#, fuzzy
+msgid "Display the filename together with the preview."
+msgstr "显视列表中文件的数目"
+
 #: krenameimpl.cpp:382
 #, fuzzy
 msgid "Do you really want to remove all files from the list?"
@@ -1170,10 +1176,6 @@ msgstr "数字位数(&N)"
 #, fuzzy
 msgid "O&wner:"
 msgstr "所有"
-
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
-msgstr ""
 
 #: krenamemodel.cpp:485
 msgid "Origin"
@@ -1908,9 +1910,6 @@ msgstr "原文件名开始于x的y个字符"
 #~ "Disabling this option decreases KRename's startup time, because no "
 #~ "KFilePlugins are loaded."
 #~ msgstr "禁用此选项会减少KRename的启动时间, 但是将不会加载KFilePlugins插件."
-
-#~ msgid "Displays the number of files in the list."
-#~ msgstr "显视列表中文件的数目"
 
 #~ msgid ""
 #~ "Do you really want to load the profile and overwrite the current "

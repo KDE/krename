@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2008-10-09 11:28+0200\n"
 "Last-Translator: Michał Smoczyk <msmoczyk@wp.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -118,7 +118,8 @@ msgid "&Find:"
 msgstr ""
 
 #: krenamewindow.cpp:133
-msgid "&Finish..."
+#, fuzzy
+msgid "&Finish"
 msgstr "&Zakończ..."
 
 #: rc.cpp:126
@@ -189,7 +190,8 @@ msgid "&Open"
 msgstr "&Otwórz"
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "&Otwórz cel..."
 
 #: rc.cpp:78
@@ -699,6 +701,11 @@ msgstr "Katalog bieżącego pliku"
 msgid "Display a preview image for each file."
 msgstr ""
 
+#: rc.cpp:42
+#, fuzzy
+msgid "Display the filename together with the preview."
+msgstr "Wyświetla na liście liczbę plików."
+
 #: krenameimpl.cpp:382
 msgid "Do you really want to remove all files from the list?"
 msgstr "Czy na pewno chcesz usunąć wszystkie pliki z listy?"
@@ -1161,10 +1168,6 @@ msgstr "&Liczba cyfr:"
 #, fuzzy
 msgid "O&wner:"
 msgstr "Inni"
-
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
-msgstr ""
 
 #: krenamemodel.cpp:485
 msgid "Origin"
@@ -1769,9 +1772,6 @@ msgstr "y znaków starej nazwy pliku począwszy od x"
 
 #~ msgid "Copies all files to the destination directory and renames them."
 #~ msgstr "Kopiuje wszystkie pliki do katalogu docelowego i zmienia ich nazwę."
-
-#~ msgid "Displays the number of files in the list."
-#~ msgstr "Wyświetla na liście liczbę plików."
 
 #~ msgid "Double click on an item to modify it."
 #~ msgstr "Kliknij dwukrotnie na elemencie by go zmienić."

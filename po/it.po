@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 20:28+0200\n"
+"POT-Creation-Date: 2009-09-26 16:55+0200\n"
 "PO-Revision-Date: 2006-03-02 13:24+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
 "Language-Team: Italian <kde-i18n-it@mail.kde.org>\n"
@@ -119,7 +119,7 @@ msgstr "Trova:"
 
 #: krenamewindow.cpp:133
 #, fuzzy
-msgid "&Finish..."
+msgid "&Finish"
 msgstr "&Fine"
 
 #: rc.cpp:126
@@ -187,7 +187,8 @@ msgid "&Open"
 msgstr ""
 
 #: progressdialog.cpp:35
-msgid "&Open Destination..."
+#, fuzzy
+msgid "&Open Destination"
 msgstr "&Apri destinazione..."
 
 #: rc.cpp:78
@@ -705,6 +706,11 @@ msgstr "Inserisci l'ora corrente"
 msgid "Display a preview image for each file."
 msgstr ""
 
+#: rc.cpp:42
+#, fuzzy
+msgid "Display the filename together with the preview."
+msgstr "Mostra il numero di file nella lista."
+
 #: krenameimpl.cpp:382
 #, fuzzy
 msgid "Do you really want to remove all files from the list?"
@@ -1186,10 +1192,6 @@ msgstr "&Numero di cifre:"
 #, fuzzy
 msgid "O&wner:"
 msgstr "Proprietà"
-
-#: rc.cpp:42
-msgid "Only display the preview, but not the filename."
-msgstr ""
 
 #: krenamemodel.cpp:485
 msgid "Origin"
@@ -1953,9 +1955,6 @@ msgstr "y caratteri del vecchio nome file partendo da x"
 #~ msgstr ""
 #~ "Disabilitando questa opzione si velocizza l'avvio di KRename in quanto "
 #~ "non vengono caricate le estensioni KFilePlugins."
-
-#~ msgid "Displays the number of files in the list."
-#~ msgstr "Mostra il numero di file nella lista."
 
 #~ msgid ""
 #~ "Do you really want to load the profile and overwrite the current "
