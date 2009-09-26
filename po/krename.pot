@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 17:44+0200\n"
+"POT-Creation-Date: 2009-09-26 18:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -200,7 +200,7 @@ msgid "Thanks for creating the Mandrake RPM"
 msgstr ""
 
 #: main.cpp:97
-msgid "Daniele Medri"
+msgid "Vincenzo Reale"
 msgstr ""
 
 #: main.cpp:97
@@ -208,118 +208,126 @@ msgid "Italian translation"
 msgstr ""
 
 #: main.cpp:98
-msgid "Stephan Johach"
+msgid "Daniele Medri"
 msgstr ""
 
 #: main.cpp:98
+msgid "Italian translation work"
+msgstr ""
+
+#: main.cpp:99
+msgid "Stephan Johach"
+msgstr ""
+
+#: main.cpp:99
 msgid "Provided a gcc3.x namespace patch"
 msgstr ""
 
-#: main.cpp:99
+#: main.cpp:100
 msgid "Michael Zugaro"
 msgstr ""
 
-#: main.cpp:99
+#: main.cpp:100
 msgid "Provided the new preview and move features"
 msgstr ""
 
-#: main.cpp:100
+#: main.cpp:101
 msgid "Rene Gass"
 msgstr ""
 
-#: main.cpp:100
+#: main.cpp:101
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 msgstr ""
 
-#: main.cpp:101
+#: main.cpp:102
 msgid "Mark Ziegler"
 msgstr ""
 
-#: main.cpp:101
+#: main.cpp:102
 msgid "Provided SuSE RPMs and very good suggestions"
 msgstr ""
 
-#: main.cpp:102
+#: main.cpp:103
 msgid "Jose Rodriguez"
 msgstr ""
 
-#: main.cpp:102
+#: main.cpp:103
 msgid "Contributed a Spanish translation"
 msgstr ""
 
-#: main.cpp:103
+#: main.cpp:104
 msgid "Steven P. Ulrick"
 msgstr ""
 
-#: main.cpp:103
+#: main.cpp:104
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr ""
 
-#: main.cpp:104
+#: main.cpp:105
 msgid "UTUMI Hirosi"
 msgstr ""
 
-#: main.cpp:104
+#: main.cpp:105
 msgid "Translated KRename to Japanese"
 msgstr ""
 
-#: main.cpp:105
+#: main.cpp:106
 msgid "Nicolas Benoit"
 msgstr ""
 
-#: main.cpp:105
+#: main.cpp:106
 msgid "Translated KRename into French"
 msgstr ""
 
-#: main.cpp:106
+#: main.cpp:107
 msgid "Krzysztof Pawlak"
 msgstr ""
 
-#: main.cpp:106
+#: main.cpp:107
 msgid "Translated KRename into Polish"
 msgstr ""
 
-#: main.cpp:107
+#: main.cpp:108
 msgid "Ilya Ivkov"
 msgstr ""
 
-#: main.cpp:107
+#: main.cpp:108
 msgid "Translated KRename into Russian"
 msgstr ""
 
-#: main.cpp:108
+#: main.cpp:109
 msgid "Asim Husanovic"
 msgstr ""
 
-#: main.cpp:108
+#: main.cpp:109
 msgid "Translated KRename into Bosnian"
 msgstr ""
 
-#: main.cpp:109
+#: main.cpp:110
 msgid "Michal Smoczyk"
 msgstr ""
 
-#: main.cpp:109
+#: main.cpp:110
 msgid "Polish Translation"
 msgstr ""
 
-#: main.cpp:110
+#: main.cpp:111
 msgid "Pavel Fric"
 msgstr ""
 
-#: main.cpp:110
+#: main.cpp:111
 msgid "Czech Translation"
 msgstr ""
 
-#: main.cpp:130
+#: main.cpp:131
 msgid ""
 "<b>Krename was started from root!</b><br>When started from root, Krename may "
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
 
-#: main.cpp:134
+#: main.cpp:135
 msgid "Error"
 msgstr ""
 

@@ -94,7 +94,8 @@ int main(int argc, char *argv[])
                          "lostlogic@gentoo.org", "http://www.gentoo.org" );
     aboutData.addCredit( ki18n("Per Oyvind Karlsen"), ki18n("Thanks for creating the Mandrake RPM"),
                          "peroyvind@delonic.no" );
-    aboutData.addCredit( ki18n("Daniele Medri"), ki18n("Italian translation"), "madrid@linuxmeeting.net" );
+    aboutData.addCredit( ki18n("Vincenzo Reale"), ki18n("Italian translation"), "smart2128@baslug.org");
+    aboutData.addCredit( ki18n("Daniele Medri"), ki18n("Italian translation work"), "madrid@linuxmeeting.net" );
     aboutData.addCredit( ki18n("Stephan Johach"), ki18n("Provided a gcc3.x namespace patch"), "lucardus@onlinehome.de" );
     aboutData.addCredit( ki18n("Michael Zugaro"), ki18n("Provided the new preview and move features") , "michael.zugaro@college-de-france.fr" );
     aboutData.addCredit( ki18n("Rene Gass"), ki18n("Fixed problems with the spec file and contributed rpms for every SuSE version you can imagine and is also the new Gentoo maintainer for KRename"), "kde-package@gmx.de" );

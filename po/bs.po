@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 17:44+0200\n"
+"POT-Creation-Date: 2009-09-26 18:25+0200\n"
 "PO-Revision-Date: 2004-07-30 23:15+0200\n"
 "Last-Translator: Asim Husanovic <asim.h@megatel.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -350,7 +350,7 @@ msgstr ""
 msgid "<b>Files:<b> %1"
 msgstr "Datoteka: <b>%1</b>"
 
-#: main.cpp:130
+#: main.cpp:131
 msgid ""
 "<b>Krename was started from root!</b><br>When started from root, Krename may "
 "damage your system if you do not know exactly what you are doing!"
@@ -534,7 +534,7 @@ msgstr ""
 msgid "Arpad Biro"
 msgstr ""
 
-#: main.cpp:108
+#: main.cpp:109
 msgid "Asim Husanovic"
 msgstr ""
 
@@ -632,7 +632,7 @@ msgstr "Klasa"
 msgid "Configure the look and feel of the KRename GUI:"
 msgstr "Konfigurišite izgled i teme KRename GUI-a:<br>"
 
-#: main.cpp:102
+#: main.cpp:103
 msgid "Contributed a Spanish translation"
 msgstr "Obezbijedio prevod na Spanski."
 
@@ -666,12 +666,12 @@ msgstr "Proizvoljno ime"
 msgid "Custom name"
 msgstr "Proizvoljno ime"
 
-#: main.cpp:110
+#: main.cpp:111
 #, fuzzy
 msgid "Czech Translation"
 msgstr "Prevod na Italijanski"
 
-#: main.cpp:97
+#: main.cpp:98
 msgid "Daniele Medri"
 msgstr ""
 
@@ -735,7 +735,7 @@ msgstr ""
 msgid "Elapsed time: %1 seconds"
 msgstr "Prolazno vrijeme: %1 sekundi"
 
-#: main.cpp:134
+#: main.cpp:135
 #, fuzzy
 msgid "Error"
 msgstr "Greška: %1"
@@ -837,7 +837,7 @@ msgstr ""
 "Otklonio grešku sa startIndex i dodao klasu BatchRenamer\n"
 "u njegovom odličnom pregledniku slika."
 
-#: main.cpp:100
+#: main.cpp:101
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
@@ -893,7 +893,7 @@ msgstr ""
 "Ako nije označeno, KRename će ignorisati direktorije koji počinju sa tačkom "
 "za vrijeme vraćanja dodanog."
 
-#: main.cpp:107
+#: main.cpp:108
 msgid "Ilya Ivkov"
 msgstr ""
 
@@ -1096,11 +1096,16 @@ msgstr ""
 msgid "Italian translation"
 msgstr "Prevod na Italijanski"
 
+#: main.cpp:98
+#, fuzzy
+msgid "Italian translation work"
+msgstr "Prevod na Italijanski"
+
 #: scriptplugin.cpp:63
 msgid "JavaScript Plugin"
 msgstr ""
 
-#: main.cpp:102
+#: main.cpp:103
 msgid "Jose Rodriguez"
 msgstr ""
 
@@ -1127,7 +1132,7 @@ msgstr "KRename je završio proces preimenovanja."
 msgid "KRename finished the undo process."
 msgstr "KRename je završio proces preimenovanja."
 
-#: main.cpp:106
+#: main.cpp:107
 msgid "Krzysztof Pawlak"
 msgstr ""
 
@@ -1139,7 +1144,7 @@ msgstr "Zadnja tačka"
 msgid "Look and Feel"
 msgstr "Izgled i teme"
 
-#: main.cpp:101
+#: main.cpp:102
 msgid "Mark Ziegler"
 msgstr ""
 
@@ -1147,7 +1152,7 @@ msgstr ""
 msgid "Michael Elvers"
 msgstr ""
 
-#: main.cpp:99
+#: main.cpp:100
 msgid "Michael Zugaro"
 msgstr ""
 
@@ -1155,7 +1160,7 @@ msgstr ""
 msgid "Michael v.Ostheim"
 msgstr ""
 
-#: main.cpp:109
+#: main.cpp:110
 msgid "Michal Smoczyk"
 msgstr ""
 
@@ -1174,7 +1179,7 @@ msgstr "Pomjeri označene članove gore"
 msgid "N&umber"
 msgstr "Broj"
 
-#: main.cpp:105
+#: main.cpp:106
 msgid "Nicolas Benoit"
 msgstr ""
 
@@ -1234,7 +1239,7 @@ msgid ""
 msgstr ""
 "Dijeovi PNG podrške su kopirani iz njegovog KFile dodatka za png podršku."
 
-#: main.cpp:110
+#: main.cpp:111
 msgid "Pavel Fric"
 msgstr ""
 
@@ -1260,7 +1265,7 @@ msgstr "Molim ubacite nove datoteke:"
 msgid "Plugins"
 msgstr "Doda&ci"
 
-#: main.cpp:109
+#: main.cpp:110
 #, fuzzy
 msgid "Polish Translation"
 msgstr "Prevod na Italijanski"
@@ -1287,19 +1292,19 @@ msgstr ""
 msgid "Progress"
 msgstr "Progres"
 
-#: main.cpp:101
+#: main.cpp:102
 msgid "Provided SuSE RPMs and very good suggestions"
 msgstr "Obezbijedio SuSE RPM-ove i vrlo dobre primjedbe."
 
-#: main.cpp:103
+#: main.cpp:104
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr "Obezbijedio RedHat RPM i dao veliku pomoc u poboljšanju KRenamea"
 
-#: main.cpp:98
+#: main.cpp:99
 msgid "Provided a gcc3.x namespace patch"
 msgstr "Obezbijedio gcc3.x dodatak za prostorno ime."
 
-#: main.cpp:99
+#: main.cpp:100
 msgid "Provided the new preview and move features"
 msgstr "Obezbijedio novi pregled i prenos za ubuduće."
 
@@ -1348,7 +1353,7 @@ msgstr "Preimenovano"
 msgid "Renamed %1 files successfully."
 msgstr "Preimenovanje %1 datoteka uspjelo."
 
-#: main.cpp:100
+#: main.cpp:101
 msgid "Rene Gass"
 msgstr ""
 
@@ -1416,11 +1421,11 @@ msgstr "Počni pretvaranje od %1 datoteke."
 msgid "Stefan \"Stonki\" Onken"
 msgstr ""
 
-#: main.cpp:98
+#: main.cpp:99
 msgid "Stephan Johach"
 msgstr ""
 
-#: main.cpp:103
+#: main.cpp:104
 msgid "Steven P. Ulrick"
 msgstr ""
 
@@ -1514,24 +1519,24 @@ msgstr "Znak"
 msgid "Token &Preview"
 msgstr "&Pregled"
 
-#: main.cpp:108
+#: main.cpp:109
 #, fuzzy
 msgid "Translated KRename into Bosnian"
 msgstr "Prevod KRename na Ruski"
 
-#: main.cpp:105
+#: main.cpp:106
 msgid "Translated KRename into French"
 msgstr "Prevod KRename na Francuski"
 
-#: main.cpp:106
+#: main.cpp:107
 msgid "Translated KRename into Polish"
 msgstr "Prevod KRename na Poljski"
 
-#: main.cpp:107
+#: main.cpp:108
 msgid "Translated KRename into Russian"
 msgstr "Prevod KRename na Ruski"
 
-#: main.cpp:104
+#: main.cpp:105
 msgid "Translated KRename to Japanese"
 msgstr "Prevod KRename na Japanski"
 
@@ -1556,7 +1561,7 @@ msgstr "UID"
 msgid "URL of the current file"
 msgstr "&Broj članova privremene historije:"
 
-#: main.cpp:104
+#: main.cpp:105
 msgid "UTUMI Hirosi"
 msgstr ""
 
@@ -1619,6 +1624,10 @@ msgstr "Korisnik"
 #, fuzzy
 msgid "Variable Name"
 msgstr "staro ime datoteke"
+
+#: main.cpp:97
+msgid "Vincenzo Reale"
+msgstr ""
 
 #: filedialogextwidget.cpp:49
 msgid ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 17:44+0200\n"
+"POT-Creation-Date: 2009-09-26 18:25+0200\n"
 "PO-Revision-Date: 2009-09-23 22:21+0200\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
@@ -340,7 +340,7 @@ msgstr ""
 msgid "<b>Files:<b> %1"
 msgstr "<b>Fájlok:</b> %1"
 
-#: main.cpp:130
+#: main.cpp:131
 msgid ""
 "<b>Krename was started from root!</b><br>When started from root, Krename may "
 "damage your system if you do not know exactly what you are doing!"
@@ -547,7 +547,7 @@ msgstr "Andreas Pour"
 msgid "Arpad Biro"
 msgstr ""
 
-#: main.cpp:108
+#: main.cpp:109
 msgid "Asim Husanovic"
 msgstr "Asim Husanovic"
 
@@ -638,7 +638,7 @@ msgstr "Osztály"
 msgid "Configure the look and feel of the KRename GUI:"
 msgstr "A KRename felületének kinézetének beállítása:"
 
-#: main.cpp:102
+#: main.cpp:103
 msgid "Contributed a Spanish translation"
 msgstr "Spanyol fordítás."
 
@@ -670,11 +670,11 @@ msgstr "Egyéni fájlnév"
 msgid "Custom name"
 msgstr "Egyéni név"
 
-#: main.cpp:110
+#: main.cpp:111
 msgid "Czech Translation"
 msgstr "Cseh fordítás."
 
-#: main.cpp:97
+#: main.cpp:98
 msgid "Daniele Medri"
 msgstr "Daniele Medri"
 
@@ -736,7 +736,7 @@ msgstr "Le"
 msgid "Elapsed time: %1 seconds"
 msgstr "Eltelt idő: %1 másodperc"
 
-#: main.cpp:134
+#: main.cpp:135
 msgid "Error"
 msgstr "Hiba"
 
@@ -828,7 +828,7 @@ msgstr ""
 "Egy startIndex-hiba javítása és a BatchRenamer osztály felvétele\n"
 "a Showimg képmegjelenítőbe."
 
-#: main.cpp:100
+#: main.cpp:101
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
@@ -881,7 +881,7 @@ msgstr ""
 "Ha nincs bejelölve, akkor a KRename figyelmen kívül hagyja a ponttal kezdődő "
 "nevű könyvtárakat az alkönyvtárak felvételénél"
 
-#: main.cpp:107
+#: main.cpp:108
 msgid "Ilya Ivkov"
 msgstr "Ilya Ivkov"
 
@@ -1068,11 +1068,16 @@ msgstr ""
 msgid "Italian translation"
 msgstr "Olasz fordítás."
 
+#: main.cpp:98
+#, fuzzy
+msgid "Italian translation work"
+msgstr "Olasz fordítás."
+
 #: scriptplugin.cpp:63
 msgid "JavaScript Plugin"
 msgstr "JavaScript modul"
 
-#: main.cpp:102
+#: main.cpp:103
 msgid "Jose Rodriguez"
 msgstr "Jose Rodriguez"
 
@@ -1096,7 +1101,7 @@ msgstr "A KRename befejezte az átnevezést."
 msgid "KRename finished the undo process."
 msgstr "A KRename befejezte a visszavonást."
 
-#: main.cpp:106
+#: main.cpp:107
 msgid "Krzysztof Pawlak"
 msgstr "Krzysztof Pawlak"
 
@@ -1108,7 +1113,7 @@ msgstr "Utolsó pont"
 msgid "Look and Feel"
 msgstr "Kinézet"
 
-#: main.cpp:101
+#: main.cpp:102
 msgid "Mark Ziegler"
 msgstr "Mark Ziegler"
 
@@ -1116,7 +1121,7 @@ msgstr "Mark Ziegler"
 msgid "Michael Elvers"
 msgstr "Michael Elvers"
 
-#: main.cpp:99
+#: main.cpp:100
 msgid "Michael Zugaro"
 msgstr "Michael Zugaro"
 
@@ -1124,7 +1129,7 @@ msgstr "Michael Zugaro"
 msgid "Michael v.Ostheim"
 msgstr "Michael v.Ostheim"
 
-#: main.cpp:109
+#: main.cpp:110
 msgid "Michal Smoczyk"
 msgstr "Michal Smoczyk"
 
@@ -1140,7 +1145,7 @@ msgstr "A kijelölt fájlok feljebb helyezése"
 msgid "N&umber"
 msgstr "Szá&m"
 
-#: main.cpp:105
+#: main.cpp:106
 msgid "Nicolas Benoit"
 msgstr "Nicolas Benoit"
 
@@ -1193,7 +1198,7 @@ msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr "A PNG-támogatás egyes részei az ő KFile-moduljából származnak."
 
-#: main.cpp:110
+#: main.cpp:111
 msgid "Pavel Fric"
 msgstr "Pavel Fric"
 
@@ -1219,7 +1224,7 @@ msgstr "Adjon meg egy új fájlnevet"
 msgid "Plugins"
 msgstr "Modulok"
 
-#: main.cpp:109
+#: main.cpp:110
 msgid "Polish Translation"
 msgstr "Lengyel fordítás."
 
@@ -1243,19 +1248,19 @@ msgstr "Az előállított KRename-parancs előnézete:"
 msgid "Progress"
 msgstr "Folyamat"
 
-#: main.cpp:101
+#: main.cpp:102
 msgid "Provided SuSE RPMs and very good suggestions"
 msgstr "SUSE-hoz való RPM-ek és nagyon jó javaslatok."
 
-#: main.cpp:103
+#: main.cpp:104
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr "Red Hat-hez való RPM és komoly segítség a KRename fejlesztésében."
 
-#: main.cpp:98
+#: main.cpp:99
 msgid "Provided a gcc3.x namespace patch"
 msgstr "GCC 3.x alatti, névterekkel kapcsolatos javítás."
 
-#: main.cpp:99
+#: main.cpp:100
 msgid "Provided the new preview and move features"
 msgstr "Új előnézeti és áthelyezési lehetőségek."
 
@@ -1299,7 +1304,7 @@ msgstr "Átnevezve"
 msgid "Renamed %1 files successfully."
 msgstr "%1 fájl átnevezve."
 
-#: main.cpp:100
+#: main.cpp:101
 msgid "Rene Gass"
 msgstr "Rene Gass"
 
@@ -1363,11 +1368,11 @@ msgstr "%1 fájl konvertálása folyamatban."
 msgid "Stefan \"Stonki\" Onken"
 msgstr "Stefan \"Stonki\" Onken"
 
-#: main.cpp:98
+#: main.cpp:99
 msgid "Stephan Johach"
 msgstr "Stephan Johach"
 
-#: main.cpp:103
+#: main.cpp:104
 msgid "Steven P. Ulrick"
 msgstr "Steven P. Ulrick"
 
@@ -1459,23 +1464,23 @@ msgstr "Token"
 msgid "Token &Preview"
 msgstr "Token-e&lőnézet"
 
-#: main.cpp:108
+#: main.cpp:109
 msgid "Translated KRename into Bosnian"
 msgstr "Bosnyák fordítás."
 
-#: main.cpp:105
+#: main.cpp:106
 msgid "Translated KRename into French"
 msgstr "Francia fordítás."
 
-#: main.cpp:106
+#: main.cpp:107
 msgid "Translated KRename into Polish"
 msgstr "Lengyel fordítás."
 
-#: main.cpp:107
+#: main.cpp:108
 msgid "Translated KRename into Russian"
 msgstr "Orosz fordítás."
 
-#: main.cpp:104
+#: main.cpp:105
 msgid "Translated KRename to Japanese"
 msgstr "Japán fordítás."
 
@@ -1499,7 +1504,7 @@ msgstr "A UID beállítása"
 msgid "URL of the current file"
 msgstr "Az aktuális fájl URL-je"
 
-#: main.cpp:104
+#: main.cpp:105
 msgid "UTUMI Hirosi"
 msgstr "UTUMI Hirosi"
 
@@ -1558,6 +1563,10 @@ msgstr "Felhasználó"
 #: scriptplugin.cpp:131
 msgid "Variable Name"
 msgstr "Változónév"
+
+#: main.cpp:97
+msgid "Vincenzo Reale"
+msgstr ""
 
 #: filedialogextwidget.cpp:49
 msgid ""
