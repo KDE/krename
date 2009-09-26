@@ -17,6 +17,12 @@
 
 #include "exthistorycombo.h"
 
+#include <kconfig.h>
+#include <kconfiggroup.h>
+#include <kglobal.h>
+
+#include <QLineEdit>
+
 #define EXT_HISTORY_COMBO_MAX_COUNT 10 
 #define EXT_HISTORY_COMBO_TIMER_DELAY 500
 
@@ -37,6 +43,37 @@ void ExtHistoryCombo::slotTextChanged()
 {
     m_timer.stop();
     m_timer.start( EXT_HISTORY_COMBO_TIMER_DELAY );
+}
+
+void ExtHistoryCombo::loadConfig()
+{
+    QString currentText = this->currentText();
+    QStringList history;
+    QStringList completion;
+
+    KSharedConfigPtr config = KGlobal::config();
+    KConfigGroup groupGui = config->group( QString("ExtHistoryCombo") + this->objectName() );
+    
+    
+    completion = groupGui.readEntry("CompletionList", QStringList());
+    history = groupGui.readEntry("HistoryList", QStringList());
+
+    this->completionObject()->setItems(completion);
+    this->setHistoryItems(history);
+    this->lineEdit()->setText(currentText); // Preserve current text
+}
+
+void ExtHistoryCombo::saveConfig() 
+{
+    addToHistory( currentText() );
+
+    KSharedConfigPtr config = KGlobal::config();
+    KConfigGroup groupGui = config->group( QString("ExtHistoryCombo") + this->objectName() );
+    
+    groupGui.writeEntry("CompletionList", this->completionObject()->items());
+    groupGui.writeEntry("HistoryList", this->historyItems());
+
+    config->sync();
 }
 
 

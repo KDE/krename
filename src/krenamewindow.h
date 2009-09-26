@@ -78,6 +78,17 @@ class KRenameWindow : public KMainWindow {
         const int   mapIndex[KRenameWindow::MAX_PAGES];
     } TGuiMode;
 
+
+    /**
+     * Load UI configuration where necessary.
+     */
+    void loadConfig();
+
+    /**
+     * Save UI configuration where necessary.
+     */
+    void saveConfig();
+
     /** Set the count displayed on the files tab of KRename
      *  @param count typically the number of files in the list
      */

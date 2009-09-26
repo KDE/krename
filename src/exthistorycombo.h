@@ -30,10 +30,18 @@ class ExtHistoryCombo : public KHistoryComboBox {
  Q_OBJECT
 
  public:
+    /**
+     * Create a new ExtHistoryCombo object with a parent and a name.
+     *
+     * @param parent Parent widget
+     */
     ExtHistoryCombo( QWidget* parent );
 
     /// Fix compilation, designer needs this method
     inline void insertItems( int, QStringList & list ) { KHistoryComboBox::insertItems( list ); } 
+
+    void loadConfig();
+    void saveConfig();
 
  signals:
     void delayedTextChanged();

@@ -652,6 +652,8 @@ void KRenameImpl::loadConfig()
     // load Plugin configuration
     KConfigGroup groupPlugins = config->group( QString("PluginSettings") );
     m_pluginLoader->loadConfig( groupPlugins );
+
+    m_window->loadConfig();
 }
 
 void KRenameImpl::saveConfig() 
@@ -660,6 +662,8 @@ void KRenameImpl::saveConfig()
     // even if m_window was already delted. So ignore these events
     if(!m_window) 
         return;
+
+    m_window->saveConfig();
 
     KSharedConfigPtr config = KGlobal::config();
 

@@ -124,6 +124,22 @@ KRenameWindow::~KRenameWindow()
 {
 }
 
+void KRenameWindow::loadConfig() 
+{
+    // ExtHistoryCombo needs an object name
+    m_pageFilename->filenameTemplate->setObjectName("FILENAME_TEMPLATE");
+    m_pageFilename->extensionTemplate->setObjectName("EXTENSION_TEMPLATE");
+
+    m_pageFilename->filenameTemplate->loadConfig();
+    m_pageFilename->extensionTemplate->loadConfig();
+}
+
+void KRenameWindow::saveConfig() 
+{
+    m_pageFilename->filenameTemplate->saveConfig();
+    m_pageFilename->extensionTemplate->saveConfig();
+}
+
 void KRenameWindow::setupGui()
 {
     m_buttons->clear();
