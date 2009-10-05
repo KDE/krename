@@ -47,10 +47,16 @@ SET(krename_SRCS
   replacedialog.cpp
   scriptplugin.cpp
   systemplugin.cpp
-  taglibplugin.cpp
   tokenhelpdialog.cpp
   translitplugin.cpp
   )
+
+IF ( TAGLIB_FOUND )
+       SET(krename_SRCS 
+               ${krename_SRCS}
+               taglibplugin.cpp
+       )
+ENDIF ( TAGLIB_FOUND )
 
 kde4_add_ui_files( krename_SRCS 
   customfilenamedlg.ui		

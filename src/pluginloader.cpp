@@ -27,7 +27,9 @@
 #include "permissionsplugin.h"
 #include "scriptplugin.h"
 #include "systemplugin.h"
-#include "taglibplugin.h"
+#ifdef WITH_TAGLIB 
+# include "taglibplugin.h"
+#endif // WITH_TAGLIB
 #include "translitplugin.h"
 
 #include "../config-krename.h"
@@ -132,7 +134,9 @@ void PluginLoader::load()
 #endif // _WIN32
     m_plugins.append( new ScriptPlugin( this ) );
     m_plugins.append( new SystemPlugin( this ) );
+#ifdef WITH_TAGLIB 
     m_plugins.append( new TagLibPlugin( this ) );
+#endif // WITH_TAGLIB 
     m_plugins.append( new TranslitPlugin( this ) );
     //this->loadFilePlugins();
 
