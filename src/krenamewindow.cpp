@@ -51,6 +51,12 @@ static const KRenameWindow::TGuiMode tAdvancedMode = {
     },
     {
         0, 1, 2, 3
+    },
+    {
+        "document-open-folder",
+        "document-save",
+        "configure",
+        "edit-rename"
     }
 };
 
@@ -74,8 +80,10 @@ KRenameWindow::KRenameWindow( QWidget* parent )
 
     this->setCentralWidget( center );
 
-    for( int i=0;i<tAdvancedMode.numPages;i++ )
-        m_tabBar->addTab( i18n( tAdvancedMode.pageTitles[i] ) );
+    for( int i=0;i<tAdvancedMode.numPages;i++ ) {
+        const QIcon & icon = KIconLoader::global()->loadIcon( tAdvancedMode.pageIcons[i], KIconLoader::NoGroup, KIconLoader::SizeSmall );
+        m_tabBar->addTab( icon, i18n( tAdvancedMode.pageTitles[i] ) );
+    }
 
     m_pageFiles    = new Ui::KRenameFiles();
     m_pageDests    = new Ui::KRenameDestination();
