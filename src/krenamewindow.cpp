@@ -129,10 +129,18 @@ void KRenameWindow::loadConfig()
     // ExtHistoryCombo needs an object name
     m_pageFilename->filenameTemplate->setObjectName("FILENAME_TEMPLATE");
     m_pageFilename->extensionTemplate->setObjectName("EXTENSION_TEMPLATE");
+    m_pageFilename->comboFilenameCustom->setObjectName("FILENAME_CUSTOM_TEMPLATE");
+    m_pageFilename->comboExtensionCustom->setObjectName("EXTENSION_CUSTOM_TEMPLATE");
+    m_pageFilename->comboPrefixCustom->setObjectName("PREVIX_CUSTOM_TEMPLATE");
+    m_pageFilename->comboSuffixCustom->setObjectName("SUFFIX_CUSTOM_TEMPLATE");
+
 
     m_pageFilename->filenameTemplate->loadConfig();
     m_pageFilename->extensionTemplate->loadConfig();
-
+    m_pageFilename->comboFilenameCustom->loadConfig();
+    m_pageFilename->comboExtensionCustom->loadConfig();
+    m_pageFilename->comboPrefixCustom->loadConfig();
+    m_pageFilename->comboSuffixCustom->loadConfig();
 
     KSharedConfigPtr config = KGlobal::config();
     KConfigGroup groupGui = config->group( QString("GUISettings") );
@@ -150,6 +158,10 @@ void KRenameWindow::saveConfig()
 {
     m_pageFilename->filenameTemplate->saveConfig();
     m_pageFilename->extensionTemplate->saveConfig();
+    m_pageFilename->comboFilenameCustom->saveConfig();
+    m_pageFilename->comboExtensionCustom->saveConfig();
+    m_pageFilename->comboPrefixCustom->saveConfig();
+    m_pageFilename->comboSuffixCustom->saveConfig();
 
     KSharedConfigPtr config = KGlobal::config();
     KConfigGroup groupGui = config->group( QString("GUISettings") );
