@@ -564,10 +564,6 @@ void KRenameImpl::slotStart()
     ProgressDialog* progress = new ProgressDialog();
     progress->print( i18n("Starting conversion of %1 files.", m_vector.count()) );
 
-    // Make sure the GUI will not delete our models
-    m_window->setModel( NULL );
-    m_window->setPreviewModel( NULL );
-
     // Get some properties from the gui and initialize BatchRenamer
     const KUrl & destination = m_window->destinationUrl();
     if( m_renamer.renameMode() != eRenameMode_Rename && 
@@ -591,6 +587,10 @@ void KRenameImpl::slotStart()
     // save the configuration
     // requires access to the window
     saveConfig();
+
+    // Make sure the GUI will not delete our models
+    m_window->setModel( NULL );
+    m_window->setPreviewModel( NULL );
 
     // show the progress dialog
     progress->show();
@@ -640,14 +640,6 @@ void KRenameImpl::loadConfig()
     int sortMode = groupGui.readEntry( "FileListSorting", QVariant(0) ).toInt();
     m_window->setSortMode( sortMode );
 
-    int width = groupGui.readEntry( "Column0", QVariant(m_window->previewColumnWidth( 0 )) ).toInt();
-    if( width > 0 )
-		m_window->setPreviewColumnWidth( 0, width );
-
-    width = groupGui.readEntry( "Column1", QVariant(m_window->previewColumnWidth( 1 )) ).toInt();
-    if( width > 0 )
-	    m_window->setPreviewColumnWidth( 1, width );
-
 
     // load Plugin configuration
     KConfigGroup groupPlugins = config->group( QString("PluginSettings") );
@@ -675,8 +667,6 @@ void KRenameImpl::saveConfig()
     groupGui.writeEntry( "StartIndex", m_window->numberStartIndex() );
     groupGui.writeEntry( "Stepping", m_renamer.numberStepping() );
     groupGui.writeEntry( "FileListSorting", m_window->sortMode() );
-    groupGui.writeEntry( "Column0", m_window->previewColumnWidth( 0 ) );
-    groupGui.writeEntry( "Column1", m_window->previewColumnWidth( 1 ) );
     groupGui.writeEntry( "Advanced", m_window->isAdvancedMode() );
 
     // save Plugin configuration

@@ -196,19 +196,6 @@ class KRenameWindow : public KMainWindow {
      */
     void setSortMode( int sortMode );
 
-    /**
-     * \param index (0 or 1) index of the column
-     * \returns the column width of column index
-     */
-    int previewColumnWidth( int index );
-
-    /**
-     * Set the width of the specified colum
-     * \param index (0 or 1) index of the column
-     * \param width width in pixels
-     */
-    void setPreviewColumnWidth( int index, int width );
-
     bool isAdvancedMode() const;
     void setAdvancedMode( bool bAdvanced );
 
@@ -490,7 +477,19 @@ class KRenameWindow : public KMainWindow {
     void moveUp( const QList<int> & selected, QAbstractItemView* view );
     void moveDown( const QList<int> & selected, QAbstractItemView* view );
 
- private:
+    /**
+     * \param index (0 or 1) index of the column
+     * \returns the column width of column index
+     */
+    int previewColumnWidth( int index );
+
+    /**
+     * Set the width of the specified colum
+     * \param index (0 or 1) index of the column
+     * \param width width in pixels
+     */
+    void setPreviewColumnWidth( int index, int width );
+
     void blockSignalsRecursive( QObject* obj, bool b );
 
  private:

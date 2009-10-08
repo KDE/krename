@@ -132,12 +132,30 @@ void KRenameWindow::loadConfig()
 
     m_pageFilename->filenameTemplate->loadConfig();
     m_pageFilename->extensionTemplate->loadConfig();
+
+
+    KSharedConfigPtr config = KGlobal::config();
+    KConfigGroup groupGui = config->group( QString("GUISettings") );
+
+    int width = groupGui.readEntry( "Column0", QVariant(this->previewColumnWidth( 0 )) ).toInt();
+    if( width > 0 )
+		this->setPreviewColumnWidth( 0, width );
+
+    width = groupGui.readEntry( "Column1", QVariant(this->previewColumnWidth( 1 )) ).toInt();
+    if( width > 0 )
+	    this->setPreviewColumnWidth( 1, width );
 }
 
 void KRenameWindow::saveConfig() 
 {
     m_pageFilename->filenameTemplate->saveConfig();
     m_pageFilename->extensionTemplate->saveConfig();
+
+    KSharedConfigPtr config = KGlobal::config();
+    KConfigGroup groupGui = config->group( QString("GUISettings") );
+
+    groupGui.writeEntry( "Column0", this->previewColumnWidth( 0 ) );
+    groupGui.writeEntry( "Column1", this->previewColumnWidth( 1 ) );
 }
 
 void KRenameWindow::setupGui()
