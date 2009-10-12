@@ -622,10 +622,10 @@ void KRenameImpl::loadConfig()
     KConfigGroup groupGui = config->group( QString("GUISettings") );
     //groupGui.readEntry( "firststart4", QVariant(true) ).toBool();
     m_window->setPreviewEnabled( 
-	groupGui.readEntry( "ImagePreview", QVariant(false) ).toBool() );
+	groupGui.readEntry( "ImagePreview2", QVariant(true) ).toBool() );
 
     m_window->setPreviewNamesEnabled( 
-	groupGui.readEntry( "ImagePreviewName", QVariant(false) ).toBool() );
+	groupGui.readEntry( "ImagePreviewName2", QVariant(true) ).toBool() );
 
     m_window->setAdvancedMode( 
 	groupGui.readEntry( "Advanced", QVariant(false) ).toBool() );
@@ -662,8 +662,8 @@ void KRenameImpl::saveConfig()
 
     KConfigGroup groupGui = config->group( QString("GUISettings") );
     groupGui.writeEntry( "firststart4", false );
-    groupGui.writeEntry( "ImagePreview", m_window->isPreviewEnabled() );
-    groupGui.writeEntry( "ImagePreviewName", m_window->isPreviewNamesEnabled() );
+    groupGui.writeEntry( "ImagePreview2", m_window->isPreviewEnabled() );
+    groupGui.writeEntry( "ImagePreviewName2", m_window->isPreviewNamesEnabled() );
     groupGui.writeEntry( "StartIndex", m_window->numberStartIndex() );
     groupGui.writeEntry( "Stepping", m_renamer.numberStepping() );
     groupGui.writeEntry( "FileListSorting", m_window->sortMode() );
