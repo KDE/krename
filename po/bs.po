@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 19:12+0200\n"
+"POT-Creation-Date: 2009-10-12 21:35+0200\n"
 "PO-Revision-Date: 2004-07-30 23:15+0200\n"
 "Last-Translator: Asim Husanovic <asim.h@megatel.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -24,9 +24,29 @@ msgstr ""
 msgid "%1 errors occurred!"
 msgstr "%2 greške!"
 
-#: batchrenamer.cpp:758
+#: batchrenamer.cpp:767
 msgid "%2 errors occurred!"
 msgstr "%2 greške!"
+
+#: krenamewindow.cpp:48
+#, fuzzy
+msgid "&1. Files"
+msgstr "&Datoteke"
+
+#: krenamewindow.cpp:49
+#, fuzzy
+msgid "&2. Destination"
+msgstr "Odrediš&te"
+
+#: krenamewindow.cpp:50
+#, fuzzy
+msgid "&3. Plugins"
+msgstr "Doda&ci"
+
+#: krenamewindow.cpp:51
+#, fuzzy
+msgid "&4. Filename"
+msgstr "&Ime datoteke"
 
 #: rc.cpp:384
 msgid "&Add Number"
@@ -55,7 +75,7 @@ msgstr "Promijeni &Vlasnika"
 msgid "&Change filename manually..."
 msgstr "&Promijeni ime datoteke ručno"
 
-#: krenamewindow.cpp:150
+#: krenamewindow.cpp:191
 msgid "&Close"
 msgstr ""
 
@@ -77,11 +97,6 @@ msgstr "Odrediš&te"
 #: rc.cpp:606
 msgid "&Delete"
 msgstr ""
-
-#: krenamewindow.cpp:48
-#, fuzzy
-msgid "&Destination"
-msgstr "Odrediš&te"
 
 #: rc.cpp:45
 msgid "&Display name"
@@ -108,17 +123,12 @@ msgstr "&Ekstenzija:"
 msgid "&Filename"
 msgstr "&Ime datoteke"
 
-#: krenamewindow.cpp:47
-#, fuzzy
-msgid "&Files"
-msgstr "&Datoteke"
-
 #: rc.cpp:450
 #, fuzzy
 msgid "&Find:"
 msgstr "Pronađi:"
 
-#: krenamewindow.cpp:149
+#: krenamewindow.cpp:190
 #, fuzzy
 msgid "&Finish"
 msgstr "&Kraj"
@@ -200,11 +210,6 @@ msgstr "O&pcije"
 #: rc.cpp:93
 msgid "&Overwrite existing files"
 msgstr "Pr&epiši postojeće datoteke"
-
-#: krenamewindow.cpp:49
-#, fuzzy
-msgid "&Plugins"
-msgstr "Doda&ci"
 
 #: rc.cpp:213 rc.cpp:321
 msgid "&Prefix:"
@@ -345,7 +350,7 @@ msgid ""
 "html>"
 msgstr ""
 
-#: krenamewindow.cpp:349
+#: krenamewindow.cpp:390
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "Datoteka: <b>%1</b>"
@@ -584,11 +589,11 @@ msgstr "Ne mogu chmod %1."
 msgid "Can't chown %1."
 msgstr "Ne mogu chown %1."
 
-#: batchrenamer.cpp:670
+#: batchrenamer.cpp:679
 msgid "Can't create undo script :"
 msgstr "Ne mogu kreirati skriptu za vraćanje:"
 
-#: batchrenamer.cpp:772
+#: batchrenamer.cpp:781
 msgid "Can't set executable bit on undo script."
 msgstr "Ne mogu postaviti izvršni dio na scriptu za vraćanje."
 
@@ -645,6 +650,11 @@ msgstr "Pretvori u mala slova"
 msgid "Convert to upper case"
 msgstr "Pretvori u velika slova"
 
+#: rc.cpp:627
+#, fuzzy
+msgid "Create Variable"
+msgstr "Ubaci ''"
+
 #: rc.cpp:90
 msgid "Create symbolic &links in destination directory"
 msgstr "Kreiraj simbolični &link u odredišni direktorij"
@@ -693,11 +703,19 @@ msgstr "Sistemske funkcije"
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
 
+#: rc.cpp:597
+msgid "Declare global variables that can be used from withhin your functions:"
+msgstr ""
+
+#: rc.cpp:612
+msgid "Define functions that can be used from KRename templates:"
+msgstr ""
+
 #: rc.cpp:471
 msgid "Description"
 msgstr "Opis"
 
-#: rc.cpp:585 rc.cpp:627
+#: rc.cpp:585
 msgid "Dialog"
 msgstr ""
 
@@ -731,7 +749,7 @@ msgstr ""
 msgid "Down"
 msgstr ""
 
-#: batchrenamer.cpp:760
+#: batchrenamer.cpp:769
 msgid "Elapsed time: %1 seconds"
 msgstr "Prolazno vrijeme: %1 sekundi"
 
@@ -771,10 +789,6 @@ msgstr "Ekstenzija datoteke počinje sa:"
 msgid "File preview"
 msgstr "&Pregled"
 
-#: krenamewindow.cpp:50
-msgid "File&name"
-msgstr "I&me datoteke"
-
 #: rc.cpp:198 rc.cpp:306
 #, fuzzy
 msgid "File&name:"
@@ -789,11 +803,11 @@ msgstr "&Broj članova privremene historije:"
 msgid "Filenames Processed after %1 seconds."
 msgstr "Imena datoteka procesuirana su za %1 sekundi."
 
-#: batchrenamer.cpp:229 batchrenamer.cpp:683
+#: batchrenamer.cpp:229 batchrenamer.cpp:692
 msgid "Files will be copied to: %1"
 msgstr "Datoteke će biti kopirane u: %1"
 
-#: batchrenamer.cpp:232 batchrenamer.cpp:685
+#: batchrenamer.cpp:232 batchrenamer.cpp:694
 msgid "Files will be moved to: %1"
 msgstr "Datoteke će biti premještene u: %1"
 
@@ -910,7 +924,7 @@ msgstr "&Broj članova privremene historije:"
 msgid "Initial Value"
 msgstr ""
 
-#: batchrenamer.cpp:226 batchrenamer.cpp:689
+#: batchrenamer.cpp:226 batchrenamer.cpp:698
 msgid "Input files will be renamed."
 msgstr "Ulazne datoteke će biti preimenovane."
 
@@ -1123,7 +1137,7 @@ msgstr "KRename"
 msgid "KRename Help"
 msgstr "KRename"
 
-#: batchrenamer.cpp:303 batchrenamer.cpp:761
+#: batchrenamer.cpp:303 batchrenamer.cpp:770
 msgid "KRename finished the renaming process."
 msgstr "KRename je završio proces preimenovanja."
 
@@ -1207,7 +1221,7 @@ msgstr "&Broj cifara:"
 msgid "O&wner:"
 msgstr "Vlasnik"
 
-#: krenamemodel.cpp:485
+#: krenamemodel.cpp:504
 msgid "Origin"
 msgstr "Originalno"
 
@@ -1270,7 +1284,7 @@ msgstr "Doda&ci"
 msgid "Polish Translation"
 msgstr "Prevod na Italijanski"
 
-#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:762
+#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:771
 msgid "Press close to quit!"
 msgstr "Pritisni zatvori za kraj!"
 
@@ -1345,11 +1359,11 @@ msgstr "&Ponovi preimenovanje za ne procesuirane datoteke..."
 msgid "Rename Processed Files &Again..."
 msgstr "Ponovi proces preimenov&anja za procesuirane datoteke..."
 
-#: krenamemodel.cpp:485
+#: krenamemodel.cpp:504
 msgid "Renamed"
 msgstr "Preimenovano"
 
-#: batchrenamer.cpp:754
+#: batchrenamer.cpp:763
 msgid "Renamed %1 files successfully."
 msgstr "Preimenovanje %1 datoteka uspjelo."
 
@@ -1445,7 +1459,7 @@ msgstr ""
 msgid "Supported tokens:"
 msgstr "Podržani znakovi:"
 
-#: batchrenamer.cpp:235 batchrenamer.cpp:687
+#: batchrenamer.cpp:235 batchrenamer.cpp:696
 msgid "Symbolic links will be created in: %1"
 msgstr "Simbolični link će biti kreiran u: %1"
 
@@ -1453,7 +1467,7 @@ msgstr "Simbolični link će biti kreiran u: %1"
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr ""
 
-#: rc.cpp:417 rc.cpp:486 rc.cpp:597 rc.cpp:612
+#: rc.cpp:417 rc.cpp:486
 msgid "TextLabel"
 msgstr ""
 
@@ -1479,12 +1493,12 @@ msgstr ""
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "Hvala mu ua kreiranje RedHat 7.x paketa i datoteke za isti."
 
-#: krenameimpl.cpp:584
+#: krenameimpl.cpp:580
 #, fuzzy
 msgid "The directory %1 could not be created."
 msgstr "Direktorij %1 ne postoji. KRename ga ne može kreirati za vas."
 
-#: krenameimpl.cpp:576
+#: krenameimpl.cpp:572
 #, fuzzy
 msgid ""
 "The directory %1 does not exist. Do you want KRename to create it for you?"
@@ -1573,7 +1587,7 @@ msgstr ""
 msgid "Unable to open %1 for writing."
 msgstr ""
 
-#: batchrenamer.cpp:742
+#: batchrenamer.cpp:751
 msgid "Undo is not possible for remote file: %1"
 msgstr "Vrati, nije moguće za udaljenu datoteku: %1"
 
@@ -1961,6 +1975,9 @@ msgstr "y karakter stare datoteke počinje s x"
 
 #~ msgid "File %1 exists already!"
 #~ msgstr "Datoteka %1 već postoji!"
+
+#~ msgid "File&name"
+#~ msgstr "I&me datoteke"
 
 #~ msgid "Files per directory:"
 #~ msgstr "Datoteka po direktoriju:"

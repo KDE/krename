@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 19:12+0200\n"
+"POT-Creation-Date: 2009-10-12 21:35+0200\n"
 "PO-Revision-Date: 2005-01-27 20:39+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team:  <ja@li.org>\n"
@@ -22,9 +22,29 @@ msgstr ""
 msgid "%1 errors occurred!"
 msgstr "%2 個のエラーが発生"
 
-#: batchrenamer.cpp:758
+#: batchrenamer.cpp:767
 msgid "%2 errors occurred!"
 msgstr "%2 個のエラーが発生"
+
+#: krenamewindow.cpp:48
+#, fuzzy
+msgid "&1. Files"
+msgstr "ファイル(&i)"
+
+#: krenamewindow.cpp:49
+#, fuzzy
+msgid "&2. Destination"
+msgstr "対象(&t)"
+
+#: krenamewindow.cpp:50
+#, fuzzy
+msgid "&3. Plugins"
+msgstr "プラグイン(&l)"
+
+#: krenamewindow.cpp:51
+#, fuzzy
+msgid "&4. Filename"
+msgstr "ファイル名(&F)"
 
 #: rc.cpp:384
 msgid "&Add Number"
@@ -53,7 +73,7 @@ msgstr "所有者を変更(&O)"
 msgid "&Change filename manually..."
 msgstr "手動でファイル名を変更(&C)"
 
-#: krenamewindow.cpp:150
+#: krenamewindow.cpp:191
 msgid "&Close"
 msgstr ""
 
@@ -76,11 +96,6 @@ msgstr "対象(&t)"
 #, fuzzy
 msgid "&Delete"
 msgstr "プロファイルを削除(&D)"
-
-#: krenamewindow.cpp:48
-#, fuzzy
-msgid "&Destination"
-msgstr "対象(&t)"
 
 #: rc.cpp:45
 msgid "&Display name"
@@ -107,17 +122,12 @@ msgstr "拡張子(&E):"
 msgid "&Filename"
 msgstr "ファイル名(&F)"
 
-#: krenamewindow.cpp:47
-#, fuzzy
-msgid "&Files"
-msgstr "ファイル(&i)"
-
 #: rc.cpp:450
 #, fuzzy
 msgid "&Find:"
 msgstr "検索語句:"
 
-#: krenamewindow.cpp:149
+#: krenamewindow.cpp:190
 #, fuzzy
 msgid "&Finish"
 msgstr "開始(&F)"
@@ -199,11 +209,6 @@ msgstr "オプション(&p)"
 #: rc.cpp:93
 msgid "&Overwrite existing files"
 msgstr "ファイルを上書きする(&O)"
-
-#: krenamewindow.cpp:49
-#, fuzzy
-msgid "&Plugins"
-msgstr "プラグイン(&l)"
 
 #: rc.cpp:213 rc.cpp:321
 msgid "&Prefix:"
@@ -344,7 +349,7 @@ msgid ""
 "html>"
 msgstr ""
 
-#: krenamewindow.cpp:349
+#: krenamewindow.cpp:390
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "ファイル: <b>%1</b>"
@@ -576,11 +581,11 @@ msgstr "Can't chmod %1."
 msgid "Can't chown %1."
 msgstr "Can't chown %1."
 
-#: batchrenamer.cpp:670
+#: batchrenamer.cpp:679
 msgid "Can't create undo script :"
 msgstr "取消スクリプトを作成できません:"
 
-#: batchrenamer.cpp:772
+#: batchrenamer.cpp:781
 msgid "Can't set executable bit on undo script."
 msgstr "取消スクリプトを実行ファイルにセットできません"
 
@@ -636,6 +641,11 @@ msgstr "小文字に変換 "
 msgid "Convert to upper case"
 msgstr "大文字に変換"
 
+#: rc.cpp:627
+#, fuzzy
+msgid "Create Variable"
+msgstr "'$' を挿入"
+
 #: rc.cpp:90
 msgid "Create symbolic &links in destination directory"
 msgstr "ディレクトリにsymlinkを作成(&l)"
@@ -684,11 +694,19 @@ msgstr "システムの機能"
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
 
+#: rc.cpp:597
+msgid "Declare global variables that can be used from withhin your functions:"
+msgstr ""
+
+#: rc.cpp:612
+msgid "Define functions that can be used from KRename templates:"
+msgstr ""
+
 #: rc.cpp:471
 msgid "Description"
 msgstr "説明"
 
-#: rc.cpp:585 rc.cpp:627
+#: rc.cpp:585
 msgid "Dialog"
 msgstr ""
 
@@ -723,7 +741,7 @@ msgstr ""
 msgid "Down"
 msgstr ""
 
-#: batchrenamer.cpp:760
+#: batchrenamer.cpp:769
 msgid "Elapsed time: %1 seconds"
 msgstr "経過時間: %1 秒"
 
@@ -763,10 +781,6 @@ msgstr "ファイルの拡張子の場所:"
 msgid "File preview"
 msgstr "プレビュー(&P)"
 
-#: krenamewindow.cpp:50
-msgid "File&name"
-msgstr "ファイル名(&n)"
-
 #: rc.cpp:198 rc.cpp:306
 #, fuzzy
 msgid "File&name:"
@@ -781,11 +795,11 @@ msgstr "現在の時刻を挿入"
 msgid "Filenames Processed after %1 seconds."
 msgstr "%1 秒後に開始します"
 
-#: batchrenamer.cpp:229 batchrenamer.cpp:683
+#: batchrenamer.cpp:229 batchrenamer.cpp:692
 msgid "Files will be copied to: %1"
 msgstr "Files will be copied to: %1"
 
-#: batchrenamer.cpp:232 batchrenamer.cpp:685
+#: batchrenamer.cpp:232 batchrenamer.cpp:694
 msgid "Files will be moved to: %1"
 msgstr "Files will be moved to: %1"
 
@@ -899,7 +913,7 @@ msgstr "現在の時刻を挿入"
 msgid "Initial Value"
 msgstr ""
 
-#: batchrenamer.cpp:226 batchrenamer.cpp:689
+#: batchrenamer.cpp:226 batchrenamer.cpp:698
 msgid "Input files will be renamed."
 msgstr "入力ファイルをリネームします"
 
@@ -1106,7 +1120,7 @@ msgstr "KRename"
 msgid "KRename Help"
 msgstr "KRename"
 
-#: batchrenamer.cpp:303 batchrenamer.cpp:761
+#: batchrenamer.cpp:303 batchrenamer.cpp:770
 msgid "KRename finished the renaming process."
 msgstr "リネームを完了しました"
 
@@ -1190,7 +1204,7 @@ msgstr "桁数(&N):"
 msgid "O&wner:"
 msgstr "所有者"
 
-#: krenamemodel.cpp:485
+#: krenamemodel.cpp:504
 msgid "Origin"
 msgstr "現在"
 
@@ -1253,7 +1267,7 @@ msgstr "プラグイン(&l)"
 msgid "Polish Translation"
 msgstr "Italian translation"
 
-#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:762
+#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:771
 msgid "Press close to quit!"
 msgstr "終了するには「閉じる」を押してください"
 
@@ -1328,11 +1342,11 @@ msgstr "処理しなかったファイルを再リネーム(&A)"
 msgid "Rename Processed Files &Again..."
 msgstr "処理したファイルを再リネーム(&A)"
 
-#: krenamemodel.cpp:485
+#: krenamemodel.cpp:504
 msgid "Renamed"
 msgstr "リネーム後"
 
-#: batchrenamer.cpp:754
+#: batchrenamer.cpp:763
 msgid "Renamed %1 files successfully."
 msgstr "%1 個のファイルをリネームしました"
 
@@ -1427,7 +1441,7 @@ msgstr ""
 msgid "Supported tokens:"
 msgstr "サポートしている項目:"
 
-#: batchrenamer.cpp:235 batchrenamer.cpp:687
+#: batchrenamer.cpp:235 batchrenamer.cpp:696
 msgid "Symbolic links will be created in: %1"
 msgstr "Symlinkを作成します: %1"
 
@@ -1435,7 +1449,7 @@ msgstr "Symlinkを作成します: %1"
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr ""
 
-#: rc.cpp:417 rc.cpp:486 rc.cpp:597 rc.cpp:612
+#: rc.cpp:417 rc.cpp:486
 msgid "TextLabel"
 msgstr ""
 
@@ -1461,12 +1475,12 @@ msgstr ""
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "Thanks to him for creating RedHat 7.x packages and some other help."
 
-#: krenameimpl.cpp:584
+#: krenameimpl.cpp:580
 #, fuzzy
 msgid "The directory %1 could not be created."
 msgstr "プロファイル \"%1\" はありません"
 
-#: krenameimpl.cpp:576
+#: krenameimpl.cpp:572
 #, fuzzy
 msgid ""
 "The directory %1 does not exist. Do you want KRename to create it for you?"
@@ -1554,7 +1568,7 @@ msgstr ""
 msgid "Unable to open %1 for writing."
 msgstr ""
 
-#: batchrenamer.cpp:742
+#: batchrenamer.cpp:751
 msgid "Undo is not possible for remote file: %1"
 msgstr "リモートファイルの取り消しはできません: %1"
 
@@ -1939,6 +1953,9 @@ msgstr "現在のファイル名のx番目の文字からy文字分の文字"
 
 #~ msgid "File %1 exists already!"
 #~ msgstr "ファイル %1 は存在します"
+
+#~ msgid "File&name"
+#~ msgstr "ファイル名(&n)"
 
 #~ msgid "Files per directory:"
 #~ msgstr "ディレクトリあたりのファイル数:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 19:12+0200\n"
+"POT-Creation-Date: 2009-10-12 21:35+0200\n"
 "PO-Revision-Date: 2009-09-26 17:59+0200\n"
 "Last-Translator: Dominik Seichter <domseichter@web.de>\n"
 "Language-Team:  <de@li.org>\n"
@@ -23,9 +23,29 @@ msgstr "$"
 msgid "%1 errors occurred!"
 msgstr "%1 Fehler sind aufgetreten!"
 
-#: batchrenamer.cpp:758
+#: batchrenamer.cpp:767
 msgid "%2 errors occurred!"
 msgstr "%2 Fehler sind aufgetreten!"
+
+#: krenamewindow.cpp:48
+#, fuzzy
+msgid "&1. Files"
+msgstr "Date&ien"
+
+#: krenamewindow.cpp:49
+#, fuzzy
+msgid "&2. Destination"
+msgstr "&Ziel"
+
+#: krenamewindow.cpp:50
+#, fuzzy
+msgid "&3. Plugins"
+msgstr "&Plugins"
+
+#: krenamewindow.cpp:51
+#, fuzzy
+msgid "&4. Filename"
+msgstr "&Dateiname"
 
 #: rc.cpp:384
 msgid "&Add Number"
@@ -51,7 +71,7 @@ msgstr "&Besitzer ändern"
 msgid "&Change filename manually..."
 msgstr "Dateinamen &nachträglich ändern..."
 
-#: krenamewindow.cpp:150
+#: krenamewindow.cpp:191
 msgid "&Close"
 msgstr "&Schließen"
 
@@ -70,10 +90,6 @@ msgstr "&Definitionen"
 #: rc.cpp:606
 msgid "&Delete"
 msgstr "&Entfernen"
-
-#: krenamewindow.cpp:48
-msgid "&Destination"
-msgstr "&Ziel"
 
 #: rc.cpp:45
 msgid "&Display name"
@@ -99,15 +115,11 @@ msgstr "&Erweiterung:"
 msgid "&Filename"
 msgstr "&Dateiname"
 
-#: krenamewindow.cpp:47
-msgid "&Files"
-msgstr "Date&ien"
-
 #: rc.cpp:450
 msgid "&Find:"
 msgstr "&Suchen:"
 
-#: krenamewindow.cpp:149
+#: krenamewindow.cpp:190
 msgid "&Finish"
 msgstr "&Abschließen"
 
@@ -182,10 +194,6 @@ msgstr "&Optionen"
 #: rc.cpp:93
 msgid "&Overwrite existing files"
 msgstr "Existierende Dateien &überschreiben"
-
-#: krenamewindow.cpp:49
-msgid "&Plugins"
-msgstr "&Plugins"
 
 #: rc.cpp:213 rc.cpp:321
 msgid "&Prefix:"
@@ -311,7 +319,7 @@ msgid ""
 "html>"
 msgstr ""
 
-#: krenamewindow.cpp:349
+#: krenamewindow.cpp:390
 msgid "<b>Files:<b> %1"
 msgstr "<b>Dateien:</b> %1"
 
@@ -564,11 +572,11 @@ msgstr "Berechtigungen von %1 können nicht geändert werden."
 msgid "Can't chown %1."
 msgstr "Kann Eigentümer von %1 nicht ändern."
 
-#: batchrenamer.cpp:670
+#: batchrenamer.cpp:679
 msgid "Can't create undo script :"
 msgstr "Kann Undo-Skript nicht erstellen :"
 
-#: batchrenamer.cpp:772
+#: batchrenamer.cpp:781
 msgid "Can't set executable bit on undo script."
 msgstr "Kann das Undo-Skript nicht ausführbar machen."
 
@@ -622,6 +630,11 @@ msgstr "Alter Dateiname in Kleinbuchstaben"
 msgid "Convert to upper case"
 msgstr "Alter Dateiname in Großbuchstaben"
 
+#: rc.cpp:627
+#, fuzzy
+msgid "Create Variable"
+msgstr "Variable &Einfügen"
+
 #: rc.cpp:90
 msgid "Create symbolic &links in destination directory"
 msgstr "&Verknüpfungen im Zielverzeichnis erstellen"
@@ -668,11 +681,19 @@ msgstr ""
 "Das Datums und Zeit Plugin kann nur mit lokalen Dateien umgehen. %1 ist eine "
 "Datei auf einem entferntem Rechner."
 
+#: rc.cpp:597
+msgid "Declare global variables that can be used from withhin your functions:"
+msgstr ""
+
+#: rc.cpp:612
+msgid "Define functions that can be used from KRename templates:"
+msgstr ""
+
 #: rc.cpp:471
 msgid "Description"
 msgstr "Beschreibung"
 
-#: rc.cpp:585 rc.cpp:627
+#: rc.cpp:585
 msgid "Dialog"
 msgstr "Dialogfenster"
 
@@ -704,7 +725,7 @@ msgstr "Double"
 msgid "Down"
 msgstr "Nach unten"
 
-#: batchrenamer.cpp:760
+#: batchrenamer.cpp:769
 msgid "Elapsed time: %1 seconds"
 msgstr "Benötigte Zeit: %1 Sekunden"
 
@@ -740,10 +761,6 @@ msgstr "Erweiterung &beginnt ab:"
 msgid "File preview"
 msgstr "Vorschau"
 
-#: krenamewindow.cpp:50
-msgid "File&name"
-msgstr "Datei&name"
-
 #: rc.cpp:198 rc.cpp:306
 msgid "File&name:"
 msgstr "Datei&name:"
@@ -756,11 +773,11 @@ msgstr "Dateiname"
 msgid "Filenames Processed after %1 seconds."
 msgstr "Dateinamen in %1 Sekunden verarbeitet."
 
-#: batchrenamer.cpp:229 batchrenamer.cpp:683
+#: batchrenamer.cpp:229 batchrenamer.cpp:692
 msgid "Files will be copied to: %1"
 msgstr "Dateien werden nach %1 kopiert"
 
-#: batchrenamer.cpp:232 batchrenamer.cpp:685
+#: batchrenamer.cpp:232 batchrenamer.cpp:694
 msgid "Files will be moved to: %1"
 msgstr "Dateien werden nach %1 verschoben"
 
@@ -873,7 +890,7 @@ msgstr "Index"
 msgid "Initial Value"
 msgstr "Startwert"
 
-#: batchrenamer.cpp:226 batchrenamer.cpp:689
+#: batchrenamer.cpp:226 batchrenamer.cpp:698
 msgid "Input files will be renamed."
 msgstr "Eingangsdateien werden umbenannt."
 
@@ -1068,7 +1085,7 @@ msgstr "KRename Build:"
 msgid "KRename Help"
 msgstr "KRename Hilfe"
 
-#: batchrenamer.cpp:303 batchrenamer.cpp:761
+#: batchrenamer.cpp:303 batchrenamer.cpp:770
 msgid "KRename finished the renaming process."
 msgstr "KRename hat das Umbenennen beendet."
 
@@ -1144,7 +1161,7 @@ msgstr "Anzahl der &Stellen:"
 msgid "O&wner:"
 msgstr "&Besitzer:"
 
-#: krenamemodel.cpp:485
+#: krenamemodel.cpp:504
 msgid "Origin"
 msgstr "Ursprünglich"
 
@@ -1203,7 +1220,7 @@ msgstr "Plugins"
 msgid "Polish Translation"
 msgstr "Polnische Übersetzung"
 
-#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:762
+#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:771
 msgid "Press close to quit!"
 msgstr "Klicken Sie auf Schließen um KRename zu beenden!"
 
@@ -1271,11 +1288,11 @@ msgstr "&Nicht verarbeitete Dateien noch einmal umbenennen..."
 msgid "Rename Processed Files &Again..."
 msgstr "&Verarbeitete Dateien noch einmal umbenennen ..."
 
-#: krenamemodel.cpp:485
+#: krenamemodel.cpp:504
 msgid "Renamed"
 msgstr "Umbenannt"
 
-#: batchrenamer.cpp:754
+#: batchrenamer.cpp:763
 msgid "Renamed %1 files successfully."
 msgstr "%1 Dateien erfolgreich umbenannt."
 
@@ -1367,7 +1384,7 @@ msgstr "Verbesserungen von Nachrichten und Hinweise auf Style-Guide Probleme."
 msgid "Supported tokens:"
 msgstr "Unterstützte Funktionen:"
 
-#: batchrenamer.cpp:235 batchrenamer.cpp:687
+#: batchrenamer.cpp:235 batchrenamer.cpp:696
 msgid "Symbolic links will be created in: %1"
 msgstr "Symbolische Verknüpfungen werden in %1 erstellt."
 
@@ -1375,7 +1392,7 @@ msgstr "Symbolische Verknüpfungen werden in %1 erstellt."
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr "TagLib (MP3/Ogg) Plugin"
 
-#: rc.cpp:417 rc.cpp:486 rc.cpp:597 rc.cpp:612
+#: rc.cpp:417 rc.cpp:486
 msgid "TextLabel"
 msgstr "TextLabel"
 
@@ -1401,11 +1418,11 @@ msgstr ""
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "Danke für das Erstellen der RedHat 7.x Rpm's und anderer Hilfe."
 
-#: krenameimpl.cpp:584
+#: krenameimpl.cpp:580
 msgid "The directory %1 could not be created."
 msgstr "Das Verzeichnis %1 konnte nicht erstellt werden."
 
-#: krenameimpl.cpp:576
+#: krenameimpl.cpp:572
 msgid ""
 "The directory %1 does not exist. Do you want KRename to create it for you?"
 msgstr ""
@@ -1491,7 +1508,7 @@ msgstr "%1 kann nicht zum Lesen geöffnet werden."
 msgid "Unable to open %1 for writing."
 msgstr "%1 kann nicht zum Schreiben geöffnet werden."
 
-#: batchrenamer.cpp:742
+#: batchrenamer.cpp:751
 msgid "Undo is not possible for remote file: %1"
 msgstr "Rückgängig machen geht nur bei lokalen Dateien: %1"
 
@@ -1676,3 +1693,6 @@ msgstr "Leerzeichen am Anfang und Ende eine beliebigen Zeichenkette entfernen"
 #: krenameimpl.cpp:506
 msgid "y characters of old filename starting at x"
 msgstr "y Zeichen ab dem x-ten Zeichen des Dateinamens"
+
+#~ msgid "File&name"
+#~ msgstr "Datei&name"

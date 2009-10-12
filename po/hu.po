@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 19:12+0200\n"
+"POT-Creation-Date: 2009-10-12 21:35+0200\n"
 "PO-Revision-Date: 2009-09-26 19:29+0200\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
@@ -27,9 +27,29 @@ msgstr "$"
 msgid "%1 errors occurred!"
 msgstr "%1 hiba lépett fel."
 
-#: batchrenamer.cpp:758
+#: batchrenamer.cpp:767
 msgid "%2 errors occurred!"
 msgstr "%2 hiba lépett fel."
+
+#: krenamewindow.cpp:48
+#, fuzzy
+msgid "&1. Files"
+msgstr "F&ájlok"
+
+#: krenamewindow.cpp:49
+#, fuzzy
+msgid "&2. Destination"
+msgstr "&Cél"
+
+#: krenamewindow.cpp:50
+#, fuzzy
+msgid "&3. Plugins"
+msgstr "Mo&dulok"
+
+#: krenamewindow.cpp:51
+#, fuzzy
+msgid "&4. Filename"
+msgstr "Fájlné&v"
 
 #: rc.cpp:384
 msgid "&Add Number"
@@ -55,7 +75,7 @@ msgstr "&Tulajdonos módosítása"
 msgid "&Change filename manually..."
 msgstr "&Fájlnév kézi módosítása..."
 
-#: krenamewindow.cpp:150
+#: krenamewindow.cpp:191
 msgid "&Close"
 msgstr "&Bezárás"
 
@@ -74,10 +94,6 @@ msgstr "Def&iníciók"
 #: rc.cpp:606
 msgid "&Delete"
 msgstr "&Törlés"
-
-#: krenamewindow.cpp:48
-msgid "&Destination"
-msgstr "&Cél"
 
 #: rc.cpp:45
 msgid "&Display name"
@@ -103,15 +119,11 @@ msgstr "Fájlk&iterjesztés:"
 msgid "&Filename"
 msgstr "Fájlné&v"
 
-#: krenamewindow.cpp:47
-msgid "&Files"
-msgstr "F&ájlok"
-
 #: rc.cpp:450
 msgid "&Find:"
 msgstr "&Keresés:"
 
-#: krenamewindow.cpp:149
+#: krenamewindow.cpp:190
 msgid "&Finish"
 msgstr "Befeje&zés"
 
@@ -186,10 +198,6 @@ msgstr "O&pciók"
 #: rc.cpp:93
 msgid "&Overwrite existing files"
 msgstr "Me&glevő fájlok felülírása"
-
-#: krenamewindow.cpp:49
-msgid "&Plugins"
-msgstr "Mo&dulok"
 
 #: rc.cpp:213 rc.cpp:321
 msgid "&Prefix:"
@@ -334,7 +342,7 @@ msgstr ""
 "illetve <span style=\" font-style:italic;\">img019 </span>névre, akkor "
 "alkalmazzon -4 értékű eltolást.</p></body></html>"
 
-#: krenamewindow.cpp:349
+#: krenamewindow.cpp:390
 msgid "<b>Files:<b> %1"
 msgstr "<b>Fájlok:</b> %1"
 
@@ -588,11 +596,11 @@ msgstr "\"%1\" jogosultságai nem módosíthatók."
 msgid "Can't chown %1."
 msgstr "\"%1\" tulajdonosa nem módosítható."
 
-#: batchrenamer.cpp:670
+#: batchrenamer.cpp:679
 msgid "Can't create undo script :"
 msgstr "Nem hozható létre a visszavonási szkript:"
 
-#: batchrenamer.cpp:772
+#: batchrenamer.cpp:781
 msgid "Can't set executable bit on undo script."
 msgstr "Nem lehet beállítani a futtathatósági bitet a visszavonási szkriptre."
 
@@ -644,6 +652,11 @@ msgstr "Átalakítás kisbetűsre"
 msgid "Convert to upper case"
 msgstr "Átalakítás nagybetűsre"
 
+#: rc.cpp:627
+#, fuzzy
+msgid "Create Variable"
+msgstr "Vált&ozó beillesztése"
+
 #: rc.cpp:90
 msgid "Create symbolic &links in destination directory"
 msgstr "Szimbolikus &linkek létrehozása a célkönyvtárban"
@@ -690,11 +703,19 @@ msgstr ""
 "A dátum- és időmodul csak helyi fájlokkal használható, \"%1\" viszont távoli "
 "fájl."
 
+#: rc.cpp:597
+msgid "Declare global variables that can be used from withhin your functions:"
+msgstr ""
+
+#: rc.cpp:612
+msgid "Define functions that can be used from KRename templates:"
+msgstr ""
+
 #: rc.cpp:471
 msgid "Description"
 msgstr "Leírás"
 
-#: rc.cpp:585 rc.cpp:627
+#: rc.cpp:585
 msgid "Dialog"
 msgstr "Párbeszédablak"
 
@@ -726,7 +747,7 @@ msgstr "Dupla pontosságú"
 msgid "Down"
 msgstr "Le"
 
-#: batchrenamer.cpp:760
+#: batchrenamer.cpp:769
 msgid "Elapsed time: %1 seconds"
 msgstr "Eltelt idő: %1 másodperc"
 
@@ -762,10 +783,6 @@ msgstr "A fájlkiterjesztés &kezdőpozíciója:"
 msgid "File preview"
 msgstr "Fájl-előnézet"
 
-#: krenamewindow.cpp:50
-msgid "File&name"
-msgstr "Fájl&név"
-
 #: rc.cpp:198 rc.cpp:306
 msgid "File&name:"
 msgstr "Fájl&név:"
@@ -778,11 +795,11 @@ msgstr "Az aktuális fájl neve"
 msgid "Filenames Processed after %1 seconds."
 msgstr "A fájlnevek %1 másodperc alatt feldolgozva."
 
-#: batchrenamer.cpp:229 batchrenamer.cpp:683
+#: batchrenamer.cpp:229 batchrenamer.cpp:692
 msgid "Files will be copied to: %1"
 msgstr "Fájlok másolása ide: %1"
 
-#: batchrenamer.cpp:232 batchrenamer.cpp:685
+#: batchrenamer.cpp:232 batchrenamer.cpp:694
 msgid "Files will be moved to: %1"
 msgstr "Fájlok áthelyezése ide: %1"
 
@@ -891,7 +908,7 @@ msgstr "Az aktuális fájl indexe"
 msgid "Initial Value"
 msgstr "Kezdőérték"
 
-#: batchrenamer.cpp:226 batchrenamer.cpp:689
+#: batchrenamer.cpp:226 batchrenamer.cpp:698
 msgid "Input files will be renamed."
 msgstr "A bemeneti fájlok átnevezésre kerülnek"
 
@@ -1086,7 +1103,7 @@ msgstr "A KRename verziója:"
 msgid "KRename Help"
 msgstr "KRename-súgó"
 
-#: batchrenamer.cpp:303 batchrenamer.cpp:761
+#: batchrenamer.cpp:303 batchrenamer.cpp:770
 msgid "KRename finished the renaming process."
 msgstr "A KRename befejezte az átnevezést."
 
@@ -1162,7 +1179,7 @@ msgstr "Számjeg&yek száma:"
 msgid "O&wner:"
 msgstr "T&ulajdonos:"
 
-#: krenamemodel.cpp:485
+#: krenamemodel.cpp:504
 msgid "Origin"
 msgstr "Eredeti"
 
@@ -1221,7 +1238,7 @@ msgstr "Modulok"
 msgid "Polish Translation"
 msgstr "Lengyel fordítás."
 
-#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:762
+#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:771
 msgid "Press close to quit!"
 msgstr "Kilépéshez kattintson a \"Bezárás\" gombra."
 
@@ -1289,11 +1306,11 @@ msgstr "A fel &nem dolgozott fájlok ismételt átnevezése..."
 msgid "Rename Processed Files &Again..."
 msgstr "A &feldolgozott fájlok ismételt átnevezése..."
 
-#: krenamemodel.cpp:485
+#: krenamemodel.cpp:504
 msgid "Renamed"
 msgstr "Átnevezve"
 
-#: batchrenamer.cpp:754
+#: batchrenamer.cpp:763
 msgid "Renamed %1 files successfully."
 msgstr "%1 fájl átnevezve."
 
@@ -1385,7 +1402,7 @@ msgstr "Felhasználóifelület-üzenetek és stílus javítása"
 msgid "Supported tokens:"
 msgstr "Támogatott tokenek:"
 
-#: batchrenamer.cpp:235 batchrenamer.cpp:687
+#: batchrenamer.cpp:235 batchrenamer.cpp:696
 msgid "Symbolic links will be created in: %1"
 msgstr "Szimbolikus linkek létrehozása itt: %1"
 
@@ -1393,7 +1410,7 @@ msgstr "Szimbolikus linkek létrehozása itt: %1"
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr "TagLib (MP3/Ogg) modul"
 
-#: rc.cpp:417 rc.cpp:486 rc.cpp:597 rc.cpp:612
+#: rc.cpp:417 rc.cpp:486
 msgid "TextLabel"
 msgstr "Szövegcímke"
 
@@ -1419,11 +1436,11 @@ msgstr ""
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "Red Hat 7.x-csomagok készítése és egyéb segítség."
 
-#: krenameimpl.cpp:584
+#: krenameimpl.cpp:580
 msgid "The directory %1 could not be created."
 msgstr "Nem sikerült létrehozni \"%1\" nevű könyvtárt."
 
-#: krenameimpl.cpp:576
+#: krenameimpl.cpp:572
 msgid ""
 "The directory %1 does not exist. Do you want KRename to create it for you?"
 msgstr ""
@@ -1509,7 +1526,7 @@ msgstr "\"%1\" nem nyitható meg olvasásra."
 msgid "Unable to open %1 for writing."
 msgstr "\"%1\" nem nyitható meg írásra."
 
-#: batchrenamer.cpp:742
+#: batchrenamer.cpp:751
 msgid "Undo is not possible for remote file: %1"
 msgstr "Távoli fájlra nem lehetséges visszavonás: %1"
 
@@ -1698,6 +1715,9 @@ msgstr "y darab karakter a korábbi fájlnévből az x-edik karaktertől kezdve"
 
 #~ msgid "E&xtras"
 #~ msgstr "E&xtrák"
+
+#~ msgid "File&name"
+#~ msgstr "Fájl&név"
 
 #~ msgid "Move"
 #~ msgstr "Áthelyezés"

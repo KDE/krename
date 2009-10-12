@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-26 19:12+0200\n"
+"POT-Creation-Date: 2009-10-12 21:35+0200\n"
 "PO-Revision-Date: 2006-09-18 19:14+0300\n"
 "Last-Translator: Koray Löker <loker@pardus.org.tr>\n"
 "Language-Team:  <tr@li.org>\n"
@@ -23,9 +23,29 @@ msgstr ""
 msgid "%1 errors occurred!"
 msgstr "%2 hata oluştu!"
 
-#: batchrenamer.cpp:758
+#: batchrenamer.cpp:767
 msgid "%2 errors occurred!"
 msgstr "%2 hata oluştu!"
+
+#: krenamewindow.cpp:48
+#, fuzzy
+msgid "&1. Files"
+msgstr "&Dosyalar"
+
+#: krenamewindow.cpp:49
+#, fuzzy
+msgid "&2. Destination"
+msgstr "&Hedef"
+
+#: krenamewindow.cpp:50
+#, fuzzy
+msgid "&3. Plugins"
+msgstr "&Eklentiler"
+
+#: krenamewindow.cpp:51
+#, fuzzy
+msgid "&4. Filename"
+msgstr "&Dosya adı"
 
 #: rc.cpp:384
 msgid "&Add Number"
@@ -54,7 +74,7 @@ msgstr "&Sahibi Değiştir"
 msgid "&Change filename manually..."
 msgstr "Dosya Adını Elle &Değiştir"
 
-#: krenamewindow.cpp:150
+#: krenamewindow.cpp:191
 msgid "&Close"
 msgstr ""
 
@@ -77,11 +97,6 @@ msgstr "&Hedef"
 #, fuzzy
 msgid "&Delete"
 msgstr "Profil &Sil"
-
-#: krenamewindow.cpp:48
-#, fuzzy
-msgid "&Destination"
-msgstr "&Hedef"
 
 #: rc.cpp:45
 msgid "&Display name"
@@ -108,17 +123,12 @@ msgstr "&Uzantı:"
 msgid "&Filename"
 msgstr "&Dosya adı"
 
-#: krenamewindow.cpp:47
-#, fuzzy
-msgid "&Files"
-msgstr "&Dosyalar"
-
 #: rc.cpp:450
 #, fuzzy
 msgid "&Find:"
 msgstr "Bul:"
 
-#: krenamewindow.cpp:149
+#: krenamewindow.cpp:190
 #, fuzzy
 msgid "&Finish"
 msgstr "&Bitiş"
@@ -200,11 +210,6 @@ msgstr "A&yarlar"
 #: rc.cpp:93
 msgid "&Overwrite existing files"
 msgstr "&Üzerine yaz"
-
-#: krenamewindow.cpp:49
-#, fuzzy
-msgid "&Plugins"
-msgstr "&Eklentiler"
 
 #: rc.cpp:213 rc.cpp:321
 msgid "&Prefix:"
@@ -344,7 +349,7 @@ msgid ""
 "html>"
 msgstr ""
 
-#: krenamewindow.cpp:349
+#: krenamewindow.cpp:390
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "Dosya sayısı: <b>%1</b>"
@@ -586,11 +591,11 @@ msgstr "%1 dosyasının izinleri değiştirilemedi."
 msgid "Can't chown %1."
 msgstr "%1 dosyasının sahibi değiştirilemedi."
 
-#: batchrenamer.cpp:670
+#: batchrenamer.cpp:679
 msgid "Can't create undo script :"
 msgstr "Geri alma betiği oluşturulamıyor:"
 
-#: batchrenamer.cpp:772
+#: batchrenamer.cpp:781
 msgid "Can't set executable bit on undo script."
 msgstr "Geri alma betiğinde çalıştırılabilir bit koyamam."
 
@@ -646,6 +651,11 @@ msgstr "Küçük harflere çevir"
 msgid "Convert to upper case"
 msgstr "Büyük harflere çevir"
 
+#: rc.cpp:627
+#, fuzzy
+msgid "Create Variable"
+msgstr "'$' Ekle"
+
 #: rc.cpp:90
 msgid "Create symbolic &links in destination directory"
 msgstr "Hedef dizinde simgesel &bağ oluştur"
@@ -694,11 +704,19 @@ msgstr "Sistem İşlevleri"
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
 
+#: rc.cpp:597
+msgid "Declare global variables that can be used from withhin your functions:"
+msgstr ""
+
+#: rc.cpp:612
+msgid "Define functions that can be used from KRename templates:"
+msgstr ""
+
 #: rc.cpp:471
 msgid "Description"
 msgstr "Açıklama"
 
-#: rc.cpp:585 rc.cpp:627
+#: rc.cpp:585
 msgid "Dialog"
 msgstr ""
 
@@ -733,7 +751,7 @@ msgstr ""
 msgid "Down"
 msgstr ""
 
-#: batchrenamer.cpp:760
+#: batchrenamer.cpp:769
 msgid "Elapsed time: %1 seconds"
 msgstr "Geçen zaman: %1 saniye"
 
@@ -773,10 +791,6 @@ msgstr "Dosya uzantısının başladığı yer:"
 msgid "File preview"
 msgstr "&Önizleme"
 
-#: krenamewindow.cpp:50
-msgid "File&name"
-msgstr "Dosya &Adı"
-
 #: rc.cpp:198 rc.cpp:306
 #, fuzzy
 msgid "File&name:"
@@ -791,11 +805,11 @@ msgstr "Şu anki saati ekleyin"
 msgid "Filenames Processed after %1 seconds."
 msgstr "Dosya adları %1 saniyede işlendi."
 
-#: batchrenamer.cpp:229 batchrenamer.cpp:683
+#: batchrenamer.cpp:229 batchrenamer.cpp:692
 msgid "Files will be copied to: %1"
 msgstr "Dosyalar şuraya kopyalanacak: %1"
 
-#: batchrenamer.cpp:232 batchrenamer.cpp:685
+#: batchrenamer.cpp:232 batchrenamer.cpp:694
 msgid "Files will be moved to: %1"
 msgstr "Dosyalar şuraya taşınacak: %1"
 
@@ -910,7 +924,7 @@ msgstr "Şu anki saati ekleyin"
 msgid "Initial Value"
 msgstr ""
 
-#: batchrenamer.cpp:226 batchrenamer.cpp:689
+#: batchrenamer.cpp:226 batchrenamer.cpp:698
 msgid "Input files will be renamed."
 msgstr "Girdi dosyaları yeniden adlandırılacak."
 
@@ -1117,7 +1131,7 @@ msgstr "KRename"
 msgid "KRename Help"
 msgstr "KRename"
 
-#: batchrenamer.cpp:303 batchrenamer.cpp:761
+#: batchrenamer.cpp:303 batchrenamer.cpp:770
 msgid "KRename finished the renaming process."
 msgstr "KRename yeniden adlandırma işlemini bitirdi."
 
@@ -1201,7 +1215,7 @@ msgstr "&Hane sayısı:"
 msgid "O&wner:"
 msgstr "Sahiplik"
 
-#: krenamemodel.cpp:485
+#: krenamemodel.cpp:504
 msgid "Origin"
 msgstr "İlk hali"
 
@@ -1265,7 +1279,7 @@ msgstr "&Eklentiler"
 msgid "Polish Translation"
 msgstr "İtalyanca çeviri"
 
-#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:762
+#: batchrenamer.cpp:304 batchrenamer.cpp:427 batchrenamer.cpp:771
 msgid "Press close to quit!"
 msgstr "Çıkmak için kapat tuşuna basın!"
 
@@ -1341,11 +1355,11 @@ msgstr "İşlenmemiş Dosyaları &Tekrar Yeniden Adlandır..."
 msgid "Rename Processed Files &Again..."
 msgstr "İşlenmiş Dosyaları &Tekrar Yeniden Adlandır..."
 
-#: krenamemodel.cpp:485
+#: krenamemodel.cpp:504
 msgid "Renamed"
 msgstr "Adlandırılmış hali"
 
-#: batchrenamer.cpp:754
+#: batchrenamer.cpp:763
 msgid "Renamed %1 files successfully."
 msgstr "%1 dosya başarıyla yeniden adlandırıldı."
 
@@ -1440,7 +1454,7 @@ msgstr ""
 msgid "Supported tokens:"
 msgstr "Desteklenen semboller:"
 
-#: batchrenamer.cpp:235 batchrenamer.cpp:687
+#: batchrenamer.cpp:235 batchrenamer.cpp:696
 msgid "Symbolic links will be created in: %1"
 msgstr "Simgesel bağlar %1 içerisinde oluşturulacak"
 
@@ -1448,7 +1462,7 @@ msgstr "Simgesel bağlar %1 içerisinde oluşturulacak"
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr ""
 
-#: rc.cpp:417 rc.cpp:486 rc.cpp:597 rc.cpp:612
+#: rc.cpp:417 rc.cpp:486
 msgid "TextLabel"
 msgstr ""
 
@@ -1477,12 +1491,12 @@ msgstr ""
 "RedHat 7.x paketlerini oluşturduğu için ve başka bazı yardımları sebebiyle "
 "kendisine teşekkür ediyoruz."
 
-#: krenameimpl.cpp:584
+#: krenameimpl.cpp:580
 #, fuzzy
 msgid "The directory %1 could not be created."
 msgstr "\"%1\" profili bulunamadı."
 
-#: krenameimpl.cpp:576
+#: krenameimpl.cpp:572
 #, fuzzy
 msgid ""
 "The directory %1 does not exist. Do you want KRename to create it for you?"
@@ -1573,7 +1587,7 @@ msgstr ""
 msgid "Unable to open %1 for writing."
 msgstr ""
 
-#: batchrenamer.cpp:742
+#: batchrenamer.cpp:751
 msgid "Undo is not possible for remote file: %1"
 msgstr "Geri alma işlemi %1 dosyası için mümkün değil"
 
@@ -1997,6 +2011,9 @@ msgstr "Eski dosya adının x'ten başlayan y karakteri"
 
 #~ msgid "File %1 exists already!"
 #~ msgstr "%1 dosyası zaten var!"
+
+#~ msgid "File&name"
+#~ msgstr "Dosya &Adı"
 
 #~ msgid "Files per directory:"
 #~ msgstr "Dizin başına dosya:"
