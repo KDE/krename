@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-12 21:35+0200\n"
-"PO-Revision-Date: 2009-09-26 19:29+0200\n"
+"PO-Revision-Date: 2009-10-12 22:24+0200\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -32,24 +32,20 @@ msgid "%2 errors occurred!"
 msgstr "%2 hiba lépett fel."
 
 #: krenamewindow.cpp:48
-#, fuzzy
 msgid "&1. Files"
-msgstr "F&ájlok"
+msgstr "&1. Fájlok"
 
 #: krenamewindow.cpp:49
-#, fuzzy
 msgid "&2. Destination"
-msgstr "&Cél"
+msgstr "&2. Cél"
 
 #: krenamewindow.cpp:50
-#, fuzzy
 msgid "&3. Plugins"
-msgstr "Mo&dulok"
+msgstr "&3. Modulok"
 
 #: krenamewindow.cpp:51
-#, fuzzy
 msgid "&4. Filename"
-msgstr "Fájlné&v"
+msgstr "&4. Fájlnév"
 
 #: rc.cpp:384
 msgid "&Add Number"
@@ -653,9 +649,8 @@ msgid "Convert to upper case"
 msgstr "Átalakítás nagybetűsre"
 
 #: rc.cpp:627
-#, fuzzy
 msgid "Create Variable"
-msgstr "Vált&ozó beillesztése"
+msgstr "Változó létrehozása"
 
 #: rc.cpp:90
 msgid "Create symbolic &links in destination directory"
@@ -705,11 +700,11 @@ msgstr ""
 
 #: rc.cpp:597
 msgid "Declare global variables that can be used from withhin your functions:"
-msgstr ""
+msgstr "A függvényekben használható globális változók megadása:"
 
 #: rc.cpp:612
 msgid "Define functions that can be used from KRename templates:"
-msgstr ""
+msgstr "KRename-sablonokból használható függvények megadása:"
 
 #: rc.cpp:471
 msgid "Description"
