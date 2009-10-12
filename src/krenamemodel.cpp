@@ -146,16 +146,35 @@ QVariant KRenameModel::data ( const QModelIndex & index, int role ) const
     if (index.row() >= m_vector->size())
         return QVariant();
 
-    if (role == Qt::DisplayRole && (!m_preview || (m_preview && m_text)) )
+    if (role == Qt::DisplayRole)
     {
-        return m_vector->at(index.row()).toString();
+        if (!m_preview) 
+        {
+            // Only return path
+            return m_vector->at(index.row()).toString();
+        }
+        else if (m_preview && m_text) 
+        {
+            // Short filename as first line in bold
+            // Path as second line
+            const KRenameFile & file = m_vector->at(index.row());
+            QString filename = file.srcFilename();
+            if (!file.srcExtension().isEmpty()) 
+            {
+                filename = filename + "." + file.srcExtension();
+            }
+
+            return "<qt><b>" + filename + "</b><br/>" +
+                file.toString() + "</qt>";
+        }
     }
     else if( role == Qt::DecorationRole && m_preview ) 
     {
         return m_vector->at(index.row()).icon();
     }
-    else
-        return QVariant();
+
+
+    return QVariant();
 }
 
 Qt::ItemFlags KRenameModel::flags(const QModelIndex &index) const

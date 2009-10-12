@@ -20,6 +20,7 @@
 #include "krenamemodel.h"
 #include "plugin.h"
 #include "pluginloader.h"
+#include "richtextitemdelegate.h"
 
 #include "ui_krenamefiles.h"
 #include "ui_krenamedestination.h"
@@ -44,10 +45,10 @@
 static const KRenameWindow::TGuiMode tAdvancedMode = {
     4,
     {
-        I18N_NOOP( "&Files" ),
-        I18N_NOOP( "&Destination" ),
-        I18N_NOOP( "&Plugins" ),
-        I18N_NOOP( "File&name" )
+        I18N_NOOP( "&1. Files" ),
+        I18N_NOOP( "&2. Destination" ),
+        I18N_NOOP( "&3. Plugins" ),
+        I18N_NOOP( "&4. Filename" )
     },
     {
         0, 1, 2, 3
@@ -68,6 +69,7 @@ KRenameWindow::KRenameWindow( QWidget* parent )
     QWidget*     center = new QWidget();
     QVBoxLayout* layout = new QVBoxLayout( center );
 
+    m_delegate = new RichTextItemDelegate(this);
     m_tabBar  = new QTabBar( center );
     m_stack   = new QStackedWidget( center );
     m_buttons = new QDialogButtonBox( center );
@@ -115,7 +117,8 @@ KRenameWindow::KRenameWindow( QWidget* parent )
     setupIcons();
 
     m_pageDests->urlrequester->setMode( KFile::Directory | KFile::ExistingOnly );
-    
+    m_pageFiles->fileList->setItemDelegate( m_delegate );
+
     // Make sure that now signal occurs before setupGui was called
     connect( m_tabBar, SIGNAL(currentChanged(int)), SLOT(showPage(int)));
     connect( m_buttonClose, SIGNAL(clicked(bool)), SLOT(close()));

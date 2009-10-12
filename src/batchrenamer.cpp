@@ -446,7 +446,16 @@ QString BatchRenamer::processBrackets( QString text, int* length, const QString 
             QString substitute = processBrackets( text.right( text.length() - pos ), &localLength, oldname, index );
             text.replace( pos - 1, localLength, substitute );
             // MSG: qDebug("substituted: %s\n", text.toUtf8().data() );
-            *length += (localLength - substitute.length() );
+            // Assure that *length does not become negative,
+            // this will cause infinite loops
+            if( localLength < substitute.length() ) 
+            {
+                *length += localLength;
+            }
+            else
+            {
+                *length += (localLength - substitute.length() );
+            }
         }
         else if( token == "]" ) 
         {

@@ -38,6 +38,7 @@ class QTabBar;
 class QTreeWidgetItem;
 
 class Plugin;
+class RichTextItemDelegate;
 
 namespace Ui {
     class KRenameFiles;
@@ -514,6 +515,8 @@ class KRenameWindow : public KMainWindow {
 
     QHash<QString,QWidget*> m_pluginsWidgetHash;
     QHash<QString,Plugin*>  m_pluginsHash;
+
+    RichTextItemDelegate*   m_delegate;
 };
 
 

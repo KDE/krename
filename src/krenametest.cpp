@@ -466,6 +466,10 @@ void KRenameTest::testBatchRenamer()
 
     // TODO:
     // TODO: Manual Change Test
+
+    // Regression tests
+    RUN_TOKEN_TEST( "[1-2 [4-] Test", "[1-2 [4-]", filename, " " + filename.right( filename.length() - 3 ) );
+
 }
 
 bool KRenameTest::tokenTest( const char* token, const QString & filename, const QString & expected) 

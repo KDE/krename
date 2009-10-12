@@ -4,10 +4,10 @@ add_subdirectory( servicemenus )
 
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR} 
                      ${KDE4_INCLUDE_DIR} 
-				     ${QT_INCLUDES} 
-				     ${CMAKE_CURRENT_SOURCE_DIR} 
-					 ${CMAKE_CURRENT_BINARY_DIR}
-					 ${TAGLIB_INCLUDE_DIR} )
+		     ${QT_INCLUDES} 
+		     ${CMAKE_CURRENT_SOURCE_DIR} 
+		     ${CMAKE_CURRENT_BINARY_DIR}
+		     ${TAGLIB_INCLUDE_DIR} )
 
 IF(EXIV2_FOUND)
   INCLUDE_DIRECTORIES( ${EXIV2_INCLUDE_DIR} )
@@ -45,6 +45,7 @@ SET(krename_SRCS
   previewlist.cpp
   progressdialog.cpp
   replacedialog.cpp
+  richtextitemdelegate.cpp
   scriptplugin.cpp
   systemplugin.cpp
   tokenhelpdialog.cpp
@@ -52,10 +53,10 @@ SET(krename_SRCS
   )
 
 IF ( TAGLIB_FOUND )
-       SET(krename_SRCS 
-               ${krename_SRCS}
-               taglibplugin.cpp
-       )
+  SET(krename_SRCS 
+    ${krename_SRCS}
+    taglibplugin.cpp
+    )
 ENDIF ( TAGLIB_FOUND )
 
 kde4_add_ui_files( krename_SRCS 

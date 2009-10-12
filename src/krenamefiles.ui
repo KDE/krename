@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>KRenameFiles</class>
- <widget class="QWidget" name="KRenameFiles" >
-  <property name="geometry" >
+ <widget class="QWidget" name="KRenameFiles">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,153 +10,156 @@
     <height>442</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string/>
   </property>
-  <layout class="QHBoxLayout" >
-   <property name="spacing" >
+  <layout class="QHBoxLayout">
+   <property name="spacing">
     <number>6</number>
    </property>
-   <property name="margin" >
+   <property name="margin">
     <number>9</number>
    </property>
    <item>
-    <widget class="QListView" name="fileList" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+    <widget class="QListView" name="fileList">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
        <horstretch>2</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <property name="sizeIncrement" >
+     <property name="sizeIncrement">
       <size>
        <width>0</width>
        <height>0</height>
       </size>
      </property>
-     <property name="acceptDrops" >
+     <property name="acceptDrops">
       <bool>true</bool>
      </property>
-     <property name="editTriggers" >
+     <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
      </property>
-     <property name="dragDropMode" >
+     <property name="dragDropMode">
       <enum>QAbstractItemView::DragDrop</enum>
      </property>
-     <property name="alternatingRowColors" >
+     <property name="alternatingRowColors">
       <bool>true</bool>
      </property>
-     <property name="selectionMode" >
+     <property name="selectionMode">
       <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="uniformItemSizes">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
    <item>
-    <layout class="QVBoxLayout" >
-     <property name="spacing" >
+    <layout class="QVBoxLayout">
+     <property name="spacing">
       <number>6</number>
      </property>
-     <property name="margin" >
+     <property name="margin">
       <number>0</number>
      </property>
      <item>
-      <widget class="QPushButton" name="buttonAdd" >
-       <property name="toolTip" >
+      <widget class="QPushButton" name="buttonAdd">
+       <property name="toolTip">
         <string>Add files for renaming.</string>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>&amp;Add...</string>
        </property>
-       <property name="default" >
+       <property name="default">
         <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="buttonRemove" >
-       <property name="toolTip" >
+      <widget class="QPushButton" name="buttonRemove">
+       <property name="toolTip">
         <string>Remove selected files.</string>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>Re&amp;move</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="buttonRemoveAll" >
-       <property name="toolTip" >
+      <widget class="QPushButton" name="buttonRemoveAll">
+       <property name="toolTip">
         <string>Remove all files.</string>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>Re&amp;move All</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboSort" >
+      <widget class="QComboBox" name="comboSort">
        <item>
-        <property name="text" >
+        <property name="text">
          <string>Sort: Unsorted</string>
         </property>
        </item>
        <item>
-        <property name="text" >
+        <property name="text">
          <string>Sort: Ascending</string>
         </property>
        </item>
        <item>
-        <property name="text" >
+        <property name="text">
          <string>Sort: Descending</string>
         </property>
        </item>
        <item>
-        <property name="text" >
+        <property name="text">
          <string>Sort: Numeric</string>
         </property>
        </item>
        <item>
-        <property name="text" >
+        <property name="text">
          <string>Sort: Random</string>
         </property>
        </item>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="checkPreview" >
-       <property name="toolTip" >
+      <widget class="QCheckBox" name="checkPreview">
+       <property name="toolTip">
         <string>Display a preview image for each file.</string>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>&amp;Preview</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="checkName" >
-       <property name="toolTip" >
+      <widget class="QCheckBox" name="checkName">
+       <property name="toolTip">
         <string>Display the filename together with the preview.</string>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>&amp;Display name</string>
        </property>
-       <property name="checked" >
+       <property name="checked">
         <bool>true</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelCount" >
-       <property name="text" >
-        <string>Files: &lt;b>0&lt;/b></string>
+      <widget class="QLabel" name="labelCount">
+       <property name="text">
+        <string>Files: &lt;b&gt;0&lt;/b&gt;</string>
        </property>
       </widget>
      </item>
      <item>
       <spacer>
-       <property name="orientation" >
+       <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
          <height>40</height>
@@ -164,37 +168,37 @@
       </spacer>
      </item>
      <item>
-      <layout class="QHBoxLayout" >
-       <property name="spacing" >
+      <layout class="QHBoxLayout">
+       <property name="spacing">
         <number>6</number>
        </property>
-       <property name="margin" >
+       <property name="margin">
         <number>0</number>
        </property>
        <item>
-        <layout class="QVBoxLayout" >
-         <property name="spacing" >
+        <layout class="QVBoxLayout">
+         <property name="spacing">
           <number>6</number>
          </property>
-         <property name="margin" >
+         <property name="margin">
           <number>0</number>
          </property>
          <item>
-          <widget class="QPushButton" name="buttonUp" >
-           <property name="toolTip" >
+          <widget class="QPushButton" name="buttonUp">
+           <property name="toolTip">
             <string>Move selected files upwards.</string>
            </property>
-           <property name="text" >
+           <property name="text">
             <string>Up</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="buttonDown" >
-           <property name="toolTip" >
+          <widget class="QPushButton" name="buttonDown">
+           <property name="toolTip">
             <string>Move selected files downwards.</string>
            </property>
-           <property name="text" >
+           <property name="text">
             <string>Down</string>
            </property>
           </widget>
@@ -203,10 +207,10 @@
        </item>
        <item>
         <spacer>
-         <property name="orientation" >
+         <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <property name="sizeHint" stdset="0" >
+         <property name="sizeHint" stdset="0">
           <size>
            <width>40</width>
            <height>20</height>
@@ -218,10 +222,10 @@
      </item>
      <item>
       <spacer>
-       <property name="orientation" >
+       <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
          <height>40</height>
