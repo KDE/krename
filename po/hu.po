@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-12 21:35+0200\n"
+"POT-Creation-Date: 2009-10-14 17:55+0200\n"
 "PO-Revision-Date: 2009-10-12 22:24+0200\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
@@ -699,7 +699,8 @@ msgstr ""
 "fájl."
 
 #: rc.cpp:597
-msgid "Declare global variables that can be used from withhin your functions:"
+#, fuzzy
+msgid "Declare global variables that can be used from within your functions:"
 msgstr "A függvényekben használható globális változók megadása:"
 
 #: rc.cpp:612

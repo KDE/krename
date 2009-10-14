@@ -30,7 +30,7 @@
        <item>
         <widget class="QLabel" name="labelDescVariables">
          <property name="text">
-          <string>Declare global variables that can be used from withhin your functions:</string>
+          <string>Declare global variables that can be used from within your functions:</string>
          </property>
         </widget>
        </item>

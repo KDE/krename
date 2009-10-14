@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-12 21:35+0200\n"
+"POT-Creation-Date: 2009-10-14 17:55+0200\n"
 "PO-Revision-Date: 2009-09-26 17:59+0200\n"
 "Last-Translator: Dominik Seichter <domseichter@web.de>\n"
 "Language-Team:  <de@li.org>\n"
@@ -682,7 +682,7 @@ msgstr ""
 "Datei auf einem entferntem Rechner."
 
 #: rc.cpp:597
-msgid "Declare global variables that can be used from withhin your functions:"
+msgid "Declare global variables that can be used from within your functions:"
 msgstr ""
 
 #: rc.cpp:612

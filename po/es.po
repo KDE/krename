@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-12 21:35+0200\n"
+"POT-Creation-Date: 2009-10-14 17:55+0200\n"
 "PO-Revision-Date: 2006-03-02 14:28+0100\n"
 "Last-Translator: Jose Rodriguez <chmpmi@eresmas.net>\n"
 "Language-Team:  <es@li.org>\n"
@@ -714,7 +714,7 @@ msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
 
 #: rc.cpp:597
-msgid "Declare global variables that can be used from withhin your functions:"
+msgid "Declare global variables that can be used from within your functions:"
 msgstr ""
 
 #: rc.cpp:612
