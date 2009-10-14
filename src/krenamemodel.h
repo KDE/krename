@@ -147,6 +147,8 @@ class KRenameModel : public QAbstractListModel {
 
    int                m_maxDots;  ///< The maximum number of dots in a filename which can be used to separate filename and extension
    const char*        m_mimeType; ///< MIME type for drag and drop operations
+
+   ESortMode          m_eSortMode; ///< Last used sort mode
 };
 
 const KRenameFile & KRenameModel::file( int index ) const

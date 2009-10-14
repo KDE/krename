@@ -120,7 +120,8 @@ KRenameModel::KRenameModel( KRenameFile::List* vector )
       m_preview( false ),
       m_text( false ),
       m_maxDots( 0 ),
-      m_mimeType("text/uri-list")
+      m_mimeType("text/uri-list"),
+      m_eSortMode( eSortMode_Unsorted )
 {
 
 }
@@ -308,7 +309,11 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
 
         if( m_maxDots > oldMaxDots ) 
             emit maxDotsChanged( m_maxDots );
- 
+
+        // Update sorting
+        this->sortFiles( m_eSortMode );
+
+        // Generate previews if necessary
         if( m_preview ) 
         {
             // Construct a list of KFileItems
@@ -385,6 +390,8 @@ void KRenameModel::removeFiles( const QList<int> & remove )
 
 void KRenameModel::sortFiles( ESortMode mode )
 {
+    m_eSortMode = mode;
+
     if( mode == eSortMode_Ascending ) 
         qSort( m_vector->begin(), m_vector->end(), ascendingKRenameFileLessThan );
     else if( mode == eSortMode_Descending ) 
