@@ -32,6 +32,7 @@ SET(krename_SRCS
   increasecounterplugin.cpp
   krenamefile.cpp 
   krenameimpl.cpp 
+  krenamelistview.cpp
   krenamemodel.cpp
   krenametest.cpp
   krenamewindow.cpp
@@ -47,6 +48,7 @@ SET(krename_SRCS
   replacedialog.cpp
   richtextitemdelegate.cpp
   scriptplugin.cpp
+  startupinfo.cpp
   systemplugin.cpp
   tokenhelpdialog.cpp
   translitplugin.cpp
@@ -76,6 +78,7 @@ kde4_add_ui_files( krename_SRCS
   replaceitemdlg.ui
   scriptpluginwidget.ui
   scriptplugindialog.ui
+  startupinfowidget.ui
   tokenhelpwidget.ui
   )
 

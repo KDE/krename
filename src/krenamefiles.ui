@@ -21,7 +21,7 @@
     <number>9</number>
    </property>
    <item>
-    <widget class="QListView" name="fileList">
+    <widget class="KRenameListView" name="fileList">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
        <horstretch>2</horstretch>
@@ -237,6 +237,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KRenameListView</class>
+   <extends>QListView</extends>
+   <header>krenamelistview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

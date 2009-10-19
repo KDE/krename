@@ -21,6 +21,7 @@
 #include "plugin.h"
 #include "pluginloader.h"
 #include "richtextitemdelegate.h"
+#include "startupinfo.h"
 
 #include "ui_krenamefiles.h"
 #include "ui_krenamedestination.h"
@@ -116,8 +117,13 @@ KRenameWindow::KRenameWindow( QWidget* parent )
     setupPlugins();
     setupIcons();
 
+    StartUpInfo* startUp = new StartUpInfo();
+    connect( startUp, SIGNAL(addFiles()), SIGNAL(addFiles()));
+    connect( startUp, SIGNAL(enterTemplate()), SLOT(slotGotoTemplatesPage()));
+
     m_pageDests->urlrequester->setMode( KFile::Directory | KFile::ExistingOnly );
     m_pageFiles->fileList->setItemDelegate( m_delegate );
+    m_pageFiles->fileList->setInfoWidget( startUp );
 
     // Make sure that now signal occurs before setupGui was called
     connect( m_tabBar, SIGNAL(currentChanged(int)), SLOT(showPage(int)));
@@ -389,6 +395,7 @@ void KRenameWindow::setCount( unsigned int count )
     m_fileCount = count;
     m_pageFiles->labelCount->setText( i18n("<b>Files:<b> %1", m_fileCount ) );
 
+    m_pageFiles->fileList->slotUpdateCount();
     this->slotEnableControls();
 }
 
@@ -688,6 +695,11 @@ void KRenameWindow::slotRenameModeChanged()
     emit renameModeChanged( mode );
 
     this->slotEnableControls();
+}
+
+void KRenameWindow::slotGotoTemplatesPage()
+{
+    m_tabBar->setCurrentIndex(3);
 }
 
 void KRenameWindow::slotSimpleStartIndexChanged()

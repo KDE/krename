@@ -422,7 +422,13 @@ class KRenameWindow : public KMainWindow {
      *  in the gui
      */
     void slotSimpleStartIndexChanged();
-   
+
+    /**
+     * Called when the user clicked the enter templates
+     * link in StartUpInfo.
+     */
+    void slotGotoTemplatesPage();
+
  private:
     /** Configures the GUI for the current GUI mode
      */
