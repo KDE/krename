@@ -587,7 +587,7 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
                     }
                 }
 
-		// -2 because we have to go, before the current found token
+                // -2 because we have to go, before the current found token
                 appendix = text.mid( curPos + 1, appendixPos - curPos - 2 );
                 appendixLength = appendixPos - curPos;
             }
@@ -595,8 +595,8 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
             QString number   = processNumber( count, appendix );
             text.replace( pos - 1, (length + appendixLength), number );
 
-	    if( number.length() > 0 )
-		pos += number.length() - 1;
+            if( number.length() > 0 )
+                pos += number.length() - 1;
         }
     }
 
@@ -954,7 +954,6 @@ QString BatchRenamer::findToken( const QString & oldname, QString token, int i )
             break;
     }
 
-    doEscape( token );
     return token;
 }
 

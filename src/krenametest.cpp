@@ -468,8 +468,13 @@ void KRenameTest::testBatchRenamer()
     // TODO: Manual Change Test
 
     // Regression tests
+    // Caused an infinite loop
     RUN_TOKEN_TEST( "[1-2 [4-] Test", "[1-2 [4-]", filename, " " + filename.right( filename.length() - 3 ) );
 
+    // Brackets appeared as \[ in the final result
+    QString regressionName = "1-07 Take Flight (Wings) [Pocketman]";
+    QString regressionExpect = "100-Take Flight (Wings) [Pocketman]";
+    RUN_TOKEN_TEST( "1##-[$6-] Test", "1##-[$6-]", regressionName, regressionExpect );
 }
 
 bool KRenameTest::tokenTest( const char* token, const QString & filename, const QString & expected) 
