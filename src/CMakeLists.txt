@@ -25,7 +25,6 @@ SET(krename_SRCS
   batchrenamer.cpp
   customdialog.cpp
   datetimeplugin.cpp
-  exiv2plugin.cpp
   exthistorycombo.cpp
   filedialogextwidget.cpp
   fileplugin.cpp
@@ -53,6 +52,13 @@ SET(krename_SRCS
   tokenhelpdialog.cpp
   translitplugin.cpp
   )
+
+IF ( EXIV2_FOUND )
+  SET(krename_SRCS
+    ${krename_SRCS}
+    exiv2plugin.cpp
+    )
+ENDIF ( EXIV2_FOUND )
 
 IF ( TAGLIB_FOUND )
   SET(krename_SRCS 

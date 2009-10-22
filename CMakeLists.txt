@@ -33,6 +33,7 @@ macro_optional_find_package(Exiv2)
 macro_log_feature(EXIV2_FOUND "Exiv2" "A library to access image metadata" "http://www.exiv2.org" FALSE "")
 
 IF(EXIV2_FOUND)
+  ADD_DEFINITIONS( -DWITH_EXIV2 )
   MESSAGE("-- The exiv2 library was found. KRename will be built with exiv2 support.")
 ELSE(EXIV2_FOUND)
   MESSAGE("-- The exiv2 library was not found. KRename will not be built with exiv2 support.")

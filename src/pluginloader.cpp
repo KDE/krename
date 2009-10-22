@@ -21,7 +21,9 @@
 #include "plugin.h"
 
 #include "datetimeplugin.h"
+#ifdef WITH_EXIV2
 #include "exiv2plugin.h"
+#endif // WITH_EXIV2
 #include "fileplugin.h"
 #include "increasecounterplugin.h"
 #include "permissionsplugin.h"
@@ -125,9 +127,9 @@ void PluginLoader::load()
 #ifndef _WIN32
     m_plugins.append( new DateTimePlugin( this ) );
 #endif // _WIN32
-#ifdef HAVE_EXIV2
+#ifdef WITH_EXIV2
     m_plugins.append( new Exiv2Plugin( this ) );
-#endif // HAVE_EXIV2
+#endif // WITH_EXIV2
 	m_plugins.append( new IncreaseCounterPlugin( this ) );
 #ifndef _WIN32
 	m_plugins.append( new PermissionsPlugin( this ) );
