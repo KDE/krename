@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
+<ui version="4.0" >
  <class>StartUpInfoWidget</class>
- <widget class="QFrame" name="StartUpInfoWidget">
-  <property name="geometry">
+ <widget class="QFrame" name="StartUpInfoWidget" >
+  <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
@@ -10,36 +9,36 @@
     <height>362</height>
    </rect>
   </property>
-  <property name="windowTitle">
+  <property name="windowTitle" >
    <string>Frame</string>
   </property>
-  <property name="frameShape">
+  <property name="frameShape" >
    <enum>QFrame::Box</enum>
   </property>
-  <property name="frameShadow">
+  <property name="frameShadow" >
    <enum>QFrame::Sunken</enum>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout" >
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout" >
      <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+      <widget class="QLabel" name="label" >
+       <property name="text" >
+        <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Welcome to KRename&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;A batch file renamer for KDE.&lt;br /&gt;To rename your files, you have to:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:large; font-weight:600;">Welcome to KRename&lt;/span>&lt;/p>
+&lt;p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">A batch file renamer for KDE.&lt;br />To rename your files, you have to:&lt;/p>&lt;/body>&lt;/html></string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="krenameIcon">
-       <property name="text">
+      <widget class="QLabel" name="krenameIcon" >
+       <property name="text" >
         <string>TextLabel</string>
        </property>
-       <property name="scaledContents">
+       <property name="scaledContents" >
         <bool>false</bool>
        </property>
       </widget>
@@ -47,31 +46,31 @@ p, li { white-space: pre-wrap; }
     </layout>
    </item>
    <item>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="addIcon">
-       <property name="text">
+    <layout class="QGridLayout" name="gridLayout" >
+     <item row="0" column="0" >
+      <widget class="QLabel" name="addIcon" >
+       <property name="text" >
         <string>TextLabel</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="KUrlLabel" name="labelAdd">
-       <property name="text">
+     <item row="0" column="1" >
+      <widget class="KUrlLabel" name="labelAdd" >
+       <property name="text" >
         <string>Add some files ...</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="templateIcon">
-       <property name="text">
+     <item row="1" column="0" >
+      <widget class="QLabel" name="templateIcon" >
+       <property name="text" >
         <string>TextLabel</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="KUrlLabel" name="labelTemplate">
-       <property name="text">
+     <item row="1" column="1" >
+      <widget class="KUrlLabel" name="labelTemplate" >
+       <property name="text" >
         <string>Specify the new filenames by giving a template ...</string>
        </property>
       </widget>
@@ -79,11 +78,11 @@ p, li { white-space: pre-wrap; }
     </layout>
    </item>
    <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
+    <spacer name="verticalSpacer" >
+     <property name="orientation" >
       <enum>Qt::Vertical</enum>
      </property>
-     <property name="sizeHint" stdset="0">
+     <property name="sizeHint" stdset="0" >
       <size>
        <width>20</width>
        <height>189</height>
@@ -92,9 +91,9 @@ p, li { white-space: pre-wrap; }
     </spacer>
    </item>
    <item>
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Hint: Undo is still possible after renaing your files.</string>
+    <widget class="QLabel" name="label_2" >
+     <property name="text" >
+      <string>Hint: Undo is still possible after renaming your files.</string>
      </property>
     </widget>
    </item>
