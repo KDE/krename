@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-19 09:44+0200\n"
-"PO-Revision-Date: 2009-10-14 21:50+0200\n"
+"PO-Revision-Date: 2009-10-25 16:48+0100\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -339,7 +339,6 @@ msgstr ""
 "alkalmazzon -4 értékű eltolást.</p></body></html>"
 
 #: rc.cpp:380
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -360,20 +359,14 @@ msgstr ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; "
-"font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">A modul hozzáad egy megadott eltolási értéket a fájlnevekben "
-"levő számhoz.</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Ha "
-"például az <span style=\" font-style:italic;\">img014</span>, <span style=\" "
-"font-style:italic;\">img015</span> és <span style=\" font-style:italic;"
-"\">img023</span> fájlokat szeretné átnevezni<span style=\" font-style:italic;"
-"\"> img010</span>, <span style=\" font-style:italic;\">img011</span>, "
-"illetve <span style=\" font-style:italic;\">img019 </span>névre, akkor "
-"alkalmazzon -4 értékű eltolást.</p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
+"large; font-weight:600;\">Üdvözli a KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Tömeges fájlátnevező a KDE "
+"környezethez.<br />Fájlátnevezéshez tegye a következőket:</p></body></html>"
 
 #: krenamewindow.cpp:396
 msgid "<b>Files:<b> %1"
@@ -558,9 +551,8 @@ msgstr ""
 "mellőzése"
 
 #: rc.cpp:394
-#, fuzzy
 msgid "Add some files ..."
-msgstr "Betöltés fá&jlból..."
+msgstr "Vegyen fel fájlokat..."
 
 #: filedialogextwidget.cpp:34
 msgid "Add subdirectories &recursively"
@@ -894,9 +886,8 @@ msgid "Form"
 msgstr "Űrlap"
 
 #: rc.cpp:377
-#, fuzzy
 msgid "Frame"
-msgstr "Űrlap"
+msgstr "Keret"
 
 #: main.cpp:87
 msgid "Franz Schmid"
@@ -927,9 +918,8 @@ msgid "Group"
 msgstr "Csoport"
 
 #: rc.cpp:403
-#, fuzzy
 msgid "Hint: Undo is still possible after renaing your files."
-msgstr "Távoli fájlra nem lehetséges visszavonás: %1"
+msgstr "Megjegyzés: a fájlok átnevezése után vissza lehet vonni a műveletet"
 
 #: filedialogextwidget.cpp:51
 msgid ""
@@ -1411,7 +1401,7 @@ msgstr "Speciális karakterek"
 
 #: rc.cpp:400
 msgid "Specify the new filenames by giving a template ..."
-msgstr ""
+msgstr "Adja meg az új fájlneveket egy sablon megadásával..."
 
 #: rc.cpp:177 rc.cpp:598
 msgid "Start  &index:"
