@@ -117,7 +117,11 @@ bool KRenameFile::operator==( const KFileItem & item ) const
 void KRenameFile::setCurrentSplitMode( ESplitMode eSplitMode, unsigned int dot )
 {
     KUrl    url      = m_src.url;
-    QString filename = m_src.filename + "." + m_src.extension;
+    QString filename = m_src.filename;
+    if( !m_src.extension.isEmpty() ) 
+    {
+        filename = filename + "." + m_src.extension;
+    }
 
     url.setDirectory( m_src.directory );
     url.addPath( filename );
