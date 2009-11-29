@@ -18,12 +18,12 @@
 #ifndef _CUSTOM_DIALOG_H_
 #define _CUSTOM_DIALOG_H_
 
-#include <QDialog>
+#include <kdialog.h>
 #include "ui_customfilenamedlg.h"
 
 class KRenameFile;
 
-class CustomDialog : public QDialog {
+class CustomDialog : public KDialog {
  Q_OBJECT
  public:
     CustomDialog( const KRenameFile & file, QWidget* parent );

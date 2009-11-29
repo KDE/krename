@@ -20,14 +20,18 @@
 #include "krenamefile.h"
 
 CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
-    : QDialog( parent )
+    : KDialog( parent )
 {
-    m_widget.setupUi( this );
+    m_widget.setupUi( this->mainWidget() );
 
     connect( m_widget.radioKRename, SIGNAL(clicked(bool)), this, SLOT(slotEnableControls()));
     connect( m_widget.radioInput,   SIGNAL(clicked(bool)), this, SLOT(slotEnableControls()));
     connect( m_widget.radioCustom,  SIGNAL(clicked(bool)), this, SLOT(slotEnableControls()));
 
+    // Set default vallues
+    m_widget.radioCustom->setChecked( true );
+    m_widget.radioKRename->setChecked( false );
+    m_widget.radioInput->setChecked( false );
 
     QString filename = file.srcFilename();
     if( !file.srcExtension().isEmpty() )
@@ -41,19 +45,22 @@ CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
     if( !file.manualChanges().isNull() )
     {
         filename = file.manualChanges();
-        m_widget.radioCustom->setChecked( true );
-        m_widget.radioKRename->setChecked( false );
-        m_widget.radioInput->setChecked( false );
     }
 
     m_widget.labelPreview->setPixmap( file.icon() );
     m_widget.lineEdit->setText( filename );
     slotEnableControls();
+
+    KSharedConfigPtr config = KGlobal::config();
+    KConfigGroup group = config->group( QString("CustomDialogGroup") );
+    this->restoreDialogSize(group);
 }
 
 CustomDialog::~CustomDialog()
 {
-
+    KSharedConfigPtr config = KGlobal::config();
+    KConfigGroup group = config->group( QString("CustomDialogGroup") );
+    this->saveDialogSize(group);
 }
 
 void CustomDialog::slotEnableControls()
