@@ -91,13 +91,14 @@ class ProgressDialog : public QDialog {
      *  Mostly used to disable the cancel button
      *  and enable other buttons
      *
+     *  @param enableMore if ture the more button will be enabled
      *  @param enableUndo if true the undo button will be enabled
      *  @param batchRename is a handle to a batchrenamer instance that can be used to undo the operation and
      *                     to determine URLs for a new renaming session
      *  @param errros the number of errors that have occurred. If errors have occured the user
      *                has the extra possibility to only rename files with errors again
      */
-    void renamingDone( bool enableUndo, BatchRenamer* renamer, int errors ); 
+    void renamingDone( bool enableMore, bool enableUndo, BatchRenamer* renamer, int errors ); 
 
  private slots:
      /** Called when the user cancels the operation

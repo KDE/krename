@@ -145,12 +145,12 @@ void ProgressDialog::slotUndo()
     }
 }
 
-void ProgressDialog::renamingDone( bool enableUndo, BatchRenamer* renamer, int errors )
+void ProgressDialog::renamingDone( bool enableMore, bool enableUndo, BatchRenamer* renamer, int errors )
 {
     m_widget.buttonCancel->setEnabled( false );
 
     m_buttonUndo->setEnabled( enableUndo );
-    m_buttonMore->setEnabled( enableUndo ); // Do allow renaming processed files after undo
+    m_buttonMore->setEnabled( enableMore ); // Do allow renaming processed files after undo
     m_buttonClose->setEnabled( true );
 
     m_actProcessed->setEnabled  ( renamer->files()->count() != errors );

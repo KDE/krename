@@ -159,17 +159,6 @@ void BatchRenamer::processFilenames()
         
         (void)applyManualChanges( i );
         
-        // Assemble filenames
-        //parseSubdirs( &m_files[i] );
-        // TODO: DOM 
-        // ESCAPE HERE
-        /*
-          m_files[i].src.name = BatchRenamer::buildFilename( &m_files[i].src, true );
-          
-          
-          m_files[i].dst.name = BatchRenamer::buildFilename( &m_files[i].dst, true );
-        */
-        
         /*
          * take care of renamed directories and
          * correct the paths of their contents
@@ -246,6 +235,9 @@ void BatchRenamer::processFiles( ProgressDialog* p )
         if( p->wasCancelled() )
             break;
 
+        // Assemble filenames
+        createMissingSubDirs( (*m_files)[i], p );
+        
         KIO::JobFlags flags  = (m_overwrite ? KIO::Overwrite : KIO::DefaultFlags) | KIO::HideProgressInfo;
         KIO::Job*     job    = NULL;
         const KUrl &  srcUrl =  (*m_files)[i].srcUrl();
@@ -303,7 +295,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
     p->print( i18n("KRename finished the renaming process."), "krename" );
     p->print( i18n("Press close to quit!") );
     bool enableUndo = (m_renameMode != eRenameMode_Copy);
-    p->renamingDone( enableUndo, this, errors );
+    p->renamingDone( true, enableUndo, this, errors );
     
 #if 0
     delete object;
@@ -425,7 +417,7 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
 
     p->print( i18n("KRename finished the undo process."), "krename" );
     p->print( i18n("Press close to quit!") );
-    p->renamingDone( false, this, errors ); // do not allow undo from undo
+    p->renamingDone( false, false, this, errors ); // do not allow undo from undo
 
 }
 
@@ -1152,35 +1144,33 @@ void BatchRenamer::writeUndoScript( QTextStream* t )
          << "fi" << endl;
 }
 
-#if 0
-void BatchRenamer::parseSubdirs( data* f )
+void BatchRenamer::createMissingSubDirs( const KRenameFile & file, ProgressDialog* p )
 {
     int pos = 0;
-    if( (pos = f->dst.name.findRev( "/", -1 ) ) > 0 ) {
-        QString dirs = f->dst.name.left( pos );
-        f->dst.name = f->dst.name.right( f->dst.name.length() - pos - 1 );
-        f->dst.directory += ( f->dst.directory.right( 1 ) == "/" ) ? "" : "/";
+    QString dstFilename = file.dstFilename();
+    if( (pos = dstFilename.lastIndexOf( '/', -1 ) ) > 0 ) {
+        QString directories = dstFilename.left( pos );
 
         // create the missing subdir now
         int i = 0;
-        QString d = "";
-        while( (d = dirs.section( "/", i, i, QString::SectionSkipEmpty )) && ! d.isEmpty() ) { // asignment here!
-            KURL url = f->dst.url;
+        QString d = directories.section( "/", i, i, QString::SectionSkipEmpty );
+        while( !d.isEmpty() ) {
+            KUrl url = file.dstUrl();
+            
             // it is important to unescape here
             // to support dirnames containing "&" or 
             // similar tokens
             url.addPath( unEscape( d ) );
-            if( !NetAccess::exists( url ) && !NetAccess::mkdir( url ) )
-                // TODO: GUI bug report
-                qDebug("Can't create %s", url.prettyURL().latin1() ); 
+            if( !KIO::NetAccess::exists( url, true, p ) && !KIO::NetAccess::mkdir( url, p ) ) {
+                p->error( i18n("Cannot create directory %1", url.prettyUrl()) );
+            }
 
-            f->dst.url.addPath( d );
-            f->dst.directory.append( d + "/" );
             i++;
+            d = directories.section( "/", i, i, QString::SectionSkipEmpty );
         }
     }
 }
-#endif // 0
+
 
 bool BatchRenamer::applyManualChanges( int i )
 {

@@ -325,7 +325,16 @@ class BatchRenamer : public QObject {
 
         void work( ProgressDialog* p );
         void writeUndoScript( QTextStream* t );
-        //void parseSubdirs( data* f );
+     
+        /**
+         * Parse a new filename and create missing subdirectories.
+         *
+         * This will look for '/' and create all not existing directories
+         *
+         * @param file to check for not existing directories
+         * @param p ProgressDialog for error reporting
+         */
+         void createMissingSubDirs( const KRenameFile & file, ProgressDialog* p );
 
 	/** resets all counters to there start value if the directory name at @p i
 	 *  in m_files changes.
