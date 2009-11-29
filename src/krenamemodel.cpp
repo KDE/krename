@@ -173,6 +173,10 @@ QVariant KRenameModel::data ( const QModelIndex & index, int role ) const
     {
         return m_vector->at(index.row()).icon();
     }
+    else if( role == Qt::UserRole ) 
+    {
+        return m_vector->at(index.row()).toString();
+    }
 
 
     return QVariant();

@@ -22,6 +22,7 @@ macro_optional_find_package(Taglib REQUIRED)
 macro_log_feature( TAGLIB_FOUND "taglib" "Read and write tags in audio files" "http://www.freshmeat.net/projects/taglib" TRUE "1.5.0" "")
 
 IF(TAGLIB_FOUND)
+  ADD_DEFINITIONS( -DWITH_TAGLIB )
   MESSAGE("-- The tablib library was found. KRename will be built with tablib support.")
 ELSE(TAGLIB_FOUND)
   MESSAGE("-- The tablib library was not found. KRename will not be built with tablib support.")

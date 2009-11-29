@@ -25,10 +25,61 @@
 
 #define COLUMN_PREVIEW 2
 
+/**
+ * A wrapper class for KRenameModel that
+ * replaces display role with customer Qt::UserRole
+ * so that the KRenameModel will always return unformatted 
+ * data, because QComboBox cannot display richtext.
+ */
+class KRenameUnformattedWrappedModel : public QAbstractListModel {
+public:
+    KRenameUnformattedWrappedModel( KRenameModel* model ) 
+        : m_model(model) 
+    {
+    }
+
+   /** Get the file at position index.
+    *
+    *  @param a valid index in the internal vector
+    *
+    *  @returns a KRenameFile object
+    */
+    const KRenameFile & file( int index ) const {
+        return m_model->file( index );
+    }
+
+   /** Get the file at position index.
+    *
+    *  @param a valid index in the internal vector
+    *
+    *  @returns a KRenameFile object
+    */
+    KRenameFile & file( int index ) {
+        return m_model->file( index );
+    }
+
+    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const {
+        if( role == Qt::DisplayRole ) {
+            return static_cast<KRenameModel*>(m_model)->data(index, Qt::UserRole);
+        } else {
+            return static_cast<KRenameModel*>(m_model)->data(index, role);
+        }
+    }
+
+    virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const {
+        return m_model->rowCount( parent );
+    }
+
+private:
+    KRenameModel* m_model;
+};
+
 TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
                                   QLineEdit* edit, QWidget* parent )
-    : KDialog( parent ), m_edit( edit ), m_model(model), m_renamer(renamer)
+    : KDialog( parent ), m_edit( edit ), m_renamer(renamer)
 {
+    m_model = new KRenameUnformattedWrappedModel(model);
+
     m_widget.setupUi( mainWidget() );
 
     this->setButtons( KDialog::Close | KDialog::User1 ); 
@@ -39,7 +90,7 @@ TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
     
     m_widget.searchCategory->searchLine()->setTreeWidget( m_widget.listCategories );
     m_widget.searchToken   ->searchLine()->setTreeWidget( m_widget.listTokens );
-    m_widget.comboPreview->setModel( model );
+    m_widget.comboPreview->setModel( m_model );
 
     connect(insert, SIGNAL(clicked(bool)), SLOT(slotInsert()));
     connect(this, SIGNAL(rejected()), SLOT(reject()));
@@ -51,6 +102,11 @@ TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
     connect(m_widget.comboPreview,   SIGNAL(activated(int)), this, SLOT(slotUpdatePreview()));
 
     slotEnableControls();
+}
+
+TokenHelpDialog::~TokenHelpDialog() 
+{
+    delete m_model;
 }
 
 void TokenHelpDialog::add( const QString & headline, const QStringList & commands, const QPixmap & icon, bool first )

@@ -136,6 +136,7 @@ void PluginLoader::load()
 #endif // _WIN32
     m_plugins.append( new ScriptPlugin( this ) );
     m_plugins.append( new SystemPlugin( this ) );
+
 #ifdef WITH_TAGLIB 
     m_plugins.append( new TagLibPlugin( this ) );
 #endif // WITH_TAGLIB 
