@@ -22,13 +22,15 @@
 
 #include "ui_progressdialog.h"
 
+#include "krenamefile.h"
+
 class BatchRenamer;
 
 class ProgressDialog : public QDialog {
     Q_OBJECT
 
  public:
-    ProgressDialog( QWidget* parent = NULL );
+    ProgressDialog( ESplitMode eSplitMode, unsigned int dot, QWidget* parent = NULL );
 
     /** Set the destination of the files
      *  so that the user can easily open a file browser
@@ -145,6 +147,9 @@ class ProgressDialog : public QDialog {
 
     QAction*     m_actProcessed;
     QAction*     m_actUnprocessed;
+
+    ESplitMode   m_eSplitMode;
+    unsigned int m_dot;
 };
 
 void ProgressDialog::setDestination( const KUrl & dest )

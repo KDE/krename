@@ -481,7 +481,7 @@ bool KRenameTest::tokenTest( const char* token, const QString & filename, const 
 {
     QString directory("/home/krename/");
     KRenameFile::List list;
-    KRenameFile file( KUrl( directory + filename ), filename.isEmpty() );
+    KRenameFile file( KUrl( directory + filename ), filename.isEmpty(), eSplitMode_FirstDot, 1 );
 
     list.push_back( file );
 
@@ -511,7 +511,7 @@ bool KRenameTest::numberingTest( int length, int start, int step, QList<int> ski
     for(int i=0;i<num;i++) 
     {
         QString filename = "any" + QString::number( i );
-        KRenameFile file( KUrl( directory + filename ), filename.isEmpty() );
+        KRenameFile file( KUrl( directory + filename ), filename.isEmpty(), eSplitMode_FirstDot, 1 );
 
         list.push_back( file );
     }
@@ -556,7 +556,7 @@ bool KRenameTest::replaceTest( const QString & token, const QString & filename, 
 {
     QString directory("/home/krename/");
     KRenameFile::List list;
-    KRenameFile file( KUrl( directory + filename ), filename.isEmpty() );
+    KRenameFile file( KUrl( directory + filename ), filename.isEmpty(), eSplitMode_FirstDot, 1 );
     list.push_back( file );
 
     QList<TReplaceItem> replaceList;

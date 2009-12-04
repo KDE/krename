@@ -198,6 +198,13 @@ class KRenameWindow : public KMainWindow {
      */
     void setSortMode( int sortMode );
 
+    /**
+     * Specify the extension split mode.
+     * \param splitMode split mode
+     * \param dot dot t use for eSplitMode_CustomDot
+     */
+    void setExtensionSplitMode( ESplitMode splitMode, int dot );
+
     bool isAdvancedMode() const;
     void setAdvancedMode( bool bAdvanced );
 

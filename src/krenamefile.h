@@ -86,7 +86,7 @@ class KRenameFile {
      *  \param dot dot to use as separator for eSplitMode_CustomDot
      *  \see isValid()
      */
-    KRenameFile( const KUrl & src, ESplitMode eSplitMode = eSplitMode_FirstDot, unsigned int dot = 1 );
+    KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int dot );
 
     /** Construct a new KRenameFile from an url.
      *
@@ -101,7 +101,7 @@ class KRenameFile {
      *                    filename and extension
      *  \param dot dot to use as separator for eSplitMode_CustomDot
      */
-    KRenameFile( const KUrl & src, bool directory, ESplitMode eSplitMode = eSplitMode_FirstDot, unsigned int dot = 1 );
+    KRenameFile( const KUrl & src, bool directory, ESplitMode eSplitMode, unsigned int dot );
 
     /** Construct a new KRenameFile form a KFileItem which is faster
      *  than construction from an URL.
@@ -111,7 +111,7 @@ class KRenameFile {
      *                    filename and extension
      *  \param dot dot to use as separator for eSplitMode_CustomDot
      */
-    KRenameFile( const KFileItem& item, ESplitMode eSplitMode = eSplitMode_FirstDot, unsigned int dot = 1 );
+    KRenameFile( const KFileItem& item, ESplitMode eSplitMode, unsigned int dot );
 
     /** Copy constructor
      *  \param rhs KRenameFile to copy

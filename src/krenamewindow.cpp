@@ -848,6 +848,29 @@ void KRenameWindow::slotTokenHelpRequestedWizard4()
     emit showTokenHelpDialog( m_pageFilename->comboExtensionCustom->lineEdit() );
 }
 
+void KRenameWindow::setExtensionSplitMode( ESplitMode splitMode, int dot )
+{
+    int index;
+    switch( splitMode ) 
+    {
+        default:
+        case eSplitMode_FirstDot:
+            index = 0;
+            break;
+        case eSplitMode_LastDot:
+            index = 1;
+            break;
+        case eSplitMode_NoExtension:
+            index = 2;
+            break;
+        case eSplitMode_CustomDot:
+            index = dot + 1;
+            break;
+    }
+
+    m_pageFilename->comboExtension->setCurrentIndex( index );
+}
+
 void KRenameWindow::slotExtensionSplitModeChanged( int index )
 {
     ESplitMode splitMode;

@@ -36,6 +36,8 @@ ThreadedLister::ThreadedLister( const KUrl & dirname, QWidget* cache, KRenameMod
     m_listRecursive    = false;
     m_listDirnamesOnly = false;
     m_listDirnames     = false;
+    m_eSplitMode       = m_model->splitMode();
+    m_dot              = m_model->splitDot();
 
     qRegisterMetaType<KFileItemList>("KFileItemList");
 }
@@ -53,7 +55,7 @@ void ThreadedLister::run()
         if( !m_listHiddenFiles && !name.startsWith(".") )        
         {
             KRenameFile::List list;
-            list.append( KRenameFile( m_dirname, true ) );
+            list.append( KRenameFile( m_dirname, true, m_eSplitMode, m_dot ) );
 
             m_model->addFiles( list );
         }
@@ -100,11 +102,11 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
             {
                 // Filter out parent and current directory
                 if( displayName != "." && displayName != ".." )
-                    m_files.append( KRenameFile( KFileItem( *it, url ) ) );
+                    m_files.append( KRenameFile( KFileItem( *it, url ), m_eSplitMode, m_dot ) );
             }
             else if( !m_listDirnamesOnly && !(*it).isDir() )
             {
-                m_files.append( KRenameFile( KFileItem( *it, url ) ) );
+                m_files.append( KRenameFile( KFileItem( *it, url), m_eSplitMode, m_dot ) );
             }
  
             ++it;

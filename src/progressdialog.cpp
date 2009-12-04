@@ -25,8 +25,8 @@
 #include <kiconloader.h>
 #include <krun.h>
 
-ProgressDialog::ProgressDialog( QWidget* parent ) 
-    : QDialog( parent ), m_canceled( false ), m_renamer( NULL )
+ProgressDialog::ProgressDialog( ESplitMode eSplitMode, unsigned int dot, QWidget* parent ) 
+    : QDialog( parent ), m_canceled( false ), m_renamer( NULL ), m_eSplitMode( eSplitMode ), m_dot( dot )
 {
     m_widget.setupUi( this );
 
@@ -79,7 +79,7 @@ void ProgressDialog::slotRenameProcessedAgain()
     {
         if( !(*it).hasError() )
         {
-            KRenameFile file( m_renamer->buildDestinationUrl( *it ), (*it).isDirectory() );
+            KRenameFile file( m_renamer->buildDestinationUrl( *it ), (*it).isDirectory(), m_eSplitMode, m_dot );
             file.setIcon( file.icon() );
             list.append( file );
         }
@@ -121,7 +121,7 @@ void ProgressDialog::slotRenameAllAgain()
     list.reserve( m_renamer->files()->count() );
     while( it != m_renamer->files()->end() )
     {
-        KRenameFile file( m_renamer->buildDestinationUrl( *it ), (*it).isDirectory() );
+        KRenameFile file( m_renamer->buildDestinationUrl( *it ), (*it).isDirectory(), m_eSplitMode, m_dot );
         file.setIcon( file.icon() );
         list.append( file );
         ++it;

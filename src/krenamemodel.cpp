@@ -224,7 +224,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     {
         if( (*it).isValid() ) 
         {
-            KRenameFile file( *it );
+            KRenameFile file( *it, m_eSplitMode, m_dot );
 
             if( file.isValid() && !file.isDirectory() )
                 files.append( file );

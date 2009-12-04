@@ -167,7 +167,7 @@ void KRenameImpl::setupSlots()
 
 void KRenameImpl::addFileOrDir( const KUrl & url )
 {
-    KRenameFile       item( url );
+    KRenameFile       item( url, m_lastSplitMode, m_lastDot );
     KRenameFile::List list;
 
     list.append( item );
@@ -184,7 +184,7 @@ void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filte
     
     while( it != list.end() )
     {
-        KRenameFile item( *it );
+        KRenameFile item( *it, m_lastSplitMode, m_lastDot );
         if( item.isDirectory() )
         {
             KApplication::setOverrideCursor( Qt::BusyCursor );
@@ -557,11 +557,13 @@ void KRenameImpl::slotExtensionSplitModeChanged( ESplitMode splitMode, int dot )
 
     m_lastSplitMode = splitMode;
     m_lastDot       = dot;
+
+    m_model->setExtensionSplitMode( m_lastSplitMode, m_lastDot );
 }
 
 void KRenameImpl::slotStart()
 {
-    ProgressDialog* progress = new ProgressDialog();
+    ProgressDialog* progress = new ProgressDialog( m_lastSplitMode, m_lastDot );
     progress->print( i18n("Starting conversion of %1 files.", m_vector.count()) );
 
     // Get some properties from the gui and initialize BatchRenamer
@@ -640,7 +642,11 @@ void KRenameImpl::loadConfig()
     int sortMode = groupGui.readEntry( "FileListSorting", QVariant(0) ).toInt();
     m_window->setSortMode( sortMode );
 
-
+    ESplitMode lastSplitMode = static_cast<ESplitMode>(groupGui.readEntry( "ExtensionSplitMode", static_cast<int>(m_lastSplitMode) ));
+    int lastDot = groupGui.readEntry( "ExtensionSplitDot", m_lastDot );    
+    m_window->setExtensionSplitMode( lastSplitMode, lastDot );
+    this->slotExtensionSplitModeChanged( lastSplitMode, lastDot );
+    
     // load Plugin configuration
     KConfigGroup groupPlugins = config->group( QString("PluginSettings") );
     m_pluginLoader->loadConfig( groupPlugins );
@@ -668,6 +674,8 @@ void KRenameImpl::saveConfig()
     groupGui.writeEntry( "Stepping", m_renamer.numberStepping() );
     groupGui.writeEntry( "FileListSorting", m_window->sortMode() );
     groupGui.writeEntry( "Advanced", m_window->isAdvancedMode() );
+    groupGui.writeEntry( "ExtensionSplitMode", static_cast<int>(m_lastSplitMode) );
+    groupGui.writeEntry( "ExtensionSplitDot", m_lastDot );    
 
     // save Plugin configuration
     KConfigGroup groupPlugins = config->group( QString("PluginSettings") );

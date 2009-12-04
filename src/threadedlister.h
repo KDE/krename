@@ -86,6 +86,9 @@ class ThreadedLister : public QObject
         QWidget*          m_cache;
         KRenameModel*     m_model;
         KRenameFile::List m_files;
+
+        ESplitMode        m_eSplitMode;
+        unsigned int      m_dot;
 };
 
 void ThreadedLister::setListDirnames( bool names )

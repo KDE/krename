@@ -95,8 +95,6 @@ class KRenameModel : public QAbstractListModel {
     */
    inline KRenameFile & file( int index );
 
-
-
    virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const;
    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
 
@@ -121,6 +119,16 @@ class KRenameModel : public QAbstractListModel {
     *  @param window a window used to cache authentication information
     */
    void run(const QModelIndex & index, QWidget* window ) const;
+
+    /**
+     * Specify the extension split mode.
+     * \param splitMode split mode
+     * \param dot dot t use for eSplitMode_CustomDot
+     */
+    inline void setExtensionSplitMode( ESplitMode splitMode, unsigned int dot );
+
+    inline ESplitMode splitMode();
+    inline unsigned int splitDot();
 
  signals:
    /** This signal is emitted when the maximum number of 
@@ -149,6 +157,10 @@ class KRenameModel : public QAbstractListModel {
    const char*        m_mimeType; ///< MIME type for drag and drop operations
 
    ESortMode          m_eSortMode; ///< Last used sort mode
+
+
+    ESplitMode        m_eSplitMode;
+    unsigned int      m_dot;
 };
 
 const KRenameFile & KRenameModel::file( int index ) const
@@ -175,6 +187,22 @@ void KRenameModel::setEnablePreview( bool preview, bool filenames )
         // TODO: update the model
         ;
     }
+}
+
+void KRenameModel::setExtensionSplitMode( ESplitMode splitMode, unsigned int dot )
+{
+    m_eSplitMode = splitMode;
+    m_dot = dot;
+}
+
+ESplitMode KRenameModel::splitMode()
+{
+    return m_eSplitMode;
+}
+
+unsigned int KRenameModel::splitDot()
+{
+    return m_dot;
 }
 
 class KRenamePreviewModel : public QAbstractTableModel {
