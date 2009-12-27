@@ -25,6 +25,7 @@ SET(krename_SRCS
   batchrenamer.cpp
   customdialog.cpp
   datetimeplugin.cpp
+  dirsortplugin.cpp
   exthistorycombo.cpp
   filedialogextwidget.cpp
   fileplugin.cpp
@@ -70,6 +71,7 @@ ENDIF ( TAGLIB_FOUND )
 kde4_add_ui_files( krename_SRCS 
   customfilenamedlg.ui		
   datetimepluginwidget.ui
+  dirsortpluginwidget.ui
   increasecounterpluginwidget.ui
   guimodeselector.ui 
   partfilenamewidget.ui

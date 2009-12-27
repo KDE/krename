@@ -21,6 +21,7 @@
 #include "plugin.h"
 
 #include "datetimeplugin.h"
+#include "dirsortplugin.h"
 #ifdef WITH_EXIV2
 #include "exiv2plugin.h"
 #endif // WITH_EXIV2
@@ -127,6 +128,7 @@ void PluginLoader::load()
 #ifndef _WIN32
     m_plugins.append( new DateTimePlugin( this ) );
 #endif // _WIN32
+    m_plugins.append( new DirSortPlugin( this ) );
 #ifdef WITH_EXIV2
     m_plugins.append( new Exiv2Plugin( this ) );
 #endif // WITH_EXIV2
