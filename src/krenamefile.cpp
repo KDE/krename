@@ -63,7 +63,7 @@ const int KRenameFile::DEFAULT_ICON_SIZE = 64;
 const char* KRenameFile::EXTRA_DATA_KEY = "KRenameFile::EXTRA_DATA_KEY";
 
 KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int dot )
-    : m_bValid( false ), m_error( 0 )
+    : m_bValid( false ), m_error( 0 ), m_manualMode( eManualChangeMode_None )
 {
     KIO::UDSEntry entry;
     KIO::NetAccess::stat( src, entry, NULL );
@@ -77,13 +77,13 @@ KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int 
 }
 
 KRenameFile::KRenameFile( const KUrl & src, bool directory, ESplitMode eSplitMode, unsigned int dot )
-    : m_bDirectory( directory ), m_bValid( true ), m_error( 0 )
+    : m_bDirectory( directory ), m_bValid( true ), m_error( 0 ), m_manualMode( eManualChangeMode_None )
 {
     initFileDescription( m_src, src, eSplitMode, dot );
 }
 
 KRenameFile::KRenameFile( const KFileItem& item, ESplitMode eSplitMode, unsigned int dot )
-    : m_bDirectory( item.isDir() ), m_bValid( item.isReadable() ), m_error( 0 )
+    : m_bDirectory( item.isDir() ), m_bValid( item.isReadable() ), m_error( 0 ), m_manualMode( eManualChangeMode_None )
 {
     m_fileItem = item;
 
@@ -105,6 +105,7 @@ const KRenameFile & KRenameFile::operator=( const KRenameFile & rhs )
     m_icon       = rhs.m_icon;
     m_error      = rhs.m_error;
     m_manual     = rhs.m_manual;
+    m_manualMode = rhs.m_manualMode;
 
     return *this;
 }

@@ -78,10 +78,14 @@ void PreviewList::slotManually()
     if( dialog.exec() == QDialog::Accepted ) 
     {
         QString manual = QString::null;
+        EManualChangeMode mode = eManualChangeMode_None;
         if( dialog.hasManualChanges() ) 
+        {
             manual = dialog.manualChanges();
-        
-        m_model->file( this->currentIndex().row() ).setManualChanges( manual );
+            mode = dialog.manualChangeMode();
+        }
+
+        m_model->file( this->currentIndex().row() ).setManualChanges( manual, mode );
     }
 }
 

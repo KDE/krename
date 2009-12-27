@@ -102,7 +102,7 @@ void ProgressDialog::slotRenameUnprocessedAgain()
         if( (*it).hasError() )
         {
             KRenameFile file( *it );
-            file.setManualChanges( QString::null ); // reset manual changes!!
+            file.setManualChanges( QString::null, eManualChangeMode_None ); // reset manual changes!!
             list.append( file );
         }
 

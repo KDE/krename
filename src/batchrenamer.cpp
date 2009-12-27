@@ -156,9 +156,7 @@ void BatchRenamer::processFilenames()
         QString name = executePlugin( i, (*m_files)[i].dstFilename(), ePluginType_Filename, errors, NULL );
         if( !name.isNull() ) 
             (*m_files)[i].setDstFilename( name );
-        
-        (void)applyManualChanges( i );
-        
+                
         /*
          * take care of renamed directories and
          * correct the paths of their contents
@@ -327,8 +325,6 @@ void BatchRenamer::processFiles( ProgressDialog* p )
         m_files[i].dst.name = processString( text, m_files[i].src.name, i );
         if( !extext.isEmpty() )
             m_files[i].dst.extension = processString( extext, m_files[i].src.extension, i );
-
-        (void)applyManualChanges( i );
 
         // Assemble filenames
         parseSubdirs( &m_files[i] );
@@ -1169,30 +1165,6 @@ void BatchRenamer::createMissingSubDirs( const KRenameFile & file, ProgressDialo
             d = directories.section( "/", i, i, QString::SectionSkipEmpty );
         }
     }
-}
-
-
-bool BatchRenamer::applyManualChanges( int i )
-{
-    /*
-     * The last step: make changes of
-     * the user visible
-     */
-
-    if( !m_changes.isEmpty() )
-        for( int z = 0; z < m_changes.count(); z++ ) {
-            KUrl file = m_changes[z].url;
-            if( file == (*m_files)[i].srcUrl() ) {
-                (*m_files)[i].setDstFilename( m_changes[z].user );
-
-                // the file extension is already included
-                // in the users name
-                (*m_files)[i].setDstExtension( QString::null );
-                return true;
-            }
-        }
-
-    return false;
 }
 
 void BatchRenamer::findCounterReset( int i )

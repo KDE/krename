@@ -20,6 +20,7 @@
 
 #include <kdialog.h>
 #include "ui_customfilenamedlg.h"
+#include "batchrenamer.h"
 
 class KRenameFile;
 
@@ -40,12 +41,16 @@ class CustomDialog : public KDialog {
      */
     const QString manualChanges() const;
 
+    /**
+     * \returns the manual change mode
+     */
+    EManualChangeMode manualChangeMode() const;
+
  private slots:
     void slotEnableControls();
 
  private:
     Ui::CustomFilenameDlg m_widget;
-    QString               m_original;
 };
 
 #endif // _CUSTOM_DIALOG_H_

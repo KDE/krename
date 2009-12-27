@@ -29,16 +29,6 @@ class QProgressDialog;
 class QString;
 class QTextStream;
 
-/*
- * Changes made by hand by the user
- * in the preview list view are
- * stored here.
- */
-typedef struct __tag_manualchanges {
-    KUrl url;      // input filename
-    QString user;  // name the user wants
-} manualchanges;
-
 typedef struct __tag_tCounterValues {
     int value;  // current value of this counter
     int start;  // start value of this counter (for findResetCounter)
@@ -170,8 +160,6 @@ class BatchRenamer : public QObject {
 
         inline void setReplaceList( const QList<TReplaceItem> & r ) { m_replace = r; }
         inline const QList<TReplaceItem> & replaceList() const { return m_replace; }
-
-        inline void setChanges( const QList<manualchanges> & m ) { m_changes = m; }
 
         inline void setMode( int m) { m_mode = m; }
         inline int mode() const { return m_mode; }
@@ -336,12 +324,11 @@ class BatchRenamer : public QObject {
          */
          void createMissingSubDirs( const KRenameFile & file, ProgressDialog* p );
 
-	/** resets all counters to there start value if the directory name at @p i
-	 *  in m_files changes.
-	 *  The caller has to check m_reset before calling this function.
-	 */
+	     /** resets all counters to there start value if the directory name at @p i
+          *  in m_files changes.
+          *  The caller has to check m_reset before calling this function.
+          */
         void findCounterReset( int i );
-        bool applyManualChanges( int i );
 
         QString text;           // template
         QString extext;         // Extension template
@@ -350,7 +337,6 @@ class BatchRenamer : public QObject {
 	bool m_reset;             // reset counter on new directories
         int m_mode;             // renaming mode
         QList<int> m_skip; // Numbers to skip
-        QList<manualchanges> m_changes;  // User made changes
 
         // a is used in find number and
         // required for skipping.

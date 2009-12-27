@@ -36,6 +36,16 @@ enum ESplitMode {
     eSplitMode_CustomDot    ///< Extension starts at a user defined dot in the filename
 };
 
+/**
+ * Type of manual change made.
+ * Specifies on what kind of filename, the manual changes are based.
+ */
+enum EManualChangeMode {
+    eManualChangeMode_None, ///< Use filename created by KRename
+    eManualChangeMode_Input, ///< Use custom filename, based on input filename
+    eManualChangeMode_Custom ///< Use custom filename
+};
+
 class KRenameFile {
     struct TFileDescription {
         QString filename;
@@ -224,10 +234,20 @@ class KRenameFile {
      * Sets manual changes made by the user
      *
      * \param manual manual changes for filename and extension
+     * \param mode mode of change
      */
-    inline void setManualChanges( const QString & manual ) 
+    inline void setManualChanges( const QString & manual, EManualChangeMode mode ) 
     {
         m_manual = manual;
+        m_manualMode = mode;
+    }
+
+    /**
+     * \returns the change mode
+     */
+    inline EManualChangeMode manualChangeMode() const
+    {
+        return m_manualMode;
     }
 
     /** 
@@ -335,6 +355,7 @@ class KRenameFile {
 
     int              m_error;        ///< This value is set to != 0 if an error occurred during renaming
     QString          m_manual;       ///< Manual changes to the filename+extension by the user are stored here
+    EManualChangeMode m_manualMode;  
 };
 
 #endif // _KRENAME_FILE_H_

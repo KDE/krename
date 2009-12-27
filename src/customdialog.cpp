@@ -33,22 +33,42 @@ CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
     m_widget.radioKRename->setChecked( false );
     m_widget.radioInput->setChecked( false );
 
-    QString filename = file.srcFilename();
+    QString srcFilename = file.srcFilename();
     if( !file.srcExtension().isEmpty() )
     {
-        filename += ".";
-        filename += file.srcExtension();
+        srcFilename += ".";
+        srcFilename += file.srcExtension();
     }
 
-    m_original = filename;
+    QString krenameFilename = file.dstFilename();
+    if( !file.dstExtension().isEmpty() ) 
+    {
+        krenameFilename += ".";
+        krenameFilename += file.dstExtension();
+    }
 
     if( !file.manualChanges().isNull() )
     {
-        filename = file.manualChanges();
+        switch( file.manualChangeMode() ) 
+        {
+            case eManualChangeMode_Custom:
+                krenameFilename = file.manualChanges();
+                break;
+            case eManualChangeMode_Input:
+                m_widget.radioInput->setChecked( true );
+                m_widget.radioKRename->setChecked( false );
+                m_widget.radioCustom->setChecked( false );
+                srcFilename = file.manualChanges();
+                break;
+            case eManualChangeMode_None:
+            default:
+                break;
+        }
     }
 
     m_widget.labelPreview->setPixmap( file.icon() );
-    m_widget.lineEdit->setText( filename );
+    m_widget.lineEditInput->setText( srcFilename );
+    m_widget.lineEditCustom->setText( krenameFilename );
     slotEnableControls();
 
     KSharedConfigPtr config = KGlobal::config();
@@ -65,7 +85,8 @@ CustomDialog::~CustomDialog()
 
 void CustomDialog::slotEnableControls()
 {
-    m_widget.lineEdit->setEnabled( m_widget.radioCustom->isChecked() );
+    m_widget.lineEditCustom->setEnabled( m_widget.radioCustom->isChecked() );
+    m_widget.lineEditInput->setEnabled( m_widget.radioInput->isChecked() );
 }
 
 bool CustomDialog::hasManualChanges() const
@@ -76,11 +97,22 @@ bool CustomDialog::hasManualChanges() const
 const QString CustomDialog::manualChanges() const
 {
     if( m_widget.radioCustom->isChecked() )
-        return m_widget.lineEdit->text();
+        return m_widget.lineEditCustom->text();
     else if( m_widget.radioInput->isChecked() )
-        return m_original;
+        return m_widget.lineEditInput->text();
     else
         return QString::null;
+}
+
+EManualChangeMode CustomDialog::manualChangeMode() const
+{
+    if( m_widget.radioCustom->isChecked() )
+        return eManualChangeMode_Custom;
+    else if( m_widget.radioInput->isChecked() )
+        return eManualChangeMode_Input;
+    else
+        return eManualChangeMode_None;
+
 }
 
 #include "customdialog.moc"
