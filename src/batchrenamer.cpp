@@ -1150,9 +1150,8 @@ void BatchRenamer::createMissingSubDirs( const KRenameFile & file, ProgressDialo
         // create the missing subdir now
         int i = 0;
         QString d = directories.section( "/", i, i, QString::SectionSkipEmpty );
+        KUrl url = file.dstUrl();            
         while( !d.isEmpty() ) {
-            KUrl url = file.dstUrl();
-            
             // it is important to unescape here
             // to support dirnames containing "&" or 
             // similar tokens
