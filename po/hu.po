@@ -4,13 +4,13 @@
 # Marcel Hilzinger <hili@suselinux.hu>, 2003.
 # Peter Breuer <comp@suselinux.hu>, 2003.
 # Arpad Biro <biro_arpad@yahoo.com>, 2004, 2005, 2006.
-# Arpad Biro <biro.arpad gmail>, 2008, 2009.
+# Arpad Biro <biro.arpad gmail>, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-27 22:57+0100\n"
-"PO-Revision-Date: 2009-10-25 16:48+0100\n"
+"PO-Revision-Date: 2010-01-10 22:46+0100\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -116,9 +116,8 @@ msgid "&Filename"
 msgstr "Fájlné&v"
 
 #: rc.cpp:546
-#, fuzzy
 msgid "&Files per directory:"
-msgstr "könyvtárnév beillesztése"
+msgstr "&Fájlok száma könyvtáranként:"
 
 #: rc.cpp:18
 msgid "&Find:"
@@ -197,9 +196,8 @@ msgid "&Options"
 msgstr "O&pciók"
 
 #: rc.cpp:543
-#, fuzzy
 msgid "&Options:"
-msgstr "O&pciók"
+msgstr "Op&ciók:"
 
 #: rc.cpp:347
 msgid "&Overwrite existing files"
@@ -254,9 +252,8 @@ msgid "&Skip Numbers"
 msgstr "Ki&hagyandó számok"
 
 #: rc.cpp:549
-#, fuzzy
 msgid "&Start index:"
-msgstr "&Kezdőindex:"
+msgstr "Kezdő&index:"
 
 #: rc.cpp:469
 msgid "&Step by:"
@@ -311,9 +308,8 @@ msgid "1"
 msgstr "1"
 
 #: dirsortplugin.cpp:100
-#, fuzzy
 msgid ": The output directory %1 does not exist."
-msgstr "Nem sikerült létrehozni \"%1\" nevű könyvtárt."
+msgstr ": A kimeneti könyvtár (\"%1\") nem létezik."
 
 #: rc.cpp:321
 msgid ""
@@ -655,9 +651,8 @@ msgid "Can't set executable bit on undo script."
 msgstr "Nem lehet beállítani a futtathatósági bitet a visszavonási szkriptre."
 
 #: dirsortplugin.cpp:158 batchrenamer.cpp:1160
-#, fuzzy
 msgid "Cannot create directory %1"
-msgstr "alkönyvtár létrehozása"
+msgstr "\"%1\" könyvtár létrehozása sikertelen"
 
 #: batchrenamer.cpp:258
 msgid "Cannot create symlink to non-local URL: %1"
@@ -939,9 +934,8 @@ msgid "Group"
 msgstr "Csoport"
 
 #: rc.cpp:412
-#, fuzzy
 msgid "Hint: Undo is still possible after renaming your files."
-msgstr "Megjegyzés: a fájlok átnevezése után vissza lehet vonni a műveletet"
+msgstr "Megjegyzés: a fájlok átnevezése után vissza lehet vonni a műveletet."
 
 #: filedialogextwidget.cpp:51
 msgid ""
@@ -1231,9 +1225,8 @@ msgid "Number"
 msgstr "Szám"
 
 #: rc.cpp:552
-#, fuzzy
 msgid "Number &of digits:"
-msgstr "Számjeg&yek száma:"
+msgstr "Szám&jegyek száma:"
 
 #: rc.cpp:174 rc.cpp:633
 msgid "Number of &digits:"
@@ -1257,7 +1250,7 @@ msgstr "Egyéb"
 
 #: rc.cpp:555
 msgid "Out&put:"
-msgstr ""
+msgstr "Ki&menet:"
 
 #: systemplugin.cpp:59
 msgid "Owner of the file"
@@ -1375,9 +1368,8 @@ msgid "Rename Processed Files &Again..."
 msgstr "A &feldolgozott fájlok ismételt átnevezése..."
 
 #: rc.cpp:219
-#, fuzzy
 msgid "Rename the file using the filename created by KRename."
-msgstr "A &KRename által előállított fájlnév használata"
+msgstr "A fájl átnevezése a KRename által előállított fájlnév használatával."
 
 #: krenamemodel.cpp:515
 msgid "Renamed"
@@ -1477,7 +1469,7 @@ msgstr "Felhasználóifelület-üzenetek és stílus javítása"
 
 #: dirsortplugin.cpp:43
 msgid "Subdirectory-Sort Plugin"
-msgstr ""
+msgstr "Rendezés alkönyvtárakba"
 
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
@@ -1555,6 +1547,15 @@ msgid ""
 "\tdirectory/003/file5\n"
 " \t..."
 msgstr ""
+"Ez a modul számozott alkönyvtárakba helyezés után rendezi a fájlokat.\n"
+"\n"
+"Példa:\n"
+"\tkönyvtár/001/fájl1\n"
+"\tkönyvtár/001/fájl2\n"
+"\tkönyvtár/002/fájl3\n"
+"\tkönyvtár/002/fájl4\n"
+"\tkönyvtár/003/fájl5\n"
+"\t..."
 
 #: rc.cpp:454
 msgid "Time:"
@@ -1651,7 +1652,7 @@ msgstr "&Varázslók használata (kezdőknek)"
 #: rc.cpp:231
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
-msgstr ""
+msgstr "Egyéni fájlnév használata a KRename által előállított fájlnév alapján."
 
 #: rc.cpp:222
 msgid "Use filename created by &KRename"
@@ -1670,6 +1671,8 @@ msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."
 msgstr ""
+"A bemeneti fájlnév használata ezen fájl átnevezéséhez. Ön módosíthatja a "
+"bemeneti fájlnevet is, és használhatja ezt az átnevezéshez."
 
 #: permissionsplugin.cpp:205
 msgid "User"
