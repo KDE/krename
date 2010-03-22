@@ -2,21 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2009.
+# Yuri Chornoivan <yurchor@ukr.net>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-27 22:57+0100\n"
-"PO-Revision-Date: 2009-06-04 17:46+0300\n"
+"PO-Revision-Date: 2010-03-22 16:26+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: rc.cpp:39 rc.cpp:51
 msgid "$"
@@ -31,24 +31,20 @@ msgid "%2 errors occurred!"
 msgstr "Сталося %2 помилок!"
 
 #: krenamewindow.cpp:49
-#, fuzzy
 msgid "&1. Files"
-msgstr "&Файли"
+msgstr "&1. Файли"
 
 #: krenamewindow.cpp:50
-#, fuzzy
 msgid "&2. Destination"
-msgstr "Пр&изначення"
+msgstr "&2. Призначення"
 
 #: krenamewindow.cpp:51
-#, fuzzy
 msgid "&3. Plugins"
-msgstr "&Додатки"
+msgstr "&3. Додатки"
 
 #: krenamewindow.cpp:52
-#, fuzzy
 msgid "&4. Filename"
-msgstr "&Назва файла"
+msgstr "&4. Назва файла"
 
 #: rc.cpp:478
 msgid "&Add Number"
@@ -119,18 +115,16 @@ msgid "&Filename"
 msgstr "&Назва файла"
 
 #: rc.cpp:546
-#, fuzzy
 msgid "&Files per directory:"
-msgstr "вставити назву каталогу"
+msgstr "&Файлів на каталог:"
 
 #: rc.cpp:18
 msgid "&Find:"
 msgstr "З&найти:"
 
 #: krenamewindow.cpp:196
-#, fuzzy
 msgid "&Finish"
-msgstr "З&авершити..."
+msgstr "З&авершити"
 
 #: rc.cpp:57
 msgid "&Functions..."
@@ -193,18 +187,16 @@ msgid "&Open"
 msgstr "&Відкрити"
 
 #: progressdialog.cpp:35
-#, fuzzy
 msgid "&Open Destination"
-msgstr "Відкрити &призначення..."
+msgstr "Відкрити &призначення"
 
 #: rc.cpp:332
 msgid "&Options"
 msgstr "&Параметри"
 
 #: rc.cpp:543
-#, fuzzy
 msgid "&Options:"
-msgstr "&Параметри"
+msgstr "&Параметри:"
 
 #: rc.cpp:347
 msgid "&Overwrite existing files"
@@ -259,7 +251,6 @@ msgid "&Skip Numbers"
 msgstr "Пр&опустити номери"
 
 #: rc.cpp:549
-#, fuzzy
 msgid "&Start index:"
 msgstr "По&чаток нумерації:"
 
@@ -316,9 +307,8 @@ msgid "1"
 msgstr "1"
 
 #: dirsortplugin.cpp:100
-#, fuzzy
 msgid ": The output directory %1 does not exist."
-msgstr "Не вдалося створити каталог %1."
+msgstr ": Каталогу, в який потрібно записати дані, %1, не існує."
 
 #: rc.cpp:321
 msgid ""
@@ -365,7 +355,6 @@ msgstr ""
 "бажаний результат.</p></body></html>"
 
 #: rc.cpp:389
-#, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -386,21 +375,15 @@ msgstr ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; "
-"font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">За допомогою цього додатка можна вказати крок у нумеруванні "
-"назв файлів.</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-"\">Наприклад, якщо у вас є файли з назвами: <span style=\" font-style:italic;"
-"\">img014</span>, <span style=\" font-style:italic;\">img015</span>, <span "
-"style=\" font-style:italic;\">img023</span>, які слід перейменувати на <span "
-"style=\" font-style:italic;\"> img010</span>, <span style=\" font-style:"
-"italic;\">img011</span> and <span style=\" font-style:italic;\">img019, </"
-"span>За допомогою цього додатка ви можете вказати крок у -4 і отримати "
-"бажаний результат.</p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
+"large; font-weight:600;\">Вітаємо у KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Інструмент пакетного "
+"перейменування для "
+"KDE.<br />Щоб перейменувати файли, вам слід:</p></body></html>"
 
 #: krenamewindow.cpp:396
 msgid "<b>Files:<b> %1"
@@ -436,7 +419,6 @@ msgstr ""
 "weight:600;\">.</span></p></body></html>"
 
 #: main.cpp:60
-#, fuzzy
 msgid ""
 "<qt><p>KRename is a batch file renamer which can rename a list of files "
 "based on a set of expressions.</p><p>If you like KRename you may want to "
@@ -444,19 +426,20 @@ msgid ""
 "financial support (everybody needs money ;). See help files for details.</"
 "p></qt>"
 msgstr ""
-"KRename — це інструмент пакетного перейменування файлів,\n"
-"здатний перейменовувати файли зі списку на основі набору правил.\n"
-"\n"
-"Якщо вам подобається KRename, ви можете підтримати програму.\n"
-"Нам завжди знадобляться ваша перевірка, виправлення вад і запити\n"
-"на реалізацію функцій, а також грошові перекази (всім потрібні гроші ;)\n"
-"Докладніше про це у файлах довідки.\n"
+"<qt><p>KRename — це інструмент пакетного перейменування файлів, здатний "
+"перейменовувати файли зі списку на основі набору правил.</p><p>Якщо вам "
+"подобається KRename, ви можете підтримати програму. "
+"Нам завжди знадобляться ваша перевірка, виправлення вад і запити на "
+"реалізацію функцій, а також грошові перекази (всім потрібні гроші ;) "
+"Докладніше про це у файлах довідки.</p></qt>"
 
 #: rc.cpp:87
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
 msgstr ""
+"<qt>Налаштуйте початковий номер, крок і пропускання для нумерації у назвах "
+"файлів.</qt>"
 
 #: rc.cpp:69
 msgid ""
@@ -464,36 +447,42 @@ msgid ""
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
 msgstr ""
+"<qt>Вкажіть, яку частину назви файла слід вважати суфіксом назви. Наприклад, "
+"за використання варіанта «Перша крапка», суфіксом вважатиметься \".tar.gz\", "
+"а за використання варіанта «Остання крапка» — лише \".gz\".</qt>"
 
 #: rc.cpp:48
-#, fuzzy
 msgid "<qt>Enter a template for changing the file extension.</qt>"
-msgstr "вказати шаблон для суфіксу назви файла"
+msgstr "<qt>Ввести шаблон зміни суфікса назви файла.</qt>"
 
 #: rc.cpp:36
-#, fuzzy
 msgid "<qt>Enter a template for changing the filename.</qt>"
-msgstr "вказати шаблон для суфіксу назви файла"
+msgstr "<qt>Ввести шаблон зміни назви файла.</qt>"
 
 #: rc.cpp:81 rc.cpp:180
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
 msgstr ""
+"<qt>Знайти і замінити рядки або формальні вирази під час перейменування "
+"файлів."
+"</qt>"
 
 #: rc.cpp:93
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
-msgstr ""
+msgstr "<qt>Графічно позначити частину файла, яку слід замінити.</qt>"
 
 #: rc.cpp:54 rc.cpp:108 rc.cpp:111 rc.cpp:132 rc.cpp:141
 msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
+"<qt>Вставити до назви особливі параметри, зокрема ім’я виконавця композиції "
+"mp3 або дату створення зображення.</qt>"
 
 #: rc.cpp:60
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
-msgstr ""
+msgstr "<qt>Зберегти суфікс назви у початковому варіанті.</qt>"
 
 #: rc.cpp:418
 msgid ""
@@ -567,7 +556,7 @@ msgstr "Додати лише назви каталогів"
 
 #: rc.cpp:648
 msgid "Add files for renaming."
-msgstr ""
+msgstr "Додати файли для перейменування."
 
 #: filedialogextwidget.cpp:53
 msgid ""
@@ -577,9 +566,8 @@ msgstr ""
 "Додавати лише назви каталогів, без назв файлів у каталозі до списку KRename."
 
 #: rc.cpp:403
-#, fuzzy
 msgid "Add some files ..."
-msgstr "&Завантажити з файла..."
+msgstr "Додати файли…"
 
 #: filedialogextwidget.cpp:34
 msgid "Add subdirectories &recursively"
@@ -604,7 +592,7 @@ msgstr "Andreas Pour"
 
 #: main.cpp:75
 msgid "Arpad Biro"
-msgstr ""
+msgstr "Arpad Biro"
 
 #: main.cpp:109
 msgid "Asim Husanovic"
@@ -659,9 +647,8 @@ msgid "Can't set executable bit on undo script."
 msgstr "Не вдалося надати права на виконання скрипту скасування."
 
 #: dirsortplugin.cpp:158 batchrenamer.cpp:1160
-#, fuzzy
 msgid "Cannot create directory %1"
-msgstr "створити підкаталог"
+msgstr "Не вдалося створити каталог %1"
 
 #: batchrenamer.cpp:258
 msgid "Cannot create symlink to non-local URL: %1"
@@ -712,9 +699,8 @@ msgid "Convert to upper case"
 msgstr "Перетворити на верхній регістр"
 
 #: rc.cpp:303
-#, fuzzy
 msgid "Create Variable"
-msgstr "Вс&тавити змінну"
+msgstr "Створити змінну"
 
 #: rc.cpp:344
 msgid "Create symbolic &links in destination directory"
@@ -760,10 +746,11 @@ msgstr ""
 #: rc.cpp:356
 msgid "Declare global variables that can be used from within your functions:"
 msgstr ""
+"Оголосіть загальні змінні, якими можна буде скористатися у ваших функціях:"
 
 #: rc.cpp:371
 msgid "Define functions that can be used from KRename templates:"
-msgstr ""
+msgstr "Визначте функції, якими можна скористатися у шаблонах KRename:"
 
 #: rc.cpp:517
 msgid "Description"
@@ -779,11 +766,11 @@ msgstr "Каталог поточного файла"
 
 #: rc.cpp:681
 msgid "Display a preview image for each file."
-msgstr ""
+msgstr "Показувати мініатюри для всіх файлів."
 
 #: rc.cpp:687
 msgid "Display the filename together with the preview."
-msgstr ""
+msgstr "Показувати назву файла разом з мініатюрою."
 
 #: krenameimpl.cpp:382
 msgid "Do you really want to remove all files from the list?"
@@ -911,9 +898,8 @@ msgid "Form"
 msgstr "Форма"
 
 #: rc.cpp:386
-#, fuzzy
 msgid "Frame"
-msgstr "Форма"
+msgstr "Блок"
 
 #: main.cpp:87
 msgid "Franz Schmid"
@@ -944,9 +930,8 @@ msgid "Group"
 msgstr "Група"
 
 #: rc.cpp:412
-#, fuzzy
 msgid "Hint: Undo is still possible after renaming your files."
-msgstr "Для віддаленого файла скасування неможливе: %1"
+msgstr "Підказка: після перейменування ви можете його скасувати."
 
 #: filedialogextwidget.cpp:51
 msgid ""
@@ -1142,9 +1127,8 @@ msgid "Italian translation"
 msgstr "Переклад італійською"
 
 #: main.cpp:98
-#, fuzzy
 msgid "Italian translation work"
-msgstr "Переклад італійською"
+msgstr "Робота з перекладу італійською"
 
 #: scriptplugin.cpp:63
 msgid "JavaScript Plugin"
@@ -1208,11 +1192,11 @@ msgstr "Michal Smoczyk"
 
 #: rc.cpp:192 rc.cpp:702
 msgid "Move selected files downwards."
-msgstr ""
+msgstr "Пересунути позначені файли нижче."
 
 #: rc.cpp:186 rc.cpp:696
 msgid "Move selected files upwards."
-msgstr ""
+msgstr "Пересунути позначені файли вище."
 
 #: rc.cpp:171 rc.cpp:630
 msgid "N&umber"
@@ -1235,7 +1219,6 @@ msgid "Number"
 msgstr "Число"
 
 #: rc.cpp:552
-#, fuzzy
 msgid "Number &of digits:"
 msgstr "Кількість &цифр:"
 
@@ -1261,7 +1244,7 @@ msgstr "Інші"
 
 #: rc.cpp:555
 msgid "Out&put:"
-msgstr ""
+msgstr "В&ивід:"
 
 #: systemplugin.cpp:59
 msgid "Owner of the file"
@@ -1366,13 +1349,12 @@ msgid "Reg. Expression"
 msgstr "Форм. вираз"
 
 #: rc.cpp:660
-#, fuzzy
 msgid "Remove all files."
-msgstr "Ви&лучити всі"
+msgstr "Вилучити всі файли."
 
 #: rc.cpp:654
 msgid "Remove selected files."
-msgstr ""
+msgstr "Вилучити позначені файли."
 
 #: progressdialog.cpp:50
 msgid "Rename &Unprocessed Files Again..."
@@ -1383,9 +1365,8 @@ msgid "Rename Processed Files &Again..."
 msgstr "&Ще раз перейменувати оброблені файли..."
 
 #: rc.cpp:219
-#, fuzzy
 msgid "Rename the file using the filename created by KRename."
-msgstr "Назва файла створ&ена KRename"
+msgstr "Перейменувати файл на основі назви файла, створеної KRename."
 
 #: krenamemodel.cpp:515
 msgid "Renamed"
@@ -1445,7 +1426,7 @@ msgstr "Спеціальні символи"
 
 #: rc.cpp:409
 msgid "Specify the new filenames by giving a template ..."
-msgstr ""
+msgstr "Вкажіть нові назви файла за допомогою шаблона…"
 
 #: rc.cpp:177 rc.cpp:636
 msgid "Start  &index:"
@@ -1481,11 +1462,11 @@ msgstr "String"
 
 #: main.cpp:75
 msgid "Style guide issues and improvements of user messages."
-msgstr ""
+msgstr "Недоліки у підручнику зі стилів та покращення повідомлень програми."
 
 #: dirsortplugin.cpp:43
 msgid "Subdirectory-Sort Plugin"
-msgstr ""
+msgstr "Додаток впорядкування підкаталогів"
 
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
@@ -1563,6 +1544,16 @@ msgid ""
 "\tdirectory/003/file5\n"
 " \t..."
 msgstr ""
+"За допомогою цього додатка можна розподілити файли після перейменування за "
+"нумерованими підкаталогами.\n"
+"\n"
+"Приклад:\n"
+"\tкаталог/001/файл1\n"
+"\tкаталог/001/файл2\n"
+"\tкаталог/002/файл3\n"
+"\tкаталог/002/файл4\n"
+"\tкаталог/003/файл5\n"
+" \t..."
 
 #: rc.cpp:454
 msgid "Time:"
@@ -1660,6 +1651,8 @@ msgstr "Сти&ль інтерфейсу майстра (для початків
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
 msgstr ""
+"Використовувати нетипову назву файла, засновану на поточній, створеній "
+"KRename назві."
 
 #: rc.cpp:222
 msgid "Use filename created by &KRename"
@@ -1678,6 +1671,9 @@ msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."
 msgstr ""
+"Використовувати під час перейменування цього файла початкову назву файла. "
+"Крім того, ви можете змінити початкову назву і використати її для "
+"перейменування."
 
 #: permissionsplugin.cpp:205
 msgid "User"
@@ -1689,7 +1685,7 @@ msgstr "Назва змінної"
 
 #: main.cpp:97
 msgid "Vincenzo Reale"
-msgstr ""
+msgstr "Vincenzo Reale"
 
 #: filedialogextwidget.cpp:49
 msgid ""
