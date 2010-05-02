@@ -76,5 +76,10 @@ void ExtHistoryCombo::saveConfig()
     config->sync();
 }
 
+void ExtHistoryCombo::selectAll()
+{
+    this->lineEdit()->setSelection(0, this->lineEdit()->text().length());
+}
+
 
 #include "exthistorycombo.moc"

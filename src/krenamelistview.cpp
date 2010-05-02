@@ -27,57 +27,7 @@ KRenameListView::KRenameListView(QWidget* parent)
     : QListView(parent),
       m_label(NULL)
 {
-    /*
-    QString krename = KIconLoader::global()->iconPath("krename", KIconLoader::Desktop);
-
-    const QString message =
-        "<qt><img src=\"" + krename + "\" /><h1>Welcome to KRename</h1>"
-        "<p>KRename is a batch renamer (mass file renamer) for KDE.</p>"
-        "<p><ul><li>Please add some files</li></ul>" 
-        "</qt>";
-
-    m_document = new QTextDocument(this);
-    m_document->setHtml(message);
-    */
 }
-
-/*
-void KRenameListView::paintEvent(QPaintEvent* event)
-{
-    if(this->model()->rowCount() == 0) 
-    {
-        int width = this->width() / 2;
-        int height = this->height() / 2;
-        QRect rect((this->width() - width)/2,
-                   (this->height() - height)/2,
-                   width,
-                   height);
-
-        QPainter painter(this->viewport());
-        painter.save();
-        painter.setBrush(this->palette().window());
-        painter.drawRoundedRect(rect, 15.0, 15.0);
-        painter.restore();
-
-        painter.save();
-        const int offset = 10;
-        painter.translate(rect.x() + offset,
-                          rect.y() + offset);
-        m_document->drawContents(&painter, 
-                                 QRect(0, 0,
-                                       width - offset * 2, 
-                                       height - offset * 2)); 
-        painter.restore();
-
-        event->accept();
-    }
-    else
-    {
-        QListView::paintEvent(event);
-    }
-
-}
-*/
 
 void KRenameListView::resizeEvent(QResizeEvent* e)
 {

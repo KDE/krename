@@ -581,6 +581,13 @@ void KRenameWindow::setAdvancedMode( bool bAdvanced )
 void KRenameWindow::showFilenameTab()
 {
     m_tabBar->setCurrentIndex( MAX_PAGES - 1 );
+    if(this->isAdvancedMode()) {
+        m_pageFilename->filenameTemplate->setFocus();
+        m_pageFilename->filenameTemplate->selectAll();
+    } else {
+        m_pageFilename->comboPrefixCustom->setFocus();
+        m_pageFilename->comboPrefixCustom->selectAll();
+    }
 }
 
 void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom, const QString & templ ) 

@@ -43,6 +43,11 @@ class ExtHistoryCombo : public KHistoryComboBox {
     void loadConfig();
     void saveConfig();
 
+    /**
+     * select the current contents of the combobox.
+     */
+    void selectAll();
+
  signals:
     void delayedTextChanged();
 
