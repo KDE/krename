@@ -42,6 +42,16 @@ ENDIF(EXIV2_FOUND)
 
 CONFIGURE_FILE(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h )
 
+# Find podofo
+FIND_PACKAGE(LIBPODOFO)
+IF(LIBPODOFO_FOUND)
+  ADD_DEFINITIONS( -DWITH_PODOFO )
+  MESSAGE("-- The podofo library was found. KRename will be built with podofo support.")
+ELSE(LIBPODOFO_FOUND)
+  MESSAGE("-- The podofo library was not found. KRename will not be built with podofo support.")
+  SET(LIBPODOFO_LIB "")
+ENDIF(LIBPODOFO_FOUND)
+
 # Directories
 
 add_subdirectory(src)

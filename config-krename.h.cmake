@@ -12,4 +12,7 @@
 /* have Exiv2 */
 #define HAVE_EXIV2 ${EXIV2_FOUND}
 
+/* have PoDoFo */
+#define HAVE_PODOFO 1
+
 #define VERSION "${KRENAME_VERSION}"

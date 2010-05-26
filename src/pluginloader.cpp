@@ -33,6 +33,9 @@
 #ifdef WITH_TAGLIB 
 # include "taglibplugin.h"
 #endif // WITH_TAGLIB
+#ifdef WITH_PODOFO 
+# include "podofoplugin.h"
+#endif // WITH_TAGLIB
 #include "translitplugin.h"
 
 #include "../config-krename.h"
@@ -142,6 +145,9 @@ void PluginLoader::load()
 #ifdef WITH_TAGLIB 
     m_plugins.append( new TagLibPlugin( this ) );
 #endif // WITH_TAGLIB 
+#ifdef WITH_PODOFO 
+    m_plugins.append( new PodofoPlugin( this ) );
+#endif // WITH_TAGLIB
     m_plugins.append( new TranslitPlugin( this ) );
     //this->loadFilePlugins();
 
