@@ -51,7 +51,7 @@
 
 KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list )
     : QObject( (QObject*)window ), m_window( window ),
-      m_lastSplitMode( eSplitMode_FirstDot ), m_lastDot( 0 ),
+      m_lastSplitMode( eSplitMode_LastDot ), m_lastDot( 0 ),
       m_runningThreadedListersCount( 0 )
 {
     setupActions();
