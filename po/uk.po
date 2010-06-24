@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-27 22:57+0100\n"
+"POT-Creation-Date: 2010-06-24 22:10+0100\n"
 "PO-Revision-Date: 2010-03-22 16:26+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -15,10 +15,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: rc.cpp:39 rc.cpp:51
+#: rc.cpp:108 rc.cpp:120
 msgid "$"
 msgstr "$"
 
@@ -46,23 +46,23 @@ msgstr "&3. Додатки"
 msgid "&4. Filename"
 msgstr "&4. Назва файла"
 
-#: rc.cpp:478
+#: rc.cpp:384
 msgid "&Add Number"
 msgstr "&Додати число"
 
-#: rc.cpp:362 rc.cpp:496 rc.cpp:651 previewlist.cpp:36
+#: rc.cpp:6 rc.cpp:438 rc.cpp:612 previewlist.cpp:36
 msgid "&Add..."
 msgstr "&Додати..."
 
-#: rc.cpp:30
+#: rc.cpp:99
 msgid "&Advanced Filename"
 msgstr "&Додаткове іменування"
 
-#: rc.cpp:12
+#: rc.cpp:423
 msgid "&Cancel"
 msgstr "&Скасувати"
 
-#: rc.cpp:291
+#: rc.cpp:567
 msgid "&Change Owner"
 msgstr "З&мінити власника"
 
@@ -74,51 +74,51 @@ msgstr "&Змінити назву файла вручну..."
 msgid "&Close"
 msgstr "&Закрити"
 
-#: rc.cpp:424
+#: rc.cpp:399
 msgid "&Convert selection:"
 msgstr "В&аріант перетворення:"
 
-#: rc.cpp:338
+#: rc.cpp:84
 msgid "&Copy files to destination directory"
 msgstr "&Копіювати файли до каталогу призначення"
 
-#: rc.cpp:368
+#: rc.cpp:618
 msgid "&Definitions"
 msgstr "Ви&значення"
 
-#: rc.cpp:365
+#: rc.cpp:615
 msgid "&Delete"
 msgstr "&Вилучити"
 
-#: rc.cpp:690
+#: rc.cpp:45
 msgid "&Display name"
 msgstr "По&казувати назву"
 
-#: rc.cpp:195 rc.cpp:645
+#: rc.cpp:264 rc.cpp:363
 msgid "&Down"
 msgstr "В&низ"
 
-#: rc.cpp:499
+#: rc.cpp:441
 msgid "&Edit..."
 msgstr "&Змінити..."
 
-#: rc.cpp:204
+#: rc.cpp:273
 msgid "&Enable Plugin"
 msgstr "&Увімкнути додаток"
 
-#: rc.cpp:147 rc.cpp:606
+#: rc.cpp:216 rc.cpp:324
 msgid "&Extension:"
 msgstr "С&уфікс назви:"
 
-#: rc.cpp:102 rc.cpp:561
+#: rc.cpp:171 rc.cpp:279
 msgid "&Filename"
 msgstr "&Назва файла"
 
-#: rc.cpp:546
+#: rc.cpp:711
 msgid "&Files per directory:"
 msgstr "&Файлів на каталог:"
 
-#: rc.cpp:18
+#: rc.cpp:450
 msgid "&Find:"
 msgstr "З&найти:"
 
@@ -126,19 +126,19 @@ msgstr "З&найти:"
 msgid "&Finish"
 msgstr "З&авершити"
 
-#: rc.cpp:57
+#: rc.cpp:126
 msgid "&Functions..."
 msgstr "&Функції..."
 
-#: rc.cpp:300
+#: rc.cpp:576
 msgid "&Group:"
 msgstr "&Група:"
 
-#: rc.cpp:318
+#: rc.cpp:651
 msgid "&Increase Counter"
 msgstr "&Лічильник збільшення"
 
-#: rc.cpp:309
+#: rc.cpp:642
 msgid "&Initial Value:"
 msgstr "По&чаткове значення"
 
@@ -146,39 +146,39 @@ msgstr "По&чаткове значення"
 msgid "&Insert"
 msgstr "&Вставити"
 
-#: rc.cpp:96
+#: rc.cpp:165
 msgid "&Insert Part of Filename..."
 msgstr "Вс&тавити частину назви файла..."
 
-#: rc.cpp:380
+#: rc.cpp:630
 msgid "&Insert Variable"
 msgstr "Вс&тавити змінну"
 
-#: rc.cpp:421
+#: rc.cpp:396
 msgid "&Invert selection"
 msgstr "&Інвертувати вибір"
 
-#: rc.cpp:377
+#: rc.cpp:627
 msgid "&Load from File..."
 msgstr "&Завантажити з файла..."
 
-#: rc.cpp:341
+#: rc.cpp:87
 msgid "&Move files to destination directory"
 msgstr "П&ересунути файли до каталогу призначення"
 
-#: rc.cpp:306
+#: rc.cpp:639
 msgid "&Name:"
 msgstr "Н&азва:"
 
-#: rc.cpp:463
+#: rc.cpp:369
 msgid "&Numbering"
 msgstr "&Нумерація"
 
-#: rc.cpp:90
+#: rc.cpp:159
 msgid "&Numbering..."
 msgstr "&Нумерація..."
 
-#: rc.cpp:329
+#: rc.cpp:662
 msgid "&Offset:"
 msgstr "&Крок:"
 
@@ -190,31 +190,31 @@ msgstr "&Відкрити"
 msgid "&Open Destination"
 msgstr "Відкрити &призначення"
 
-#: rc.cpp:332
+#: rc.cpp:78
 msgid "&Options"
 msgstr "&Параметри"
 
-#: rc.cpp:543
+#: rc.cpp:708
 msgid "&Options:"
 msgstr "&Параметри:"
 
-#: rc.cpp:347
+#: rc.cpp:93
 msgid "&Overwrite existing files"
 msgstr "П&ерезаписувати існуючі файли"
 
-#: rc.cpp:144 rc.cpp:603
+#: rc.cpp:213 rc.cpp:321
 msgid "&Prefix:"
 msgstr "&Префікс:"
 
-#: rc.cpp:684
+#: rc.cpp:39
 msgid "&Preview"
 msgstr "&Перегляд"
 
-#: rc.cpp:502 previewlist.cpp:37
+#: rc.cpp:444 previewlist.cpp:37
 msgid "&Remove"
 msgstr "Ви&лучити"
 
-#: rc.cpp:481
+#: rc.cpp:387
 msgid "&Remove Number"
 msgstr "Ви&лучити нумерацію"
 
@@ -222,7 +222,7 @@ msgstr "Ви&лучити нумерацію"
 msgid "&Rename All Files Again..."
 msgstr "Ще раз перей&менувати всі файли..."
 
-#: rc.cpp:335
+#: rc.cpp:81
 msgid "&Rename input files"
 msgstr "Пере&йменувати початкові файли"
 
@@ -230,47 +230,47 @@ msgstr "Пере&йменувати початкові файли"
 msgid "&Rename more..."
 msgstr "П&ерейменувати ще..."
 
-#: rc.cpp:21
+#: rc.cpp:453
 msgid "&Replace With:"
 msgstr "&Замінити на:"
 
-#: rc.cpp:472
+#: rc.cpp:378
 msgid "&Reset counter for every directory"
 msgstr "С&кидати лічильник для кожного каталогу"
 
-#: rc.cpp:374
+#: rc.cpp:624
 msgid "&Save to File..."
 msgstr "&Зберегти до файла..."
 
-#: rc.cpp:99
+#: rc.cpp:168
 msgid "&Simple Filename"
 msgstr "Пр&оста назва файла"
 
-#: rc.cpp:475
+#: rc.cpp:381
 msgid "&Skip Numbers"
 msgstr "Пр&опустити номери"
 
-#: rc.cpp:549
+#: rc.cpp:714
 msgid "&Start index:"
 msgstr "По&чаток нумерації:"
 
-#: rc.cpp:469
+#: rc.cpp:375
 msgid "&Step by:"
 msgstr "&Крок у:"
 
-#: rc.cpp:105 rc.cpp:564
+#: rc.cpp:174 rc.cpp:282
 msgid "&Suffix:"
 msgstr "Су&фікс:"
 
-#: rc.cpp:33
+#: rc.cpp:102
 msgid "&Template:"
 msgstr "&Шаблон:"
 
-#: rc.cpp:383
+#: rc.cpp:633
 msgid "&Test..."
 msgstr ":П&еревірити..."
 
-#: rc.cpp:312
+#: rc.cpp:645
 msgid "&Type:"
 msgstr "&Тип^"
 
@@ -278,19 +278,19 @@ msgstr "&Тип^"
 msgid "&Undo"
 msgstr "&Вернути"
 
-#: rc.cpp:189 rc.cpp:642
+#: rc.cpp:258 rc.cpp:360
 msgid "&Up"
 msgstr "В&гору"
 
-#: rc.cpp:63
+#: rc.cpp:132
 msgid "&Use extension of the input file"
 msgstr "Суф&ікс поточної назви файла"
 
-#: rc.cpp:297
+#: rc.cpp:573
 msgid "&User:"
 msgstr "&Користувач:"
 
-#: rc.cpp:353
+#: rc.cpp:603
 msgid "&Variables"
 msgstr "&Змінні"
 
@@ -298,11 +298,11 @@ msgstr "&Змінні"
 msgid "(c) 2001-2009, Dominik Seichter\n"
 msgstr "© 2001-2009, Dominik Seichter\n"
 
-#: scriptplugin.cpp:298 scriptplugin.cpp:333 krenameimpl.cpp:357
+#: krenameimpl.cpp:357 scriptplugin.cpp:298 scriptplugin.cpp:333
 msgid "*|All files and directories"
 msgstr "*|Всі файли і каталоги"
 
-#: rc.cpp:359
+#: rc.cpp:609
 msgid "1"
 msgstr "1"
 
@@ -310,7 +310,7 @@ msgstr "1"
 msgid ": The output directory %1 does not exist."
 msgstr ": Каталогу, в який потрібно записати дані, %1, не існує."
 
-#: rc.cpp:321
+#: rc.cpp:654
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -354,7 +354,7 @@ msgstr ""
 "span>За допомогою цього додатка ви можете вказати крок у -4 і отримати "
 "бажаний результат.</p></body></html>"
 
-#: rc.cpp:389
+#: rc.cpp:668
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -382,8 +382,8 @@ msgstr ""
 "large; font-weight:600;\">Вітаємо у KRename</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Інструмент пакетного "
-"перейменування для "
-"KDE.<br />Щоб перейменувати файли, вам слід:</p></body></html>"
+"перейменування для KDE.<br />Щоб перейменувати файли, вам слід:</p></body></"
+"html>"
 
 #: krenamewindow.cpp:396
 msgid "<b>Files:<b> %1"
@@ -398,7 +398,7 @@ msgstr ""
 "b><br>У режимі роботи від імені адміністративного користувача Krename може "
 "пошкодити вашу систему, якщо ви виконуватимете необдумані дії!"
 
-#: rc.cpp:42
+#: rc.cpp:111
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -428,12 +428,12 @@ msgid ""
 msgstr ""
 "<qt><p>KRename — це інструмент пакетного перейменування файлів, здатний "
 "перейменовувати файли зі списку на основі набору правил.</p><p>Якщо вам "
-"подобається KRename, ви можете підтримати програму. "
-"Нам завжди знадобляться ваша перевірка, виправлення вад і запити на "
-"реалізацію функцій, а також грошові перекази (всім потрібні гроші ;) "
-"Докладніше про це у файлах довідки.</p></qt>"
+"подобається KRename, ви можете підтримати програму. Нам завжди знадобляться "
+"ваша перевірка, виправлення вад і запити на реалізацію функцій, а також "
+"грошові перекази (всім потрібні гроші ;) Докладніше про це у файлах довідки."
+"</p></qt>"
 
-#: rc.cpp:87
+#: rc.cpp:156
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
@@ -441,7 +441,7 @@ msgstr ""
 "<qt>Налаштуйте початковий номер, крок і пропускання для нумерації у назвах "
 "файлів.</qt>"
 
-#: rc.cpp:69
+#: rc.cpp:138
 msgid ""
 "<qt>Configure which part of the filename is considered to be the "
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
@@ -451,28 +451,27 @@ msgstr ""
 "за використання варіанта «Перша крапка», суфіксом вважатиметься \".tar.gz\", "
 "а за використання варіанта «Остання крапка» — лише \".gz\".</qt>"
 
-#: rc.cpp:48
+#: rc.cpp:117
 msgid "<qt>Enter a template for changing the file extension.</qt>"
 msgstr "<qt>Ввести шаблон зміни суфікса назви файла.</qt>"
 
-#: rc.cpp:36
+#: rc.cpp:105
 msgid "<qt>Enter a template for changing the filename.</qt>"
 msgstr "<qt>Ввести шаблон зміни назви файла.</qt>"
 
-#: rc.cpp:81 rc.cpp:180
+#: rc.cpp:150 rc.cpp:249
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
 msgstr ""
 "<qt>Знайти і замінити рядки або формальні вирази під час перейменування "
-"файлів."
-"</qt>"
+"файлів.</qt>"
 
-#: rc.cpp:93
+#: rc.cpp:162
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
 msgstr "<qt>Графічно позначити частину файла, яку слід замінити.</qt>"
 
-#: rc.cpp:54 rc.cpp:108 rc.cpp:111 rc.cpp:132 rc.cpp:141
+#: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
 msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
@@ -480,11 +479,11 @@ msgstr ""
 "<qt>Вставити до назви особливі параметри, зокрема ім’я виконавця композиції "
 "mp3 або дату створення зображення.</qt>"
 
-#: rc.cpp:60
+#: rc.cpp:129
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
 msgstr "<qt>Зберегти суфікс назви у початковому варіанті.</qt>"
 
-#: rc.cpp:418
+#: rc.cpp:393
 msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
@@ -522,7 +521,14 @@ msgstr ""
 "<qt>У цьому додатку реалізовано підтримку читання міток з файлів JPEG і TIFF."
 "</qt>"
 
-#: rc.cpp:567 rc.cpp:570 rc.cpp:591 rc.cpp:600
+#: podofoplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
+msgstr ""
+"<qt>У цьому додатку реалізовано підтримку читання міток з файлів JPEG і TIFF."
+"</qt>"
+
+#: rc.cpp:285 rc.cpp:288 rc.cpp:309 rc.cpp:318
 msgid "?"
 msgstr "?"
 
@@ -530,11 +536,11 @@ msgstr "?"
 msgid "A JavaScript error has occured: "
 msgstr "Сталася помилка JavaScript: "
 
-#: rc.cpp:288
+#: rc.cpp:564
 msgid "A&dvanced Permissions"
 msgstr "Р&озширені права доступу"
 
-#: rc.cpp:6 rc.cpp:243
+#: rc.cpp:519 rc.cpp:597
 msgid "Access Permissions"
 msgstr "Права доступу"
 
@@ -554,7 +560,7 @@ msgstr "Додати назви каталогів &з назвами файлі
 msgid "Add directory names only"
 msgstr "Додати лише назви каталогів"
 
-#: rc.cpp:648
+#: rc.cpp:3
 msgid "Add files for renaming."
 msgstr "Додати файли для перейменування."
 
@@ -565,7 +571,7 @@ msgid ""
 msgstr ""
 "Додавати лише назви каталогів, без назв файлів у каталозі до списку KRename."
 
-#: rc.cpp:403
+#: rc.cpp:682
 msgid "Add some files ..."
 msgstr "Додати файли…"
 
@@ -578,7 +584,7 @@ msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr "Всі поточні визначення буде втрачено. Бажаєте все ж виконати дію?"
 
-#: rc.cpp:508
+#: rc.cpp:462
 msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
@@ -598,6 +604,11 @@ msgstr "Arpad Biro"
 msgid "Asim Husanovic"
 msgstr "Asim Husanovic"
 
+#: podofoplugin.cpp:41
+#, fuzzy
+msgid "Author of the pdf file"
+msgstr "Власник файла"
+
 #: scriptplugin.cpp:244
 msgid "Boolean"
 msgstr "Boolean"
@@ -610,11 +621,11 @@ msgstr "Brandon Low"
 msgid "Built-in Functions"
 msgstr "Вбудовані функції"
 
-#: rc.cpp:252 rc.cpp:264 rc.cpp:276
+#: rc.cpp:528 rc.cpp:540 rc.cpp:552
 msgid "Can Read"
 msgstr "Може читати"
 
-#: rc.cpp:255 rc.cpp:267 rc.cpp:279
+#: rc.cpp:531 rc.cpp:543 rc.cpp:555
 msgid "Can Read & Write"
 msgstr "Може читати та писати"
 
@@ -646,7 +657,7 @@ msgstr "Не вдалося створити скрипт скасування:"
 msgid "Can't set executable bit on undo script."
 msgstr "Не вдалося надати права на виконання скрипту скасування."
 
-#: dirsortplugin.cpp:158 batchrenamer.cpp:1160
+#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
 msgid "Cannot create directory %1"
 msgstr "Не вдалося створити каталог %1"
 
@@ -654,23 +665,23 @@ msgstr "Не вдалося створити каталог %1"
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "Не можна створювати символічні посилання на нелокальні адреси: %1"
 
-#: rc.cpp:123 rc.cpp:165 rc.cpp:436 rc.cpp:582 rc.cpp:624
+#: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
 msgstr "З великої літери"
 
-#: rc.cpp:511
+#: rc.cpp:465
 msgid "Category"
 msgstr "Категорія"
 
-#: rc.cpp:240
+#: rc.cpp:516
 msgid "Change &Permissions"
 msgstr "З&мінити права доступу"
 
-#: rc.cpp:448
+#: rc.cpp:582
 msgid "Change &access date && time"
 msgstr "Змінити дату і час &доступу"
 
-#: rc.cpp:451
+#: rc.cpp:585
 msgid "Change &modifcation date && time"
 msgstr "Змінити дату і час &зміни"
 
@@ -682,7 +693,7 @@ msgstr "Charles Samuels"
 msgid "Class"
 msgstr "Клас"
 
-#: rc.cpp:714
+#: rc.cpp:69
 msgid "Configure the look and feel of the KRename GUI:"
 msgstr "Налаштуйте вигляд і поведінку інтерфейсу KRename:"
 
@@ -690,19 +701,19 @@ msgstr "Налаштуйте вигляд і поведінку інтерфей
 msgid "Contributed a Spanish translation"
 msgstr "Надіслав переклад іспанською"
 
-#: rc.cpp:117 rc.cpp:159 rc.cpp:430 rc.cpp:576 rc.cpp:618
+#: rc.cpp:186 rc.cpp:228 rc.cpp:294 rc.cpp:336 rc.cpp:405
 msgid "Convert to lower case"
 msgstr "Перетворити на нижній регістр"
 
-#: rc.cpp:120 rc.cpp:162 rc.cpp:433 rc.cpp:579 rc.cpp:621
+#: rc.cpp:189 rc.cpp:231 rc.cpp:297 rc.cpp:339 rc.cpp:408
 msgid "Convert to upper case"
 msgstr "Перетворити на верхній регістр"
 
-#: rc.cpp:303
+#: rc.cpp:636
 msgid "Create Variable"
 msgstr "Створити змінну"
 
-#: rc.cpp:344
+#: rc.cpp:90
 msgid "Create symbolic &links in destination directory"
 msgstr "Створити симв&олічні посилання у каталозі призначення"
 
@@ -710,11 +721,16 @@ msgstr "Створити симв&олічні посилання у катал�
 msgid "Created the Gentoo Ebuild scripts for Krename."
 msgstr "Створив скрипти Ebuild Krename для Gentoo."
 
-#: rc.cpp:168 rc.cpp:627
+#: podofoplugin.cpp:42
+#, fuzzy
+msgid "Creator of the pdf file"
+msgstr "Власник файла"
+
+#: rc.cpp:237 rc.cpp:345
 msgid "Custom extension"
 msgstr "Нетиповий суфікс назви"
 
-#: rc.cpp:126 rc.cpp:585
+#: rc.cpp:195 rc.cpp:303
 msgid "Custom name"
 msgstr "Нетипова назва"
 
@@ -726,7 +742,7 @@ msgstr "Переклад чеською"
 msgid "Daniele Medri"
 msgstr "Daniele Medri"
 
-#: rc.cpp:138 rc.cpp:153 rc.cpp:597 rc.cpp:612
+#: rc.cpp:207 rc.cpp:222 rc.cpp:315 rc.cpp:330
 msgid "Date"
 msgstr "Дата"
 
@@ -743,20 +759,20 @@ msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
 "Додаток дати і часу працює лише з локальними файлами. Файл %1 є віддаленим."
 
-#: rc.cpp:356
+#: rc.cpp:606
 msgid "Declare global variables that can be used from within your functions:"
 msgstr ""
 "Оголосіть загальні змінні, якими можна буде скористатися у ваших функціях:"
 
-#: rc.cpp:371
+#: rc.cpp:621
 msgid "Define functions that can be used from KRename templates:"
 msgstr "Визначте функції, якими можна скористатися у шаблонах KRename:"
 
-#: rc.cpp:517
+#: rc.cpp:471
 msgid "Description"
 msgstr "Опис"
 
-#: rc.cpp:3
+#: rc.cpp:594
 msgid "Dialog"
 msgstr "Діалогове вікно"
 
@@ -764,11 +780,11 @@ msgstr "Діалогове вікно"
 msgid "Directory of the current file"
 msgstr "Каталог поточного файла"
 
-#: rc.cpp:681
+#: rc.cpp:36
 msgid "Display a preview image for each file."
 msgstr "Показувати мініатюри для всіх файлів."
 
-#: rc.cpp:687
+#: rc.cpp:42
 msgid "Display the filename together with the preview."
 msgstr "Показувати назву файла разом з мініатюрою."
 
@@ -784,7 +800,7 @@ msgstr "Dominik Seichter"
 msgid "Double"
 msgstr "Double"
 
-#: rc.cpp:705
+#: rc.cpp:60
 msgid "Down"
 msgstr "Вниз"
 
@@ -800,7 +816,7 @@ msgstr "Помилка"
 msgid "Error during undoing %1"
 msgstr "Помилка під час скасування %1"
 
-#: dirsortplugin.cpp:130 batchrenamer.cpp:271
+#: batchrenamer.cpp:271 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
 msgstr "Помилка під час перейменування %2 (на %1)"
 
@@ -816,15 +832,15 @@ msgstr "Додаток Exiv2 (JPEG/TIFF Exif)"
 msgid "Extension of the current file"
 msgstr "Суфікс назви поточного файла"
 
-#: rc.cpp:66
+#: rc.cpp:135
 msgid "File extension &starts at:"
 msgstr "Суфікс файлів п&очинається з:"
 
-#: rc.cpp:213
+#: rc.cpp:489
 msgid "File preview"
 msgstr "Перегляд файлів"
 
-#: rc.cpp:129 rc.cpp:588
+#: rc.cpp:198 rc.cpp:306
 msgid "File&name:"
 msgstr "&Назва файла:"
 
@@ -844,27 +860,27 @@ msgstr "Файли буде скопійовано до: %1"
 msgid "Files will be moved to: %1"
 msgstr "Файли буде пересунуто до: %1"
 
-#: rc.cpp:693
+#: rc.cpp:48
 msgid "Files: <b>0</b>"
 msgstr "Файлів: <b>0</b>"
 
-#: rc.cpp:490
+#: rc.cpp:432
 msgid "Find"
 msgstr "Знайти"
 
-#: rc.cpp:84 rc.cpp:183 rc.cpp:639
+#: rc.cpp:153 rc.cpp:252 rc.cpp:357
 msgid "Find &and Replace..."
 msgstr "Знайти &і замінити..."
 
-#: rc.cpp:15 rc.cpp:484
+#: rc.cpp:426 rc.cpp:447
 msgid "Find and Replace"
 msgstr "Знайти і замінити"
 
-#: rc.cpp:24
+#: rc.cpp:456
 msgid "Find is a Regular &Expression"
 msgstr "Рядок пошуку — формальний в&ираз"
 
-#: rc.cpp:72
+#: rc.cpp:141
 msgid "First Dot"
 msgstr "Першої крапки"
 
@@ -888,16 +904,16 @@ msgstr ""
 "Виправив проблеми з файлом spec і створив rpm для всіх можливих версій SuSE, "
 "також є новим супровідником KRename у Gentoo"
 
-#: rc.cpp:249 rc.cpp:261 rc.cpp:273
+#: rc.cpp:525 rc.cpp:537 rc.cpp:549
 msgid "Forbidden"
 msgstr "Заборонено"
 
-#: rc.cpp:27 rc.cpp:198 rc.cpp:207 rc.cpp:237 rc.cpp:315 rc.cpp:350 rc.cpp:415
-#: rc.cpp:445 rc.cpp:460 rc.cpp:529 rc.cpp:558 rc.cpp:708
+#: rc.cpp:63 rc.cpp:96 rc.cpp:267 rc.cpp:276 rc.cpp:366 rc.cpp:390 rc.cpp:483
+#: rc.cpp:513 rc.cpp:579 rc.cpp:600 rc.cpp:648 rc.cpp:694
 msgid "Form"
 msgstr "Форма"
 
-#: rc.cpp:386
+#: rc.cpp:665
 msgid "Frame"
 msgstr "Блок"
 
@@ -913,11 +929,11 @@ msgstr "GID"
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr "Надихнув автора на створення додатків своєю програмою scribus."
 
-#: rc.cpp:457
+#: rc.cpp:591
 msgid "Get &Current Time"
 msgstr "Отрим&ати поточний час"
 
-#: rc.cpp:258
+#: rc.cpp:534
 msgid "Gro&up:"
 msgstr "Гр&упа:"
 
@@ -929,7 +945,7 @@ msgstr "Groult Richard"
 msgid "Group"
 msgstr "Група"
 
-#: rc.cpp:412
+#: rc.cpp:691
 msgid "Hint: Undo is still possible after renaming your files."
 msgstr "Підказка: після перейменування ви можете його скасувати."
 
@@ -1118,7 +1134,7 @@ msgstr "Вставити транслітеровану початкову на�
 msgid "Int"
 msgstr "Int"
 
-#: rc.cpp:285
+#: rc.cpp:561
 msgid "Is Executable/Only owner &can rename and delete folder content"
 msgstr "Є виконуваним/Лише власник &може перейменовувати і вилучати вміст"
 
@@ -1138,7 +1154,7 @@ msgstr "Додаток JavaScript"
 msgid "Jose Rodriguez"
 msgstr "Jose Rodriguez"
 
-#: krenameimpl.cpp:383 main.cpp:59
+#: main.cpp:59 krenameimpl.cpp:383
 msgid "KRename"
 msgstr "KRename"
 
@@ -1146,7 +1162,7 @@ msgstr "KRename"
 msgid "KRename Build:"
 msgstr "Випуск KRename:"
 
-#: rc.cpp:505
+#: rc.cpp:459
 msgid "KRename Help"
 msgstr "Довідка з KRename"
 
@@ -1158,15 +1174,20 @@ msgstr "Програма KRename завершила процес перейме�
 msgid "KRename finished the undo process."
 msgstr "Програма KRename завершила процес скасування."
 
+#: podofoplugin.cpp:43
+#, fuzzy
+msgid "Keywords of the pdf file"
+msgstr "Власник файла"
+
 #: main.cpp:107
 msgid "Krzysztof Pawlak"
 msgstr "Krzysztof Pawlak"
 
-#: rc.cpp:75
+#: rc.cpp:144
 msgid "Last Dot"
 msgstr "Останньої крапки"
 
-#: rc.cpp:711
+#: rc.cpp:66
 msgid "Look and Feel"
 msgstr "Вигляд та поведінка"
 
@@ -1190,15 +1211,15 @@ msgstr "Michael v.Ostheim"
 msgid "Michal Smoczyk"
 msgstr "Michal Smoczyk"
 
-#: rc.cpp:192 rc.cpp:702
+#: rc.cpp:57 rc.cpp:261
 msgid "Move selected files downwards."
 msgstr "Пересунути позначені файли нижче."
 
-#: rc.cpp:186 rc.cpp:696
+#: rc.cpp:51 rc.cpp:255
 msgid "Move selected files upwards."
 msgstr "Пересунути позначені файли вище."
 
-#: rc.cpp:171 rc.cpp:630
+#: rc.cpp:240 rc.cpp:348
 msgid "N&umber"
 msgstr "Н&омер"
 
@@ -1206,27 +1227,31 @@ msgstr "Н&омер"
 msgid "Nicolas Benoit"
 msgstr "Nicolas Benoit"
 
-#: rc.cpp:427
+#: rc.cpp:402
 msgid "No Conversion"
 msgstr "Без перетворення"
 
-#: rc.cpp:78
+#: rc.cpp:147
 msgid "No File Extension"
 msgstr "Без суфікса назви"
 
-#: rc.cpp:135 rc.cpp:150 rc.cpp:594 rc.cpp:609
+#: rc.cpp:204 rc.cpp:219 rc.cpp:312 rc.cpp:327
 msgid "Number"
 msgstr "Число"
 
-#: rc.cpp:552
+#: rc.cpp:717
 msgid "Number &of digits:"
 msgstr "Кількість &цифр:"
 
-#: rc.cpp:174 rc.cpp:633
+#: rc.cpp:243 rc.cpp:351
 msgid "Number of &digits:"
 msgstr "Кількість &цифр:"
 
-#: rc.cpp:246
+#: podofoplugin.cpp:47
+msgid "Number of pages in the pdf file"
+msgstr ""
+
+#: rc.cpp:522
 msgid "O&wner:"
 msgstr "В&ласник:"
 
@@ -1234,7 +1259,7 @@ msgstr "В&ласник:"
 msgid "Origin"
 msgstr "Походження"
 
-#: rc.cpp:270
+#: rc.cpp:546
 msgid "Ot&hers:"
 msgstr "Ін&ші:"
 
@@ -1242,7 +1267,7 @@ msgstr "Ін&ші:"
 msgid "Others"
 msgstr "Інші"
 
-#: rc.cpp:555
+#: rc.cpp:720
 msgid "Out&put:"
 msgstr "В&ивід:"
 
@@ -1250,7 +1275,7 @@ msgstr "В&ивід:"
 msgid "Owner of the file"
 msgstr "Власник файла"
 
-#: rc.cpp:294
+#: rc.cpp:570
 msgid "Ownership"
 msgstr "Власник"
 
@@ -1283,13 +1308,17 @@ msgstr ""
 "Додаток роботи з дозволами працює лише з локальними файлами. Файл %1 є "
 "віддаленим."
 
-#: rc.cpp:216
+#: rc.cpp:492
 msgid "Please input a new filename"
 msgstr "Будь ласка введіть нову назву файла"
 
-#: rc.cpp:201
+#: rc.cpp:270
 msgid "Plugins"
 msgstr "Додатки"
+
+#: podofoplugin.cpp:49
+msgid "PoDoFo (PDF) Plugin"
+msgstr ""
 
 #: main.cpp:110
 msgid "Polish Translation"
@@ -1299,19 +1328,24 @@ msgstr "Переклад польською"
 msgid "Press close to quit!"
 msgstr "Натисніть «Закрити», щоб завершити роботу!"
 
-#: rc.cpp:520
+#: rc.cpp:474
 msgid "Preview"
 msgstr "Перегляд"
 
-#: rc.cpp:526
+#: rc.cpp:480
 msgid "Preview File:"
 msgstr "Перегляд файла:"
 
-#: rc.cpp:439
+#: rc.cpp:414
 msgid "Preview of the generated KRename command:"
 msgstr "Перегляд створеної команди KRename:"
 
-#: rc.cpp:9
+#: podofoplugin.cpp:46
+#, fuzzy
+msgid "Producer of the pdf file"
+msgstr "Власник файла"
+
+#: rc.cpp:420
 msgid "Progress"
 msgstr "Поступ"
 
@@ -1332,11 +1366,11 @@ msgstr "Надіслав латку виправлення простору на
 msgid "Provided the new preview and move features"
 msgstr "Створив нові модулі попереднього перегляду і пересування"
 
-#: rc.cpp:657
+#: rc.cpp:12
 msgid "Re&move"
 msgstr "Ви&лучити"
 
-#: rc.cpp:663
+#: rc.cpp:18
 msgid "Re&move All"
 msgstr "Ви&лучити всі"
 
@@ -1344,15 +1378,15 @@ msgstr "Ви&лучити всі"
 msgid "Read"
 msgstr "Читання"
 
-#: rc.cpp:487
+#: rc.cpp:429
 msgid "Reg. Expression"
 msgstr "Форм. вираз"
 
-#: rc.cpp:660
+#: rc.cpp:15
 msgid "Remove all files."
 msgstr "Вилучити всі файли."
 
-#: rc.cpp:654
+#: rc.cpp:9
 msgid "Remove selected files."
 msgstr "Вилучити позначені файли."
 
@@ -1364,7 +1398,7 @@ msgstr "Ще раз пере&йменувати необроблені файл�
 msgid "Rename Processed Files &Again..."
 msgstr "&Ще раз перейменувати оброблені файли..."
 
-#: rc.cpp:219
+#: rc.cpp:495
 msgid "Rename the file using the filename created by KRename."
 msgstr "Перейменувати файл на основі назви файла, створеної KRename."
 
@@ -1380,7 +1414,7 @@ msgstr "Успішно перейменовано %1 файлів."
 msgid "Rene Gass"
 msgstr "Rene Gass"
 
-#: rc.cpp:493
+#: rc.cpp:435
 msgid "Replace With"
 msgstr "Замінити на"
 
@@ -1396,23 +1430,23 @@ msgstr "Rolf Magnus"
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "Деякі виправлення для GCC 3.1 у Gentoo."
 
-#: rc.cpp:669
+#: rc.cpp:24
 msgid "Sort: Ascending"
 msgstr "Впорядкування: за зростанням"
 
-#: rc.cpp:672
+#: rc.cpp:27
 msgid "Sort: Descending"
 msgstr "Впорядкування: за спаданням"
 
-#: rc.cpp:675
+#: rc.cpp:30
 msgid "Sort: Numeric"
 msgstr "Впорядкування: числове"
 
-#: rc.cpp:678
+#: rc.cpp:33
 msgid "Sort: Random"
 msgstr "Впорядкування: випадкове"
 
-#: rc.cpp:666
+#: rc.cpp:21
 msgid "Sort: Unsorted"
 msgstr "Впорядкування: невпорядковано"
 
@@ -1424,15 +1458,15 @@ msgstr "Спеціальні"
 msgid "Special Characters"
 msgstr "Спеціальні символи"
 
-#: rc.cpp:409
+#: rc.cpp:688
 msgid "Specify the new filenames by giving a template ..."
 msgstr "Вкажіть нові назви файла за допомогою шаблона…"
 
-#: rc.cpp:177 rc.cpp:636
+#: rc.cpp:246 rc.cpp:354
 msgid "Start  &index:"
 msgstr "По&чаток нумерації:"
 
-#: rc.cpp:466
+#: rc.cpp:372
 msgid "Start &index:"
 msgstr "По&чаток нумерації:"
 
@@ -1468,6 +1502,11 @@ msgstr "Недоліки у підручнику зі стилів та покр
 msgid "Subdirectory-Sort Plugin"
 msgstr "Додаток впорядкування підкаталогів"
 
+#: podofoplugin.cpp:44
+#, fuzzy
+msgid "Subject of the pdf file"
+msgstr "Власник файла"
+
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
 msgstr "Можливі елементи:"
@@ -1480,7 +1519,7 @@ msgstr "Символічні посилання буде створено у: %1
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr "Додаток TagLib (MP3/Ogg)"
 
-#: rc.cpp:210 rc.cpp:397 rc.cpp:400 rc.cpp:406 rc.cpp:442
+#: rc.cpp:417 rc.cpp:486 rc.cpp:676 rc.cpp:679 rc.cpp:685
 msgid "TextLabel"
 msgstr "Мітка"
 
@@ -1520,7 +1559,7 @@ msgstr "Каталогу %1 не існує. Бажаєте, щоб програ
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "Файл %1 вже існує. Перезаписати його?"
 
-#: rc.cpp:282
+#: rc.cpp:558
 msgid "This file uses advanced permissions"
 msgstr "Цей файл використовує розширені права доступу."
 
@@ -1532,7 +1571,7 @@ msgstr ""
 "Позначення цього пункту призведе до того, що KRename додасть назву базового "
 "каталогу вибраних файлів до свого списку."
 
-#: rc.cpp:532
+#: rc.cpp:697
 msgid ""
 "This plugin sorts files after renaming into numbered subdirectories.\n"
 "\n"
@@ -1555,15 +1594,20 @@ msgstr ""
 "\tкаталог/003/файл5\n"
 " \t..."
 
-#: rc.cpp:454
+#: rc.cpp:588
 msgid "Time:"
 msgstr "Час:"
 
-#: rc.cpp:514
+#: podofoplugin.cpp:45
+#, fuzzy
+msgid "Title of the pdf file"
+msgstr "Власник файла"
+
+#: rc.cpp:468
 msgid "Token"
 msgstr "Елемент"
 
-#: rc.cpp:523
+#: rc.cpp:477
 msgid "Token &Preview"
 msgstr "&Перегляд елементів"
 
@@ -1627,46 +1671,46 @@ msgstr "Для віддаленого файла скасування немож
 msgid "Undoing all renamed files."
 msgstr "Скасування всіх перейменувань файлів."
 
-#: rc.cpp:699
+#: rc.cpp:54
 msgid "Up"
 msgstr "Вгору"
 
-#: rc.cpp:234
+#: rc.cpp:510
 msgid "Use &custom filename"
 msgstr "&Нетипова назва файла"
 
-#: rc.cpp:228
+#: rc.cpp:504
 msgid "Use &input filename"
 msgstr "П&очаткова назва файла"
 
-#: rc.cpp:720
+#: rc.cpp:75
 msgid "Use &tabbed style GUI (advanced users)"
 msgstr "С&тиль з інтерфейсу з вкладками (для досвідчених користувачів)"
 
-#: rc.cpp:717
+#: rc.cpp:72
 msgid "Use &wizard style GUI (beginners)"
 msgstr "Сти&ль інтерфейсу майстра (для початківців)"
 
-#: rc.cpp:231
+#: rc.cpp:507
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
 msgstr ""
 "Використовувати нетипову назву файла, засновану на поточній, створеній "
 "KRename назві."
 
-#: rc.cpp:222
+#: rc.cpp:498
 msgid "Use filename created by &KRename"
 msgstr "Назва файла створ&ена KRename"
 
-#: rc.cpp:156 rc.cpp:615
+#: rc.cpp:225 rc.cpp:333
 msgid "Use original extension"
 msgstr "Початковий суфікс"
 
-#: rc.cpp:114 rc.cpp:573
+#: rc.cpp:183 rc.cpp:291
 msgid "Use original name"
 msgstr "Початкова назва файла"
 
-#: rc.cpp:225
+#: rc.cpp:501
 msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."

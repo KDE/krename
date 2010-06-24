@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_CN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-27 22:57+0100\n"
+"POT-Creation-Date: 2010-06-24 22:10+0100\n"
 "PO-Revision-Date: 2007-07-30 11:31+0800\n"
 "Last-Translator: Roy Qu <royqh1979@gmail.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: rc.cpp:39 rc.cpp:51
+#: rc.cpp:108 rc.cpp:120
 msgid "$"
 msgstr ""
 
@@ -48,24 +48,24 @@ msgstr "插件(&P)"
 msgid "&4. Filename"
 msgstr "文件名(&F)"
 
-#: rc.cpp:478
+#: rc.cpp:384
 msgid "&Add Number"
 msgstr "添加编号(&A)"
 
-#: rc.cpp:362 rc.cpp:496 rc.cpp:651 previewlist.cpp:36
+#: rc.cpp:6 rc.cpp:438 rc.cpp:612 previewlist.cpp:36
 msgid "&Add..."
 msgstr "添加(&A)..."
 
-#: rc.cpp:30
+#: rc.cpp:99
 #, fuzzy
 msgid "&Advanced Filename"
 msgstr "文件名(&F)"
 
-#: rc.cpp:12
+#: rc.cpp:423
 msgid "&Cancel"
 msgstr ""
 
-#: rc.cpp:291
+#: rc.cpp:567
 #, fuzzy
 msgid "&Change Owner"
 msgstr "变更所有者(&O)"
@@ -79,57 +79,57 @@ msgstr "手工修改文件名(&C)"
 msgid "&Close"
 msgstr ""
 
-#: rc.cpp:424
+#: rc.cpp:399
 #, fuzzy
 msgid "&Convert selection:"
 msgstr "反向选择(&I)"
 
-#: rc.cpp:338
+#: rc.cpp:84
 #, fuzzy
 msgid "&Copy files to destination directory"
 msgstr "复制文件至目的目录(&C)"
 
-#: rc.cpp:368
+#: rc.cpp:618
 #, fuzzy
 msgid "&Definitions"
 msgstr "目标(&T)"
 
-#: rc.cpp:365
+#: rc.cpp:615
 #, fuzzy
 msgid "&Delete"
 msgstr "删除配置(&D)"
 
-#: rc.cpp:690
+#: rc.cpp:45
 msgid "&Display name"
 msgstr "显示文件名(&D)"
 
-#: rc.cpp:195 rc.cpp:645
+#: rc.cpp:264 rc.cpp:363
 msgid "&Down"
 msgstr ""
 
-#: rc.cpp:499
+#: rc.cpp:441
 msgid "&Edit..."
 msgstr "编辑(&E)..."
 
-#: rc.cpp:204
+#: rc.cpp:273
 #, fuzzy
 msgid "&Enable Plugin"
 msgstr "目录插件(&D)"
 
-#: rc.cpp:147 rc.cpp:606
+#: rc.cpp:216 rc.cpp:324
 msgid "&Extension:"
 msgstr "扩展名(&E)"
 
-#: rc.cpp:102 rc.cpp:561
+#: rc.cpp:171 rc.cpp:279
 msgid "&Filename"
 msgstr "文件名(&F)"
 
-#: rc.cpp:546
+#: rc.cpp:711
 #, fuzzy
 msgid "&Files per directory:"
 msgstr "每个目录的文件："
 
-#: rc.cpp:18
+#: rc.cpp:450
 #, fuzzy
 msgid "&Find:"
 msgstr "查找："
@@ -139,20 +139,20 @@ msgstr "查找："
 msgid "&Finish"
 msgstr "开始重命名(&F)"
 
-#: rc.cpp:57
+#: rc.cpp:126
 msgid "&Functions..."
 msgstr "函数(&F)..."
 
-#: rc.cpp:300
+#: rc.cpp:576
 #, fuzzy
 msgid "&Group:"
 msgstr "群组："
 
-#: rc.cpp:318
+#: rc.cpp:651
 msgid "&Increase Counter"
 msgstr ""
 
-#: rc.cpp:309
+#: rc.cpp:642
 msgid "&Initial Value:"
 msgstr ""
 
@@ -161,41 +161,41 @@ msgstr ""
 msgid "&Insert"
 msgstr "插入 '$'"
 
-#: rc.cpp:96
+#: rc.cpp:165
 msgid "&Insert Part of Filename..."
 msgstr "插入文件名的一部分(&I)..."
 
-#: rc.cpp:380
+#: rc.cpp:630
 #, fuzzy
 msgid "&Insert Variable"
 msgstr "插入 '$'"
 
-#: rc.cpp:421
+#: rc.cpp:396
 msgid "&Invert selection"
 msgstr "反向选择(&I)"
 
-#: rc.cpp:377
+#: rc.cpp:627
 #, fuzzy
 msgid "&Load from File..."
 msgstr "加载配置(&L)"
 
-#: rc.cpp:341
+#: rc.cpp:87
 msgid "&Move files to destination directory"
 msgstr "移动文件至目的目录(&M)"
 
-#: rc.cpp:306
+#: rc.cpp:639
 msgid "&Name:"
 msgstr "文件名(&N):"
 
-#: rc.cpp:463
+#: rc.cpp:369
 msgid "&Numbering"
 msgstr "编号"
 
-#: rc.cpp:90
+#: rc.cpp:159
 msgid "&Numbering..."
 msgstr "编号(&N)..."
 
-#: rc.cpp:329
+#: rc.cpp:662
 msgid "&Offset:"
 msgstr ""
 
@@ -208,34 +208,34 @@ msgstr ""
 msgid "&Open Destination"
 msgstr "打开目标(&O)..."
 
-#: rc.cpp:332
+#: rc.cpp:78
 #, fuzzy
 msgid "&Options"
 msgstr "选项(&O)"
 
-#: rc.cpp:543
+#: rc.cpp:708
 #, fuzzy
 msgid "&Options:"
 msgstr "选项(&O)"
 
-#: rc.cpp:347
+#: rc.cpp:93
 msgid "&Overwrite existing files"
 msgstr "覆盖已存在的文件(&O)"
 
-#: rc.cpp:144 rc.cpp:603
+#: rc.cpp:213 rc.cpp:321
 msgid "&Prefix:"
 msgstr "前缀(&P)"
 
-#: rc.cpp:684
+#: rc.cpp:39
 msgid "&Preview"
 msgstr "预览(&P)"
 
-#: rc.cpp:502 previewlist.cpp:37
+#: rc.cpp:444 previewlist.cpp:37
 #, fuzzy
 msgid "&Remove"
 msgstr "删除(&M)"
 
-#: rc.cpp:481
+#: rc.cpp:387
 msgid "&Remove Number"
 msgstr "删除编号(&R)"
 
@@ -244,7 +244,7 @@ msgstr "删除编号(&R)"
 msgid "&Rename All Files Again..."
 msgstr "重新重命名所有文件(&A)"
 
-#: rc.cpp:335
+#: rc.cpp:81
 msgid "&Rename input files"
 msgstr "直接重命名原始文件(&R)"
 
@@ -253,54 +253,54 @@ msgstr "直接重命名原始文件(&R)"
 msgid "&Rename more..."
 msgstr "重命名更多(&R)..."
 
-#: rc.cpp:21
+#: rc.cpp:453
 #, fuzzy
 msgid "&Replace With:"
 msgstr "替换为"
 
-#: rc.cpp:472
+#: rc.cpp:378
 msgid "&Reset counter for every directory"
 msgstr "为每个目录重设计数器(&R)"
 
-#: rc.cpp:374
+#: rc.cpp:624
 #, fuzzy
 msgid "&Save to File..."
 msgstr "另存配置为(&C)..."
 
-#: rc.cpp:99
+#: rc.cpp:168
 #, fuzzy
 msgid "&Simple Filename"
 msgstr "文件名(&F)"
 
-#: rc.cpp:475
+#: rc.cpp:381
 #, fuzzy
 msgid "&Skip Numbers"
 msgstr "跳过编号"
 
-#: rc.cpp:549
+#: rc.cpp:714
 #, fuzzy
 msgid "&Start index:"
 msgstr "开始索引："
 
-#: rc.cpp:469
+#: rc.cpp:375
 #, fuzzy
 msgid "&Step by:"
 msgstr "步长(&B)："
 
-#: rc.cpp:105 rc.cpp:564
+#: rc.cpp:174 rc.cpp:282
 msgid "&Suffix:"
 msgstr "后缀(&S)"
 
-#: rc.cpp:33
+#: rc.cpp:102
 msgid "&Template:"
 msgstr "模板(&T):"
 
-#: rc.cpp:383
+#: rc.cpp:633
 #, fuzzy
 msgid "&Test..."
 msgstr "编辑(&E)..."
 
-#: rc.cpp:312
+#: rc.cpp:645
 #, fuzzy
 msgid "&Type:"
 msgstr "模板(&T):"
@@ -310,20 +310,20 @@ msgstr "模板(&T):"
 msgid "&Undo"
 msgstr "撤消: "
 
-#: rc.cpp:189 rc.cpp:642
+#: rc.cpp:258 rc.cpp:360
 msgid "&Up"
 msgstr ""
 
-#: rc.cpp:63
+#: rc.cpp:132
 msgid "&Use extension of the input file"
 msgstr "使用输入文件的扩展名(&U)"
 
-#: rc.cpp:297
+#: rc.cpp:573
 #, fuzzy
 msgid "&User:"
 msgstr "用户："
 
-#: rc.cpp:353
+#: rc.cpp:603
 #, fuzzy
 msgid "&Variables"
 msgstr "配置名称"
@@ -332,12 +332,12 @@ msgstr "配置名称"
 msgid "(c) 2001-2009, Dominik Seichter\n"
 msgstr ""
 
-#: scriptplugin.cpp:298 scriptplugin.cpp:333 krenameimpl.cpp:357
+#: krenameimpl.cpp:357 scriptplugin.cpp:298 scriptplugin.cpp:333
 #, fuzzy
 msgid "*|All files and directories"
 msgstr "添加隐藏目录(&H)"
 
-#: rc.cpp:359
+#: rc.cpp:609
 msgid "1"
 msgstr ""
 
@@ -346,7 +346,7 @@ msgstr ""
 msgid ": The output directory %1 does not exist."
 msgstr "配置文件 \"%1\" 找不到"
 
-#: rc.cpp:321
+#: rc.cpp:654
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -370,7 +370,7 @@ msgid ""
 "html>"
 msgstr ""
 
-#: rc.cpp:389
+#: rc.cpp:668
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -400,7 +400,7 @@ msgstr ""
 "<b>Krename以root开始！</b><br>当以root开始时，若您不太确定您在做何事时，"
 "Krename 可能会危害到您的系统！"
 
-#: rc.cpp:42
+#: rc.cpp:111
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -427,51 +427,51 @@ msgstr ""
 "也可以提供经济上的支持(任何人都需要钱;)) \n"
 "请查看帮助文件以获取详情。\n"
 
-#: rc.cpp:87
+#: rc.cpp:156
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
 msgstr ""
 
-#: rc.cpp:69
+#: rc.cpp:138
 msgid ""
 "<qt>Configure which part of the filename is considered to be the "
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
 msgstr ""
 
-#: rc.cpp:48
+#: rc.cpp:117
 #, fuzzy
 msgid "<qt>Enter a template for changing the file extension.</qt>"
 msgstr "设置扩展名模板"
 
-#: rc.cpp:36
+#: rc.cpp:105
 #, fuzzy
 msgid "<qt>Enter a template for changing the filename.</qt>"
 msgstr "指定重命名文件使用的模板"
 
-#: rc.cpp:81 rc.cpp:180
+#: rc.cpp:150 rc.cpp:249
 #, fuzzy
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
 msgstr "<qt>在文件名中查找替换字符串.</qt>"
 
-#: rc.cpp:93
+#: rc.cpp:162
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
 msgstr ""
 
-#: rc.cpp:54 rc.cpp:108 rc.cpp:111 rc.cpp:132 rc.cpp:141
+#: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
 msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
 
-#: rc.cpp:60
+#: rc.cpp:129
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
 msgstr ""
 
-#: rc.cpp:418
+#: rc.cpp:393
 msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
@@ -501,7 +501,12 @@ msgstr ""
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
 msgstr "此插件在子目录中的文件重命名后对文件进行排序"
 
-#: rc.cpp:567 rc.cpp:570 rc.cpp:591 rc.cpp:600
+#: podofoplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
+msgstr "此插件在子目录中的文件重命名后对文件进行排序"
+
+#: rc.cpp:285 rc.cpp:288 rc.cpp:309 rc.cpp:318
 msgid "?"
 msgstr ""
 
@@ -509,12 +514,12 @@ msgstr ""
 msgid "A JavaScript error has occured: "
 msgstr ""
 
-#: rc.cpp:288
+#: rc.cpp:564
 #, fuzzy
 msgid "A&dvanced Permissions"
 msgstr "变更权限(&P)"
 
-#: rc.cpp:6 rc.cpp:243
+#: rc.cpp:519 rc.cpp:597
 #, fuzzy
 msgid "Access Permissions"
 msgstr "存取权限"
@@ -535,7 +540,7 @@ msgstr "在文件名中加入目录名(&W)"
 msgid "Add directory names only"
 msgstr "仅添加目录名"
 
-#: rc.cpp:648
+#: rc.cpp:3
 msgid "Add files for renaming."
 msgstr ""
 
@@ -545,7 +550,7 @@ msgid ""
 "to KRename."
 msgstr "仅增加目录名称到KRename,不添加目录中的文件名"
 
-#: rc.cpp:403
+#: rc.cpp:682
 #, fuzzy
 msgid "Add some files ..."
 msgstr "请添加文件..."
@@ -559,7 +564,7 @@ msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr ""
 
-#: rc.cpp:508
+#: rc.cpp:462
 msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
@@ -577,6 +582,11 @@ msgstr ""
 msgid "Asim Husanovic"
 msgstr ""
 
+#: podofoplugin.cpp:41
+#, fuzzy
+msgid "Author of the pdf file"
+msgstr "第一个文件的编号"
+
 #: scriptplugin.cpp:244
 msgid "Boolean"
 msgstr ""
@@ -590,12 +600,12 @@ msgstr ""
 msgid "Built-in Functions"
 msgstr "内置函数:"
 
-#: rc.cpp:252 rc.cpp:264 rc.cpp:276
+#: rc.cpp:528 rc.cpp:540 rc.cpp:552
 #, fuzzy
 msgid "Can Read"
 msgstr "读取"
 
-#: rc.cpp:255 rc.cpp:267 rc.cpp:279
+#: rc.cpp:531 rc.cpp:543 rc.cpp:555
 #, fuzzy
 msgid "Can Read & Write"
 msgstr "读取"
@@ -631,7 +641,7 @@ msgstr "无法生成撤消脚本："
 msgid "Can't set executable bit on undo script."
 msgstr "不能为撤消脚本设置可执行位"
 
-#: dirsortplugin.cpp:158 batchrenamer.cpp:1160
+#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
 #, fuzzy
 msgid "Cannot create directory %1"
 msgstr "创建子目录"
@@ -641,23 +651,23 @@ msgstr "创建子目录"
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "无法建立在其它主机上为文件%1创建符号链接。"
 
-#: rc.cpp:123 rc.cpp:165 rc.cpp:436 rc.cpp:582 rc.cpp:624
+#: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
 msgstr "大写字母"
 
-#: rc.cpp:511
+#: rc.cpp:465
 msgid "Category"
 msgstr ""
 
-#: rc.cpp:240
+#: rc.cpp:516
 msgid "Change &Permissions"
 msgstr "变更权限(&P)"
 
-#: rc.cpp:448
+#: rc.cpp:582
 msgid "Change &access date && time"
 msgstr "变更存取日期及时间(&A)"
 
-#: rc.cpp:451
+#: rc.cpp:585
 #, fuzzy
 msgid "Change &modifcation date && time"
 msgstr "变更修改日期及时间(&M)"
@@ -670,7 +680,7 @@ msgstr ""
 msgid "Class"
 msgstr "类别"
 
-#: rc.cpp:714
+#: rc.cpp:69
 #, fuzzy
 msgid "Configure the look and feel of the KRename GUI:"
 msgstr "配置KRename的外观"
@@ -679,21 +689,21 @@ msgstr "配置KRename的外观"
 msgid "Contributed a Spanish translation"
 msgstr "贡献了西班牙语翻译"
 
-#: rc.cpp:117 rc.cpp:159 rc.cpp:430 rc.cpp:576 rc.cpp:618
+#: rc.cpp:186 rc.cpp:228 rc.cpp:294 rc.cpp:336 rc.cpp:405
 #, fuzzy
 msgid "Convert to lower case"
 msgstr "转换为小写"
 
-#: rc.cpp:120 rc.cpp:162 rc.cpp:433 rc.cpp:579 rc.cpp:621
+#: rc.cpp:189 rc.cpp:231 rc.cpp:297 rc.cpp:339 rc.cpp:408
 msgid "Convert to upper case"
 msgstr "转换为大写"
 
-#: rc.cpp:303
+#: rc.cpp:636
 #, fuzzy
 msgid "Create Variable"
 msgstr "插入 '$'"
 
-#: rc.cpp:344
+#: rc.cpp:90
 msgid "Create symbolic &links in destination directory"
 msgstr "建立符号链接于目的目录(&C)"
 
@@ -701,11 +711,16 @@ msgstr "建立符号链接于目的目录(&C)"
 msgid "Created the Gentoo Ebuild scripts for Krename."
 msgstr "建立了Krename的Gentoo Ebuild的脚本。"
 
-#: rc.cpp:168 rc.cpp:627
+#: podofoplugin.cpp:42
+#, fuzzy
+msgid "Creator of the pdf file"
+msgstr "第一个文件的编号"
+
+#: rc.cpp:237 rc.cpp:345
 msgid "Custom extension"
 msgstr "自定义扩展名"
 
-#: rc.cpp:126 rc.cpp:585
+#: rc.cpp:195 rc.cpp:303
 msgid "Custom name"
 msgstr "自定义文件名"
 
@@ -718,7 +733,7 @@ msgstr "意大利语翻译"
 msgid "Daniele Medri"
 msgstr ""
 
-#: rc.cpp:138 rc.cpp:153 rc.cpp:597 rc.cpp:612
+#: rc.cpp:207 rc.cpp:222 rc.cpp:315 rc.cpp:330
 msgid "Date"
 msgstr "日期"
 
@@ -736,19 +751,19 @@ msgstr "系统函数"
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
 
-#: rc.cpp:356
+#: rc.cpp:606
 msgid "Declare global variables that can be used from within your functions:"
 msgstr ""
 
-#: rc.cpp:371
+#: rc.cpp:621
 msgid "Define functions that can be used from KRename templates:"
 msgstr ""
 
-#: rc.cpp:517
+#: rc.cpp:471
 msgid "Description"
 msgstr "描述"
 
-#: rc.cpp:3
+#: rc.cpp:594
 msgid "Dialog"
 msgstr ""
 
@@ -757,11 +772,11 @@ msgstr ""
 msgid "Directory of the current file"
 msgstr "插入当前时间"
 
-#: rc.cpp:681
+#: rc.cpp:36
 msgid "Display a preview image for each file."
 msgstr ""
 
-#: rc.cpp:687
+#: rc.cpp:42
 #, fuzzy
 msgid "Display the filename together with the preview."
 msgstr "显视列表中文件的数目"
@@ -779,7 +794,7 @@ msgstr ""
 msgid "Double"
 msgstr ""
 
-#: rc.cpp:705
+#: rc.cpp:60
 msgid "Down"
 msgstr ""
 
@@ -796,7 +811,7 @@ msgstr "错误: %1"
 msgid "Error during undoing %1"
 msgstr ""
 
-#: dirsortplugin.cpp:130 batchrenamer.cpp:271
+#: batchrenamer.cpp:271 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
 msgstr ""
 
@@ -813,17 +828,17 @@ msgstr ""
 msgid "Extension of the current file"
 msgstr "使用输入文件的扩展名(&U)"
 
-#: rc.cpp:66
+#: rc.cpp:135
 #, fuzzy
 msgid "File extension &starts at:"
 msgstr "扩展名起始于:"
 
-#: rc.cpp:213
+#: rc.cpp:489
 #, fuzzy
 msgid "File preview"
 msgstr "预览(&P)"
 
-#: rc.cpp:129 rc.cpp:588
+#: rc.cpp:198 rc.cpp:306
 #, fuzzy
 msgid "File&name:"
 msgstr "文件重命名(&N)"
@@ -845,29 +860,29 @@ msgstr "文件将复制至：%1"
 msgid "Files will be moved to: %1"
 msgstr "文件将移动至：%1"
 
-#: rc.cpp:693
+#: rc.cpp:48
 #, fuzzy
 msgid "Files: <b>0</b>"
 msgstr "文件数：<b>%1</b>"
 
-#: rc.cpp:490
+#: rc.cpp:432
 msgid "Find"
 msgstr "查找"
 
-#: rc.cpp:84 rc.cpp:183 rc.cpp:639
+#: rc.cpp:153 rc.cpp:252 rc.cpp:357
 msgid "Find &and Replace..."
 msgstr "查找与替换(&A)..."
 
-#: rc.cpp:15 rc.cpp:484
+#: rc.cpp:426 rc.cpp:447
 msgid "Find and Replace"
 msgstr "查找与替换"
 
-#: rc.cpp:24
+#: rc.cpp:456
 #, fuzzy
 msgid "Find is a Regular &Expression"
 msgstr "正则表达式"
 
-#: rc.cpp:72
+#: rc.cpp:141
 msgid "First Dot"
 msgstr "第一个点"
 
@@ -890,16 +905,16 @@ msgstr ""
 "修正了与spec文件有关的问题，并为所有你能想到的SuSE版本发布了rpm包。 同时，还"
 "是新的Gentoo维护者。"
 
-#: rc.cpp:249 rc.cpp:261 rc.cpp:273
+#: rc.cpp:525 rc.cpp:537 rc.cpp:549
 msgid "Forbidden"
 msgstr ""
 
-#: rc.cpp:27 rc.cpp:198 rc.cpp:207 rc.cpp:237 rc.cpp:315 rc.cpp:350 rc.cpp:415
-#: rc.cpp:445 rc.cpp:460 rc.cpp:529 rc.cpp:558 rc.cpp:708
+#: rc.cpp:63 rc.cpp:96 rc.cpp:267 rc.cpp:276 rc.cpp:366 rc.cpp:390 rc.cpp:483
+#: rc.cpp:513 rc.cpp:579 rc.cpp:600 rc.cpp:648 rc.cpp:694
 msgid "Form"
 msgstr ""
 
-#: rc.cpp:386
+#: rc.cpp:665
 msgid "Frame"
 msgstr ""
 
@@ -915,12 +930,12 @@ msgstr "GID"
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr "用他的scribus应用程序，在我写插件时给我一个好的开始点。"
 
-#: rc.cpp:457
+#: rc.cpp:591
 #, fuzzy
 msgid "Get &Current Time"
 msgstr "取得目前日期及时间(&G)"
 
-#: rc.cpp:258
+#: rc.cpp:534
 #, fuzzy
 msgid "Gro&up:"
 msgstr "群组："
@@ -933,7 +948,7 @@ msgstr ""
 msgid "Group"
 msgstr "群组"
 
-#: rc.cpp:412
+#: rc.cpp:691
 #, fuzzy
 msgid "Hint: Undo is still possible after renaming your files."
 msgstr "远程文件不能撤消重命名: %1"
@@ -1133,7 +1148,7 @@ msgstr "原文件名转变为大写"
 msgid "Int"
 msgstr ""
 
-#: rc.cpp:285
+#: rc.cpp:561
 msgid "Is Executable/Only owner &can rename and delete folder content"
 msgstr ""
 
@@ -1154,7 +1169,7 @@ msgstr ""
 msgid "Jose Rodriguez"
 msgstr ""
 
-#: krenameimpl.cpp:383 main.cpp:59
+#: main.cpp:59 krenameimpl.cpp:383
 msgid "KRename"
 msgstr "KRename"
 
@@ -1163,7 +1178,7 @@ msgstr "KRename"
 msgid "KRename Build:"
 msgstr "KRename"
 
-#: rc.cpp:505
+#: rc.cpp:459
 #, fuzzy
 msgid "KRename Help"
 msgstr "KRename"
@@ -1177,15 +1192,20 @@ msgstr "重命名处理完毕！"
 msgid "KRename finished the undo process."
 msgstr "重命名处理完毕！"
 
+#: podofoplugin.cpp:43
+#, fuzzy
+msgid "Keywords of the pdf file"
+msgstr "第一个文件的编号"
+
 #: main.cpp:107
 msgid "Krzysztof Pawlak"
 msgstr ""
 
-#: rc.cpp:75
+#: rc.cpp:144
 msgid "Last Dot"
 msgstr "最后一个点"
 
-#: rc.cpp:711
+#: rc.cpp:66
 msgid "Look and Feel"
 msgstr "外观"
 
@@ -1209,17 +1229,17 @@ msgstr ""
 msgid "Michal Smoczyk"
 msgstr ""
 
-#: rc.cpp:192 rc.cpp:702
+#: rc.cpp:57 rc.cpp:261
 #, fuzzy
 msgid "Move selected files downwards."
 msgstr "向下移动选取的项目"
 
-#: rc.cpp:186 rc.cpp:696
+#: rc.cpp:51 rc.cpp:255
 #, fuzzy
 msgid "Move selected files upwards."
 msgstr "向上移动选取的项目"
 
-#: rc.cpp:171 rc.cpp:630
+#: rc.cpp:240 rc.cpp:348
 #, fuzzy
 msgid "N&umber"
 msgstr "编号"
@@ -1228,31 +1248,35 @@ msgstr "编号"
 msgid "Nicolas Benoit"
 msgstr ""
 
-#: rc.cpp:427
+#: rc.cpp:402
 #, fuzzy
 msgid "No Conversion"
 msgstr "编码转换插件"
 
-#: rc.cpp:78
+#: rc.cpp:147
 #, fuzzy
 msgid "No File Extension"
 msgstr "自定义扩展名"
 
-#: rc.cpp:135 rc.cpp:150 rc.cpp:594 rc.cpp:609
+#: rc.cpp:204 rc.cpp:219 rc.cpp:312 rc.cpp:327
 msgid "Number"
 msgstr "编号"
 
-#: rc.cpp:552
+#: rc.cpp:717
 #, fuzzy
 msgid "Number &of digits:"
 msgstr "数字位数(&N)"
 
-#: rc.cpp:174 rc.cpp:633
+#: rc.cpp:243 rc.cpp:351
 #, fuzzy
 msgid "Number of &digits:"
 msgstr "数字位数(&N)"
 
-#: rc.cpp:246
+#: podofoplugin.cpp:47
+msgid "Number of pages in the pdf file"
+msgstr ""
+
+#: rc.cpp:522
 #, fuzzy
 msgid "O&wner:"
 msgstr "所有"
@@ -1261,7 +1285,7 @@ msgstr "所有"
 msgid "Origin"
 msgstr "原始文件"
 
-#: rc.cpp:270
+#: rc.cpp:546
 #, fuzzy
 msgid "Ot&hers:"
 msgstr "其他"
@@ -1270,7 +1294,7 @@ msgstr "其他"
 msgid "Others"
 msgstr "其他"
 
-#: rc.cpp:555
+#: rc.cpp:720
 msgid "Out&put:"
 msgstr ""
 
@@ -1279,7 +1303,7 @@ msgstr ""
 msgid "Owner of the file"
 msgstr "第一个文件的编号"
 
-#: rc.cpp:294
+#: rc.cpp:570
 msgid "Ownership"
 msgstr "所有"
 
@@ -1308,15 +1332,19 @@ msgstr "权限"
 msgid "PermissionsPlugin works only with local files. %1 is a remote file."
 msgstr ""
 
-#: rc.cpp:216
+#: rc.cpp:492
 #, fuzzy
 msgid "Please input a new filename"
 msgstr "请输入一个新的文件名："
 
-#: rc.cpp:201
+#: rc.cpp:270
 #, fuzzy
 msgid "Plugins"
 msgstr "插件(&P)"
+
+#: podofoplugin.cpp:49
+msgid "PoDoFo (PDF) Plugin"
+msgstr ""
 
 #: main.cpp:110
 #, fuzzy
@@ -1327,21 +1355,26 @@ msgstr "意大利语翻译"
 msgid "Press close to quit!"
 msgstr "请按下关闭退出！"
 
-#: rc.cpp:520
+#: rc.cpp:474
 #, fuzzy
 msgid "Preview"
 msgstr "预览(&P)"
 
-#: rc.cpp:526
+#: rc.cpp:480
 #, fuzzy
 msgid "Preview File:"
 msgstr "预览: "
 
-#: rc.cpp:439
+#: rc.cpp:414
 msgid "Preview of the generated KRename command:"
 msgstr ""
 
-#: rc.cpp:9
+#: podofoplugin.cpp:46
+#, fuzzy
+msgid "Producer of the pdf file"
+msgstr "第一个文件的编号"
+
+#: rc.cpp:420
 msgid "Progress"
 msgstr "处理"
 
@@ -1361,11 +1394,11 @@ msgstr "提供了gcc3.x命名空间补丁"
 msgid "Provided the new preview and move features"
 msgstr "提供了新的预览和移动功能"
 
-#: rc.cpp:657
+#: rc.cpp:12
 msgid "Re&move"
 msgstr "删除(&M)"
 
-#: rc.cpp:663
+#: rc.cpp:18
 #, fuzzy
 msgid "Re&move All"
 msgstr "全部删除(&E)"
@@ -1374,17 +1407,17 @@ msgstr "全部删除(&E)"
 msgid "Read"
 msgstr "读取"
 
-#: rc.cpp:487
+#: rc.cpp:429
 #, fuzzy
 msgid "Reg. Expression"
 msgstr "正则表达式"
 
-#: rc.cpp:660
+#: rc.cpp:15
 #, fuzzy
 msgid "Remove all files."
 msgstr "删除所有文件"
 
-#: rc.cpp:654
+#: rc.cpp:9
 #, fuzzy
 msgid "Remove selected files."
 msgstr "删除选中的文件"
@@ -1398,7 +1431,7 @@ msgstr "重新重命名未处理的文件(&U)..."
 msgid "Rename Processed Files &Again..."
 msgstr "重新重命名已处理的文件(&P)..."
 
-#: rc.cpp:219
+#: rc.cpp:495
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
 
@@ -1414,7 +1447,7 @@ msgstr "成功重命名文件%1"
 msgid "Rene Gass"
 msgstr ""
 
-#: rc.cpp:493
+#: rc.cpp:435
 msgid "Replace With"
 msgstr "替换为"
 
@@ -1431,23 +1464,23 @@ msgstr ""
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "为Gentoo中的GCC 3.1做的一些修正"
 
-#: rc.cpp:669
+#: rc.cpp:24
 msgid "Sort: Ascending"
 msgstr "排序: 升序"
 
-#: rc.cpp:672
+#: rc.cpp:27
 msgid "Sort: Descending"
 msgstr "排序: 降序"
 
-#: rc.cpp:675
+#: rc.cpp:30
 msgid "Sort: Numeric"
 msgstr "排序: 数字"
 
-#: rc.cpp:678
+#: rc.cpp:33
 msgid "Sort: Random"
 msgstr "排序: 随机"
 
-#: rc.cpp:666
+#: rc.cpp:21
 msgid "Sort: Unsorted"
 msgstr "排序: 无"
 
@@ -1460,16 +1493,16 @@ msgstr "特殊"
 msgid "Special Characters"
 msgstr "特殊字符:"
 
-#: rc.cpp:409
+#: rc.cpp:688
 msgid "Specify the new filenames by giving a template ..."
 msgstr ""
 
-#: rc.cpp:177 rc.cpp:636
+#: rc.cpp:246 rc.cpp:354
 #, fuzzy
 msgid "Start  &index:"
 msgstr "起始编号："
 
-#: rc.cpp:466
+#: rc.cpp:372
 msgid "Start &index:"
 msgstr "起始编号："
 
@@ -1505,6 +1538,11 @@ msgstr ""
 msgid "Subdirectory-Sort Plugin"
 msgstr ""
 
+#: podofoplugin.cpp:44
+#, fuzzy
+msgid "Subject of the pdf file"
+msgstr "第一个文件的编号"
+
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
 msgstr "支持的记号："
@@ -1517,7 +1555,7 @@ msgstr "符号链接将生成于：%1"
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr ""
 
-#: rc.cpp:210 rc.cpp:397 rc.cpp:400 rc.cpp:406 rc.cpp:442
+#: rc.cpp:417 rc.cpp:486 rc.cpp:676 rc.cpp:679 rc.cpp:685
 msgid "TextLabel"
 msgstr ""
 
@@ -1557,7 +1595,7 @@ msgstr "目录 %1 不存在. KRename 会生成此目录."
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "同名配置已存在，请输入另一个名称"
 
-#: rc.cpp:282
+#: rc.cpp:558
 #, fuzzy
 msgid "This file uses advanced permissions"
 msgstr "变更权限(&P)"
@@ -1568,7 +1606,7 @@ msgid ""
 "selected files to its list."
 msgstr "此选项让KRename将选中的文件所在的目录名也添加到列表中。"
 
-#: rc.cpp:532
+#: rc.cpp:697
 msgid ""
 "This plugin sorts files after renaming into numbered subdirectories.\n"
 "\n"
@@ -1581,15 +1619,20 @@ msgid ""
 " \t..."
 msgstr ""
 
-#: rc.cpp:454
+#: rc.cpp:588
 msgid "Time:"
 msgstr "时间："
 
-#: rc.cpp:514
+#: podofoplugin.cpp:45
+#, fuzzy
+msgid "Title of the pdf file"
+msgstr "第一个文件的编号"
+
+#: rc.cpp:468
 msgid "Token"
 msgstr "记号"
 
-#: rc.cpp:523
+#: rc.cpp:477
 #, fuzzy
 msgid "Token &Preview"
 msgstr "预览(&P)"
@@ -1656,47 +1699,47 @@ msgstr "远程文件不能撤消重命名: %1"
 msgid "Undoing all renamed files."
 msgstr ""
 
-#: rc.cpp:699
+#: rc.cpp:54
 msgid "Up"
 msgstr ""
 
-#: rc.cpp:234
+#: rc.cpp:510
 #, fuzzy
 msgid "Use &custom filename"
 msgstr "使用输入的文件名(&I)"
 
-#: rc.cpp:228
+#: rc.cpp:504
 #, fuzzy
 msgid "Use &input filename"
 msgstr "使用输入的文件名(&I)"
 
-#: rc.cpp:720
+#: rc.cpp:75
 #, fuzzy
 msgid "Use &tabbed style GUI (advanced users)"
 msgstr "使用标签页界面(&t)(高级用户使用)"
 
-#: rc.cpp:717
+#: rc.cpp:72
 msgid "Use &wizard style GUI (beginners)"
 msgstr "使用向导界面(&w)"
 
-#: rc.cpp:231
+#: rc.cpp:507
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
 msgstr ""
 
-#: rc.cpp:222
+#: rc.cpp:498
 msgid "Use filename created by &KRename"
 msgstr ""
 
-#: rc.cpp:156 rc.cpp:615
+#: rc.cpp:225 rc.cpp:333
 msgid "Use original extension"
 msgstr "使用原始扩展名"
 
-#: rc.cpp:114 rc.cpp:573
+#: rc.cpp:183 rc.cpp:291
 msgid "Use original name"
 msgstr "使用原始文件名"
 
-#: rc.cpp:225
+#: rc.cpp:501
 msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename-3.0.8-1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-27 22:57+0100\n"
+"POT-Creation-Date: 2010-06-24 22:10+0100\n"
 "PO-Revision-Date: 2005-10-14 01:11+0200\n"
 "Last-Translator: Matej Urbančič <matej.urban@gmail.com>\n"
 "Language-Team: Slovenian\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: KBabel 1.10.2\n"
 
-#: rc.cpp:39 rc.cpp:51
+#: rc.cpp:108 rc.cpp:120
 msgid "$"
 msgstr ""
 
@@ -54,24 +54,24 @@ msgstr "Vs&tavki"
 msgid "&4. Filename"
 msgstr "&Ime datoteke"
 
-#: rc.cpp:478
+#: rc.cpp:384
 msgid "&Add Number"
 msgstr "&Dodaj število"
 
-#: rc.cpp:362 rc.cpp:496 rc.cpp:651 previewlist.cpp:36
+#: rc.cpp:6 rc.cpp:438 rc.cpp:612 previewlist.cpp:36
 msgid "&Add..."
 msgstr "&Dodaj"
 
-#: rc.cpp:30
+#: rc.cpp:99
 #, fuzzy
 msgid "&Advanced Filename"
 msgstr "&Ime datoteke"
 
-#: rc.cpp:12
+#: rc.cpp:423
 msgid "&Cancel"
 msgstr ""
 
-#: rc.cpp:291
+#: rc.cpp:567
 #, fuzzy
 msgid "&Change Owner"
 msgstr "Spremeni &Lastnika"
@@ -85,57 +85,57 @@ msgstr "&Ročno spremeni ime datoteke"
 msgid "&Close"
 msgstr ""
 
-#: rc.cpp:424
+#: rc.cpp:399
 #, fuzzy
 msgid "&Convert selection:"
 msgstr "Obrni &izbor"
 
-#: rc.cpp:338
+#: rc.cpp:84
 #, fuzzy
 msgid "&Copy files to destination directory"
 msgstr "&Kopiraj datoteke v ciljno mapo"
 
-#: rc.cpp:368
+#: rc.cpp:618
 #, fuzzy
 msgid "&Definitions"
 msgstr "C&ilj"
 
-#: rc.cpp:365
+#: rc.cpp:615
 #, fuzzy
 msgid "&Delete"
 msgstr "&Izbriši profil"
 
-#: rc.cpp:690
+#: rc.cpp:45
 msgid "&Display name"
 msgstr "&Prikaži ime"
 
-#: rc.cpp:195 rc.cpp:645
+#: rc.cpp:264 rc.cpp:363
 msgid "&Down"
 msgstr ""
 
-#: rc.cpp:499
+#: rc.cpp:441
 msgid "&Edit..."
 msgstr "&Uredi ..."
 
-#: rc.cpp:204
+#: rc.cpp:273
 #, fuzzy
 msgid "&Enable Plugin"
 msgstr "Pr&eimenovanje po mapah"
 
-#: rc.cpp:147 rc.cpp:606
+#: rc.cpp:216 rc.cpp:324
 msgid "&Extension:"
 msgstr "&Končnica"
 
-#: rc.cpp:102 rc.cpp:561
+#: rc.cpp:171 rc.cpp:279
 msgid "&Filename"
 msgstr "&Ime datoteke"
 
-#: rc.cpp:546
+#: rc.cpp:711
 #, fuzzy
 msgid "&Files per directory:"
 msgstr "Datotek na mapo:"
 
-#: rc.cpp:18
+#: rc.cpp:450
 #, fuzzy
 msgid "&Find:"
 msgstr "Poišči:"
@@ -145,20 +145,20 @@ msgstr "Poišči:"
 msgid "&Finish"
 msgstr "&Končaj"
 
-#: rc.cpp:57
+#: rc.cpp:126
 msgid "&Functions..."
 msgstr "&Predloge"
 
-#: rc.cpp:300
+#: rc.cpp:576
 #, fuzzy
 msgid "&Group:"
 msgstr "Skupina:"
 
-#: rc.cpp:318
+#: rc.cpp:651
 msgid "&Increase Counter"
 msgstr ""
 
-#: rc.cpp:309
+#: rc.cpp:642
 msgid "&Initial Value:"
 msgstr ""
 
@@ -167,41 +167,41 @@ msgstr ""
 msgid "&Insert"
 msgstr "Vstavi '$'"
 
-#: rc.cpp:96
+#: rc.cpp:165
 msgid "&Insert Part of Filename..."
 msgstr "Vstav&i del imena..."
 
-#: rc.cpp:380
+#: rc.cpp:630
 #, fuzzy
 msgid "&Insert Variable"
 msgstr "Vstavi '$'"
 
-#: rc.cpp:421
+#: rc.cpp:396
 msgid "&Invert selection"
 msgstr "Obrni &izbor"
 
-#: rc.cpp:377
+#: rc.cpp:627
 #, fuzzy
 msgid "&Load from File..."
 msgstr "&Naloži profil"
 
-#: rc.cpp:341
+#: rc.cpp:87
 msgid "&Move files to destination directory"
 msgstr "&Premakni datoteke v ciljno mapo"
 
-#: rc.cpp:306
+#: rc.cpp:639
 msgid "&Name:"
 msgstr "&Ime:"
 
-#: rc.cpp:463
+#: rc.cpp:369
 msgid "&Numbering"
 msgstr "&Številčenje"
 
-#: rc.cpp:90
+#: rc.cpp:159
 msgid "&Numbering..."
 msgstr "&Številčenje ..."
 
-#: rc.cpp:329
+#: rc.cpp:662
 msgid "&Offset:"
 msgstr ""
 
@@ -214,34 +214,34 @@ msgstr ""
 msgid "&Open Destination"
 msgstr "&Odpri cilj"
 
-#: rc.cpp:332
+#: rc.cpp:78
 #, fuzzy
 msgid "&Options"
 msgstr "Možnosti"
 
-#: rc.cpp:543
+#: rc.cpp:708
 #, fuzzy
 msgid "&Options:"
 msgstr "Možnosti"
 
-#: rc.cpp:347
+#: rc.cpp:93
 msgid "&Overwrite existing files"
 msgstr "Prepiši &obstoječe datoteke"
 
-#: rc.cpp:144 rc.cpp:603
+#: rc.cpp:213 rc.cpp:321
 msgid "&Prefix:"
 msgstr "&Predpona"
 
-#: rc.cpp:684
+#: rc.cpp:39
 msgid "&Preview"
 msgstr "&Predogled"
 
-#: rc.cpp:502 previewlist.cpp:37
+#: rc.cpp:444 previewlist.cpp:37
 #, fuzzy
 msgid "&Remove"
 msgstr "Odst&rani"
 
-#: rc.cpp:481
+#: rc.cpp:387
 msgid "&Remove Number"
 msgstr "&Odstrani število"
 
@@ -250,7 +250,7 @@ msgstr "&Odstrani število"
 msgid "&Rename All Files Again..."
 msgstr "Znov&a preimenuj vse datoteke"
 
-#: rc.cpp:335
+#: rc.cpp:81
 msgid "&Rename input files"
 msgstr "Pre&imenuj vnesene datoteke"
 
@@ -259,54 +259,54 @@ msgstr "Pre&imenuj vnesene datoteke"
 msgid "&Rename more..."
 msgstr "P&reimenuj več ..."
 
-#: rc.cpp:21
+#: rc.cpp:453
 #, fuzzy
 msgid "&Replace With:"
 msgstr "Zamenjaj z"
 
-#: rc.cpp:472
+#: rc.cpp:378
 msgid "&Reset counter for every directory"
 msgstr "Počisti števec za vsako mapo posebej"
 
-#: rc.cpp:374
+#: rc.cpp:624
 #, fuzzy
 msgid "&Save to File..."
 msgstr "&Shrani kot profil ..."
 
-#: rc.cpp:99
+#: rc.cpp:168
 #, fuzzy
 msgid "&Simple Filename"
 msgstr "&Ime datoteke"
 
-#: rc.cpp:475
+#: rc.cpp:381
 #, fuzzy
 msgid "&Skip Numbers"
 msgstr "Pres&koči števila"
 
-#: rc.cpp:549
+#: rc.cpp:714
 #, fuzzy
 msgid "&Start index:"
 msgstr "Začetni indeks:"
 
-#: rc.cpp:469
+#: rc.cpp:375
 #, fuzzy
 msgid "&Step by:"
 msgstr "Kora&k po:"
 
-#: rc.cpp:105 rc.cpp:564
+#: rc.cpp:174 rc.cpp:282
 msgid "&Suffix:"
 msgstr "P&ripona"
 
-#: rc.cpp:33
+#: rc.cpp:102
 msgid "&Template:"
 msgstr "&Predloga:"
 
-#: rc.cpp:383
+#: rc.cpp:633
 #, fuzzy
 msgid "&Test..."
 msgstr "&Uredi ..."
 
-#: rc.cpp:312
+#: rc.cpp:645
 #, fuzzy
 msgid "&Type:"
 msgstr "&Predloga:"
@@ -316,20 +316,20 @@ msgstr "&Predloga:"
 msgid "&Undo"
 msgstr "Razveljavi: "
 
-#: rc.cpp:189 rc.cpp:642
+#: rc.cpp:258 rc.cpp:360
 msgid "&Up"
 msgstr ""
 
-#: rc.cpp:63
+#: rc.cpp:132
 msgid "&Use extension of the input file"
 msgstr "&Uporabi izvorno končnico"
 
-#: rc.cpp:297
+#: rc.cpp:573
 #, fuzzy
 msgid "&User:"
 msgstr "Uporabnik:"
 
-#: rc.cpp:353
+#: rc.cpp:603
 #, fuzzy
 msgid "&Variables"
 msgstr "Ime profila"
@@ -338,12 +338,12 @@ msgstr "Ime profila"
 msgid "(c) 2001-2009, Dominik Seichter\n"
 msgstr ""
 
-#: scriptplugin.cpp:298 scriptplugin.cpp:333 krenameimpl.cpp:357
+#: krenameimpl.cpp:357 scriptplugin.cpp:298 scriptplugin.cpp:333
 #, fuzzy
 msgid "*|All files and directories"
 msgstr "Dodaj s&krite mape"
 
-#: rc.cpp:359
+#: rc.cpp:609
 msgid "1"
 msgstr ""
 
@@ -352,7 +352,7 @@ msgstr ""
 msgid ": The output directory %1 does not exist."
 msgstr "Ne najdem profila \"%1\"."
 
-#: rc.cpp:321
+#: rc.cpp:654
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -376,7 +376,7 @@ msgid ""
 "html>"
 msgstr ""
 
-#: rc.cpp:389
+#: rc.cpp:668
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -406,7 +406,7 @@ msgstr ""
 "<b>KRename je bil zagnan preko skrbniškega računa!</b><br>Zaradi prevelikih "
 "pravic lahko tak zagon poškoduje vaš sistem, če ne veste natančno kaj delate!"
 
-#: rc.cpp:42
+#: rc.cpp:111
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -435,30 +435,30 @@ msgstr ""
 "kot tudi finančna pomoč (vsi potrebujemo denar ;) )\n"
 "Poglej pomoč za več podrobnosti.\n"
 
-#: rc.cpp:87
+#: rc.cpp:156
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
 msgstr ""
 
-#: rc.cpp:69
+#: rc.cpp:138
 msgid ""
 "<qt>Configure which part of the filename is considered to be the "
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
 msgstr ""
 
-#: rc.cpp:48
+#: rc.cpp:117
 #, fuzzy
 msgid "<qt>Enter a template for changing the file extension.</qt>"
 msgstr "določi predlogo za končnico"
 
-#: rc.cpp:36
+#: rc.cpp:105
 #, fuzzy
 msgid "<qt>Enter a template for changing the filename.</qt>"
 msgstr "Določite predlogo za uporabo pri preimenovanju datotek."
 
-#: rc.cpp:81 rc.cpp:180
+#: rc.cpp:150 rc.cpp:249
 #, fuzzy
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
@@ -467,21 +467,21 @@ msgstr ""
 "<qt>Poišči in zamenjaj znake ali del izvornega imena datoteke v ciljnem "
 "imenu.</qt>"
 
-#: rc.cpp:93
+#: rc.cpp:162
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
 msgstr ""
 
-#: rc.cpp:54 rc.cpp:108 rc.cpp:111 rc.cpp:132 rc.cpp:141
+#: rc.cpp:123 rc.cpp:177 rc.cpp:180 rc.cpp:201 rc.cpp:210
 msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
 
-#: rc.cpp:60
+#: rc.cpp:129
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
 msgstr ""
 
-#: rc.cpp:418
+#: rc.cpp:393
 msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
@@ -511,7 +511,12 @@ msgstr ""
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
 msgstr "<qt>Ta vstavek sortira datoteke po preimenovanju v podmape.</qt>"
 
-#: rc.cpp:567 rc.cpp:570 rc.cpp:591 rc.cpp:600
+#: podofoplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
+msgstr "<qt>Ta vstavek sortira datoteke po preimenovanju v podmape.</qt>"
+
+#: rc.cpp:285 rc.cpp:288 rc.cpp:309 rc.cpp:318
 msgid "?"
 msgstr ""
 
@@ -519,12 +524,12 @@ msgstr ""
 msgid "A JavaScript error has occured: "
 msgstr ""
 
-#: rc.cpp:288
+#: rc.cpp:564
 #, fuzzy
 msgid "A&dvanced Permissions"
 msgstr "S&premeni dovoljenja"
 
-#: rc.cpp:6 rc.cpp:243
+#: rc.cpp:519 rc.cpp:597
 #, fuzzy
 msgid "Access Permissions"
 msgstr "Dovoljenja dostopa"
@@ -545,7 +550,7 @@ msgstr "Dodaj imena map z imeni datotek"
 msgid "Add directory names only"
 msgstr "Dodaj samo imena map"
 
-#: rc.cpp:648
+#: rc.cpp:3
 msgid "Add files for renaming."
 msgstr ""
 
@@ -555,7 +560,7 @@ msgid ""
 "to KRename."
 msgstr "Dodaj samo imena map in ne tudi imena datotek v mapah v listo."
 
-#: rc.cpp:403
+#: rc.cpp:682
 #, fuzzy
 msgid "Add some files ..."
 msgstr "Prosim, dodajte nekaj datotek ..."
@@ -569,7 +574,7 @@ msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr ""
 
-#: rc.cpp:508
+#: rc.cpp:462
 msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
@@ -587,6 +592,11 @@ msgstr ""
 msgid "Asim Husanovic"
 msgstr ""
 
+#: podofoplugin.cpp:41
+#, fuzzy
+msgid "Author of the pdf file"
+msgstr "Število uporabljanih predlog: "
+
 #: scriptplugin.cpp:244
 msgid "Boolean"
 msgstr ""
@@ -600,12 +610,12 @@ msgstr ""
 msgid "Built-in Functions"
 msgstr "Izbrane predloge:"
 
-#: rc.cpp:252 rc.cpp:264 rc.cpp:276
+#: rc.cpp:528 rc.cpp:540 rc.cpp:552
 #, fuzzy
 msgid "Can Read"
 msgstr "Branje"
 
-#: rc.cpp:255 rc.cpp:267 rc.cpp:279
+#: rc.cpp:531 rc.cpp:543 rc.cpp:555
 #, fuzzy
 msgid "Can Read & Write"
 msgstr "Branje"
@@ -641,7 +651,7 @@ msgstr "Ne morem ustvariti razveljavitvenega skripta :"
 msgid "Can't set executable bit on undo script."
 msgstr "Ne morem določiti izvršljivega bita v skriptu za razveljavitev."
 
-#: dirsortplugin.cpp:158 batchrenamer.cpp:1160
+#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
 #, fuzzy
 msgid "Cannot create directory %1"
 msgstr "ustvari podmapo"
@@ -653,23 +663,23 @@ msgstr ""
 "Ne morem ustvariti simboličnih povezav na različnih gostiteljih za datoteko %"
 "1."
 
-#: rc.cpp:123 rc.cpp:165 rc.cpp:436 rc.cpp:582 rc.cpp:624
+#: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
 msgstr "Velike črke"
 
-#: rc.cpp:511
+#: rc.cpp:465
 msgid "Category"
 msgstr ""
 
-#: rc.cpp:240
+#: rc.cpp:516
 msgid "Change &Permissions"
 msgstr "S&premeni dovoljenja"
 
-#: rc.cpp:448
+#: rc.cpp:582
 msgid "Change &access date && time"
 msgstr "Spremeni datum && čas zadnjega dostopa"
 
-#: rc.cpp:451
+#: rc.cpp:585
 #, fuzzy
 msgid "Change &modifcation date && time"
 msgstr "Spremeni datum && čas zadnje spremembe"
@@ -682,7 +692,7 @@ msgstr ""
 msgid "Class"
 msgstr "Razred"
 
-#: rc.cpp:714
+#: rc.cpp:69
 #, fuzzy
 msgid "Configure the look and feel of the KRename GUI:"
 msgstr "Nastavite izgled in občutek programa KRename"
@@ -691,21 +701,21 @@ msgstr "Nastavite izgled in občutek programa KRename"
 msgid "Contributed a Spanish translation"
 msgstr "Prevod programa v španščino"
 
-#: rc.cpp:117 rc.cpp:159 rc.cpp:430 rc.cpp:576 rc.cpp:618
+#: rc.cpp:186 rc.cpp:228 rc.cpp:294 rc.cpp:336 rc.cpp:405
 #, fuzzy
 msgid "Convert to lower case"
 msgstr "Pretvori v male črke"
 
-#: rc.cpp:120 rc.cpp:162 rc.cpp:433 rc.cpp:579 rc.cpp:621
+#: rc.cpp:189 rc.cpp:231 rc.cpp:297 rc.cpp:339 rc.cpp:408
 msgid "Convert to upper case"
 msgstr "Pretvori v velike črke"
 
-#: rc.cpp:303
+#: rc.cpp:636
 #, fuzzy
 msgid "Create Variable"
 msgstr "Vstavi '$'"
 
-#: rc.cpp:344
+#: rc.cpp:90
 msgid "Create symbolic &links in destination directory"
 msgstr "&Ustvari simbolične povezave v ciljni mapi"
 
@@ -713,11 +723,16 @@ msgstr "&Ustvari simbolične povezave v ciljni mapi"
 msgid "Created the Gentoo Ebuild scripts for Krename."
 msgstr "Ustvaril Gentoo Ebuild skripte za KRename."
 
-#: rc.cpp:168 rc.cpp:627
+#: podofoplugin.cpp:42
+#, fuzzy
+msgid "Creator of the pdf file"
+msgstr "Število uporabljanih predlog: "
+
+#: rc.cpp:237 rc.cpp:345
 msgid "Custom extension"
 msgstr "Končnica po meri"
 
-#: rc.cpp:126 rc.cpp:585
+#: rc.cpp:195 rc.cpp:303
 msgid "Custom name"
 msgstr "Ime po meri"
 
@@ -730,7 +745,7 @@ msgstr "Italijanski prevod"
 msgid "Daniele Medri"
 msgstr ""
 
-#: rc.cpp:138 rc.cpp:153 rc.cpp:597 rc.cpp:612
+#: rc.cpp:207 rc.cpp:222 rc.cpp:315 rc.cpp:330
 msgid "Date"
 msgstr "Datum"
 
@@ -748,19 +763,19 @@ msgstr "Sistemska opravila"
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
 
-#: rc.cpp:356
+#: rc.cpp:606
 msgid "Declare global variables that can be used from within your functions:"
 msgstr ""
 
-#: rc.cpp:371
+#: rc.cpp:621
 msgid "Define functions that can be used from KRename templates:"
 msgstr ""
 
-#: rc.cpp:517
+#: rc.cpp:471
 msgid "Description"
 msgstr "Opis"
 
-#: rc.cpp:3
+#: rc.cpp:594
 msgid "Dialog"
 msgstr ""
 
@@ -769,11 +784,11 @@ msgstr ""
 msgid "Directory of the current file"
 msgstr "Vstavite trenutni čas"
 
-#: rc.cpp:681
+#: rc.cpp:36
 msgid "Display a preview image for each file."
 msgstr ""
 
-#: rc.cpp:687
+#: rc.cpp:42
 #, fuzzy
 msgid "Display the filename together with the preview."
 msgstr "Prikaži število datotek na listi."
@@ -791,7 +806,7 @@ msgstr ""
 msgid "Double"
 msgstr ""
 
-#: rc.cpp:705
+#: rc.cpp:60
 msgid "Down"
 msgstr ""
 
@@ -808,7 +823,7 @@ msgstr "Napaka: %1"
 msgid "Error during undoing %1"
 msgstr ""
 
-#: dirsortplugin.cpp:130 batchrenamer.cpp:271
+#: batchrenamer.cpp:271 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
 msgstr ""
 
@@ -825,17 +840,17 @@ msgstr ""
 msgid "Extension of the current file"
 msgstr "&Uporabi izvorno končnico"
 
-#: rc.cpp:66
+#: rc.cpp:135
 #, fuzzy
 msgid "File extension &starts at:"
 msgstr "Končnica datoteke se začne pri:"
 
-#: rc.cpp:213
+#: rc.cpp:489
 #, fuzzy
 msgid "File preview"
 msgstr "&Predogled"
 
-#: rc.cpp:129 rc.cpp:588
+#: rc.cpp:198 rc.cpp:306
 #, fuzzy
 msgid "File&name:"
 msgstr "Pred&loge"
@@ -857,29 +872,29 @@ msgstr "Datoteke bodo kopirane v %1"
 msgid "Files will be moved to: %1"
 msgstr "Datoteke bodo premaknjene v %1"
 
-#: rc.cpp:693
+#: rc.cpp:48
 #, fuzzy
 msgid "Files: <b>0</b>"
 msgstr "Število datotek: <b>%1</b>"
 
-#: rc.cpp:490
+#: rc.cpp:432
 msgid "Find"
 msgstr "Poišči"
 
-#: rc.cpp:84 rc.cpp:183 rc.cpp:639
+#: rc.cpp:153 rc.cpp:252 rc.cpp:357
 msgid "Find &and Replace..."
 msgstr "Poišči in z&amenjaj ..."
 
-#: rc.cpp:15 rc.cpp:484
+#: rc.cpp:426 rc.cpp:447
 msgid "Find and Replace"
 msgstr "Poišči in zamenjaj"
 
-#: rc.cpp:24
+#: rc.cpp:456
 #, fuzzy
 msgid "Find is a Regular &Expression"
 msgstr "Regularni izraz"
 
-#: rc.cpp:72
+#: rc.cpp:141
 msgid "First Dot"
 msgstr "prvi piki"
 
@@ -903,16 +918,16 @@ msgstr ""
 "Odpravljen problemi spec datotek in izdelava paketov RPM za vse SuSe verzije "
 "in nov vzdrževalec KRename za Gentoo. "
 
-#: rc.cpp:249 rc.cpp:261 rc.cpp:273
+#: rc.cpp:525 rc.cpp:537 rc.cpp:549
 msgid "Forbidden"
 msgstr ""
 
-#: rc.cpp:27 rc.cpp:198 rc.cpp:207 rc.cpp:237 rc.cpp:315 rc.cpp:350 rc.cpp:415
-#: rc.cpp:445 rc.cpp:460 rc.cpp:529 rc.cpp:558 rc.cpp:708
+#: rc.cpp:63 rc.cpp:96 rc.cpp:267 rc.cpp:276 rc.cpp:366 rc.cpp:390 rc.cpp:483
+#: rc.cpp:513 rc.cpp:579 rc.cpp:600 rc.cpp:648 rc.cpp:694
 msgid "Form"
 msgstr ""
 
-#: rc.cpp:386
+#: rc.cpp:665
 msgid "Frame"
 msgstr ""
 
@@ -928,12 +943,12 @@ msgstr "GID"
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr "Pomoč pri pisanju vstavkov."
 
-#: rc.cpp:457
+#: rc.cpp:591
 #, fuzzy
 msgid "Get &Current Time"
 msgstr "Uporabi trenutni datum && čas"
 
-#: rc.cpp:258
+#: rc.cpp:534
 #, fuzzy
 msgid "Gro&up:"
 msgstr "Skupina:"
@@ -946,7 +961,7 @@ msgstr ""
 msgid "Group"
 msgstr "Skupina"
 
-#: rc.cpp:412
+#: rc.cpp:691
 #, fuzzy
 msgid "Hint: Undo is still possible after renaming your files."
 msgstr "Razveljavitev ni mogoča za oddaljeno datoteko: %1"
@@ -1148,7 +1163,7 @@ msgstr "staro ime spremenjeno v velike črke"
 msgid "Int"
 msgstr ""
 
-#: rc.cpp:285
+#: rc.cpp:561
 msgid "Is Executable/Only owner &can rename and delete folder content"
 msgstr ""
 
@@ -1169,7 +1184,7 @@ msgstr ""
 msgid "Jose Rodriguez"
 msgstr ""
 
-#: krenameimpl.cpp:383 main.cpp:59
+#: main.cpp:59 krenameimpl.cpp:383
 msgid "KRename"
 msgstr "KRename"
 
@@ -1178,7 +1193,7 @@ msgstr "KRename"
 msgid "KRename Build:"
 msgstr "KRename"
 
-#: rc.cpp:505
+#: rc.cpp:459
 #, fuzzy
 msgid "KRename Help"
 msgstr "KRename"
@@ -1192,15 +1207,20 @@ msgstr "Krename je končal postopek preimenovanja"
 msgid "KRename finished the undo process."
 msgstr "Krename je končal postopek preimenovanja"
 
+#: podofoplugin.cpp:43
+#, fuzzy
+msgid "Keywords of the pdf file"
+msgstr "Število uporabljanih predlog: "
+
 #: main.cpp:107
 msgid "Krzysztof Pawlak"
 msgstr ""
 
-#: rc.cpp:75
+#: rc.cpp:144
 msgid "Last Dot"
 msgstr "zadnji piki"
 
-#: rc.cpp:711
+#: rc.cpp:66
 msgid "Look and Feel"
 msgstr "Izgled in občutek"
 
@@ -1224,17 +1244,17 @@ msgstr ""
 msgid "Michal Smoczyk"
 msgstr ""
 
-#: rc.cpp:192 rc.cpp:702
+#: rc.cpp:57 rc.cpp:261
 #, fuzzy
 msgid "Move selected files downwards."
 msgstr "Premakni izbrane predmete navzdol"
 
-#: rc.cpp:186 rc.cpp:696
+#: rc.cpp:51 rc.cpp:255
 #, fuzzy
 msgid "Move selected files upwards."
 msgstr "Premakni izbrane predmete navzgor"
 
-#: rc.cpp:171 rc.cpp:630
+#: rc.cpp:240 rc.cpp:348
 #, fuzzy
 msgid "N&umber"
 msgstr "Število"
@@ -1243,31 +1263,35 @@ msgstr "Število"
 msgid "Nicolas Benoit"
 msgstr ""
 
-#: rc.cpp:427
+#: rc.cpp:402
 #, fuzzy
 msgid "No Conversion"
 msgstr "Preoblikovanje kodiranja"
 
-#: rc.cpp:78
+#: rc.cpp:147
 #, fuzzy
 msgid "No File Extension"
 msgstr "Končnica po meri"
 
-#: rc.cpp:135 rc.cpp:150 rc.cpp:594 rc.cpp:609
+#: rc.cpp:204 rc.cpp:219 rc.cpp:312 rc.cpp:327
 msgid "Number"
 msgstr "Število"
 
-#: rc.cpp:552
+#: rc.cpp:717
 #, fuzzy
 msgid "Number &of digits:"
 msgstr "&Število cifer"
 
-#: rc.cpp:174 rc.cpp:633
+#: rc.cpp:243 rc.cpp:351
 #, fuzzy
 msgid "Number of &digits:"
 msgstr "&Število cifer"
 
-#: rc.cpp:246
+#: podofoplugin.cpp:47
+msgid "Number of pages in the pdf file"
+msgstr ""
+
+#: rc.cpp:522
 #, fuzzy
 msgid "O&wner:"
 msgstr "Lastništvo"
@@ -1276,7 +1300,7 @@ msgstr "Lastništvo"
 msgid "Origin"
 msgstr "Izvorno ime"
 
-#: rc.cpp:270
+#: rc.cpp:546
 #, fuzzy
 msgid "Ot&hers:"
 msgstr "Ostalo"
@@ -1285,7 +1309,7 @@ msgstr "Ostalo"
 msgid "Others"
 msgstr "Ostalo"
 
-#: rc.cpp:555
+#: rc.cpp:720
 msgid "Out&put:"
 msgstr ""
 
@@ -1294,7 +1318,7 @@ msgstr ""
 msgid "Owner of the file"
 msgstr "Število uporabljanih predlog: "
 
-#: rc.cpp:294
+#: rc.cpp:570
 msgid "Ownership"
 msgstr "Lastništvo"
 
@@ -1323,15 +1347,19 @@ msgstr "Spremeni dovoljenje"
 msgid "PermissionsPlugin works only with local files. %1 is a remote file."
 msgstr ""
 
-#: rc.cpp:216
+#: rc.cpp:492
 #, fuzzy
 msgid "Please input a new filename"
 msgstr "Prosim, vnesite novo ime datoteke:"
 
-#: rc.cpp:201
+#: rc.cpp:270
 #, fuzzy
 msgid "Plugins"
 msgstr "Vs&tavki"
+
+#: podofoplugin.cpp:49
+msgid "PoDoFo (PDF) Plugin"
+msgstr ""
 
 #: main.cpp:110
 #, fuzzy
@@ -1342,21 +1370,26 @@ msgstr "Italijanski prevod"
 msgid "Press close to quit!"
 msgstr "Pritisni zapri za izhod!"
 
-#: rc.cpp:520
+#: rc.cpp:474
 #, fuzzy
 msgid "Preview"
 msgstr "&Predogled"
 
-#: rc.cpp:526
+#: rc.cpp:480
 #, fuzzy
 msgid "Preview File:"
 msgstr "Predogled:"
 
-#: rc.cpp:439
+#: rc.cpp:414
 msgid "Preview of the generated KRename command:"
 msgstr ""
 
-#: rc.cpp:9
+#: podofoplugin.cpp:46
+#, fuzzy
+msgid "Producer of the pdf file"
+msgstr "Število uporabljanih predlog: "
+
+#: rc.cpp:420
 msgid "Progress"
 msgstr "Napredek"
 
@@ -1376,11 +1409,11 @@ msgstr "Ustvaril popravek za gcc3.x namespace."
 msgid "Provided the new preview and move features"
 msgstr "Dodal je nov predogled in možnosti premikanja"
 
-#: rc.cpp:657
+#: rc.cpp:12
 msgid "Re&move"
 msgstr "Odst&rani"
 
-#: rc.cpp:663
+#: rc.cpp:18
 #, fuzzy
 msgid "Re&move All"
 msgstr "Odstrani vs&e"
@@ -1389,17 +1422,17 @@ msgstr "Odstrani vs&e"
 msgid "Read"
 msgstr "Branje"
 
-#: rc.cpp:487
+#: rc.cpp:429
 #, fuzzy
 msgid "Reg. Expression"
 msgstr "Regularni izraz"
 
-#: rc.cpp:660
+#: rc.cpp:15
 #, fuzzy
 msgid "Remove all files."
 msgstr "Odstrani vse datoteke"
 
-#: rc.cpp:654
+#: rc.cpp:9
 #, fuzzy
 msgid "Remove selected files."
 msgstr "Odstrani označene datoteke"
@@ -1413,7 +1446,7 @@ msgstr "Znov&a preimenuj neobdelane datoteke ..."
 msgid "Rename Processed Files &Again..."
 msgstr "Znov&a preimenuj obdelane datoteke ..."
 
-#: rc.cpp:219
+#: rc.cpp:495
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
 
@@ -1429,7 +1462,7 @@ msgstr "Uspešno preimenovanih %1 datotek"
 msgid "Rene Gass"
 msgstr ""
 
-#: rc.cpp:493
+#: rc.cpp:435
 msgid "Replace With"
 msgstr "Zamenjaj z"
 
@@ -1446,23 +1479,23 @@ msgstr ""
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "Nekaj GCC 3.1 popravkov za Gentoo."
 
-#: rc.cpp:669
+#: rc.cpp:24
 msgid "Sort: Ascending"
 msgstr "Sortiranje: naraščajoče"
 
-#: rc.cpp:672
+#: rc.cpp:27
 msgid "Sort: Descending"
 msgstr "Sortiranje: padajoče"
 
-#: rc.cpp:675
+#: rc.cpp:30
 msgid "Sort: Numeric"
 msgstr "Sortiranje: številčno"
 
-#: rc.cpp:678
+#: rc.cpp:33
 msgid "Sort: Random"
 msgstr "Sortiranje: naključno"
 
-#: rc.cpp:666
+#: rc.cpp:21
 msgid "Sort: Unsorted"
 msgstr "Sortiranje: prosto"
 
@@ -1475,16 +1508,16 @@ msgstr "Posebno"
 msgid "Special Characters"
 msgstr "Posebni znaki:"
 
-#: rc.cpp:409
+#: rc.cpp:688
 msgid "Specify the new filenames by giving a template ..."
 msgstr ""
 
-#: rc.cpp:177 rc.cpp:636
+#: rc.cpp:246 rc.cpp:354
 #, fuzzy
 msgid "Start  &index:"
 msgstr "Začetni &indeks:"
 
-#: rc.cpp:466
+#: rc.cpp:372
 msgid "Start &index:"
 msgstr "Začetni &indeks:"
 
@@ -1520,6 +1553,11 @@ msgstr ""
 msgid "Subdirectory-Sort Plugin"
 msgstr ""
 
+#: podofoplugin.cpp:44
+#, fuzzy
+msgid "Subject of the pdf file"
+msgstr "Število uporabljanih predlog: "
+
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
 msgstr "Podprti znaki:"
@@ -1532,7 +1570,7 @@ msgstr "Simbolične povezave bodo ustvarjene v %1"
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr ""
 
-#: rc.cpp:210 rc.cpp:397 rc.cpp:400 rc.cpp:406 rc.cpp:442
+#: rc.cpp:417 rc.cpp:486 rc.cpp:676 rc.cpp:679 rc.cpp:685
 msgid "TextLabel"
 msgstr ""
 
@@ -1573,7 +1611,7 @@ msgstr "Mapa %1 ne obstaja. KRename jo bo za vsa ustvaril."
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "Profil že obstaja. Prosim, izberite drugačno ime."
 
-#: rc.cpp:282
+#: rc.cpp:558
 #, fuzzy
 msgid "This file uses advanced permissions"
 msgstr "S&premeni dovoljenja"
@@ -1586,7 +1624,7 @@ msgstr ""
 "Ta možnost omogoči, da KRename doda listi tudi ime mape v kateri so izbrane "
 "datoteke."
 
-#: rc.cpp:532
+#: rc.cpp:697
 msgid ""
 "This plugin sorts files after renaming into numbered subdirectories.\n"
 "\n"
@@ -1599,15 +1637,20 @@ msgid ""
 " \t..."
 msgstr ""
 
-#: rc.cpp:454
+#: rc.cpp:588
 msgid "Time:"
 msgstr "Čas:"
 
-#: rc.cpp:514
+#: podofoplugin.cpp:45
+#, fuzzy
+msgid "Title of the pdf file"
+msgstr "Število uporabljanih predlog: "
+
+#: rc.cpp:468
 msgid "Token"
 msgstr "Znak"
 
-#: rc.cpp:523
+#: rc.cpp:477
 #, fuzzy
 msgid "Token &Preview"
 msgstr "&Predogled"
@@ -1674,47 +1717,47 @@ msgstr "Razveljavitev ni mogoča za oddaljeno datoteko: %1"
 msgid "Undoing all renamed files."
 msgstr ""
 
-#: rc.cpp:699
+#: rc.cpp:54
 msgid "Up"
 msgstr ""
 
-#: rc.cpp:234
+#: rc.cpp:510
 #, fuzzy
 msgid "Use &custom filename"
 msgstr "Uporabi vnosno ime datoteke"
 
-#: rc.cpp:228
+#: rc.cpp:504
 #, fuzzy
 msgid "Use &input filename"
 msgstr "Uporabi vnosno ime datoteke"
 
-#: rc.cpp:720
+#: rc.cpp:75
 #, fuzzy
 msgid "Use &tabbed style GUI (advanced users)"
 msgstr "Uporabi zavihke (napredno)"
 
-#: rc.cpp:717
+#: rc.cpp:72
 msgid "Use &wizard style GUI (beginners)"
 msgstr "Uporabi &čarovnika (začetniki)"
 
-#: rc.cpp:231
+#: rc.cpp:507
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
 msgstr ""
 
-#: rc.cpp:222
+#: rc.cpp:498
 msgid "Use filename created by &KRename"
 msgstr ""
 
-#: rc.cpp:156 rc.cpp:615
+#: rc.cpp:225 rc.cpp:333
 msgid "Use original extension"
 msgstr "Uporabi originalno končnico"
 
-#: rc.cpp:114 rc.cpp:573
+#: rc.cpp:183 rc.cpp:291
 msgid "Use original name"
 msgstr "Uporabi originalno ime"
 
-#: rc.cpp:225
+#: rc.cpp:501
 msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."
