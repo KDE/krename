@@ -43,7 +43,8 @@ ENDIF(EXIV2_FOUND)
 CONFIGURE_FILE(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h )
 
 # Find podofo
-FIND_PACKAGE(LIBPODOFO)
+macro_optional_find_package(LIBPODOFO)
+macro_log_feature(LIBPODOFO_FOUND "libPodofo" "A library to access pdf metadata" "http://podofo.sourceforge.net/" FALSE "")
 IF(LIBPODOFO_FOUND)
   ADD_DEFINITIONS( -DWITH_PODOFO )
   MESSAGE("-- The podofo library was found. KRename will be built with podofo support.")
