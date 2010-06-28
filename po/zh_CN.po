@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_CN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-24 22:10+0100\n"
+"POT-Creation-Date: 2010-06-28 16:13+0100\n"
 "PO-Revision-Date: 2007-07-30 11:31+0800\n"
 "Last-Translator: Roy Qu <royqh1979@gmail.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -948,6 +948,11 @@ msgstr ""
 msgid "Group"
 msgstr "群组"
 
+#: main.cpp:75
+msgid ""
+"Helped to fix style guide issues and made improvements to user messages."
+msgstr ""
+
 #: rc.cpp:691
 #, fuzzy
 msgid "Hint: Undo is still possible after renaming your files."
@@ -1528,10 +1533,6 @@ msgstr "粘性"
 
 #: scriptplugin.cpp:241
 msgid "String"
-msgstr ""
-
-#: main.cpp:75
-msgid "Style guide issues and improvements of user messages."
 msgstr ""
 
 #: dirsortplugin.cpp:43

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-24 22:10+0100\n"
+"POT-Creation-Date: 2010-06-28 16:13+0100\n"
 "PO-Revision-Date: 2010-03-22 16:26+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -945,6 +945,12 @@ msgstr "Groult Richard"
 msgid "Group"
 msgstr "Група"
 
+#: main.cpp:75
+#, fuzzy
+msgid ""
+"Helped to fix style guide issues and made improvements to user messages."
+msgstr "Недоліки у підручнику зі стилів та покращення повідомлень програми."
+
 #: rc.cpp:691
 msgid "Hint: Undo is still possible after renaming your files."
 msgstr "Підказка: після перейменування ви можете його скасувати."
@@ -1493,10 +1499,6 @@ msgstr "Липкий"
 #: scriptplugin.cpp:241
 msgid "String"
 msgstr "String"
-
-#: main.cpp:75
-msgid "Style guide issues and improvements of user messages."
-msgstr "Недоліки у підручнику зі стилів та покращення повідомлень програми."
 
 #: dirsortplugin.cpp:43
 msgid "Subdirectory-Sort Plugin"

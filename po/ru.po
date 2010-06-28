@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-24 22:10+0100\n"
+"POT-Creation-Date: 2010-06-28 16:13+0100\n"
 "PO-Revision-Date: 2005-04-22 23:26+0400\n"
 "Last-Translator: Alexey Kouznetsov <kouznetsov@phtf.stu.neva.ru>\n"
 "Language-Team: Русский <ru@li.org>\n"
@@ -959,6 +959,11 @@ msgstr ""
 msgid "Group"
 msgstr "Группа"
 
+#: main.cpp:75
+msgid ""
+"Helped to fix style guide issues and made improvements to user messages."
+msgstr ""
+
 #: rc.cpp:691
 #, fuzzy
 msgid "Hint: Undo is still possible after renaming your files."
@@ -1541,10 +1546,6 @@ msgstr "Фиксация"
 
 #: scriptplugin.cpp:241
 msgid "String"
-msgstr ""
-
-#: main.cpp:75
-msgid "Style guide issues and improvements of user messages."
 msgstr ""
 
 #: dirsortplugin.cpp:43

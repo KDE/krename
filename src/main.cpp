@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
                          ki18n("Website, testing, very good ideas and keeping me coding!"),
                          "support@stonki.de", "http://www.stonki.de" );
 
-    aboutData.addCredit( ki18n("Arpad Biro"), ki18n("Style guide issues and improvements of user messages."), "biro.arpad@gmail.com" );    
+    aboutData.addCredit( ki18n("Arpad Biro"), ki18n("Helped to fix style guide issues and made improvements to user messages."), "biro.arpad@gmail.com" );    
     aboutData.addCredit( ki18n("Trevor Semeniuk"),  ki18n("Thanks to him for creating RedHat 7.x packages and some other help."),
                          "semeniuk@ee.ualberta.ca", "http://www.semeniuk.net" );
     aboutData.addCredit( ki18n("Groult Richard"),   ki18n("Fixed a bug with startIndex and added the BatchRenamer class\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-24 22:10+0100\n"
+"POT-Creation-Date: 2010-06-28 16:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,7 +110,8 @@ msgid "Arpad Biro"
 msgstr ""
 
 #: main.cpp:75
-msgid "Style guide issues and improvements of user messages."
+msgid ""
+"Helped to fix style guide issues and made improvements to user messages."
 msgstr ""
 
 #: main.cpp:76

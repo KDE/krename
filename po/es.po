@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-24 22:10+0100\n"
+"POT-Creation-Date: 2010-06-28 16:13+0100\n"
 "PO-Revision-Date: 2006-03-02 14:28+0100\n"
 "Last-Translator: Jose Rodriguez <chmpmi@eresmas.net>\n"
 "Language-Team:  <es@li.org>\n"
@@ -974,6 +974,11 @@ msgstr ""
 msgid "Group"
 msgstr "Grupo"
 
+#: main.cpp:75
+msgid ""
+"Helped to fix style guide issues and made improvements to user messages."
+msgstr ""
+
 #: rc.cpp:691
 #, fuzzy
 msgid "Hint: Undo is still possible after renaming your files."
@@ -1559,10 +1564,6 @@ msgstr "Sticky"
 
 #: scriptplugin.cpp:241
 msgid "String"
-msgstr ""
-
-#: main.cpp:75
-msgid "Style guide issues and improvements of user messages."
 msgstr ""
 
 #: dirsortplugin.cpp:43

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-24 22:10+0100\n"
+"POT-Creation-Date: 2010-06-28 16:13+0100\n"
 "PO-Revision-Date: 2010-01-10 22:46+0100\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
@@ -950,6 +950,12 @@ msgstr "Groult Richard"
 msgid "Group"
 msgstr "Csoport"
 
+#: main.cpp:75
+#, fuzzy
+msgid ""
+"Helped to fix style guide issues and made improvements to user messages."
+msgstr "Felhasználóifelület-üzenetek és stílus javítása"
+
 #: rc.cpp:691
 msgid "Hint: Undo is still possible after renaming your files."
 msgstr "Megjegyzés: a fájlok átnevezése után vissza lehet vonni a műveletet."
@@ -1497,10 +1503,6 @@ msgstr "Ragadós (sticky)"
 #: scriptplugin.cpp:241
 msgid "String"
 msgstr "Szöveg"
-
-#: main.cpp:75
-msgid "Style guide issues and improvements of user messages."
-msgstr "Felhasználóifelület-üzenetek és stílus javítása"
 
 #: dirsortplugin.cpp:43
 msgid "Subdirectory-Sort Plugin"
