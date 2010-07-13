@@ -572,7 +572,7 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
             QString appendix;
             if( text[curPos] == '{' ) 
             {
-                int     appendixPos = curPos;
+                int     appendixPos = curPos + 1;
                 QString appendixToken;
                 while( (appendixPos = getNextToken( text, appendixToken, appendixPos )) != -1 )
                 {
@@ -580,6 +580,12 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
                     {
                         break;
                     }
+                }
+
+                if( appendixPos == -1 ) 
+                {
+                    // Do go into endless loop if token is not completed correctly
+                    appendixPos = text.length();
                 }
 
                 // -2 because we have to go, before the current found token

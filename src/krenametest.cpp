@@ -470,6 +470,9 @@ void KRenameTest::testBatchRenamer()
     // Regression tests
     // Caused an infinite loop
     RUN_TOKEN_TEST( "[1-2 [4-] Test", "[1-2 [4-]", filename, " " + filename.right( filename.length() - 3 ) );
+    const char* regTemplate = "###{329;13";
+    RUN_TOKEN_TEST( regTemplate, regTemplate, filename, "329" );
+    RUN_TOKEN_TEST( "ABC {1", "ABC {1", filename, "ABC {1" );
 
     // Brackets appeared as \[ in the final result
     QString regressionName = "1-07 Take Flight (Wings) [Pocketman]";
