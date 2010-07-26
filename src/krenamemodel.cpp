@@ -27,6 +27,13 @@
 #include <krun.h>
 #include <kio/previewjob.h>
 
+
+/*
+ * TODO: Provide sorting based on other criterias
+ *       than the filename, but also on arbitrary
+ *       KRename tokens.
+ */
+
 // Helper functions for sorting
 static const QString findNumInString( unsigned int pos, const QString & s )
 {

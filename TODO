@@ -1,3 +1,11 @@
+DOM:
+/*
+ * TODO: Provide sorting based on other criterias
+ *       than the filename, but also on arbitrary
+ *       KRename tokens.
+ */
+
+
 STEVEN: Drag and Drop for KRenameModel and PreviewModel
 
 
