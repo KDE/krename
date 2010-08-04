@@ -22,6 +22,31 @@ DOM: Kontext menü im advance mode für alle text boxen:
 	    -> ...
 
 ========================================
+(This is with using v4.0.4)
+When using "Insert Part of Filename..." under the advanced renamer,
+KRename has problems with at least the following special characters
+when in file names: #$[]%&*\
+Instead of seeing those characters as a single character, it sees them
+as two characters, such as '[' being seen as '\['. This screws up the
+output names.
+
+A couple examples using "for example [[[this is ]a test file.txt" to
+illustrate the problem follows:
+
+[$1;13] gives:
+"for example \"
+expected:
+"for example ["
+
+[$16-[length]] gives:
+"[[this is ]a test .txt"
+expected:
+"this is ]a test file.txt"
+
+This bug makes KRename useless for me at times, and it would be nice
+if it was fixed. Also, bug 3018407 on the bugtracker appears to be the
+same issue.
+========================================
 I forgot to mention in my prior e-mail, but I also noticed that the
 encoding conversion plugin seems to be missing from KRename for KDE 4.
 
