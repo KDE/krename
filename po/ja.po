@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-28 16:13+0100\n"
+"POT-Creation-Date: 2010-08-12 11:27+0100\n"
 "PO-Revision-Date: 2005-01-27 20:39+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team:  <ja@li.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 msgid "$"
 msgstr ""
 
-#: batchrenamer.cpp:291 batchrenamer.cpp:412
+#: batchrenamer.cpp:298 batchrenamer.cpp:419
 #, fuzzy
 msgid "%1 errors occurred!"
 msgstr "%2 個のエラーが発生"
 
-#: batchrenamer.cpp:755
+#: batchrenamer.cpp:768
 msgid "%2 errors occurred!"
 msgstr "%2 個のエラーが発生"
 
@@ -477,6 +477,11 @@ msgid ""
 "into the new filename in the textbox below:</qt>"
 msgstr ""
 
+#: snumplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgstr "<qt>リネームしたファイルをサブディレクトリに振り分ける</qt>"
+
 #: translitplugin.cpp:102
 #, fuzzy
 msgid ""
@@ -633,23 +638,27 @@ msgstr "Can't chmod %1."
 msgid "Can't chown %1."
 msgstr "Can't chown %1."
 
-#: batchrenamer.cpp:667
+#: batchrenamer.cpp:680
 msgid "Can't create undo script :"
 msgstr "取消スクリプトを作成できません:"
 
-#: batchrenamer.cpp:769
+#: batchrenamer.cpp:782
 msgid "Can't set executable bit on undo script."
 msgstr "取消スクリプトを実行ファイルにセットできません"
 
-#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
+#: batchrenamer.cpp:1173 dirsortplugin.cpp:158
 #, fuzzy
 msgid "Cannot create directory %1"
 msgstr "サブディレクトリを作成"
 
-#: batchrenamer.cpp:258
+#: batchrenamer.cpp:265
 #, fuzzy
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "異なるホストにはファイル %1 のsymlinkを作れません"
+
+#: batchrenamer.cpp:244
+msgid "Cannot rename: source and target filename are equal: %1"
+msgstr ""
 
 #: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
@@ -798,7 +807,7 @@ msgstr ""
 msgid "Down"
 msgstr ""
 
-#: batchrenamer.cpp:757
+#: batchrenamer.cpp:770
 msgid "Elapsed time: %1 seconds"
 msgstr "経過時間: %1 秒"
 
@@ -807,11 +816,11 @@ msgstr "経過時間: %1 秒"
 msgid "Error"
 msgstr "エラー: %1"
 
-#: batchrenamer.cpp:405
+#: batchrenamer.cpp:412
 msgid "Error during undoing %1"
 msgstr ""
 
-#: batchrenamer.cpp:271 dirsortplugin.cpp:130
+#: batchrenamer.cpp:278 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
 msgstr ""
 
@@ -848,15 +857,15 @@ msgstr "ファイル名(&n)"
 msgid "Filename of the current file"
 msgstr "現在の時刻を挿入"
 
-#: batchrenamer.cpp:358
+#: batchrenamer.cpp:365
 msgid "Filenames Processed after %1 seconds."
 msgstr "%1 秒後に開始します"
 
-#: batchrenamer.cpp:216 batchrenamer.cpp:680
+#: batchrenamer.cpp:216 batchrenamer.cpp:693
 msgid "Files will be copied to: %1"
 msgstr "Files will be copied to: %1"
 
-#: batchrenamer.cpp:219 batchrenamer.cpp:682
+#: batchrenamer.cpp:219 batchrenamer.cpp:695
 msgid "Files will be moved to: %1"
 msgstr "Files will be moved to: %1"
 
@@ -985,7 +994,7 @@ msgstr "現在の時刻を挿入"
 msgid "Initial Value"
 msgstr ""
 
-#: batchrenamer.cpp:213 batchrenamer.cpp:686
+#: batchrenamer.cpp:213 batchrenamer.cpp:699
 msgid "Input files will be renamed."
 msgstr "入力ファイルをリネームします"
 
@@ -1134,6 +1143,20 @@ msgstr "ファイル作成日を挿入"
 msgid "Insert the year of a track"
 msgstr "ファイルへの最終アクセス日を挿入"
 
+#: snumplugin.cpp:43
+msgid "Inserts the episode number in two or three digits"
+msgstr ""
+
+#: snumplugin.cpp:42
+#, fuzzy
+msgid "Inserts the season number in two digits"
+msgstr "現在の月日を挿入"
+
+#: snumplugin.cpp:41
+#, fuzzy
+msgid "Inserts the series number of original filename"
+msgstr "ファイル変更日を形式に沿って挿入"
+
 #: translitplugin.cpp:94
 #, fuzzy
 msgid "Inserts the transliterated original filename"
@@ -1192,11 +1215,11 @@ msgstr "KRename"
 msgid "KRename Help"
 msgstr "KRename"
 
-#: batchrenamer.cpp:293 batchrenamer.cpp:758
+#: batchrenamer.cpp:300 batchrenamer.cpp:771
 msgid "KRename finished the renaming process."
 msgstr "リネームを完了しました"
 
-#: batchrenamer.cpp:414
+#: batchrenamer.cpp:421
 #, fuzzy
 msgid "KRename finished the undo process."
 msgstr "リネームを完了しました"
@@ -1290,7 +1313,7 @@ msgstr ""
 msgid "O&wner:"
 msgstr "所有者"
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Origin"
 msgstr "現在"
 
@@ -1361,7 +1384,7 @@ msgstr ""
 msgid "Polish Translation"
 msgstr "Italian translation"
 
-#: batchrenamer.cpp:294 batchrenamer.cpp:415 batchrenamer.cpp:759
+#: batchrenamer.cpp:301 batchrenamer.cpp:422 batchrenamer.cpp:772
 msgid "Press close to quit!"
 msgstr "終了するには「閉じる」を押してください"
 
@@ -1445,11 +1468,11 @@ msgstr "処理したファイルを再リネーム(&A)"
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Renamed"
 msgstr "リネーム後"
 
-#: batchrenamer.cpp:751
+#: batchrenamer.cpp:764
 msgid "Renamed %1 files successfully."
 msgstr "%1 個のファイルをリネームしました"
 
@@ -1469,6 +1492,11 @@ msgstr "KRenameを再起動"
 #: main.cpp:89
 msgid "Rolf Magnus"
 msgstr ""
+
+#: snumplugin.cpp:48
+#, fuzzy
+msgid "SeriesNumber"
+msgstr "番号"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1553,7 +1581,7 @@ msgstr "テンプレート履歴の数(&N):"
 msgid "Supported tokens:"
 msgstr "サポートしている項目:"
 
-#: batchrenamer.cpp:222 batchrenamer.cpp:684
+#: batchrenamer.cpp:222 batchrenamer.cpp:697
 msgid "Symbolic links will be created in: %1"
 msgstr "Symlinkを作成します: %1"
 
@@ -1698,11 +1726,11 @@ msgstr ""
 msgid "Unable to open %1 for writing."
 msgstr ""
 
-#: batchrenamer.cpp:739
+#: batchrenamer.cpp:752
 msgid "Undo is not possible for remote file: %1"
 msgstr "リモートファイルの取り消しはできません: %1"
 
-#: batchrenamer.cpp:373
+#: batchrenamer.cpp:380
 msgid "Undoing all renamed files."
 msgstr ""
 

@@ -56,6 +56,7 @@ SET(krename_SRCS
   systemplugin.cpp
   tokenhelpdialog.cpp
   translitplugin.cpp
+  snumplugin.cpp
   )
 
 IF ( EXIV2_FOUND )

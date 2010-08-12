@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-28 16:13+0100\n"
+"POT-Creation-Date: 2010-08-12 11:27+0100\n"
 "PO-Revision-Date: 2010-06-27 13:24+0200\n"
 "Last-Translator: Peter Landgren <peter.talken@telia.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "$"
 msgstr "$"
 
-#: batchrenamer.cpp:291 batchrenamer.cpp:412
+#: batchrenamer.cpp:298 batchrenamer.cpp:419
 msgid "%1 errors occurred!"
 msgstr "%1 fel inträffade!"
 
-#: batchrenamer.cpp:755
+#: batchrenamer.cpp:768
 msgid "%2 errors occurred!"
 msgstr "%2 fel inträffade!"
 
@@ -488,6 +488,13 @@ msgstr ""
 "<qt>Välj den del av det gamla filnamnet som skall skjutas in i det nya "
 "filnamnet i textrutan nedan:</qt>"
 
+#: snumplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgstr ""
+"<qt>Denna plugin kan transkribera ett filnamn till engelska (d. v. s. "
+"genomföra translitteration).</qt>"
+
 #: translitplugin.cpp:102
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
@@ -641,21 +648,25 @@ msgstr "Kan ej chmod %1."
 msgid "Can't chown %1."
 msgstr "Kan ej chown %1."
 
-#: batchrenamer.cpp:667
+#: batchrenamer.cpp:680
 msgid "Can't create undo script :"
 msgstr "Kan ej skapa ångra-skript :"
 
-#: batchrenamer.cpp:769
+#: batchrenamer.cpp:782
 msgid "Can't set executable bit on undo script."
 msgstr "kan ej sätta exekveringsbit på ångra-skript."
 
-#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
+#: batchrenamer.cpp:1173 dirsortplugin.cpp:158
 msgid "Cannot create directory %1"
 msgstr "Kan ej skapa mapp  %1"
 
-#: batchrenamer.cpp:258
+#: batchrenamer.cpp:265
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "Kan ej skapa symbolisk länk till icke-lokal URL: %1"
+
+#: batchrenamer.cpp:244
+msgid "Cannot rename: source and target filename are equal: %1"
+msgstr ""
 
 #: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
@@ -793,7 +804,7 @@ msgstr "Dubbel"
 msgid "Down"
 msgstr "Ner"
 
-#: batchrenamer.cpp:757
+#: batchrenamer.cpp:770
 msgid "Elapsed time: %1 seconds"
 msgstr "Förfluten tid: %1 sekunder"
 
@@ -801,11 +812,11 @@ msgstr "Förfluten tid: %1 sekunder"
 msgid "Error"
 msgstr "Fel"
 
-#: batchrenamer.cpp:405
+#: batchrenamer.cpp:412
 msgid "Error during undoing %1"
 msgstr "Fel vid ångring %1"
 
-#: batchrenamer.cpp:271 dirsortplugin.cpp:130
+#: batchrenamer.cpp:278 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
 msgstr "Fel vid omdöpning %2 (till %1)"
 
@@ -837,15 +848,15 @@ msgstr "Fil&namn:"
 msgid "Filename of the current file"
 msgstr "Filnamn för den aktuella filen"
 
-#: batchrenamer.cpp:358
+#: batchrenamer.cpp:365
 msgid "Filenames Processed after %1 seconds."
 msgstr "Filnamn behandlade efter %1 sekunder."
 
-#: batchrenamer.cpp:216 batchrenamer.cpp:680
+#: batchrenamer.cpp:216 batchrenamer.cpp:693
 msgid "Files will be copied to: %1"
 msgstr "Filer kommer att kopieras till: %1"
 
-#: batchrenamer.cpp:219 batchrenamer.cpp:682
+#: batchrenamer.cpp:219 batchrenamer.cpp:695
 msgid "Files will be moved to: %1"
 msgstr "Filer kommer att flyttas till: %1"
 
@@ -967,7 +978,7 @@ msgstr "Index för den aktuella filen"
 msgid "Initial Value"
 msgstr "Startvärde"
 
-#: batchrenamer.cpp:213 batchrenamer.cpp:686
+#: batchrenamer.cpp:213 batchrenamer.cpp:699
 msgid "Input files will be renamed."
 msgstr "In-filer kommer att döpas om."
 
@@ -1108,6 +1119,20 @@ msgstr "Skjut in spårets titel"
 msgid "Insert the year of a track"
 msgstr "Skjut in spårets år"
 
+#: snumplugin.cpp:43
+msgid "Inserts the episode number in two or three digits"
+msgstr ""
+
+#: snumplugin.cpp:42
+#, fuzzy
+msgid "Inserts the season number in two digits"
+msgstr "Skjut in spårets nummer"
+
+#: snumplugin.cpp:41
+#, fuzzy
+msgid "Inserts the series number of original filename"
+msgstr "Skjut in det translittererade ursprungliga filnamn"
+
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
 msgstr "Skjut in det translittererade ursprungliga filnamn"
@@ -1162,11 +1187,11 @@ msgstr "KRename Build:"
 msgid "KRename Help"
 msgstr "KRename hjälp"
 
-#: batchrenamer.cpp:293 batchrenamer.cpp:758
+#: batchrenamer.cpp:300 batchrenamer.cpp:771
 msgid "KRename finished the renaming process."
 msgstr "KRename avslutade omdöpningsprocessen."
 
-#: batchrenamer.cpp:414
+#: batchrenamer.cpp:421
 msgid "KRename finished the undo process."
 msgstr "KRename avslutade ångringsprocessen."
 
@@ -1250,7 +1275,7 @@ msgstr "Antal sidor i pdf-filen"
 msgid "O&wner:"
 msgstr "Äga&re"
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Origin"
 msgstr "Ursprung"
 
@@ -1315,7 +1340,7 @@ msgstr "PoDoFo (PDF) Plugin"
 msgid "Polish Translation"
 msgstr "Polsk översättning"
 
-#: batchrenamer.cpp:294 batchrenamer.cpp:415 batchrenamer.cpp:759
+#: batchrenamer.cpp:301 batchrenamer.cpp:422 batchrenamer.cpp:772
 msgid "Press close to quit!"
 msgstr "Tryck stäng för att avsluta!"
 
@@ -1392,11 +1417,11 @@ msgstr "Döp om processade filer &igen..."
 msgid "Rename the file using the filename created by KRename."
 msgstr "Döp om filen genom att använda det filnamn, som skapats av KRename."
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Renamed"
 msgstr "Omdöpt"
 
-#: batchrenamer.cpp:751
+#: batchrenamer.cpp:764
 msgid "Renamed %1 files successfully."
 msgstr "Döpte om %1 filer lyckosamt."
 
@@ -1415,6 +1440,11 @@ msgstr "Starta om &KRename..."
 #: main.cpp:89
 msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
+
+#: snumplugin.cpp:48
+#, fuzzy
+msgid "SeriesNumber"
+msgstr "Tal"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1496,7 +1526,7 @@ msgstr "Pdf-filens ämne"
 msgid "Supported tokens:"
 msgstr "Understödda märken:"
 
-#: batchrenamer.cpp:222 batchrenamer.cpp:684
+#: batchrenamer.cpp:222 batchrenamer.cpp:697
 msgid "Symbolic links will be created in: %1"
 msgstr "Symboliska länkar kommer att skapas i: %1"
 
@@ -1646,11 +1676,11 @@ msgstr "Kan ej öppna %1 för läsning."
 msgid "Unable to open %1 for writing."
 msgstr "Kan ej öppna %1 för skrivning."
 
-#: batchrenamer.cpp:739
+#: batchrenamer.cpp:752
 msgid "Undo is not possible for remote file: %1"
 msgstr "Ångra ej möjligt för fjärrfil: %1"
 
-#: batchrenamer.cpp:373
+#: batchrenamer.cpp:380
 msgid "Undoing all renamed files."
 msgstr "Ångrar alla omdöpta filer."
 

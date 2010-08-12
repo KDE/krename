@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-28 16:13+0100\n"
+"POT-Creation-Date: 2010-08-12 11:27+0100\n"
 "PO-Revision-Date: 2008-10-09 11:28+0200\n"
 "Last-Translator: Michał Smoczyk <msmoczyk@wp.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -22,11 +22,11 @@ msgstr ""
 msgid "$"
 msgstr ""
 
-#: batchrenamer.cpp:291 batchrenamer.cpp:412
+#: batchrenamer.cpp:298 batchrenamer.cpp:419
 msgid "%1 errors occurred!"
 msgstr "Wystąpiło %1 błędów!"
 
-#: batchrenamer.cpp:755
+#: batchrenamer.cpp:768
 msgid "%2 errors occurred!"
 msgstr "Wystąpiło %2 błędów!"
 
@@ -478,6 +478,13 @@ msgid ""
 "into the new filename in the textbox below:</qt>"
 msgstr ""
 
+#: snumplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgstr ""
+"<qt>Ta wtyczka przekształca nazwę pliku na zawierającą angielskie znaki "
+"(czyli dokonuje transliteracji).</qt>"
+
 #: translitplugin.cpp:102
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
@@ -645,23 +652,27 @@ msgstr "Nie można zmienić uprawnień dla %1."
 msgid "Can't chown %1."
 msgstr "Nie można zmienić właściciela dla %1."
 
-#: batchrenamer.cpp:667
+#: batchrenamer.cpp:680
 msgid "Can't create undo script :"
 msgstr "Nie można utworzyć skryptu cofającego :"
 
-#: batchrenamer.cpp:769
+#: batchrenamer.cpp:782
 msgid "Can't set executable bit on undo script."
 msgstr "Nie można ustawić skryptu cofania jako pliku wykonywalnego."
 
-#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
+#: batchrenamer.cpp:1173 dirsortplugin.cpp:158
 #, fuzzy
 msgid "Cannot create directory %1"
 msgstr "utwórz podkatalog"
 
-#: batchrenamer.cpp:258
+#: batchrenamer.cpp:265
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr ""
 "Nie można utworzyć linków symbolicznych do URLi na innych komputerach: %1"
+
+#: batchrenamer.cpp:244
+msgid "Cannot rename: source and target filename are equal: %1"
+msgstr ""
 
 #: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
@@ -807,7 +818,7 @@ msgstr ""
 msgid "Down"
 msgstr ""
 
-#: batchrenamer.cpp:757
+#: batchrenamer.cpp:770
 msgid "Elapsed time: %1 seconds"
 msgstr "Upłynęło: %1 sek"
 
@@ -815,11 +826,11 @@ msgstr "Upłynęło: %1 sek"
 msgid "Error"
 msgstr "Błąd"
 
-#: batchrenamer.cpp:405
+#: batchrenamer.cpp:412
 msgid "Error during undoing %1"
 msgstr "Błąd podczas cofania %1"
 
-#: batchrenamer.cpp:271 dirsortplugin.cpp:130
+#: batchrenamer.cpp:278 dirsortplugin.cpp:130
 #, fuzzy
 msgid "Error renaming %2 (to %1)"
 msgstr "Błąd podczas zmiany nazwy %1 (z %2)"
@@ -855,15 +866,15 @@ msgstr "&Nazwa pliku"
 msgid "Filename of the current file"
 msgstr "Nazwa bieżącego pliku"
 
-#: batchrenamer.cpp:358
+#: batchrenamer.cpp:365
 msgid "Filenames Processed after %1 seconds."
 msgstr "Nazwy plików przetworzone po %1 sek."
 
-#: batchrenamer.cpp:216 batchrenamer.cpp:680
+#: batchrenamer.cpp:216 batchrenamer.cpp:693
 msgid "Files will be copied to: %1"
 msgstr "Pliki będą skopiowane do: %1"
 
-#: batchrenamer.cpp:219 batchrenamer.cpp:682
+#: batchrenamer.cpp:219 batchrenamer.cpp:695
 msgid "Files will be moved to: %1"
 msgstr "Pliki będą przeniesione do: %1"
 
@@ -990,7 +1001,7 @@ msgstr "Indeks bieżącego pliku"
 msgid "Initial Value"
 msgstr "Wartość początkowa"
 
-#: batchrenamer.cpp:213 batchrenamer.cpp:686
+#: batchrenamer.cpp:213 batchrenamer.cpp:699
 msgid "Input files will be renamed."
 msgstr "Pliki źródłowe będą miały zmienioną nazwę."
 
@@ -1131,6 +1142,20 @@ msgstr "Wstaw tytuł"
 msgid "Insert the year of a track"
 msgstr "Wstaw rok"
 
+#: snumplugin.cpp:43
+msgid "Inserts the episode number in two or three digits"
+msgstr ""
+
+#: snumplugin.cpp:42
+#, fuzzy
+msgid "Inserts the season number in two digits"
+msgstr "Wstaw numer ścieżki"
+
+#: snumplugin.cpp:41
+#, fuzzy
+msgid "Inserts the series number of original filename"
+msgstr "Wstaw nazwę transliterowaną"
+
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
 msgstr "Wstaw nazwę transliterowaną"
@@ -1185,11 +1210,11 @@ msgstr "Kompilacja KRename:"
 msgid "KRename Help"
 msgstr "KRename"
 
-#: batchrenamer.cpp:293 batchrenamer.cpp:758
+#: batchrenamer.cpp:300 batchrenamer.cpp:771
 msgid "KRename finished the renaming process."
 msgstr "KRename zakończył proces zmiany nazw."
 
-#: batchrenamer.cpp:414
+#: batchrenamer.cpp:421
 msgid "KRename finished the undo process."
 msgstr "KRename zakończył proces cofania zmiany nazw."
 
@@ -1283,7 +1308,7 @@ msgstr ""
 msgid "O&wner:"
 msgstr "Inni"
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Origin"
 msgstr "Źródło"
 
@@ -1354,7 +1379,7 @@ msgstr ""
 msgid "Polish Translation"
 msgstr "Tłumaczenie włoskie"
 
-#: batchrenamer.cpp:294 batchrenamer.cpp:415 batchrenamer.cpp:759
+#: batchrenamer.cpp:301 batchrenamer.cpp:422 batchrenamer.cpp:772
 msgid "Press close to quit!"
 msgstr "Naciśnij Zamknij by wyjść!"
 
@@ -1438,11 +1463,11 @@ msgstr "Zmień ponownie n&azwy wybranym plikom..."
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Renamed"
 msgstr "Nazwane"
 
-#: batchrenamer.cpp:751
+#: batchrenamer.cpp:764
 msgid "Renamed %1 files successfully."
 msgstr "Zmieniono nazwę dla %1 plików."
 
@@ -1461,6 +1486,11 @@ msgstr "Uruchom ponownie &KRename..."
 #: main.cpp:89
 msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
+
+#: snumplugin.cpp:48
+#, fuzzy
+msgid "SeriesNumber"
+msgstr "Liczba"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1544,7 +1574,7 @@ msgstr "Właściciel pliku"
 msgid "Supported tokens:"
 msgstr "Obsługiwane szablony:"
 
-#: batchrenamer.cpp:222 batchrenamer.cpp:684
+#: batchrenamer.cpp:222 batchrenamer.cpp:697
 msgid "Symbolic links will be created in: %1"
 msgstr "Zostaną utworzone linki symboliczne w: %1"
 
@@ -1688,11 +1718,11 @@ msgstr "Nie można otworzyć %1 do odczytu."
 msgid "Unable to open %1 for writing."
 msgstr "Nie można otworzyć %1 do zapisu."
 
-#: batchrenamer.cpp:739
+#: batchrenamer.cpp:752
 msgid "Undo is not possible for remote file: %1"
 msgstr "Cofanie operacji nie jest możliwe dla pliku zdalnego: %1"
 
-#: batchrenamer.cpp:373
+#: batchrenamer.cpp:380
 msgid "Undoing all renamed files."
 msgstr "Cofanie wszystkich zmienionych plików."
 

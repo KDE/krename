@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-28 16:13+0100\n"
+"POT-Creation-Date: 2010-08-12 11:27+0100\n"
 "PO-Revision-Date: 2010-03-22 16:26+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -22,11 +22,11 @@ msgstr ""
 msgid "$"
 msgstr "$"
 
-#: batchrenamer.cpp:291 batchrenamer.cpp:412
+#: batchrenamer.cpp:298 batchrenamer.cpp:419
 msgid "%1 errors occurred!"
 msgstr "Сталося %1 помилок!"
 
-#: batchrenamer.cpp:755
+#: batchrenamer.cpp:768
 msgid "%2 errors occurred!"
 msgstr "Сталося %2 помилок!"
 
@@ -491,6 +491,13 @@ msgstr ""
 "<qt>Будь ласка, вкажіть у наведеному нижче полі частину старої назви файла, "
 "яку слід вставити у нову назву файла:</qt>"
 
+#: snumplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgstr ""
+"<qt>За допомогою цього додатка можна змінити літери назви файла на латинські "
+"(тобто виконати транслітерацію).</qt>"
+
 #: translitplugin.cpp:102
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
@@ -649,21 +656,25 @@ msgstr "Не вдалося виконати chmod %1."
 msgid "Can't chown %1."
 msgstr "Не вдалося виконати chown %1."
 
-#: batchrenamer.cpp:667
+#: batchrenamer.cpp:680
 msgid "Can't create undo script :"
 msgstr "Не вдалося створити скрипт скасування:"
 
-#: batchrenamer.cpp:769
+#: batchrenamer.cpp:782
 msgid "Can't set executable bit on undo script."
 msgstr "Не вдалося надати права на виконання скрипту скасування."
 
-#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
+#: batchrenamer.cpp:1173 dirsortplugin.cpp:158
 msgid "Cannot create directory %1"
 msgstr "Не вдалося створити каталог %1"
 
-#: batchrenamer.cpp:258
+#: batchrenamer.cpp:265
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "Не можна створювати символічні посилання на нелокальні адреси: %1"
+
+#: batchrenamer.cpp:244
+msgid "Cannot rename: source and target filename are equal: %1"
+msgstr ""
 
 #: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
@@ -804,7 +815,7 @@ msgstr "Double"
 msgid "Down"
 msgstr "Вниз"
 
-#: batchrenamer.cpp:757
+#: batchrenamer.cpp:770
 msgid "Elapsed time: %1 seconds"
 msgstr "Тривалість виконання: %1 секунд"
 
@@ -812,11 +823,11 @@ msgstr "Тривалість виконання: %1 секунд"
 msgid "Error"
 msgstr "Помилка"
 
-#: batchrenamer.cpp:405
+#: batchrenamer.cpp:412
 msgid "Error during undoing %1"
 msgstr "Помилка під час скасування %1"
 
-#: batchrenamer.cpp:271 dirsortplugin.cpp:130
+#: batchrenamer.cpp:278 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
 msgstr "Помилка під час перейменування %2 (на %1)"
 
@@ -848,15 +859,15 @@ msgstr "&Назва файла:"
 msgid "Filename of the current file"
 msgstr "Назва поточного файла"
 
-#: batchrenamer.cpp:358
+#: batchrenamer.cpp:365
 msgid "Filenames Processed after %1 seconds."
 msgstr "За %1 секунд оброблено таку кількість назв файлів."
 
-#: batchrenamer.cpp:216 batchrenamer.cpp:680
+#: batchrenamer.cpp:216 batchrenamer.cpp:693
 msgid "Files will be copied to: %1"
 msgstr "Файли буде скопійовано до: %1"
 
-#: batchrenamer.cpp:219 batchrenamer.cpp:682
+#: batchrenamer.cpp:219 batchrenamer.cpp:695
 msgid "Files will be moved to: %1"
 msgstr "Файли буде пересунуто до: %1"
 
@@ -979,7 +990,7 @@ msgstr "Номер поточного файла"
 msgid "Initial Value"
 msgstr "Початкове значення"
 
-#: batchrenamer.cpp:213 batchrenamer.cpp:686
+#: batchrenamer.cpp:213 batchrenamer.cpp:699
 msgid "Input files will be renamed."
 msgstr "Вхідні файли буде перейменовано."
 
@@ -1119,6 +1130,20 @@ msgstr "Вставити назву композиції"
 msgid "Insert the year of a track"
 msgstr "Вставити рік запису композиції"
 
+#: snumplugin.cpp:43
+msgid "Inserts the episode number in two or three digits"
+msgstr ""
+
+#: snumplugin.cpp:42
+#, fuzzy
+msgid "Inserts the season number in two digits"
+msgstr "Вставити номер композиції"
+
+#: snumplugin.cpp:41
+#, fuzzy
+msgid "Inserts the series number of original filename"
+msgstr "Вставити транслітеровану початкову назву файла"
+
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
 msgstr "Вставити транслітеровану початкову назву файла"
@@ -1172,11 +1197,11 @@ msgstr "Випуск KRename:"
 msgid "KRename Help"
 msgstr "Довідка з KRename"
 
-#: batchrenamer.cpp:293 batchrenamer.cpp:758
+#: batchrenamer.cpp:300 batchrenamer.cpp:771
 msgid "KRename finished the renaming process."
 msgstr "Програма KRename завершила процес перейменування."
 
-#: batchrenamer.cpp:414
+#: batchrenamer.cpp:421
 msgid "KRename finished the undo process."
 msgstr "Програма KRename завершила процес скасування."
 
@@ -1261,7 +1286,7 @@ msgstr ""
 msgid "O&wner:"
 msgstr "В&ласник:"
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Origin"
 msgstr "Походження"
 
@@ -1330,7 +1355,7 @@ msgstr ""
 msgid "Polish Translation"
 msgstr "Переклад польською"
 
-#: batchrenamer.cpp:294 batchrenamer.cpp:415 batchrenamer.cpp:759
+#: batchrenamer.cpp:301 batchrenamer.cpp:422 batchrenamer.cpp:772
 msgid "Press close to quit!"
 msgstr "Натисніть «Закрити», щоб завершити роботу!"
 
@@ -1408,11 +1433,11 @@ msgstr "&Ще раз перейменувати оброблені файли...
 msgid "Rename the file using the filename created by KRename."
 msgstr "Перейменувати файл на основі назви файла, створеної KRename."
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Renamed"
 msgstr "Перейменовано"
 
-#: batchrenamer.cpp:751
+#: batchrenamer.cpp:764
 msgid "Renamed %1 files successfully."
 msgstr "Успішно перейменовано %1 файлів."
 
@@ -1431,6 +1456,11 @@ msgstr "Пере&запустити KRename..."
 #: main.cpp:89
 msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
+
+#: snumplugin.cpp:48
+#, fuzzy
+msgid "SeriesNumber"
+msgstr "Число"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1513,7 +1543,7 @@ msgstr "Власник файла"
 msgid "Supported tokens:"
 msgstr "Можливі елементи:"
 
-#: batchrenamer.cpp:222 batchrenamer.cpp:684
+#: batchrenamer.cpp:222 batchrenamer.cpp:697
 msgid "Symbolic links will be created in: %1"
 msgstr "Символічні посилання буде створено у: %1"
 
@@ -1665,11 +1695,11 @@ msgstr "Не вдається відкрити %1 для зчитування д
 msgid "Unable to open %1 for writing."
 msgstr "Не вдалося відкрити %1 для запису."
 
-#: batchrenamer.cpp:739
+#: batchrenamer.cpp:752
 msgid "Undo is not possible for remote file: %1"
 msgstr "Для віддаленого файла скасування неможливе: %1"
 
-#: batchrenamer.cpp:373
+#: batchrenamer.cpp:380
 msgid "Undoing all renamed files."
 msgstr "Скасування всіх перейменувань файлів."
 

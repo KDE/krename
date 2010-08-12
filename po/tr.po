@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-28 16:13+0100\n"
+"POT-Creation-Date: 2010-08-12 11:27+0100\n"
 "PO-Revision-Date: 2006-09-18 19:14+0300\n"
 "Last-Translator: Koray Löker <loker@pardus.org.tr>\n"
 "Language-Team:  <tr@li.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 msgid "$"
 msgstr ""
 
-#: batchrenamer.cpp:291 batchrenamer.cpp:412
+#: batchrenamer.cpp:298 batchrenamer.cpp:419
 #, fuzzy
 msgid "%1 errors occurred!"
 msgstr "%2 hata oluştu!"
 
-#: batchrenamer.cpp:755
+#: batchrenamer.cpp:768
 msgid "%2 errors occurred!"
 msgstr "%2 hata oluştu!"
 
@@ -481,6 +481,13 @@ msgid ""
 "into the new filename in the textbox below:</qt>"
 msgstr ""
 
+#: snumplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgstr ""
+"<qt>Bu eklenti, latin olmayan harflerle yazılan isimleri, seslerine "
+"bakmaksızın latin harflerle yazılı biçime çevirir.</ qt>"
+
 #: translitplugin.cpp:102
 #, fuzzy
 msgid ""
@@ -645,23 +652,27 @@ msgstr "%1 dosyasının izinleri değiştirilemedi."
 msgid "Can't chown %1."
 msgstr "%1 dosyasının sahibi değiştirilemedi."
 
-#: batchrenamer.cpp:667
+#: batchrenamer.cpp:680
 msgid "Can't create undo script :"
 msgstr "Geri alma betiği oluşturulamıyor:"
 
-#: batchrenamer.cpp:769
+#: batchrenamer.cpp:782
 msgid "Can't set executable bit on undo script."
 msgstr "Geri alma betiğinde çalıştırılabilir bit koyamam."
 
-#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
+#: batchrenamer.cpp:1173 dirsortplugin.cpp:158
 #, fuzzy
 msgid "Cannot create directory %1"
 msgstr "alt dizin oluştur"
 
-#: batchrenamer.cpp:258
+#: batchrenamer.cpp:265
 #, fuzzy
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "%1 dosyası için farklı makinede simgesel bağ oluşturulamadı."
+
+#: batchrenamer.cpp:244
+msgid "Cannot rename: source and target filename are equal: %1"
+msgstr ""
 
 #: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
@@ -810,7 +821,7 @@ msgstr ""
 msgid "Down"
 msgstr ""
 
-#: batchrenamer.cpp:757
+#: batchrenamer.cpp:770
 msgid "Elapsed time: %1 seconds"
 msgstr "Geçen zaman: %1 saniye"
 
@@ -819,11 +830,11 @@ msgstr "Geçen zaman: %1 saniye"
 msgid "Error"
 msgstr "Hata: %1"
 
-#: batchrenamer.cpp:405
+#: batchrenamer.cpp:412
 msgid "Error during undoing %1"
 msgstr ""
 
-#: batchrenamer.cpp:271 dirsortplugin.cpp:130
+#: batchrenamer.cpp:278 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
 msgstr ""
 
@@ -860,15 +871,15 @@ msgstr "Dosya &Adı"
 msgid "Filename of the current file"
 msgstr "Şu anki saati ekleyin"
 
-#: batchrenamer.cpp:358
+#: batchrenamer.cpp:365
 msgid "Filenames Processed after %1 seconds."
 msgstr "Dosya adları %1 saniyede işlendi."
 
-#: batchrenamer.cpp:216 batchrenamer.cpp:680
+#: batchrenamer.cpp:216 batchrenamer.cpp:693
 msgid "Files will be copied to: %1"
 msgstr "Dosyalar şuraya kopyalanacak: %1"
 
-#: batchrenamer.cpp:219 batchrenamer.cpp:682
+#: batchrenamer.cpp:219 batchrenamer.cpp:695
 msgid "Files will be moved to: %1"
 msgstr "Dosyalar şuraya taşınacak: %1"
 
@@ -997,7 +1008,7 @@ msgstr "Şu anki saati ekleyin"
 msgid "Initial Value"
 msgstr ""
 
-#: batchrenamer.cpp:213 batchrenamer.cpp:686
+#: batchrenamer.cpp:213 batchrenamer.cpp:699
 msgid "Input files will be renamed."
 msgstr "Girdi dosyaları yeniden adlandırılacak."
 
@@ -1146,6 +1157,20 @@ msgstr "Dosyaların oluşturulma tarihlerini ekleyin"
 msgid "Insert the year of a track"
 msgstr "Dosyaya son erişimin tarihini girin"
 
+#: snumplugin.cpp:43
+msgid "Inserts the episode number in two or three digits"
+msgstr ""
+
+#: snumplugin.cpp:42
+#, fuzzy
+msgid "Inserts the season number in two digits"
+msgstr "Günün tarihini ekle"
+
+#: snumplugin.cpp:41
+#, fuzzy
+msgid "Inserts the series number of original filename"
+msgstr "Biçemli deştirilme tarihini ekleyin"
+
 #: translitplugin.cpp:94
 #, fuzzy
 msgid "Inserts the transliterated original filename"
@@ -1204,11 +1229,11 @@ msgstr "KRename"
 msgid "KRename Help"
 msgstr "KRename"
 
-#: batchrenamer.cpp:293 batchrenamer.cpp:758
+#: batchrenamer.cpp:300 batchrenamer.cpp:771
 msgid "KRename finished the renaming process."
 msgstr "KRename yeniden adlandırma işlemini bitirdi."
 
-#: batchrenamer.cpp:414
+#: batchrenamer.cpp:421
 #, fuzzy
 msgid "KRename finished the undo process."
 msgstr "KRename yeniden adlandırma işlemini bitirdi."
@@ -1302,7 +1327,7 @@ msgstr ""
 msgid "O&wner:"
 msgstr "Sahiplik"
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Origin"
 msgstr "İlk hali"
 
@@ -1374,7 +1399,7 @@ msgstr ""
 msgid "Polish Translation"
 msgstr "İtalyanca çeviri"
 
-#: batchrenamer.cpp:294 batchrenamer.cpp:415 batchrenamer.cpp:759
+#: batchrenamer.cpp:301 batchrenamer.cpp:422 batchrenamer.cpp:772
 msgid "Press close to quit!"
 msgstr "Çıkmak için kapat tuşuna basın!"
 
@@ -1459,11 +1484,11 @@ msgstr "İşlenmiş Dosyaları &Tekrar Yeniden Adlandır..."
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Renamed"
 msgstr "Adlandırılmış hali"
 
-#: batchrenamer.cpp:751
+#: batchrenamer.cpp:764
 msgid "Renamed %1 files successfully."
 msgstr "%1 dosya başarıyla yeniden adlandırıldı."
 
@@ -1483,6 +1508,11 @@ msgstr "KRename'i yeniden başlat..."
 #: main.cpp:89
 msgid "Rolf Magnus"
 msgstr ""
+
+#: snumplugin.cpp:48
+#, fuzzy
+msgid "SeriesNumber"
+msgstr "Sayı"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1567,7 +1597,7 @@ msgstr "İlk dosyanın numarası."
 msgid "Supported tokens:"
 msgstr "Desteklenen semboller:"
 
-#: batchrenamer.cpp:222 batchrenamer.cpp:684
+#: batchrenamer.cpp:222 batchrenamer.cpp:697
 msgid "Symbolic links will be created in: %1"
 msgstr "Simgesel bağlar %1 içerisinde oluşturulacak"
 
@@ -1718,11 +1748,11 @@ msgstr ""
 msgid "Unable to open %1 for writing."
 msgstr ""
 
-#: batchrenamer.cpp:739
+#: batchrenamer.cpp:752
 msgid "Undo is not possible for remote file: %1"
 msgstr "Geri alma işlemi %1 dosyası için mümkün değil"
 
-#: batchrenamer.cpp:373
+#: batchrenamer.cpp:380
 msgid "Undoing all renamed files."
 msgstr ""
 

@@ -37,6 +37,7 @@
 # include "podofoplugin.h"
 #endif // WITH_TAGLIB
 #include "translitplugin.h"
+#include "snumplugin.h"
 
 #include "../config-krename.h"
 
@@ -149,6 +150,7 @@ void PluginLoader::load()
     m_plugins.append( new PodofoPlugin( this ) );
 #endif // WITH_TAGLIB
     m_plugins.append( new TranslitPlugin( this ) );
+    m_plugins.append( new SnumPlugin( this ) );
     //this->loadFilePlugins();
 
 

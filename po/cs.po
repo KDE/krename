@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-28 16:13+0100\n"
+"POT-Creation-Date: 2010-08-12 11:27+0100\n"
 "PO-Revision-Date: 2010-05-30 20:44+0200\n"
 "Last-Translator: Pavel Fric\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 msgid "$"
 msgstr "$"
 
-#: batchrenamer.cpp:291 batchrenamer.cpp:412
+#: batchrenamer.cpp:298 batchrenamer.cpp:419
 msgid "%1 errors occurred!"
 msgstr "Vyskytlo se %1 chyb!"
 
-#: batchrenamer.cpp:755
+#: batchrenamer.cpp:768
 msgid "%2 errors occurred!"
 msgstr "Vyskytlo se %2 chyb!"
 
@@ -506,6 +506,13 @@ msgstr ""
 "<qt>Prosím, vyberte tu část starého názvu, která by měla být vložena do "
 "nového názvu souboru níže v textovém poli.:</qt>"
 
+#: snumplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgstr ""
+"<qt>Tento přídavný modul může přepsat názvy souborů do angličtiny (to jest "
+"zdokonalit transliteraci - přepis jinou abecedou)</qt>"
+
 #: translitplugin.cpp:102
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
@@ -663,22 +670,26 @@ msgstr "Nelze změnit práva souboru (chmod) %1"
 msgid "Can't chown %1."
 msgstr "Nelze změnit vlastníka souboru (chown) %1"
 
-#: batchrenamer.cpp:667
+#: batchrenamer.cpp:680
 msgid "Can't create undo script :"
 msgstr "Nelze vytvořit undo-script :"
 
-#: batchrenamer.cpp:769
+#: batchrenamer.cpp:782
 msgid "Can't set executable bit on undo script."
 msgstr "Nelze nastavit právo spouštění pro undo-scriptu."
 
-#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
+#: batchrenamer.cpp:1173 dirsortplugin.cpp:158
 #, fuzzy
 msgid "Cannot create directory %1"
 msgstr "Vytvořit podadresář"
 
-#: batchrenamer.cpp:258
+#: batchrenamer.cpp:265
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "Nelze vytvořit symbolické odkazy pro ne-místní URL: %1."
+
+#: batchrenamer.cpp:244
+msgid "Cannot rename: source and target filename are equal: %1"
+msgstr ""
 
 #: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
@@ -821,7 +832,7 @@ msgstr "Zdvojnásobit"
 msgid "Down"
 msgstr "Dolů"
 
-#: batchrenamer.cpp:757
+#: batchrenamer.cpp:770
 msgid "Elapsed time: %1 seconds"
 msgstr "Uplynulý čas: %1 sekund"
 
@@ -829,11 +840,11 @@ msgstr "Uplynulý čas: %1 sekund"
 msgid "Error"
 msgstr "Chyba"
 
-#: batchrenamer.cpp:405
+#: batchrenamer.cpp:412
 msgid "Error during undoing %1"
 msgstr "Během kroku zpět došlo k chybě %1"
 
-#: batchrenamer.cpp:271 dirsortplugin.cpp:130
+#: batchrenamer.cpp:278 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
 msgstr "Během přejmenovávání nastala chyba %2 (do %1)"
 
@@ -865,15 +876,15 @@ msgstr "Název &souboru:"
 msgid "Filename of the current file"
 msgstr "Souborový název nynějšího souboru"
 
-#: batchrenamer.cpp:358
+#: batchrenamer.cpp:365
 msgid "Filenames Processed after %1 seconds."
 msgstr "Názvy souborů zpracovány za %1 sekund."
 
-#: batchrenamer.cpp:216 batchrenamer.cpp:680
+#: batchrenamer.cpp:216 batchrenamer.cpp:693
 msgid "Files will be copied to: %1"
 msgstr "Soubory budou zkopírovány do: %1"
 
-#: batchrenamer.cpp:219 batchrenamer.cpp:682
+#: batchrenamer.cpp:219 batchrenamer.cpp:695
 msgid "Files will be moved to: %1"
 msgstr "Soubory budou přesunuty do: %1"
 
@@ -1001,7 +1012,7 @@ msgstr "Index nynějšího souboru"
 msgid "Initial Value"
 msgstr "Počáteční hodnota"
 
-#: batchrenamer.cpp:213 batchrenamer.cpp:686
+#: batchrenamer.cpp:213 batchrenamer.cpp:699
 msgid "Input files will be renamed."
 msgstr "Vstupní soubory budou přejmenovány."
 
@@ -1141,6 +1152,20 @@ msgstr "Vložit název stopy"
 msgid "Insert the year of a track"
 msgstr "Vložit rok vztahující se ke stopě"
 
+#: snumplugin.cpp:43
+msgid "Inserts the episode number in two or three digits"
+msgstr ""
+
+#: snumplugin.cpp:42
+#, fuzzy
+msgid "Inserts the season number in two digits"
+msgstr "Vložit číslo stopy"
+
+#: snumplugin.cpp:41
+#, fuzzy
+msgid "Inserts the series number of original filename"
+msgstr "Vloží přepsaný (přepísmenkovaný) původní název souboru"
+
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
 msgstr "Vloží přepsaný (přepísmenkovaný) původní název souboru"
@@ -1201,11 +1226,11 @@ msgstr "Sestavení aplikace KRename:"
 msgid "KRename Help"
 msgstr "Nápověda k aplikaci KRename"
 
-#: batchrenamer.cpp:293 batchrenamer.cpp:758
+#: batchrenamer.cpp:300 batchrenamer.cpp:771
 msgid "KRename finished the renaming process."
 msgstr "KRename dokončil proces přejmenování."
 
-#: batchrenamer.cpp:414
+#: batchrenamer.cpp:421
 msgid "KRename finished the undo process."
 msgstr "KRename dokončil proces vracení zpět o krok."
 
@@ -1291,7 +1316,7 @@ msgstr ""
 msgid "O&wner:"
 msgstr "&Vlastník:"
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Origin"
 msgstr "Původní název"
 
@@ -1360,7 +1385,7 @@ msgstr ""
 msgid "Polish Translation"
 msgstr "Překlad do polštiny"
 
-#: batchrenamer.cpp:294 batchrenamer.cpp:415 batchrenamer.cpp:759
+#: batchrenamer.cpp:301 batchrenamer.cpp:422 batchrenamer.cpp:772
 msgid "Press close to quit!"
 msgstr "Pro ukončení stiskněte Zavřít!"
 
@@ -1439,11 +1464,11 @@ msgstr "&Přejmenovat znovu zpracované soubory..."
 msgid "Rename the file using the filename created by KRename."
 msgstr "Použít název souboru vytvořený &KRename"
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Renamed"
 msgstr "Po přejmenování"
 
-#: batchrenamer.cpp:751
+#: batchrenamer.cpp:764
 msgid "Renamed %1 files successfully."
 msgstr "Úspěšně přejmenováno %1 souborů."
 
@@ -1462,6 +1487,11 @@ msgstr "Spustit &KRename znovu..."
 #: main.cpp:89
 msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
+
+#: snumplugin.cpp:48
+#, fuzzy
+msgid "SeriesNumber"
+msgstr "Číslo"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1544,7 +1574,7 @@ msgstr "Vlastník souboru"
 msgid "Supported tokens:"
 msgstr "Podporované výrazy:"
 
-#: batchrenamer.cpp:222 batchrenamer.cpp:684
+#: batchrenamer.cpp:222 batchrenamer.cpp:697
 msgid "Symbolic links will be created in: %1"
 msgstr "Symbolické odkazy budou vytvořeny v: %1"
 
@@ -1686,11 +1716,11 @@ msgstr "Neschopen otevřít %1 pro čtení"
 msgid "Unable to open %1 for writing."
 msgstr "Neschopen otevřít %1 pro psaní"
 
-#: batchrenamer.cpp:739
+#: batchrenamer.cpp:752
 msgid "Undo is not possible for remote file: %1"
 msgstr "Návrat o krok zpět není možný pro vzdálený soubor: %1"
 
-#: batchrenamer.cpp:373
+#: batchrenamer.cpp:380
 msgid "Undoing all renamed files."
 msgstr "Návrat o krok zpět u všech přejmenovaných souborů."
 

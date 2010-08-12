@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-28 16:13+0100\n"
+"POT-Creation-Date: 2010-08-12 11:27+0100\n"
 "PO-Revision-Date: 2010-01-10 22:46+0100\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "$"
 msgstr "$"
 
-#: batchrenamer.cpp:291 batchrenamer.cpp:412
+#: batchrenamer.cpp:298 batchrenamer.cpp:419
 msgid "%1 errors occurred!"
 msgstr "%1 hiba lépett fel."
 
-#: batchrenamer.cpp:755
+#: batchrenamer.cpp:768
 msgid "%2 errors occurred!"
 msgstr "%2 hiba lépett fel."
 
@@ -491,6 +491,13 @@ msgstr ""
 "<qt>Jelölje ki a lentebbi szövegmezőben a korábbi fájlnév azon részét, "
 "amelyet be kíván illeszteni az új fájlnévbe:</qt>"
 
+#: snumplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgstr ""
+"<qt>Ez a modul angol betűkre írja át a fájlnevekben szereplő nem angol "
+"betűket.</qt>"
+
 #: translitplugin.cpp:102
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
@@ -654,21 +661,25 @@ msgstr "\"%1\" jogosultságai nem módosíthatók."
 msgid "Can't chown %1."
 msgstr "\"%1\" tulajdonosa nem módosítható."
 
-#: batchrenamer.cpp:667
+#: batchrenamer.cpp:680
 msgid "Can't create undo script :"
 msgstr "Nem hozható létre a visszavonási szkript:"
 
-#: batchrenamer.cpp:769
+#: batchrenamer.cpp:782
 msgid "Can't set executable bit on undo script."
 msgstr "Nem lehet beállítani a futtathatósági bitet a visszavonási szkriptre."
 
-#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
+#: batchrenamer.cpp:1173 dirsortplugin.cpp:158
 msgid "Cannot create directory %1"
 msgstr "\"%1\" könyvtár létrehozása sikertelen"
 
-#: batchrenamer.cpp:258
+#: batchrenamer.cpp:265
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "Nem hozható létre szimbolikus link erre a távoli URL-re: %1"
+
+#: batchrenamer.cpp:244
+msgid "Cannot rename: source and target filename are equal: %1"
+msgstr ""
 
 #: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
@@ -809,7 +820,7 @@ msgstr "Dupla pontosságú"
 msgid "Down"
 msgstr "Le"
 
-#: batchrenamer.cpp:757
+#: batchrenamer.cpp:770
 msgid "Elapsed time: %1 seconds"
 msgstr "Eltelt idő: %1 másodperc"
 
@@ -817,11 +828,11 @@ msgstr "Eltelt idő: %1 másodperc"
 msgid "Error"
 msgstr "Hiba"
 
-#: batchrenamer.cpp:405
+#: batchrenamer.cpp:412
 msgid "Error during undoing %1"
 msgstr "Hiba történt \"%1\" visszavonásakor."
 
-#: batchrenamer.cpp:271 dirsortplugin.cpp:130
+#: batchrenamer.cpp:278 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
 msgstr "Hiba történt \"%2\" átnevezésekor (erre: %1)"
 
@@ -853,15 +864,15 @@ msgstr "Fájl&név:"
 msgid "Filename of the current file"
 msgstr "Az aktuális fájl neve"
 
-#: batchrenamer.cpp:358
+#: batchrenamer.cpp:365
 msgid "Filenames Processed after %1 seconds."
 msgstr "A fájlnevek %1 másodperc alatt feldolgozva."
 
-#: batchrenamer.cpp:216 batchrenamer.cpp:680
+#: batchrenamer.cpp:216 batchrenamer.cpp:693
 msgid "Files will be copied to: %1"
 msgstr "Fájlok másolása ide: %1"
 
-#: batchrenamer.cpp:219 batchrenamer.cpp:682
+#: batchrenamer.cpp:219 batchrenamer.cpp:695
 msgid "Files will be moved to: %1"
 msgstr "Fájlok áthelyezése ide: %1"
 
@@ -984,7 +995,7 @@ msgstr "Az aktuális fájl indexe"
 msgid "Initial Value"
 msgstr "Kezdőérték"
 
-#: batchrenamer.cpp:213 batchrenamer.cpp:686
+#: batchrenamer.cpp:213 batchrenamer.cpp:699
 msgid "Input files will be renamed."
 msgstr "A bemeneti fájlok átnevezésre kerülnek"
 
@@ -1124,6 +1135,20 @@ msgstr "Egy zeneszám címének beillesztése"
 msgid "Insert the year of a track"
 msgstr "Egy zeneszám évének beillesztése"
 
+#: snumplugin.cpp:43
+msgid "Inserts the episode number in two or three digits"
+msgstr ""
+
+#: snumplugin.cpp:42
+#, fuzzy
+msgid "Inserts the season number in two digits"
+msgstr "Egy zeneszám sorszámának beillesztése"
+
+#: snumplugin.cpp:41
+#, fuzzy
+msgid "Inserts the series number of original filename"
+msgstr "Beilleszti az eredeti fájlnév átírt változatát"
+
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
 msgstr "Beilleszti az eredeti fájlnév átírt változatát"
@@ -1179,11 +1204,11 @@ msgstr "A KRename verziója:"
 msgid "KRename Help"
 msgstr "KRename-súgó"
 
-#: batchrenamer.cpp:293 batchrenamer.cpp:758
+#: batchrenamer.cpp:300 batchrenamer.cpp:771
 msgid "KRename finished the renaming process."
 msgstr "A KRename befejezte az átnevezést."
 
-#: batchrenamer.cpp:414
+#: batchrenamer.cpp:421
 msgid "KRename finished the undo process."
 msgstr "A KRename befejezte a visszavonást."
 
@@ -1268,7 +1293,7 @@ msgstr ""
 msgid "O&wner:"
 msgstr "T&ulajdonos:"
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Origin"
 msgstr "Eredeti"
 
@@ -1335,7 +1360,7 @@ msgstr ""
 msgid "Polish Translation"
 msgstr "Lengyel fordítás."
 
-#: batchrenamer.cpp:294 batchrenamer.cpp:415 batchrenamer.cpp:759
+#: batchrenamer.cpp:301 batchrenamer.cpp:422 batchrenamer.cpp:772
 msgid "Press close to quit!"
 msgstr "Kilépéshez kattintson a \"Bezárás\" gombra."
 
@@ -1412,11 +1437,11 @@ msgstr "A &feldolgozott fájlok ismételt átnevezése..."
 msgid "Rename the file using the filename created by KRename."
 msgstr "A fájl átnevezése a KRename által előállított fájlnév használatával."
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Renamed"
 msgstr "Átnevezve"
 
-#: batchrenamer.cpp:751
+#: batchrenamer.cpp:764
 msgid "Renamed %1 files successfully."
 msgstr "%1 fájl átnevezve."
 
@@ -1435,6 +1460,11 @@ msgstr "A &KRename újraindítása..."
 #: main.cpp:89
 msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
+
+#: snumplugin.cpp:48
+#, fuzzy
+msgid "SeriesNumber"
+msgstr "Szám"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1517,7 +1547,7 @@ msgstr "A fájl tulajdonosa"
 msgid "Supported tokens:"
 msgstr "Támogatott tokenek:"
 
-#: batchrenamer.cpp:222 batchrenamer.cpp:684
+#: batchrenamer.cpp:222 batchrenamer.cpp:697
 msgid "Symbolic links will be created in: %1"
 msgstr "Szimbolikus linkek létrehozása itt: %1"
 
@@ -1668,11 +1698,11 @@ msgstr "\"%1\" nem nyitható meg olvasásra."
 msgid "Unable to open %1 for writing."
 msgstr "\"%1\" nem nyitható meg írásra."
 
-#: batchrenamer.cpp:739
+#: batchrenamer.cpp:752
 msgid "Undo is not possible for remote file: %1"
 msgstr "Távoli fájlra nem lehetséges visszavonás: %1"
 
-#: batchrenamer.cpp:373
+#: batchrenamer.cpp:380
 msgid "Undoing all renamed files."
 msgstr "Fájlátnevezések visszavonása."
 

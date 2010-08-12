@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-28 16:13+0100\n"
+"POT-Creation-Date: 2010-08-12 11:27+0100\n"
 "PO-Revision-Date: 2010-06-24 22:16+0100\n"
 "Last-Translator: Dominik Seichter <domseichter@web.de>\n"
 "Language-Team: Deutsch <kde-i18n-doc@kde.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "$"
 msgstr "$"
 
-#: batchrenamer.cpp:291 batchrenamer.cpp:412
+#: batchrenamer.cpp:298 batchrenamer.cpp:419
 msgid "%1 errors occurred!"
 msgstr "%1 Fehler sind aufgetreten!"
 
-#: batchrenamer.cpp:755
+#: batchrenamer.cpp:768
 msgid "%2 errors occurred!"
 msgstr "%2 Fehler sind aufgetreten!"
 
@@ -311,59 +311,58 @@ msgstr ": Das Ausgabeverzeichnis %1 existiert nicht."
 
 #: rc.cpp:654
 msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" "
-"\"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style "
-"type=\"text/css\">\n"
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; "
 "font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
-"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
-"font-weight:600;\">This plugin adds a given offset to numbers in "
-"filenames.</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; "
-"margin-left:0px; margin-right:0px; -qt-block-indent:0; "
-"text-indent:0px;\">E.g. you have the filenames: <span style=\" "
-"font-style:italic;\">img014</span>, <span style=\" "
-"font-style:italic;\">img015</span>, <span style=\" "
-"font-style:italic;\">img023</span> which should be named<span style=\" "
-"font-style:italic;\"> img010</span>, <span style=\" "
-"font-style:italic;\">img011</span> and <span style=\" "
-"font-style:italic;\">img019. </span>Using this plugin, you can easily add an "
-"offset of -4 to get the desired result.</p></body></html>"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">This plugin adds a given offset to numbers in filenames.</"
+"span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">E.g. you "
+"have the filenames: <span style=\" font-style:italic;\">img014</span>, <span "
+"style=\" font-style:italic;\">img015</span>, <span style=\" font-style:"
+"italic;\">img023</span> which should be named<span style=\" font-style:"
+"italic;\"> img010</span>, <span style=\" font-style:italic;\">img011</span> "
+"and <span style=\" font-style:italic;\">img019. </span>Using this plugin, "
+"you can easily add an offset of -4 to get the desired result.</p></body></"
+"html>"
 msgstr ""
 
 #: rc.cpp:668
 msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" "
-"\"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style "
-"type=\"text/css\">\n"
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; "
-"font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
-"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
-"font-size:large; font-weight:600;\">Welcome to KRename</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; "
-"margin-right:0px; -qt-block-indent:0; text-indent:0px;\">A batch file "
-"renamer for KDE.<br />To rename your files, you have to:</p></body></html>"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
+"large; font-weight:600;\">Welcome to KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">A batch file renamer for "
+"KDE.<br />To rename your files, you have to:</p></body></html>"
 msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" "
-"\"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style "
-"type=\"text/css\">\n"
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; "
-"font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
-"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
-"font-size:large; font-weight:600;\">Willkommen bei KRename</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; "
-"margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Ein "
-"Batch-Datei-Umbenenner für KDE.<br />Bitte folgen Sie diesen Schritten, um "
-"Dateien umzubenennen:</p></body></html>"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
+"large; font-weight:600;\">Willkommen bei KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Ein Batch-Datei-Umbenenner "
+"für KDE.<br />Bitte folgen Sie diesen Schritten, um Dateien umzubenennen:</"
+"p></body></html>"
 
 #: krenamewindow.cpp:396
 msgid "<b>Files:<b> %1"
@@ -379,41 +378,41 @@ msgstr ""
 
 #: rc.cpp:111
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style "
-"type=\"text/css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
-"font-weight:400; font-style:normal; text-decoration:none;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
-"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
-"font-weight:600;\">.</span></p></body></html>"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">.</span></p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style "
-"type=\"text/css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
-"font-weight:400; font-style:normal; text-decoration:none;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
-"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
-"font-weight:600;\">.</span></p></body></html>"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">.</span></p></body></html>"
 
 #: main.cpp:60
 msgid ""
 "<qt><p>KRename is a batch file renamer which can rename a list of files "
 "based on a set of expressions.</p><p>If you like KRename you may want to "
 "support it. Testing, bug fixes and feature requests are as welcome as "
-"financial support (everybody needs money ;). See help files for "
-"details.</p></qt>"
+"financial support (everybody needs money ;). See help files for details.</"
+"p></qt>"
 msgstr ""
 "<qt><p>KRename ist ein Batch-Umbenenner, der eine Liste von Dateien anhand "
 "eines vorgegebenen Musters umbenennt.</p><p>Wenn Ihnen KRename gefällt, "
-"sollten Sie überlegen KRename zu unterstützen.Die Hilfe enthält mehr "
-"Details.</p></qt> "
+"sollten Sie überlegen KRename zu unterstützen.Die Hilfe enthält mehr Details."
+"</p></qt> "
 
 #: rc.cpp:156
 msgid ""
-"<qt>Configure start index, stepping and skipping for numbering of "
-"filenames.</qt>"
+"<qt>Configure start index, stepping and skipping for numbering of filenames."
+"</qt>"
 msgstr ""
 "<qt>Einstellungen für Zähler und deren Startwert, Schrittweite und das "
 "überspringen von Zahlen in Dateinamen.</qt>"
@@ -438,8 +437,8 @@ msgstr "<qt>Geben Sie ein Muster für das Umbenennen des Dateinamens ein.</qt>"
 
 #: rc.cpp:150 rc.cpp:249
 msgid ""
-"<qt>Find and replace strings and regular expressions in the renamed "
-"filename.</qt>"
+"<qt>Find and replace strings and regular expressions in the renamed filename."
+"</qt>"
 msgstr ""
 "<qt>Suchen und ersetzen sie Zeichenketten oder Reguläre Ausdrücke in den "
 "umbenannten Dateinamen.</qt>"
@@ -469,6 +468,13 @@ msgid ""
 msgstr ""
 "<qt>Bitte markieren Sie im Textfeld unten, den Teil des Dateinamens aus, der "
 "in den neuen Dateinamen eingefügt werden soll:</qt>"
+
+#: snumplugin.cpp:50
+#, fuzzy
+msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgstr ""
+"<qt>Dieses Plugin ersetzt alle nicht englische Buchstaben in einem "
+"Dateinamen (transliterieren).</qt>"
 
 #: translitplugin.cpp:102
 msgid ""
@@ -631,23 +637,27 @@ msgstr "Berechtigungen von %1 können nicht geändert werden."
 msgid "Can't chown %1."
 msgstr "Kann Eigentümer von %1 nicht ändern."
 
-#: batchrenamer.cpp:667
+#: batchrenamer.cpp:680
 msgid "Can't create undo script :"
 msgstr "Kann Undo-Skript nicht erstellen :"
 
-#: batchrenamer.cpp:769
+#: batchrenamer.cpp:782
 msgid "Can't set executable bit on undo script."
 msgstr "Kann das Undo-Skript nicht ausführbar machen."
 
-#: batchrenamer.cpp:1160 dirsortplugin.cpp:158
+#: batchrenamer.cpp:1173 dirsortplugin.cpp:158
 msgid "Cannot create directory %1"
 msgstr "Das Verzeichnis %1 kann nicht erstellt werden"
 
-#: batchrenamer.cpp:258
+#: batchrenamer.cpp:265
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr ""
 "Kann keine symbolischen Verknüpfungen auf verschiedenen Computern für %1 "
 "erstellen."
+
+#: batchrenamer.cpp:244
+msgid "Cannot rename: source and target filename are equal: %1"
+msgstr ""
 
 #: rc.cpp:192 rc.cpp:234 rc.cpp:300 rc.cpp:342 rc.cpp:411
 msgid "Capitalize"
@@ -790,7 +800,7 @@ msgstr "Double"
 msgid "Down"
 msgstr "Nach unten"
 
-#: batchrenamer.cpp:757
+#: batchrenamer.cpp:770
 msgid "Elapsed time: %1 seconds"
 msgstr "Benötigte Zeit: %1 Sekunden"
 
@@ -798,11 +808,11 @@ msgstr "Benötigte Zeit: %1 Sekunden"
 msgid "Error"
 msgstr "Fehler"
 
-#: batchrenamer.cpp:405
+#: batchrenamer.cpp:412
 msgid "Error during undoing %1"
 msgstr "Fehler beim Rückgängigmachen von %1"
 
-#: batchrenamer.cpp:271 dirsortplugin.cpp:130
+#: batchrenamer.cpp:278 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
 msgstr "Fehler beim Umbenennen von %2 (nach %2)"
 
@@ -834,15 +844,15 @@ msgstr "Datei&name:"
 msgid "Filename of the current file"
 msgstr "Dateiname"
 
-#: batchrenamer.cpp:358
+#: batchrenamer.cpp:365
 msgid "Filenames Processed after %1 seconds."
 msgstr "Dateinamen in %1 Sekunden verarbeitet."
 
-#: batchrenamer.cpp:216 batchrenamer.cpp:680
+#: batchrenamer.cpp:216 batchrenamer.cpp:693
 msgid "Files will be copied to: %1"
 msgstr "Dateien werden nach %1 kopiert"
 
-#: batchrenamer.cpp:219 batchrenamer.cpp:682
+#: batchrenamer.cpp:219 batchrenamer.cpp:695
 msgid "Files will be moved to: %1"
 msgstr "Dateien werden nach %1 verschoben"
 
@@ -972,7 +982,7 @@ msgstr "Index"
 msgid "Initial Value"
 msgstr "Startwert"
 
-#: batchrenamer.cpp:213 batchrenamer.cpp:686
+#: batchrenamer.cpp:213 batchrenamer.cpp:699
 msgid "Input files will be renamed."
 msgstr "Eingangsdateien werden umbenannt."
 
@@ -1112,6 +1122,20 @@ msgstr "Titel einfügen"
 msgid "Insert the year of a track"
 msgstr "Jahr des aktuellen Titels einfügen"
 
+#: snumplugin.cpp:43
+msgid "Inserts the episode number in two or three digits"
+msgstr ""
+
+#: snumplugin.cpp:42
+#, fuzzy
+msgid "Inserts the season number in two digits"
+msgstr "Index des aktuellen Titels einfügen"
+
+#: snumplugin.cpp:41
+#, fuzzy
+msgid "Inserts the series number of original filename"
+msgstr "Transliterierung des original Dateinamens einfügen"
+
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
 msgstr "Transliterierung des original Dateinamens einfügen"
@@ -1166,11 +1190,11 @@ msgstr "KRename Build:"
 msgid "KRename Help"
 msgstr "KRename Hilfe"
 
-#: batchrenamer.cpp:293 batchrenamer.cpp:758
+#: batchrenamer.cpp:300 batchrenamer.cpp:771
 msgid "KRename finished the renaming process."
 msgstr "KRename hat das Umbenennen beendet."
 
-#: batchrenamer.cpp:414
+#: batchrenamer.cpp:421
 msgid "KRename finished the undo process."
 msgstr "KRename hat das Rückgängigmachen beendet."
 
@@ -1254,7 +1278,7 @@ msgstr "Anzahl der Seiten in der PDF Datei"
 msgid "O&wner:"
 msgstr "&Besitzer:"
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Origin"
 msgstr "Ursprünglich"
 
@@ -1321,7 +1345,7 @@ msgstr "PoDoFo (PDF) Plugin"
 msgid "Polish Translation"
 msgstr "Polnische Übersetzung"
 
-#: batchrenamer.cpp:294 batchrenamer.cpp:415 batchrenamer.cpp:759
+#: batchrenamer.cpp:301 batchrenamer.cpp:422 batchrenamer.cpp:772
 msgid "Press close to quit!"
 msgstr "Klicken Sie auf Schließen um KRename zu beenden!"
 
@@ -1397,11 +1421,11 @@ msgstr "&Verarbeitete Dateien noch einmal umbenennen ..."
 msgid "Rename the file using the filename created by KRename."
 msgstr "Die Datei mit dem von KRename erzeugtem Dateinamen umbenennen."
 
-#: krenamemodel.cpp:515
+#: krenamemodel.cpp:522
 msgid "Renamed"
 msgstr "Umbenannt"
 
-#: batchrenamer.cpp:751
+#: batchrenamer.cpp:764
 msgid "Renamed %1 files successfully."
 msgstr "%1 Dateien erfolgreich umbenannt."
 
@@ -1420,6 +1444,11 @@ msgstr "&KRename neu starten..."
 #: main.cpp:89
 msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
+
+#: snumplugin.cpp:48
+#, fuzzy
+msgid "SeriesNumber"
+msgstr "Zähler"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1501,7 +1530,7 @@ msgstr "Thema der PDF Datei"
 msgid "Supported tokens:"
 msgstr "Unterstützte Funktionen:"
 
-#: batchrenamer.cpp:222 batchrenamer.cpp:684
+#: batchrenamer.cpp:222 batchrenamer.cpp:697
 msgid "Symbolic links will be created in: %1"
 msgstr "Symbolische Verknüpfungen werden in %1 erstellt."
 
@@ -1652,11 +1681,11 @@ msgstr "%1 kann nicht zum Lesen geöffnet werden."
 msgid "Unable to open %1 for writing."
 msgstr "%1 kann nicht zum Schreiben geöffnet werden."
 
-#: batchrenamer.cpp:739
+#: batchrenamer.cpp:752
 msgid "Undo is not possible for remote file: %1"
 msgstr "Rückgängig machen geht nur bei lokalen Dateien: %1"
 
-#: batchrenamer.cpp:373
+#: batchrenamer.cpp:380
 msgid "Undoing all renamed files."
 msgstr "Alle Umbenennungen werden rückgängig gemacht."
 
