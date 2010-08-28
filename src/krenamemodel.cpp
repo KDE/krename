@@ -17,109 +17,15 @@
 
 #include "krenamemodel.h"
 #include "threadedlister.h"
+#include "krenametokensorter.h"
 
 #include <QMimeData>
 #include <QPixmap>
 
 #include <kapplication.h>
 #include <klocale.h>
-#include <krandom.h>
 #include <krun.h>
 #include <kio/previewjob.h>
-
-
-/*
- * TODO: Provide sorting based on other criterias
- *       than the filename, but also on arbitrary
- *       KRename tokens.
- */
-
-// Helper functions for sorting
-static const QString findNumInString( unsigned int pos, const QString & s )
-{
-    QString num;
-    
-    for( int i = static_cast<int>(pos); i >= 0; i-- )
-        if( s[i].isDigit() )
-            num.prepend( s[i] );
-        else
-            break;
-            
-
-    for( int i = pos + 1; i < s.length(); i++ )
-        if( s[i].isDigit() )
-            num.append( s[i] );
-        else
-            break;
-    
-    return num;
-}
-
-static int compareNummeric( const QString & s1, const QString & s2 )
-{
-    int z = 0;
-    int max = ( s1.length() > s2.length() ? s1.length() : s2.length() );
-    
-    QString num1;
-    QString num2;
-    for( z=0;z<max;z++)
-    {
-        //if( z >= s1.length() || z >= s2.length() )
-        //    break;
-            
-        if( (z < s1.length() && z < s2.length() && s1[z] != s2[z])  )
-        {
-            if( z < s1.length() && s1[z].isDigit() )
-                num1 = findNumInString( z, s1 );
-            
-            if( z < s2.length() && s2[z].isDigit() )
-                num2 = findNumInString( z, s2 );
-            
-            if( num1.isNull() && num2.isNull() )    
-                break;
-                
-            int a = num1.toInt();
-            int b = num2.toInt();
-            if( a == b )
-                return s1.compare( s2 );
-            else
-                return ( a > b ) ? 1 : -1;
-        }
-    }
-        
-    return s1.compare( s2 );
-}
-
-// Less than functions for sorting
-static bool ascendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
-{
-    return file1.srcUrl() < file2.srcUrl();
-}
-
-static bool descendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
-{
-    return !(file1.srcUrl() < file2.srcUrl());
-}
-
-static bool numericKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
-{
-    KUrl url1 = file1.srcUrl();
-    KUrl url2 = file2.srcUrl();
-    if( url1.directory() != url2.directory() )
-    {
-        // not in the same directory so do lexical comparison
-        return url1 < url2;
-    }
-    else
-        return (compareNummeric( file1.srcFilename(), file2.srcFilename() ) < 0);
-
-    return false;
-}
-
-static bool randomKRenameFileLessThan( const KRenameFile &, const KRenameFile & ) 
-{
-    return static_cast<double>(KRandom::random()) / static_cast<double>(RAND_MAX) < 0.5;
-}
 
 KRenameModel::KRenameModel( KRenameFile::List* vector )
     : QAbstractListModel(),
@@ -401,6 +307,8 @@ void KRenameModel::removeFiles( const QList<int> & remove )
 
 void KRenameModel::sortFiles( ESortMode mode )
 {
+    const QString dateSortToken = "creationdate;yyyyMMddHHmm";
+
     m_eSortMode = mode;
 
     if( mode == eSortMode_Ascending ) 
@@ -411,6 +319,21 @@ void KRenameModel::sortFiles( ESortMode mode )
         qSort( m_vector->begin(), m_vector->end(), numericKRenameFileLessThan );
     else if( mode == eSortMode_Random ) 
         qSort( m_vector->begin(), m_vector->end(), randomKRenameFileLessThan );
+    else if( mode == eSortMode_AscendingDate ) 
+    {
+        KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector, 
+                                  KRenameTokenSorter::eSimpleSortMode_Ascending);
+        qSort( m_vector->begin(), m_vector->end(), sorter );
+    }
+    else if( mode == eSortMode_DescendingDate ) 
+    {
+        KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector, 
+                                  KRenameTokenSorter::eSimpleSortMode_Descending);
+        qSort( m_vector->begin(), m_vector->end(), sorter );
+    }
+    else if( mode == eSortMode_Token )
+    {
+    }
     else
         return;
 

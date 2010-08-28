@@ -39,6 +39,7 @@ SET(krename_SRCS
   krenamelistview.cpp
   krenamemodel.cpp
   krenametest.cpp
+  krenametokensorter.cpp
   krenamewindow.cpp
   modeltest.cpp
   numberdialog.cpp

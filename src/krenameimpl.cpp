@@ -66,6 +66,7 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list 
     m_window->setPreviewModel( m_previewModel );
 
     m_renamer.setFiles( &m_vector );
+    m_model->setRenamer( &m_renamer );
     m_model->addFiles( list );
 
     m_pluginLoader = PluginLoader::Instance();

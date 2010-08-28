@@ -934,6 +934,12 @@ void KRenameWindow::slotSortChanged( int index )
             eMode = eSortMode_Numeric; break;
         case 4:
             eMode = eSortMode_Random; break;
+        case 5:
+            eMode = eSortMode_AscendingDate; break;
+        case 6:
+            eMode = eSortMode_DescendingDate; break;
+        case 7:
+            eMode = eSortMode_Token; break;
     }
 
     KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
