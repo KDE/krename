@@ -46,6 +46,7 @@ SystemPlugin::SystemPlugin(  PluginLoader* loader )
     this->addSupportedToken("modificationdate;.*");
     this->addSupportedToken("accessdate");
     this->addSupportedToken("accessdate;.*");
+    this->addSupportedToken("filesize");
  
     m_help.append( "[date];;" + i18n("Insert the current date") );
     m_help.append( "[date;yyyy-MM-dd];;" + i18n("Insert the current date using the formatting string yyyy-MM-dd") );
@@ -64,6 +65,7 @@ SystemPlugin::SystemPlugin(  PluginLoader* loader )
     m_help.append( "[modificationdate;yyyy-MM-dd];;" + i18n("Insert the formatted modification date") );
     m_help.append( "[accessdate];;" + i18n("Insert the date of the last file access") );
     m_help.append( "[accessdate;yyyy-MM-dd];;" + i18n("Insert the formatted date of the last file access") );
+    m_help.append( "[filesize];;" + i18n("Insert the file size in bytes") );
 
     m_name = i18n("Date and system functions");
     m_icon = "system-run";   
@@ -131,7 +133,8 @@ QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & f
             return time( item.time( KFileItem::ModificationTime ).toTime_t(), format );
         else if( token == "accessdate" )
             return time( item.time( KFileItem::AccessTime ).toTime_t(), format );
-        
+        else if( token == "filesize" )
+            return QString::number( item.size() );
     }
     
     return QString::null;    
