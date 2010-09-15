@@ -56,6 +56,7 @@ SET(krename_SRCS
   startupinfo.cpp
   systemplugin.cpp
   tokenhelpdialog.cpp
+  tokensortmodedialog.cpp
   translitplugin.cpp
   snumplugin.cpp
   )
@@ -101,6 +102,7 @@ kde4_add_ui_files( krename_SRCS
   scriptplugindialog.ui
   startupinfowidget.ui
   tokenhelpwidget.ui
+  tokensortmodedialog.ui
   )
 
 #kde4_automoc( ${krename_SRCS} )

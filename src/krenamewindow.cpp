@@ -22,6 +22,7 @@
 #include "pluginloader.h"
 #include "richtextitemdelegate.h"
 #include "startupinfo.h"
+#include "tokensortmodedialog.h"
 
 #include "ui_krenamefiles.h"
 #include "ui_krenamedestination.h"
@@ -553,9 +554,25 @@ int KRenameWindow::sortMode() const
     return m_pageFiles->comboSort->currentIndex();
 }
 
-void KRenameWindow::setSortMode( int sortMode )
+void KRenameWindow::setSortMode( int sortMode, const QString & customToken, int customSortMode )
 {
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
+    bool bPrevious = m_pageFiles->comboSort->blockSignals( true );
+
+    QString customTokenText;
+    if( sortMode == eSortMode_Token ) 
+    {
+        customTokenText = customToken;
+    }
+
     m_pageFiles->comboSort->setCurrentIndex( sortMode );
+    m_pageFiles->labelCustomSort->setText( customTokenText );
+
+    model->sortFiles( static_cast<ESortMode>(sortMode), 
+                      customToken, 
+                      static_cast<KRenameTokenSorter::ESimpleSortMode>(customSortMode) );
+
+    m_pageFiles->comboSort->blockSignals( bPrevious );
 }
 
 int KRenameWindow::previewColumnWidth( int index )
@@ -920,6 +937,9 @@ void KRenameWindow::slotPreviewChanged()
 void KRenameWindow::slotSortChanged( int index )
 {
     ESortMode eMode;
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
+    KRenameTokenSorter::ESimpleSortMode eCustomSortMode = model->getSortModeCustomMode();
+    QString customToken = QString::null;
 
     switch( index ) 
     {
@@ -939,11 +959,28 @@ void KRenameWindow::slotSortChanged( int index )
         case 6:
             eMode = eSortMode_DescendingDate; break;
         case 7:
-            eMode = eSortMode_Token; break;
+        {
+            eMode = eSortMode_Token; 
+            TokenSortModeDialog dlg( eCustomSortMode, this );
+            if( dlg.exec() == QDialog::Accepted ) 
+            {
+                customToken = dlg.getToken();
+                eCustomSortMode = dlg.getSortMode();
+            }
+            else
+            {
+                eMode = model->getSortMode();
+                // Do not change anything
+                // Reset combo box
+                m_pageFiles->comboSort->setCurrentIndex( eMode );
+                return; 
+            }
+            break;
+        }
     }
 
-    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
-    model->sortFiles( eMode );
+    m_pageFiles->labelCustomSort->setText( customToken );
+    model->sortFiles( eMode, customToken, eCustomSortMode );
 }
 
 void KRenameWindow::slotMaxDotsChanged( int dots )

@@ -17,7 +17,6 @@
 
 #include "krenamemodel.h"
 #include "threadedlister.h"
-#include "krenametokensorter.h"
 
 #include <QMimeData>
 #include <QPixmap>
@@ -34,7 +33,9 @@ KRenameModel::KRenameModel( KRenameFile::List* vector )
       m_text( false ),
       m_maxDots( 0 ),
       m_mimeType("text/uri-list"),
-      m_eSortMode( eSortMode_Unsorted )
+      m_eSortMode( eSortMode_Unsorted ),
+      m_customSortToken( "creationdate;yyyyMMddHHmm" ),
+      m_eCustomSortMode( KRenameTokenSorter::eSimpleSortMode_Ascending )
 {
 
 }
@@ -228,7 +229,7 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
             emit maxDotsChanged( m_maxDots );
 
         // Update sorting
-        this->sortFiles( m_eSortMode );
+        this->sortFiles( m_eSortMode, m_customSortToken, m_eCustomSortMode );
 
         // Generate previews if necessary
         if( m_preview ) 
@@ -305,11 +306,13 @@ void KRenameModel::removeFiles( const QList<int> & remove )
     this->endRemoveRows();
 }
 
-void KRenameModel::sortFiles( ESortMode mode )
+void KRenameModel::sortFiles( ESortMode mode, const QString & customSortToken, KRenameTokenSorter::ESimpleSortMode customSortMode  )
 {
     const QString dateSortToken = "creationdate;yyyyMMddHHmm";
 
     m_eSortMode = mode;
+    m_customSortToken = customSortToken;
+    m_eCustomSortMode = customSortMode;
 
     if( mode == eSortMode_Ascending ) 
         qSort( m_vector->begin(), m_vector->end(), ascendingKRenameFileLessThan );
@@ -333,6 +336,9 @@ void KRenameModel::sortFiles( ESortMode mode )
     }
     else if( mode == eSortMode_Token )
     {
+        KRenameTokenSorter sorter(m_renamer, customSortToken, *m_vector, 
+                                  customSortMode);
+        qSort( m_vector->begin(), m_vector->end(), sorter );
     }
     else
         return;

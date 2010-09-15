@@ -195,8 +195,10 @@ class KRenameWindow : public KMainWindow {
 
     /** 
      * \param sortMode sets the current sort mode in the file tab
+     * \param customToken custom sort token if sortMode == eSortMode_Token
+     * \param customSortMode custom sort mode if sortMode == eSortMode_Token
      */
-    void setSortMode( int sortMode );
+    void setSortMode( int sortMode, const QString & customToken, int customSortMode );
 
     /**
      * Specify the extension split mode.

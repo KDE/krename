@@ -19,6 +19,7 @@
 #define KRENAMEMODEL_H
 
 #include "krenamefile.h"
+#include "krenametokensorter.h"
 
 #include <QAbstractListModel>
 
@@ -67,9 +68,20 @@ class KRenameModel : public QAbstractListModel {
      *  using the selected sort mode.
      *
      *  @param mode the sort mode to use
-     *  @param renamer BatchRenamer instance to use, if filenames are sorted by a token
+     *  @param customSortToken customSortToken if mode is eSortMode_Token
+     *  @param customSortMode mode for sorting if mode is eSortMode_Token
      */
-    void sortFiles( ESortMode mode );
+    void sortFiles( ESortMode mode, const QString & customSortToken, 
+                    KRenameTokenSorter::ESimpleSortMode customSortMode );
+
+    /** Get the current sort mode.
+     *  @returns the current sort mode
+     */
+    inline ESortMode getSortMode() const;
+
+    inline QString getSortModeCustomToken() const;
+    inline KRenameTokenSorter::ESimpleSortMode getSortModeCustomMode() const;
+
 
     /** Move each file in a list of indeces upwards
      *  @param files list of file indeces. Each file is moved up one position
@@ -167,7 +179,8 @@ private:
     const char*        m_mimeType; ///< MIME type for drag and drop operations
 
     ESortMode          m_eSortMode; ///< Last used sort mode
-    
+    QString            m_customSortToken; ///< if m_eSortMode = eSortMode_Token
+    KRenameTokenSorter::ESimpleSortMode m_eCustomSortMode;  ///< if m_eSortMode = eSortMode_Token
     
     ESplitMode        m_eSplitMode;
     unsigned int      m_dot;
@@ -176,6 +189,21 @@ private:
 void KRenameModel::setRenamer( BatchRenamer* renamer )
 {
     m_renamer = renamer;
+}
+
+ESortMode KRenameModel::getSortMode() const
+{
+    return m_eSortMode;
+}
+
+QString KRenameModel::getSortModeCustomToken() const
+{
+    return m_customSortToken;
+}
+
+KRenameTokenSorter::ESimpleSortMode KRenameModel::getSortModeCustomMode() const
+{
+    return m_eCustomSortMode;
 }
 
 const KRenameFile & KRenameModel::file( int index ) const

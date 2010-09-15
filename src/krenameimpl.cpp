@@ -641,7 +641,12 @@ void KRenameImpl::loadConfig()
     m_window->setNumberStartIndex( index );
 
     int sortMode = groupGui.readEntry( "FileListSorting", QVariant(0) ).toInt();
-    m_window->setSortMode( sortMode );
+    QString customToken = groupGui.readEntry( "FileListSortingCustomToken", 
+                                              m_model->getSortModeCustomToken() );
+    int customSortModel = groupGui.readEntry( "FileListSortingCustomMode", 
+                                              QVariant(static_cast<int>(m_model->getSortModeCustomMode())) ).toInt();
+
+    m_window->setSortMode( sortMode, customToken, customSortModel );
 
     ESplitMode lastSplitMode = static_cast<ESplitMode>(groupGui.readEntry( "ExtensionSplitMode", static_cast<int>(m_lastSplitMode) ));
     int lastDot = groupGui.readEntry( "ExtensionSplitDot", m_lastDot );    
@@ -674,6 +679,8 @@ void KRenameImpl::saveConfig()
     groupGui.writeEntry( "StartIndex", m_window->numberStartIndex() );
     groupGui.writeEntry( "Stepping", m_renamer.numberStepping() );
     groupGui.writeEntry( "FileListSorting", m_window->sortMode() );
+    groupGui.writeEntry( "FileListSortingCustomToken", m_model->getSortModeCustomToken() );
+    groupGui.writeEntry( "FileListSortingCustomMode", static_cast<int>(m_model->getSortModeCustomMode()) );
     groupGui.writeEntry( "Advanced", m_window->isAdvancedMode() );
     groupGui.writeEntry( "ExtensionSplitMode", static_cast<int>(m_lastSplitMode) );
     groupGui.writeEntry( "ExtensionSplitDot", m_lastDot );    
