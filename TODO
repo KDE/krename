@@ -12,7 +12,16 @@ DOM: Kontext menü im advance mode für alle text boxen:
 	    -> Number
 	    -> Date
 	    -> ...
+==========================================
+Oh, there is one other thing I just thought about, not related to your
+changes but related to sorting in general.  It'd be nice to be able to
+reorder items using drag-and-drop.  Sometimes I have an item that, for
+example may be stuck last but I want it to be first, and as things stand now
+I have to highlight that item and repeatedly click the Up button.  It'd be
+handy to be able to just drag it from the bottom to the top of the list.
 
+Not sure how difficult something like that would be to implement, but I
+wouldn't mind throwing it on the wishlist.  :-)
 ========================================
 (This is with using v4.0.4)
 When using "Insert Part of Filename..." under the advanced renamer,

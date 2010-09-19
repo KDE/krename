@@ -19,7 +19,7 @@
      <item>
       <widget class="QGroupBox" name="groupBox">
        <property name="title">
-        <string>&amp;Sort</string>
+        <string>&amp;Sort filenames ...</string>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
@@ -50,9 +50,22 @@
       </widget>
      </item>
      <item>
+      <widget class="QLabel" name="label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>by</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QGroupBox" name="groupBox_2">
        <property name="title">
-        <string>&amp;Key</string>
+        <string>&amp;Token ...</string>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
