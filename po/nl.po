@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-28 11:58+0100\n"
+"POT-Creation-Date: 2010-09-19 20:22+0200\n"
 "PO-Revision-Date: 2005-01-11 20:12+0100\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -32,22 +32,22 @@ msgstr "%2 fouten voorgedaan!"
 msgid "%2 errors occurred!"
 msgstr "%2 fouten voorgedaan!"
 
-#: krenamewindow.cpp:49
+#: krenamewindow.cpp:50
 #, fuzzy
 msgid "&1. Files"
 msgstr "&Bestanden"
 
-#: krenamewindow.cpp:50
+#: krenamewindow.cpp:51
 #, fuzzy
 msgid "&2. Destination"
 msgstr "Bes&temming"
 
-#: krenamewindow.cpp:51
+#: krenamewindow.cpp:52
 #, fuzzy
 msgid "&3. Plugins"
 msgstr "P&lugins"
 
-#: krenamewindow.cpp:52
+#: krenamewindow.cpp:53
 #, fuzzy
 msgid "&4. Filename"
 msgstr "&Bestandsnaam"
@@ -65,6 +65,11 @@ msgstr "&Toevoegen..."
 msgid "&Advanced Filename"
 msgstr "&Bestandsnaam"
 
+#: rc.cpp:741
+#, fuzzy
+msgid "&Ascending"
+msgstr "Sortering: oplopend"
+
 #: rc.cpp:435
 msgid "&Cancel"
 msgstr ""
@@ -79,7 +84,7 @@ msgstr "&Eigenaar wijzigen"
 msgid "&Change filename manually..."
 msgstr "Bestandsnamen handmatig wij&zigen"
 
-#: krenamewindow.cpp:197
+#: krenamewindow.cpp:198
 msgid "&Close"
 msgstr ""
 
@@ -102,6 +107,11 @@ msgstr "Bes&temming"
 #, fuzzy
 msgid "&Delete"
 msgstr "Profiel verwij&deren"
+
+#: rc.cpp:744
+#, fuzzy
+msgid "&Descending"
+msgstr "Sortering: aflopend"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -138,7 +148,7 @@ msgstr "Bestanden per map:"
 msgid "&Find:"
 msgstr "Zoeken:"
 
-#: krenamewindow.cpp:196
+#: krenamewindow.cpp:197
 #, fuzzy
 msgid "&Finish"
 msgstr "&Voltooien"
@@ -198,6 +208,11 @@ msgstr "&Nummering"
 #: rc.cpp:171
 msgid "&Numbering..."
 msgstr "&Nummering..."
+
+#: rc.cpp:747
+#, fuzzy
+msgid "&Numeric"
+msgstr "Nummer"
 
 #: rc.cpp:674
 msgid "&Offset:"
@@ -282,6 +297,11 @@ msgstr "&Bestandsnaam"
 msgid "&Skip Numbers"
 msgstr "Nummers &overslaan"
 
+#: rc.cpp:738
+#, fuzzy
+msgid "&Sort filenames ..."
+msgstr "Deel van bestandsnaam &invoegen..."
+
 #: rc.cpp:726
 #, fuzzy
 msgid "&Start index:"
@@ -303,6 +323,11 @@ msgstr "&Sjabloon:"
 #: rc.cpp:645
 #, fuzzy
 msgid "&Test..."
+msgstr "&Bewerken..."
+
+#: rc.cpp:753
+#, fuzzy
+msgid "&Token ..."
 msgstr "&Bewerken..."
 
 #: rc.cpp:657
@@ -392,7 +417,7 @@ msgid ""
 "KDE.<br />To rename your files, you have to:</p></body></html>"
 msgstr ""
 
-#: krenamewindow.cpp:396
+#: krenamewindow.cpp:397
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "Bestanden: <b>%1</b>"
@@ -498,7 +523,7 @@ msgid ""
 "transliteration).</qt>"
 msgstr "<qt>Deze plugin sorteert bestanden na het hernoemen in submappen.</qt>"
 
-#: systemplugin.cpp:70
+#: systemplugin.cpp:72
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
@@ -749,6 +774,11 @@ msgstr "&Aantal sjabloonitems in geschiedenis:"
 msgid "Custom ..."
 msgstr "Aangepaste naam"
 
+#: rc.cpp:735
+#, fuzzy
+msgid "Custom Sorting"
+msgstr "Aangepaste extensie"
+
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
 msgstr "Aangepaste extensie"
@@ -783,7 +813,7 @@ msgstr ""
 msgid "Date (Desc.)"
 msgstr ""
 
-#: systemplugin.cpp:68
+#: systemplugin.cpp:70
 #, fuzzy
 msgid "Date and system functions"
 msgstr "Systeemfuncties"
@@ -1101,66 +1131,71 @@ msgstr "Huidige datum invoegen"
 msgid "Insert the comment of an image"
 msgstr "Huidige datum invoegen"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:51
 msgid "Insert the current date"
 msgstr "Huidige datum invoegen"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:52
 #, fuzzy
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "Huidige datum met de opmaak tekenreeks jjjj-MM-dd invoegen"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:55
 msgid "Insert the current day as number"
 msgstr "Huidige dag in cijfers invoegen"
 
-#: systemplugin.cpp:56
+#: systemplugin.cpp:57
 msgid "Insert the current hour as number"
 msgstr "Huidige uur in cijfers invoegen"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:58
 msgid "Insert the current minute as number"
 msgstr "Huidige minuut in cijfers invoegen"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:54
 msgid "Insert the current month as number"
 msgstr "Huidige maand in cijfers invoegen"
 
-#: systemplugin.cpp:58
+#: systemplugin.cpp:59
 msgid "Insert the current second as number"
 msgstr "Huidige seconde in cijfers invoegen"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:56
 msgid "Insert the current time"
 msgstr "Huidige tijd invoegen"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:53
 msgid "Insert the current year"
 msgstr "Huidige jaar invoegen"
 
-#: systemplugin.cpp:65
+#: systemplugin.cpp:66
 msgid "Insert the date of the last file access"
 msgstr "Datum van laatste bestandstoegang invoegen"
 
-#: systemplugin.cpp:61
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Insert the file size in bytes"
+msgstr "Aanmaakdatum van bestanden invoegen"
+
+#: systemplugin.cpp:62
 msgid "Insert the files creation date"
 msgstr "Aanmaakdatum van bestanden invoegen"
 
-#: systemplugin.cpp:63
+#: systemplugin.cpp:64
 msgid "Insert the files modification date"
 msgstr "Wijzigingsdatum van bestand invoegen"
 
-#: systemplugin.cpp:66
+#: systemplugin.cpp:67
 #, fuzzy
 msgid "Insert the formatted date of the last file access"
 msgstr "Opgemaakte datum van laatste bestandstoegang invoegen"
 
-#: systemplugin.cpp:62
+#: systemplugin.cpp:63
 #, fuzzy
 msgid "Insert the formatted file creation date"
 msgstr "Opgemaakte datum van bestandsaanmaak invoegen"
 
-#: systemplugin.cpp:64
+#: systemplugin.cpp:65
 #, fuzzy
 msgid "Insert the formatted modification date"
 msgstr "Opgemaakte wijzigingsdatum invoegen"
@@ -1364,7 +1399,7 @@ msgstr "Nummer"
 msgid "O&wner:"
 msgstr "Eigendom"
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Origin"
 msgstr "Origineel"
 
@@ -1381,7 +1416,7 @@ msgstr "Anderen"
 msgid "Out&put:"
 msgstr ""
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:60
 #, fuzzy
 msgid "Owner of the file"
 msgstr "&Aantal sjabloonitems in geschiedenis:"
@@ -1390,7 +1425,7 @@ msgstr "&Aantal sjabloonitems in geschiedenis:"
 msgid "Ownership"
 msgstr "Eigendom"
 
-#: systemplugin.cpp:60
+#: systemplugin.cpp:61
 msgid "Owning group of the file"
 msgstr ""
 
@@ -1527,7 +1562,7 @@ msgstr "&Verwerkte bestanden opnieuw hernoemen..."
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Renamed"
 msgstr "Hernoemd"
 
@@ -1875,6 +1910,10 @@ msgstr "Frank Schoolmeesters,Cindy De Keyzer,Rinse de Vries"
 #: main.cpp:46
 msgid "add directory recursively"
 msgstr "mappen recursief toevoegen"
+
+#: rc.cpp:750
+msgid "by"
+msgstr ""
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"

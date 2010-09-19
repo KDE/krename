@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-28 11:58+0100\n"
+"POT-Creation-Date: 2010-09-19 20:22+0200\n"
 "PO-Revision-Date: 2005-01-27 20:39+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team:  <ja@li.org>\n"
@@ -26,22 +26,22 @@ msgstr "%2 個のエラーが発生"
 msgid "%2 errors occurred!"
 msgstr "%2 個のエラーが発生"
 
-#: krenamewindow.cpp:49
+#: krenamewindow.cpp:50
 #, fuzzy
 msgid "&1. Files"
 msgstr "ファイル(&i)"
 
-#: krenamewindow.cpp:50
+#: krenamewindow.cpp:51
 #, fuzzy
 msgid "&2. Destination"
 msgstr "対象(&t)"
 
-#: krenamewindow.cpp:51
+#: krenamewindow.cpp:52
 #, fuzzy
 msgid "&3. Plugins"
 msgstr "プラグイン(&l)"
 
-#: krenamewindow.cpp:52
+#: krenamewindow.cpp:53
 #, fuzzy
 msgid "&4. Filename"
 msgstr "ファイル名(&F)"
@@ -59,6 +59,11 @@ msgstr "追加(&A)..."
 msgid "&Advanced Filename"
 msgstr "ファイル名(&F)"
 
+#: rc.cpp:741
+#, fuzzy
+msgid "&Ascending"
+msgstr "ソート: 昇順"
+
 #: rc.cpp:435
 msgid "&Cancel"
 msgstr ""
@@ -73,7 +78,7 @@ msgstr "所有者を変更(&O)"
 msgid "&Change filename manually..."
 msgstr "手動でファイル名を変更(&C)"
 
-#: krenamewindow.cpp:197
+#: krenamewindow.cpp:198
 msgid "&Close"
 msgstr ""
 
@@ -96,6 +101,11 @@ msgstr "対象(&t)"
 #, fuzzy
 msgid "&Delete"
 msgstr "プロファイルを削除(&D)"
+
+#: rc.cpp:744
+#, fuzzy
+msgid "&Descending"
+msgstr "ソート: 降順"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -132,7 +142,7 @@ msgstr "ディレクトリあたりのファイル数:"
 msgid "&Find:"
 msgstr "検索語句:"
 
-#: krenamewindow.cpp:196
+#: krenamewindow.cpp:197
 #, fuzzy
 msgid "&Finish"
 msgstr "開始(&F)"
@@ -192,6 +202,11 @@ msgstr "番号(&N)"
 #: rc.cpp:171
 msgid "&Numbering..."
 msgstr "番号付け(&N)"
+
+#: rc.cpp:747
+#, fuzzy
+msgid "&Numeric"
+msgstr "番号"
 
 #: rc.cpp:674
 msgid "&Offset:"
@@ -276,6 +291,11 @@ msgstr "ファイル名(&F)"
 msgid "&Skip Numbers"
 msgstr "スキップする番号(&k)"
 
+#: rc.cpp:738
+#, fuzzy
+msgid "&Sort filenames ..."
+msgstr "ファイル名の一部を挿入(&I)"
+
 #: rc.cpp:726
 #, fuzzy
 msgid "&Start index:"
@@ -297,6 +317,11 @@ msgstr "書式(&T):"
 #: rc.cpp:645
 #, fuzzy
 msgid "&Test..."
+msgstr "編集(&E).."
+
+#: rc.cpp:753
+#, fuzzy
+msgid "&Token ..."
 msgstr "編集(&E).."
 
 #: rc.cpp:657
@@ -386,7 +411,7 @@ msgid ""
 "KDE.<br />To rename your files, you have to:</p></body></html>"
 msgstr ""
 
-#: krenamewindow.cpp:396
+#: krenamewindow.cpp:397
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "ファイル: <b>%1</b>"
@@ -489,7 +514,7 @@ msgid ""
 "transliteration).</qt>"
 msgstr "<qt>リネームしたファイルをサブディレクトリに振り分ける</qt>"
 
-#: systemplugin.cpp:70
+#: systemplugin.cpp:72
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
@@ -735,6 +760,11 @@ msgstr "テンプレート履歴の数(&N):"
 msgid "Custom ..."
 msgstr "カスタム名"
 
+#: rc.cpp:735
+#, fuzzy
+msgid "Custom Sorting"
+msgstr "カスタム拡張子"
+
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
 msgstr "カスタム拡張子"
@@ -769,7 +799,7 @@ msgstr ""
 msgid "Date (Desc.)"
 msgstr ""
 
-#: systemplugin.cpp:68
+#: systemplugin.cpp:70
 #, fuzzy
 msgid "Date and system functions"
 msgstr "システムの機能"
@@ -1082,63 +1112,68 @@ msgstr "現在の月日を挿入"
 msgid "Insert the comment of an image"
 msgstr "現在の月日を挿入"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:51
 msgid "Insert the current date"
 msgstr "現在の月日を挿入"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:52
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "現在の月日を yyyy-MM-dd の形式で挿入"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:55
 msgid "Insert the current day as number"
 msgstr "現在の日を挿入"
 
-#: systemplugin.cpp:56
+#: systemplugin.cpp:57
 msgid "Insert the current hour as number"
 msgstr "現在の時間(hour)を挿入"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:58
 msgid "Insert the current minute as number"
 msgstr "現在の分(minute)を挿入"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:54
 msgid "Insert the current month as number"
 msgstr "現在の月を挿入"
 
-#: systemplugin.cpp:58
+#: systemplugin.cpp:59
 msgid "Insert the current second as number"
 msgstr "現在の秒を挿入"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:56
 msgid "Insert the current time"
 msgstr "現在の時刻を挿入"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:53
 msgid "Insert the current year"
 msgstr "現在の年を挿入"
 
-#: systemplugin.cpp:65
+#: systemplugin.cpp:66
 msgid "Insert the date of the last file access"
 msgstr "ファイルへの最終アクセス日を挿入"
 
-#: systemplugin.cpp:61
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Insert the file size in bytes"
+msgstr "ファイル作成日を挿入"
+
+#: systemplugin.cpp:62
 msgid "Insert the files creation date"
 msgstr "ファイル作成日を挿入"
 
-#: systemplugin.cpp:63
+#: systemplugin.cpp:64
 msgid "Insert the files modification date"
 msgstr "ファイル変更日を挿入"
 
-#: systemplugin.cpp:66
+#: systemplugin.cpp:67
 msgid "Insert the formatted date of the last file access"
 msgstr "ファイルへの最終アクセス日を形式に沿って挿入"
 
-#: systemplugin.cpp:62
+#: systemplugin.cpp:63
 msgid "Insert the formatted file creation date"
 msgstr "ファイル作成日を形式に沿って挿入"
 
-#: systemplugin.cpp:64
+#: systemplugin.cpp:65
 msgid "Insert the formatted modification date"
 msgstr "ファイル変更日を形式に沿って挿入"
 
@@ -1341,7 +1376,7 @@ msgstr "番号"
 msgid "O&wner:"
 msgstr "所有者"
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Origin"
 msgstr "現在"
 
@@ -1358,7 +1393,7 @@ msgstr "その他"
 msgid "Out&put:"
 msgstr ""
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:60
 #, fuzzy
 msgid "Owner of the file"
 msgstr "テンプレート履歴の数(&N):"
@@ -1367,7 +1402,7 @@ msgstr "テンプレート履歴の数(&N):"
 msgid "Ownership"
 msgstr "所有者"
 
-#: systemplugin.cpp:60
+#: systemplugin.cpp:61
 msgid "Owning group of the file"
 msgstr ""
 
@@ -1501,7 +1536,7 @@ msgstr "処理したファイルを再リネーム(&A)"
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Renamed"
 msgstr "リネーム後"
 
@@ -1844,6 +1879,10 @@ msgstr "UTUMI Hirosi"
 #: main.cpp:46
 msgid "add directory recursively"
 msgstr "ディレクトリを再帰的に追加する"
+
+#: rc.cpp:750
+msgid "by"
+msgstr ""
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"

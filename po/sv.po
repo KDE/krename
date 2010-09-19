@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-28 11:58+0100\n"
+"POT-Creation-Date: 2010-09-19 20:22+0200\n"
 "PO-Revision-Date: 2010-06-27 13:24+0200\n"
 "Last-Translator: Peter Landgren <peter.talken@telia.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -29,19 +29,19 @@ msgstr "%1 fel inträffade!"
 msgid "%2 errors occurred!"
 msgstr "%2 fel inträffade!"
 
-#: krenamewindow.cpp:49
+#: krenamewindow.cpp:50
 msgid "&1. Files"
 msgstr "&1. Filer"
 
-#: krenamewindow.cpp:50
+#: krenamewindow.cpp:51
 msgid "&2. Destination"
 msgstr "&2. Mål"
 
-#: krenamewindow.cpp:51
+#: krenamewindow.cpp:52
 msgid "&3. Plugins"
 msgstr "&3. Plugin"
 
-#: krenamewindow.cpp:52
+#: krenamewindow.cpp:53
 msgid "&4. Filename"
 msgstr "&4. Filnamn"
 
@@ -57,6 +57,11 @@ msgstr "&Lägg till..."
 msgid "&Advanced Filename"
 msgstr "&Avancerat filnamn"
 
+#: rc.cpp:741
+#, fuzzy
+msgid "&Ascending"
+msgstr "Sortering: stigande"
+
 #: rc.cpp:435
 msgid "&Cancel"
 msgstr "&Avbryt"
@@ -69,7 +74,7 @@ msgstr "&Ändra ägare"
 msgid "&Change filename manually..."
 msgstr "&Ändra filnamn manuellt..."
 
-#: krenamewindow.cpp:197
+#: krenamewindow.cpp:198
 msgid "&Close"
 msgstr "&Stäng"
 
@@ -88,6 +93,11 @@ msgstr "&Definitioner"
 #: rc.cpp:627
 msgid "&Delete"
 msgstr "&Tag bort"
+
+#: rc.cpp:744
+#, fuzzy
+msgid "&Descending"
+msgstr "Sortering: fallande"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -121,7 +131,7 @@ msgstr "&Filer per mapp:"
 msgid "&Find:"
 msgstr "&Leta:"
 
-#: krenamewindow.cpp:196
+#: krenamewindow.cpp:197
 msgid "&Finish"
 msgstr "&Avslutning"
 
@@ -176,6 +186,11 @@ msgstr "&Numrering"
 #: rc.cpp:171
 msgid "&Numbering..."
 msgstr "&Numrering..."
+
+#: rc.cpp:747
+#, fuzzy
+msgid "&Numeric"
+msgstr "Tal"
 
 #: rc.cpp:674
 msgid "&Offset:"
@@ -249,6 +264,11 @@ msgstr "&Enkelt filnamn"
 msgid "&Skip Numbers"
 msgstr "H&oppa över tal"
 
+#: rc.cpp:738
+#, fuzzy
+msgid "&Sort filenames ..."
+msgstr "&Skjut in del av filnamn..."
+
 #: rc.cpp:726
 msgid "&Start index:"
 msgstr "&Start index:"
@@ -267,6 +287,11 @@ msgstr "&Mall:"
 
 #: rc.cpp:645
 msgid "&Test..."
+msgstr "&Test..."
+
+#: rc.cpp:753
+#, fuzzy
+msgid "&Token ..."
 msgstr "&Test..."
 
 #: rc.cpp:657
@@ -384,7 +409,7 @@ msgstr ""
 "filnamnsomdöpare för KDE.<br />För att döpa om dina filer, måste du:</p></"
 "body></html>"
 
-#: krenamewindow.cpp:396
+#: krenamewindow.cpp:397
 msgid "<b>Files:<b> %1"
 msgstr "<b>Filer:<b> %1"
 
@@ -503,7 +528,7 @@ msgstr ""
 "<qt>Denna plugin kan transkribera ett filnamn till engelska (d. v. s. "
 "genomföra translitteration).</qt>"
 
-#: systemplugin.cpp:70
+#: systemplugin.cpp:72
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
@@ -738,6 +763,11 @@ msgstr "Skapare till pdf-filen"
 msgid "Custom ..."
 msgstr "Anpassat namn"
 
+#: rc.cpp:735
+#, fuzzy
+msgid "Custom Sorting"
+msgstr "Anpassat filnamnstillägg"
+
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
 msgstr "Anpassat filnamnstillägg"
@@ -770,7 +800,7 @@ msgstr ""
 msgid "Date (Desc.)"
 msgstr ""
 
-#: systemplugin.cpp:68
+#: systemplugin.cpp:70
 msgid "Date and system functions"
 msgstr "Datum- och systemfunktioner"
 
@@ -1061,64 +1091,69 @@ msgstr "Skjut in spårets kommentar"
 msgid "Insert the comment of an image"
 msgstr "Skjut in en bildkommentar"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:51
 msgid "Insert the current date"
 msgstr "Skjut in aktuellt datum"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:52
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr ""
 "Skjut in aktuellt datum genom att använda formateringssträngen yyyy-MM-dd"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:55
 msgid "Insert the current day as number"
 msgstr "Skjut in aktuell dag som ett tal"
 
-#: systemplugin.cpp:56
+#: systemplugin.cpp:57
 msgid "Insert the current hour as number"
 msgstr "Skjut in aktuell timme som ett tal"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:58
 msgid "Insert the current minute as number"
 msgstr "Skjut in aktuell minut som ett tal"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:54
 msgid "Insert the current month as number"
 msgstr "Skjut in aktuell månad som ett tal"
 
-#: systemplugin.cpp:58
+#: systemplugin.cpp:59
 msgid "Insert the current second as number"
 msgstr "Skjut in aktuell sekund som ett tal"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:56
 msgid "Insert the current time"
 msgstr "Skjut in aktuell tidpunkt"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:53
 msgid "Insert the current year"
 msgstr "Skjut in aktuellt år"
 
-#: systemplugin.cpp:65
+#: systemplugin.cpp:66
 msgid "Insert the date of the last file access"
 msgstr "Skjut datumet för senaste filåtkomst"
 
-#: systemplugin.cpp:61
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Insert the file size in bytes"
+msgstr "Skjut in filskapelsedatumen"
+
+#: systemplugin.cpp:62
 msgid "Insert the files creation date"
 msgstr "Skjut in filskapelsedatumen"
 
-#: systemplugin.cpp:63
+#: systemplugin.cpp:64
 msgid "Insert the files modification date"
 msgstr "Skjut in filändringsdatumen"
 
-#: systemplugin.cpp:66
+#: systemplugin.cpp:67
 msgid "Insert the formatted date of the last file access"
 msgstr "Skjut in det formaterade datumet för senaste filåtkomst"
 
-#: systemplugin.cpp:62
+#: systemplugin.cpp:63
 msgid "Insert the formatted file creation date"
 msgstr "Skjut in det formaterade filskapelsedatumet"
 
-#: systemplugin.cpp:64
+#: systemplugin.cpp:65
 msgid "Insert the formatted modification date"
 msgstr "Skjut in det formaterade filändringsdatumet"
 
@@ -1303,7 +1338,7 @@ msgstr "Tal"
 msgid "O&wner:"
 msgstr "Äga&re"
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Origin"
 msgstr "Ursprung"
 
@@ -1319,7 +1354,7 @@ msgstr "Andra"
 msgid "Out&put:"
 msgstr "&Utdata:"
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:60
 msgid "Owner of the file"
 msgstr "Filens ägare"
 
@@ -1327,7 +1362,7 @@ msgstr "Filens ägare"
 msgid "Ownership"
 msgstr "Ägarskap"
 
-#: systemplugin.cpp:60
+#: systemplugin.cpp:61
 msgid "Owning group of the file"
 msgstr "Ägargrupp för filen"
 
@@ -1450,7 +1485,7 @@ msgstr "Döp om processade filer &igen..."
 msgid "Rename the file using the filename created by KRename."
 msgstr "Döp om filen genom att använda det filnamn, som skapats av KRename."
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Renamed"
 msgstr "Omdöpt"
 
@@ -1796,6 +1831,10 @@ msgstr "Peter Landgren"
 #: main.cpp:46
 msgid "add directory recursively"
 msgstr "lägg till mappar rekursivt"
+
+#: rc.cpp:750
+msgid "by"
+msgstr ""
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"

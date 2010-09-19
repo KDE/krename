@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-28 11:58+0100\n"
+"POT-Creation-Date: 2010-09-19 20:22+0200\n"
 "PO-Revision-Date: 2010-01-10 22:46+0100\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
@@ -31,19 +31,19 @@ msgstr "%1 hiba lépett fel."
 msgid "%2 errors occurred!"
 msgstr "%2 hiba lépett fel."
 
-#: krenamewindow.cpp:49
+#: krenamewindow.cpp:50
 msgid "&1. Files"
 msgstr "&1. Fájlok"
 
-#: krenamewindow.cpp:50
+#: krenamewindow.cpp:51
 msgid "&2. Destination"
 msgstr "&2. Cél"
 
-#: krenamewindow.cpp:51
+#: krenamewindow.cpp:52
 msgid "&3. Plugins"
 msgstr "&3. Modulok"
 
-#: krenamewindow.cpp:52
+#: krenamewindow.cpp:53
 msgid "&4. Filename"
 msgstr "&4. Fájlnév"
 
@@ -59,6 +59,11 @@ msgstr "Felv&étel..."
 msgid "&Advanced Filename"
 msgstr "S&peciális fájlnévmegadás"
 
+#: rc.cpp:741
+#, fuzzy
+msgid "&Ascending"
+msgstr "Rendezés: növekvő"
+
 #: rc.cpp:435
 msgid "&Cancel"
 msgstr "&Mégsem"
@@ -71,7 +76,7 @@ msgstr "&Tulajdonos módosítása"
 msgid "&Change filename manually..."
 msgstr "&Fájlnév kézi módosítása..."
 
-#: krenamewindow.cpp:197
+#: krenamewindow.cpp:198
 msgid "&Close"
 msgstr "&Bezárás"
 
@@ -90,6 +95,11 @@ msgstr "Def&iníciók"
 #: rc.cpp:627
 msgid "&Delete"
 msgstr "&Törlés"
+
+#: rc.cpp:744
+#, fuzzy
+msgid "&Descending"
+msgstr "Rendezés: csökkenő"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -123,7 +133,7 @@ msgstr "&Fájlok száma könyvtáranként:"
 msgid "&Find:"
 msgstr "&Keresés:"
 
-#: krenamewindow.cpp:196
+#: krenamewindow.cpp:197
 msgid "&Finish"
 msgstr "Befeje&zés"
 
@@ -178,6 +188,11 @@ msgstr "&Számozás"
 #: rc.cpp:171
 msgid "&Numbering..."
 msgstr "Szám&ozás..."
+
+#: rc.cpp:747
+#, fuzzy
+msgid "&Numeric"
+msgstr "Szám"
 
 #: rc.cpp:674
 msgid "&Offset:"
@@ -251,6 +266,11 @@ msgstr "E&gyszerű fájlnévmegadás"
 msgid "&Skip Numbers"
 msgstr "Ki&hagyandó számok"
 
+#: rc.cpp:738
+#, fuzzy
+msgid "&Sort filenames ..."
+msgstr "Fájlnév &részének beillesztése..."
+
 #: rc.cpp:726
 msgid "&Start index:"
 msgstr "Kezdő&index:"
@@ -269,6 +289,11 @@ msgstr "S&ablon:"
 
 #: rc.cpp:645
 msgid "&Test..."
+msgstr "&Tesztelés..."
+
+#: rc.cpp:753
+#, fuzzy
+msgid "&Token ..."
 msgstr "&Tesztelés..."
 
 #: rc.cpp:657
@@ -384,7 +409,7 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Tömeges fájlátnevező a KDE "
 "környezethez.<br />Fájlátnevezéshez tegye a következőket:</p></body></html>"
 
-#: krenamewindow.cpp:396
+#: krenamewindow.cpp:397
 msgid "<b>Files:<b> %1"
 msgstr "<b>Fájlok:</b> %1"
 
@@ -506,7 +531,7 @@ msgstr ""
 "<qt>Ez a modul angol betűkre írja át a fájlnevekben szereplő nem angol "
 "betűket.</qt>"
 
-#: systemplugin.cpp:70
+#: systemplugin.cpp:72
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
@@ -752,6 +777,11 @@ msgstr "A fájl tulajdonosa"
 msgid "Custom ..."
 msgstr "Egyéni név"
 
+#: rc.cpp:735
+#, fuzzy
+msgid "Custom Sorting"
+msgstr "Egyéni kiterjesztés"
+
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
 msgstr "Egyéni kiterjesztés"
@@ -784,7 +814,7 @@ msgstr ""
 msgid "Date (Desc.)"
 msgstr ""
 
-#: systemplugin.cpp:68
+#: systemplugin.cpp:70
 msgid "Date and system functions"
 msgstr "Dátum- és rendszerfunkciók"
 
@@ -1078,63 +1108,68 @@ msgstr "Egy zeneszám megjegyzésének beillesztése"
 msgid "Insert the comment of an image"
 msgstr "Kép megjegyzésének beillesztése"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:51
 msgid "Insert the current date"
 msgstr "Az aktuális dátum beillesztése"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:52
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "Az aktuális dátum beillesztése éééé-HH-nn formátumban"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:55
 msgid "Insert the current day as number"
 msgstr "Az aktuális nap beillesztése számként"
 
-#: systemplugin.cpp:56
+#: systemplugin.cpp:57
 msgid "Insert the current hour as number"
 msgstr "Az aktuális óra beillesztése számként"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:58
 msgid "Insert the current minute as number"
 msgstr "Az aktuális perc beillesztése számként"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:54
 msgid "Insert the current month as number"
 msgstr "Az aktuális hónap beillesztése számként"
 
-#: systemplugin.cpp:58
+#: systemplugin.cpp:59
 msgid "Insert the current second as number"
 msgstr "Az aktuális másodperc beillesztése számként"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:56
 msgid "Insert the current time"
 msgstr "Az aktuális idő beillesztése"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:53
 msgid "Insert the current year"
 msgstr "Az aktuális év beillesztése"
 
-#: systemplugin.cpp:65
+#: systemplugin.cpp:66
 msgid "Insert the date of the last file access"
 msgstr "A fájl legutóbbi elérésének dátumának beillesztése"
 
-#: systemplugin.cpp:61
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Insert the file size in bytes"
+msgstr "A fájl létrehozási dátumának beillesztése"
+
+#: systemplugin.cpp:62
 msgid "Insert the files creation date"
 msgstr "A fájl létrehozási dátumának beillesztése"
 
-#: systemplugin.cpp:63
+#: systemplugin.cpp:64
 msgid "Insert the files modification date"
 msgstr "A fájl módosítási dátumának beillesztése"
 
-#: systemplugin.cpp:66
+#: systemplugin.cpp:67
 msgid "Insert the formatted date of the last file access"
 msgstr "A fájl legutóbbi elérésének dátumának beillesztése formázott módon"
 
-#: systemplugin.cpp:62
+#: systemplugin.cpp:63
 msgid "Insert the formatted file creation date"
 msgstr "A fájl létrehozási dátumának beillesztése formázott módon"
 
-#: systemplugin.cpp:64
+#: systemplugin.cpp:65
 msgid "Insert the formatted modification date"
 msgstr "A fájl módosítási dátumának beillesztése formázott módon"
 
@@ -1321,7 +1356,7 @@ msgstr "Szám"
 msgid "O&wner:"
 msgstr "T&ulajdonos:"
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Origin"
 msgstr "Eredeti"
 
@@ -1337,7 +1372,7 @@ msgstr "Egyéb"
 msgid "Out&put:"
 msgstr "Ki&menet:"
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:60
 msgid "Owner of the file"
 msgstr "A fájl tulajdonosa"
 
@@ -1345,7 +1380,7 @@ msgstr "A fájl tulajdonosa"
 msgid "Ownership"
 msgstr "Tulajdonos"
 
-#: systemplugin.cpp:60
+#: systemplugin.cpp:61
 msgid "Owning group of the file"
 msgstr "A fájlt birtokló csoport"
 
@@ -1470,7 +1505,7 @@ msgstr "A &feldolgozott fájlok ismételt átnevezése..."
 msgid "Rename the file using the filename created by KRename."
 msgstr "A fájl átnevezése a KRename által előállított fájlnév használatával."
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Renamed"
 msgstr "Átnevezve"
 
@@ -1816,6 +1851,10 @@ msgstr "Bíró Árpád"
 #: main.cpp:46
 msgid "add directory recursively"
 msgstr "Könyvtár rekurzív felvétele"
+
+#: rc.cpp:750
+msgid "by"
+msgstr ""
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"

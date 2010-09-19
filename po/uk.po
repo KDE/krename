@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-28 11:58+0100\n"
+"POT-Creation-Date: 2010-09-19 20:22+0200\n"
 "PO-Revision-Date: 2010-03-22 16:26+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -30,19 +30,19 @@ msgstr "Сталося %1 помилок!"
 msgid "%2 errors occurred!"
 msgstr "Сталося %2 помилок!"
 
-#: krenamewindow.cpp:49
+#: krenamewindow.cpp:50
 msgid "&1. Files"
 msgstr "&1. Файли"
 
-#: krenamewindow.cpp:50
+#: krenamewindow.cpp:51
 msgid "&2. Destination"
 msgstr "&2. Призначення"
 
-#: krenamewindow.cpp:51
+#: krenamewindow.cpp:52
 msgid "&3. Plugins"
 msgstr "&3. Додатки"
 
-#: krenamewindow.cpp:52
+#: krenamewindow.cpp:53
 msgid "&4. Filename"
 msgstr "&4. Назва файла"
 
@@ -58,6 +58,11 @@ msgstr "&Додати..."
 msgid "&Advanced Filename"
 msgstr "&Додаткове іменування"
 
+#: rc.cpp:741
+#, fuzzy
+msgid "&Ascending"
+msgstr "Впорядкування: за зростанням"
+
 #: rc.cpp:435
 msgid "&Cancel"
 msgstr "&Скасувати"
@@ -70,7 +75,7 @@ msgstr "З&мінити власника"
 msgid "&Change filename manually..."
 msgstr "&Змінити назву файла вручну..."
 
-#: krenamewindow.cpp:197
+#: krenamewindow.cpp:198
 msgid "&Close"
 msgstr "&Закрити"
 
@@ -89,6 +94,11 @@ msgstr "Ви&значення"
 #: rc.cpp:627
 msgid "&Delete"
 msgstr "&Вилучити"
+
+#: rc.cpp:744
+#, fuzzy
+msgid "&Descending"
+msgstr "Впорядкування: за спаданням"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -122,7 +132,7 @@ msgstr "&Файлів на каталог:"
 msgid "&Find:"
 msgstr "З&найти:"
 
-#: krenamewindow.cpp:196
+#: krenamewindow.cpp:197
 msgid "&Finish"
 msgstr "З&авершити"
 
@@ -177,6 +187,11 @@ msgstr "&Нумерація"
 #: rc.cpp:171
 msgid "&Numbering..."
 msgstr "&Нумерація..."
+
+#: rc.cpp:747
+#, fuzzy
+msgid "&Numeric"
+msgstr "Число"
 
 #: rc.cpp:674
 msgid "&Offset:"
@@ -250,6 +265,11 @@ msgstr "Пр&оста назва файла"
 msgid "&Skip Numbers"
 msgstr "Пр&опустити номери"
 
+#: rc.cpp:738
+#, fuzzy
+msgid "&Sort filenames ..."
+msgstr "Вс&тавити частину назви файла..."
+
 #: rc.cpp:726
 msgid "&Start index:"
 msgstr "По&чаток нумерації:"
@@ -268,6 +288,11 @@ msgstr "&Шаблон:"
 
 #: rc.cpp:645
 msgid "&Test..."
+msgstr ":П&еревірити..."
+
+#: rc.cpp:753
+#, fuzzy
+msgid "&Token ..."
 msgstr ":П&еревірити..."
 
 #: rc.cpp:657
@@ -385,7 +410,7 @@ msgstr ""
 "перейменування для KDE.<br />Щоб перейменувати файли, вам слід:</p></body></"
 "html>"
 
-#: krenamewindow.cpp:396
+#: krenamewindow.cpp:397
 msgid "<b>Files:<b> %1"
 msgstr "<b>Файли:<b> %1"
 
@@ -506,7 +531,7 @@ msgstr ""
 "<qt>За допомогою цього додатка можна змінити літери назви файла на латинські "
 "(тобто виконати транслітерацію).</qt>"
 
-#: systemplugin.cpp:70
+#: systemplugin.cpp:72
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
@@ -747,6 +772,11 @@ msgstr "Власник файла"
 msgid "Custom ..."
 msgstr "Нетипова назва"
 
+#: rc.cpp:735
+#, fuzzy
+msgid "Custom Sorting"
+msgstr "Нетиповий суфікс назви"
+
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
 msgstr "Нетиповий суфікс назви"
@@ -779,7 +809,7 @@ msgstr ""
 msgid "Date (Desc.)"
 msgstr ""
 
-#: systemplugin.cpp:68
+#: systemplugin.cpp:70
 msgid "Date and system functions"
 msgstr "Часові і системні функції"
 
@@ -1073,63 +1103,68 @@ msgstr "Вставити коментар до композиції"
 msgid "Insert the comment of an image"
 msgstr "Вставити коментар до зображення"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:51
 msgid "Insert the current date"
 msgstr "Вставити поточну дату"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:52
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "Вставити поточну дату на основі форматованого рядка рррр-ММ-дд"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:55
 msgid "Insert the current day as number"
 msgstr "Вставити номер поточного дня"
 
-#: systemplugin.cpp:56
+#: systemplugin.cpp:57
 msgid "Insert the current hour as number"
 msgstr "Вставити числове значення поточної години"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:58
 msgid "Insert the current minute as number"
 msgstr "Вставити числове значення поточної хвилини"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:54
 msgid "Insert the current month as number"
 msgstr "Вставити номер поточного місяця"
 
-#: systemplugin.cpp:58
+#: systemplugin.cpp:59
 msgid "Insert the current second as number"
 msgstr "Вставити числове значення поточної секунди"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:56
 msgid "Insert the current time"
 msgstr "Вставити поточний час"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:53
 msgid "Insert the current year"
 msgstr "Вставити поточний рік"
 
-#: systemplugin.cpp:65
+#: systemplugin.cpp:66
 msgid "Insert the date of the last file access"
 msgstr "Вставити дату попереднього доступу до файла"
 
-#: systemplugin.cpp:61
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Insert the file size in bytes"
+msgstr "Вставити дату створення файла"
+
+#: systemplugin.cpp:62
 msgid "Insert the files creation date"
 msgstr "Вставити дату створення файла"
 
-#: systemplugin.cpp:63
+#: systemplugin.cpp:64
 msgid "Insert the files modification date"
 msgstr "Вставити дату зміни файла"
 
-#: systemplugin.cpp:66
+#: systemplugin.cpp:67
 msgid "Insert the formatted date of the last file access"
 msgstr "Вставити форматовану дату попереднього доступу до файла"
 
-#: systemplugin.cpp:62
+#: systemplugin.cpp:63
 msgid "Insert the formatted file creation date"
 msgstr "Вставити форматовану дату створення файла"
 
-#: systemplugin.cpp:64
+#: systemplugin.cpp:65
 msgid "Insert the formatted modification date"
 msgstr "Вставити форматовану дату зміни файла"
 
@@ -1314,7 +1349,7 @@ msgstr "Число"
 msgid "O&wner:"
 msgstr "В&ласник:"
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Origin"
 msgstr "Походження"
 
@@ -1330,7 +1365,7 @@ msgstr "Інші"
 msgid "Out&put:"
 msgstr "В&ивід:"
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:60
 msgid "Owner of the file"
 msgstr "Власник файла"
 
@@ -1338,7 +1373,7 @@ msgstr "Власник файла"
 msgid "Ownership"
 msgstr "Власник"
 
-#: systemplugin.cpp:60
+#: systemplugin.cpp:61
 msgid "Owning group of the file"
 msgstr "Група власника файла"
 
@@ -1466,7 +1501,7 @@ msgstr "&Ще раз перейменувати оброблені файли...
 msgid "Rename the file using the filename created by KRename."
 msgstr "Перейменувати файл на основі назви файла, створеної KRename."
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Renamed"
 msgstr "Перейменовано"
 
@@ -1817,6 +1852,10 @@ msgstr "Юрій Чорноіван"
 #: main.cpp:46
 msgid "add directory recursively"
 msgstr "додати каталог рекурсивно"
+
+#: rc.cpp:750
+msgid "by"
+msgstr ""
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"

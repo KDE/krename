@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-28 11:58+0100\n"
+"POT-Creation-Date: 2010-09-19 20:22+0200\n"
 "PO-Revision-Date: 2006-09-18 19:14+0300\n"
 "Last-Translator: Koray Löker <loker@pardus.org.tr>\n"
 "Language-Team:  <tr@li.org>\n"
@@ -27,22 +27,22 @@ msgstr "%2 hata oluştu!"
 msgid "%2 errors occurred!"
 msgstr "%2 hata oluştu!"
 
-#: krenamewindow.cpp:49
+#: krenamewindow.cpp:50
 #, fuzzy
 msgid "&1. Files"
 msgstr "&Dosyalar"
 
-#: krenamewindow.cpp:50
+#: krenamewindow.cpp:51
 #, fuzzy
 msgid "&2. Destination"
 msgstr "&Hedef"
 
-#: krenamewindow.cpp:51
+#: krenamewindow.cpp:52
 #, fuzzy
 msgid "&3. Plugins"
 msgstr "&Eklentiler"
 
-#: krenamewindow.cpp:52
+#: krenamewindow.cpp:53
 #, fuzzy
 msgid "&4. Filename"
 msgstr "&Dosya adı"
@@ -60,6 +60,11 @@ msgstr "&Ekle..."
 msgid "&Advanced Filename"
 msgstr "&Dosya adı"
 
+#: rc.cpp:741
+#, fuzzy
+msgid "&Ascending"
+msgstr "Sıralama: Artan"
+
 #: rc.cpp:435
 msgid "&Cancel"
 msgstr ""
@@ -74,7 +79,7 @@ msgstr "&Sahibi Değiştir"
 msgid "&Change filename manually..."
 msgstr "Dosya Adını Elle &Değiştir"
 
-#: krenamewindow.cpp:197
+#: krenamewindow.cpp:198
 msgid "&Close"
 msgstr ""
 
@@ -97,6 +102,11 @@ msgstr "&Hedef"
 #, fuzzy
 msgid "&Delete"
 msgstr "Profil &Sil"
+
+#: rc.cpp:744
+#, fuzzy
+msgid "&Descending"
+msgstr "Sıralama: Azalan"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -133,7 +143,7 @@ msgstr "Dizin başına dosya:"
 msgid "&Find:"
 msgstr "Bul:"
 
-#: krenamewindow.cpp:196
+#: krenamewindow.cpp:197
 #, fuzzy
 msgid "&Finish"
 msgstr "&Bitiş"
@@ -193,6 +203,11 @@ msgstr "&Numaralandırma"
 #: rc.cpp:171
 msgid "&Numbering..."
 msgstr "&Numaralama..."
+
+#: rc.cpp:747
+#, fuzzy
+msgid "&Numeric"
+msgstr "Sayı"
 
 #: rc.cpp:674
 msgid "&Offset:"
@@ -276,6 +291,11 @@ msgstr "&Dosya adı"
 msgid "&Skip Numbers"
 msgstr "Sayıları A&tla"
 
+#: rc.cpp:738
+#, fuzzy
+msgid "&Sort filenames ..."
+msgstr "D&osya adından bir parça kullan..."
+
 #: rc.cpp:726
 #, fuzzy
 msgid "&Start index:"
@@ -297,6 +317,11 @@ msgstr "&Şablon:"
 #: rc.cpp:645
 #, fuzzy
 msgid "&Test..."
+msgstr "Dü&zenle..."
+
+#: rc.cpp:753
+#, fuzzy
+msgid "&Token ..."
 msgstr "Dü&zenle..."
 
 #: rc.cpp:657
@@ -386,7 +411,7 @@ msgid ""
 "KDE.<br />To rename your files, you have to:</p></body></html>"
 msgstr ""
 
-#: krenamewindow.cpp:396
+#: krenamewindow.cpp:397
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "Dosya sayısı: <b>%1</b>"
@@ -497,7 +522,7 @@ msgstr ""
 "<qt>Bu eklenti, latin olmayan harflerle yazılan isimleri, seslerine "
 "bakmaksızın latin harflerle yazılı biçime çevirir.</ qt>"
 
-#: systemplugin.cpp:70
+#: systemplugin.cpp:72
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
@@ -749,6 +774,11 @@ msgstr "İlk dosyanın numarası."
 msgid "Custom ..."
 msgstr "Özel isim"
 
+#: rc.cpp:735
+#, fuzzy
+msgid "Custom Sorting"
+msgstr "Özel uzantı"
+
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
 msgstr "Özel uzantı"
@@ -783,7 +813,7 @@ msgstr ""
 msgid "Date (Desc.)"
 msgstr ""
 
-#: systemplugin.cpp:68
+#: systemplugin.cpp:70
 #, fuzzy
 msgid "Date and system functions"
 msgstr "Sistem İşlevleri"
@@ -1096,63 +1126,68 @@ msgstr "Günün tarihini ekle"
 msgid "Insert the comment of an image"
 msgstr "Günün tarihini ekle"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:51
 msgid "Insert the current date"
 msgstr "Günün tarihini ekle"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:52
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "Günün tarihini yyyy-AA-gg biçiminde ekleyin"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:55
 msgid "Insert the current day as number"
 msgstr "Şu anki günü sayı olarak ekleyin"
 
-#: systemplugin.cpp:56
+#: systemplugin.cpp:57
 msgid "Insert the current hour as number"
 msgstr "Şu anki saati sayı olarak ekleyin"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:58
 msgid "Insert the current minute as number"
 msgstr "Şu anki dakikayı sayı olarak ekleyin"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:54
 msgid "Insert the current month as number"
 msgstr "Şu anki ayı sayı olarak ekleyin"
 
-#: systemplugin.cpp:58
+#: systemplugin.cpp:59
 msgid "Insert the current second as number"
 msgstr "Şu anki saniyeyi sayı olarak ekleyin"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:56
 msgid "Insert the current time"
 msgstr "Şu anki saati ekleyin"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:53
 msgid "Insert the current year"
 msgstr "Şu anki yılı ekleyin"
 
-#: systemplugin.cpp:65
+#: systemplugin.cpp:66
 msgid "Insert the date of the last file access"
 msgstr "Dosyaya son erişimin tarihini girin"
 
-#: systemplugin.cpp:61
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Insert the file size in bytes"
+msgstr "Dosyaların oluşturulma tarihlerini ekleyin"
+
+#: systemplugin.cpp:62
 msgid "Insert the files creation date"
 msgstr "Dosyaların oluşturulma tarihlerini ekleyin"
 
-#: systemplugin.cpp:63
+#: systemplugin.cpp:64
 msgid "Insert the files modification date"
 msgstr "Dosyaların değiştirilme tarihlerini ekleyin"
 
-#: systemplugin.cpp:66
+#: systemplugin.cpp:67
 msgid "Insert the formatted date of the last file access"
 msgstr "Dosyaya son erişimin tarihini biçemli olarak girin"
 
-#: systemplugin.cpp:62
+#: systemplugin.cpp:63
 msgid "Insert the formatted file creation date"
 msgstr "Dosyaların biçemli oluşturulma tarihlerini ekleyin"
 
-#: systemplugin.cpp:64
+#: systemplugin.cpp:65
 msgid "Insert the formatted modification date"
 msgstr "Biçemli deştirilme tarihini ekleyin"
 
@@ -1355,7 +1390,7 @@ msgstr "Sayı"
 msgid "O&wner:"
 msgstr "Sahiplik"
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Origin"
 msgstr "İlk hali"
 
@@ -1372,7 +1407,7 @@ msgstr "Diğerleri"
 msgid "Out&put:"
 msgstr ""
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:60
 #, fuzzy
 msgid "Owner of the file"
 msgstr "İlk dosyanın numarası."
@@ -1381,7 +1416,7 @@ msgstr "İlk dosyanın numarası."
 msgid "Ownership"
 msgstr "Sahiplik"
 
-#: systemplugin.cpp:60
+#: systemplugin.cpp:61
 msgid "Owning group of the file"
 msgstr ""
 
@@ -1517,7 +1552,7 @@ msgstr "İşlenmiş Dosyaları &Tekrar Yeniden Adlandır..."
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Renamed"
 msgstr "Adlandırılmış hali"
 
@@ -1869,6 +1904,10 @@ msgstr "Emre Aladağ"
 #: main.cpp:46
 msgid "add directory recursively"
 msgstr "Dizini özyinelemeli olarak ekle"
+
+#: rc.cpp:750
+msgid "by"
+msgstr ""
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"

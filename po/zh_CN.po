@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_CN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-28 11:58+0100\n"
+"POT-Creation-Date: 2010-09-19 20:22+0200\n"
 "PO-Revision-Date: 2007-07-30 11:31+0800\n"
 "Last-Translator: Roy Qu <royqh1979@gmail.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -28,22 +28,22 @@ msgstr "%2错误发生！"
 msgid "%2 errors occurred!"
 msgstr "%2错误发生！"
 
-#: krenamewindow.cpp:49
+#: krenamewindow.cpp:50
 #, fuzzy
 msgid "&1. Files"
 msgstr "文件(&i)"
 
-#: krenamewindow.cpp:50
+#: krenamewindow.cpp:51
 #, fuzzy
 msgid "&2. Destination"
 msgstr "目标(&T)"
 
-#: krenamewindow.cpp:51
+#: krenamewindow.cpp:52
 #, fuzzy
 msgid "&3. Plugins"
 msgstr "插件(&P)"
 
-#: krenamewindow.cpp:52
+#: krenamewindow.cpp:53
 #, fuzzy
 msgid "&4. Filename"
 msgstr "文件名(&F)"
@@ -61,6 +61,11 @@ msgstr "添加(&A)..."
 msgid "&Advanced Filename"
 msgstr "文件名(&F)"
 
+#: rc.cpp:741
+#, fuzzy
+msgid "&Ascending"
+msgstr "排序: 升序"
+
 #: rc.cpp:435
 msgid "&Cancel"
 msgstr ""
@@ -75,7 +80,7 @@ msgstr "变更所有者(&O)"
 msgid "&Change filename manually..."
 msgstr "手工修改文件名(&C)"
 
-#: krenamewindow.cpp:197
+#: krenamewindow.cpp:198
 msgid "&Close"
 msgstr ""
 
@@ -98,6 +103,11 @@ msgstr "目标(&T)"
 #, fuzzy
 msgid "&Delete"
 msgstr "删除配置(&D)"
+
+#: rc.cpp:744
+#, fuzzy
+msgid "&Descending"
+msgstr "排序: 降序"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -134,7 +144,7 @@ msgstr "每个目录的文件："
 msgid "&Find:"
 msgstr "查找："
 
-#: krenamewindow.cpp:196
+#: krenamewindow.cpp:197
 #, fuzzy
 msgid "&Finish"
 msgstr "开始重命名(&F)"
@@ -194,6 +204,11 @@ msgstr "编号"
 #: rc.cpp:171
 msgid "&Numbering..."
 msgstr "编号(&N)..."
+
+#: rc.cpp:747
+#, fuzzy
+msgid "&Numeric"
+msgstr "编号"
 
 #: rc.cpp:674
 msgid "&Offset:"
@@ -277,6 +292,11 @@ msgstr "文件名(&F)"
 msgid "&Skip Numbers"
 msgstr "跳过编号"
 
+#: rc.cpp:738
+#, fuzzy
+msgid "&Sort filenames ..."
+msgstr "插入文件名的一部分(&I)..."
+
 #: rc.cpp:726
 #, fuzzy
 msgid "&Start index:"
@@ -298,6 +318,11 @@ msgstr "模板(&T):"
 #: rc.cpp:645
 #, fuzzy
 msgid "&Test..."
+msgstr "编辑(&E)..."
+
+#: rc.cpp:753
+#, fuzzy
+msgid "&Token ..."
 msgstr "编辑(&E)..."
 
 #: rc.cpp:657
@@ -387,7 +412,7 @@ msgid ""
 "KDE.<br />To rename your files, you have to:</p></body></html>"
 msgstr ""
 
-#: krenamewindow.cpp:396
+#: krenamewindow.cpp:397
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "文件数：<b>%1</b>"
@@ -489,7 +514,7 @@ msgid ""
 "transliteration).</qt>"
 msgstr "<qt>此插件翻译用非英文字母写成的文件名。</qt>"
 
-#: systemplugin.cpp:70
+#: systemplugin.cpp:72
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
@@ -735,6 +760,11 @@ msgstr "第一个文件的编号"
 msgid "Custom ..."
 msgstr "自定义文件名"
 
+#: rc.cpp:735
+#, fuzzy
+msgid "Custom Sorting"
+msgstr "自定义扩展名"
+
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
 msgstr "自定义扩展名"
@@ -769,7 +799,7 @@ msgstr ""
 msgid "Date (Desc.)"
 msgstr ""
 
-#: systemplugin.cpp:68
+#: systemplugin.cpp:70
 #, fuzzy
 msgid "Date and system functions"
 msgstr "系统函数"
@@ -1078,63 +1108,68 @@ msgstr "取得当前日期及时间(&G)"
 msgid "Insert the comment of an image"
 msgstr "取得当前日期及时间(&G)"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:51
 msgid "Insert the current date"
 msgstr "取得当前日期及时间(&G)"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:52
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "用格式化字符串yyyy-MM-dd插入当前日期"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:55
 msgid "Insert the current day as number"
 msgstr "插入当前日期数字"
 
-#: systemplugin.cpp:56
+#: systemplugin.cpp:57
 msgid "Insert the current hour as number"
 msgstr "插入当前小时数"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:58
 msgid "Insert the current minute as number"
 msgstr "插入当前分钟数"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:54
 msgid "Insert the current month as number"
 msgstr "插入当前月份数字"
 
-#: systemplugin.cpp:58
+#: systemplugin.cpp:59
 msgid "Insert the current second as number"
 msgstr "插入当前秒数"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:56
 msgid "Insert the current time"
 msgstr "插入当前时间"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:53
 msgid "Insert the current year"
 msgstr "插入当前年份数字"
 
-#: systemplugin.cpp:65
+#: systemplugin.cpp:66
 msgid "Insert the date of the last file access"
 msgstr "插入访问日期"
 
-#: systemplugin.cpp:61
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Insert the file size in bytes"
+msgstr "插入文件生成日期"
+
+#: systemplugin.cpp:62
 msgid "Insert the files creation date"
 msgstr "插入文件生成日期"
 
-#: systemplugin.cpp:63
+#: systemplugin.cpp:64
 msgid "Insert the files modification date"
 msgstr "插入文件修改日期"
 
-#: systemplugin.cpp:66
+#: systemplugin.cpp:67
 msgid "Insert the formatted date of the last file access"
 msgstr "插入格式化的访问日期"
 
-#: systemplugin.cpp:62
+#: systemplugin.cpp:63
 msgid "Insert the formatted file creation date"
 msgstr "插入格式化的文件生成日期"
 
-#: systemplugin.cpp:64
+#: systemplugin.cpp:65
 msgid "Insert the formatted modification date"
 msgstr "插入格式化的文件修改日期"
 
@@ -1337,7 +1372,7 @@ msgstr "编号"
 msgid "O&wner:"
 msgstr "所有"
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Origin"
 msgstr "原始文件"
 
@@ -1354,7 +1389,7 @@ msgstr "其他"
 msgid "Out&put:"
 msgstr ""
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:60
 #, fuzzy
 msgid "Owner of the file"
 msgstr "第一个文件的编号"
@@ -1363,7 +1398,7 @@ msgstr "第一个文件的编号"
 msgid "Ownership"
 msgstr "所有"
 
-#: systemplugin.cpp:60
+#: systemplugin.cpp:61
 msgid "Owning group of the file"
 msgstr ""
 
@@ -1496,7 +1531,7 @@ msgstr "重新重命名已处理的文件(&P)..."
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Renamed"
 msgstr "重命名后的文件"
 
@@ -1838,6 +1873,10 @@ msgstr "Roy Qu"
 #: main.cpp:46
 msgid "add directory recursively"
 msgstr "递归添加目录"
+
+#: rc.cpp:750
+msgid "by"
+msgstr ""
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"

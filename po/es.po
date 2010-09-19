@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-28 11:58+0100\n"
+"POT-Creation-Date: 2010-09-19 20:22+0200\n"
 "PO-Revision-Date: 2006-03-02 14:28+0100\n"
 "Last-Translator: Jose Rodriguez <chmpmi@eresmas.net>\n"
 "Language-Team:  <es@li.org>\n"
@@ -39,22 +39,22 @@ msgstr "%2 errores encontrados!"
 msgid "%2 errors occurred!"
 msgstr "%2 errores encontrados!"
 
-#: krenamewindow.cpp:49
+#: krenamewindow.cpp:50
 #, fuzzy
 msgid "&1. Files"
 msgstr "F&icheros"
 
-#: krenamewindow.cpp:50
+#: krenamewindow.cpp:51
 #, fuzzy
 msgid "&2. Destination"
 msgstr "Des&tino"
 
-#: krenamewindow.cpp:51
+#: krenamewindow.cpp:52
 #, fuzzy
 msgid "&3. Plugins"
 msgstr "P&lugins"
 
-#: krenamewindow.cpp:52
+#: krenamewindow.cpp:53
 #, fuzzy
 msgid "&4. Filename"
 msgstr "Nom&bre de archivo"
@@ -72,6 +72,11 @@ msgstr "&Añadir..."
 msgid "&Advanced Filename"
 msgstr "Nom&bre de archivo"
 
+#: rc.cpp:741
+#, fuzzy
+msgid "&Ascending"
+msgstr "Ordenar: Ascendente"
+
 #: rc.cpp:435
 msgid "&Cancel"
 msgstr ""
@@ -86,7 +91,7 @@ msgstr "Cambiar pr&opietario"
 msgid "&Change filename manually..."
 msgstr "&Cambiar nombre manualmente"
 
-#: krenamewindow.cpp:197
+#: krenamewindow.cpp:198
 msgid "&Close"
 msgstr ""
 
@@ -109,6 +114,11 @@ msgstr "Des&tino"
 #, fuzzy
 msgid "&Delete"
 msgstr "&Borrar perfil"
+
+#: rc.cpp:744
+#, fuzzy
+msgid "&Descending"
+msgstr "Ordenar: Descendente"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -145,7 +155,7 @@ msgstr "Ficheros por directorio:"
 msgid "&Find:"
 msgstr "Encontrar:"
 
-#: krenamewindow.cpp:196
+#: krenamewindow.cpp:197
 #, fuzzy
 msgid "&Finish"
 msgstr "&Terminar"
@@ -205,6 +215,11 @@ msgstr "&Numeración"
 #: rc.cpp:171
 msgid "&Numbering..."
 msgstr "&Numeración..."
+
+#: rc.cpp:747
+#, fuzzy
+msgid "&Numeric"
+msgstr "Número"
 
 #: rc.cpp:674
 msgid "&Offset:"
@@ -288,6 +303,11 @@ msgstr "Nom&bre de archivo"
 msgid "&Skip Numbers"
 msgstr "&Ignorar números"
 
+#: rc.cpp:738
+#, fuzzy
+msgid "&Sort filenames ..."
+msgstr "&Insertar parte del nombre..."
+
 #: rc.cpp:726
 #, fuzzy
 msgid "&Start index:"
@@ -309,6 +329,11 @@ msgstr "&Plantilla:"
 #: rc.cpp:645
 #, fuzzy
 msgid "&Test..."
+msgstr "&Editar..."
+
+#: rc.cpp:753
+#, fuzzy
+msgid "&Token ..."
 msgstr "&Editar..."
 
 #: rc.cpp:657
@@ -398,7 +423,7 @@ msgid ""
 "KDE.<br />To rename your files, you have to:</p></body></html>"
 msgstr ""
 
-#: krenamewindow.cpp:396
+#: krenamewindow.cpp:397
 #, fuzzy
 msgid "<b>Files:<b> %1"
 msgstr "Ficheros: <b>%1</b>"
@@ -505,7 +530,7 @@ msgid ""
 msgstr ""
 "<qt>Este plugin transcribe nombres escritos con caracteres no ingleses.</qt>"
 
-#: systemplugin.cpp:70
+#: systemplugin.cpp:72
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
@@ -757,6 +782,11 @@ msgstr "Número del primer fichero."
 msgid "Custom ..."
 msgstr "Personalizar nombre"
 
+#: rc.cpp:735
+#, fuzzy
+msgid "Custom Sorting"
+msgstr "Personalizar extensión"
+
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
 msgstr "Personalizar extensión"
@@ -791,7 +821,7 @@ msgstr ""
 msgid "Date (Desc.)"
 msgstr ""
 
-#: systemplugin.cpp:68
+#: systemplugin.cpp:70
 #, fuzzy
 msgid "Date and system functions"
 msgstr "Funciones de sistema"
@@ -1107,63 +1137,68 @@ msgstr "Introduzca la fecha actual"
 msgid "Insert the comment of an image"
 msgstr "Introduzca la fecha actual"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:51
 msgid "Insert the current date"
 msgstr "Introduzca la fecha actual"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:52
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "Introduzca la fecha actual usando el formato aaaa-MM-dd"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:55
 msgid "Insert the current day as number"
 msgstr "Introduzca el dia actual en números"
 
-#: systemplugin.cpp:56
+#: systemplugin.cpp:57
 msgid "Insert the current hour as number"
 msgstr "Introduzca la hora actual en números"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:58
 msgid "Insert the current minute as number"
 msgstr "Introduzca el minuto actual en números"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:54
 msgid "Insert the current month as number"
 msgstr "Introduzca mes actual en números"
 
-#: systemplugin.cpp:58
+#: systemplugin.cpp:59
 msgid "Insert the current second as number"
 msgstr "Introduzca el segundo actual en números"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:56
 msgid "Insert the current time"
 msgstr "Introduzca la hora actual"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:53
 msgid "Insert the current year"
 msgstr "Introduzca el año actual"
 
-#: systemplugin.cpp:65
+#: systemplugin.cpp:66
 msgid "Insert the date of the last file access"
 msgstr "Introduzca la fecha del último acceso"
 
-#: systemplugin.cpp:61
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Insert the file size in bytes"
+msgstr "Introduzca la fecha de creación"
+
+#: systemplugin.cpp:62
 msgid "Insert the files creation date"
 msgstr "Introduzca la fecha de creación"
 
-#: systemplugin.cpp:63
+#: systemplugin.cpp:64
 msgid "Insert the files modification date"
 msgstr "Introduzca la fecha de modificación"
 
-#: systemplugin.cpp:66
+#: systemplugin.cpp:67
 msgid "Insert the formatted date of the last file access"
 msgstr "Introduzca el formato de fecha del último acceso"
 
-#: systemplugin.cpp:62
+#: systemplugin.cpp:63
 msgid "Insert the formatted file creation date"
 msgstr "Introduzca el formato de fecha de creación"
 
-#: systemplugin.cpp:64
+#: systemplugin.cpp:65
 msgid "Insert the formatted modification date"
 msgstr "Introduzca el formato de fecha de modificación"
 
@@ -1366,7 +1401,7 @@ msgstr "Número"
 msgid "O&wner:"
 msgstr "Propiedad"
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Origin"
 msgstr "Origen"
 
@@ -1383,7 +1418,7 @@ msgstr "Otros"
 msgid "Out&put:"
 msgstr ""
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:60
 #, fuzzy
 msgid "Owner of the file"
 msgstr "Número del primer fichero."
@@ -1392,7 +1427,7 @@ msgstr "Número del primer fichero."
 msgid "Ownership"
 msgstr "Propiedad"
 
-#: systemplugin.cpp:60
+#: systemplugin.cpp:61
 msgid "Owning group of the file"
 msgstr ""
 
@@ -1528,7 +1563,7 @@ msgstr "Renombrar de nuevo ficheros &procesados..."
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Renamed"
 msgstr "Renombrado"
 
@@ -1876,6 +1911,10 @@ msgstr "José Rodríguez"
 #: main.cpp:46
 msgid "add directory recursively"
 msgstr "añadir directorios recursivamente"
+
+#: rc.cpp:750
+msgid "by"
+msgstr ""
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"

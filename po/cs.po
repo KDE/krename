@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-28 11:58+0100\n"
+"POT-Creation-Date: 2010-09-19 20:22+0200\n"
 "PO-Revision-Date: 2010-05-30 20:44+0200\n"
 "Last-Translator: Pavel Fric\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -25,22 +25,22 @@ msgstr "Vyskytlo se %1 chyb!"
 msgid "%2 errors occurred!"
 msgstr "Vyskytlo se %2 chyb!"
 
-#: krenamewindow.cpp:49
+#: krenamewindow.cpp:50
 #, fuzzy
 msgid "&1. Files"
 msgstr "&Soubory"
 
-#: krenamewindow.cpp:50
+#: krenamewindow.cpp:51
 #, fuzzy
 msgid "&2. Destination"
 msgstr "&Cíl"
 
-#: krenamewindow.cpp:51
+#: krenamewindow.cpp:52
 #, fuzzy
 msgid "&3. Plugins"
 msgstr "&Přídavné moduly"
 
-#: krenamewindow.cpp:52
+#: krenamewindow.cpp:53
 #, fuzzy
 msgid "&4. Filename"
 msgstr "Název &souboru"
@@ -57,6 +57,11 @@ msgstr "&Přidat..."
 msgid "&Advanced Filename"
 msgstr "&Rozšířený název souboru"
 
+#: rc.cpp:741
+#, fuzzy
+msgid "&Ascending"
+msgstr "Třídit: Vzestupně"
+
 #: rc.cpp:435
 msgid "&Cancel"
 msgstr "&Zrušit"
@@ -69,7 +74,7 @@ msgstr "&Změnit vlastníka"
 msgid "&Change filename manually..."
 msgstr "&Změnit název souboru ručně..."
 
-#: krenamewindow.cpp:197
+#: krenamewindow.cpp:198
 msgid "&Close"
 msgstr "&Zavřít"
 
@@ -88,6 +93,11 @@ msgstr "&Vymezení"
 #: rc.cpp:627
 msgid "&Delete"
 msgstr "&Smazat"
+
+#: rc.cpp:744
+#, fuzzy
+msgid "&Descending"
+msgstr "Třídit: Sestupně"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -122,7 +132,7 @@ msgstr "Souborů na složku:"
 msgid "&Find:"
 msgstr "&Najít:"
 
-#: krenamewindow.cpp:196
+#: krenamewindow.cpp:197
 #, fuzzy
 msgid "&Finish"
 msgstr "&Dokončit..."
@@ -178,6 +188,11 @@ msgstr "&Číslování"
 #: rc.cpp:171
 msgid "&Numbering..."
 msgstr "Čí&slování..."
+
+#: rc.cpp:747
+#, fuzzy
+msgid "&Numeric"
+msgstr "Číslo"
 
 #: rc.cpp:674
 msgid "&Offset:"
@@ -253,6 +268,11 @@ msgstr "&Jednoduchý název souboru"
 msgid "&Skip Numbers"
 msgstr "&Přeskočit čísla"
 
+#: rc.cpp:738
+#, fuzzy
+msgid "&Sort filenames ..."
+msgstr "&Vložit část názvu souboru..."
+
 #: rc.cpp:726
 #, fuzzy
 msgid "&Start index:"
@@ -272,6 +292,11 @@ msgstr "&Předloha:"
 
 #: rc.cpp:645
 msgid "&Test..."
+msgstr "&Provést zkoušku..."
+
+#: rc.cpp:753
+#, fuzzy
+msgid "&Token ..."
 msgstr "&Provést zkoušku..."
 
 #: rc.cpp:657
@@ -397,7 +422,7 @@ msgstr ""
 "přídavného modulu snadno můžete přidat posun o -4, abyste dostali požadovaný "
 "výsledek.</p></body></html>"
 
-#: krenamewindow.cpp:396
+#: krenamewindow.cpp:397
 msgid "<b>Files:<b> %1"
 msgstr "<b>Soubory:<b> %1"
 
@@ -521,7 +546,7 @@ msgstr ""
 "<qt>Tento přídavný modul může přepsat názvy souborů do angličtiny (to jest "
 "zdokonalit transliteraci - přepis jinou abecedou)</qt>"
 
-#: systemplugin.cpp:70
+#: systemplugin.cpp:72
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
@@ -763,6 +788,11 @@ msgstr "Vlastník souboru"
 msgid "Custom ..."
 msgstr "Vlastní jméno"
 
+#: rc.cpp:735
+#, fuzzy
+msgid "Custom Sorting"
+msgstr "Vlastní souborová přípona"
+
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
 msgstr "Vlastní souborová přípona"
@@ -795,7 +825,7 @@ msgstr ""
 msgid "Date (Desc.)"
 msgstr ""
 
-#: systemplugin.cpp:68
+#: systemplugin.cpp:70
 msgid "Date and system functions"
 msgstr "Funkce data a systémové funkce"
 
@@ -1095,63 +1125,68 @@ msgstr "Vložit poznámku ke stopě"
 msgid "Insert the comment of an image"
 msgstr "Vložit poznámku k obrázku"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:51
 msgid "Insert the current date"
 msgstr "Vložit současné datum"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:52
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "Vložit současné datum ve formátu řetězce rrrr-mm-dd"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:55
 msgid "Insert the current day as number"
 msgstr "Vložit současný den jako číslo"
 
-#: systemplugin.cpp:56
+#: systemplugin.cpp:57
 msgid "Insert the current hour as number"
 msgstr "Vložit současnou hodinu jako číslo"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:58
 msgid "Insert the current minute as number"
 msgstr "Vložit současnou minutu jako číslo"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:54
 msgid "Insert the current month as number"
 msgstr "Vložit současný měsíc jako číslo"
 
-#: systemplugin.cpp:58
+#: systemplugin.cpp:59
 msgid "Insert the current second as number"
 msgstr "Vložit současnou sekundu jako číslo"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:56
 msgid "Insert the current time"
 msgstr "Vložit současný čas"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:53
 msgid "Insert the current year"
 msgstr "Vložit současný rok"
 
-#: systemplugin.cpp:65
+#: systemplugin.cpp:66
 msgid "Insert the date of the last file access"
 msgstr "Vložit datum posledního přístupu k souboru"
 
-#: systemplugin.cpp:61
+#: systemplugin.cpp:68
+#, fuzzy
+msgid "Insert the file size in bytes"
+msgstr "Vložit datum vytvoření souboru"
+
+#: systemplugin.cpp:62
 msgid "Insert the files creation date"
 msgstr "Vložit datum vytvoření souboru"
 
-#: systemplugin.cpp:63
+#: systemplugin.cpp:64
 msgid "Insert the files modification date"
 msgstr "Vložit datum úprav souboru"
 
-#: systemplugin.cpp:66
+#: systemplugin.cpp:67
 msgid "Insert the formatted date of the last file access"
 msgstr "Vložit formátované datum posledního přístupu k souboru"
 
-#: systemplugin.cpp:62
+#: systemplugin.cpp:63
 msgid "Insert the formatted file creation date"
 msgstr "Vložit naformátované datum vytvoření souboru"
 
-#: systemplugin.cpp:64
+#: systemplugin.cpp:65
 msgid "Insert the formatted modification date"
 msgstr "Vložit formátované datum úprav souboru"
 
@@ -1344,7 +1379,7 @@ msgstr "Číslo"
 msgid "O&wner:"
 msgstr "&Vlastník:"
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Origin"
 msgstr "Původní název"
 
@@ -1360,7 +1395,7 @@ msgstr "Ostatní"
 msgid "Out&put:"
 msgstr ""
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:60
 msgid "Owner of the file"
 msgstr "Vlastník souboru"
 
@@ -1368,7 +1403,7 @@ msgstr "Vlastník souboru"
 msgid "Ownership"
 msgstr "Vlastnictví"
 
-#: systemplugin.cpp:60
+#: systemplugin.cpp:61
 msgid "Owning group of the file"
 msgstr "Skupina vlastníků souboru"
 
@@ -1497,7 +1532,7 @@ msgstr "&Přejmenovat znovu zpracované soubory..."
 msgid "Rename the file using the filename created by KRename."
 msgstr "Použít název souboru vytvořený &KRename"
 
-#: krenamemodel.cpp:445
+#: krenamemodel.cpp:451
 msgid "Renamed"
 msgstr "Po přejmenování"
 
@@ -1835,6 +1870,10 @@ msgstr ""
 #: main.cpp:46
 msgid "add directory recursively"
 msgstr "Přidat adresář rekurzivně"
+
+#: rc.cpp:750
+msgid "by"
+msgstr ""
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"
