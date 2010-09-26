@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-19 20:22+0200\n"
+"POT-Creation-Date: 2010-09-26 08:49+0200\n"
 "PO-Revision-Date: 2005-04-07 15:59+0200\n"
 "Last-Translator: Nicolas BENOIT <nbenoit@tuxfamily.org>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -555,6 +555,13 @@ msgstr ""
 "<qt>Ce plugin place les fichiers dans des sous-répertoires après les avoir "
 "renommé.</qt>"
 
+#: fontplugin.cpp:42
+#, fuzzy
+msgid "<qt>This plugin supports reading tags from font files.</qt>"
+msgstr ""
+"<qt>Ce plugin place les fichiers dans des sous-répertoires après les avoir "
+"renommé.</qt>"
+
 #: rc.cpp:297 rc.cpp:300 rc.cpp:321 rc.cpp:330
 msgid "?"
 msgstr ""
@@ -993,6 +1000,10 @@ msgstr ""
 "paquets SuSE pour toutes les versions imaginables et est aussi le nouveau "
 "mainteneur de KRename pour Gentoo"
 
+#: fontplugin.cpp:41
+msgid "Font (FreeType2) Plugin"
+msgstr ""
+
 #: rc.cpp:537 rc.cpp:549 rc.cpp:561
 msgid "Forbidden"
 msgstr ""
@@ -1117,6 +1128,19 @@ msgstr "Insérer ']'"
 
 #: scriptplugin.cpp:71
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
+msgstr ""
+
+#: fontplugin.cpp:38
+#, fuzzy
+msgid "Insert the (usually English) name of the font family."
+msgstr "insérer la longueur du nom de fichier original"
+
+#: fontplugin.cpp:39
+msgid "Insert the (usually English) name of the font style."
+msgstr ""
+
+#: fontplugin.cpp:37
+msgid "Insert the Postscript name for Type1 and TrueType fonts."
 msgstr ""
 
 #: taglibplugin.cpp:43

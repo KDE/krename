@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-19 20:22+0200\n"
+"POT-Creation-Date: 2010-09-26 08:49+0200\n"
 "PO-Revision-Date: 2008-10-09 11:28+0200\n"
 "Last-Translator: Michał Smoczyk <msmoczyk@wp.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -548,6 +548,13 @@ msgstr ""
 "<qt>Ta wtyczka wspiera odczyt znaczników dla plików audio MP3, Ogg Vorbis, "
 "FLAC, MPC, Speex WavPack oraz TrueAudio.</qt>"
 
+#: fontplugin.cpp:42
+#, fuzzy
+msgid "<qt>This plugin supports reading tags from font files.</qt>"
+msgstr ""
+"<qt>Ta wtyczka wspiera odczyt znaczników dla plików audio MP3, Ogg Vorbis, "
+"FLAC, MPC, Speex WavPack oraz TrueAudio.</qt>"
+
 #: rc.cpp:297 rc.cpp:300 rc.cpp:321 rc.cpp:330
 msgid "?"
 msgstr ""
@@ -977,6 +984,10 @@ msgstr ""
 "Poprawka na problemy z plikiem 'spec' oraz dostarczenie pakietów RPM dla "
 "każdej wersji SuSE. Nowy zarządca ds. Gentoo"
 
+#: fontplugin.cpp:41
+msgid "Font (FreeType2) Plugin"
+msgstr ""
+
 #: rc.cpp:537 rc.cpp:549 rc.cpp:561
 msgid "Forbidden"
 msgstr ""
@@ -1097,6 +1108,19 @@ msgstr "Wstaw \"]\""
 #: scriptplugin.cpp:71
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "Wstaw fragment kodu JavaScript (4+5 w tym przypadku)"
+
+#: fontplugin.cpp:38
+#, fuzzy
+msgid "Insert the (usually English) name of the font family."
+msgstr "wstaw długość źródłowej nazwy pliku"
+
+#: fontplugin.cpp:39
+msgid "Insert the (usually English) name of the font style."
+msgstr ""
+
+#: fontplugin.cpp:37
+msgid "Insert the Postscript name for Type1 and TrueType fonts."
+msgstr ""
 
 #: taglibplugin.cpp:43
 msgid "Insert the album of a track"

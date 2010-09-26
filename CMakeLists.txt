@@ -40,8 +40,6 @@ ELSE(EXIV2_FOUND)
   MESSAGE("-- The exiv2 library was not found. KRename will not be built with exiv2 support.")
 ENDIF(EXIV2_FOUND)
 
-CONFIGURE_FILE(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h )
-
 # Find podofo
 macro_optional_find_package(LIBPODOFO)
 macro_log_feature(LIBPODOFO_FOUND "libPodofo" "A library to access pdf metadata" "http://podofo.sourceforge.net/" FALSE "")
@@ -52,6 +50,21 @@ ELSE(LIBPODOFO_FOUND)
   MESSAGE("-- The podofo library was not found. KRename will not be built with podofo support.")
   SET(LIBPODOFO_LIB "")
 ENDIF(LIBPODOFO_FOUND)
+
+# Find freetype
+macro_optional_find_package(Freetype)
+macro_log_feature(FREETYPE_FOUND "FreeType2" "A library to access font metadata" "http://www.freetype.org" FALSE "")
+IF(FREETYPE_FOUND)
+  ADD_DEFINITIONS( -DWITH_FREETYPE )
+  MESSAGE("-- The freetype library was found. KRename will be built with freetype support.")
+ELSE(FREETYPE_FOUND)
+  MESSAGE("-- The freetype library was not found. KRename will not be built with freetype support.")
+  SET(FREETYPE_LIBRARIES "")
+ENDIF(FREETYPE_FOUND)
+
+
+# Update configuration
+CONFIGURE_FILE(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h )
 
 # Directories
 

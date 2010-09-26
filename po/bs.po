@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-19 20:22+0200\n"
+"POT-Creation-Date: 2010-09-26 08:49+0200\n"
 "PO-Revision-Date: 2004-07-30 23:15+0200\n"
 "Last-Translator: Asim Husanovic <asim.h@megatel.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -548,6 +548,13 @@ msgstr ""
 "<qt>Ovaj dodatak sortira imena datoteka poslije preimenovanja u "
 "poddirektorijima.</qt>"
 
+#: fontplugin.cpp:42
+#, fuzzy
+msgid "<qt>This plugin supports reading tags from font files.</qt>"
+msgstr ""
+"<qt>Ovaj dodatak sortira imena datoteka poslije preimenovanja u "
+"poddirektorijima.</qt>"
+
 #: rc.cpp:297 rc.cpp:300 rc.cpp:321 rc.cpp:330
 msgid "?"
 msgstr ""
@@ -982,6 +989,10 @@ msgstr ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 
+#: fontplugin.cpp:41
+msgid "Font (FreeType2) Plugin"
+msgstr ""
+
 #: rc.cpp:537 rc.cpp:549 rc.cpp:561
 msgid "Forbidden"
 msgstr ""
@@ -1106,6 +1117,19 @@ msgstr "Ubaci ']'"
 
 #: scriptplugin.cpp:71
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
+msgstr ""
+
+#: fontplugin.cpp:38
+#, fuzzy
+msgid "Insert the (usually English) name of the font family."
+msgstr "unesi dužinu ulaznog imena datoteke"
+
+#: fontplugin.cpp:39
+msgid "Insert the (usually English) name of the font style."
+msgstr ""
+
+#: fontplugin.cpp:37
+msgid "Insert the Postscript name for Type1 and TrueType fonts."
 msgstr ""
 
 #: taglibplugin.cpp:43

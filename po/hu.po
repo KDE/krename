@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-19 20:22+0200\n"
+"POT-Creation-Date: 2010-09-26 08:49+0200\n"
 "PO-Revision-Date: 2010-01-10 22:46+0100\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
 "Language-Team: Hungarian\n"
@@ -561,6 +561,13 @@ msgstr ""
 "<qt>A modul használatával címkéket lehet beolvasni JPEG- és TIFF-fájlokból.</"
 "qt>"
 
+#: fontplugin.cpp:42
+#, fuzzy
+msgid "<qt>This plugin supports reading tags from font files.</qt>"
+msgstr ""
+"<qt>A modul használatával címkéket lehet beolvasni JPEG- és TIFF-fájlokból.</"
+"qt>"
+
 #: rc.cpp:297 rc.cpp:300 rc.cpp:321 rc.cpp:330
 msgid "?"
 msgstr "?"
@@ -973,6 +980,10 @@ msgstr ""
 "A spec-fájllal kapcsolatos problémák javítása, SUSE-hoz való RPM-ek, a "
 "KRename Gentoo alatti karbantartása."
 
+#: fontplugin.cpp:41
+msgid "Font (FreeType2) Plugin"
+msgstr ""
+
 #: rc.cpp:537 rc.cpp:549 rc.cpp:561
 msgid "Forbidden"
 msgstr "Nincs hozzáférés"
@@ -1091,6 +1102,19 @@ msgstr "\"]\" beillesztése"
 #: scriptplugin.cpp:71
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "JavaScript-kódrészlet (jelen esetben 4+5) beillesztése"
+
+#: fontplugin.cpp:38
+#, fuzzy
+msgid "Insert the (usually English) name of the font family."
+msgstr "a bemeneti fájlnév hosszának beillesztése"
+
+#: fontplugin.cpp:39
+msgid "Insert the (usually English) name of the font style."
+msgstr ""
+
+#: fontplugin.cpp:37
+msgid "Insert the Postscript name for Type1 and TrueType fonts."
+msgstr ""
 
 #: taglibplugin.cpp:43
 msgid "Insert the album of a track"

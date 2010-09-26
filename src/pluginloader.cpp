@@ -36,6 +36,9 @@
 #ifdef WITH_PODOFO 
 # include "podofoplugin.h"
 #endif // WITH_TAGLIB
+#ifdef WITH_FREETYPE
+# include "fontplugin.h"
+#endif // WITH_FREETYPE
 #include "translitplugin.h"
 #include "snumplugin.h"
 
@@ -136,6 +139,9 @@ void PluginLoader::load()
 #ifdef WITH_EXIV2
     m_plugins.append( new Exiv2Plugin( this ) );
 #endif // WITH_EXIV2
+#ifdef WITH_FREETYPE
+    m_plugins.append( new FontPlugin( this ) );
+#endif // WITH_FREETYPE
 	m_plugins.append( new IncreaseCounterPlugin( this ) );
 #ifndef _WIN32
 	m_plugins.append( new PermissionsPlugin( this ) );

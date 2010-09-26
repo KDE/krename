@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-19 20:22+0200\n"
+"POT-Creation-Date: 2010-09-26 08:49+0200\n"
 "PO-Revision-Date: 2010-03-22 16:26+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -560,6 +560,13 @@ msgstr ""
 "<qt>У цьому додатку реалізовано підтримку читання міток з файлів JPEG і TIFF."
 "</qt>"
 
+#: fontplugin.cpp:42
+#, fuzzy
+msgid "<qt>This plugin supports reading tags from font files.</qt>"
+msgstr ""
+"<qt>У цьому додатку реалізовано підтримку читання міток з файлів JPEG і TIFF."
+"</qt>"
+
 #: rc.cpp:297 rc.cpp:300 rc.cpp:321 rc.cpp:330
 msgid "?"
 msgstr "?"
@@ -968,6 +975,10 @@ msgstr ""
 "Виправив проблеми з файлом spec і створив rpm для всіх можливих версій SuSE, "
 "також є новим супровідником KRename у Gentoo"
 
+#: fontplugin.cpp:41
+msgid "Font (FreeType2) Plugin"
+msgstr ""
+
 #: rc.cpp:537 rc.cpp:549 rc.cpp:561
 msgid "Forbidden"
 msgstr "Заборонено"
@@ -1086,6 +1097,19 @@ msgstr "Вставити «]»"
 #: scriptplugin.cpp:71
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "Вставити фрагмент коду JavaScript (у прикладі 4+5)"
+
+#: fontplugin.cpp:38
+#, fuzzy
+msgid "Insert the (usually English) name of the font family."
+msgstr "вставити довжину початкової назви файла"
+
+#: fontplugin.cpp:39
+msgid "Insert the (usually English) name of the font style."
+msgstr ""
+
+#: fontplugin.cpp:37
+msgid "Insert the Postscript name for Type1 and TrueType fonts."
+msgstr ""
 
 #: taglibplugin.cpp:43
 msgid "Insert the album of a track"

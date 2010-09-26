@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename 4.0.3-1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-19 20:22+0200\n"
+"POT-Creation-Date: 2010-09-26 08:49+0200\n"
 "PO-Revision-Date: 2010-01-29 20:14+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -558,6 +558,11 @@ msgstr "<qt>Este plugin suporta ler etiquetas de ficheiros JPEG e TIFF.</qt>"
 msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
 msgstr "<qt>Este plugin suporta ler etiquetas de ficheiros JPEG e TIFF.</qt>"
 
+#: fontplugin.cpp:42
+#, fuzzy
+msgid "<qt>This plugin supports reading tags from font files.</qt>"
+msgstr "<qt>Este plugin suporta ler etiquetas de ficheiros JPEG e TIFF.</qt>"
+
 #: rc.cpp:297 rc.cpp:300 rc.cpp:321 rc.cpp:330
 msgid "?"
 msgstr "?"
@@ -972,6 +977,10 @@ msgstr ""
 "todas as versões de SuSE que possa imaginar e é também o novo responsável "
 "Gentoo pelo KRename"
 
+#: fontplugin.cpp:41
+msgid "Font (FreeType2) Plugin"
+msgstr ""
+
 #: rc.cpp:537 rc.cpp:549 rc.cpp:561
 msgid "Forbidden"
 msgstr "Proibido"
@@ -1090,6 +1099,19 @@ msgstr "Inserir ']'"
 #: scriptplugin.cpp:71
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "Inserir um fragmento de código JavaScript (4+5 neste caso)"
+
+#: fontplugin.cpp:38
+#, fuzzy
+msgid "Insert the (usually English) name of the font family."
+msgstr "inserir o comprimento do nome de ficheiro de entrada"
+
+#: fontplugin.cpp:39
+msgid "Insert the (usually English) name of the font style."
+msgstr ""
+
+#: fontplugin.cpp:37
+msgid "Insert the Postscript name for Type1 and TrueType fonts."
+msgstr ""
 
 #: taglibplugin.cpp:43
 msgid "Insert the album of a track"

@@ -15,4 +15,7 @@
 /* have PoDoFo */
 #define HAVE_PODOFO 1
 
+/* have Freetype */
+#define HAVE_FREETYPE ${FREETYPE_FOUND}
+
 #define VERSION "${KRENAME_VERSION}"
