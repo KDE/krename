@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_CN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-26 08:49+0200\n"
+"POT-Creation-Date: 2010-09-26 08:59+0200\n"
 "PO-Revision-Date: 2007-07-30 11:31+0800\n"
 "Last-Translator: Roy Qu <royqh1979@gmail.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -504,7 +504,9 @@ msgstr ""
 
 #: snumplugin.cpp:50
 #, fuzzy
-msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgid ""
+"<qt>This plugin can extract information from the filename of a TV series.</"
+"qt>"
 msgstr "<qt>此插件翻译用非英文字母写成的文件名。</qt>"
 
 #: translitplugin.cpp:102

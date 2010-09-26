@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-26 08:49+0200\n"
+"POT-Creation-Date: 2010-09-26 08:59+0200\n"
 "PO-Revision-Date: 2006-03-02 14:28+0100\n"
 "Last-Translator: Jose Rodriguez <chmpmi@eresmas.net>\n"
 "Language-Team:  <es@li.org>\n"
@@ -518,7 +518,9 @@ msgstr ""
 
 #: snumplugin.cpp:50
 #, fuzzy
-msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgid ""
+"<qt>This plugin can extract information from the filename of a TV series.</"
+"qt>"
 msgstr ""
 "<qt>Este plugin transcribe nombres escritos con caracteres no ingleses.</qt>"
 

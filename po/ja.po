@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-26 08:49+0200\n"
+"POT-Creation-Date: 2010-09-26 08:59+0200\n"
 "PO-Revision-Date: 2005-01-27 20:39+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team:  <ja@li.org>\n"
@@ -504,7 +504,9 @@ msgstr ""
 
 #: snumplugin.cpp:50
 #, fuzzy
-msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgid ""
+"<qt>This plugin can extract information from the filename of a TV series.</"
+"qt>"
 msgstr "<qt>リネームしたファイルをサブディレクトリに振り分ける</qt>"
 
 #: translitplugin.cpp:102

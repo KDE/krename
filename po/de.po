@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-26 08:49+0200\n"
+"POT-Creation-Date: 2010-09-26 08:59+0200\n"
 "PO-Revision-Date: 2010-06-24 22:16+0100\n"
 "Last-Translator: Dominik Seichter <domseichter@web.de>\n"
 "Language-Team: Deutsch <kde-i18n-doc@kde.org>\n"
@@ -58,9 +58,8 @@ msgid "&Advanced Filename"
 msgstr "&Fortgeschrittenen-Modus für Dateiname"
 
 #: rc.cpp:741
-#, fuzzy
 msgid "&Ascending"
-msgstr "Sortierung: Aufsteigend"
+msgstr "&Aufsteigend"
 
 #: rc.cpp:435
 msgid "&Cancel"
@@ -95,9 +94,8 @@ msgid "&Delete"
 msgstr "&Entfernen"
 
 #: rc.cpp:744
-#, fuzzy
 msgid "&Descending"
-msgstr "Sortierung: Absteigend"
+msgstr "A&bsteigend"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -188,9 +186,8 @@ msgid "&Numbering..."
 msgstr "&Zähler..."
 
 #: rc.cpp:747
-#, fuzzy
 msgid "&Numeric"
-msgstr "Zähler"
+msgstr "&Numerisch"
 
 #: rc.cpp:674
 msgid "&Offset:"
@@ -265,9 +262,8 @@ msgid "&Skip Numbers"
 msgstr "Zahlen &überspringen"
 
 #: rc.cpp:738
-#, fuzzy
 msgid "&Sort filenames ..."
-msgstr "&Teil des Dateinamens einfügen..."
+msgstr "Dateinamen &sortieren ..."
 
 #: rc.cpp:726
 msgid "&Start index:"
@@ -290,9 +286,8 @@ msgid "&Test..."
 msgstr "&Test..."
 
 #: rc.cpp:753
-#, fuzzy
 msgid "&Token ..."
-msgstr "&Test..."
+msgstr "&Befehl ..."
 
 #: rc.cpp:657
 msgid "&Type:"
@@ -336,58 +331,59 @@ msgstr ": Das Ausgabeverzeichnis %1 existiert nicht."
 
 #: rc.cpp:666
 msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" "
+"\"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; "
 "font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">This plugin adds a given offset to numbers in filenames.</"
-"span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">E.g. you "
-"have the filenames: <span style=\" font-style:italic;\">img014</span>, <span "
-"style=\" font-style:italic;\">img015</span>, <span style=\" font-style:"
-"italic;\">img023</span> which should be named<span style=\" font-style:"
-"italic;\"> img010</span>, <span style=\" font-style:italic;\">img011</span> "
-"and <span style=\" font-style:italic;\">img019. </span>Using this plugin, "
-"you can easily add an offset of -4 to get the desired result.</p></body></"
-"html>"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
+"font-weight:600;\">This plugin adds a given offset to numbers in "
+"filenames.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\">E.g. you have the filenames: <span style=\" "
+"font-style:italic;\">img014</span>, <span style=\" "
+"font-style:italic;\">img015</span>, <span style=\" "
+"font-style:italic;\">img023</span> which should be named<span style=\" "
+"font-style:italic;\"> img010</span>, <span style=\" "
+"font-style:italic;\">img011</span> and <span style=\" "
+"font-style:italic;\">img019. </span>Using this plugin, you can easily add an "
+"offset of -4 to get the desired result.</p></body></html>"
 msgstr ""
 
 #: rc.cpp:680
 msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" "
+"\"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
-"large; font-weight:600;\">Welcome to KRename</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">A batch file renamer for "
-"KDE.<br />To rename your files, you have to:</p></body></html>"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
+"font-size:large; font-weight:600;\">Welcome to KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px;\">A batch file "
+"renamer for KDE.<br />To rename your files, you have to:</p></body></html>"
 msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" "
+"\"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
-"large; font-weight:600;\">Willkommen bei KRename</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Ein Batch-Datei-Umbenenner "
-"für KDE.<br />Bitte folgen Sie diesen Schritten, um Dateien umzubenennen:</"
-"p></body></html>"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
+"font-size:large; font-weight:600;\">Willkommen bei KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Ein "
+"Batch-Datei-Umbenenner für KDE.<br />Bitte folgen Sie diesen Schritten, um "
+"Dateien umzubenennen:</p></body></html>"
 
 #: krenamewindow.cpp:397
 msgid "<b>Files:<b> %1"
@@ -403,41 +399,41 @@ msgstr ""
 
 #: rc.cpp:123
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
-"weight:400; font-style:normal; text-decoration:none;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">.</span></p></body></html>"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+"font-weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
+"font-weight:600;\">.</span></p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style "
+"type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
-"weight:400; font-style:normal; text-decoration:none;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">.</span></p></body></html>"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+"font-weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
+"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
+"font-weight:600;\">.</span></p></body></html>"
 
 #: main.cpp:60
 msgid ""
 "<qt><p>KRename is a batch file renamer which can rename a list of files "
 "based on a set of expressions.</p><p>If you like KRename you may want to "
 "support it. Testing, bug fixes and feature requests are as welcome as "
-"financial support (everybody needs money ;). See help files for details.</"
-"p></qt>"
+"financial support (everybody needs money ;). See help files for "
+"details.</p></qt>"
 msgstr ""
 "<qt><p>KRename ist ein Batch-Umbenenner, der eine Liste von Dateien anhand "
 "eines vorgegebenen Musters umbenennt.</p><p>Wenn Ihnen KRename gefällt, "
-"sollten Sie überlegen KRename zu unterstützen.Die Hilfe enthält mehr Details."
-"</p></qt> "
+"sollten Sie überlegen KRename zu unterstützen.Die Hilfe enthält mehr "
+"Details.</p></qt> "
 
 #: rc.cpp:168
 msgid ""
-"<qt>Configure start index, stepping and skipping for numbering of filenames."
-"</qt>"
+"<qt>Configure start index, stepping and skipping for numbering of "
+"filenames.</qt>"
 msgstr ""
 "<qt>Einstellungen für Zähler und deren Startwert, Schrittweite und das "
 "überspringen von Zahlen in Dateinamen.</qt>"
@@ -462,8 +458,8 @@ msgstr "<qt>Geben Sie ein Muster für das Umbenennen des Dateinamens ein.</qt>"
 
 #: rc.cpp:162 rc.cpp:261
 msgid ""
-"<qt>Find and replace strings and regular expressions in the renamed filename."
-"</qt>"
+"<qt>Find and replace strings and regular expressions in the renamed "
+"filename.</qt>"
 msgstr ""
 "<qt>Suchen und ersetzen sie Zeichenketten oder Reguläre Ausdrücke in den "
 "umbenannten Dateinamen.</qt>"
@@ -495,11 +491,12 @@ msgstr ""
 "in den neuen Dateinamen eingefügt werden soll:</qt>"
 
 #: snumplugin.cpp:50
-#, fuzzy
-msgid "<qt>This plugin can extract a filename series number.</qt>"
+msgid ""
+"<qt>This plugin can extract information from the filename of a TV "
+"series.</qt>"
 msgstr ""
-"<qt>Dieses Plugin ersetzt alle nicht englische Buchstaben in einem "
-"Dateinamen (transliterieren).</qt>"
+"<qt>Dieses Plugin kann aus dem Dateinamen einer Fernsehserie Informationen "
+"extrahieren.</qt>"
 
 #: translitplugin.cpp:102
 msgid ""
@@ -540,11 +537,10 @@ msgstr ""
 "werden.</qt>"
 
 #: fontplugin.cpp:42
-#, fuzzy
 msgid "<qt>This plugin supports reading tags from font files.</qt>"
 msgstr ""
-"<qt>Mit diesem Plugin können Meta-Information von PDF Dateien ausgelesen "
-"werden.</qt>"
+"<qt>Mit diesem Plugin können Meta-Information von Schriftartdateien "
+"ausgelesen werden.</qt>"
 
 #: rc.cpp:297 rc.cpp:300 rc.cpp:321 rc.cpp:330
 msgid "?"
@@ -622,9 +618,8 @@ msgid "Arpad Biro"
 msgstr "Arpad Biro"
 
 #: rc.cpp:27
-#, fuzzy
 msgid "Ascending"
-msgstr "Sortierung: Aufsteigend"
+msgstr "Aufsteigend"
 
 #: main.cpp:109
 msgid "Asim Husanovic"
@@ -757,14 +752,12 @@ msgid "Creator of the pdf file"
 msgstr "Ersteller der PDF Datei"
 
 #: rc.cpp:45
-#, fuzzy
 msgid "Custom ..."
-msgstr "Benutzerspezifischer Name"
+msgstr "Benutzerspezifischer ..."
 
 #: rc.cpp:735
-#, fuzzy
 msgid "Custom Sorting"
-msgstr "Benutzerspezifizierte Erweiterung"
+msgstr "Benutzerspezifische Sortierung"
 
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
@@ -820,9 +813,8 @@ msgstr ""
 "können:"
 
 #: rc.cpp:30
-#, fuzzy
 msgid "Descending"
-msgstr "Sortierung: Absteigend"
+msgstr "Absteigend"
 
 #: rc.cpp:483
 msgid "Description"
@@ -963,9 +955,8 @@ msgstr ""
 "SuSE-Version und ist auch der neue Gentoo-Maintainer von KRename."
 
 #: fontplugin.cpp:41
-#, fuzzy
 msgid "Font (FreeType2) Plugin"
-msgstr "PoDoFo (PDF) Plugin"
+msgstr "Schriftarten (FreeType2) Plugin"
 
 #: rc.cpp:537 rc.cpp:549 rc.cpp:561
 msgid "Forbidden"
@@ -1092,9 +1083,9 @@ msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "JavaScript-Code einfügen (in diesem Fall 4+5)"
 
 #: fontplugin.cpp:38
-#, fuzzy
 msgid "Insert the (usually English) name of the font family."
-msgstr "die Länge des Eingabedateinamens einfügen"
+msgstr ""
+"Den (üblicherweise Englischen) Namen der Schriftarten Familie einfügen."
 
 #: fontplugin.cpp:39
 msgid "Insert the (usually English) name of the font style."
@@ -1161,9 +1152,8 @@ msgid "Insert the date of the last file access"
 msgstr "Das Datum des letzten Zugriffs auf eine Datei einfügen"
 
 #: systemplugin.cpp:68
-#, fuzzy
 msgid "Insert the file size in bytes"
-msgstr "Das Erstellungsdatum der Datei einfügen"
+msgstr "Die Dateigröße in Bytes einfügen."
 
 #: systemplugin.cpp:62
 msgid "Insert the files creation date"
@@ -1210,14 +1200,13 @@ msgid "Inserts the episode number in two or three digits"
 msgstr ""
 
 #: snumplugin.cpp:42
-#, fuzzy
 msgid "Inserts the season number in two digits"
-msgstr "Index des aktuellen Titels einfügen"
+msgstr "Die Staffel mit zwei Ziffern einfügen."
 
 #: snumplugin.cpp:41
-#, fuzzy
 msgid "Inserts the series number of original filename"
-msgstr "Transliterierung des original Dateinamens einfügen"
+msgstr ""
+"Die Identifikationsnummer der Episode aus dem original Dateinamen einfügen."
 
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
@@ -1358,9 +1347,8 @@ msgid "Number of pages in the pdf file"
 msgstr "Anzahl der Seiten in der PDF Datei"
 
 #: rc.cpp:33
-#, fuzzy
 msgid "Numeric"
-msgstr "Zähler"
+msgstr "Numerisch"
 
 #: rc.cpp:534
 msgid "O&wner:"
@@ -1474,9 +1462,8 @@ msgid "Provided the new preview and move features"
 msgstr "Hat die neue Vorschau und das neue Verschieben geschrieben"
 
 #: rc.cpp:36
-#, fuzzy
 msgid "Random"
-msgstr "Sortierung: Zufällig"
+msgstr "Zufällig"
 
 #: rc.cpp:12
 msgid "Re&move"
@@ -1539,9 +1526,8 @@ msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
 
 #: snumplugin.cpp:48
-#, fuzzy
 msgid "SeriesNumber"
-msgstr "Zähler"
+msgstr ""
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1767,9 +1753,8 @@ msgid "Undoing all renamed files."
 msgstr "Alle Umbenennungen werden rückgängig gemacht."
 
 #: rc.cpp:24
-#, fuzzy
 msgid "Unsorted"
-msgstr "Sortierung: Unsortiert"
+msgstr "Unsortiert"
 
 #: rc.cpp:66
 msgid "Up"

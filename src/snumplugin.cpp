@@ -47,8 +47,8 @@ SnumPlugin::SnumPlugin( PluginLoader* loader )
 
     m_name = i18n("SeriesNumber");
     m_icon = "video-television";
-    m_comment = i18n("<qt>This plugin can extract a filename "
-		     "series number.</qt>");
+    m_comment = i18n("<qt>This plugin can extract information from the filename "
+                     "of a TV series.</qt>");
 
 
 }
