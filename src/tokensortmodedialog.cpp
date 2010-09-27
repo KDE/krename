@@ -29,7 +29,18 @@ TokenSortModeDialog::TokenSortModeDialog( KRenameTokenSorter::ESimpleSortMode eS
     m_dialog.radioDescending->setChecked( eSortMode == KRenameTokenSorter::eSimpleSortMode_Descending );
     m_dialog.radioNumeric->setChecked( eSortMode == KRenameTokenSorter::eSimpleSortMode_Numeric );
 
+    connect( m_dialog.radioPredefined, SIGNAL( clicked(bool) ), SLOT( slotEnableControls() ) );
+    connect( m_dialog.radioCustom, SIGNAL( clicked(bool) ), SLOT( slotEnableControls() ) );
+
+    m_dialog.comboPredefined->addItem( i18n("Access Date"), "accessdate;yyyyMMddHHmm" );
+    m_dialog.comboPredefined->addItem( i18n("Creation Date"), "creationdate;yyyyMMddHHmm" );
+    m_dialog.comboPredefined->addItem( i18n("Filesize"), "filesize" );
+    m_dialog.comboPredefined->addItem( i18n("Group"), "group" );
+    m_dialog.comboPredefined->addItem( i18n("Modification Date"), "modificationdate;yyyyMMddHHmm" );
+    m_dialog.comboPredefined->addItem( i18n("User"), "user" );
+
     initTokens();
+    slotEnableControls();
 }
 
 void TokenSortModeDialog::initTokens()
@@ -54,6 +65,8 @@ void TokenSortModeDialog::initTokens()
 
 void TokenSortModeDialog::slotEnableControls()
 {
+    m_dialog.comboToken->setEnabled( m_dialog.radioCustom->isChecked() );
+    m_dialog.comboPredefined->setEnabled( m_dialog.radioPredefined->isChecked() );
 
 }
 
@@ -79,5 +92,13 @@ KRenameTokenSorter::ESimpleSortMode TokenSortModeDialog::getSortMode() const
 
 QString TokenSortModeDialog::getToken() const
 {
-    return m_dialog.comboToken->currentText();
+    if( m_dialog.radioCustom->isChecked() )
+    {
+        return m_dialog.comboToken->currentText();
+    }
+    else
+    {
+        int index = m_dialog.comboPredefined->currentIndex();
+        return m_dialog.comboPredefined->itemData( index ).toString();
+    }
 }

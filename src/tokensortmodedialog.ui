@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>413</width>
-    <height>163</height>
+    <height>189</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -68,6 +68,26 @@
         <string>&amp;Token ...</string>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QRadioButton" name="radioPredefined">
+          <property name="text">
+           <string>&amp;Predefined</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboPredefined"/>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioCustom">
+          <property name="text">
+           <string>&amp;Custom</string>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="QComboBox" name="comboToken">
           <property name="editable">

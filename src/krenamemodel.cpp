@@ -79,8 +79,9 @@ QVariant KRenameModel::data ( const QModelIndex & index, int role ) const
                 filename = filename + "." + file.srcExtension();
             }
 
+            const QString & prettyUrl = file.toString();
             return "<qt><b>" + filename + "</b><br/>" +
-                file.toString() + "</qt>";
+                 prettyUrl + "</qt>";
         }
     }
     else if( role == Qt::DecorationRole && m_preview ) 
