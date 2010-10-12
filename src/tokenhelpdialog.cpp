@@ -91,6 +91,7 @@ TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
     m_widget.searchCategory->searchLine()->setTreeWidget( m_widget.listCategories );
     m_widget.searchToken   ->searchLine()->setTreeWidget( m_widget.listTokens );
     m_widget.comboPreview->setModel( m_model );
+    m_widget.listTokens->sortItems( 0, Qt::AscendingOrder );
 
     connect(insert, SIGNAL(clicked(bool)), SLOT(slotInsert()));
     connect(this, SIGNAL(rejected()), SLOT(reject()));
@@ -125,18 +126,29 @@ int TokenHelpDialog::exec()
 {
     loadConfig();
 
-    if( !m_first.isEmpty() ) 
+    m_widget.listCategories->sortItems( 0, Qt::AscendingOrder );
+
+    if( !m_lastSelected.isEmpty() )
     {
-        for( int i=0;i<m_widget.listCategories->topLevelItemCount(); i++ ) 
-            if( m_widget.listCategories->topLevelItem( i )->text(0) == m_first )
-            {
-                m_widget.listCategories->topLevelItem( i )->setSelected( true );
-                this->slotCategoryChanged( m_widget.listCategories->topLevelItem( i ) );
-                break;
-            }
+        selectCategory( m_lastSelected );
+    }
+    else if( !m_first.isEmpty() ) 
+    {
+        selectCategory( m_first );
     }
 
     return QDialog::exec();
+}
+
+void TokenHelpDialog::selectCategory( const QString & category ) 
+{
+    for( int i=0;i<m_widget.listCategories->topLevelItemCount(); i++ ) 
+        if( m_widget.listCategories->topLevelItem( i )->text(0) == category )
+        {
+            m_widget.listCategories->topLevelItem( i )->setSelected( true );
+            this->slotCategoryChanged( m_widget.listCategories->topLevelItem( i ) );
+            break;
+        }
 }
 
 void TokenHelpDialog::slotCategoryChanged( QTreeWidgetItem* item )
@@ -156,10 +168,13 @@ void TokenHelpDialog::slotCategoryChanged( QTreeWidgetItem* item )
 
 void TokenHelpDialog::slotInsert()
 {
+    QTreeWidgetItem* category = m_widget.listCategories->currentItem();
+    if( category )
+        m_lastSelected = category->text(0);
+
     saveConfig();
 
     QTreeWidgetItem* item = m_widget.listTokens->currentItem();
-    
     if( item ) 
         m_edit->insert( item->text( 0 ) );
 
@@ -171,6 +186,8 @@ void TokenHelpDialog::loadConfig()
     KSharedConfigPtr config = KGlobal::config();
 
     KConfigGroup groupGui = config->group( QString("TokenHelpDialog") );
+
+    m_lastSelected = groupGui.readEntry( "LastSelectedCategory", m_lastSelected );
 
     bool preview = groupGui.readEntry( "Preview",  m_widget.checkPreview->isChecked() );
     m_widget.checkPreview->setChecked( preview );
@@ -206,6 +223,8 @@ void TokenHelpDialog::saveConfig()
     groupGui.writeEntry( "Column2",  m_widget.listTokens->columnWidth( 2 ) );
     groupGui.writeEntry( "Splitter", m_widget.splitter->sizes() );
     groupGui.writeEntry( "Preview",  m_widget.checkPreview->isChecked() );
+    groupGui.writeEntry( "LastSelectedCategory", m_lastSelected );
+
     this->saveDialogSize( groupGui );
 }
 

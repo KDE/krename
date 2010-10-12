@@ -63,6 +63,12 @@ class TokenHelpDialog : public KDialog {
 
  private:
     void loadConfig();
+    
+    /**
+     * Select a category by its name.
+     * \param category user visible name of a category
+     */
+    void selectCategory( const QString & category );
 
  private:
     KRenameUnformattedWrappedModel* m_model;
@@ -75,6 +81,8 @@ class TokenHelpDialog : public KDialog {
     QMap<QString,QStringList> m_map;
 
     QString             m_first;
+
+    QString             m_lastSelected;
 };
 
 #endif // _TOKEN_HELP_DIALOG_H_
