@@ -1,0 +1,1888 @@
+# KRename greek translation.
+# Copyright (C) 2010 Nikos Papadopoulos
+# This file is distributed under the same license as the Krename package.
+#
+# Nikos Papadopoulos <231036448@freemail.gr>, 2010.
+# Nikos Papadopoulos <nikos <translators_team@mandrivalinux.gr>>, 2010.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2010-10-29\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-26 08:59+0200\n"
+"PO-Revision-Date: 2010-11-13 16:05+0200\n"
+"Last-Translator: nikos papadopoulos <231036448@freemail.gr>\n"
+"Language-Team: Greek <mandrivalinux.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Greek\n"
+"X-Poedit-Country: GREECE\n"
+"X-Poedit-KeywordsList: el\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr "Nikos Papadopoulos"
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr ""
+"translators_team@mandrivalinux.gr\n"
+"231036448@freemail.gr"
+
+#: main.cpp:45
+msgid "file will be added to the list of files for renaming"
+msgstr "το αρχείο θα προστεθεί στη λίστα με τα προς μετονομασία αρχεία"
+
+#: main.cpp:46
+msgid "add directory recursively"
+msgstr "προσθήκη καταλόγων εις βάθος"
+
+#: main.cpp:47
+msgid "set a template"
+msgstr "όρισε μία μήτρα"
+
+#: main.cpp:48
+msgid "set a template for the file extension"
+msgstr "όρισε μία μήτρα για την επέκταση του αρχείου"
+
+#: main.cpp:49
+msgid "enable a plugin for use"
+msgstr "ενεργοποίηση ενός ενθέματος"
+
+#: main.cpp:50
+msgid "copy files to directory or url"
+msgstr "αντιγραφή των αρχείων σε κατάλογο ή διεύθυνση url"
+
+#: main.cpp:51
+msgid "move files to directory or url"
+msgstr "μετακίννηση των αρχείων σε κατάλογο ή διεύθυνση url"
+
+#: main.cpp:52
+msgid "link files to directory or url"
+msgstr "δημιουργία δεσμών των αρχείων σε κατάλογο ή διεύθυνση url"
+
+#: main.cpp:54
+msgid "start renaming immediately"
+msgstr "άμεση εκκίνηση της μετονομασίας"
+
+#: main.cpp:55
+msgid "start KRename's selftest (developers only)"
+msgstr "εκκίνηση του KRename για αυτοδιάγνωση (μόνο για προγραμματιστές)"
+
+#: main.cpp:59
+#: krenameimpl.cpp:384
+msgid "KRename"
+msgstr "KRename"
+
+#: main.cpp:60
+msgid "<qt><p>KRename is a batch file renamer which can rename a list of files based on a set of expressions.</p><p>If you like KRename you may want to support it. Testing, bug fixes and feature requests are as welcome as financial support (everybody needs money ;). See help files for details.</p></qt>"
+msgstr "<qt><p>Το KRename είναι μια εφαρμογή ομαδικής μετονομασίας αρχείων. Μπορεί να μετονομάσει μία λίστα από αρχεία σύμφωνα με ένα σύνολο από \"εκφράσεις\".</p><p>Αν σου αρέσει το KRename, ίσως να θέλεις να το υποστηρίξεις. Οι δοκιμές, η επίλυση δυσλειτουργιών, και το να ζητήσεις τη δημιουργία κάποιας νέας λειτουργίας είναι το ίδιο καλοδεχούμενα όσο και η οικονομικά υποστήριξη (όλοι χρειαζόμαστε χρήματα ;). Δες τα αρχεία βοήθειας για λεπτομέρειες.</p></qt>"
+
+#: main.cpp:65
+msgid "KRename Build:"
+msgstr "Εκδοχή του KRename:"
+
+#: main.cpp:66
+msgid "(c) 2001-2009, Dominik Seichter\n"
+msgstr "(c) 2001-2009, Dominik Seichter\n"
+
+#: main.cpp:69
+msgid "Dominik Seichter"
+msgstr "Dominik Seichter"
+
+#: main.cpp:69
+msgid "developer and maintainer"
+msgstr "προγραμματιστής και συντηρητής"
+
+#: main.cpp:71
+msgid "Stefan \"Stonki\" Onken"
+msgstr "Stefan \"Stonki\" Onken"
+
+#: main.cpp:72
+msgid "Website, testing, very good ideas and keeping me coding!"
+msgstr " "
+
+#: main.cpp:75
+msgid "Arpad Biro"
+msgstr "Arpad Biro"
+
+#: main.cpp:75
+msgid "Helped to fix style guide issues and made improvements to user messages."
+msgstr ""
+
+#: main.cpp:76
+msgid "Trevor Semeniuk"
+msgstr "Trevor Semeniuk"
+
+#: main.cpp:76
+msgid "Thanks to him for creating RedHat 7.x packages and some other help."
+msgstr ""
+
+#: main.cpp:78
+msgid "Groult Richard"
+msgstr "Groult Richard"
+
+#: main.cpp:78
+msgid ""
+"Fixed a bug with startIndex and added the BatchRenamer class\n"
+"to his excellent image viewer showimg."
+msgstr ""
+
+#: main.cpp:81
+msgid "Michael Elvers"
+msgstr "Michael Elvers"
+
+#: main.cpp:81
+msgid "Fixed a bug that caused krename not closing open files."
+msgstr ""
+
+#: main.cpp:83
+msgid "Andreas Pour"
+msgstr "Andreas Pour"
+
+#: main.cpp:83
+msgid "Thanks for his great job at apps.kde.com and help with contributing krename to apps.kde.com."
+msgstr ""
+
+#: main.cpp:85
+msgid "Charles Samuels"
+msgstr "Charles Samuels"
+
+#: main.cpp:85
+msgid "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
+msgstr ""
+
+#: main.cpp:87
+msgid "Franz Schmid"
+msgstr "Franz Schmid"
+
+#: main.cpp:87
+msgid "Gave me a good start into writing plugins with his application scribus."
+msgstr ""
+
+#: main.cpp:89
+msgid "Rolf Magnus"
+msgstr "Rolf Magnus"
+
+#: main.cpp:89
+msgid "Parts of the PNG support are copied from his KFile plugin for png support."
+msgstr ""
+
+#: main.cpp:91
+msgid "Michael v.Ostheim"
+msgstr "Michael v.Ostheim"
+
+#: main.cpp:91
+msgid "Created the Gentoo Ebuild scripts for Krename."
+msgstr ""
+
+#: main.cpp:93
+msgid "Brandon Low"
+msgstr "Brandon Low"
+
+#: main.cpp:93
+msgid "Some GCC 3.1 fixes for Gentoo."
+msgstr ""
+
+#: main.cpp:95
+msgid "Per Oyvind Karlsen"
+msgstr "Per Oyvind Karlsen"
+
+#: main.cpp:95
+msgid "Thanks for creating the Mandrake RPM"
+msgstr ""
+
+#: main.cpp:97
+msgid "Vincenzo Reale"
+msgstr "Vincenzo Reale"
+
+#: main.cpp:97
+msgid "Italian translation"
+msgstr "Ιταλική μετάφραση"
+
+#: main.cpp:98
+msgid "Daniele Medri"
+msgstr "Daniele Medri"
+
+#: main.cpp:98
+msgid "Italian translation work"
+msgstr ""
+
+#: main.cpp:99
+msgid "Stephan Johach"
+msgstr "Stephan Johach"
+
+#: main.cpp:99
+msgid "Provided a gcc3.x namespace patch"
+msgstr ""
+
+#: main.cpp:100
+msgid "Michael Zugaro"
+msgstr "Michael Zugaro"
+
+#: main.cpp:100
+msgid "Provided the new preview and move features"
+msgstr ""
+
+#: main.cpp:101
+msgid "Rene Gass"
+msgstr "Rene Gass"
+
+#: main.cpp:101
+msgid "Fixed problems with the spec file and contributed rpms for every SuSE version you can imagine and is also the new Gentoo maintainer for KRename"
+msgstr ""
+
+#: main.cpp:102
+msgid "Mark Ziegler"
+msgstr "Mark Ziegler"
+
+#: main.cpp:102
+msgid "Provided SuSE RPMs and very good suggestions"
+msgstr ""
+
+#: main.cpp:103
+msgid "Jose Rodriguez"
+msgstr "Jose Rodriguez"
+
+#: main.cpp:103
+msgid "Contributed a Spanish translation"
+msgstr ""
+
+#: main.cpp:104
+msgid "Steven P. Ulrick"
+msgstr "Steven P. Ulrick"
+
+#: main.cpp:104
+msgid "Provided a RedHat RPM and was big help in improving KRename"
+msgstr ""
+
+#: main.cpp:105
+msgid "UTUMI Hirosi"
+msgstr "UTUMI Hirosi"
+
+#: main.cpp:105
+msgid "Translated KRename to Japanese"
+msgstr "Μετάφραση του KRename στα Ιαπωνικά"
+
+#: main.cpp:106
+msgid "Nicolas Benoit"
+msgstr "Nicolas Benoit"
+
+#: main.cpp:106
+msgid "Translated KRename into French"
+msgstr "Μετάφραση του KRename στα Γαλλικά"
+
+#: main.cpp:107
+msgid "Krzysztof Pawlak"
+msgstr "Krzysztof Pawlak"
+
+#: main.cpp:107
+msgid "Translated KRename into Polish"
+msgstr "Μετάφραση του KRename στα Πολωνικά"
+
+#: main.cpp:108
+msgid "Ilya Ivkov"
+msgstr "Ilya Ivkov"
+
+#: main.cpp:108
+msgid "Translated KRename into Russian"
+msgstr "Μετάφραση του KRename στα Ρωσσικά"
+
+#: main.cpp:109
+msgid "Asim Husanovic"
+msgstr "Asim Husanovic"
+
+#: main.cpp:109
+msgid "Translated KRename into Bosnian"
+msgstr "Μετάφραση του KRename στα Βοσνιακά"
+
+#: main.cpp:110
+msgid "Michal Smoczyk"
+msgstr "Michal Smoczyk"
+
+#: main.cpp:110
+msgid "Polish Translation"
+msgstr "Πολωνική μετάφραση"
+
+#: main.cpp:111
+msgid "Pavel Fric"
+msgstr "Pavel Fric"
+
+#: main.cpp:111
+msgid "Czech Translation"
+msgstr "Τσέχικη μετάφραση"
+
+#: main.cpp:131
+msgid "<b>Krename was started from root!</b><br>When started from root, Krename may damage your system if you do not know exactly what you are doing!"
+msgstr "<b>Το Krename ξεκίνησε με δικαιώματα υπερχρήστη.</b><br>Όταν λειτουργεί με διακαιώματα root, το Krename μπορεί να χαλάσει το σύστημά σου, αν δεν γνωρίζεις ακριβώς τι κάνεις."
+
+#: main.cpp:135
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: krenameimpl.cpp:358
+#: scriptplugin.cpp:298
+#: scriptplugin.cpp:333
+msgid "*|All files and directories"
+msgstr "*|Όλα τα αρχεία και οι κατάλογοι"
+
+#: krenameimpl.cpp:383
+msgid "Do you really want to remove all files from the list?"
+msgstr "Θέλεις, σίγουρα, να απομακρύνεις όλα τα αρχεία και τους φακέλους από τη λίστα;"
+
+#: krenameimpl.cpp:498
+msgid "old filename"
+msgstr "το αρχικό όνομα του αρχείου"
+
+#: krenameimpl.cpp:499
+msgid "old filename converted to lower case"
+msgstr "το αρχικό όνομα του αρχείου σε πεζά"
+
+#: krenameimpl.cpp:500
+msgid "old filename converted to upper case"
+msgstr "το αρχικό όνομα του αρχείου σε κεφαλαία"
+
+#: krenameimpl.cpp:501
+msgid "first letter of every word upper case"
+msgstr "το πρώτο γράμμα κάθε λέξης κεφαλαίο"
+
+#: krenameimpl.cpp:502
+msgid "first letter of filename upper case"
+msgstr "το πρώτο γράμμα του ονόματος του αρχείου κεφαλαίο"
+
+#: krenameimpl.cpp:503
+msgid "number (try also ##, ###, ... for leading zeros)"
+msgstr "αριθμός (δοκίμασε και ##, ###, ... για να αρχίζει με μηδενικά)"
+
+#: krenameimpl.cpp:504
+msgid "counter with custom start value 0 and custom stepping 1"
+msgstr "μετρητής με προσαρμοσμένη τιμή εκκίνησης το 0, και προσαρμοσμένο βήμα μέτρησης το 1"
+
+#: krenameimpl.cpp:505
+msgid "create a subdirectory"
+msgstr "δημιουργία υποκαταλόγου"
+
+#: krenameimpl.cpp:506
+msgid "character x to y of old filename"
+msgstr "οι χαρακτήρες από \"x\" έως \"y\" του παλιού ονόματος του αρχείου"
+
+#: krenameimpl.cpp:507
+msgid "y characters of old filename starting at x"
+msgstr "ο \"y\" χαρακτήρας του παλιού ονόματος του αρχείου, που θα ξεκινάει από το \"x\""
+
+#: krenameimpl.cpp:508
+msgid "insert name of directory"
+msgstr "εισαγωγή του ονόματος του καταλόγου"
+
+#: krenameimpl.cpp:509
+msgid "insert name of parent directory"
+msgstr "εισαγωγή του ονόματος του γονικού καταλόγου"
+
+#: krenameimpl.cpp:510
+msgid "insert the length of the input filename"
+msgstr "εισαγωγή του μήκους του εισαγόμενου ονόματος του αρχείου"
+
+#: krenameimpl.cpp:511
+msgid "strip whitespaces leading and trailing"
+msgstr "απομάκρυνση κενών από την αρχή και το τέλος του ονόματος"
+
+#: krenameimpl.cpp:512
+#, fuzzy
+msgid "strip whitespaces leading and trailing of an arbitrary string"
+msgstr "απομάκρυνση κενών από την αρχή και το τέλος οποιουδήποτε ??? στίχου"
+
+#: krenameimpl.cpp:513
+msgid "Built-in Functions"
+msgstr "Ενσωματωμένες Λειτουργίες"
+
+#: krenameimpl.cpp:516
+msgid "Insert '$'"
+msgstr "Εισαγωγή '$'"
+
+#: krenameimpl.cpp:517
+msgid "Insert '%'"
+msgstr "Εισαγωγή '%'"
+
+#: krenameimpl.cpp:518
+msgid "Insert '&'"
+msgstr "Εισαγωγή '&'"
+
+#: krenameimpl.cpp:519
+msgid "Insert '*'"
+msgstr "Εισαγωγή '*'"
+
+#: krenameimpl.cpp:520
+msgid "Insert '/'"
+msgstr "Εισαγωγή '/'"
+
+#: krenameimpl.cpp:521
+msgid "Insert '\\\\'"
+msgstr "Εισαγωγή '\\\\'"
+
+#: krenameimpl.cpp:522
+msgid "Insert '['"
+msgstr "Εισαγωγή '['"
+
+#: krenameimpl.cpp:523
+msgid "Insert ']'"
+msgstr "Εισαγωγή ']'"
+
+#: krenameimpl.cpp:524
+msgid "Insert '#'"
+msgstr "Εισαγωγή '#'"
+
+#: krenameimpl.cpp:525
+msgid "Special Characters"
+msgstr "Ειδικοί Χαρακτήρες"
+
+#: krenameimpl.cpp:568
+msgid "Starting conversion of %1 files."
+msgstr "Εκκίνηση της μετατροπής %1 αρχείων."
+
+#: krenameimpl.cpp:575
+msgid "The directory %1 does not exist. Do you want KRename to create it for you?"
+msgstr "Δεν υπάρχει ο κατάλογος %1 . Θέλεις να δημιουργηθεί από το KRename;"
+
+#: krenameimpl.cpp:583
+msgid "The directory %1 could not be created."
+msgstr "Αδυναμία δημιουργίας του καταλόγου %1."
+
+#: krenamewindow.cpp:50
+msgid "&1. Files"
+msgstr "&1. Αρχεία"
+
+#: krenamewindow.cpp:51
+msgid "&2. Destination"
+msgstr "&2. Προορισμός"
+
+#: krenamewindow.cpp:52
+msgid "&3. Plugins"
+msgstr "&3. Ενθέματα"
+
+#: krenamewindow.cpp:53
+msgid "&4. Filename"
+msgstr "&4. Όνομα αρχείου"
+
+#: krenamewindow.cpp:197
+msgid "&Finish"
+msgstr "&Τέλος"
+
+#: krenamewindow.cpp:198
+msgid "&Close"
+msgstr "&Κλείσιμο"
+
+#: krenamewindow.cpp:397
+msgid "<b>Files:<b> %1"
+msgstr "<b>Αρχεία:<b> %1"
+
+#: krenamemodel.cpp:451
+msgid "Origin"
+msgstr "Αρχικό"
+
+#: krenamemodel.cpp:451
+msgid "Renamed"
+msgstr "Μετονομασμένο"
+
+#: filedialogextwidget.cpp:33
+msgid "Add directory names &with filenames"
+msgstr "Προσθήκη των ονομάτων των καταλόγων, &μαζί με τα ονόματα των αρχείων"
+
+#: filedialogextwidget.cpp:34
+msgid "Add subdirectories &recursively"
+msgstr "Προσθήκη των υποκαταλόγων εις &βάθος"
+
+#: filedialogextwidget.cpp:35
+msgid "Add &hidden directories"
+msgstr "Προσθήκη των &κρυμένων καταλόγων"
+
+#: filedialogextwidget.cpp:36
+msgid "Add directory names only"
+msgstr "Προσθήκη μόνο των ονομάτων των καταλόγων"
+
+#: filedialogextwidget.cpp:49
+msgid "Walk recursively through the directory tree and add also the content of all subdirectories to the list of files to rename."
+msgstr "Εξερεύνηση εις βάθος του δέντρου των καταλόγων, και προσθήκη των περιεχομένων όλων των υποκαταλόγων στη λίστα με τα προς μετονομασία αρχεία."
+
+#: filedialogextwidget.cpp:51
+msgid "If not checked, KRename will ignore directories starting with a dot during recursive adding."
+msgstr "Αν δεν είναι τσεκαρισμένο, το KRename θα αγνοεί τους καταλόγους που ξεκινούν με τελεία (κρυφούς), όταν κάνει προσθήκη αρχείων εις βάθος."
+
+#: filedialogextwidget.cpp:53
+msgid "Add only the directory names and not the names of the files in the directory to KRename."
+msgstr "Προσθήκη στο KRename μόνο των ονομάτων των καταλόγων, και όχι των ονομάτων των αρχείων από τους καταλόγους."
+
+#: filedialogextwidget.cpp:55
+msgid "This option causes KRename to add also the name of the base directory of the selected files to its list."
+msgstr "Αυτή η επιλογή κάνει το KRename να προσθέσει καί το όνομα του βασικού καταλόγου των επιλεγμένων αρχείων στη λίστα του."
+
+#: batchrenamer.cpp:213
+#: batchrenamer.cpp:699
+msgid "Input files will be renamed."
+msgstr "Τα εισηγμένα αρχεία θα μετονομαστούν."
+
+#: batchrenamer.cpp:216
+#: batchrenamer.cpp:693
+msgid "Files will be copied to: %1"
+msgstr "Τα αρχεία θα αντιγραφούν στο: %1"
+
+#: batchrenamer.cpp:219
+#: batchrenamer.cpp:695
+msgid "Files will be moved to: %1"
+msgstr "Τα αρχεία θα μεταφερθούν στο: %1"
+
+#: batchrenamer.cpp:222
+#: batchrenamer.cpp:697
+msgid "Symbolic links will be created in: %1"
+msgstr "Συμβολικοί δεσμοί θα δημιουργηθούν στο: %1"
+
+#: batchrenamer.cpp:244
+msgid "Cannot rename: source and target filename are equal: %1"
+msgstr "Αδυναμία μετονομασίας: η πηγή και ο προορισμός του ονόματος είναι ίσα: %1"
+
+#: batchrenamer.cpp:265
+msgid "Cannot create symlink to non-local URL: %1"
+msgstr "Αδυναμία δημιουργίας συμβολικών δεσμών σε απομακρυσμένες διευθύνσεις URL: %1"
+
+#: batchrenamer.cpp:278
+#: dirsortplugin.cpp:130
+msgid "Error renaming %2 (to %1)"
+msgstr "Σφάλμα μετονομασίας του %2 (σε %1)"
+
+#: batchrenamer.cpp:298
+#: batchrenamer.cpp:419
+msgid "%1 errors occurred!"
+msgstr "%1 λάθη προέκυψαν."
+
+#: batchrenamer.cpp:300
+#: batchrenamer.cpp:771
+msgid "KRename finished the renaming process."
+msgstr "Το KRename τελείωσε τη διαδικασία μετονομασίας."
+
+#: batchrenamer.cpp:301
+#: batchrenamer.cpp:422
+#: batchrenamer.cpp:772
+msgid "Press close to quit!"
+msgstr "Πίεσε το «|Χ| Κλείσιμο» για να τερματίσει η εφαρμογή."
+
+#: batchrenamer.cpp:365
+msgid "Filenames Processed after %1 seconds."
+msgstr "Τα ονόματα των αρχείων επεξεργάστηκαν μετά από %1 δευτερόλεπτα."
+
+#: batchrenamer.cpp:380
+msgid "Undoing all renamed files."
+msgstr "Αναίρεση της μετονομασίας όλων των αρχείων."
+
+#: batchrenamer.cpp:412
+msgid "Error during undoing %1"
+msgstr "Σφάλμα κατά την αναίρεση του %1"
+
+#: batchrenamer.cpp:421
+msgid "KRename finished the undo process."
+msgstr "Το KRename τελείωσε τη διαδικασία μετονομασίας."
+
+#: batchrenamer.cpp:680
+msgid "Can't create undo script :"
+msgstr "Αδυναμία δημιουργίας του σεναρίου αναίρεσης :"
+
+#: batchrenamer.cpp:752
+msgid "Undo is not possible for remote file: %1"
+msgstr "Η αναίρεση είναι αδύνατη για το απομακρυσμένο αρχείο: %1"
+
+#: batchrenamer.cpp:764
+msgid "Renamed %1 files successfully."
+msgstr "Επιτυχής μετονομασία %1 αρχείων."
+
+#: batchrenamer.cpp:768
+msgid "%2 errors occurred!"
+msgstr "%2 λάθη προέκυψαν."
+
+#: batchrenamer.cpp:770
+msgid "Elapsed time: %1 seconds"
+msgstr "Χρόνος που πέρασε: %1 δευτερόλεπτα"
+
+#: batchrenamer.cpp:782
+msgid "Can't set executable bit on undo script."
+msgstr ""
+
+#: batchrenamer.cpp:1173
+#: dirsortplugin.cpp:158
+msgid "Cannot create directory %1"
+msgstr "Αδυναμία δημιουργίας του καταλόγου %1"
+
+#: progressdialog.cpp:33
+msgid "&Rename more..."
+msgstr "&Μετονομασία περισσοτέρων..."
+
+#: progressdialog.cpp:34
+msgid "&Undo"
+msgstr "Α&ναίρεση"
+
+#: progressdialog.cpp:35
+msgid "&Open Destination"
+msgstr "Άνοιγμα Προο&ρισμού"
+
+#: progressdialog.cpp:47
+msgid "Restart &KRename..."
+msgstr "Επανεκίννηση του &KRename..."
+
+#: progressdialog.cpp:49
+msgid "Rename Processed Files &Again..."
+msgstr "Μετονομασία των Επεξεργασμένων Αρχείων, &Ξανά..."
+
+#: progressdialog.cpp:50
+msgid "Rename &Unprocessed Files Again..."
+msgstr "Μετονομασία Των &Μη Επεξεργασμένων Αρχείων, Ξανά..."
+
+#: progressdialog.cpp:51
+msgid "&Rename All Files Again..."
+msgstr "Μετονομασία &Όλων των Αρχείων, Ξανά..."
+
+#: fileplugin.cpp:84
+msgid "Supported tokens:"
+msgstr "Υποστηριζόμενες εκφράσεις:"
+
+#: tokenhelpdialog.cpp:86
+msgid "&Insert"
+msgstr "Εισαγ&ωγή"
+
+#: rc.cpp:3
+msgid "Add files for renaming."
+msgstr "Προσθήκη αρχείων για μετονομασία."
+
+#: rc.cpp:6
+#: rc.cpp:450
+#: rc.cpp:624
+#: previewlist.cpp:36
+msgid "&Add..."
+msgstr "&Προσθήκη..."
+
+#: rc.cpp:9
+msgid "Remove selected files."
+msgstr "Αφαίρεση των επιλεγμένων αρχείων."
+
+#: rc.cpp:12
+msgid "Re&move"
+msgstr "&Απομάκρυνση"
+
+#: rc.cpp:15
+msgid "Remove all files."
+msgstr "Απομάκρυνση όλων των αρχείων."
+
+#: rc.cpp:18
+msgid "Re&move All"
+msgstr "Απομάκρ&υνση όλων"
+
+#: rc.cpp:21
+msgid "Sort:"
+msgstr "Ταξινόμηση:"
+
+#: rc.cpp:24
+msgid "Unsorted"
+msgstr "Αταξινόμητα"
+
+#: rc.cpp:27
+msgid "Ascending"
+msgstr "Αύξουσα"
+
+#: rc.cpp:30
+msgid "Descending"
+msgstr "Φθίνουσα"
+
+#: rc.cpp:33
+msgid "Numeric"
+msgstr "Αριθμητικά"
+
+#: rc.cpp:36
+msgid "Random"
+msgstr "Τυχαία"
+
+#: rc.cpp:39
+msgid "Date (Asc.)"
+msgstr "Ημερομηνία (Αύξουσα)"
+
+#: rc.cpp:42
+msgid "Date (Desc.)"
+msgstr "Ημερομηνία (Φθίνουσα)"
+
+#: rc.cpp:45
+msgid "Custom ..."
+msgstr "Προσαρμοσμένο..."
+
+#: rc.cpp:48
+msgid "Display a preview image for each file."
+msgstr "Προβολή μιας εικόνας προεπισκόπησης για κάθε αρχείο."
+
+#: rc.cpp:51
+msgid "&Preview"
+msgstr "&Προεπισκόπηση"
+
+#: rc.cpp:54
+msgid "Display the filename together with the preview."
+msgstr "Προβολή του ονόματος του αρχείου μαζί με την εικόνα προεπισκόπησης."
+
+#: rc.cpp:57
+msgid "&Display name"
+msgstr "Εμ&φάνιση ονόματος"
+
+#: rc.cpp:60
+msgid "Files: <b>0</b>"
+msgstr "Αρχεία: <b>0</b>"
+
+#: rc.cpp:63
+#: rc.cpp:267
+msgid "Move selected files upwards."
+msgstr "Μετακίνηση των επιλεγμένων αρχείων προς τα πάνω."
+
+#: rc.cpp:66
+msgid "Up"
+msgstr "Πάνω"
+
+#: rc.cpp:69
+#: rc.cpp:273
+msgid "Move selected files downwards."
+msgstr "Μετακίνηση των επιλεγμένων αρχείων προς τα κάτω."
+
+#: rc.cpp:72
+msgid "Down"
+msgstr "Κάτω"
+
+#: rc.cpp:75
+#: rc.cpp:108
+#: rc.cpp:279
+#: rc.cpp:288
+#: rc.cpp:378
+#: rc.cpp:402
+#: rc.cpp:495
+#: rc.cpp:525
+#: rc.cpp:591
+#: rc.cpp:612
+#: rc.cpp:660
+#: rc.cpp:706
+msgid "Form"
+msgstr "Μορφή"
+
+#: rc.cpp:78
+msgid "Look and Feel"
+msgstr "Όψη και Αίσθηση"
+
+#: rc.cpp:81
+msgid "Configure the look and feel of the KRename GUI:"
+msgstr "Προσαρμογή της εμφάνισης και της αίσθησης του γραφικού περιβάλλοντος εργασίας του KRename:"
+
+#: rc.cpp:84
+msgid "Use &wizard style GUI (beginners)"
+msgstr "Χρήση γραφικού περιβάλλοντος εργασίας με διαλόγους (για αρχάριους χρήστες)"
+
+#: rc.cpp:87
+msgid "Use &tabbed style GUI (advanced users)"
+msgstr "Χρήση γραφικού περιβάλλοντος εργασίας με καρτέλες (για έμπειρους χρήστες)"
+
+#: rc.cpp:90
+msgid "&Options"
+msgstr "&Επιλογές"
+
+#: rc.cpp:93
+msgid "&Rename input files"
+msgstr "&Μετονομασία των εισηγμένων αρχείων"
+
+#: rc.cpp:96
+msgid "&Copy files to destination directory"
+msgstr "&Αντιγραφή των αρχείων στον κατάλογο προορισμού"
+
+#: rc.cpp:99
+msgid "&Move files to destination directory"
+msgstr "&Μετακίνηση των αρχείων στον κατάλογο προορισμού"
+
+#: rc.cpp:102
+msgid "Create symbolic &links in destination directory"
+msgstr "Δημιουργία συμβολικών &δεσμών στον κατάλογο προορισμού"
+
+#: rc.cpp:105
+msgid "&Overwrite existing files"
+msgstr "Αντικατάσταση των &υπαρχόντων αρχείων"
+
+#: rc.cpp:111
+msgid "&Advanced Filename"
+msgstr "&Σύνθετο"
+
+#: rc.cpp:114
+msgid "&Template:"
+msgstr "&Πρότυπο:"
+
+#: rc.cpp:117
+msgid "<qt>Enter a template for changing the filename.</qt>"
+msgstr "<qt>Εισήγαγε μία μήτρα για την αλλαγή του ονόματος των αρχείων.</qt>"
+
+#: rc.cpp:120
+#: rc.cpp:132
+msgid "$"
+msgstr "$"
+
+#: rc.cpp:123
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">.</span></p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">.</span></p></body></html>"
+
+#: rc.cpp:129
+msgid "<qt>Enter a template for changing the file extension.</qt>"
+msgstr "<qt>Εισήγαγε μία μήτρα για την αλλαγή της κατάληξης των αρχείων.</qt>"
+
+#: rc.cpp:135
+#: rc.cpp:189
+#: rc.cpp:192
+#: rc.cpp:213
+#: rc.cpp:222
+msgid "<qt>Insert special functions like the artist of an mp3 or the creation date of an image.</qt>"
+msgstr "<qt>Εισήγαγε ειδικές λειτουργίες, όπως τον καλλιτέχνη ενός mp3 ή την ημερομηνία δημιουργίας μίας εικόνας.</qt>"
+
+#: rc.cpp:138
+msgid "&Functions..."
+msgstr "&Λειτουργείες..."
+
+#: rc.cpp:141
+msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
+msgstr "<qt>Διατήρηση της κατάληξης των αρχείων όπως είναι, χωρίς αλλαγή.</qt>"
+
+#: rc.cpp:144
+msgid "&Use extension of the input file"
+msgstr "&Χρήση των επεκτάσεων από τα εισηγμένα αρχεία"
+
+#: rc.cpp:147
+msgid "File extension &starts at:"
+msgstr "Η επέκταση του κάθε αρχείου ξεκινά από την "
+
+#: rc.cpp:150
+msgid "<qt>Configure which part of the filename is considered to be the fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, \"Last Dot\" only \".gz\".</qt>"
+msgstr "<qt>Όρισε ποιο μέρος του αρχείου θεωρείται ως η «Επέκταση». Για παράδειγμα, το \"πρώτη τελεία\", θα θεωρήσει το \".tar.gz\" σαν την επέκταση, ενώ το \"τελευταία τελεία\" μόνο το \".gz\".</qt>"
+
+#: rc.cpp:153
+msgid "First Dot"
+msgstr "πρώτη τελεία"
+
+#: rc.cpp:156
+msgid "Last Dot"
+msgstr "τελευταία τελεία"
+
+#: rc.cpp:159
+msgid "No File Extension"
+msgstr "Χωρίς Επέκταση Αρχείου"
+
+#: rc.cpp:162
+#: rc.cpp:261
+msgid "<qt>Find and replace strings and regular expressions in the renamed filename.</qt>"
+msgstr "<qt>Αναζήτηση και αντικατάσταση στίχων, καθώς και κανονικών εκφράσεων στο μετονομασμένο όνομα αρχείου.</qt>"
+
+#: rc.cpp:165
+#: rc.cpp:264
+#: rc.cpp:369
+msgid "Find &and Replace..."
+msgstr "Αναζήτηση &και αντικατάσταση"
+
+#: rc.cpp:168
+msgid "<qt>Configure start index, stepping and skipping for numbering of filenames.</qt>"
+msgstr "<qt>Όρισε το σημείο εκκίνησης της μέτρησης, το βηματισμό, και την παράβλεψη, για την αρίθμηση ονομάτων αρχείων.</qt>"
+
+#: rc.cpp:171
+msgid "&Numbering..."
+msgstr "Απαρί&θμηση..."
+
+#: rc.cpp:174
+msgid "<qt>Graphically select a part of a filename to insert.</qt>"
+msgstr "<qt>Επέλεξε, με εικονικό τρόπο, το μέρος του παλιού ονόματος του αρχείου, που θα εισαχθεί στο νέο όνομα.</qt>"
+
+#: rc.cpp:177
+msgid "&Insert Part of Filename..."
+msgstr "&Εισαγωγή Μέρος του Ονόματος Αρχείου..."
+
+#: rc.cpp:180
+msgid "&Simple Filename"
+msgstr "&Απλούστερο"
+
+#: rc.cpp:183
+#: rc.cpp:291
+msgid "&Filename"
+msgstr "Ό&νομα αρχείου"
+
+#: rc.cpp:186
+#: rc.cpp:294
+msgid "&Suffix:"
+msgstr "&Κατάληξη:"
+
+#: rc.cpp:195
+#: rc.cpp:303
+msgid "Use original name"
+msgstr "το αρχικό όνομα"
+
+#: rc.cpp:198
+#: rc.cpp:240
+#: rc.cpp:306
+#: rc.cpp:348
+#: rc.cpp:417
+msgid "Convert to lower case"
+msgstr "πεζά"
+
+#: rc.cpp:201
+#: rc.cpp:243
+#: rc.cpp:309
+#: rc.cpp:351
+#: rc.cpp:420
+msgid "Convert to upper case"
+msgstr "κεφαλαία"
+
+#: rc.cpp:204
+#: rc.cpp:246
+#: rc.cpp:312
+#: rc.cpp:354
+#: rc.cpp:423
+msgid "Capitalize"
+msgstr "το πρώτο γράμμα της κάθε λέξης κεφαλαίο"
+
+#: rc.cpp:207
+#: rc.cpp:315
+msgid "Custom name"
+msgstr "προσαρμοσμένο"
+
+#: rc.cpp:210
+#: rc.cpp:318
+msgid "File&name:"
+msgstr "Ό&νομα:"
+
+#: rc.cpp:216
+#: rc.cpp:231
+#: rc.cpp:324
+#: rc.cpp:339
+msgid "Number"
+msgstr "Αριθμός"
+
+#: rc.cpp:219
+#: rc.cpp:234
+#: rc.cpp:327
+#: rc.cpp:342
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#: rc.cpp:225
+#: rc.cpp:333
+msgid "&Prefix:"
+msgstr "&Πρόθεμα:"
+
+#: rc.cpp:228
+#: rc.cpp:336
+msgid "&Extension:"
+msgstr "&Επέκταση:"
+
+#: rc.cpp:237
+#: rc.cpp:345
+msgid "Use original extension"
+msgstr "η αρχική επέκταση"
+
+#: rc.cpp:249
+#: rc.cpp:357
+msgid "Custom extension"
+msgstr "προσαρμοσμένη"
+
+#: rc.cpp:252
+#: rc.cpp:360
+msgid "N&umber"
+msgstr "Αρι&θμός:"
+
+#: rc.cpp:255
+#: rc.cpp:363
+msgid "Number of &digits:"
+msgstr "Αριθμός &ψηφίων:"
+
+#: rc.cpp:258
+#: rc.cpp:366
+msgid "Start  &index:"
+msgstr "Αριθμός  &εκκίνησης:"
+
+#: rc.cpp:270
+#: rc.cpp:372
+msgid "&Up"
+msgstr "&Πάνω"
+
+#: rc.cpp:276
+#: rc.cpp:375
+msgid "&Down"
+msgstr "Κ&άτω"
+
+#: rc.cpp:282
+msgid "Plugins"
+msgstr "Ενθέματα (Plugins)"
+
+#: rc.cpp:285
+msgid "&Enable Plugin"
+msgstr "&Ενεργοποίηση του Ενθέματος"
+
+#: rc.cpp:297
+#: rc.cpp:300
+#: rc.cpp:321
+#: rc.cpp:330
+msgid "?"
+msgstr ";"
+
+#: rc.cpp:381
+msgid "&Numbering"
+msgstr "Απαρί&θμηση"
+
+#: rc.cpp:384
+msgid "Start &index:"
+msgstr "Αριθμός &εκκίνησης:"
+
+#: rc.cpp:387
+msgid "&Step by:"
+msgstr "&Βήμα κατά...:"
+
+#: rc.cpp:390
+msgid "&Reset counter for every directory"
+msgstr "Μηδενισμός του μετρητή για κάθε κατάλογο"
+
+#: rc.cpp:393
+msgid "&Skip Numbers"
+msgstr "&Παράβλεψη Αριθμών"
+
+#: rc.cpp:396
+msgid "&Add Number"
+msgstr "&Προσθήκη Αριθμού"
+
+#: rc.cpp:399
+msgid "&Remove Number"
+msgstr "Α&φαίρεση Αριθμού"
+
+#: rc.cpp:405
+msgid "<qt>Please select the part of the old filename  which should be inserted into the new filename in the textbox below:</qt>"
+msgstr "<qt>Παρακαλώ, στο παρακάτω κουτάκι, επέλεξε το μέρος του ονόματος, που θέλεις να εισαχθεί στο νέο όνομα:</qt>"
+
+#: rc.cpp:408
+msgid "&Invert selection"
+msgstr "Α&ντιστροφή της επιλογής"
+
+#: rc.cpp:411
+msgid "&Convert selection:"
+msgstr "&Μετατροπή της επιλογής:"
+
+#: rc.cpp:414
+msgid "No Conversion"
+msgstr "καμία μετατροπή"
+
+#: rc.cpp:426
+msgid "Preview of the generated KRename command:"
+msgstr "Προεπισκόπηση της ενεργοποιημένης εντολής του KRename:"
+
+#: rc.cpp:429
+#: rc.cpp:498
+#: rc.cpp:688
+#: rc.cpp:691
+#: rc.cpp:697
+msgid "TextLabel"
+msgstr "ΕτικέταΚειμένου"
+
+#: rc.cpp:432
+msgid "Progress"
+msgstr "Πρόοδος"
+
+#: rc.cpp:435
+msgid "&Cancel"
+msgstr "&Ακύρωση"
+
+#: rc.cpp:438
+#: rc.cpp:459
+msgid "Find and Replace"
+msgstr "Αναζήτηση και Αντικατάσταση"
+
+#: rc.cpp:441
+msgid "Reg. Expression"
+msgstr "Κανονικές Εκφράσεις"
+
+#: rc.cpp:444
+msgid "Find"
+msgstr "Αναζήτηση"
+
+#: rc.cpp:447
+msgid "Replace With"
+msgstr "Αντικατάσταση Με"
+
+#: rc.cpp:453
+msgid "&Edit..."
+msgstr "&Επεξεργασία..."
+
+#: rc.cpp:456
+#: previewlist.cpp:37
+msgid "&Remove"
+msgstr "Α&φαίρεση"
+
+#: rc.cpp:462
+msgid "&Find:"
+msgstr "&Αναζήτηση:"
+
+#: rc.cpp:465
+msgid "&Replace With:"
+msgstr "Αντικατάσταση Με:"
+
+#: rc.cpp:468
+msgid "Find is a Regular &Expression"
+msgstr "Αναζήτηση σε μία Κανονική Έκ&φραση"
+
+#: rc.cpp:471
+msgid "KRename Help"
+msgstr "Βοήθεια KRename"
+
+#: rc.cpp:474
+msgid "All supported tokens (commands) are listed in this dialog. You can search for tokens and insert a found token into the pattern for the filename."
+msgstr "Όλες οι υποστηριζόμενες εκφράσεις (εντολές) βρίσκονται σε αυτό το διάλογο. Μπορείς να κάνεις αναζήτηση για συγκεκριμένες εκφράσεις, και μετά να τις εισάγεις στη μήτρα του ονόματος."
+
+#: rc.cpp:477
+msgid "Category"
+msgstr "Κατηγορία"
+
+#: rc.cpp:480
+msgid "Token"
+msgstr "Έκφραση"
+
+#: rc.cpp:483
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: rc.cpp:486
+msgid "Preview"
+msgstr "Προεπισκόπηση"
+
+#: rc.cpp:489
+msgid "Token &Preview"
+msgstr "Προεπισκόπηση &Έκφρασης"
+
+#: rc.cpp:492
+msgid "Preview File:"
+msgstr "Προεπισκόπηση Αρχείου:"
+
+#: rc.cpp:501
+msgid "File preview"
+msgstr "Προεπισκόπηση αρχείου"
+
+#: rc.cpp:504
+msgid "Please input a new filename"
+msgstr "Παρακαλώ εισήγαγε ένα νέο όνομα αρχείου"
+
+#: rc.cpp:507
+msgid "Rename the file using the filename created by KRename."
+msgstr "Μετονομασία του αρχείου με τη χρήση του ονόματος αρχείου που δημιουργήθηκε από το KRename."
+
+#: rc.cpp:510
+msgid "Use filename created by &KRename"
+msgstr "Χρήση του ονόματος αρχείου που δημιουργήθηκε από το &KRename."
+
+#: rc.cpp:513
+msgid "Use the input filename when renaming this file. You may also change the input filename and use this for renaming."
+msgstr "Χρήση του εισηγμένου ονόματος αρχείου όταν μετονομάζεται αυτό το αρχείο. Μπορείς επίσης να αλλάξεις το εισηγμένο όνομα αρχείου, και να χρησιμοποιήσεις το παρόν για μετονομασία."
+
+#: rc.cpp:516
+msgid "Use &input filename"
+msgstr "Χρήση του &εισηγμένου ονόματος αρχείου"
+
+#: rc.cpp:519
+msgid "Use a custom filename, based on the filename currently created by KRename."
+msgstr "Χρήση ενός προσαρμοσμένου ονόματος αρχείου, βασισμένο στο όνομα αρχείου που δημιουργεί το KRename."
+
+#: rc.cpp:522
+msgid "Use &custom filename"
+msgstr "Χρήση ενός &προσαρμοσμένου ονόματος αρχείου"
+
+#: rc.cpp:528
+msgid "Change &Permissions"
+msgstr "Αλλαγή των &Δικαιωμάτων"
+
+#: rc.cpp:531
+#: rc.cpp:609
+msgid "Access Permissions"
+msgstr "Δικαιώματα Πρόσβασης"
+
+#: rc.cpp:534
+msgid "O&wner:"
+msgstr "&Ιδιοκτήτης:"
+
+#: rc.cpp:537
+#: rc.cpp:549
+#: rc.cpp:561
+msgid "Forbidden"
+msgstr "Απαγορευμένο"
+
+#: rc.cpp:540
+#: rc.cpp:552
+#: rc.cpp:564
+msgid "Can Read"
+msgstr "Δυνατότητα Ανάγνωσης"
+
+#: rc.cpp:543
+#: rc.cpp:555
+#: rc.cpp:567
+msgid "Can Read & Write"
+msgstr "Δυνατότητα Ανάγνωσης & Εγγραφής"
+
+#: rc.cpp:546
+msgid "Gro&up:"
+msgstr "&Ομάδα:"
+
+#: rc.cpp:558
+msgid "Ot&hers:"
+msgstr "Άλ&λα:"
+
+#: rc.cpp:570
+msgid "This file uses advanced permissions"
+msgstr "Αυτό το αρχείο χρησιμοποιεί προχωρημένες άδειες"
+
+#: rc.cpp:573
+msgid "Is Executable/Only owner &can rename and delete folder content"
+msgstr "Είναι Εκτελέσιμο/Μόνο ο ιδιοκτήτης &μπορεί να μετονομάσει και να διαγράψει τα περιεχόμενα του φακέλου"
+
+#: rc.cpp:576
+msgid "A&dvanced Permissions"
+msgstr "Προχωρημένες Ά&δειες"
+
+#: rc.cpp:579
+msgid "&Change Owner"
+msgstr "&Αλλαγή Ιδιοκτήτη"
+
+#: rc.cpp:582
+msgid "Ownership"
+msgstr "Ιδιοκτησία"
+
+#: rc.cpp:585
+msgid "&User:"
+msgstr "&Χρήστης:"
+
+#: rc.cpp:588
+msgid "&Group:"
+msgstr "&Ομάδα:"
+
+#: rc.cpp:594
+msgid "Change &access date && time"
+msgstr "Αλλαγή της ημερομηνίας και της ώρας &πρόσβασης "
+
+#: rc.cpp:597
+msgid "Change &modifcation date && time"
+msgstr "Αλλαγή της ημερομηνίας και της ώρας &μετατροπής "
+
+#: rc.cpp:600
+msgid "Time:"
+msgstr "Χρόνος:"
+
+#: rc.cpp:603
+msgid "Get &Current Time"
+msgstr "Λήψη της &Τρέχουσας Ημερομηνίας"
+
+#: rc.cpp:606
+msgid "Dialog"
+msgstr "Διάλογος"
+
+#: rc.cpp:615
+msgid "&Variables"
+msgstr "&Μεταβλητές"
+
+#: rc.cpp:618
+msgid "Declare global variables that can be used from within your functions:"
+msgstr ""
+
+#: rc.cpp:621
+msgid "1"
+msgstr "1"
+
+#: rc.cpp:627
+msgid "&Delete"
+msgstr "&Διαγραφή"
+
+#: rc.cpp:630
+msgid "&Definitions"
+msgstr "&Ορισμοί"
+
+#: rc.cpp:633
+msgid "Define functions that can be used from KRename templates:"
+msgstr "Προσδιόρισε λειτουργίες που μπορούν να χρησιμοποιηθούν από της μήτρες του KRename:"
+
+#: rc.cpp:636
+msgid "&Save to File..."
+msgstr "&Αποθήκευση σε Αρχείο..."
+
+#: rc.cpp:639
+msgid "&Load from File..."
+msgstr "&Φόρτωση από Αρχείο..."
+
+#: rc.cpp:642
+msgid "&Insert Variable"
+msgstr "&Εισαγωγή Μεταβλητής"
+
+#: rc.cpp:645
+msgid "&Test..."
+msgstr "&Δοκιμή..."
+
+#: rc.cpp:648
+msgid "Create Variable"
+msgstr "Δημιουργία Μεταβλητής"
+
+#: rc.cpp:651
+msgid "&Name:"
+msgstr "Ό&νομα:"
+
+#: rc.cpp:654
+msgid "&Initial Value:"
+msgstr "&Αρχική Τιμή:"
+
+#: rc.cpp:657
+msgid "&Type:"
+msgstr "&Τύπος:"
+
+#: rc.cpp:663
+msgid "&Increase Counter"
+msgstr "&Μετρητής Αυξομείωσης"
+
+#: rc.cpp:666
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">This plugin adds a given offset to numbers in filenames.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">E.g. you have the filenames: <span style=\" font-style:italic;\">img014</span>, <span style=\" font-style:italic;\">img015</span>, <span style=\" font-style:italic;\">img023</span> which should be named<span style=\" font-style:italic;\"> img010</span>, <span style=\" font-style:italic;\">img011</span> and <span style=\" font-style:italic;\">img019. </span>Using this plugin, you can easily add an offset of -4 to get the desired result.</p></body></html>"
+msgstr ""
+"Αυτό το ένθεμα μεταβάλει, κατά ένα συγκεκριμένο μέγεθος, αριθμούς που μπορεί να βρίσκονται στο όνομα ενός αρχείου.\n"
+"\n"
+"Για παράδειγμα, έχεις τα αρχεία «φωτογραφία_014» , «φωτογραφία_015» και «φωτογραφία_023»,\n"
+"τα οποία θέλεις να μετονομάσεις σε «φωτογραφία_010», «φωτογραφία_011» και «φωτογραφία_019».\n"
+"Χρησιμοποιώντας αυτό το ένθεμα, μπορείς να ορίσεις το διάστημα -4, για να επιτύχεις το επιθυμητό αποτέλεσμα."
+
+#: rc.cpp:674
+msgid "&Offset:"
+msgstr "&Απόκλιση:"
+
+#: rc.cpp:677
+msgid "Frame"
+msgstr "Πλαίσιο"
+
+#: rc.cpp:680
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:large; font-weight:600;\">Welcome to KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">A batch file renamer for KDE.<br />To rename your files, you have to:</p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:large; font-weight:600;\">Καλώς ήρθες στο KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Μία εφαρμογή ομαδικής μετονομασίας, για το KDE.<br />Για να μετονομάσεις τα αρχεία σου, μπορείς να επιλέξεις...:</p></body></html>"
+
+#: rc.cpp:694
+msgid "Add some files ..."
+msgstr "Προσθήκη μερικών αρχείων..."
+
+#: rc.cpp:700
+msgid "Specify the new filenames by giving a template ..."
+msgstr "Προσδιορισμός του νέου ονόματος χρησιμοποιώντας μια μήτρα..."
+
+#: rc.cpp:703
+msgid "Hint: Undo is still possible after renaming your files."
+msgstr "Συμβουλή: μετά τη μετονομασία των αρχείων υπάρχει η δυνατότητα αναίρεσης."
+
+#: rc.cpp:709
+msgid ""
+"This plugin sorts files after renaming into numbered subdirectories.\n"
+"\n"
+"Example:\n"
+"\tdirectory/001/file1\n"
+"\tdirectory/001/file2\n"
+"\tdirectory/002/file3\n"
+"\tdirectory/002/file4\n"
+"\tdirectory/003/file5\n"
+" \t..."
+msgstr ""
+"Αυτό το ένθεμα, αφού μετονομάσει τα αρχεία, τα ταξινομεί σε αριθμημένους υποκαταλόγους.\n"
+"\n"
+"Παράδειγμα:\n"
+"\tκατάλογος/001/αρχείο1\n"
+"\tκατάλογος/001/αρχείο2\n"
+"\tκατάλογος/002/αρχείο3\n"
+"\tκατάλογος/002/αρχείο4\n"
+"\tκατάλογος/003/αρχείο5\n"
+" \t..."
+
+#: rc.cpp:720
+msgid "&Options:"
+msgstr "Ε&πιλογές:"
+
+#: rc.cpp:723
+msgid "&Files per directory:"
+msgstr "&Αρχεία ανά κατάλογο:"
+
+#: rc.cpp:726
+msgid "&Start index:"
+msgstr "&Σημείο εκκίνησης:"
+
+#: rc.cpp:729
+msgid "Number &of digits:"
+msgstr "Αριθμός &ψηφίων:"
+
+#: rc.cpp:732
+msgid "Out&put:"
+msgstr "Έ&ξοδος σε:"
+
+#: rc.cpp:735
+msgid "Custom Sorting"
+msgstr "Προσαρμοσμένη Ταξινόμηση"
+
+#: rc.cpp:738
+msgid "&Sort filenames ..."
+msgstr "&Ταξινόμηση των ονομάτων των αρχείων..."
+
+#: rc.cpp:741
+msgid "&Ascending"
+msgstr "&Αύξουσα"
+
+#: rc.cpp:744
+msgid "&Descending"
+msgstr "&Φθίνουσα"
+
+#: rc.cpp:747
+msgid "&Numeric"
+msgstr "&Αριθμητικό"
+
+#: rc.cpp:750
+msgid "by"
+msgstr "κατά"
+
+#: rc.cpp:753
+msgid "&Token ..."
+msgstr "&Έκφραση..."
+
+#: previewlist.cpp:32
+msgid "&Change filename manually..."
+msgstr "&Αλλαγή ονόματος αρχείου χειροκίνητα..."
+
+#: previewlist.cpp:34
+msgid "&Open"
+msgstr "&Άνοιγμα"
+
+#: exiv2plugin.cpp:306
+msgid "Insert the comment of an image"
+msgstr "Εισαγωγή των σχολίων μιας εικόνας"
+
+#: exiv2plugin.cpp:377
+msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
+msgstr "Exiv2 (Αρχείων Εικόνων JPEG και TIFF)"
+
+#: exiv2plugin.cpp:378
+msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
+msgstr "<qt>Αυτό το ένθεμα υποστηρίζει την ανάγνωση μεταδεδομένων από αρχεία εικόνων JPEG και TIFF.</qt>"
+
+#: systemplugin.cpp:51
+msgid "Insert the current date"
+msgstr "Εισαγωγή της τρέχουσας ημερομηνίας"
+
+#: systemplugin.cpp:52
+msgid "Insert the current date using the formatting string yyyy-MM-dd"
+msgstr "Εισαγωγή της τωρινής ημερομηνίας χρησιμοποιώντας το στίχο \"yyyy-MM-dd\" (χρόνος-μήνας-ημέρα)"
+
+#: systemplugin.cpp:53
+msgid "Insert the current year"
+msgstr "Εισαγωγή του τωρινού χρόνου"
+
+#: systemplugin.cpp:54
+msgid "Insert the current month as number"
+msgstr "Εισαγωγή του τωρινού μήνα σαν νούμερο"
+
+#: systemplugin.cpp:55
+msgid "Insert the current day as number"
+msgstr "Εισαγωγή της τωρινής ημέρας σαν νούμερο"
+
+#: systemplugin.cpp:56
+msgid "Insert the current time"
+msgstr "Εισαγωγή της τρέχουσας ώρας"
+
+#: systemplugin.cpp:57
+msgid "Insert the current hour as number"
+msgstr "Εισαγωγή της τωρινής ώρας σαν νούμερο"
+
+#: systemplugin.cpp:58
+msgid "Insert the current minute as number"
+msgstr "Εισαγωγή του τωρινού λεπτού σαν νούμερο"
+
+#: systemplugin.cpp:59
+msgid "Insert the current second as number"
+msgstr "Εισαγωγή του τωρινού δευτερόλεπτου σαν νούμερο"
+
+#: systemplugin.cpp:60
+msgid "Owner of the file"
+msgstr "Ιδιοκτήτης του αρχείου"
+
+#: systemplugin.cpp:61
+msgid "Owning group of the file"
+msgstr "Ομάδα ιδιοκτησίας του αρχείου"
+
+#: systemplugin.cpp:62
+msgid "Insert the files creation date"
+msgstr "Εισαγωγή της ημερομηνίας δημιουργίας του αρχείου"
+
+#: systemplugin.cpp:63
+msgid "Insert the formatted file creation date"
+msgstr "Εισαγωγή της τυποποιημένης ημερομηνίας δημιουργίας του αρχείου"
+
+#: systemplugin.cpp:64
+msgid "Insert the files modification date"
+msgstr "Εισαγωγή της ημερομηνίας μετατροπής του αρχείου"
+
+#: systemplugin.cpp:65
+msgid "Insert the formatted modification date"
+msgstr "Εισαγωγή της τυποποιημένης ημερομηνίας μετατροπής του αρχείου"
+
+#: systemplugin.cpp:66
+msgid "Insert the date of the last file access"
+msgstr "Εισαγωγή της ημερομηνίας της τελευταίας πρόσβασης του αρχείου"
+
+#: systemplugin.cpp:67
+msgid "Insert the formatted date of the last file access"
+msgstr "Εισαγωγή της τυποποιημένης ημερομηνίας της τελευταίας πρόσβασης του αρχείου"
+
+#: systemplugin.cpp:68
+msgid "Insert the file size in bytes"
+msgstr "Εισαγωγή του μέγεθους του αρχείου σε byte"
+
+#: systemplugin.cpp:70
+msgid "Date and system functions"
+msgstr "Σύστημα και Ημερομηνίες"
+
+#: systemplugin.cpp:72
+msgid "<qt>This plugin contains tokens to get the creation, modification and last access time of files and the current system time and date.</qt>"
+msgstr "<qt>Αυτό το ένθεμα περιέχει εκφράσεις  που δίνουν το χρόνο δημιουργίας, μετατροπής, και τελευταίας πρόσβασης των αρχείων, καθώς και την τωρινή ημερομηνία και τον τωρινό χρόνο του συστήματος.</qt>"
+
+#: scriptplugin.cpp:63
+msgid "JavaScript Plugin"
+msgstr "JavaScript"
+
+#: scriptplugin.cpp:71
+msgid "Insert a snippet of JavaScript code (4+5 in this case)"
+msgstr ""
+
+#: scriptplugin.cpp:73
+msgid "Index of the current file"
+msgstr ""
+
+#: scriptplugin.cpp:74
+msgid "URL of the current file"
+msgstr "Η διεύθυνση URL του παρόντος αρχείου"
+
+#: scriptplugin.cpp:75
+msgid "Filename of the current file"
+msgstr "Το όνομα του παρόντος αρχείου"
+
+#: scriptplugin.cpp:76
+msgid "Extension of the current file"
+msgstr "Η επέκταση του παρόντος αρχείου"
+
+#: scriptplugin.cpp:77
+msgid "Directory of the current file"
+msgstr "Κατάλογος του τρέχοντος αρχείου"
+
+#: scriptplugin.cpp:131
+msgid "Variable Name"
+msgstr "Μεταβλητής Ονόματος"
+
+#: scriptplugin.cpp:132
+msgid "Initial Value"
+msgstr "Αρχική Τιμή"
+
+#: scriptplugin.cpp:241
+msgid "String"
+msgstr "Στίχος"
+
+#: scriptplugin.cpp:242
+msgid "Int"
+msgstr "Ακέραιος"
+
+#: scriptplugin.cpp:243
+#, fuzzy
+msgid "Double"
+msgstr "Διπλασιασμός"
+
+#: scriptplugin.cpp:244
+#, fuzzy
+msgid "Boolean"
+msgstr "Boolean"
+
+#: scriptplugin.cpp:262
+msgid "A JavaScript error has occured: "
+msgstr "Παρουσιάστηκε ένα σφάλμα JavaScript: "
+
+#: scriptplugin.cpp:291
+msgid "All currently entered definitions will be lost. Do you want to continue?"
+msgstr "Όλοι οι τωρινοί προσδιορισμοί θα χαθούν. Θέλεις να συνεχίσεις;"
+
+#: scriptplugin.cpp:319
+msgid "Unable to open %1 for reading."
+msgstr "Αδυναμία ανοίγματος του %1 για ανάγνωση."
+
+#: scriptplugin.cpp:343
+msgid "The file %1 already exists. Do you want to overwrite it?"
+msgstr "Το αρχείο %1 υπάρχει ήδη. Θέλεις να αντικατασταθεί;"
+
+#: scriptplugin.cpp:376
+msgid "Unable to open %1 for writing."
+msgstr "Αδυναμία ανοίγματος του %1 για εγγραφή."
+
+#: translitplugin.cpp:94
+msgid "Inserts the transliterated original filename"
+msgstr "Παράφραση του αρχικού ονόματος αρχείου"
+
+#: translitplugin.cpp:95
+msgid "Inserts the transliterated original filename converted to lower case"
+msgstr "Παράφραση του αρχικού ονόματος αρχείου με πεζά"
+
+#: translitplugin.cpp:96
+msgid "Inserts the transliterated original filename converted to upper case"
+msgstr "Παράφραση του αρχικού ονόματος αρχείου με κεφαλαία"
+
+#: translitplugin.cpp:97
+msgid "Inserts the transliterated original filename capitalized"
+msgstr "Παράφραση του αρχικού ονόματος αρχείου με το πρώτο γράμμα κάθε λέξης κεφαλαίο"
+
+#: translitplugin.cpp:98
+msgid "Transliterates the string following the semicolon"
+msgstr "Παράφραση του στίχου μετά το ερωτηματικό"
+
+#: translitplugin.cpp:100
+msgid "Transliteration"
+msgstr "Παράφραση"
+
+#: translitplugin.cpp:102
+msgid "<qt>This plugin can transcribe a filename into English (i.e. perform transliteration).</qt>"
+msgstr "<qt>Αυτό το ένθεμα παραφράζει ένα αρχείο στα Αγγλικά (transliteration).</qt>"
+
+#: datetimeplugin.cpp:51
+msgid "Date & Time Plugin"
+msgstr "Ημερομηνία και Ώρα"
+
+#: datetimeplugin.cpp:71
+msgid "DateTimePlugin works only with local files. %1 is a remote file."
+msgstr "Το ένθεμα Ημερομηνίας και Ώρας λειτουργεί μόνο σε τοπικά αρχεία. Το %1 είναι ένα απομακρυσμένο αρχείο."
+
+#: datetimeplugin.cpp:113
+msgid "Can't change date of file %1. (Cannot mktime)"
+msgstr "Αδυναμία αλλαγής της ημερομηνίας του αρχείου %1. (αδύνατη η εκτέλεση του mktime)"
+
+#: datetimeplugin.cpp:118
+msgid "Can't change date of file %1. (Cannot stat the file)"
+msgstr "Αδυναμία αλλαγής της ημερομηνίας του αρχείου %1. (αδύνατο το stat του αρχείου)"
+
+#: datetimeplugin.cpp:127
+msgid "Can't change date of file %1. (utime failed)"
+msgstr "Αδυναμία αλλαγής της ημερομηνίας του αρχείου %1. (αποτυχημένο utime)"
+
+#: permissionsplugin.cpp:112
+msgid "Permissions"
+msgstr "Δικαιώματα"
+
+#: permissionsplugin.cpp:125
+msgid "PermissionsPlugin works only with local files. %1 is a remote file."
+msgstr "Το ένθεμα Δικαιωμάτων λειτουργεί μόνο σε τοπικά αρχεία. Το %1 είναι ένα απομακρυσμένο αρχείο."
+
+#: permissionsplugin.cpp:130
+msgid "Can't chmod %1."
+msgstr "Αδυναμία εκτέλεσης του chmod για το %1."
+
+#: permissionsplugin.cpp:139
+msgid "Can't chown %1."
+msgstr "Αδυναμία εφαρμογής του chown για το %1."
+
+#: permissionsplugin.cpp:182
+msgid "Access permissions"
+msgstr "Δικαιώματα πρόσβασης"
+
+#: permissionsplugin.cpp:187
+msgid "Class"
+msgstr "Κατάταξη"
+
+#: permissionsplugin.cpp:190
+msgid "Read"
+msgstr "Ανάγνωση"
+
+#: permissionsplugin.cpp:193
+msgid "Write"
+msgstr "Εγγραφή"
+
+#: permissionsplugin.cpp:196
+msgid "Exec"
+msgstr "Εκτέλεση"
+
+#: permissionsplugin.cpp:202
+msgid "Special"
+msgstr "Ειδικό"
+
+#: permissionsplugin.cpp:205
+msgid "User"
+msgstr "Χρήστης"
+
+#: permissionsplugin.cpp:208
+msgid "Group"
+msgstr "Ομάδα"
+
+#: permissionsplugin.cpp:211
+msgid "Others"
+msgstr "Άλλα"
+
+#: permissionsplugin.cpp:214
+#, fuzzy
+msgid "UID"
+msgstr "UID"
+
+#: permissionsplugin.cpp:217
+#, fuzzy
+msgid "GID"
+msgstr "GID"
+
+#: permissionsplugin.cpp:220
+msgid "Sticky"
+msgstr "Κολλημένο"
+
+#: taglibplugin.cpp:41
+msgid "Insert the title of a track"
+msgstr "Εισαγωγή του ονόματος ενός κομματιού"
+
+#: taglibplugin.cpp:42
+msgid "Insert the artist of a track"
+msgstr "Εισαγωγή του καλλιτέχνη ενός κομματιού"
+
+#: taglibplugin.cpp:43
+msgid "Insert the album of a track"
+msgstr "Εισαγωγή της συλλογής ενός κομματιού"
+
+#: taglibplugin.cpp:44
+msgid "Insert the comment of a track"
+msgstr "Εισαγωγή του σχολίου ενός κομματιού"
+
+#: taglibplugin.cpp:45
+msgid "Insert the genre of a track"
+msgstr "Εισαγωγή του είδους ενός κομματιού"
+
+#: taglibplugin.cpp:46
+msgid "Insert the year of a track"
+msgstr "Εισαγωγή της χρονιάς ενός κομματιού"
+
+#: taglibplugin.cpp:47
+msgid "Insert the number of a track"
+msgstr "Εισαγωγή του αύξοντα αριθμού ενός κομματιού"
+
+#: taglibplugin.cpp:48
+msgid "Insert the number of a track formatted with a leading 0"
+msgstr "Εισαγωγή του αύξοντα αριθμού ενός κομματιού διαμορφωμένο με ένα αρχικό 0"
+
+#: taglibplugin.cpp:50
+msgid "TagLib (MP3/Ogg) Plugin"
+msgstr "TagLib (Αρχείων Μουσικής)"
+
+#: taglibplugin.cpp:51
+msgid "<qt>This plugin supports reading tags for MP3, Ogg Vorbis, FLAC, MPC, Speex WavPack and TrueAudio files.</qt>"
+msgstr "<qt>Αυτό ένθεμα υποστηρίζει την ανάγνωση μεταδεδομένων από αρχεία ήχου MP3, Ogg Vorbis, FLAC, MPC, Speex WavPack και TrueAudio.</qt>"
+
+#: increasecounterplugin.cpp:41
+msgid "Increase Counter"
+msgstr "Μετρητής Αυξομείωσης"
+
+#: dirsortplugin.cpp:43
+msgid "Subdirectory-Sort Plugin"
+msgstr "Ταξινόμηση Υποκαταλόγων"
+
+#: dirsortplugin.cpp:100
+msgid ": The output directory %1 does not exist."
+msgstr ": Ο κατάλογος εξαγωγής %1 δεν υπάρχει."
+
+#: podofoplugin.cpp:41
+msgid "Author of the pdf file"
+msgstr "Ο συγγραφέας του αρχείου pdf"
+
+#: podofoplugin.cpp:42
+msgid "Creator of the pdf file"
+msgstr "Ο δημιουργός του αρχείου pdf"
+
+#: podofoplugin.cpp:43
+msgid "Keywords of the pdf file"
+msgstr "Οι λέξεις κλειδιά του αρχείου pdf"
+
+#: podofoplugin.cpp:44
+msgid "Subject of the pdf file"
+msgstr "Το αντικείμενο του αρχείου pdf"
+
+#: podofoplugin.cpp:45
+msgid "Title of the pdf file"
+msgstr "Ο τίτλος του αρχείου pdf"
+
+#: podofoplugin.cpp:46
+msgid "Producer of the pdf file"
+msgstr "Ο παραγωγός του αρχείου pdf"
+
+#: podofoplugin.cpp:47
+msgid "Number of pages in the pdf file"
+msgstr "Το πλήθος των σελίδων του αρχείου pdf"
+
+#: podofoplugin.cpp:49
+msgid "PoDoFo (PDF) Plugin"
+msgstr "PoDoFo Ένθεμα (PDF)"
+
+#: podofoplugin.cpp:50
+msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
+msgstr "<qt>Αυτό το ένθεμα υποστηρίζει την ανάγνωση μεταδεδομένων από αρχεία PDF.</qt>"
+
+#: snumplugin.cpp:41
+msgid "Inserts the series number of original filename"
+msgstr "Εισαγωγή του αριθμού σειράς από το αρχικό όνομα του αρχείου"
+
+#: snumplugin.cpp:42
+msgid "Inserts the season number in two digits"
+msgstr "Εισαγωγή του αριθμού της χρονιάς της σειράς με δύο ψηφία"
+
+#: snumplugin.cpp:43
+msgid "Inserts the episode number in two or three digits"
+msgstr "Εισαγωγή του αριθμού του επεισοδίου της σειράς με δύο ψηφία"
+
+#: snumplugin.cpp:48
+msgid "SeriesNumber"
+msgstr "Αριθμός Σειράς"
+
+#: snumplugin.cpp:50
+msgid "<qt>This plugin can extract information from the filename of a TV series.</qt>"
+msgstr "<qt>Αυτό το ένθεμα μπορεί να εξάγει πληροφορίες από το όνομα αρχείου μιας τηλεοπτικής σειράς.</qt>"
+
+#: fontplugin.cpp:37
+msgid "Insert the Postscript name for Type1 and TrueType fonts."
+msgstr "Εισαγωγή του ονόματος Postscript για γραμματοσειρές Type1 και TrueType."
+
+#: fontplugin.cpp:38
+msgid "Insert the (usually English) name of the font family."
+msgstr "Εισαγωγή του ονόματος (συνήθως Αγγλικό) της οικογένειας της γραμματοσειράς."
+
+#: fontplugin.cpp:39
+msgid "Insert the (usually English) name of the font style."
+msgstr "Εισαγωγή του ονόματος (συνήθως Αγγλικό) του τύπου της γραμματοσειράς."
+
+#: fontplugin.cpp:41
+msgid "Font (FreeType2) Plugin"
+msgstr "Γραμματοσειράς Ένθεμα (FreeType2)"
+
+#: fontplugin.cpp:42
+msgid "<qt>This plugin supports reading tags from font files.</qt>"
+msgstr "<qt>Αυτό το ένθεμα υποστηρίζει την ανάγνωση μεταδεδομένων από αρχεία γραμματοσειράς.</qt>"
+
