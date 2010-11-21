@@ -11,6 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2005-10-14 01:11+0200\n"
 "Last-Translator: Matej Urbančič <matej.urban@gmail.com>\n"
 "Language-Team: Slovenian\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -702,8 +703,8 @@ msgstr "ustvari podmapo"
 #, fuzzy
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr ""
-"Ne morem ustvariti simboličnih povezav na različnih gostiteljih za datoteko %"
-"1."
+"Ne morem ustvariti simboličnih povezav na različnih gostiteljih za datoteko "
+"%1."
 
 #: batchrenamer.cpp:244
 msgid "Cannot rename: source and target filename are equal: %1"
