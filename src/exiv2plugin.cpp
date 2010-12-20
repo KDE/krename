@@ -303,9 +303,9 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
     this->addSupportedToken("exifComment");
     //this->addSupportedToken("exifWidth");
     //this->addSupportedToken("exifHeight");
-    m_help.append( "[exifComment];;" + i18n("Insert the comment of an image") );
-    //m_help.append( "[exifWidth];;" + i18n("Insert the width in pixel of an image") );
-    //m_help.append( "[exifHeight];;" + i18n("Insert the height in pixel of an image") );
+    m_help.append( "[exifComment]" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert the comment of an image") );
+    //m_help.append( "[exifWidth]" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert the width in pixel of an image") );
+    //m_help.append( "[exifHeight]" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert the height in pixel of an image") );
 
     // Add exif taks
     token = exifTags;
@@ -323,7 +323,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
 
         QString cur( *token );
         this->addSupportedToken( prefix + cur );
-        m_help.append( QString("[") + prefix + cur + QString("];;") + help );
+        m_help.append( QString("[") + prefix + cur + QString("]")  + Plugin::S_TOKEN_SEPARATOR + help );
 
         m_mapRealKeys[QString( prefix + cur ).toLower()] = cur;
         ++token;
@@ -345,7 +345,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
         
         QString cur( *token );
         this->addSupportedToken( prefix + cur );
-        m_help.append( QString("[") + prefix + cur + QString("];;") + help );
+        m_help.append( QString("[") + prefix + cur + QString("]") + Plugin::S_TOKEN_SEPARATOR + help );
 
         m_mapRealKeys[QString( prefix + cur ).toLower()] = cur;
         ++token;
@@ -367,7 +367,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
 
         QString cur( *token );
         this->addSupportedToken( prefix + cur );
-        m_help.append( QString("[") + prefix + cur + QString("];;") + help );
+        m_help.append( QString("[") + prefix + cur + QString("]") + Plugin::S_TOKEN_SEPARATOR + help );
 
         m_mapRealKeys[QString( prefix + cur ).toLower()] = cur;
         ++token;

@@ -21,6 +21,7 @@
 #include "krenamemodel.h"
 
 #include <kapplication.h>
+#include <kiconloader.h>
 #include <kpushbutton.h>
 
 #define COLUMN_PREVIEW 2
@@ -74,6 +75,9 @@ private:
     KRenameModel* m_model;
 };
 
+const int TokenHelpDialog::S_MAX_RECENT = 10;
+const QString TokenHelpDialog::S_TOKEN_SEPARATOR = ";;";
+
 TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
                                   QLineEdit* edit, QWidget* parent )
     : KDialog( parent ), m_edit( edit ), m_renamer(renamer)
@@ -125,9 +129,10 @@ void TokenHelpDialog::add( const QString & headline, const QStringList & command
 int TokenHelpDialog::exec()
 {
     loadConfig();
+    addRecentTokens();
 
     m_widget.listCategories->sortItems( 0, Qt::AscendingOrder );
-
+    
     if( !m_lastSelected.isEmpty() )
     {
         selectCategory( m_lastSelected );
@@ -159,8 +164,8 @@ void TokenHelpDialog::slotCategoryChanged( QTreeWidgetItem* item )
     for( int i=0;i<commands.count(); i++ )
     {
         QTreeWidgetItem* item = new QTreeWidgetItem( m_widget.listTokens );
-        item->setText( 0, commands[i].section(";;", 0, 0 ) );
-        item->setText( 1, commands[i].section(";;", 1, 1 ) );
+        item->setText( 0, commands[i].section(S_TOKEN_SEPARATOR, 0, 0 ) );
+        item->setText( 1, commands[i].section(S_TOKEN_SEPARATOR, 1, 1 ) );
     }
 
     slotUpdatePreview();
@@ -172,11 +177,17 @@ void TokenHelpDialog::slotInsert()
     if( category )
         m_lastSelected = category->text(0);
 
-    saveConfig();
-
     QTreeWidgetItem* item = m_widget.listTokens->currentItem();
     if( item ) 
-        m_edit->insert( item->text( 0 ) );
+    {
+      const QString & token = item->text( 0 );
+      const QString & help = item->text( 1 );
+
+      addToRecentTokens( token, help );
+      saveConfig();
+
+      m_edit->insert( token );
+    }
 
     this->accept();
 }
@@ -188,6 +199,7 @@ void TokenHelpDialog::loadConfig()
     KConfigGroup groupGui = config->group( QString("TokenHelpDialog") );
 
     m_lastSelected = groupGui.readEntry( "LastSelectedCategory", m_lastSelected );
+    m_recent = groupGui.readEntry( "RecentTokens", m_recent );
 
     bool preview = groupGui.readEntry( "Preview",  m_widget.checkPreview->isChecked() );
     m_widget.checkPreview->setChecked( preview );
@@ -224,6 +236,7 @@ void TokenHelpDialog::saveConfig()
     groupGui.writeEntry( "Splitter", m_widget.splitter->sizes() );
     groupGui.writeEntry( "Preview",  m_widget.checkPreview->isChecked() );
     groupGui.writeEntry( "LastSelectedCategory", m_lastSelected );
+    groupGui.writeEntry( "RecentTokens", m_recent );
 
     this->saveDialogSize( groupGui );
 }
@@ -280,6 +293,38 @@ void TokenHelpDialog::slotUpdatePreview()
     }
 }
 
+void TokenHelpDialog::addRecentTokens()
+{
+  const QPixmap & icon = 
+    KIconLoader::global()->loadIcon( "document-open-recent", KIconLoader::NoGroup, KIconLoader::SizeSmall );
+  this->add( i18n("Recent"), m_recent, icon );
+}
+
+void TokenHelpDialog::addToRecentTokens( const QString & token, const QString & help )
+{
+  // 1. Check if m_recent contains token and remove it
+  QStringList::iterator it = m_recent.begin();
+  while( it != m_recent.end() )
+  {
+    if( (*it).startsWith( token + S_TOKEN_SEPARATOR ) ) 
+    {
+      m_recent.erase( it );
+      break;
+    }
+
+    ++it;
+  }
+ 
+  // 2. remove first token if more than 10
+  if( m_recent.count() >= S_MAX_RECENT ) 
+  {
+    m_recent.removeAt( 0 );
+  }
+
+  // 3. append token
+  QString recent = token + S_TOKEN_SEPARATOR + help;
+  m_recent << recent;
+}
 
 #include "tokenhelpdialog.moc"
 

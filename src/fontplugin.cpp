@@ -34,9 +34,9 @@ FontPlugin::FontPlugin( PluginLoader* loader )
     this->addSupportedToken("fontpostscript");
     this->addSupportedToken("fontfamily");
     this->addSupportedToken("fontstyle");
-    m_help.append( "[fontPostscript];;" + i18n("Insert the Postscript name for Type1 and TrueType fonts.") );
-    m_help.append( "[fontFamily];;" + i18n("Insert the (usually English) name of the font family.") );
-    m_help.append( "[fontStyle];;" + i18n("Insert the (usually English) name of the font style.") );
+    m_help.append( "[fontPostscript]" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert the Postscript name for Type1 and TrueType fonts.") );
+    m_help.append( "[fontFamily]" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert the (usually English) name of the font family.") );
+    m_help.append( "[fontStyle]" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert the (usually English) name of the font style.") );
 
     m_name = i18n("Font (FreeType2) Plugin");
     m_comment = i18n("<qt>This plugin supports reading tags from "

@@ -91,11 +91,11 @@ TranslitPlugin::TranslitPlugin( PluginLoader* loader )
     this->addSupportedToken("transliterated");
     this->addSupportedToken("transliterated;.*");
 
-    m_help.append( "[transliterated];;" + i18n("Inserts the transliterated original filename") );
-    m_help.append( "[%transliterated];;" + i18n("Inserts the transliterated original filename converted to lower case") );
-    m_help.append( "[&transliterated];;" + i18n("Inserts the transliterated original filename converted to upper case") );
-    m_help.append( "[*transliterated];;" + i18n("Inserts the transliterated original filename capitalized") );
-    m_help.append( "[transliterated;Some string];;" + i18n("Transliterates the string following the semicolon") );
+    m_help.append( Plugin::createHelpEntry("transliterated", i18n("Inserts the transliterated original filename")) );
+    m_help.append( Plugin::createHelpEntry("%transliterated", i18n("Inserts the transliterated original filename converted to lower case")) );
+    m_help.append( Plugin::createHelpEntry("&transliterated", i18n("Inserts the transliterated original filename converted to upper case")) );
+    m_help.append( Plugin::createHelpEntry("*transliterated", i18n("Inserts the transliterated original filename capitalized")) );
+    m_help.append( Plugin::createHelpEntry("transliterated;Some string", i18n("Transliterates the string following the semicolon")) );
 
     m_name = i18n("Transliteration");
     m_icon = "applications-education-language";

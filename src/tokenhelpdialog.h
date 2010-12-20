@@ -48,6 +48,8 @@ class TokenHelpDialog : public KDialog {
      */
     void add( const QString & headline, const QStringList & commands, const QPixmap & icon, bool first = false );
 
+    static const QString S_TOKEN_SEPARATOR; ///< Separator between token and help
+
  public slots:
      int exec();
 
@@ -69,6 +71,19 @@ class TokenHelpDialog : public KDialog {
      * \param category user visible name of a category
      */
     void selectCategory( const QString & category );
+    
+    /**
+     * Add all tokens stored in the list
+     * m_recent to the list of tokens and to categories.
+     */
+    void addRecentTokens();
+
+    /**
+     * Add a token to the list of recent tokens.
+     * \param token the token itself
+     * \param help the help string for the token
+     */
+    void addToRecentTokens( const QString & token, const QString & help );
 
  private:
     KRenameUnformattedWrappedModel* m_model;
@@ -83,6 +98,9 @@ class TokenHelpDialog : public KDialog {
     QString             m_first;
 
     QString             m_lastSelected;
+    QStringList         m_recent;
+
+    static const int    S_MAX_RECENT; ///< Maximum number of recent tokens
 };
 
 #endif // _TOKEN_HELP_DIALOG_H_

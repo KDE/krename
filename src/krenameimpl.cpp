@@ -495,33 +495,33 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
 
     // add built-in tokens
     QStringList help;
-    help.append("$;;" + i18n("old filename") );
-    help.append("%;;" + i18n("old filename converted to lower case") );
-    help.append("&;;" + i18n("old filename converted to upper case") );
-    help.append("*;;" + i18n("first letter of every word upper case") );
-    help.append("[&1][%2-];;" + i18n("first letter of filename upper case") );
-    help.append("#;;" + i18n("number (try also ##, ###, ... for leading zeros)") );
-    help.append("#{0;1};;" + i18n("counter with custom start value 0 and custom stepping 1") );
-    help.append("/;;" + i18n("create a subdirectory") );
-    help.append("[$x-y];;" + i18n("character x to y of old filename") );
-    help.append("[$x;y];;" + i18n("y characters of old filename starting at x") );
-    help.append("[$dirname];;" + i18n("insert name of directory") );
-    help.append("[$dirname.];;" + i18n("insert name of parent directory") );
-    help.append("[#length-0];;" + i18n("insert the length of the input filename") );
-    help.append("[trimmed];;" + i18n("strip whitespaces leading and trailing") );
-    help.append("[trimmed;.*];;" + i18n("strip whitespaces leading and trailing of an arbitrary string") );
+    help.append("$" + Plugin::S_TOKEN_SEPARATOR + i18n("old filename") );
+    help.append("%" + Plugin::S_TOKEN_SEPARATOR + i18n("old filename converted to lower case") );
+    help.append("&" + Plugin::S_TOKEN_SEPARATOR + i18n("old filename converted to upper case") );
+    help.append("*" + Plugin::S_TOKEN_SEPARATOR + i18n("first letter of every word upper case") );
+    help.append("[&1][%2-]" + Plugin::S_TOKEN_SEPARATOR + i18n("first letter of filename upper case") );
+    help.append("#" + Plugin::S_TOKEN_SEPARATOR + i18n("number (try also ##, ###, ... for leading zeros)") );
+    help.append("#{0;1}" + Plugin::S_TOKEN_SEPARATOR + i18n("counter with custom start value 0 and custom stepping 1") );
+    help.append("/" + Plugin::S_TOKEN_SEPARATOR + i18n("create a subdirectory") );
+    help.append("[$x-y]" + Plugin::S_TOKEN_SEPARATOR + i18n("character x to y of old filename") );
+    help.append("[$x;y]" + Plugin::S_TOKEN_SEPARATOR + i18n("y characters of old filename starting at x") );
+    help.append("[$dirname]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert name of directory") );
+    help.append("[$dirname.]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert name of parent directory") );
+    help.append("[#length-0]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert the length of the input filename") );
+    help.append("[trimmed]" + Plugin::S_TOKEN_SEPARATOR + i18n("strip whitespaces leading and trailing") );
+    help.append("[trimmed;.*]" + Plugin::S_TOKEN_SEPARATOR + i18n("strip whitespaces leading and trailing of an arbitrary string") );
     dialog.add( i18n("Built-in Functions" ), help, SmallIcon("krename"), true );
 
     help.clear();
-    help.append( "\\$;;" + i18n("Insert '$'") );
-    help.append( "\\%;;" + i18n("Insert '%'") );
-    help.append( "\\&;;" + i18n("Insert '&'") );
-    help.append( "\\*;;" + i18n("Insert '*'") );
-    help.append( "\\/;;" + i18n("Insert '/'") );
-    help.append( "\\\\;;" + i18n("Insert '\\\\'") );
-    help.append( "\\[;;" + i18n("Insert '['") );
-    help.append( "\\];;" + i18n("Insert ']'") );
-    help.append( "\\#;;" + i18n("Insert '#'") );
+    help.append( "\\$" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '$'") );
+    help.append( "\\%" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '%'") );
+    help.append( "\\&" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '&'") );
+    help.append( "\\*" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '*'") );
+    help.append( "\\/" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '/'") );
+    help.append( "\\\\" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '\\\\'") );
+    help.append( "\\[" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '['") );
+    help.append( "\\]" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert ']'") );
+    help.append( "\\#" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '#'") );
     dialog.add( i18n("Special Characters" ), help, SmallIcon("krename") );
 
     // add plugin tokens

@@ -1,9 +1,10 @@
 STEVEN: Drag and Drop for KRenameModel and PreviewModel
 
-
-DOM: Advanced mode and Simple mode + screen shots in first start dialog 
+DOM: Create method Plugin::createTokenHelpString( token, help ), which
+   puts the token in brackets and concatenates using
+   Plugin::S_TOKEN_SEPARATOR, to avoid ugly concatenations in code
+DOM: Create header file with constants for all groups and config keys
 DOM: Copying extremely slows
-DOM: Remember the last 10 selected tokens in HelpDialog
 DOM: Display in Realtime Preview a new first column which contains a small warning icons
      If the new and the old filename are identical
 DOM: Kontext menü im advance mode für alle text boxen:
