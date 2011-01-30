@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-26 08:59+0200\n"
+"POT-Creation-Date: 2011-01-30 14:09+0100\n"
 "PO-Revision-Date: 2009-09-26 22:29+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: rc.cpp:120 rc.cpp:132
+#: rc.cpp:295 rc.cpp:307
 msgid "$"
 msgstr "$"
 
@@ -47,28 +47,28 @@ msgstr "&Plugin"
 msgid "&4. Filename"
 msgstr "Nome &file"
 
-#: rc.cpp:396
+#: rc.cpp:487
 msgid "&Add Number"
 msgstr "&Aggiungi numero"
 
-#: rc.cpp:6 rc.cpp:450 rc.cpp:624 previewlist.cpp:36
+#: previewlist.cpp:36 rc.cpp:27 rc.cpp:245 rc.cpp:643
 msgid "&Add..."
 msgstr "&Aggiungi..."
 
-#: rc.cpp:111
+#: rc.cpp:286
 msgid "&Advanced Filename"
 msgstr "Nome file &avanzato"
 
-#: rc.cpp:741
+#: rc.cpp:529
 #, fuzzy
 msgid "&Ascending"
 msgstr "Ordine: ascendente"
 
-#: rc.cpp:435
+#: rc.cpp:54
 msgid "&Cancel"
 msgstr "A&nnulla"
 
-#: rc.cpp:579
+#: rc.cpp:604
 msgid "&Change Owner"
 msgstr "&Cambia proprietario"
 
@@ -80,57 +80,62 @@ msgstr "&Cambia manualmente il nome del file..."
 msgid "&Close"
 msgstr "&Chiudi"
 
-#: rc.cpp:411
+#: rc.cpp:502
 msgid "&Convert selection:"
 msgstr "&Converti la selezione:"
 
-#: rc.cpp:96
+#: rc.cpp:718
 msgid "&Copy files to destination directory"
 msgstr "&Copia i file nella cartella di destinazione"
 
-#: rc.cpp:630
+#: rc.cpp:547
+#, fuzzy
+msgid "&Custom"
+msgstr "Nome personalizzato"
+
+#: rc.cpp:33
 msgid "&Definitions"
 msgstr "&Definizioni"
 
-#: rc.cpp:627
+#: rc.cpp:30
 msgid "&Delete"
 msgstr "&Elimina"
 
-#: rc.cpp:744
+#: rc.cpp:532
 #, fuzzy
 msgid "&Descending"
 msgstr "Ordine: discendente"
 
-#: rc.cpp:57
+#: rc.cpp:694
 msgid "&Display name"
 msgstr "&Visualizza nome"
 
-#: rc.cpp:276 rc.cpp:375
+#: rc.cpp:156 rc.cpp:451
 msgid "&Down"
 msgstr "&Giù"
 
-#: rc.cpp:453
+#: rc.cpp:248
 msgid "&Edit..."
 msgstr "&Modifica..."
 
-#: rc.cpp:285
+#: rc.cpp:466
 msgid "&Enable Plugin"
 msgstr "Abilita pl&ugin"
 
-#: rc.cpp:228 rc.cpp:336
+#: rc.cpp:117 rc.cpp:403
 msgid "&Extension:"
 msgstr "&Estensione"
 
-#: rc.cpp:183 rc.cpp:291
+#: rc.cpp:72 rc.cpp:358
 msgid "&Filename"
 msgstr "Nome &file"
 
-#: rc.cpp:723
+#: rc.cpp:206
 #, fuzzy
 msgid "&Files per directory:"
 msgstr "File nella cartella:"
 
-#: rc.cpp:462
+#: rc.cpp:60
 msgid "&Find:"
 msgstr "&Trova:"
 
@@ -139,64 +144,64 @@ msgstr "&Trova:"
 msgid "&Finish"
 msgstr "&Fine..."
 
-#: rc.cpp:138
+#: rc.cpp:313
 msgid "&Functions..."
 msgstr "&Funzioni..."
 
-#: rc.cpp:588
+#: rc.cpp:613
 msgid "&Group:"
 msgstr "&Gruppo:"
 
-#: rc.cpp:663
+#: rc.cpp:733
 msgid "&Increase Counter"
 msgstr "&Incrementa contatore"
 
-#: rc.cpp:654
+#: rc.cpp:9
 msgid "&Initial Value:"
 msgstr "Valore &iniziale:"
 
-#: tokenhelpdialog.cpp:86
+#: tokenhelpdialog.cpp:90
 msgid "&Insert"
 msgstr "&Inserisci"
 
-#: rc.cpp:177
+#: rc.cpp:352
 msgid "&Insert Part of Filename..."
 msgstr "&Inserisci parte del nome file"
 
-#: rc.cpp:642
+#: rc.cpp:45
 msgid "&Insert Variable"
 msgstr "&Inserisci variabile"
 
-#: rc.cpp:408
+#: rc.cpp:499
 msgid "&Invert selection"
 msgstr "&Inverti la selezione"
 
-#: rc.cpp:639
+#: rc.cpp:42
 msgid "&Load from File..."
 msgstr "Carica da fi&le..."
 
-#: rc.cpp:99
+#: rc.cpp:721
 msgid "&Move files to destination directory"
 msgstr "Sposta i &file nella cartella di destinazione"
 
-#: rc.cpp:651
+#: rc.cpp:6
 msgid "&Name:"
 msgstr "&Nome:"
 
-#: rc.cpp:381
+#: rc.cpp:472
 msgid "&Numbering"
 msgstr "&Contatore"
 
-#: rc.cpp:171
+#: rc.cpp:346
 msgid "&Numbering..."
 msgstr "&Numerazione..."
 
-#: rc.cpp:747
+#: rc.cpp:535
 #, fuzzy
 msgid "&Numeric"
 msgstr "Numero"
 
-#: rc.cpp:674
+#: rc.cpp:744
 msgid "&Offset:"
 msgstr "Sc&ostamento:"
 
@@ -209,32 +214,37 @@ msgstr "&Apri"
 msgid "&Open Destination"
 msgstr "&Apri destinazione..."
 
-#: rc.cpp:90
+#: rc.cpp:712
 msgid "&Options"
 msgstr "&Opzioni"
 
-#: rc.cpp:720
+#: rc.cpp:203
 #, fuzzy
 msgid "&Options:"
 msgstr "&Opzioni"
 
-#: rc.cpp:105
+#: rc.cpp:727
 msgid "&Overwrite existing files"
 msgstr "S&ovrascrivi i file esistenti"
 
-#: rc.cpp:225 rc.cpp:333
+#: rc.cpp:544
+#, fuzzy
+msgid "&Predefined"
+msgstr "&Prefisso:"
+
+#: rc.cpp:114 rc.cpp:400
 msgid "&Prefix:"
 msgstr "&Prefisso:"
 
-#: rc.cpp:51
+#: rc.cpp:688
 msgid "&Preview"
 msgstr "&Anteprima"
 
-#: rc.cpp:456 previewlist.cpp:37
+#: previewlist.cpp:37 rc.cpp:251
 msgid "&Remove"
 msgstr "&Rimuovi"
 
-#: rc.cpp:399
+#: rc.cpp:490
 msgid "&Remove Number"
 msgstr "&Rimuovi numero"
 
@@ -242,7 +252,7 @@ msgstr "&Rimuovi numero"
 msgid "&Rename All Files Again..."
 msgstr "&Rinomina ancora tutti i file..."
 
-#: rc.cpp:93
+#: rc.cpp:715
 msgid "&Rename input files"
 msgstr "&Rinomina i file d'origine"
 
@@ -250,58 +260,58 @@ msgstr "&Rinomina i file d'origine"
 msgid "&Rename more..."
 msgstr "&Rinomina altro..."
 
-#: rc.cpp:465
+#: rc.cpp:63
 msgid "&Replace With:"
 msgstr "&Sostituisci con:"
 
-#: rc.cpp:390
+#: rc.cpp:481
 msgid "&Reset counter for every directory"
 msgstr "A&zzera il contatore per ogni cartella"
 
-#: rc.cpp:636
+#: rc.cpp:39
 msgid "&Save to File..."
 msgstr "&Salva su file..."
 
-#: rc.cpp:180
+#: rc.cpp:355
 msgid "&Simple Filename"
 msgstr "Nome file &semplice"
 
-#: rc.cpp:393
+#: rc.cpp:484
 msgid "&Skip Numbers"
 msgstr "&Salta i numeri"
 
-#: rc.cpp:738
+#: rc.cpp:526
 #, fuzzy
 msgid "&Sort filenames ..."
 msgstr "&Inserisci parte del nome file"
 
-#: rc.cpp:726
+#: rc.cpp:209
 #, fuzzy
 msgid "&Start index:"
 msgstr "Indice iniziale:"
 
-#: rc.cpp:387
+#: rc.cpp:478
 msgid "&Step by:"
 msgstr "Pa&sso:"
 
-#: rc.cpp:186 rc.cpp:294
+#: rc.cpp:75 rc.cpp:361
 msgid "&Suffix:"
 msgstr "&Suffisso:"
 
-#: rc.cpp:114
+#: rc.cpp:289
 msgid "&Template:"
 msgstr "Mod&ello:"
 
-#: rc.cpp:645
+#: rc.cpp:48
 msgid "&Test..."
 msgstr "&Prova..."
 
-#: rc.cpp:753
+#: rc.cpp:541
 #, fuzzy
 msgid "&Token ..."
 msgstr "&Prova..."
 
-#: rc.cpp:657
+#: rc.cpp:12
 msgid "&Type:"
 msgstr "&Tipo:"
 
@@ -309,19 +319,19 @@ msgstr "&Tipo:"
 msgid "&Undo"
 msgstr "Ann&ulla"
 
-#: rc.cpp:270 rc.cpp:372
+#: rc.cpp:153 rc.cpp:445
 msgid "&Up"
 msgstr "S&u"
 
-#: rc.cpp:144
+#: rc.cpp:319
 msgid "&Use extension of the input file"
 msgstr "&Utilizza le estensioni dei file di origine"
 
-#: rc.cpp:585
+#: rc.cpp:610
 msgid "&User:"
 msgstr "&Utente:"
 
-#: rc.cpp:615
+#: rc.cpp:18
 msgid "&Variables"
 msgstr "&Variabili"
 
@@ -333,7 +343,7 @@ msgstr "(c) 2001-2009, Dominik Seichter\n"
 msgid "*|All files and directories"
 msgstr "*|Tutti i file e cartelle"
 
-#: rc.cpp:621
+#: rc.cpp:24
 msgid "1"
 msgstr "1"
 
@@ -342,7 +352,7 @@ msgstr "1"
 msgid ": The output directory %1 does not exist."
 msgstr "Il profilo: \"%1\" non è stato trovato."
 
-#: rc.cpp:666
+#: rc.cpp:736
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -386,7 +396,7 @@ msgstr ""
 "\">img019. </span>Utilizzando questo plugin, puoi facilmente aggiungere uno "
 "scostamento di -4 per ottenere il risultato desiderato.</p></body></html>"
 
-#: rc.cpp:680
+#: rc.cpp:257
 #, fuzzy
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -436,7 +446,7 @@ msgstr ""
 "<b>KRename è stato avviato come superutente!</b><br>Usandolo così potreste "
 "danneggiare il vostro sistema se non sapete bene cosa state facendo!"
 
-#: rc.cpp:123
+#: rc.cpp:298
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -471,30 +481,30 @@ msgstr ""
 "funzionalità sono benvenuti. Così come un  supporto finanziario (chiunque ha "
 "bisogno di soldi ;) Vedere la guida per i dettagli.</p></qt>"
 
-#: rc.cpp:168
+#: rc.cpp:343
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
 msgstr ""
 
-#: rc.cpp:150
+#: rc.cpp:325
 msgid ""
 "<qt>Configure which part of the filename is considered to be the "
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
 msgstr ""
 
-#: rc.cpp:129
+#: rc.cpp:304
 #, fuzzy
 msgid "<qt>Enter a template for changing the file extension.</qt>"
 msgstr "definisci un modello per l'estensione del file"
 
-#: rc.cpp:117
+#: rc.cpp:292
 #, fuzzy
 msgid "<qt>Enter a template for changing the filename.</qt>"
 msgstr "Specifica un modello da utilizzare per rinominare i file."
 
-#: rc.cpp:162 rc.cpp:261
+#: rc.cpp:337 rc.cpp:436
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
@@ -502,21 +512,21 @@ msgstr ""
 "<qt>Trova e sostituisci stringhe ed espressioni regolari nel nome del file "
 "rinominato.</qt>"
 
-#: rc.cpp:174
+#: rc.cpp:349
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
 msgstr "<qt>Seleziona graficamente una parte del nome file da inserire.</qt>"
 
-#: rc.cpp:135 rc.cpp:189 rc.cpp:192 rc.cpp:213 rc.cpp:222
+#: rc.cpp:310 rc.cpp:364 rc.cpp:367 rc.cpp:388 rc.cpp:397
 msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
 
-#: rc.cpp:141
+#: rc.cpp:316
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
 msgstr "<qt>Mantieni l'estensione del file e non cambiarla.</qt>"
 
-#: rc.cpp:405
+#: rc.cpp:496
 msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
@@ -568,7 +578,7 @@ msgid "<qt>This plugin supports reading tags from font files.</qt>"
 msgstr ""
 "<qt>Questo plugin supporta la lettura dei tag da file JPEG e TIFF.</qt>"
 
-#: rc.cpp:297 rc.cpp:300 rc.cpp:321 rc.cpp:330
+#: rc.cpp:78 rc.cpp:81 rc.cpp:102 rc.cpp:111
 msgid "?"
 msgstr "?"
 
@@ -576,11 +586,15 @@ msgstr "?"
 msgid "A JavaScript error has occured: "
 msgstr "Si è verificato un errore JavaScript: "
 
-#: rc.cpp:576
+#: rc.cpp:601
 msgid "A&dvanced Permissions"
 msgstr "Permessi a&vanzati"
 
-#: rc.cpp:531 rc.cpp:609
+#: tokensortmodedialog.cpp:35
+msgid "Access Date"
+msgstr ""
+
+#: rc.cpp:457 rc.cpp:556
 msgid "Access Permissions"
 msgstr "Permessi di accesso"
 
@@ -600,7 +614,7 @@ msgstr "Aggiungi i nomi delle car&telle ai nomi dei file"
 msgid "Add directory names only"
 msgstr "Aggiungi solo i nomi delle cartelle"
 
-#: rc.cpp:3
+#: rc.cpp:640
 msgid "Add files for renaming."
 msgstr "Aggiungi file per la rinomina."
 
@@ -612,7 +626,7 @@ msgstr ""
 "Aggiungi a Krename solo i nomi delle cartelle escludendo i file in esse "
 "contenuti."
 
-#: rc.cpp:694
+#: rc.cpp:271
 #, fuzzy
 msgid "Add some files ..."
 msgstr "Aggiungi dei file..."
@@ -626,7 +640,7 @@ msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr "Tutte le definizioni inserite saranno perse. Vuoi continuare?"
 
-#: rc.cpp:474
+#: rc.cpp:619
 msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
@@ -642,7 +656,7 @@ msgstr "Andreas Pour"
 msgid "Arpad Biro"
 msgstr ""
 
-#: rc.cpp:27
+#: rc.cpp:664
 #, fuzzy
 msgid "Ascending"
 msgstr "Ordine: ascendente"
@@ -668,11 +682,11 @@ msgstr "Brandon Low"
 msgid "Built-in Functions"
 msgstr "Funzioni integrate"
 
-#: rc.cpp:540 rc.cpp:552 rc.cpp:564
+#: rc.cpp:565 rc.cpp:577 rc.cpp:589
 msgid "Can Read"
 msgstr "Può leggere"
 
-#: rc.cpp:543 rc.cpp:555 rc.cpp:567
+#: rc.cpp:568 rc.cpp:580 rc.cpp:592
 msgid "Can Read & Write"
 msgstr "Può leggere e scrivere"
 
@@ -721,23 +735,23 @@ msgstr "Impossibile creare un collegamento simbolico al file %1."
 msgid "Cannot rename: source and target filename are equal: %1"
 msgstr ""
 
-#: rc.cpp:204 rc.cpp:246 rc.cpp:312 rc.cpp:354 rc.cpp:423
+#: rc.cpp:93 rc.cpp:135 rc.cpp:379 rc.cpp:421 rc.cpp:514
 msgid "Capitalize"
 msgstr "Prima lettera maiuscola"
 
-#: rc.cpp:477
+#: rc.cpp:622
 msgid "Category"
 msgstr "Categoria"
 
-#: rc.cpp:528
+#: rc.cpp:553
 msgid "Change &Permissions"
 msgstr "Cambia i &permessi"
 
-#: rc.cpp:594
+#: rc.cpp:221
 msgid "Change &access date && time"
 msgstr "Cambia la data e l'ora di accesso"
 
-#: rc.cpp:597
+#: rc.cpp:224
 msgid "Change &modifcation date && time"
 msgstr "Cambia la data e l'ora di &modifica"
 
@@ -749,7 +763,7 @@ msgstr "Charles Samuels"
 msgid "Class"
 msgstr "Classe"
 
-#: rc.cpp:81
+#: rc.cpp:753
 msgid "Configure the look and feel of the KRename GUI:"
 msgstr "Configura l'aspetto dell'interfaccia grafica di KRename:"
 
@@ -757,20 +771,20 @@ msgstr "Configura l'aspetto dell'interfaccia grafica di KRename:"
 msgid "Contributed a Spanish translation"
 msgstr "Per aver contribuito alla traduzione spagnola"
 
-#: rc.cpp:198 rc.cpp:240 rc.cpp:306 rc.cpp:348 rc.cpp:417
+#: rc.cpp:87 rc.cpp:129 rc.cpp:373 rc.cpp:415 rc.cpp:508
 msgid "Convert to lower case"
 msgstr "Converti in minuscolo"
 
-#: rc.cpp:201 rc.cpp:243 rc.cpp:309 rc.cpp:351 rc.cpp:420
+#: rc.cpp:90 rc.cpp:132 rc.cpp:376 rc.cpp:418 rc.cpp:511
 msgid "Convert to upper case"
 msgstr "Converti in maiuscolo"
 
-#: rc.cpp:648
+#: rc.cpp:3
 #, fuzzy
 msgid "Create Variable"
 msgstr "&Inserisci variabile"
 
-#: rc.cpp:102
+#: rc.cpp:724
 msgid "Create symbolic &links in destination directory"
 msgstr "Crea co&llegamenti simbolici nella cartella di destinazione"
 
@@ -778,26 +792,30 @@ msgstr "Crea co&llegamenti simbolici nella cartella di destinazione"
 msgid "Created the Gentoo Ebuild scripts for Krename."
 msgstr "Per aver creato l'ebuild di KRename per Gentoo."
 
+#: tokensortmodedialog.cpp:36
+msgid "Creation Date"
+msgstr ""
+
 #: podofoplugin.cpp:42
 #, fuzzy
 msgid "Creator of the pdf file"
 msgstr "Proprietario del file"
 
-#: rc.cpp:45
+#: rc.cpp:682
 #, fuzzy
 msgid "Custom ..."
 msgstr "Nome personalizzato"
 
-#: rc.cpp:735
+#: rc.cpp:523
 #, fuzzy
 msgid "Custom Sorting"
 msgstr "Estensione personalizzata"
 
-#: rc.cpp:249 rc.cpp:357
+#: rc.cpp:138 rc.cpp:424
 msgid "Custom extension"
 msgstr "Estensione personalizzata"
 
-#: rc.cpp:207 rc.cpp:315
+#: rc.cpp:96 rc.cpp:382
 msgid "Custom name"
 msgstr "Nome personalizzato"
 
@@ -809,7 +827,7 @@ msgstr "Traduzione ceca"
 msgid "Daniele Medri"
 msgstr "Daniele Medri"
 
-#: rc.cpp:219 rc.cpp:234 rc.cpp:327 rc.cpp:342
+#: rc.cpp:108 rc.cpp:123 rc.cpp:394 rc.cpp:409
 msgid "Date"
 msgstr "Data"
 
@@ -817,11 +835,11 @@ msgstr "Data"
 msgid "Date & Time Plugin"
 msgstr "Plugin Data e ora"
 
-#: rc.cpp:39
+#: rc.cpp:676
 msgid "Date (Asc.)"
 msgstr ""
 
-#: rc.cpp:42
+#: rc.cpp:679
 msgid "Date (Desc.)"
 msgstr ""
 
@@ -833,24 +851,24 @@ msgstr "Data e funzioni di sistema"
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
 
-#: rc.cpp:618
+#: rc.cpp:21
 msgid "Declare global variables that can be used from within your functions:"
 msgstr ""
 
-#: rc.cpp:633
+#: rc.cpp:36
 msgid "Define functions that can be used from KRename templates:"
 msgstr ""
 
-#: rc.cpp:30
+#: rc.cpp:667
 #, fuzzy
 msgid "Descending"
 msgstr "Ordine: discendente"
 
-#: rc.cpp:483
+#: rc.cpp:628
 msgid "Description"
 msgstr "Descrizione"
 
-#: rc.cpp:606
+#: rc.cpp:454
 msgid "Dialog"
 msgstr "Finestra"
 
@@ -858,11 +876,11 @@ msgstr "Finestra"
 msgid "Directory of the current file"
 msgstr "Cartella del file corrente"
 
-#: rc.cpp:48
+#: rc.cpp:685
 msgid "Display a preview image for each file."
 msgstr "Visualizza un'anteprima dell'immagine per ogni file."
 
-#: rc.cpp:54
+#: rc.cpp:691
 #, fuzzy
 msgid "Display the filename together with the preview."
 msgstr "Mostra il numero di file nella lista."
@@ -879,7 +897,7 @@ msgstr "Dominik Seichter"
 msgid "Double"
 msgstr ""
 
-#: rc.cpp:72
+#: rc.cpp:709
 msgid "Down"
 msgstr "Giù"
 
@@ -911,15 +929,15 @@ msgstr "Plugin Exiv2 (JPEG/TIFF Exif)"
 msgid "Extension of the current file"
 msgstr "Estensione dei file corrente"
 
-#: rc.cpp:147
+#: rc.cpp:322
 msgid "File extension &starts at:"
 msgstr "L'e&stensione del file inizia a:"
 
-#: rc.cpp:501
+#: rc.cpp:165
 msgid "File preview"
 msgstr "Anteprima del file"
 
-#: rc.cpp:210 rc.cpp:318
+#: rc.cpp:99 rc.cpp:385
 msgid "File&name:"
 msgstr "&Nome file:"
 
@@ -939,28 +957,33 @@ msgstr "I file saranno copiati in: %1"
 msgid "Files will be moved to: %1"
 msgstr "I file saranno spostati in: %1"
 
-#: rc.cpp:60
+#: rc.cpp:697
 msgid "Files: <b>0</b>"
 msgstr "File: <b>0</b>"
 
-#: rc.cpp:444
+#: tokensortmodedialog.cpp:37
+#, fuzzy
+msgid "Filesize"
+msgstr "Anteprima del file"
+
+#: rc.cpp:239
 msgid "Find"
 msgstr "Trova"
 
-#: rc.cpp:165 rc.cpp:264 rc.cpp:369
+#: rc.cpp:150 rc.cpp:340 rc.cpp:439
 msgid "Find &and Replace..."
 msgstr "Trov&a e sostituisci..."
 
-#: rc.cpp:438 rc.cpp:459
+#: rc.cpp:57 rc.cpp:233
 msgid "Find and Replace"
 msgstr "Trova e sostituisci"
 
-#: rc.cpp:468
+#: rc.cpp:66
 #, fuzzy
 msgid "Find is a Regular &Expression"
 msgstr "Espressione regolare"
 
-#: rc.cpp:153
+#: rc.cpp:328
 msgid "First Dot"
 msgstr "Primo punto"
 
@@ -989,16 +1012,16 @@ msgstr ""
 msgid "Font (FreeType2) Plugin"
 msgstr ""
 
-#: rc.cpp:537 rc.cpp:549 rc.cpp:561
+#: rc.cpp:562 rc.cpp:574 rc.cpp:586
 msgid "Forbidden"
 msgstr "Vietato"
 
-#: rc.cpp:75 rc.cpp:108 rc.cpp:279 rc.cpp:288 rc.cpp:378 rc.cpp:402 rc.cpp:495
-#: rc.cpp:525 rc.cpp:591 rc.cpp:612 rc.cpp:660 rc.cpp:706
+#: rc.cpp:15 rc.cpp:69 rc.cpp:159 rc.cpp:189 rc.cpp:218 rc.cpp:283 rc.cpp:460
+#: rc.cpp:469 rc.cpp:493 rc.cpp:550 rc.cpp:730 rc.cpp:747
 msgid "Form"
 msgstr "Modulo"
 
-#: rc.cpp:677
+#: rc.cpp:254
 #, fuzzy
 msgid "Frame"
 msgstr "Modulo"
@@ -1017,11 +1040,11 @@ msgstr ""
 "Per avermi permesso di imparare a scrivere plugin con la sua applicazione "
 "Scribus."
 
-#: rc.cpp:603
+#: rc.cpp:230
 msgid "Get &Current Time"
 msgstr "Ottieni data e ora &correnti"
 
-#: rc.cpp:546
+#: rc.cpp:571
 msgid "Gro&up:"
 msgstr "Gr&uppo:"
 
@@ -1029,7 +1052,7 @@ msgstr "Gr&uppo:"
 msgid "Groult Richard"
 msgstr "Groult Richard"
 
-#: permissionsplugin.cpp:208
+#: tokensortmodedialog.cpp:38 permissionsplugin.cpp:208
 msgid "Group"
 msgstr "Gruppo"
 
@@ -1038,7 +1061,7 @@ msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
 msgstr ""
 
-#: rc.cpp:703
+#: rc.cpp:280
 #, fuzzy
 msgid "Hint: Undo is still possible after renaming your files."
 msgstr "Impossibile annullare per il file remoto: %1"
@@ -1262,7 +1285,7 @@ msgstr "vecchio nome file convertito in maiuscolo"
 msgid "Int"
 msgstr "Int"
 
-#: rc.cpp:573
+#: rc.cpp:598
 msgid "Is Executable/Only owner &can rename and delete folder content"
 msgstr ""
 
@@ -1283,7 +1306,7 @@ msgstr "Plugin JavaScript"
 msgid "Jose Rodriguez"
 msgstr "Jose Rodriguez"
 
-#: main.cpp:59 krenameimpl.cpp:384
+#: krenameimpl.cpp:384 main.cpp:59
 msgid "KRename"
 msgstr "KRename"
 
@@ -1291,7 +1314,7 @@ msgstr "KRename"
 msgid "KRename Build:"
 msgstr "Versione di KRename:"
 
-#: rc.cpp:471
+#: rc.cpp:616
 msgid "KRename Help"
 msgstr "Guida di KRename"
 
@@ -1313,11 +1336,11 @@ msgstr "Proprietario del file"
 msgid "Krzysztof Pawlak"
 msgstr "Krzysztof Pawlak"
 
-#: rc.cpp:156
+#: rc.cpp:331
 msgid "Last Dot"
 msgstr "Ultimo punto"
 
-#: rc.cpp:78
+#: rc.cpp:750
 msgid "Look and Feel"
 msgstr "Aspetto"
 
@@ -1341,15 +1364,19 @@ msgstr "Michael v.Ostheim"
 msgid "Michal Smoczyk"
 msgstr "Michal Smoczyk"
 
-#: rc.cpp:69 rc.cpp:273
+#: tokensortmodedialog.cpp:39
+msgid "Modification Date"
+msgstr ""
+
+#: rc.cpp:448 rc.cpp:706
 msgid "Move selected files downwards."
 msgstr "Sposta verso il basso i file selezionati."
 
-#: rc.cpp:63 rc.cpp:267
+#: rc.cpp:442 rc.cpp:700
 msgid "Move selected files upwards."
 msgstr "Sposta verso l'alto i file selezionati."
 
-#: rc.cpp:252 rc.cpp:360
+#: rc.cpp:141 rc.cpp:427
 msgid "N&umber"
 msgstr "N&umero"
 
@@ -1357,24 +1384,24 @@ msgstr "N&umero"
 msgid "Nicolas Benoit"
 msgstr "Nicolas Benoit"
 
-#: rc.cpp:414
+#: rc.cpp:505
 msgid "No Conversion"
 msgstr "Nessuna conversione"
 
-#: rc.cpp:159
+#: rc.cpp:334
 msgid "No File Extension"
 msgstr "Nessuna estensione file"
 
-#: rc.cpp:216 rc.cpp:231 rc.cpp:324 rc.cpp:339
+#: rc.cpp:105 rc.cpp:120 rc.cpp:391 rc.cpp:406
 msgid "Number"
 msgstr "Numero"
 
-#: rc.cpp:729
+#: rc.cpp:212
 #, fuzzy
 msgid "Number &of digits:"
 msgstr "Numero &di cifre:"
 
-#: rc.cpp:255 rc.cpp:363
+#: rc.cpp:144 rc.cpp:430
 msgid "Number of &digits:"
 msgstr "Numero &di cifre:"
 
@@ -1382,20 +1409,20 @@ msgstr "Numero &di cifre:"
 msgid "Number of pages in the pdf file"
 msgstr ""
 
-#: rc.cpp:33
+#: rc.cpp:670
 #, fuzzy
 msgid "Numeric"
 msgstr "Numero"
 
-#: rc.cpp:534
+#: rc.cpp:559
 msgid "O&wner:"
 msgstr "&Proprietario:"
 
-#: krenamemodel.cpp:451
+#: krenamemodel.cpp:452
 msgid "Origin"
 msgstr "Origine"
 
-#: rc.cpp:558
+#: rc.cpp:583
 msgid "Ot&hers:"
 msgstr "Al&tri:"
 
@@ -1403,7 +1430,7 @@ msgstr "Al&tri:"
 msgid "Others"
 msgstr "Altri"
 
-#: rc.cpp:732
+#: rc.cpp:215
 msgid "Out&put:"
 msgstr ""
 
@@ -1411,7 +1438,7 @@ msgstr ""
 msgid "Owner of the file"
 msgstr "Proprietario del file"
 
-#: rc.cpp:582
+#: rc.cpp:607
 msgid "Ownership"
 msgstr "Proprietà"
 
@@ -1442,11 +1469,11 @@ msgstr "Permessi"
 msgid "PermissionsPlugin works only with local files. %1 is a remote file."
 msgstr ""
 
-#: rc.cpp:504
+#: rc.cpp:168
 msgid "Please input a new filename"
 msgstr "Inserisci un nuovo nome per il file"
 
-#: rc.cpp:282
+#: rc.cpp:463
 msgid "Plugins"
 msgstr "Plugin"
 
@@ -1462,15 +1489,15 @@ msgstr "Traduzione polacca"
 msgid "Press close to quit!"
 msgstr "Premi \"Chiudi\" per uscire!"
 
-#: rc.cpp:486
+#: rc.cpp:631
 msgid "Preview"
 msgstr "Anteprima"
 
-#: rc.cpp:492
+#: rc.cpp:637
 msgid "Preview File:"
 msgstr "Anteprima file: "
 
-#: rc.cpp:426
+#: rc.cpp:517
 msgid "Preview of the generated KRename command:"
 msgstr ""
 
@@ -1479,7 +1506,7 @@ msgstr ""
 msgid "Producer of the pdf file"
 msgstr "Proprietario del file"
 
-#: rc.cpp:432
+#: rc.cpp:51
 msgid "Progress"
 msgstr "Avanzamento"
 
@@ -1501,16 +1528,16 @@ msgstr "Per aver fornito alcune correzioni al namespace di gcc3.x"
 msgid "Provided the new preview and move features"
 msgstr "Per aver fornito le nuove funzionalità di anteprima e spostamento"
 
-#: rc.cpp:36
+#: rc.cpp:673
 #, fuzzy
 msgid "Random"
 msgstr "Ordine: casuale"
 
-#: rc.cpp:12
+#: rc.cpp:649
 msgid "Re&move"
 msgstr "&Rimuovi"
 
-#: rc.cpp:18
+#: rc.cpp:655
 msgid "Re&move All"
 msgstr "Ri&muovi tutto"
 
@@ -1518,15 +1545,19 @@ msgstr "Ri&muovi tutto"
 msgid "Read"
 msgstr "Lettura"
 
-#: rc.cpp:441
+#: tokenhelpdialog.cpp:300
+msgid "Recent"
+msgstr ""
+
+#: rc.cpp:236
 msgid "Reg. Expression"
 msgstr "Espressione regolare"
 
-#: rc.cpp:15
+#: rc.cpp:652
 msgid "Remove all files."
 msgstr "Rimuovi tutti i file."
 
-#: rc.cpp:9
+#: rc.cpp:646
 msgid "Remove selected files."
 msgstr "Rimuovi i file selezionati."
 
@@ -1539,12 +1570,12 @@ msgstr "Rinomina &ancora i file non processati..."
 msgid "Rename Processed Files &Again..."
 msgstr "Rinomina &ancora i file già processati..."
 
-#: rc.cpp:507
+#: rc.cpp:171
 #, fuzzy
 msgid "Rename the file using the filename created by KRename."
 msgstr "Utilizza nome file creato da &KRename"
 
-#: krenamemodel.cpp:451
+#: krenamemodel.cpp:452
 msgid "Renamed"
 msgstr "Rinominati"
 
@@ -1556,7 +1587,7 @@ msgstr "%1 file rinominati con successo."
 msgid "Rene Gass"
 msgstr "Rene Gass"
 
-#: rc.cpp:447
+#: rc.cpp:242
 msgid "Replace With"
 msgstr "Sostituisci con"
 
@@ -1577,7 +1608,7 @@ msgstr "Numero"
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "Per alcune correzioni di GCC 3.1 per Gentoo."
 
-#: rc.cpp:21
+#: rc.cpp:658
 msgid "Sort:"
 msgstr ""
 
@@ -1589,15 +1620,15 @@ msgstr "Speciale"
 msgid "Special Characters"
 msgstr "Caratteri speciali"
 
-#: rc.cpp:700
+#: rc.cpp:277
 msgid "Specify the new filenames by giving a template ..."
 msgstr ""
 
-#: rc.cpp:258 rc.cpp:366
+#: rc.cpp:147 rc.cpp:433
 msgid "Start  &index:"
 msgstr "&Indice iniziale:"
 
-#: rc.cpp:384
+#: rc.cpp:475
 msgid "Start &index:"
 msgstr "&Indice iniziale:"
 
@@ -1646,7 +1677,7 @@ msgstr "I collegamenti simbolici verranno creati in: %1"
 msgid "TagLib (MP3/Ogg) Plugin"
 msgstr "Plugin TagLib (MP3/Ogg)"
 
-#: rc.cpp:429 rc.cpp:498 rc.cpp:688 rc.cpp:691 rc.cpp:697
+#: rc.cpp:162 rc.cpp:265 rc.cpp:268 rc.cpp:274 rc.cpp:520
 msgid "TextLabel"
 msgstr ""
 
@@ -1688,7 +1719,7 @@ msgstr "La cartella %1 non esiste. KRename la creerà per te."
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "Il file %1 esiste già. Vuoi sovrascriverlo?"
 
-#: rc.cpp:570
+#: rc.cpp:595
 msgid "This file uses advanced permissions"
 msgstr "Questo file utilizza permessi avanzati"
 
@@ -1700,7 +1731,7 @@ msgstr ""
 "Quando selezionata la cartella contenente i file da rinominare viene "
 "aggiunta alla lista."
 
-#: rc.cpp:709
+#: rc.cpp:192
 msgid ""
 "This plugin sorts files after renaming into numbered subdirectories.\n"
 "\n"
@@ -1713,7 +1744,7 @@ msgid ""
 " \t..."
 msgstr ""
 
-#: rc.cpp:600
+#: rc.cpp:227
 msgid "Time:"
 msgstr "Ora:"
 
@@ -1722,11 +1753,11 @@ msgstr "Ora:"
 msgid "Title of the pdf file"
 msgstr "Proprietario del file"
 
-#: rc.cpp:480
+#: rc.cpp:625
 msgid "Token"
 msgstr "Token"
 
-#: rc.cpp:489
+#: rc.cpp:634
 #, fuzzy
 msgid "Token &Preview"
 msgstr "&Anteprima"
@@ -1792,58 +1823,58 @@ msgstr "Impossibile annullare per il file remoto: %1"
 msgid "Undoing all renamed files."
 msgstr ""
 
-#: rc.cpp:24
+#: rc.cpp:661
 #, fuzzy
 msgid "Unsorted"
 msgstr "Ordine: sparso"
 
-#: rc.cpp:66
+#: rc.cpp:703
 msgid "Up"
 msgstr "Su"
 
-#: rc.cpp:522
+#: rc.cpp:186
 #, fuzzy
 msgid "Use &custom filename"
 msgstr "Usa nome del f&ile di origine"
 
-#: rc.cpp:516
+#: rc.cpp:180
 #, fuzzy
 msgid "Use &input filename"
 msgstr "Usa nome del f&ile di origine"
 
-#: rc.cpp:87
+#: rc.cpp:759
 #, fuzzy
 msgid "Use &tabbed style GUI (advanced users)"
 msgstr "Usa l'interfaccia completa (utenti esperti)"
 
-#: rc.cpp:84
+#: rc.cpp:756
 msgid "Use &wizard style GUI (beginners)"
 msgstr "Usa l'inter&faccia semplificata (principianti)"
 
-#: rc.cpp:519
+#: rc.cpp:183
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
 msgstr ""
 
-#: rc.cpp:510
+#: rc.cpp:174
 msgid "Use filename created by &KRename"
 msgstr "Utilizza nome file creato da &KRename"
 
-#: rc.cpp:237 rc.cpp:345
+#: rc.cpp:126 rc.cpp:412
 msgid "Use original extension"
 msgstr "Usa estensione originale"
 
-#: rc.cpp:195 rc.cpp:303
+#: rc.cpp:84 rc.cpp:370
 msgid "Use original name"
 msgstr "Usa nome originale"
 
-#: rc.cpp:513
+#: rc.cpp:177
 msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."
 msgstr ""
 
-#: permissionsplugin.cpp:205
+#: tokensortmodedialog.cpp:40 permissionsplugin.cpp:205
 msgid "User"
 msgstr "Utente"
 
@@ -1889,7 +1920,7 @@ msgstr "Vincenzo Reale, Patrick Bellasi"
 msgid "add directory recursively"
 msgstr "aggiungi ricorsivamente le cartelle"
 
-#: rc.cpp:750
+#: rc.cpp:538
 msgid "by"
 msgstr ""
 
