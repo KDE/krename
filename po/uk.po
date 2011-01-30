@@ -2,22 +2,22 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2009, 2010.
+# Yuri Chornoivan <yurchor@ukr.net>, 2009, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-30 14:09+0100\n"
-"PO-Revision-Date: 2010-03-22 16:26+0200\n"
+"PO-Revision-Date: 2011-01-30 17:24+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: rc.cpp:295 rc.cpp:307
 msgid "$"
@@ -60,9 +60,8 @@ msgid "&Advanced Filename"
 msgstr "&Додаткове іменування"
 
 #: rc.cpp:529
-#, fuzzy
 msgid "&Ascending"
-msgstr "Впорядкування: за зростанням"
+msgstr "За з&ростанням"
 
 #: rc.cpp:54
 msgid "&Cancel"
@@ -89,9 +88,8 @@ msgid "&Copy files to destination directory"
 msgstr "&Копіювати файли до каталогу призначення"
 
 #: rc.cpp:547
-#, fuzzy
 msgid "&Custom"
-msgstr "Нетипова назва"
+msgstr "&Нетипові"
 
 #: rc.cpp:33
 msgid "&Definitions"
@@ -102,9 +100,8 @@ msgid "&Delete"
 msgstr "&Вилучити"
 
 #: rc.cpp:532
-#, fuzzy
 msgid "&Descending"
-msgstr "Впорядкування: за спаданням"
+msgstr "&За спаданням"
 
 #: rc.cpp:694
 msgid "&Display name"
@@ -195,9 +192,8 @@ msgid "&Numbering..."
 msgstr "&Нумерація..."
 
 #: rc.cpp:535
-#, fuzzy
 msgid "&Numeric"
-msgstr "Число"
+msgstr "&Числове"
 
 #: rc.cpp:744
 msgid "&Offset:"
@@ -224,9 +220,8 @@ msgid "&Overwrite existing files"
 msgstr "П&ерезаписувати існуючі файли"
 
 #: rc.cpp:544
-#, fuzzy
 msgid "&Predefined"
-msgstr "&Префікс:"
+msgstr "П&опередньо визначені"
 
 #: rc.cpp:114 rc.cpp:400
 msgid "&Prefix:"
@@ -277,9 +272,8 @@ msgid "&Skip Numbers"
 msgstr "Пр&опустити номери"
 
 #: rc.cpp:526
-#, fuzzy
 msgid "&Sort filenames ..."
-msgstr "Вс&тавити частину назви файла..."
+msgstr "Вп&орядкувати назви файлів…"
 
 #: rc.cpp:209
 msgid "&Start index:"
@@ -302,9 +296,8 @@ msgid "&Test..."
 msgstr ":П&еревірити..."
 
 #: rc.cpp:541
-#, fuzzy
 msgid "&Token ..."
-msgstr ":П&еревірити..."
+msgstr "&Данними…"
 
 #: rc.cpp:12
 msgid "&Type:"
@@ -528,13 +521,12 @@ msgstr ""
 "яку слід вставити у нову назву файла:</qt>"
 
 #: snumplugin.cpp:50
-#, fuzzy
 msgid ""
 "<qt>This plugin can extract information from the filename of a TV series.</"
 "qt>"
 msgstr ""
-"<qt>За допомогою цього додатка можна змінити літери назви файла на латинські "
-"(тобто виконати транслітерацію).</qt>"
+"<qt>За допомогою цього додатка можна видобувати дані з назви файла серіалу.<"
+"/qt>"
 
 #: translitplugin.cpp:102
 msgid ""
@@ -567,18 +559,12 @@ msgstr ""
 "</qt>"
 
 #: podofoplugin.cpp:50
-#, fuzzy
 msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
-msgstr ""
-"<qt>У цьому додатку реалізовано підтримку читання міток з файлів JPEG і TIFF."
-"</qt>"
+msgstr "<qt>У цьому додатку реалізовано читання міток з файлів PDF.</qt>"
 
 #: fontplugin.cpp:42
-#, fuzzy
 msgid "<qt>This plugin supports reading tags from font files.</qt>"
-msgstr ""
-"<qt>У цьому додатку реалізовано підтримку читання міток з файлів JPEG і TIFF."
-"</qt>"
+msgstr "<qt>У цьому додатку реалізовано читання міток з файлів шрифтів.</qt>"
 
 #: rc.cpp:78 rc.cpp:81 rc.cpp:102 rc.cpp:111
 msgid "?"
@@ -594,7 +580,7 @@ msgstr "Р&озширені права доступу"
 
 #: tokensortmodedialog.cpp:35
 msgid "Access Date"
-msgstr ""
+msgstr "Дата доступу"
 
 #: rc.cpp:457 rc.cpp:556
 msgid "Access Permissions"
@@ -657,18 +643,16 @@ msgid "Arpad Biro"
 msgstr "Arpad Biro"
 
 #: rc.cpp:664
-#, fuzzy
 msgid "Ascending"
-msgstr "Впорядкування: за зростанням"
+msgstr "За зростанням"
 
 #: main.cpp:109
 msgid "Asim Husanovic"
 msgstr "Asim Husanovic"
 
 #: podofoplugin.cpp:41
-#, fuzzy
 msgid "Author of the pdf file"
-msgstr "Власник файла"
+msgstr "Автор файла PDF"
 
 #: scriptplugin.cpp:244
 msgid "Boolean"
@@ -729,6 +713,7 @@ msgstr "Не можна створювати символічні посилан
 #: batchrenamer.cpp:244
 msgid "Cannot rename: source and target filename are equal: %1"
 msgstr ""
+"Не вдалося перейменувати: початкова і остаточна назва файла збігаються: %1"
 
 #: rc.cpp:93 rc.cpp:135 rc.cpp:379 rc.cpp:421 rc.cpp:514
 msgid "Capitalize"
@@ -788,22 +773,19 @@ msgstr "Створив скрипти Ebuild Krename для Gentoo."
 
 #: tokensortmodedialog.cpp:36
 msgid "Creation Date"
-msgstr ""
+msgstr "Дата створення"
 
 #: podofoplugin.cpp:42
-#, fuzzy
 msgid "Creator of the pdf file"
-msgstr "Власник файла"
+msgstr "Програма для створення файла PDF"
 
 #: rc.cpp:682
-#, fuzzy
 msgid "Custom ..."
-msgstr "Нетипова назва"
+msgstr "Нетипове…"
 
 #: rc.cpp:523
-#, fuzzy
 msgid "Custom Sorting"
-msgstr "Нетиповий суфікс назви"
+msgstr "Нетипове впорядкування"
 
 #: rc.cpp:138 rc.cpp:424
 msgid "Custom extension"
@@ -831,11 +813,11 @@ msgstr "Додаток дати та часу"
 
 #: rc.cpp:676
 msgid "Date (Asc.)"
-msgstr ""
+msgstr "За датою (зрост.)"
 
 #: rc.cpp:679
 msgid "Date (Desc.)"
-msgstr ""
+msgstr "За датою (спад.)"
 
 #: systemplugin.cpp:70
 msgid "Date and system functions"
@@ -856,9 +838,8 @@ msgid "Define functions that can be used from KRename templates:"
 msgstr "Визначте функції, якими можна скористатися у шаблонах KRename:"
 
 #: rc.cpp:667
-#, fuzzy
 msgid "Descending"
-msgstr "Впорядкування: за спаданням"
+msgstr "За спаданням"
 
 #: rc.cpp:628
 msgid "Description"
@@ -957,9 +938,8 @@ msgid "Files: <b>0</b>"
 msgstr "Файлів: <b>0</b>"
 
 #: tokensortmodedialog.cpp:37
-#, fuzzy
 msgid "Filesize"
-msgstr "Перегляд файлів"
+msgstr "Розмір файла"
 
 #: rc.cpp:239
 msgid "Find"
@@ -1003,7 +983,7 @@ msgstr ""
 
 #: fontplugin.cpp:41
 msgid "Font (FreeType2) Plugin"
-msgstr ""
+msgstr "Додаток шрифтів (FreeType2)"
 
 #: rc.cpp:562 rc.cpp:574 rc.cpp:586
 msgid "Forbidden"
@@ -1047,10 +1027,9 @@ msgid "Group"
 msgstr "Група"
 
 #: main.cpp:75
-#, fuzzy
 msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
-msgstr "Недоліки у підручнику зі стилів та покращення повідомлень програми."
+msgstr "Допомога у виправлені стилю та покращення повідомлень програми."
 
 #: rc.cpp:280
 msgid "Hint: Undo is still possible after renaming your files."
@@ -1125,17 +1104,16 @@ msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "Вставити фрагмент коду JavaScript (у прикладі 4+5)"
 
 #: fontplugin.cpp:38
-#, fuzzy
 msgid "Insert the (usually English) name of the font family."
-msgstr "вставити довжину початкової назви файла"
+msgstr "Вставити (зазвичай англійською) назву гарнітури шрифту."
 
 #: fontplugin.cpp:39
 msgid "Insert the (usually English) name of the font style."
-msgstr ""
+msgstr "Вставити (зазвичай англійською) назву стилю шрифту."
 
 #: fontplugin.cpp:37
 msgid "Insert the Postscript name for Type1 and TrueType fonts."
-msgstr ""
+msgstr "Вставити назву Postscript шрифтів Type1 і TrueType."
 
 #: taglibplugin.cpp:43
 msgid "Insert the album of a track"
@@ -1194,9 +1172,8 @@ msgid "Insert the date of the last file access"
 msgstr "Вставити дату попереднього доступу до файла"
 
 #: systemplugin.cpp:68
-#, fuzzy
 msgid "Insert the file size in bytes"
-msgstr "Вставити дату створення файла"
+msgstr "Вставити розмір файла у байтах"
 
 #: systemplugin.cpp:62
 msgid "Insert the files creation date"
@@ -1240,17 +1217,15 @@ msgstr "Вставити рік запису композиції"
 
 #: snumplugin.cpp:43
 msgid "Inserts the episode number in two or three digits"
-msgstr ""
+msgstr "Вставити номер серії у дво- чи трицифровому форматі"
 
 #: snumplugin.cpp:42
-#, fuzzy
 msgid "Inserts the season number in two digits"
-msgstr "Вставити номер композиції"
+msgstr "Вставити номер сезону у двоцифровому форматі"
 
 #: snumplugin.cpp:41
-#, fuzzy
 msgid "Inserts the series number of original filename"
-msgstr "Вставити транслітеровану початкову назву файла"
+msgstr "Вставити номер серії з початкової назви файла"
 
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
@@ -1314,9 +1289,8 @@ msgid "KRename finished the undo process."
 msgstr "Програма KRename завершила процес скасування."
 
 #: podofoplugin.cpp:43
-#, fuzzy
 msgid "Keywords of the pdf file"
-msgstr "Власник файла"
+msgstr "Ключові слова файла PDF"
 
 #: main.cpp:107
 msgid "Krzysztof Pawlak"
@@ -1352,7 +1326,7 @@ msgstr "Michal Smoczyk"
 
 #: tokensortmodedialog.cpp:39
 msgid "Modification Date"
-msgstr ""
+msgstr "Дата внесення змін"
 
 #: rc.cpp:448 rc.cpp:706
 msgid "Move selected files downwards."
@@ -1392,12 +1366,11 @@ msgstr "Кількість &цифр:"
 
 #: podofoplugin.cpp:47
 msgid "Number of pages in the pdf file"
-msgstr ""
+msgstr "Кількість сторінок у файлі PDF"
 
 #: rc.cpp:670
-#, fuzzy
 msgid "Numeric"
-msgstr "Число"
+msgstr "Числове"
 
 #: rc.cpp:559
 msgid "O&wner:"
@@ -1466,7 +1439,7 @@ msgstr "Додатки"
 
 #: podofoplugin.cpp:49
 msgid "PoDoFo (PDF) Plugin"
-msgstr ""
+msgstr "Додаток PoDoFo (PDF)"
 
 #: main.cpp:110
 msgid "Polish Translation"
@@ -1489,9 +1462,8 @@ msgid "Preview of the generated KRename command:"
 msgstr "Перегляд створеної команди KRename:"
 
 #: podofoplugin.cpp:46
-#, fuzzy
 msgid "Producer of the pdf file"
-msgstr "Власник файла"
+msgstr "Програма для створення файла PDF"
 
 #: rc.cpp:51
 msgid "Progress"
@@ -1515,9 +1487,8 @@ msgid "Provided the new preview and move features"
 msgstr "Створив нові модулі попереднього перегляду і пересування"
 
 #: rc.cpp:673
-#, fuzzy
 msgid "Random"
-msgstr "Впорядкування: випадкове"
+msgstr "Випадкове"
 
 #: rc.cpp:649
 msgid "Re&move"
@@ -1533,7 +1504,7 @@ msgstr "Читання"
 
 #: tokenhelpdialog.cpp:300
 msgid "Recent"
-msgstr ""
+msgstr "Нещодавні"
 
 #: rc.cpp:236
 msgid "Reg. Expression"
@@ -1584,9 +1555,8 @@ msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
 
 #: snumplugin.cpp:48
-#, fuzzy
 msgid "SeriesNumber"
-msgstr "Число"
+msgstr "НомерСерії"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1594,7 +1564,7 @@ msgstr "Деякі виправлення для GCC 3.1 у Gentoo."
 
 #: rc.cpp:658
 msgid "Sort:"
-msgstr ""
+msgstr "Впорядкування:"
 
 #: permissionsplugin.cpp:202
 msgid "Special"
@@ -1645,9 +1615,8 @@ msgid "Subdirectory-Sort Plugin"
 msgstr "Додаток впорядкування підкаталогів"
 
 #: podofoplugin.cpp:44
-#, fuzzy
 msgid "Subject of the pdf file"
-msgstr "Власник файла"
+msgstr "Тема файла PDF"
 
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
@@ -1741,9 +1710,8 @@ msgid "Time:"
 msgstr "Час:"
 
 #: podofoplugin.cpp:45
-#, fuzzy
 msgid "Title of the pdf file"
-msgstr "Власник файла"
+msgstr "Заголовок файла PDF"
 
 #: rc.cpp:625
 msgid "Token"
@@ -1814,9 +1782,8 @@ msgid "Undoing all renamed files."
 msgstr "Скасування всіх перейменувань файлів."
 
 #: rc.cpp:661
-#, fuzzy
 msgid "Unsorted"
-msgstr "Впорядкування: невпорядковано"
+msgstr "Без певного порядку"
 
 #: rc.cpp:703
 msgid "Up"
@@ -1913,7 +1880,7 @@ msgstr "додати каталог рекурсивно"
 
 #: rc.cpp:538
 msgid "by"
-msgstr ""
+msgstr "за"
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"
