@@ -1,11 +1,11 @@
-# Pavel Fric <pavelfric@seznam.cz>, 2009, 2010.
+# Pavel Fric <pavelfric@seznam.cz>, 2009, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-30 14:09+0100\n"
-"PO-Revision-Date: 2010-09-28 07:35+0200\n"
-"Last-Translator: Pavel Fric\n"
+"PO-Revision-Date: 2011-01-30 22:01+0100\n"
+"Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -83,9 +83,8 @@ msgid "&Copy files to destination directory"
 msgstr "&Kopírovat soubory do cílového adresáře"
 
 #: rc.cpp:547
-#, fuzzy
 msgid "&Custom"
-msgstr "Vlastní..."
+msgstr "&Vlastní.."
 
 #: rc.cpp:33
 msgid "&Definitions"
@@ -216,9 +215,8 @@ msgid "&Overwrite existing files"
 msgstr "&Přepsat stávající soubory"
 
 #: rc.cpp:544
-#, fuzzy
 msgid "&Predefined"
-msgstr "&Předpona (na začátku):"
+msgstr "&Předem určeno"
 
 #: rc.cpp:114 rc.cpp:400
 msgid "&Prefix:"
@@ -577,7 +575,7 @@ msgstr "&Pokročilá oprávnění"
 
 #: tokensortmodedialog.cpp:35
 msgid "Access Date"
-msgstr ""
+msgstr "Datum přístupu"
 
 #: rc.cpp:457 rc.cpp:556
 msgid "Access Permissions"
@@ -769,7 +767,7 @@ msgstr "Vytvořené Gentoo Ebuild skripty pro KRename."
 
 #: tokensortmodedialog.cpp:36
 msgid "Creation Date"
-msgstr ""
+msgstr "Datum vytvoření"
 
 #: podofoplugin.cpp:42
 msgid "Creator of the pdf file"
@@ -935,9 +933,8 @@ msgid "Files: <b>0</b>"
 msgstr "Soubory: <b>0</b>"
 
 #: tokensortmodedialog.cpp:37
-#, fuzzy
 msgid "Filesize"
-msgstr "Náhled souboru"
+msgstr "Velikost souboru"
 
 #: rc.cpp:239
 msgid "Find"
@@ -1337,7 +1334,7 @@ msgstr "Michal Smoczyk"
 
 #: tokensortmodedialog.cpp:39
 msgid "Modification Date"
-msgstr ""
+msgstr "Datum úprav"
 
 #: rc.cpp:448 rc.cpp:706
 msgid "Move selected files downwards."
@@ -1515,7 +1512,7 @@ msgstr "Číst"
 
 #: tokenhelpdialog.cpp:300
 msgid "Recent"
-msgstr ""
+msgstr "Nedávné"
 
 #: rc.cpp:236
 msgid "Reg. Expression"
