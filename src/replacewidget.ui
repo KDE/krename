@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>ReplaceWidget</class>
- <widget class="QWidget" name="ReplaceWidget" >
-  <property name="geometry" >
+ <widget class="QWidget" name="ReplaceWidget">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,48 +10,53 @@
     <height>305</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Find and Replace</string>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QVBoxLayout">
    <item>
-    <layout class="QHBoxLayout" >
+    <layout class="QHBoxLayout">
      <item>
-      <widget class="QTableWidget" name="list" >
-       <property name="alternatingRowColors" >
+      <widget class="QTableWidget" name="list">
+       <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
-       <property name="selectionMode" >
+       <property name="selectionMode">
         <enum>QAbstractItemView::SingleSelection</enum>
        </property>
-       <property name="selectionBehavior" >
+       <property name="selectionBehavior">
         <enum>QAbstractItemView::SelectRows</enum>
        </property>
        <column>
-        <property name="text" >
+        <property name="text">
          <string>Reg. Expression</string>
         </property>
        </column>
        <column>
-        <property name="text" >
+        <property name="text">
          <string>Find</string>
         </property>
        </column>
        <column>
-        <property name="text" >
+        <property name="text">
          <string>Replace With</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Process Tokens</string>
         </property>
        </column>
       </widget>
      </item>
      <item>
-      <layout class="QVBoxLayout" >
+      <layout class="QVBoxLayout">
        <item>
         <spacer>
-         <property name="orientation" >
+         <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
            <height>40</height>
@@ -59,32 +65,32 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="buttonAdd" >
-         <property name="text" >
+        <widget class="QPushButton" name="buttonAdd">
+         <property name="text">
           <string>&amp;Add...</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="buttonEdit" >
-         <property name="text" >
+        <widget class="QPushButton" name="buttonEdit">
+         <property name="text">
           <string>&amp;Edit...</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="buttonRemove" >
-         <property name="text" >
+        <widget class="QPushButton" name="buttonRemove">
+         <property name="text">
           <string>&amp;Remove</string>
          </property>
         </widget>
        </item>
        <item>
         <spacer>
-         <property name="orientation" >
+         <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
-         <property name="sizeHint" >
+         <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
            <height>40</height>
@@ -97,8 +103,8 @@
     </layout>
    </item>
    <item>
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="standardButtons" >
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
     </widget>

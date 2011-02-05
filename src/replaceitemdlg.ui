@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>ReplaceItemDlg</class>
- <widget class="QDialog" name="ReplaceItemDlg" >
-  <property name="geometry" >
+ <widget class="QDialog" name="ReplaceItemDlg">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,53 +10,60 @@
     <height>145</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Find and Replace</string>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QVBoxLayout">
    <item>
-    <layout class="QGridLayout" >
-     <item row="0" column="0" >
-      <widget class="QLabel" name="label" >
-       <property name="text" >
+    <layout class="QGridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
         <string>&amp;Find:</string>
        </property>
-       <property name="buddy" >
+       <property name="buddy">
         <cstring>lineFind</cstring>
        </property>
       </widget>
      </item>
-     <item row="0" column="1" >
-      <widget class="QLineEdit" name="lineFind" />
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineFind"/>
      </item>
-     <item row="1" column="0" >
-      <widget class="QLabel" name="label_2" >
-       <property name="text" >
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
         <string>&amp;Replace With:</string>
        </property>
-       <property name="buddy" >
+       <property name="buddy">
         <cstring>lineReplace</cstring>
        </property>
       </widget>
      </item>
-     <item row="1" column="1" >
-      <widget class="QLineEdit" name="lineReplace" />
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineReplace"/>
      </item>
     </layout>
    </item>
    <item>
-    <widget class="QCheckBox" name="checkRegular" >
-     <property name="text" >
+    <widget class="QCheckBox" name="checkRegular">
+     <property name="text">
       <string>Find is a Regular &amp;Expression</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="orientation" >
+    <widget class="QCheckBox" name="checkProcess">
+     <property name="text">
+      <string>&amp;Process tokens in replace string</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="standardButtons" >
+     <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
     </widget>
@@ -70,11 +78,11 @@
    <receiver>ReplaceItemDlg</receiver>
    <slot>accept()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>248</x>
      <y>254</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>157</x>
      <y>274</y>
     </hint>
@@ -86,11 +94,11 @@
    <receiver>ReplaceItemDlg</receiver>
    <slot>reject()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>316</x>
      <y>260</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
     </hint>

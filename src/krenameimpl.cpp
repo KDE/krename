@@ -507,6 +507,7 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
     help.append("[$x;y]" + Plugin::S_TOKEN_SEPARATOR + i18n("y characters of old filename starting at x") );
     help.append("[$dirname]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert name of directory") );
     help.append("[$dirname.]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert name of parent directory") );
+    help.append("[dirsep]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert a '/' to create a new subdirectory (useful from within regular expressions)") );
     help.append("[#length-0]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert the length of the input filename") );
     help.append("[trimmed]" + Plugin::S_TOKEN_SEPARATOR + i18n("strip whitespaces leading and trailing") );
     help.append("[trimmed;.*]" + Plugin::S_TOKEN_SEPARATOR + i18n("strip whitespaces leading and trailing of an arbitrary string") );

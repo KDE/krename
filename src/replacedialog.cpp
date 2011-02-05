@@ -46,6 +46,8 @@ ReplaceDialog::ReplaceDialog( const QList<TReplaceItem> & items, QWidget* parent
         m_widget.list->item( row, 0 )->setCheckState( (*it).reg ? Qt::Checked : Qt::Unchecked ); 
         m_widget.list->setItem( row, 1, this->createTableItem( (*it).find ) );
         m_widget.list->setItem( row, 2, this->createTableItem( (*it).replace ) );
+        m_widget.list->setItem( row, 3, this->createTableItem( "", true ) );
+        m_widget.list->item( row, 3 )->setCheckState( (*it).doProcessTokens ? Qt::Checked : Qt::Unchecked ); 
 
         ++it;
     }
@@ -65,6 +67,8 @@ void ReplaceDialog::slotAdd()
         m_widget.list->item( row, 0 )->setCheckState( replace.checkRegular->isChecked() ? Qt::Checked : Qt::Unchecked ); 
         m_widget.list->setItem( row, 1, this->createTableItem( replace.lineFind->text() ) );
         m_widget.list->setItem( row, 2, this->createTableItem( replace.lineReplace->text() ) );
+        m_widget.list->setItem( row, 3, this->createTableItem( "", true ) );
+        m_widget.list->item( row, 3 )->setCheckState( replace.checkProcess->isChecked() ? Qt::Checked : Qt::Unchecked ); 
     }
 }
 
@@ -78,6 +82,7 @@ void ReplaceDialog::slotEdit()
     replace.checkRegular->setChecked( m_widget.list->item( row, 0 )->checkState() == Qt::Checked );
     replace.lineFind->setText( m_widget.list->item( row, 1 )->text() );
     replace.lineReplace->setText( m_widget.list->item( row, 2 )->text() );
+    replace.checkProcess->setChecked( m_widget.list->item( row, 3 )->checkState() == Qt::Checked );
 
     if( dlg.exec() == QDialog::Accepted ) 
     {
@@ -85,6 +90,8 @@ void ReplaceDialog::slotEdit()
         m_widget.list->item( row, 0 )->setCheckState( replace.checkRegular->isChecked() ? Qt::Checked : Qt::Unchecked ); 
         m_widget.list->setItem( row, 1, this->createTableItem( replace.lineFind->text() ) );
         m_widget.list->setItem( row, 2, this->createTableItem( replace.lineReplace->text() ) );
+        m_widget.list->setItem( row, 3, this->createTableItem( "", true ) );
+        m_widget.list->item( row, 3 )->setCheckState( replace.checkProcess->isChecked() ? Qt::Checked : Qt::Unchecked ); 
     }
 }
 
@@ -126,7 +133,7 @@ QList<TReplaceItem> ReplaceDialog::replaceList() const
         item.reg     = m_widget.list->item( i, 0 )->checkState() == Qt::Checked;
         item.find    = m_widget.list->item( i, 1 )->text();
         item.replace = m_widget.list->item( i, 2 )->text();
-
+        item.doProcessTokens = m_widget.list->item( i, 3 )->checkState() == Qt::Checked;
         items.append( item );
     }
 

@@ -40,9 +40,10 @@ typedef struct __tag_tCounterValues {
  *  filename and to be replaced with another string.
  */
 typedef struct __tag_TReplaceItem {
-    QString find;      ///< Text to replace
-    QString replace;   ///< Replace with
-    bool reg;          ///< is it a reg expression ?
+    QString find;         ///< Text to replace
+    QString replace;      ///< Replace with
+    bool reg;             ///< is it a reg expression ?
+    bool doProcessTokens; ///< Process tokens in result
 } TReplaceItem;
 
 /** An enum to set the renaming mode of KRename
@@ -168,6 +169,12 @@ class BatchRenamer : public QObject {
         QString findPartStrings( QString oldname, QString token );
         static QString findDirName( QString token, QString path );
 
+        /**
+         * Replace the token [dirsep] with a slash "/".
+         * This token is useful to create directories from within regular expressions.
+         */
+        static QString findDirSep( QString token, QString path );
+
         static QString & doEscape( QString & text );
         static QString & unEscape( QString & text );
         static void escape( QString & text, const QString & token, const QString & sequence );
@@ -201,7 +208,7 @@ class BatchRenamer : public QObject {
          */
         QString findTrimmed( const QString & token, const QString & name, int index );
 
-        QString processString( QString text, const QString & originalName, int i );
+        QString processString( QString text, const QString & originalName, int i, bool doFindReplace = true );
         QString processBrackets( QString text, int* length, const QString & oldname, int index );
         QString processNumber( int length, const QString & appendix );
         QString processToken( QString token, QString oldname, int i );
@@ -283,7 +290,7 @@ class BatchRenamer : public QObject {
          *
          *  \see m_replace
          */
-        QString findReplace( const QString & text );
+        QString findReplace( const QString & text, const QString & origFilename, int index );
 
         /**
          * Replace one string (which might be a regular expression) in the final filename
@@ -293,10 +300,14 @@ class BatchRenamer : public QObject {
          *  \param find the string or regular expression to find
          *  \param replace replace a matched string with this value
          *  \param reg if true treat find as regular expression
+         *  \param doProcessTokens process tokens in replaced results
+         *  \param originalName original filename for replacing tokens
+         *  \param index current index
          *
          *  \returns the new filename with find and replace being done.
          */
-        QString doReplace( const QString & text, const QString & find, const QString & replace, bool reg );
+        QString doReplace( const QString & text, const QString & find, const QString & replace, 
+                           bool reg, bool doProcessTokens, const QString & origFilename, int index );
 
     private:
         /** Execute all plugins of a certain type

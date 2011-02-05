@@ -511,7 +511,7 @@ QString BatchRenamer::processNumber( int length, const QString & appendix )
     return number;
 }
 
-QString BatchRenamer::processString( QString text, const QString & originalName, int index )
+QString BatchRenamer::processString( QString text, const QString & originalName, int index, bool doFindReplace )
 {
     QString oldname = originalName;
     doEscape( oldname );
@@ -608,7 +608,9 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
      * Replace shoud be the last the
      * before re-escaping tokens !
      */
-    text = findReplace( text );
+    if( doFindReplace ) {
+        text = findReplace( text, originalName, index  );
+    }
     text = unEscape( text );
     return text;
 }
@@ -879,6 +881,10 @@ QString BatchRenamer::processToken( QString token, QString oldname, int i )
     if( !tmp.isEmpty() )
         return tmp;
 
+    tmp = findDirSep( token, (*m_files)[i].srcFilename() );
+    if( !tmp.isEmpty() )
+        return tmp;
+
     Plugin* p = PluginLoader::Instance()->findPlugin( token );
     if( p )
     {
@@ -1044,7 +1050,16 @@ QString BatchRenamer::findDirName( QString token, QString path )
             recursion++;
         }
 
-	return path.section( "/", recursion * -1, recursion * -1);
+        return path.section( "/", recursion * -1, recursion * -1);
+    }
+    
+    return QString::null;
+}
+
+QString BatchRenamer::findDirSep( QString token, QString path )
+{
+    if( token.toLower() == "dirsep" ) {
+        return "/";
     }
     
     return QString::null;
@@ -1087,7 +1102,7 @@ QString BatchRenamer::findTrimmed( const QString & token, const QString & name, 
     return QString::null;
 }
 
-QString BatchRenamer::findReplace( const QString & text )
+QString BatchRenamer::findReplace( const QString & text, const QString & origFilename, int index )
 {
     QList<TReplaceItem>::const_iterator it = m_replace.begin();
 
@@ -1097,14 +1112,16 @@ QString BatchRenamer::findReplace( const QString & text )
         QString find( (*it).find );
 
         // Call for each element in replace strings doReplace with correct values
-        t = doReplace( t, unEscape( find ), (*it).replace, (*it).reg );
+        t = doReplace( t, unEscape( find ), (*it).replace, 
+                       (*it).reg, (*it).doProcessTokens, 
+                       origFilename, index );
         ++it;
     }
 
     return t;
 }
 
-QString BatchRenamer::doReplace( const QString & text, const QString & find, const QString & replace, bool reg )
+QString BatchRenamer::doReplace( const QString & text, const QString & find, const QString & replace, bool reg, bool doProcessTokens, const QString & origFilename, int index )
 {
     QString t( text );
     if( !reg ) 
@@ -1120,8 +1137,15 @@ QString BatchRenamer::doReplace( const QString & text, const QString & find, con
     {
         // no doEscape() here for the regexp, because it would destroy our regular expression
         // other wise we will not find stuff like $, [ in the text 
-        t = doEscape( unEscape( t ).replace( QRegExp( find ), replace ) );
+        t = unEscape( t ).replace( QRegExp( find ), replace );
+        t = doEscape( t );
     }
+
+        
+    if( doProcessTokens ) {
+        t = processString( unEscape( t ), origFilename, index, false );
+    }
+
 
     return t;
 }
