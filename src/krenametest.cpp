@@ -64,6 +64,10 @@
                                                         PRINT_RESULT( name );
 
 
+#define RUN_KRENAME_MULTI_FILE_TEST( files, expected, expectedPaths, token, name ) \
+    m_result = testMultipleFiles( files, expected, expectedPaths, token ); \
+    PRINT_RESULT( name );
+
 KRenameTest::KRenameTest()
     : QWidget( ),
       m_counter( 0 ), m_verbose( false ), m_success( 0 ), m_failed( 0 )
@@ -478,6 +482,19 @@ void KRenameTest::testBatchRenamer()
     QString regressionName = "1-07 Take Flight (Wings) [Pocketman]";
     QString regressionExpect = "100-Take Flight (Wings) [Pocketman]";
     RUN_TOKEN_TEST( "1##-[$6-] Test", "1##-[$6-]", regressionName, regressionExpect );
+
+    KRenameFile::List files;
+    QStringList expected;
+    QStringList expectedPaths;
+
+    files << KRenameFile( KUrl("/home/foo"), true, eSplitMode_FirstDot, 1 )
+          << KRenameFile( KUrl("/home/foo/bar"), true, eSplitMode_FirstDot, 1 )
+          << KRenameFile( KUrl("/home/foo/bar/baz"), true, eSplitMode_FirstDot, 1 );
+    expected << "FOO" << "BAR" << "BAZ";
+    expectedPaths << "/home" << "/home/FOO/" << "/home/FOO/BAR/";
+
+    RUN_KRENAME_MULTI_FILE_TEST( files, expected, expectedPaths, 
+                                 "&", "Testing a directory hirarchy" );
 }
 
 bool KRenameTest::tokenTest( const char* token, const QString & filename, const QString & expected) 
@@ -588,5 +605,36 @@ bool KRenameTest::replaceTest( const QString & token, const QString & filename, 
 
     return result;
 
+}
+
+bool KRenameTest::testMultipleFiles( KRenameFile::List & files, const QStringList & expected, const QStringList & expectedPath, const QString & token ) 
+{
+    BatchRenamer b;
+    b.setFilenameTemplate( token );
+    b.setFiles( &files );
+    b.processFilenames();
+
+    bool result = true;
+    for( int i = 0; i < files.count(); i++ )
+    {
+        QString str = files[i].dstFilename();
+        QString strPath = files[i].dstDirectory();
+        bool strResult = (str == expected[i]);
+        bool pathResult = (strPath == expectedPath[i]);
+        if( m_verbose || !strResult ) {
+            writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)", 
+                             expected[i].toLatin1().data(), 
+                             str.toLatin1().data(), token.toLatin1().data() );
+        }        
+        if( m_verbose || !pathResult ) {
+            writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)", 
+                             expectedPath[i].toLatin1().data(), 
+                             strPath.toLatin1().data(), token.toLatin1().data() );
+        }        
+
+        result = result && strResult && pathResult;
+    }
+
+    return result;
 }
 

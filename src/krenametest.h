@@ -86,6 +86,17 @@ class KRenameTest : public QWidget {
      */
     void writeTestMessage( const char* format, ... );
 
+
+    /**
+     * Test a list of multiple files.
+     * @param files a list of filenames to be tested
+     * @param a list of expected filenames
+     * @param a list of expected paths
+     * @param a token to use
+     */
+    bool testMultipleFiles( KRenameFile::List & files, const QStringList & expected, 
+                            const QStringList & exptectedPaths, const QString & token );
+
  private:
     QTextEdit* m_text;       ///< output window
 
