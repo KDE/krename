@@ -256,6 +256,7 @@ void KRenameTest::testBatchRenamer()
 {
     writeTestHeader( "BatchRenamer" );
 
+    /*
     // Testing the basic KRename tokens
     QString filename( " Test File name " );
     QString directory1( "krename" );
@@ -482,16 +483,18 @@ void KRenameTest::testBatchRenamer()
     QString regressionName = "1-07 Take Flight (Wings) [Pocketman]";
     QString regressionExpect = "100-Take Flight (Wings) [Pocketman]";
     RUN_TOKEN_TEST( "1##-[$6-] Test", "1##-[$6-]", regressionName, regressionExpect );
+    */
 
     KRenameFile::List files;
     QStringList expected;
     QStringList expectedPaths;
 
-    files << KRenameFile( KUrl("/home/foo"), true, eSplitMode_FirstDot, 1 )
+    files << KRenameFile( KUrl("/home/foo/bar/subdir"), true, eSplitMode_FirstDot, 1 )
+          << KRenameFile( KUrl("/home/foo"), true, eSplitMode_FirstDot, 1 )
           << KRenameFile( KUrl("/home/foo/bar"), true, eSplitMode_FirstDot, 1 )
           << KRenameFile( KUrl("/home/foo/bar/baz"), true, eSplitMode_FirstDot, 1 );
-    expected << "FOO" << "BAR" << "BAZ";
-    expectedPaths << "/home" << "/home/FOO/" << "/home/FOO/BAR/";
+    expected << "SUBDIR" << "FOO" << "BAR" << "BAZ";
+    expectedPaths << "/home/foo/bar" << "/home" << "/home/FOO" << "/home/FOO/BAR";
 
     RUN_KRENAME_MULTI_FILE_TEST( files, expected, expectedPaths, 
                                  "&", "Testing a directory hirarchy" );
