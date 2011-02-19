@@ -165,20 +165,18 @@ void BatchRenamer::processFilenames()
              m_renameMode == eRenameMode_Move) &&
             (*m_files)[i].isDirectory() )
         {
-            qDebug("realSrcDirectory: %s\n",  (*m_files)[i].realSrcDirectory().toUtf8().data() );
-            qDebug("srcDirectory    : %s\n",  (*m_files)[i].srcDirectory().toUtf8().data() );
             const QString topDir  = (*m_files)[i].realSrcDirectory() + '/' + (*m_files)[i].srcFilename(); 
             const QString replace = (*m_files)[i].dstDirectory() + '/' + (*m_files)[i].dstFilename();
             
             for( int z = i + 1; z < m_files->count(); z++ ) 
             {
                 const QString & dir = (*m_files)[z].realSrcDirectory();
-                qDebug("dir    = %s\n", dir.toUtf8().data());
-                qDebug("topDir = %s\n", topDir.toUtf8().data());
                 if( dir.startsWith( topDir ) )
                 {
                     QString newDir = replace + dir.right( dir.length() - topDir.length() );
-                    (*m_files)[z].setOverrideSrcDirectory( newDir ); 
+                    if( newDir != dir ) {
+                        (*m_files)[z].setOverrideSrcDirectory( newDir ); 
+                    }
                 }
             }
         }

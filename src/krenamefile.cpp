@@ -205,9 +205,6 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const KU
     }
 
     /*
-      TODO: Write a real unit test for this class
-    */
-    /*
     qDebug("URL : %s", url.prettyUrl().toLatin1().data() );
     qDebug("Path: %s", rDescription.directory.toLatin1().data());
     qDebug("File: %s", rDescription.filename.toLatin1().data());

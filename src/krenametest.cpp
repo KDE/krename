@@ -256,7 +256,6 @@ void KRenameTest::testBatchRenamer()
 {
     writeTestHeader( "BatchRenamer" );
 
-    /*
     // Testing the basic KRename tokens
     QString filename( " Test File name " );
     QString directory1( "krename" );
@@ -483,7 +482,6 @@ void KRenameTest::testBatchRenamer()
     QString regressionName = "1-07 Take Flight (Wings) [Pocketman]";
     QString regressionExpect = "100-Take Flight (Wings) [Pocketman]";
     RUN_TOKEN_TEST( "1##-[$6-] Test", "1##-[$6-]", regressionName, regressionExpect );
-    */
 
     KRenameFile::List files;
     QStringList expected;
