@@ -23,7 +23,7 @@ ELSE(LIBPODOFO_H)
 ENDIF(LIBPODOFO_H)
 
 FIND_LIBRARY(LIBPODOFO_LIB
-	NAMES libpodofo-base podofo-base
+	NAMES libpodofo-doc podofo-doc
 	PATHS "${LIBPODOFO_DIR}/lib" "${LIBPODOFO_DIR}/src" "${LIBPODOFO_DIR}")
 IF(LIBPODOFO_LIB)
     MESSAGE("podofo lib: ${LIBPODOFO_LIB}")
