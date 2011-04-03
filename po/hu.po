@@ -4,20 +4,20 @@
 # Marcel Hilzinger <hili@suselinux.hu>, 2003.
 # Peter Breuer <comp@suselinux.hu>, 2003.
 # Arpad Biro <biro_arpad@yahoo.com>, 2004, 2005, 2006.
-# Arpad Biro <biro.arpad gmail>, 2008, 2009, 2010.
+# Arpad Biro <biro.arpad gmail>, 2008, 2009, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-02-20 20:20+0100\n"
-"PO-Revision-Date: 2010-01-10 22:46+0100\n"
+"PO-Revision-Date: 2011-04-03 18:58+0200\n"
 "Last-Translator: Arpad Biro <biro.arpad gmail>\n"
-"Language-Team: Hungarian\n"
+"Language-Team: Hungarian <kde-i18n-doc@kde.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: rc.cpp:301 rc.cpp:313
@@ -61,9 +61,8 @@ msgid "&Advanced Filename"
 msgstr "S&peciális fájlnévmegadás"
 
 #: rc.cpp:535
-#, fuzzy
 msgid "&Ascending"
-msgstr "Rendezés: növekvő"
+msgstr "&Növekvő"
 
 #: rc.cpp:54
 msgid "&Cancel"
@@ -90,9 +89,8 @@ msgid "&Copy files to destination directory"
 msgstr "Fájlok más&olása a célkönyvtárba"
 
 #: rc.cpp:553
-#, fuzzy
 msgid "&Custom"
-msgstr "Egyéni név"
+msgstr "&Egyéni"
 
 #: rc.cpp:33
 msgid "&Definitions"
@@ -103,9 +101,8 @@ msgid "&Delete"
 msgstr "&Törlés"
 
 #: rc.cpp:538
-#, fuzzy
 msgid "&Descending"
-msgstr "Rendezés: csökkenő"
+msgstr "&Csökkenő"
 
 #: rc.cpp:700
 msgid "&Display name"
@@ -196,9 +193,8 @@ msgid "&Numbering..."
 msgstr "Szám&ozás..."
 
 #: rc.cpp:541
-#, fuzzy
 msgid "&Numeric"
-msgstr "Szám"
+msgstr "&Szám"
 
 #: rc.cpp:750
 msgid "&Offset:"
@@ -225,9 +221,8 @@ msgid "&Overwrite existing files"
 msgstr "Me&glevő fájlok felülírása"
 
 #: rc.cpp:550
-#, fuzzy
 msgid "&Predefined"
-msgstr "E&lőtag:"
+msgstr "&Beépített"
 
 #: rc.cpp:117 rc.cpp:406
 msgid "&Prefix:"
@@ -239,7 +234,7 @@ msgstr "&Előnézet"
 
 #: rc.cpp:69
 msgid "&Process tokens in replace string"
-msgstr ""
+msgstr "A &helyettesítőszövegben levő tokenek feldolgozása"
 
 #: previewlist.cpp:37 rc.cpp:257
 msgid "&Remove"
@@ -282,9 +277,8 @@ msgid "&Skip Numbers"
 msgstr "Ki&hagyandó számok"
 
 #: rc.cpp:532
-#, fuzzy
 msgid "&Sort filenames ..."
-msgstr "Fájlnév &részének beillesztése..."
+msgstr "Fájlnevek &rendezése..."
 
 #: rc.cpp:212
 msgid "&Start index:"
@@ -307,9 +301,8 @@ msgid "&Test..."
 msgstr "&Tesztelés..."
 
 #: rc.cpp:547
-#, fuzzy
 msgid "&Token ..."
-msgstr "&Tesztelés..."
+msgstr "&Token..."
 
 #: rc.cpp:12
 msgid "&Type:"
@@ -532,13 +525,11 @@ msgstr ""
 "amelyet be kíván illeszteni az új fájlnévbe:</qt>"
 
 #: snumplugin.cpp:50
-#, fuzzy
 msgid ""
 "<qt>This plugin can extract information from the filename of a TV series.</"
 "qt>"
 msgstr ""
-"<qt>Ez a modul angol betűkre írja át a fájlnevekben szereplő nem angol "
-"betűket.</qt>"
+"<qt>Ez a modul egy sorozatepizód fájlnevéből olvas ki információkat.</qt>"
 
 #: translitplugin.cpp:102
 msgid ""
@@ -572,18 +563,12 @@ msgstr ""
 "qt>"
 
 #: podofoplugin.cpp:50
-#, fuzzy
 msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
-msgstr ""
-"<qt>A modul használatával címkéket lehet beolvasni JPEG- és TIFF-fájlokból.</"
-"qt>"
+msgstr "<qt>Ez a modul PDF-fájlokból olvas be címkéket.</qt>"
 
 #: fontplugin.cpp:42
-#, fuzzy
 msgid "<qt>This plugin supports reading tags from font files.</qt>"
-msgstr ""
-"<qt>A modul használatával címkéket lehet beolvasni JPEG- és TIFF-fájlokból.</"
-"qt>"
+msgstr "<qt>Ez a modul betűtípus-fájlokból olvas be címkéket.</qt>"
 
 #: rc.cpp:81 rc.cpp:84 rc.cpp:105 rc.cpp:114
 msgid "?"
@@ -599,7 +584,7 @@ msgstr "Kiterjes&ztett jogosultságok"
 
 #: tokensortmodedialog.cpp:35
 msgid "Access Date"
-msgstr ""
+msgstr "Hozzáférési dátum"
 
 #: rc.cpp:463 rc.cpp:562
 msgid "Access Permissions"
@@ -663,18 +648,16 @@ msgid "Arpad Biro"
 msgstr "Bíró Árpád"
 
 #: rc.cpp:670
-#, fuzzy
 msgid "Ascending"
-msgstr "Rendezés: növekvő"
+msgstr "Növekvő"
 
 #: main.cpp:109
 msgid "Asim Husanovic"
 msgstr "Asim Husanovic"
 
 #: podofoplugin.cpp:41
-#, fuzzy
 msgid "Author of the pdf file"
-msgstr "A fájl tulajdonosa"
+msgstr "A PDF-fájl szerzője"
 
 #: scriptplugin.cpp:244
 msgid "Boolean"
@@ -737,7 +720,7 @@ msgstr "Nem hozható létre szimbolikus link erre a távoli URL-re: %1"
 
 #: batchrenamer.cpp:246
 msgid "Cannot rename: source and target filename are equal: %1"
-msgstr ""
+msgstr "Nem lehet átnevezni: a forrás- és a célfájlnév ugyanaz: %1"
 
 #: rc.cpp:96 rc.cpp:138 rc.cpp:385 rc.cpp:427 rc.cpp:520
 msgid "Capitalize"
@@ -797,22 +780,19 @@ msgstr "Gentoo Ebuild-szkriptek létrehozása a KRename-hez."
 
 #: tokensortmodedialog.cpp:36
 msgid "Creation Date"
-msgstr ""
+msgstr "Létrehozási dátum"
 
 #: podofoplugin.cpp:42
-#, fuzzy
 msgid "Creator of the pdf file"
-msgstr "A fájl tulajdonosa"
+msgstr "A PDF-fájl létrehozója"
 
 #: rc.cpp:688
-#, fuzzy
 msgid "Custom ..."
-msgstr "Egyéni név"
+msgstr "Egyéni..."
 
 #: rc.cpp:529
-#, fuzzy
 msgid "Custom Sorting"
-msgstr "Egyéni kiterjesztés"
+msgstr "Egyéni rendezés"
 
 #: rc.cpp:141 rc.cpp:430
 msgid "Custom extension"
@@ -840,11 +820,11 @@ msgstr "Dátum és idő modul"
 
 #: rc.cpp:682
 msgid "Date (Asc.)"
-msgstr ""
+msgstr "Dátum (növ.)"
 
 #: rc.cpp:685
 msgid "Date (Desc.)"
-msgstr ""
+msgstr "Dátum (csökk.)"
 
 #: systemplugin.cpp:70
 msgid "Date and system functions"
@@ -865,9 +845,8 @@ msgid "Define functions that can be used from KRename templates:"
 msgstr "KRename-sablonokból használható függvények megadása:"
 
 #: rc.cpp:673
-#, fuzzy
 msgid "Descending"
-msgstr "Rendezés: csökkenő"
+msgstr "Csökkenő"
 
 #: rc.cpp:634
 msgid "Description"
@@ -966,9 +945,8 @@ msgid "Files: <b>0</b>"
 msgstr "Fájlok: <b>0</b>"
 
 #: tokensortmodedialog.cpp:37
-#, fuzzy
 msgid "Filesize"
-msgstr "Fájl-előnézet"
+msgstr "Fájlméret"
 
 #: rc.cpp:242
 msgid "Find"
@@ -1012,7 +990,7 @@ msgstr ""
 
 #: fontplugin.cpp:41
 msgid "Font (FreeType2) Plugin"
-msgstr ""
+msgstr "Betűtípus-modul (FreeType2)"
 
 #: rc.cpp:568 rc.cpp:580 rc.cpp:592
 msgid "Forbidden"
@@ -1056,7 +1034,6 @@ msgid "Group"
 msgstr "Csoport"
 
 #: main.cpp:75
-#, fuzzy
 msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
 msgstr "Felhasználóifelület-üzenetek és stílus javítása"
@@ -1134,17 +1111,16 @@ msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "JavaScript-kódrészlet (jelen esetben 4+5) beillesztése"
 
 #: fontplugin.cpp:38
-#, fuzzy
 msgid "Insert the (usually English) name of the font family."
-msgstr "a bemeneti fájlnév hosszának beillesztése"
+msgstr "A betűtípus-család (általában angol nyelvű) nevének beillesztése"
 
 #: fontplugin.cpp:39
 msgid "Insert the (usually English) name of the font style."
-msgstr ""
+msgstr "A betűtípus-stílus (általában angol nyelvű) nevének beillesztése"
 
 #: fontplugin.cpp:37
 msgid "Insert the Postscript name for Type1 and TrueType fonts."
-msgstr ""
+msgstr "Type1- és TrueType-betűtípusok PostScript-nevének beillesztése"
 
 #: taglibplugin.cpp:43
 msgid "Insert the album of a track"
@@ -1203,9 +1179,8 @@ msgid "Insert the date of the last file access"
 msgstr "A fájl legutóbbi elérésének dátumának beillesztése"
 
 #: systemplugin.cpp:68
-#, fuzzy
 msgid "Insert the file size in bytes"
-msgstr "A fájl létrehozási dátumának beillesztése"
+msgstr "A fájl bájtban mért méretének beillesztése"
 
 #: systemplugin.cpp:62
 msgid "Insert the files creation date"
@@ -1249,17 +1224,15 @@ msgstr "Egy zeneszám évének beillesztése"
 
 #: snumplugin.cpp:43
 msgid "Inserts the episode number in two or three digits"
-msgstr ""
+msgstr "Epizód-sorszám beillesztése 2 vagy 3 számjeggyel"
 
 #: snumplugin.cpp:42
-#, fuzzy
 msgid "Inserts the season number in two digits"
-msgstr "Egy zeneszám sorszámának beillesztése"
+msgstr "Szezon-sorszám beillesztése 2 számjeggyel"
 
 #: snumplugin.cpp:41
-#, fuzzy
 msgid "Inserts the series number of original filename"
-msgstr "Beilleszti az eredeti fájlnév átírt változatát"
+msgstr "Az eredeti fájlnév sorozatszámának beillesztése"
 
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
@@ -1325,9 +1298,8 @@ msgid "KRename finished the undo process."
 msgstr "A KRename befejezte a visszavonást."
 
 #: podofoplugin.cpp:43
-#, fuzzy
 msgid "Keywords of the pdf file"
-msgstr "A fájl tulajdonosa"
+msgstr "A PDF-fájl kulcsszavai"
 
 #: main.cpp:107
 msgid "Krzysztof Pawlak"
@@ -1363,7 +1335,7 @@ msgstr "Michal Smoczyk"
 
 #: tokensortmodedialog.cpp:39
 msgid "Modification Date"
-msgstr ""
+msgstr "Módosítási dátum"
 
 #: rc.cpp:454 rc.cpp:712
 msgid "Move selected files downwards."
@@ -1403,10 +1375,9 @@ msgstr "Számjeg&yek száma:"
 
 #: podofoplugin.cpp:47
 msgid "Number of pages in the pdf file"
-msgstr ""
+msgstr "Lapok száma a PDF-fájlban"
 
 #: rc.cpp:676
-#, fuzzy
 msgid "Numeric"
 msgstr "Szám"
 
@@ -1475,7 +1446,7 @@ msgstr "Modulok"
 
 #: podofoplugin.cpp:49
 msgid "PoDoFo (PDF) Plugin"
-msgstr ""
+msgstr "PoDoFo modul (PDF-ekhez)"
 
 #: main.cpp:110
 msgid "Polish Translation"
@@ -1499,12 +1470,11 @@ msgstr "Az előállított KRename-parancs előnézete:"
 
 #: rc.cpp:248
 msgid "Process Tokens"
-msgstr ""
+msgstr "Tokenek feldolg."
 
 #: podofoplugin.cpp:46
-#, fuzzy
 msgid "Producer of the pdf file"
-msgstr "A fájl tulajdonosa"
+msgstr "A PDF-fájl készítője"
 
 #: rc.cpp:51
 msgid "Progress"
@@ -1527,9 +1497,8 @@ msgid "Provided the new preview and move features"
 msgstr "Új előnézeti és áthelyezési lehetőségek."
 
 #: rc.cpp:679
-#, fuzzy
 msgid "Random"
-msgstr "Rendezés: véletlenszerű"
+msgstr "Véletlenszerű"
 
 #: rc.cpp:655
 msgid "Re&move"
@@ -1545,7 +1514,7 @@ msgstr "Olvasás"
 
 #: tokenhelpdialog.cpp:300
 msgid "Recent"
-msgstr ""
+msgstr "Legutóbbiak"
 
 #: rc.cpp:239
 msgid "Reg. Expression"
@@ -1596,9 +1565,8 @@ msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
 
 #: snumplugin.cpp:48
-#, fuzzy
 msgid "SeriesNumber"
-msgstr "Szám"
+msgstr "Sorozatok sorszámai"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1606,7 +1574,7 @@ msgstr "GCC 3.1-gyel kapcsolatos javítások Gentoo-hoz."
 
 #: rc.cpp:664
 msgid "Sort:"
-msgstr ""
+msgstr "Rendezés:"
 
 #: permissionsplugin.cpp:202
 msgid "Special"
@@ -1657,9 +1625,8 @@ msgid "Subdirectory-Sort Plugin"
 msgstr "Rendezés alkönyvtárakba"
 
 #: podofoplugin.cpp:44
-#, fuzzy
 msgid "Subject of the pdf file"
-msgstr "A fájl tulajdonosa"
+msgstr "A PDF-fájl tárgya"
 
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
@@ -1752,9 +1719,8 @@ msgid "Time:"
 msgstr "Idő:"
 
 #: podofoplugin.cpp:45
-#, fuzzy
 msgid "Title of the pdf file"
-msgstr "A fájl tulajdonosa"
+msgstr "A PDF-fájl címe"
 
 #: rc.cpp:631
 msgid "Token"
@@ -1825,9 +1791,8 @@ msgid "Undoing all renamed files."
 msgstr "Fájlátnevezések visszavonása."
 
 #: rc.cpp:667
-#, fuzzy
 msgid "Unsorted"
-msgstr "Rendezés: nincs"
+msgstr "Nincs rendezve"
 
 #: rc.cpp:709
 msgid "Up"
@@ -1920,7 +1885,7 @@ msgstr "Könyvtár rekurzív felvétele"
 
 #: rc.cpp:544
 msgid "by"
-msgstr ""
+msgstr "erre:"
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"
@@ -1963,6 +1928,8 @@ msgid ""
 "insert a '/' to create a new subdirectory (useful from within regular "
 "expressions)"
 msgstr ""
+"'/' beillesztése új alkönyvtár létrehozásához (hasznos lehet reguláris "
+"kifejezésekben)"
 
 #: krenameimpl.cpp:508
 msgid "insert name of directory"
