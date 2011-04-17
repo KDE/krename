@@ -237,15 +237,15 @@ void BatchRenamer::processFiles( ProgressDialog* p )
 
         // Assemble filenames
         createMissingSubDirs( (*m_files)[i], p );
-        
+
         KIO::JobFlags flags  = (m_overwrite ? KIO::Overwrite : KIO::DefaultFlags) | KIO::HideProgressInfo;
         KIO::Job*     job    = NULL;
         const KUrl &  srcUrl =  (*m_files)[i].srcUrl();
         if( srcUrl == dstUrl ) 
         {
-            p->error( i18n("Cannot rename: source and target filename are equal: %1", srcUrl.prettyUrl()) );
-            (*m_files)[i].setError( 1 );
-            errors++;
+            p->warning( i18n("Cannot rename: source and target filename are equal: %1", srcUrl.prettyUrl()) );
+            //(*m_files)[i].setError( 1 );
+            //errors++;
             continue;
         }
                     
