@@ -1,22 +1,24 @@
-# translation of sv.po to svenska
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
-# Peter Landgren <peter.talken@telia.com>, 2005, 2006, 2009, 2010.
+# Upynas <jonas@vrc.lt>, 2011.
+# Upynas <upynas@gmail.com>, 2011.
+# Jonas Česnauskas <upynas@gmail.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: sv\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-06-24 13:13+0200\n"
-"PO-Revision-Date: 2010-06-27 13:24+0200\n"
-"Last-Translator: Peter Landgren <peter.talken@telia.com>\n"
-"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
-"Language: sv\n"
+"PO-Revision-Date: 2011-06-23 15:04+0300\n"
+"Last-Translator: Jonas Česnauskas <upynas@gmail.com>\n"
+"Language-Team: Lithuanian <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: rc.cpp:120 rc.cpp:132
 msgid "$"
@@ -24,322 +26,315 @@ msgstr "$"
 
 #: batchrenamer.cpp:300 batchrenamer.cpp:421
 msgid "%1 errors occurred!"
-msgstr "%1 fel inträffade!"
+msgstr "%1 Klaidos!"
 
 #: batchrenamer.cpp:772
 msgid "%2 errors occurred!"
-msgstr "%2 fel inträffade!"
+msgstr "%2 klaidų!"
 
 #: krenamewindow.cpp:50
 msgid "&1. Files"
-msgstr "&1. Filer"
+msgstr "&1. Failai"
 
 #: krenamewindow.cpp:51
 msgid "&2. Destination"
-msgstr "&2. Mål"
+msgstr "&2. Paskirtis"
 
 #: krenamewindow.cpp:52
 msgid "&3. Plugins"
-msgstr "&3. Plugin"
+msgstr "&3. Įskiepiai"
 
 #: krenamewindow.cpp:53
 msgid "&4. Filename"
-msgstr "&4. Filnamn"
+msgstr "&4. Failo pavadinimas"
 
 #: rc.cpp:396
 msgid "&Add Number"
-msgstr "&Lägg till tal"
+msgstr "Pridėti skaičių"
 
 #: rc.cpp:6 rc.cpp:453 rc.cpp:630 previewlist.cpp:36
 msgid "&Add..."
-msgstr "&Lägg till..."
+msgstr "&Pridėti"
 
 #: rc.cpp:111
 msgid "&Advanced Filename"
-msgstr "&Avancerat filnamn"
+msgstr "&Kitas pavadinimas"
 
 #: rc.cpp:747
-#, fuzzy
 msgid "&Ascending"
-msgstr "Sortering: stigande"
+msgstr "Didėjančiai"
 
 #: rc.cpp:435
 msgid "&Cancel"
-msgstr "&Avbryt"
+msgstr "&Nutraukti"
 
 #: rc.cpp:585
 msgid "&Change Owner"
-msgstr "&Ändra ägare"
+msgstr "Keisti savininką"
 
 #: previewlist.cpp:32
 msgid "&Change filename manually..."
-msgstr "&Ändra filnamn manuellt..."
+msgstr "&Keisti rankiniu būdu"
 
 #: krenamewindow.cpp:198
 msgid "&Close"
-msgstr "&Stäng"
+msgstr "&Užverti"
 
 #: rc.cpp:411
 msgid "&Convert selection:"
-msgstr "&Omvandlingsval:"
+msgstr "Keisti atranką:"
 
 #: rc.cpp:96
 msgid "&Copy files to destination directory"
-msgstr "&Kopiera filer till målmapp"
+msgstr "Kopijuoti failus į paskirties aplanką"
 
 #: rc.cpp:765
-#, fuzzy
 msgid "&Custom"
-msgstr "Anpassat namn"
+msgstr "tinkintas"
 
 #: rc.cpp:636
 msgid "&Definitions"
-msgstr "&Definitioner"
+msgstr "&Apibrėžimai"
 
 #: rc.cpp:633
 msgid "&Delete"
-msgstr "&Tag bort"
+msgstr "&Šalinti"
 
 #: rc.cpp:750
-#, fuzzy
 msgid "&Descending"
-msgstr "Sortering: fallande"
+msgstr "Mažėjančiai"
 
 #: rc.cpp:57
 msgid "&Display name"
-msgstr "&Visa namn"
+msgstr "Rodyti pavadinimą"
 
 #: rc.cpp:276 rc.cpp:375
 msgid "&Down"
-msgstr "&Ner"
+msgstr "Žemyn"
 
 #: rc.cpp:456
 msgid "&Edit..."
-msgstr "&Redigera..."
+msgstr "&Taisa"
 
 #: rc.cpp:285
 msgid "&Enable Plugin"
-msgstr "&Tillåt Plugin"
+msgstr "Įgalinti įskiepį"
 
 #: rc.cpp:228 rc.cpp:336
 msgid "&Extension:"
-msgstr "&Tillägg:"
+msgstr "Plėtinys"
 
 #: rc.cpp:183 rc.cpp:291
 msgid "&Filename"
-msgstr "&Filnamn"
+msgstr "&Pavadinimas"
 
 #: rc.cpp:729
 msgid "&Files per directory:"
-msgstr "&Filer per mapp:"
+msgstr "&Failų kataloge:"
 
 #: rc.cpp:465
 msgid "&Find:"
-msgstr "&Leta:"
+msgstr "&Rasti:"
 
 #: krenamewindow.cpp:197
 msgid "&Finish"
-msgstr "&Avslutning"
+msgstr "&Baigti"
 
 #: rc.cpp:138
 msgid "&Functions..."
-msgstr "&Funktioner..."
+msgstr "&Funkcijos..."
 
 #: rc.cpp:594
 msgid "&Group:"
-msgstr "&Grupp:"
+msgstr "&Grupė:"
 
 #: rc.cpp:669
 msgid "&Increase Counter"
-msgstr "&Öka räknare"
+msgstr "Didinti skaitliuką"
 
 #: rc.cpp:660
 msgid "&Initial Value:"
-msgstr "&Startvärde:"
+msgstr "Pradinė reikšmė"
 
 #: tokenhelpdialog.cpp:90
 msgid "&Insert"
-msgstr "Skjut &in"
+msgstr "Įterpti"
 
 #: rc.cpp:177
 msgid "&Insert Part of Filename..."
-msgstr "&Skjut in del av filnamn..."
+msgstr "&įterpti dalį iš failo pavadinimo..."
 
 #: rc.cpp:648
 msgid "&Insert Variable"
-msgstr "&Skjut in variabel"
+msgstr "&Įterpti kintamąjį"
 
 #: rc.cpp:408
 msgid "&Invert selection"
-msgstr "&Invertera val"
+msgstr "Apversti atranką"
 
 #: rc.cpp:645
 msgid "&Load from File..."
-msgstr "&Ladda från fil..."
+msgstr "&Įkelti iš failo..."
 
 #: rc.cpp:99
 msgid "&Move files to destination directory"
-msgstr "&Flytta filer till målmapp"
+msgstr "Perkelti failus į paskirties aplanką"
 
 #: rc.cpp:657
 msgid "&Name:"
-msgstr "&Namn:"
+msgstr "&Vardas"
 
 #: rc.cpp:381
 msgid "&Numbering"
-msgstr "&Numrering"
+msgstr "&Numeravimas"
 
 #: rc.cpp:171
 msgid "&Numbering..."
-msgstr "&Numrering..."
+msgstr "&Numeravimas..."
 
 #: rc.cpp:753
-#, fuzzy
 msgid "&Numeric"
-msgstr "Tal"
+msgstr "Skaitmeninis(-ė)"
 
 #: rc.cpp:680
 msgid "&Offset:"
-msgstr "&Förskjutning:"
+msgstr "Poslinkis:"
 
 #: previewlist.cpp:34
 msgid "&Open"
-msgstr "&Öppna"
+msgstr "&Atverti"
 
 #: progressdialog.cpp:35
 msgid "&Open Destination"
-msgstr "&Öppna mål"
+msgstr "Atvėrimo paskirtis"
 
 #: rc.cpp:90
 msgid "&Options"
-msgstr "&Val"
+msgstr "Parinktys"
 
 #: rc.cpp:726
 msgid "&Options:"
-msgstr "&Val:"
+msgstr "&Parinktys:"
 
 #: rc.cpp:105
 msgid "&Overwrite existing files"
-msgstr "&Överskrivning av befintliga filer"
+msgstr "Pakeisti esamus failus"
 
 #: rc.cpp:762
-#, fuzzy
 msgid "&Predefined"
-msgstr "&Prefix:"
+msgstr "Numatytas(-a)"
 
 #: rc.cpp:225 rc.cpp:333
 msgid "&Prefix:"
-msgstr "&Prefix:"
+msgstr "Priešdėlis"
 
 #: rc.cpp:51
 msgid "&Preview"
-msgstr "&Förhandsgranskning"
+msgstr "Peržiūra"
 
 #: rc.cpp:474
 msgid "&Process tokens in replace string"
-msgstr ""
+msgstr "&Procesų raktai pakeis eilutę"
 
 #: rc.cpp:459 previewlist.cpp:37
 msgid "&Remove"
-msgstr "Ta&gbort"
+msgstr "&Pašalinti"
 
 #: rc.cpp:399
 msgid "&Remove Number"
-msgstr "&Tag bort nummer"
+msgstr "Pašalinti skaičių"
 
 #: progressdialog.cpp:51
 msgid "&Rename All Files Again..."
-msgstr "Döp om alla filer &igen..."
+msgstr "Vėl pervadinti visus failus..."
 
 #: rc.cpp:93
 msgid "&Rename input files"
-msgstr "&Döp om infiler"
+msgstr "Pervadinti įvesties failus"
 
 #: progressdialog.cpp:33
 msgid "&Rename more..."
-msgstr "&Döp om fler..."
+msgstr "&Pervadinti daugiau..."
 
 #: rc.cpp:468
 msgid "&Replace With:"
-msgstr "&Ersätt med:"
+msgstr "&Kuo pakeisti:"
 
 #: rc.cpp:390
 msgid "&Reset counter for every directory"
-msgstr "&Återställ räknare för varje mapp"
+msgstr "Išvalyti skaitiklius visiems aplankams"
 
 #: rc.cpp:642
 msgid "&Save to File..."
-msgstr "&Spara till fil..."
+msgstr "&Įrašyti į failą..."
 
 #: rc.cpp:180
 msgid "&Simple Filename"
-msgstr "&Enkelt filnamn"
+msgstr "&Paprastas failo pavadinimas"
 
 #: rc.cpp:393
 msgid "&Skip Numbers"
-msgstr "H&oppa över tal"
+msgstr "Praleisti skaičius"
 
 #: rc.cpp:744
-#, fuzzy
 msgid "&Sort filenames ..."
-msgstr "&Skjut in del av filnamn..."
+msgstr "Rikiuoti failų pavadinimus..."
 
 #: rc.cpp:732
 msgid "&Start index:"
-msgstr "&Start index:"
+msgstr "&Pradinis skaičius:"
 
 #: rc.cpp:387
 msgid "&Step by:"
-msgstr "&Stega med:"
+msgstr "Žingsnis:"
 
 #: rc.cpp:186 rc.cpp:294
 msgid "&Suffix:"
-msgstr "&Suffix:"
+msgstr "&Priesaga:"
 
 #: rc.cpp:114
 msgid "&Template:"
-msgstr "&Mall:"
+msgstr "Šablonas:"
 
 #: rc.cpp:651
 msgid "&Test..."
-msgstr "&Test..."
+msgstr "&Bandymas..."
 
 #: rc.cpp:759
-#, fuzzy
 msgid "&Token ..."
-msgstr "&Test..."
+msgstr "Raktas..."
 
 #: rc.cpp:663
 msgid "&Type:"
-msgstr "&Typ:"
+msgstr "&Tipas"
 
 #: progressdialog.cpp:34
 msgid "&Undo"
-msgstr "&Ångra"
+msgstr "&Atšaukti"
 
 #: rc.cpp:270 rc.cpp:372
 msgid "&Up"
-msgstr "&Upp"
+msgstr "Aukštyn"
 
 #: rc.cpp:144
 msgid "&Use extension of the input file"
-msgstr "&Använd infilens tillägg"
+msgstr "&Naudoti pradinį failo plėtinį"
 
 #: rc.cpp:591
 msgid "&User:"
-msgstr "&Användare:"
+msgstr "&Naudotojas:"
 
 #: rc.cpp:621
 msgid "&Variables"
-msgstr "&Variabler"
+msgstr "&Kintamieji"
 
 #: main.cpp:66
 msgid "(c) 2001-2009, Dominik Seichter\n"
-msgstr "(c) 2001-2009, Dominik Seichter\n"
+msgstr ""
 
 #: krenameimpl.cpp:358 scriptplugin.cpp:298 scriptplugin.cpp:333
 msgid "*|All files and directories"
-msgstr "*|Alla filer och mappar"
+msgstr "*|Visus failus ir aplankus"
 
 #: rc.cpp:627
 msgid "1"
@@ -347,7 +342,7 @@ msgstr "1"
 
 #: dirsortplugin.cpp:100
 msgid ": The output directory %1 does not exist."
-msgstr ": Utmappen %1 saknas"
+msgstr ": Paskirties aplankas %1 neegzistuoja."
 
 #: rc.cpp:672
 msgid ""
@@ -381,17 +376,17 @@ msgstr ""
 "font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Denna plugin lägger till en given förskjutning till tal i "
-"filnamn.</span></p>\n"
+"weight:600;\">Šis įskiepis atlieka skaičių poslinkį pavadinimuose.</span></"
+"p>\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">T. ex. om "
-"du har filnamnet: <span style=\" font-style:italic;\">img014</span>, <span "
-"style=\" font-style:italic;\">img015</span>, <span style=\" font-style:"
-"italic;\">img023</span> vilket skulle namnges<span style=\" font-style:"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Pvz. Jūs "
+"turite failus pavadinimu: <span style=\" font-style:italic;\">img014</span>, "
+"<span style=\" font-style:italic;\">img015</span>, <span style=\" font-style:"
+"italic;\">img023</span> kurie turėtų būti pavadinti<span style=\" font-style:"
 "italic;\"> img010</span>, <span style=\" font-style:italic;\">img011</span> "
-"and <span style=\" font-style:italic;\">img019. </span>Genom att använda "
-"denna plugin, kan du lätt lägga till en förskjutning -4 för att få önskat "
-"resultat.</p></body></html>"
+"ir <span style=\" font-style:italic;\">img019. </span>Naudojant šį įskiepį, "
+"jūs lengvai galite įdėti poslinkį -4 gauti norimam rezultatui.</p></body></"
+"html>"
 
 #: rc.cpp:686
 msgid ""
@@ -418,23 +413,23 @@ msgstr ""
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
-"large; font-weight:600;\">Välkommen till KRename</span></p>\n"
+"large; font-weight:600;\">Sveiki čia KRename</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">En satsvis "
-"filnamnsomdöpare för KDE.<br />För att döpa om dina filer, måste du:</p></"
-"body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Masinio failų pervadinimo "
+"įrankis skirtas KDE.<br />Failų pervadinimui, reikia:</p></body></html>"
 
 #: krenamewindow.cpp:397
 msgid "<b>Files:<b> %1"
-msgstr "<b>Filer:<b> %1"
+msgstr "<b>Failai:<b> %1"
 
 #: main.cpp:131
 msgid ""
 "<b>Krename was started from root!</b><br>When started from root, Krename may "
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
-"<b>KRename startade från rot!</b><br>Om den startas från rot, kan KRename "
-"förstöra ditt system om du inte vet exakt vad du håller på med!"
+"<b>Krename pradėjo nuo failų sistemos šaknų!</b><br>Jei jūs tiksliai "
+"nežinote ką darote, pradžiai esant failų sistemos pradžioje Krename gali "
+"sugadinti jūsų sistemą!"
 
 #: rc.cpp:123
 msgid ""
@@ -464,19 +459,19 @@ msgid ""
 "financial support (everybody needs money ;). See help files for details.</"
 "p></qt>"
 msgstr ""
-"<qt><p>KRename är en klumpvis filomdöpare, som kan döpa om en fillista "
-"grundad på en mängd uttryck.</p><p>Om du gillar KRename kan du vilja stödja "
-"det. Utprovning, felrättning och funktionsönskemål är lika välkomna som "
-"finansiellt stöd. (alla behöver pengar ;) Se hjälpfilen för detaljer.</p></"
-"qt>"
+"<qt><p>KRename yra masinio pervadinimo įrankis galintis pervadinti failų "
+"sąrašą remiantis išraiškų rinkiniu.</p><p>Jei tau patinka KRename gali jį "
+"paremti. Testavimas, klaidų taisymas bei galimybių pasiūla laukiama kaip ir "
+"finansinė parama (pinigų reikia viskam ;). Smulkiau žiūrėkite pagalboje.</"
+"p></qt>"
 
 #: rc.cpp:168
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
 msgstr ""
-"<qt>Ställ in start index, steglängd samt överhoppning vid numrering av "
-"filnamn.</qt>"
+"<qt>Pasirinkti pradžios skaičių, žingsnį ir praleidimus failo pavadinime. </"
+"qt>"
 
 #: rc.cpp:150
 msgid ""
@@ -484,96 +479,93 @@ msgid ""
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
 msgstr ""
-"<qt>Ställ in vilken del av filnamnet som ses som filnamnstillägget. T. ex, "
-"\"Första punkt\", ser \".tar.gz\" som extension, \"Sista punkt\" bara \".gz"
+"<qt>Nurodykite kurią failo pavadinimo dalį laikyti failo plėtiniu Pvz. "
+"„Pirmas taškas\", plėtinys bus „.tar.gz“, „Paskutinis taškas\" tiktai \".gz"
 "\".</qt>"
 
 #: rc.cpp:129
 msgid "<qt>Enter a template for changing the file extension.</qt>"
-msgstr "<qt>Sätt en mall för ändring av filändelser.</qt>"
+msgstr "<qt>Pasirinkite šabloną failo plėtinio pakeitimui.</qt>"
 
 #: rc.cpp:117
 msgid "<qt>Enter a template for changing the filename.</qt>"
-msgstr "<qt>Sätt en mall för ändring av filnamnet.</qt>"
+msgstr "<qt>Pasirinkite šabloną failo pervadinimui.</qt>"
 
 #: rc.cpp:162 rc.cpp:261
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
 msgstr ""
-"<qt>Sök och byt ut strängar och reguljära uttryck i det omdöpta filnamet.</"
-"qt>"
+"<qt>Ieškoti ir keisti išraiškas bei paprastąsias išraiškas pervadinto failo "
+"pavadinime. </qt>"
 
 #: rc.cpp:174
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
-msgstr "<qt>Grafiskt välj en del av ett filnamn att skjuta in.</qt>"
+msgstr "<qt>Grafiškai pažymėkite kurią failo pavadinimo dalį įterpti</qt>"
 
 #: rc.cpp:135 rc.cpp:189 rc.cpp:192 rc.cpp:213 rc.cpp:222
 msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
-"<qt>Skjut in specialfunktioner som artist på en mp3 eller skapelsedatum på "
-"en bild.</qt>"
+"<qt>Įterpkite norimus aprašus pvz. mp3 autorių arba nuotraukos sukūrimo  "
+"datą.</qt>"
 
 #: rc.cpp:141
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
-msgstr "<qt>Behåll filnamnstillägget som det är och ändfra det inte.</qt>"
+msgstr "<qt>Palikti esamą failo plėtinį be pakeitimų.</qt>"
 
 #: rc.cpp:405
 msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
 msgstr ""
-"<qt>Välj den del av det gamla filnamnet som skall skjutas in i det nya "
-"filnamnet i textrutan nedan:</qt>"
+"<qt>Pažymėkite dalį, senajame failo pavadinime kurią reikia įterpti į "
+"naująjį failo pavadinimą, laukelyje:</qt>"
 
 #: snumplugin.cpp:50
-#, fuzzy
 msgid ""
 "<qt>This plugin can extract information from the filename of a TV series.</"
 "qt>"
 msgstr ""
-"<qt>Denna plugin kan transkribera ett filnamn till engelska (d. v. s. "
-"genomföra translitteration).</qt>"
+"<qt>Šis įskiepis gali išgauti informaciją iš failo pavadinimo apie TV "
+"serialus. </qt>"
 
 #: translitplugin.cpp:102
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
 "transliteration).</qt>"
 msgstr ""
-"<qt>Denna plugin kan transkribera ett filnamn till engelska (d. v. s. "
-"genomföra translitteration).</qt>"
+"<qt>Šis įskiepis pavadinimą gali įrašyti angliškais rašmenim (t.y. atlikti "
+"transliteracija).</qt>"
 
 #: systemplugin.cpp:72
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
 msgstr ""
-"<qt>Denna plugin innehåller symboler för erhålla att tider för skapelse, "
-"ändring och senaste åtkomst för filer samt aktuell tid och datum från "
-"systemtet.</qt>"
+"<qt>Šis įskiepis turi raktus reikalingus kūrimui, failų pakeitimų ir "
+"paskutinės prieigos bei esamam sistemos laiko ir datos pakeitimui.</qt>"
 
 #: taglibplugin.cpp:51
 msgid ""
 "<qt>This plugin supports reading tags for MP3, Ogg Vorbis, FLAC, MPC, Speex "
 "WavPack and TrueAudio files.</qt>"
 msgstr ""
-"<qt>Denna plugin stöder läsning av märken för MP3, Ogg Vorbis, FLAC, MPC, "
-"Speex WavPack och TrueAudio filer.</qt>"
+"<qt>Šis įskiepis skaito MP3, Ogg Vorbis, FLAC, MPC, Speex, WavPack ir "
+"TrueAudio rinkmenų žymas.</qt>"
 
 #: exiv2plugin.cpp:378
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
-msgstr "<qt>Denna plugin sorterar läsmärken från JPEG- och TIFF-filer.</qt>"
+msgstr "<qt>Šis įskiepis palaiko žymių skaitymą iš JPEG ir TIFF failų.</qt>"
 
 #: podofoplugin.cpp:50
 msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
-msgstr "<qt>Denna plugin sorterar läsmärken från PDF-filer.</qt>"
+msgstr "<qt>Šis įskiepis palaiko žymių skaitymą iš PDF failų.</qt>"
 
 #: fontplugin.cpp:42
-#, fuzzy
 msgid "<qt>This plugin supports reading tags from font files.</qt>"
-msgstr "<qt>Denna plugin sorterar läsmärken från PDF-filer.</qt>"
+msgstr "<qt>Šis įskiepis palaiko žymių skaitymą iš šrifto failų.</qt>"
 
 #: rc.cpp:297 rc.cpp:300 rc.cpp:321 rc.cpp:330
 msgid "?"
@@ -581,438 +573,437 @@ msgstr "?"
 
 #: scriptplugin.cpp:262
 msgid "A JavaScript error has occured: "
-msgstr "Ett fel i JavaSkript har inträffat: "
+msgstr "JavaScript klaida"
 
 #: rc.cpp:582
 msgid "A&dvanced Permissions"
-msgstr "&Avancerade åtkomtsrättighter"
+msgstr "Papildomi leidimai"
 
 #: tokensortmodedialog.cpp:35
 msgid "Access Date"
-msgstr ""
+msgstr "Kreipimosi data"
 
 #: rc.cpp:537 rc.cpp:615
 msgid "Access Permissions"
-msgstr "Åtkomtsrättighter"
+msgstr "Prieigos teisės"
 
 #: permissionsplugin.cpp:182
 msgid "Access permissions"
-msgstr "Åtkomtsrättighter"
+msgstr "Prieigos teisės"
 
 #: filedialogextwidget.cpp:35
 msgid "Add &hidden directories"
-msgstr "Lägg ihop &gömda mappar"
+msgstr "Pridėti nerodomus aplankus"
 
 #: filedialogextwidget.cpp:33
 msgid "Add directory names &with filenames"
-msgstr "Lägg ihop mappnamn &med filnamn."
+msgstr "Pridėti aplankų pavadinimus su failų pavadinimais"
 
 #: filedialogextwidget.cpp:36
 msgid "Add directory names only"
-msgstr "Lägg ihop endast mappnamn"
+msgstr "Pridėti tik aplankų pavadinimus"
 
 #: rc.cpp:3
 msgid "Add files for renaming."
-msgstr "Lägg till filer för omdöpning"
+msgstr "Įdėti failus pervadinimui"
 
 #: filedialogextwidget.cpp:53
 msgid ""
 "Add only the directory names and not the names of the files in the directory "
 "to KRename."
 msgstr ""
-"Addera bara mappnamnen och inte namnen på filerna i mapparna till KRename."
+"Į KRename pridėti tik aplankų pavadinimus, o ne aplanke esamų failų "
+"pavadinimai."
 
 #: rc.cpp:700
 msgid "Add some files ..."
-msgstr "Lägg till några filer..."
+msgstr "Pridėti kai kuriuos failus ..."
 
 #: filedialogextwidget.cpp:34
 msgid "Add subdirectories &recursively"
-msgstr "Lägg ihop undermappar rekursivt"
+msgstr "Pridėti poaplankius &rekursyviai"
 
 #: scriptplugin.cpp:291
 msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
-msgstr "Alla aktuella definitioner kommer att förloras. Vill du fortsätta?"
+msgstr "Visi įvesti apibrėžimai bus prarasti. Ar norite tęsti?"
 
 #: rc.cpp:480
 msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
 msgstr ""
-"Alla stödda mallar (kommandon) listas i denna dialog. Du kan söka efter "
-"mallar och skjuta en en hittad mall in in mönstret för filnamnet."
+"Visos palaikomi raktai (komandos) išvardytos šiame laukelyje. Raktus jūs "
+"galite ieškoti, o rastąjį įterpti į failo pavadinimo šabloną."
 
 #: main.cpp:83
 msgid "Andreas Pour"
-msgstr "Andreas Pour"
+msgstr ""
 
 #: main.cpp:75
 msgid "Arpad Biro"
-msgstr "Arpad Biro"
+msgstr ""
 
 #: rc.cpp:27
-#, fuzzy
 msgid "Ascending"
-msgstr "Sortering: stigande"
+msgstr "Didėjančiai"
 
 #: main.cpp:109
 msgid "Asim Husanovic"
-msgstr "Asim Husanovic"
+msgstr ""
 
 #: podofoplugin.cpp:41
 msgid "Author of the pdf file"
-msgstr "Författare till pdf-fil"
+msgstr "pdf failo autorius"
 
 #: scriptplugin.cpp:244
 msgid "Boolean"
-msgstr "Boolsk"
+msgstr "Loginis"
 
 #: main.cpp:93
 msgid "Brandon Low"
-msgstr "Brandon Low"
+msgstr ""
 
 #: krenameimpl.cpp:514
 msgid "Built-in Functions"
-msgstr "Inbyggda funktioner:"
+msgstr "Integruotos funkcijos"
 
 #: rc.cpp:546 rc.cpp:558 rc.cpp:570
 msgid "Can Read"
-msgstr "Kan läsa"
+msgstr "Gali skaityti"
 
 #: rc.cpp:549 rc.cpp:561 rc.cpp:573
 msgid "Can Read & Write"
-msgstr "kan läsa & skriva"
+msgstr "Gali skaityti ir rašyti"
 
 #: datetimeplugin.cpp:113
 msgid "Can't change date of file %1. (Cannot mktime)"
-msgstr "Kan ej ändra datum för fil %1."
+msgstr "Negalima pakeisti bylos %1 datą (negalimas mktime)"
 
 #: datetimeplugin.cpp:118
 msgid "Can't change date of file %1. (Cannot stat the file)"
-msgstr "Kan ej ändra datum för fil %1."
+msgstr "Negalima pakeisti bylos %1 datą (negalimas failo stat)"
 
 #: datetimeplugin.cpp:127
 msgid "Can't change date of file %1. (utime failed)"
-msgstr "Kan ej ändra datum för fil %1."
+msgstr "Negalima pakeisti bylos %1 datą (nepavyko utime)"
 
 #: permissionsplugin.cpp:130
 msgid "Can't chmod %1."
-msgstr "Kan ej chmod %1."
+msgstr "Neįmanoma pakeisti %1 prieigos."
 
 #: permissionsplugin.cpp:139
 msgid "Can't chown %1."
-msgstr "Kan ej chown %1."
+msgstr "Neįmanoma pakeisti %1 savininko"
 
 #: batchrenamer.cpp:684
 msgid "Can't create undo script :"
-msgstr "Kan ej skapa ångra-skript :"
+msgstr "Neįmanoma sukurti grįžtamąjį scenarijų:"
 
 #: batchrenamer.cpp:786
 msgid "Can't set executable bit on undo script."
-msgstr "kan ej sätta exekveringsbit på ångra-skript."
+msgstr "Nepavyko nustatyti vykdomuoju atšaukimo scenarijų"
 
 #: batchrenamer.cpp:1199 dirsortplugin.cpp:158
 msgid "Cannot create directory %1"
-msgstr "Kan ej skapa mapp  %1"
+msgstr "Nepavyko sukurti aplanko %1"
 
 #: batchrenamer.cpp:267
 msgid "Cannot create symlink to non-local URL: %1"
-msgstr "Kan ej skapa symbolisk länk till icke-lokal URL: %1"
+msgstr "Neįmanoma sukurti nuorodą ne lokaliame URL: %1"
 
 #: batchrenamer.cpp:246
 msgid "Cannot rename: source and target filename are equal: %1"
 msgstr ""
+"Pervadinti neįmanoma, pradinio ir paskirties failo pavadinimas yra tas pats: "
+"%1"
 
 #: rc.cpp:204 rc.cpp:246 rc.cpp:312 rc.cpp:354 rc.cpp:423
 msgid "Capitalize"
-msgstr "Gör till stora bokstäver"
+msgstr "Didžiosios"
 
 #: rc.cpp:483
 msgid "Category"
-msgstr "Kategori"
+msgstr "Kategorija"
 
 #: rc.cpp:534
 msgid "Change &Permissions"
-msgstr "Ändra &rättigheter"
+msgstr "Keisti leidimus"
 
 #: rc.cpp:600
 msgid "Change &access date && time"
-msgstr "Ändra &åtkomstdatum && tid"
+msgstr "Keisti prieigą, datą ir laiką"
 
 #: rc.cpp:603
 msgid "Change &modifcation date && time"
-msgstr "Ändra &ändringsdatum && tid"
+msgstr "Keisti pakeitimų datą ir laiką"
 
 #: main.cpp:85
 msgid "Charles Samuels"
-msgstr "Charles Samuels"
+msgstr ""
 
 #: permissionsplugin.cpp:187
 msgid "Class"
-msgstr "Klass"
+msgstr "Klasė"
 
 #: rc.cpp:81
 msgid "Configure the look and feel of the KRename GUI:"
-msgstr "Ställ in utseende för KRename GUI:"
+msgstr "Derinti KRename išvaizdą ir turinį:"
 
 #: main.cpp:103
 msgid "Contributed a Spanish translation"
-msgstr "Bidrog med en spansk översättning"
+msgstr "Pateikė Ispanišką vertimą"
 
 #: rc.cpp:198 rc.cpp:240 rc.cpp:306 rc.cpp:348 rc.cpp:417
 msgid "Convert to lower case"
-msgstr "Omvandla till små bokstäver"
+msgstr "Keisti mažosiomis raidėmis"
 
 #: rc.cpp:201 rc.cpp:243 rc.cpp:309 rc.cpp:351 rc.cpp:420
 msgid "Convert to upper case"
-msgstr "Omvandla till stora bokstäver"
+msgstr "Keisti dižiosiomis raidėmis"
 
 #: rc.cpp:654
 msgid "Create Variable"
-msgstr "Skapa variabel"
+msgstr "Sukurti kintamąjį"
 
 #: rc.cpp:102
 msgid "Create symbolic &links in destination directory"
-msgstr "Skapa symboliska &länḱar i målmappen"
+msgstr "Kurti nuorodas paskirties aplanke"
 
 #: main.cpp:91
 msgid "Created the Gentoo Ebuild scripts for Krename."
-msgstr "Skapade Gentoo Ebuild skript till KRename."
+msgstr "Sukurtas Krename Gentoo Ebuild scenarijus."
 
 #: tokensortmodedialog.cpp:36
 msgid "Creation Date"
-msgstr ""
+msgstr "Sukūrimo data"
 
 #: podofoplugin.cpp:42
 msgid "Creator of the pdf file"
-msgstr "Skapare till pdf-filen"
+msgstr "pdf failą sukūrė"
 
 #: rc.cpp:45
-#, fuzzy
 msgid "Custom ..."
-msgstr "Anpassat namn"
+msgstr "Tinkintas"
 
 #: rc.cpp:741
-#, fuzzy
 msgid "Custom Sorting"
-msgstr "Anpassat filnamnstillägg"
+msgstr "Savas rikiavimas"
 
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
-msgstr "Anpassat filnamnstillägg"
+msgstr "Savas plėtinys"
 
 #: rc.cpp:207 rc.cpp:315
 msgid "Custom name"
-msgstr "Anpassat namn"
+msgstr "Savas pavadinimas"
 
 #: main.cpp:111
 msgid "Czech Translation"
-msgstr "Tjeckisk översättning"
+msgstr "Vertimas į Čekų kalbą"
 
 #: main.cpp:98
 msgid "Daniele Medri"
-msgstr "Daniele Medri"
+msgstr ""
 
 #: rc.cpp:219 rc.cpp:234 rc.cpp:327 rc.cpp:342
 msgid "Date"
-msgstr "Datum"
+msgstr "Data"
 
 #: datetimeplugin.cpp:51
 msgid "Date & Time Plugin"
-msgstr "Plugin för datum & klockslag"
+msgstr "Datos ir laiko įskiepis"
 
 #: rc.cpp:39
 msgid "Date (Asc.)"
-msgstr ""
+msgstr "Data didėjančiai"
 
 #: rc.cpp:42
 msgid "Date (Desc.)"
-msgstr ""
+msgstr "Data mažėjančiai"
 
 #: systemplugin.cpp:70
 msgid "Date and system functions"
-msgstr "Datum- och systemfunktioner"
+msgstr "Data ir sistemos funkcijos"
 
 #: datetimeplugin.cpp:71
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
-msgstr "Datum-tid plugin fungerar bara med lokala filer. %1 är en fjärrfil."
+msgstr ""
+"Datos ir laiko įskiepis dirba tik su vietiniais failais. % 1 yra nutolęs."
 
 #: rc.cpp:624
 msgid "Declare global variables that can be used from within your functions:"
-msgstr "Deklarera globala variabler, som kan användas inom dina funktioner:"
+msgstr ""
+"Skelbti globalius kintamuosius kurie gali būti naudojami iš savo funkcijos:"
 
 #: rc.cpp:639
 msgid "Define functions that can be used from KRename templates:"
-msgstr "Definiera funktioner, som kan användas i KRename-mallar:"
+msgstr "Apibrėžkite funkcijas, kurios gali būti naudojamos iš KRename šablonų:"
 
 #: rc.cpp:30
-#, fuzzy
 msgid "Descending"
-msgstr "Sortering: fallande"
+msgstr "Mažėjančiai"
 
 #: rc.cpp:489
 msgid "Description"
-msgstr "Beskrivning"
+msgstr "Aprašas"
 
 #: rc.cpp:612
 msgid "Dialog"
-msgstr "Dialog"
+msgstr "Dialogo langas"
 
 #: scriptplugin.cpp:77
 msgid "Directory of the current file"
-msgstr "Mapp för aktuell fil"
+msgstr "Esamo failo aplankas"
 
 #: rc.cpp:48
 msgid "Display a preview image for each file."
-msgstr "Visa en förhandsgranskningsbild för varje fil."
+msgstr "Rodyti vaizdo peržiūrą kiekvienam failui."
 
 #: rc.cpp:54
 msgid "Display the filename together with the preview."
-msgstr "Visa filnamnet tillsammans med förhandsgranskningen."
+msgstr "Rodyti failo pavadinimą drauge su peržiūra."
 
 #: krenameimpl.cpp:383
 msgid "Do you really want to remove all files from the list?"
-msgstr "Vill du verkligen ta bort alla filer i listan?"
+msgstr "Ar tikrai norite pašalinti visus failus iš sąrašo?"
 
 #: main.cpp:69
 msgid "Dominik Seichter"
-msgstr "Dominik Seichter"
+msgstr ""
 
 #: scriptplugin.cpp:243
 msgid "Double"
-msgstr "Dubbel"
+msgstr "Dvigubas"
 
 #: rc.cpp:72
 msgid "Down"
-msgstr "Ner"
+msgstr "Žemyn"
 
 #: batchrenamer.cpp:774
 msgid "Elapsed time: %1 seconds"
-msgstr "Förfluten tid: %1 sekunder"
+msgstr "Praėjęs laikas: %1 sekundžių"
 
 #: main.cpp:135
 msgid "Error"
-msgstr "Fel"
+msgstr "Klaida"
 
 #: batchrenamer.cpp:414
 msgid "Error during undoing %1"
-msgstr "Fel vid ångring %1"
+msgstr "Nepavyko atšaukti pervadinimą %1"
 
 #: batchrenamer.cpp:280 dirsortplugin.cpp:130
 msgid "Error renaming %2 (to %1)"
-msgstr "Fel vid omdöpning %2 (till %1)"
+msgstr "Klaida pervadinant %2 (to %1)"
 
 #: permissionsplugin.cpp:196
 msgid "Exec"
-msgstr "Utför"
+msgstr "Vykdyti"
 
 #: exiv2plugin.cpp:377
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
-msgstr "Exiv2 (JPEG/TIFF Exif) plugin"
+msgstr "Exiv2 (JPEG/TIFF Exif) Įskiepis"
 
 #: scriptplugin.cpp:76
 msgid "Extension of the current file"
-msgstr "Filbestämning för den aktuella filen."
+msgstr "Esamo failo plėtinys"
 
 #: rc.cpp:147
 msgid "File extension &starts at:"
-msgstr "Filnamnstillägg &startar vid:"
+msgstr "Failo plėtinys prasideda nuo:"
 
 #: rc.cpp:507
 msgid "File preview"
-msgstr "Förhandsgranskning av fil"
+msgstr "Failo peržiūra"
 
 #: rc.cpp:210 rc.cpp:318
 msgid "File&name:"
-msgstr "Fil&namn:"
+msgstr "Failo pavadinimas:"
 
 #: scriptplugin.cpp:75
 msgid "Filename of the current file"
-msgstr "Filnamn för den aktuella filen"
+msgstr "Esamo failo pavadinimas"
 
 #: batchrenamer.cpp:367
 msgid "Filenames Processed after %1 seconds."
-msgstr "Filnamn behandlade efter %1 sekunder."
+msgstr "Failų pavadinimai pakeisti per %1 sekundes."
 
 #: batchrenamer.cpp:218 batchrenamer.cpp:697
 msgid "Files will be copied to: %1"
-msgstr "Filer kommer att kopieras till: %1"
+msgstr "Failai bus nukopijuoti į: %1"
 
 #: batchrenamer.cpp:221 batchrenamer.cpp:699
 msgid "Files will be moved to: %1"
-msgstr "Filer kommer att flyttas till: %1"
+msgstr "Failai bus perkelti į: %1"
 
 #: rc.cpp:60
 msgid "Files: <b>0</b>"
-msgstr "Filer: <b>0</b>"
+msgstr "Failus: <b>0</b>"
 
 #: tokensortmodedialog.cpp:37
-#, fuzzy
 msgid "Filesize"
-msgstr "Förhandsgranskning av fil"
+msgstr "Failo dydis"
 
 #: rc.cpp:444
 msgid "Find"
-msgstr "Leta"
+msgstr "Rasti"
 
 #: rc.cpp:165 rc.cpp:264 rc.cpp:369
 msgid "Find &and Replace..."
-msgstr "Leta &och ersätt..."
+msgstr "Ieškoti ir keisti"
 
 #: rc.cpp:438 rc.cpp:462
 msgid "Find and Replace"
-msgstr "Leta och ersätt"
+msgstr "Ieškoti ir keisti"
 
 #: rc.cpp:471
 msgid "Find is a Regular &Expression"
-msgstr "Leta är ett reguljärt &uttryck"
+msgstr "Rasti yra reguliarioji išraiška"
 
 #: rc.cpp:153
 msgid "First Dot"
-msgstr "Första punkt"
+msgstr "Pirmo taško"
 
 #: main.cpp:81
 msgid "Fixed a bug that caused krename not closing open files."
-msgstr "Rättade ett fel som orsakade att krename inte stängde öppna filer."
+msgstr "Ištaisyta klaida, dėl krename negebėjimo uždaryti atidarytus failus."
 
 #: main.cpp:78
 msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
 msgstr ""
-"Rättade ett fel med startindex och lade till BatchRenamer class\n"
-"till denna utmärkta bildvisare."
+"Sutvarkyta pradžios indekso klaida ir įdėta BatchRenamer klasė\n"
+"į jo nuostabią paveikslėlių žiuryklę."
 
 #: main.cpp:101
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 msgstr ""
-"Rättade problem med spec-filen och bidrog med rpms för varje SuSe-version du "
-"kan tänka på och även den nya Gentoo-underhållaren för KRename."
+"Sutvarkytos problemos su spec rinkmena ir pateikti rpms visoms SuSE "
+"versijoms, galite sumanyti KRename pritaikyti Gentoo"
 
 #: fontplugin.cpp:41
-#, fuzzy
 msgid "Font (FreeType2) Plugin"
-msgstr "PoDoFo (PDF) Plugin"
+msgstr "Šriftų (FreeType2) įskiepis"
 
 #: rc.cpp:543 rc.cpp:555 rc.cpp:567
 msgid "Forbidden"
-msgstr "Förbjudet"
+msgstr "Uždrausta"
 
 #: rc.cpp:75 rc.cpp:108 rc.cpp:279 rc.cpp:288 rc.cpp:378 rc.cpp:402 rc.cpp:501
 #: rc.cpp:531 rc.cpp:597 rc.cpp:618 rc.cpp:666 rc.cpp:712
 msgid "Form"
-msgstr "Form"
+msgstr "Forma"
 
 #: rc.cpp:683
 msgid "Frame"
-msgstr "Ram"
+msgstr "Rėmelis"
 
 #: main.cpp:87
 msgid "Franz Schmid"
-msgstr "Franz Schmid"
+msgstr ""
 
 #: permissionsplugin.cpp:217
 msgid "GID"
@@ -1020,271 +1011,267 @@ msgstr "GID"
 
 #: main.cpp:87
 msgid "Gave me a good start into writing plugins with his application scribus."
-msgstr "Gav m en bra start i att skriv plugin med hans tillämpning scribus."
+msgstr "Gerą pradžią rašyti įskiepius man davė jo programa Scribus."
 
 #: rc.cpp:609
 msgid "Get &Current Time"
-msgstr "Hämta a&ktuell tidpunkt"
+msgstr "Imti esamą laiką"
 
 #: rc.cpp:552
 msgid "Gro&up:"
-msgstr "Gr&upp:"
+msgstr "grupė"
 
 #: main.cpp:78
 msgid "Groult Richard"
-msgstr "Groult Richard"
+msgstr ""
 
 #: permissionsplugin.cpp:208 tokensortmodedialog.cpp:38
 msgid "Group"
-msgstr "Grupp"
+msgstr "Grupė"
 
 #: main.cpp:75
 msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
 msgstr ""
+"Padėjo nustatyti stiliaus vadovo problemas ir paėjo tobulinti vartotojo "
+"žinutes."
 
 #: rc.cpp:709
 msgid "Hint: Undo is still possible after renaming your files."
-msgstr "Tips: Ångra fortfarande möjligt efter omdöpning av dina filer."
+msgstr "Patarimas: Failų pervadinimą įmanoma atšaukti."
 
 #: filedialogextwidget.cpp:51
 msgid ""
 "If not checked, KRename will ignore directories starting with a dot during "
 "recursive adding."
 msgstr ""
-"Om ej märkt, kommer KRename att ignorera mappar, som börjar med en punkt, "
-"under rekursiv addering."
+"Jei nepažymėta, KRename nepaisys aplankų pradedant rekursinio pridėjimo "
+"tašku."
 
 #: main.cpp:108
 msgid "Ilya Ivkov"
-msgstr "Ilya Ivkov"
+msgstr ""
 
 #: increasecounterplugin.cpp:41
 msgid "Increase Counter"
-msgstr "Öka räknare"
+msgstr "Didinti skaitliuką"
 
 #: scriptplugin.cpp:73
 msgid "Index of the current file"
-msgstr "Index för den aktuella filen"
+msgstr "Esamo failo indeksas"
 
 #: scriptplugin.cpp:132
 msgid "Initial Value"
-msgstr "Startvärde"
+msgstr "Pradinė reikšmė"
 
 #: batchrenamer.cpp:215 batchrenamer.cpp:703
 msgid "Input files will be renamed."
-msgstr "In-filer kommer att döpas om."
+msgstr "Pradiniai failai bus pervadinti."
 
 #: krenameimpl.cpp:525
 msgid "Insert '#'"
-msgstr "Skjut in '#'"
+msgstr "Įterpti '#'"
 
 #: krenameimpl.cpp:517
 msgid "Insert '$'"
-msgstr "Skjut in '$'"
+msgstr "Įterpti '$'"
 
 #: krenameimpl.cpp:518
 msgid "Insert '%'"
-msgstr "Skjut in '%'"
+msgstr "Įterpti '%'"
 
 #: krenameimpl.cpp:519
 msgid "Insert '&'"
-msgstr "Skjut in '&'"
+msgstr "Įterpti '&'"
 
 #: krenameimpl.cpp:520
 msgid "Insert '*'"
-msgstr "Skjut in '*'"
+msgstr "Įterpti '*'"
 
 #: krenameimpl.cpp:521
 msgid "Insert '/'"
-msgstr "Skjut in'7'"
+msgstr "Įterpti '/'"
 
 #: krenameimpl.cpp:523
 msgid "Insert '['"
-msgstr "Skjut in '['"
+msgstr "Įterpti '['"
 
 #: krenameimpl.cpp:522
 msgid "Insert '\\\\'"
-msgstr "Skjut in '\\\\'"
+msgstr "Įterpti '\\\\'"
 
 #: krenameimpl.cpp:524
 msgid "Insert ']'"
-msgstr "Skjut in ']'"
+msgstr "Įterpti ']'"
 
 #: scriptplugin.cpp:71
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
-msgstr "Skjut in ett litet kodavsnitt av JavaScrip-kode (4+5 i deṫta fall)"
+msgstr "Įterpti JavaScript kodo fragmentą (šiuo atveju 4+5)"
 
 #: fontplugin.cpp:38
-#, fuzzy
 msgid "Insert the (usually English) name of the font family."
-msgstr "skjut in längden hos infilnamnet"
+msgstr "Įterpti (paprastai angliškai) šrifto šeimos pavadinimą."
 
 #: fontplugin.cpp:39
 msgid "Insert the (usually English) name of the font style."
-msgstr ""
+msgstr "Įterpti (paprastai angliškai) šrifto stiliaus pavadinimą."
 
 #: fontplugin.cpp:37
 msgid "Insert the Postscript name for Type1 and TrueType fonts."
-msgstr ""
+msgstr "Įterps Postscript pavadinimą Type1 bei TrueType šriftams."
 
 #: taglibplugin.cpp:43
 msgid "Insert the album of a track"
-msgstr "Skjut in spårets album"
+msgstr "Įterpti takelio albumo pavadinimą"
 
 #: taglibplugin.cpp:42
 msgid "Insert the artist of a track"
-msgstr "Skjut in spårets artist"
+msgstr "Įterpti takelio atlikėją"
 
 #: taglibplugin.cpp:44
 msgid "Insert the comment of a track"
-msgstr "Skjut in spårets kommentar"
+msgstr "Įterpti pastabą apie takelį"
 
 #: exiv2plugin.cpp:306
 msgid "Insert the comment of an image"
-msgstr "Skjut in en bildkommentar"
+msgstr "Įterpti komentarą apie atvaizdą"
 
 #: systemplugin.cpp:51
 msgid "Insert the current date"
-msgstr "Skjut in aktuellt datum"
+msgstr "Įterpti dabartinę datą"
 
 #: systemplugin.cpp:52
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
-msgstr ""
-"Skjut in aktuellt datum genom att använda formateringssträngen yyyy-MM-dd"
+msgstr "Įterpti esamą datą, naudojant formatavimo eilutę yyyy-MM-dd"
 
 #: systemplugin.cpp:55
 msgid "Insert the current day as number"
-msgstr "Skjut in aktuell dag som ett tal"
+msgstr "Įterpti esamos dienos skaičių"
 
 #: systemplugin.cpp:57
 msgid "Insert the current hour as number"
-msgstr "Skjut in aktuell timme som ett tal"
+msgstr "Įterpti einamosios valandos skaičių"
 
 #: systemplugin.cpp:58
 msgid "Insert the current minute as number"
-msgstr "Skjut in aktuell minut som ett tal"
+msgstr "Įterpti einamosios minutės skaičių"
 
 #: systemplugin.cpp:54
 msgid "Insert the current month as number"
-msgstr "Skjut in aktuell månad som ett tal"
+msgstr "Įterpti einamojo mėnesio skaičių"
 
 #: systemplugin.cpp:59
 msgid "Insert the current second as number"
-msgstr "Skjut in aktuell sekund som ett tal"
+msgstr "Įterpti dabartinės sekundės skaičių"
 
 #: systemplugin.cpp:56
 msgid "Insert the current time"
-msgstr "Skjut in aktuell tidpunkt"
+msgstr "Įterpti dabartinį laiką"
 
 #: systemplugin.cpp:53
 msgid "Insert the current year"
-msgstr "Skjut in aktuellt år"
+msgstr "Įterpti einamuosius metus"
 
 #: systemplugin.cpp:66
 msgid "Insert the date of the last file access"
-msgstr "Skjut datumet för senaste filåtkomst"
+msgstr "Įterpti paskutinę failo prieigos datą"
 
 #: systemplugin.cpp:68
-#, fuzzy
 msgid "Insert the file size in bytes"
-msgstr "Skjut in filskapelsedatumen"
+msgstr "Įterpti failo dydį bitais"
 
 #: systemplugin.cpp:62
 msgid "Insert the files creation date"
-msgstr "Skjut in filskapelsedatumen"
+msgstr "Įterpti failų sukūrimo datą"
 
 #: systemplugin.cpp:64
 msgid "Insert the files modification date"
-msgstr "Skjut in filändringsdatumen"
+msgstr "Įterpti failų pakeitimų datą"
 
 #: systemplugin.cpp:67
 msgid "Insert the formatted date of the last file access"
-msgstr "Skjut in det formaterade datumet för senaste filåtkomst"
+msgstr "Įterpti suformuotą failo prieigos datą"
 
 #: systemplugin.cpp:63
 msgid "Insert the formatted file creation date"
-msgstr "Skjut in det formaterade filskapelsedatumet"
+msgstr "Įterpti suformuotą failo sukūrimo datą"
 
 #: systemplugin.cpp:65
 msgid "Insert the formatted modification date"
-msgstr "Skjut in det formaterade filändringsdatumet"
+msgstr "Įterpti suformuotą failo pakeitimų datą"
 
 #: taglibplugin.cpp:45
 msgid "Insert the genre of a track"
-msgstr "Skjut in spårets genre."
+msgstr "Įterpti takelio žanrą"
 
 #: taglibplugin.cpp:47
 msgid "Insert the number of a track"
-msgstr "Skjut in spårets nummer"
+msgstr "Įterpti takelio numerį"
 
 #: taglibplugin.cpp:48
 msgid "Insert the number of a track formatted with a leading 0"
-msgstr "Skjut in spårets nummer formaterat med inledande nolla"
+msgstr "Įterpti takelio numerį su 0 priešakyje"
 
 #: taglibplugin.cpp:41
 msgid "Insert the title of a track"
-msgstr "Skjut in spårets titel"
+msgstr "Įterpti takelio pavadinimą"
 
 #: taglibplugin.cpp:46
 msgid "Insert the year of a track"
-msgstr "Skjut in spårets år"
+msgstr "Įterpti takelio leidimo metus"
 
 #: snumplugin.cpp:43
 msgid "Inserts the episode number in two or three digits"
-msgstr ""
+msgstr "Įterps dviejų ar trijų skaitmenų epizodo numerį"
 
 #: snumplugin.cpp:42
-#, fuzzy
 msgid "Inserts the season number in two digits"
-msgstr "Skjut in spårets nummer"
+msgstr "Įterps dviejų skaitmenų sesijos numerį"
 
 #: snumplugin.cpp:41
-#, fuzzy
 msgid "Inserts the series number of original filename"
-msgstr "Skjut in det translittererade ursprungliga filnamn"
+msgstr "Įterps serijas skaičių iš pirminio failo pavadinimo"
 
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
-msgstr "Skjut in det translittererade ursprungliga filnamn"
+msgstr "Įterps transliteruotą pradinį pavadinimą"
 
 #: translitplugin.cpp:97
 msgid "Inserts the transliterated original filename capitalized"
-msgstr "Skjut in det translittererade ursprungliga filnamnet med versaler"
+msgstr "Įterps transliteruotą pradinį pavadinimą didžiosiomis raidėmis"
 
 #: translitplugin.cpp:95
 msgid "Inserts the transliterated original filename converted to lower case"
-msgstr ""
-"Sätter in det translittererade ursprungliga filnamnet omgjort till gemener"
+msgstr "Įterps transliteruotą pradinį pavadinimą mažosiomis raidėmis"
 
 #: translitplugin.cpp:96
 msgid "Inserts the transliterated original filename converted to upper case"
-msgstr ""
-"Sätter in det translittererade ursprungliga filnamnet omgjort till versaler."
+msgstr "Įterps transliteruotą pradinį pavadinimą didžiosiomis raidėmis"
 
 #: scriptplugin.cpp:242
 msgid "Int"
-msgstr "Heltal"
+msgstr "Sveikasis skaičius"
 
 #: rc.cpp:579
 msgid "Is Executable/Only owner &can rename and delete folder content"
-msgstr "Är körbar/Endast ägare &kan döpa om och ta bort mappinnehåll"
+msgstr ""
+"Yra vykdomas. Tik savininkas gali pervadinti ar ištrinti aplanko turinį"
 
 #: main.cpp:97
 msgid "Italian translation"
-msgstr "Italiensk översättning"
+msgstr "Vertimas į Italų kalbą"
 
 #: main.cpp:98
 msgid "Italian translation work"
-msgstr "Italiensk översättning"
+msgstr "Vertimas į Italų kalbą"
 
 #: scriptplugin.cpp:63
 msgid "JavaScript Plugin"
-msgstr "JavaScript-plugin"
+msgstr "JavaScript Įskiepis"
 
 #: main.cpp:103
 msgid "Jose Rodriguez"
-msgstr "Jose Rodriguez"
+msgstr ""
 
 #: main.cpp:59 krenameimpl.cpp:384
 msgid "KRename"
@@ -1292,416 +1279,408 @@ msgstr "KRename"
 
 #: main.cpp:65
 msgid "KRename Build:"
-msgstr "KRename Build:"
+msgstr "KRename Gaminys:"
 
 #: rc.cpp:477
 msgid "KRename Help"
-msgstr "KRename hjälp"
+msgstr "KRename Pagalba"
 
 #: batchrenamer.cpp:302 batchrenamer.cpp:775
 msgid "KRename finished the renaming process."
-msgstr "KRename avslutade omdöpningsprocessen."
+msgstr "KRename baigė pervadinimą."
 
 #: batchrenamer.cpp:423
 msgid "KRename finished the undo process."
-msgstr "KRename avslutade ångringsprocessen."
+msgstr "KRename baigė grįžtamąjį vyksmą."
 
 #: podofoplugin.cpp:43
 msgid "Keywords of the pdf file"
-msgstr "Pdf-filens nyckelord"
+msgstr "pdf failo raktažodžiai"
 
 #: main.cpp:107
 msgid "Krzysztof Pawlak"
-msgstr "Krzysztof Pawlak"
+msgstr ""
 
 #: rc.cpp:156
 msgid "Last Dot"
-msgstr "Sista punkt"
+msgstr "Paskutinio taško"
 
 #: rc.cpp:78
 msgid "Look and Feel"
-msgstr "Utseende"
+msgstr "Išvaizda ir turinys"
 
 #: main.cpp:102
 msgid "Mark Ziegler"
-msgstr "Mark Ziegler"
+msgstr ""
 
 #: main.cpp:81
 msgid "Michael Elvers"
-msgstr "Michael Elvers"
+msgstr ""
 
 #: main.cpp:100
 msgid "Michael Zugaro"
-msgstr "Michael Zugaro"
+msgstr ""
 
 #: main.cpp:91
 msgid "Michael v.Ostheim"
-msgstr "Michael v.Ostheim"
+msgstr ""
 
 #: main.cpp:110
 msgid "Michal Smoczyk"
-msgstr "Michal Smoczyk"
+msgstr ""
 
 #: tokensortmodedialog.cpp:39
 msgid "Modification Date"
-msgstr ""
+msgstr "Pakeitimų data"
 
 #: rc.cpp:69 rc.cpp:273
 msgid "Move selected files downwards."
-msgstr "Flytta valda filer nedåt."
+msgstr "Perkelti pažymėtus failus žemyn."
 
 #: rc.cpp:63 rc.cpp:267
 msgid "Move selected files upwards."
-msgstr "Flytta valda filer uppåt"
+msgstr "Perkelti pažymėtus failus į viršų."
 
 #: rc.cpp:252 rc.cpp:360
 msgid "N&umber"
-msgstr "Ta&l"
+msgstr "N&umeravimas"
 
 #: main.cpp:106
 msgid "Nicolas Benoit"
-msgstr "Nicolas Benoit"
+msgstr ""
 
 #: rc.cpp:414
 msgid "No Conversion"
-msgstr "Ingen omvandling"
+msgstr "Nekeisti"
 
 #: rc.cpp:159
 msgid "No File Extension"
-msgstr "Inget filnamnstillägg"
+msgstr "Be failo plėtinio"
 
 #: rc.cpp:216 rc.cpp:231 rc.cpp:324 rc.cpp:339
 msgid "Number"
-msgstr "Tal"
+msgstr "Numeravimas"
 
 #: rc.cpp:735
 msgid "Number &of digits:"
-msgstr "Antal siffr&or:"
+msgstr "Skaitmenų kiekis:"
 
 #: rc.cpp:255 rc.cpp:363
 msgid "Number of &digits:"
-msgstr "Antal &siffror:"
+msgstr "Skaitmenų kiekis"
 
 #: podofoplugin.cpp:47
 msgid "Number of pages in the pdf file"
-msgstr "Antal sidor i pdf-filen"
+msgstr "pdf failo puslapių kiekis"
 
 #: rc.cpp:33
-#, fuzzy
 msgid "Numeric"
-msgstr "Tal"
+msgstr "Skaitmeninis"
 
 #: rc.cpp:540
 msgid "O&wner:"
-msgstr "Äga&re"
+msgstr "Savininkas:"
 
 #: krenamemodel.cpp:452
 msgid "Origin"
-msgstr "Ursprung"
+msgstr "Pradiniai"
 
 #: rc.cpp:564
 msgid "Ot&hers:"
-msgstr "An&dra:"
+msgstr "Kiti:"
 
 #: permissionsplugin.cpp:211
 msgid "Others"
-msgstr "Andra"
+msgstr "Kiti"
 
 #: rc.cpp:738
 msgid "Out&put:"
-msgstr "&Utdata:"
+msgstr "Išvedinys:"
 
 #: systemplugin.cpp:60
 msgid "Owner of the file"
-msgstr "Filens ägare"
+msgstr "Failo valdytojas"
 
 #: rc.cpp:588
 msgid "Ownership"
-msgstr "Ägarskap"
+msgstr "Savininkas"
 
 #: systemplugin.cpp:61
 msgid "Owning group of the file"
-msgstr "Ägargrupp för filen"
+msgstr "Failo valdytojų grupė"
 
 #: main.cpp:89
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
-msgstr "Delar av PNG-stöd är kopierat från hans KFile-plugin för png-stöd."
+msgstr "Dalis PNG palaikymo yra nukopijuota iš KFile įskiepio png palaikymui."
 
 #: main.cpp:111
 msgid "Pavel Fric"
-msgstr "Pavel Fric"
+msgstr ""
 
 #: main.cpp:95
 msgid "Per Oyvind Karlsen"
-msgstr "Per Oyvind Karlsen"
+msgstr ""
 
 #: permissionsplugin.cpp:112
 msgid "Permissions"
-msgstr "Rättigheter"
+msgstr "Leidimai"
 
 #: permissionsplugin.cpp:125
 msgid "PermissionsPlugin works only with local files. %1 is a remote file."
-msgstr "PermissionsPlugin fungerar bara med lokala filer. %1 är en fjärrfil."
+msgstr "PermissionsPlugin dirba tik su vietiniais failais. % 1 yra nutolęs."
 
 #: rc.cpp:510
 msgid "Please input a new filename"
-msgstr "Skriv in nytt filnamn"
+msgstr "Prašome įvesti naują failo pavadinimą"
 
 #: rc.cpp:282
 msgid "Plugins"
-msgstr "Plugin"
+msgstr "Įskiepiai"
 
 #: podofoplugin.cpp:49
 msgid "PoDoFo (PDF) Plugin"
-msgstr "PoDoFo (PDF) Plugin"
+msgstr "PoDoFo (PDF) įskiepis"
 
 #: main.cpp:110
 msgid "Polish Translation"
-msgstr "Polsk översättning"
+msgstr "Vertimas į Lenkų kalbą"
 
 #: batchrenamer.cpp:303 batchrenamer.cpp:424 batchrenamer.cpp:776
 msgid "Press close to quit!"
-msgstr "Tryck stäng för att avsluta!"
+msgstr "Kad baigti spauskite užverti!"
 
 #: rc.cpp:492
 msgid "Preview"
-msgstr "Förhandsgranskning"
+msgstr "Peržiūra"
 
 #: rc.cpp:498
 msgid "Preview File:"
-msgstr "Förhandsgranska fil:"
+msgstr "Failo peržiūra:"
 
 #: rc.cpp:426
 msgid "Preview of the generated KRename command:"
-msgstr "Förhandsgranskning avdet skapade KRename-kommandot:"
+msgstr "Peržiūrėti KRename sukurtą komandą:"
 
 #: rc.cpp:450
 msgid "Process Tokens"
-msgstr ""
+msgstr "Proceso raktai"
 
 #: podofoplugin.cpp:46
 msgid "Producer of the pdf file"
-msgstr "Pdf-filens producent"
+msgstr "pdf failo gamintojas"
 
 #: rc.cpp:432
 msgid "Progress"
-msgstr "Framåtskridande"
+msgstr "Eiga"
 
 #: main.cpp:102
 msgid "Provided SuSE RPMs and very good suggestions"
-msgstr "Bidrog med Suse-PRM:er och mycket bra förslag"
+msgstr "Pateikia  SuSE RPMus ir labai gerus pasūlymus"
 
 #: main.cpp:104
 msgid "Provided a RedHat RPM and was big help in improving KRename"
-msgstr ""
-"Bidrog med en RadHat-RPM och var till stor hjälp i att förbättra KRename"
+msgstr "Pateikia RedHat RPM ir labai padėjo tobulinant KRename"
 
 #: main.cpp:99
 msgid "Provided a gcc3.x namespace patch"
-msgstr "Bidrog med en gcc3.x namespace-rättelse"
+msgstr "Pateikė gcc3.x namespace pataisą"
 
 #: main.cpp:100
 msgid "Provided the new preview and move features"
-msgstr "Bidrog med den nya förhandsgranskningens- och flytta-funktionerna"
+msgstr "Pateikė naują peržiūrą ir perkėlimo galimybes"
 
 #: rc.cpp:36
-#, fuzzy
 msgid "Random"
-msgstr "Sortering: slumpmässigt"
+msgstr "Atsitiktinis"
 
 #: rc.cpp:12
 msgid "Re&move"
-msgstr "Ta&gbort"
+msgstr "Pašalinti"
 
 #: rc.cpp:18
 msgid "Re&move All"
-msgstr "Tag&bort allt"
+msgstr "Pašalinti viską"
 
 #: permissionsplugin.cpp:190
 msgid "Read"
-msgstr "Läs"
+msgstr "Skaityti"
 
 #: tokenhelpdialog.cpp:300
 msgid "Recent"
-msgstr ""
+msgstr "Naujausi"
 
 #: rc.cpp:441
 msgid "Reg. Expression"
-msgstr "Reg. uttryck"
+msgstr "Reguliarioji išraiška"
 
 #: rc.cpp:15
 msgid "Remove all files."
-msgstr "Tagbort alla filer."
+msgstr "Pašalinti visus failus."
 
 #: rc.cpp:9
 msgid "Remove selected files."
-msgstr "Tag bort valda filer."
+msgstr "Pašalinti pažymėtus failus."
 
 #: progressdialog.cpp:50
 msgid "Rename &Unprocessed Files Again..."
-msgstr "Döp om ej &processade filer &igen..."
+msgstr "Vėl pervadinti, po pervadinimo atšaukimo, failus..."
 
 #: progressdialog.cpp:49
 msgid "Rename Processed Files &Again..."
-msgstr "Döp om processade filer &igen..."
+msgstr "Vėl pervadinti pervadintus failus..."
 
 #: rc.cpp:513
 msgid "Rename the file using the filename created by KRename."
-msgstr "Döp om filen genom att använda det filnamn, som skapats av KRename."
+msgstr "Pervadinti šį failą, naudojant pavadinimą sukurta KRename."
 
 #: krenamemodel.cpp:452
 msgid "Renamed"
-msgstr "Omdöpt"
+msgstr "Pervadinti"
 
 #: batchrenamer.cpp:768
 msgid "Renamed %1 files successfully."
-msgstr "Döpte om %1 filer lyckosamt."
+msgstr "Sėkmingai pervadinta %1 failų."
 
 #: main.cpp:101
 msgid "Rene Gass"
-msgstr "Rene Gass"
+msgstr ""
 
 #: rc.cpp:447
 msgid "Replace With"
-msgstr "Ersätt med"
+msgstr "Kuo pakeisti"
 
 #: progressdialog.cpp:47
 msgid "Restart &KRename..."
-msgstr "Starta om &KRename..."
+msgstr "&KRename paleisti iš naujo..."
 
 #: main.cpp:89
 msgid "Rolf Magnus"
-msgstr "Rolf Magnus"
+msgstr ""
 
 #: snumplugin.cpp:48
-#, fuzzy
 msgid "SeriesNumber"
-msgstr "Tal"
+msgstr "Serijos numeris"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
-msgstr "Några GCC 3.1 rättelser till Gentoo."
+msgstr "Kaikurie GCC 3.1 pataisymai skirti Gentoo."
 
 #: rc.cpp:21
 msgid "Sort:"
-msgstr ""
+msgstr "Rikiuoti:"
 
 #: permissionsplugin.cpp:202
 msgid "Special"
-msgstr "Special"
+msgstr "Specialus"
 
 #: krenameimpl.cpp:526
 msgid "Special Characters"
-msgstr "Specialtecken"
+msgstr "Specialieji rašmenys"
 
 #: rc.cpp:706
 msgid "Specify the new filenames by giving a template ..."
-msgstr "Specificera det nya filnamnet genom att ge en mall..."
+msgstr "Nurodykite naujus pavadinimus iš esamų šablonų ..."
 
 #: rc.cpp:258 rc.cpp:366
 msgid "Start  &index:"
-msgstr "Start  &index:"
+msgstr "Pradinis skaičius:"
 
 #: rc.cpp:384
 msgid "Start &index:"
-msgstr "Start &index:"
+msgstr "Pražios skaičius:"
 
 #: krenameimpl.cpp:569
 msgid "Starting conversion of %1 files."
-msgstr "Börjar omvandling av %1 filer."
+msgstr "Pradėti %1 failų pakeitimus."
 
 #: main.cpp:71
 msgid "Stefan \"Stonki\" Onken"
-msgstr "Stefan \"Stonki\" Onken"
+msgstr ""
 
 #: main.cpp:99
 msgid "Stephan Johach"
-msgstr "Stephan Johach"
+msgstr ""
 
 #: main.cpp:104
 msgid "Steven P. Ulrick"
-msgstr "Steven P. Ulrick"
+msgstr ""
 
 #: permissionsplugin.cpp:220
 msgid "Sticky"
-msgstr "Vidhäftande"
+msgstr "Lipnus"
 
 #: scriptplugin.cpp:241
 msgid "String"
-msgstr "Sträng"
+msgstr "Eilutė"
 
 #: dirsortplugin.cpp:43
 msgid "Subdirectory-Sort Plugin"
-msgstr "Undermappssorteringsplugin"
+msgstr "Poaplankių rikiavimo Įskiepis"
 
 #: podofoplugin.cpp:44
 msgid "Subject of the pdf file"
-msgstr "Pdf-filens ämne"
+msgstr "pdf failo tema"
 
 #: fileplugin.cpp:84
 msgid "Supported tokens:"
-msgstr "Understödda märken:"
+msgstr "Palaikomi raktai:"
 
 #: batchrenamer.cpp:224 batchrenamer.cpp:701
 msgid "Symbolic links will be created in: %1"
-msgstr "Symboliska länkar kommer att skapas i: %1"
+msgstr "Nuoroda bus sukurta: %1"
 
 #: taglibplugin.cpp:50
 msgid "TagLib (MP3/Ogg) Plugin"
-msgstr "TagLib (MP3/Ogg)-plugin"
+msgstr "TagLib (MP3/Ogg) Įskiepis"
 
 #: rc.cpp:429 rc.cpp:504 rc.cpp:694 rc.cpp:697 rc.cpp:703
 msgid "TextLabel"
-msgstr ""
+msgstr "Tekstinė žymė"
 
 #: main.cpp:95
 msgid "Thanks for creating the Mandrake RPM"
-msgstr "Tack för skapandet av Mandrake-RPM."
+msgstr "Padėka už Mandrake RPM pagaminimą"
 
 #: main.cpp:83
 msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
 "to apps.kde.com."
-msgstr ""
-"Tack för detta jättejobb hos kde.apps.com och hjälp med att låta krename "
-"bidra till apps.kde.com."
+msgstr "Dėkojame apps.kde.com už puikų darbą ir pagalbą platinant krename."
 
 #: main.cpp:85
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
-msgstr "Tack till noatun och ID3/Ogg Tag-kod är grundad hans noatun moduler."
+msgstr "Ačiū už Noatun ir ID3/Ogg Tag kodą kuris pagrystas noatun moduliais."
 
 #: main.cpp:76
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
-msgstr ""
-"Ett tack till honom för att han skapat Red Hat 7.x-paket och viss annan "
-"hjälp."
+msgstr "Dėkojame jiems už RedHat 7.x paketų pagaminimą bei kitą pagalbą."
 
 #: krenameimpl.cpp:584
 msgid "The directory %1 could not be created."
-msgstr "Mappen %1 kunde inte skapas."
+msgstr "Aplankas %1 negali būti sukurtas."
 
 #: krenameimpl.cpp:576
 msgid ""
 "The directory %1 does not exist. Do you want KRename to create it for you?"
-msgstr "Mappen %1 finns ej. Vill du att KRename skapar den åt dig?"
+msgstr "Aplankas %1 neegzistuoja. Ar norite kad KRename jį sukurtu jums?"
 
 #: scriptplugin.cpp:343
 msgid "The file %1 already exists. Do you want to overwrite it?"
-msgstr "Filen %1 finns redan. Vill du skriva över den?"
+msgstr "Failas %1 jau yra. Ar norite ją pakeisti?"
 
 #: rc.cpp:576
 msgid "This file uses advanced permissions"
-msgstr "Denna fil använder avancerade rättigheter"
+msgstr "Šis failas su papildomais leidimais"
 
 #: filedialogextwidget.cpp:55
 msgid ""
 "This option causes KRename to add also the name of the base directory of the "
 "selected files to its list."
 msgstr ""
-"Detta val gör att KRename även adderar namnet på basmappen för de valda "
-"filerna till sin lista."
+"Su šia parinktimi KRename į sąrašą pavadinimus pridės, tik iš pagrindinio "
+"aplanko, pažymėtus failus."
 
 #: rc.cpp:715
 msgid ""
@@ -1715,9 +1694,9 @@ msgid ""
 "\tdirectory/003/file5\n"
 " \t..."
 msgstr ""
-"Denna plugin sorterar filer efter omdöpning i numrerade undermappar.\n"
+"Šis įskiepis surūšiuos failus po pervadinimo į sunumeruotus pakatalogius.\n"
 "\n"
-"Exempel:\n"
+"Pavyzdys:\n"
 "\tdirectory/001/file1\n"
 "\tdirectory/001/file2\n"
 "\tdirectory/002/file3\n"
@@ -1727,51 +1706,51 @@ msgstr ""
 
 #: rc.cpp:606
 msgid "Time:"
-msgstr "Tid:"
+msgstr "Laikas:"
 
 #: podofoplugin.cpp:45
 msgid "Title of the pdf file"
-msgstr "Pdf-filens titel"
+msgstr "pdf failo pavadinimas"
 
 #: rc.cpp:486
 msgid "Token"
-msgstr "Mall"
+msgstr "Raktas"
 
 #: rc.cpp:495
 msgid "Token &Preview"
-msgstr "&Förhandsgranskning av mall"
+msgstr "Rakto peržiūra"
 
 #: main.cpp:109
 msgid "Translated KRename into Bosnian"
-msgstr "Översatte KRename till bosniska"
+msgstr "Vertimas į Bosnių kalbą"
 
 #: main.cpp:106
 msgid "Translated KRename into French"
-msgstr "Översatte KRename till franska"
+msgstr "Vertimas į Prancūzų kalbą"
 
 #: main.cpp:107
 msgid "Translated KRename into Polish"
-msgstr "Översatte KRename till polska"
+msgstr "Vertimas į Lenkų kalbą"
 
 #: main.cpp:108
 msgid "Translated KRename into Russian"
-msgstr "Översatte KRename till ryska"
+msgstr "Vertimas į Rusų kalbą"
 
 #: main.cpp:105
 msgid "Translated KRename to Japanese"
-msgstr "Översatte KRename till japanska"
+msgstr "Vertimas į Japonų kalbą"
 
 #: translitplugin.cpp:98
 msgid "Transliterates the string following the semicolon"
-msgstr "Translittererar strängen, som följer semikolon"
+msgstr "Transliteruos eilutę po kabliataškio"
 
 #: translitplugin.cpp:100
 msgid "Transliteration"
-msgstr "Translitteration"
+msgstr "Transliteracija"
 
 #: main.cpp:76
 msgid "Trevor Semeniuk"
-msgstr "Trevor Semeniuk"
+msgstr ""
 
 #: permissionsplugin.cpp:214
 msgid "UID"
@@ -1779,250 +1758,228 @@ msgstr "UID"
 
 #: scriptplugin.cpp:74
 msgid "URL of the current file"
-msgstr "Den aktuella filens URL"
+msgstr "Esamo failo URL"
 
 #: main.cpp:105
 msgid "UTUMI Hirosi"
-msgstr "UTUMI Hirosi"
+msgstr ""
 
 #: scriptplugin.cpp:319
 msgid "Unable to open %1 for reading."
-msgstr "Kan ej öppna %1 för läsning."
+msgstr "%1 nepavyko atverti skaitymui"
 
 #: scriptplugin.cpp:376
 msgid "Unable to open %1 for writing."
-msgstr "Kan ej öppna %1 för skrivning."
+msgstr "%1 nepavyko atverti rašymui."
 
 #: batchrenamer.cpp:756
 msgid "Undo is not possible for remote file: %1"
-msgstr "Ångra ej möjligt för fjärrfil: %1"
+msgstr "Atšaukimas neįmanomas nutolusiam failui: %1"
 
 #: batchrenamer.cpp:382
 msgid "Undoing all renamed files."
-msgstr "Ångrar alla omdöpta filer."
+msgstr "Atšaukti visų failų pervadinimą."
 
 #: rc.cpp:24
-#, fuzzy
 msgid "Unsorted"
-msgstr "Sortering: osorterat"
+msgstr "Nerikiuota"
 
 #: rc.cpp:66
 msgid "Up"
-msgstr "Upp"
+msgstr "Aukštyn"
 
 #: rc.cpp:528
 msgid "Use &custom filename"
-msgstr "Använd a&npassat filnamn"
+msgstr "Naudoti savą pavadinimą"
 
 #: rc.cpp:522
 msgid "Use &input filename"
-msgstr "Använd &infilnamn"
+msgstr "Naudoti pradinį pavadinimą"
 
 #: rc.cpp:87
 msgid "Use &tabbed style GUI (advanced users)"
-msgstr "Använd &flikstils-GUI (avancerade användare)"
+msgstr "Naudoti kortelių stilių (patyrusiems naudotojams)"
 
 #: rc.cpp:84
 msgid "Use &wizard style GUI (beginners)"
-msgstr "Använd &hjälpstils-GUI (nybörjare)"
+msgstr "Naudoti stiliaus vedlį (naujokams)"
 
 #: rc.cpp:525
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
-msgstr ""
-"Använd ett anpassat filnamn, grundat på det filnamn, som just nu skapats av "
-"KRename."
+msgstr "Naudoti savą pavadinimą, naudojant sukurta KRename."
 
 #: rc.cpp:516
 msgid "Use filename created by &KRename"
-msgstr "Använd filnamn skapat av &KRename"
+msgstr "Naudoti pavadinimą sukurta KRename."
 
 #: rc.cpp:237 rc.cpp:345
 msgid "Use original extension"
-msgstr "Använd ursprungligt filnamnstillägg"
+msgstr "Naudoti esamą plėtinį"
 
 #: rc.cpp:195 rc.cpp:303
 msgid "Use original name"
-msgstr "Använd ursprungligt namn"
+msgstr "Naudoti originalų pavadinimą"
 
 #: rc.cpp:519
 msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."
 msgstr ""
-"Använd indatafilnamnet vid omdöpning av denna fil. Du kan även ändra "
-"indatafilnamnet och använda det vid omdöpning."
+"Naudokite pradinį pavadinimą, failo pervadinimui. Taip pat pervadinimui "
+"galitenaudoti pradinį failo pavadinimą."
 
 #: permissionsplugin.cpp:205 tokensortmodedialog.cpp:40
 msgid "User"
-msgstr "Användare"
+msgstr "Naudotojas"
 
 #: scriptplugin.cpp:131
 msgid "Variable Name"
-msgstr "Variabelnamn"
+msgstr "Kintamojo pavadinimas"
 
 #: main.cpp:97
 msgid "Vincenzo Reale"
-msgstr "Vincenzo Reale"
+msgstr ""
 
 #: filedialogextwidget.cpp:49
 msgid ""
 "Walk recursively through the directory tree and add also the content of all "
 "subdirectories to the list of files to rename."
 msgstr ""
-"Genomlöp rekursivt mappträdet och lägg även till innehållet i alla "
-"undermappar till listan med filer, som skall döpas om."
+"Norint pervadinti eiti rekursyviai aplankų medžiu ir pridėti visą turinį, iš "
+"visų poaplankių, į failų pavadinimų sąrašą."
 
 #: main.cpp:72
 msgid "Website, testing, very good ideas and keeping me coding!"
-msgstr "Websajt, proving, goda ideer och håll mig kodande!"
+msgstr "Tinklapis, testai, labai geros idėjos suteikiačios norą programuoti!"
 
 #: permissionsplugin.cpp:193
 msgid "Write"
-msgstr "Skriv"
+msgstr "Rašyti"
 
 #: _translatorinfo.cpp:3
 msgid ""
 "_: EMAIL OF TRANSLATORS\n"
 "Your emails"
-msgstr "peter.talken@telia.com"
+msgstr "upynas@gmail.com"
 
 #: _translatorinfo.cpp:1
 msgid ""
 "_: NAME OF TRANSLATORS\n"
 "Your names"
-msgstr "Peter Landgren"
+msgstr "Jonas Česnauskas"
 
 #: main.cpp:46
 msgid "add directory recursively"
-msgstr "lägg till mappar rekursivt"
+msgstr "pridėti aplanką rekursyviai"
 
 #: rc.cpp:756
 msgid "by"
-msgstr ""
+msgstr "nuo"
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"
-msgstr "tecken x till y i gammalt filnamn"
+msgstr "rašmuo x į y senojo failo pavadinimo"
 
 #: main.cpp:50
 msgid "copy files to directory or url"
-msgstr "kopiera filer till mapp eller url"
+msgstr "kopijuoti failus į aplanką ar url"
 
 #: krenameimpl.cpp:504
 msgid "counter with custom start value 0 and custom stepping 1"
-msgstr "räknare med anpassat startvärde 0 och anpassat steg 1"
+msgstr "skaitiklis su tinkinta pradžios reikšme 0 ir tinkintu žingsniu 1"
 
 #: krenameimpl.cpp:505
 msgid "create a subdirectory"
-msgstr "skapa en undermapp"
+msgstr "sukurti poaplankį"
 
 #: main.cpp:69
 msgid "developer and maintainer"
-msgstr "utvecklare och underhållare"
+msgstr "Kūrėjas ir palaikytojas"
 
 #: main.cpp:49
 msgid "enable a plugin for use"
-msgstr "tillåt en plugin för användning"
+msgstr "įgalinti įskiepį naudojimui"
 
 #: main.cpp:45
 msgid "file will be added to the list of files for renaming"
-msgstr "fil kommer att läggas till fillistan för omdöpning"
+msgstr "Failas bus įtrauktas į failų sąrašą pervadinimui"
 
 #: krenameimpl.cpp:501
 msgid "first letter of every word upper case"
-msgstr "första bokstaven i varje ord med stora bokstäver"
+msgstr "visų žodžių pirmoji raidė didžioji"
 
 #: krenameimpl.cpp:502
 msgid "first letter of filename upper case"
-msgstr "första bokstaven i filnamn med stora bokstäver"
+msgstr "pirmoji raidė failo pavadinime didžioji"
 
 #: krenameimpl.cpp:510
 msgid ""
 "insert a '/' to create a new subdirectory (useful from within regular "
 "expressions)"
 msgstr ""
+"poaplankio sukūrimui įterpti '/' (pravartu reguliarios išraiškos viduje)"
 
 #: krenameimpl.cpp:508
 msgid "insert name of directory"
-msgstr "skjut in mappnamn"
+msgstr "įterpti pavadinimą iš aplanko"
 
 #: krenameimpl.cpp:509
 msgid "insert name of parent directory"
-msgstr "skjut in överordnad mapps namn"
+msgstr "įterpti pavadinimą pradinio aplanko"
 
 #: krenameimpl.cpp:511
 msgid "insert the length of the input filename"
-msgstr "skjut in längden hos infilnamnet"
+msgstr "įterpti įvesties failo pavadinimo ilgį"
 
 #: main.cpp:52
 msgid "link files to directory or url"
-msgstr "länka filer till mapp eller url"
+msgstr "saistyti failus su aplanku ar url"
 
 #: main.cpp:51
 msgid "move files to directory or url"
-msgstr "flytta filer till mapp eller url"
+msgstr "perkelti failus į aplanką ar url"
 
 #: krenameimpl.cpp:503
 msgid "number (try also ##, ###, ... for leading zeros)"
-msgstr "tal (prova även ##, ###,... för inledande nollor)"
+msgstr "skaičius (bandykite ##, ###, ... su nuliu priekyje)"
 
 #: krenameimpl.cpp:498
 msgid "old filename"
-msgstr "gammalt filnamn"
+msgstr "senasis failo pavadinimas"
 
 #: krenameimpl.cpp:499
 msgid "old filename converted to lower case"
-msgstr "gammalt filnamn omvandlat till små bokstäver"
+msgstr "senasis failo pavadinimas mažosiomis"
 
 #: krenameimpl.cpp:500
 msgid "old filename converted to upper case"
-msgstr "gammalt filnamn omvandlat till stora bokstäver"
+msgstr "senasis failo pavadinimas didžiosiomis"
 
 #: main.cpp:47
 msgid "set a template"
-msgstr "sätt en mall"
+msgstr "parinkti ruošinį"
 
 #: main.cpp:48
 msgid "set a template for the file extension"
-msgstr "sätt en mall för filändelser"
+msgstr "parinkti ruošinį failo plėtiniui"
 
 #: main.cpp:55
 msgid "start KRename's selftest (developers only)"
-msgstr "starta KRename's självtest (endast utvecklare)"
+msgstr "pradėti KRename patikrą (tik kūrėjams)"
 
 #: main.cpp:54
 msgid "start renaming immediately"
-msgstr "börja omdöpning omedelbart"
+msgstr "pradėti pervadinimą iš karto"
 
 #: krenameimpl.cpp:512
 msgid "strip whitespaces leading and trailing"
-msgstr "skala bort mellanslag m. m. i början och i slutet"
+msgstr "šalinti tuščius tarpus pradžioje ir gale"
 
 #: krenameimpl.cpp:513
 msgid "strip whitespaces leading and trailing of an arbitrary string"
-msgstr ""
-"skala bort mellanslag m. m. i början och i slutet hos en godtycklig sträng"
+msgstr "šalinti tuščius tarpus pradžioje ir gale iš savavališkos eilutė"
 
 #: krenameimpl.cpp:507
 msgid "y characters of old filename starting at x"
-msgstr "y tecken i gammalt filnamn börjande vid x"
-
-#, fuzzy
-#~ msgid "Custom filename"
-#~ msgstr "gammalt filnamn"
-
-#~ msgid "E&xtras"
-#~ msgstr "E&xtra"
-
-#~ msgid "File&name"
-#~ msgstr "Fil&namn"
-
-#~ msgid "Move"
-#~ msgstr "Flytta"
-
-#~ msgid "Sort: Numeric"
-#~ msgstr "Sortering: numeriskt"
-
-#~ msgid "load the profile named [profile] on startup"
-#~ msgstr "ladda profilen kallad [profil] vid start"
+msgstr "y rašmenys  senojo failo pavadinimo prasidedantys x"
