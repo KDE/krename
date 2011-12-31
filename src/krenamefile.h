@@ -67,9 +67,6 @@ class KRenameFile {
 
  public:
     
-    static const int DEFAULT_ICON_SIZE;
-    static const char* EXTRA_DATA_KEY;
-
     /** A list of KRenameFile objects
      */
     typedef QVector<KRenameFile> List;
@@ -332,6 +329,11 @@ class KRenameFile {
      */
     const KFileItem & fileItem() const;
 
+    /**
+     * @returns the default icon size
+     */
+    static int getDefaultIconSize();
+
  private:
     void initFileDescription( TFileDescription & rDescription, const KUrl & url, ESplitMode eSplitMode, unsigned int dot ) const;
 
@@ -339,6 +341,9 @@ class KRenameFile {
      *  using KDEs preview loading mechanism.
      */
     void loadPreviewIcon();
+
+    static const int DEFAULT_ICON_SIZE;
+    static const char* EXTRA_DATA_KEY;
 
  private:
     KFileItem        m_fileItem;

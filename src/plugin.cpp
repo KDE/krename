@@ -19,8 +19,6 @@
 
 #include "tokenhelpdialog.h"
 
-const QString Plugin::S_TOKEN_SEPARATOR = TokenHelpDialog::S_TOKEN_SEPARATOR;
-
 Plugin::Plugin( PluginLoader* loader )
     : m_pluginLoader( loader ), m_enabled( false )
 {
@@ -44,7 +42,7 @@ void Plugin::saveConfig( KConfigGroup & ) const
 QString Plugin::createHelpEntry( const QString & token, const QString & help )
 {
   QString cmd = "[";
-  cmd = cmd + token + "]" + Plugin::S_TOKEN_SEPARATOR;
+  cmd = cmd + token + "]" + TokenHelpDialog::getTokenSeparator();
   cmd = cmd + help;
 
   return cmd;

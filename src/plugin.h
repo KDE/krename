@@ -43,12 +43,6 @@ class Plugin {
     Plugin( PluginLoader* loader );
     virtual ~Plugin();
 
-    /**
-     * Separator to use between plugin token and token help
-     * \see TokenHelpDialog::S_TOKEN_SEPARATOR
-     */
-    static const QString S_TOKEN_SEPARATOR;
-
     /** 
      * Creates a help entry for the QStringList returned by help, 
      * adds correct separator and brackets where necessary.

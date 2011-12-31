@@ -495,34 +495,34 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
 
     // add built-in tokens
     QStringList help;
-    help.append("$" + Plugin::S_TOKEN_SEPARATOR + i18n("old filename") );
-    help.append("%" + Plugin::S_TOKEN_SEPARATOR + i18n("old filename converted to lower case") );
-    help.append("&" + Plugin::S_TOKEN_SEPARATOR + i18n("old filename converted to upper case") );
-    help.append("*" + Plugin::S_TOKEN_SEPARATOR + i18n("first letter of every word upper case") );
-    help.append("[&1][%2-]" + Plugin::S_TOKEN_SEPARATOR + i18n("first letter of filename upper case") );
-    help.append("#" + Plugin::S_TOKEN_SEPARATOR + i18n("number (try also ##, ###, ... for leading zeros)") );
-    help.append("#{0;1}" + Plugin::S_TOKEN_SEPARATOR + i18n("counter with custom start value 0 and custom stepping 1") );
-    help.append("/" + Plugin::S_TOKEN_SEPARATOR + i18n("create a subdirectory") );
-    help.append("[$x-y]" + Plugin::S_TOKEN_SEPARATOR + i18n("character x to y of old filename") );
-    help.append("[$x;y]" + Plugin::S_TOKEN_SEPARATOR + i18n("y characters of old filename starting at x") );
-    help.append("[$dirname]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert name of directory") );
-    help.append("[$dirname.]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert name of parent directory") );
-    help.append("[dirsep]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert a '/' to create a new subdirectory (useful from within regular expressions)") );
-    help.append("[#length-0]" + Plugin::S_TOKEN_SEPARATOR + i18n("insert the length of the input filename") );
-    help.append("[trimmed]" + Plugin::S_TOKEN_SEPARATOR + i18n("strip whitespaces leading and trailing") );
-    help.append("[trimmed;.*]" + Plugin::S_TOKEN_SEPARATOR + i18n("strip whitespaces leading and trailing of an arbitrary string") );
+    help.append("$" + TokenHelpDialog::getTokenSeparator() + i18n("old filename") );
+    help.append("%" + TokenHelpDialog::getTokenSeparator() + i18n("old filename converted to lower case") );
+    help.append("&" + TokenHelpDialog::getTokenSeparator() + i18n("old filename converted to upper case") );
+    help.append("*" + TokenHelpDialog::getTokenSeparator() + i18n("first letter of every word upper case") );
+    help.append("[&1][%2-]" + TokenHelpDialog::getTokenSeparator() + i18n("first letter of filename upper case") );
+    help.append("#" + TokenHelpDialog::getTokenSeparator() + i18n("number (try also ##, ###, ... for leading zeros)") );
+    help.append("#{0;1}" + TokenHelpDialog::getTokenSeparator() + i18n("counter with custom start value 0 and custom stepping 1") );
+    help.append("/" + TokenHelpDialog::getTokenSeparator() + i18n("create a subdirectory") );
+    help.append("[$x-y]" + TokenHelpDialog::getTokenSeparator() + i18n("character x to y of old filename") );
+    help.append("[$x;y]" + TokenHelpDialog::getTokenSeparator() + i18n("y characters of old filename starting at x") );
+    help.append("[$dirname]" + TokenHelpDialog::getTokenSeparator() + i18n("insert name of directory") );
+    help.append("[$dirname.]" + TokenHelpDialog::getTokenSeparator() + i18n("insert name of parent directory") );
+    help.append("[dirsep]" + TokenHelpDialog::getTokenSeparator() + i18n("insert a '/' to create a new subdirectory (useful from within regular expressions)") );
+    help.append("[#length-0]" + TokenHelpDialog::getTokenSeparator() + i18n("insert the length of the input filename") );
+    help.append("[trimmed]" + TokenHelpDialog::getTokenSeparator() + i18n("strip whitespaces leading and trailing") );
+    help.append("[trimmed;.*]" + TokenHelpDialog::getTokenSeparator() + i18n("strip whitespaces leading and trailing of an arbitrary string") );
     dialog.add( i18n("Built-in Functions" ), help, SmallIcon("krename"), true );
 
     help.clear();
-    help.append( "\\$" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '$'") );
-    help.append( "\\%" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '%'") );
-    help.append( "\\&" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '&'") );
-    help.append( "\\*" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '*'") );
-    help.append( "\\/" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '/'") );
-    help.append( "\\\\" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '\\\\'") );
-    help.append( "\\[" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '['") );
-    help.append( "\\]" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert ']'") );
-    help.append( "\\#" + Plugin::S_TOKEN_SEPARATOR + i18n("Insert '#'") );
+    help.append( "\\$" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '$'") );
+    help.append( "\\%" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '%'") );
+    help.append( "\\&" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '&'") );
+    help.append( "\\*" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '*'") );
+    help.append( "\\/" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '/'") );
+    help.append( "\\\\" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '\\\\'") );
+    help.append( "\\[" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '['") );
+    help.append( "\\]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert ']'") );
+    help.append( "\\#" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '#'") );
     dialog.add( i18n("Special Characters" ), help, SmallIcon("krename") );
 
     // add plugin tokens

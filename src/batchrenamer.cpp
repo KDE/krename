@@ -1058,7 +1058,7 @@ QString BatchRenamer::findDirName( QString token, QString path )
     return QString::null;
 }
 
-QString BatchRenamer::findDirSep( QString token, QString path )
+QString BatchRenamer::findDirSep( const QString & token, const QString & path )
 {
     if( token.toLower() == "dirsep" ) {
         return "/";

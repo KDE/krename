@@ -48,7 +48,11 @@ class TokenHelpDialog : public KDialog {
      */
     void add( const QString & headline, const QStringList & commands, const QPixmap & icon, bool first = false );
 
-    static const QString S_TOKEN_SEPARATOR; ///< Separator between token and help
+    /**
+     * Retrieve the separator between token and help
+     * \returns the token separator
+     */
+    static const QString getTokenSeparator();
 
  public slots:
      int exec();
@@ -64,6 +68,8 @@ class TokenHelpDialog : public KDialog {
     void slotUpdatePreview();
 
  private:
+    static const char* S_TOKEN_SEPARATOR; ///< Separator between token and help
+
     void loadConfig();
     
     /**

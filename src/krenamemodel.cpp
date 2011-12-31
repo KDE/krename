@@ -250,7 +250,7 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
             // TODO: Enable this job, it currently crashes for me
             
             // Start a job to create the real file previews
-            KIO::PreviewJob* job = KIO::filePreview( fileItems, KRenameFile::DEFAULT_ICON_SIZE );
+            KIO::PreviewJob* job = KIO::filePreview( fileItems, KRenameFile::getDefaultIconSize() );
             
             connect( job, SIGNAL(gotPreview(const KFileItem &,const QPixmap &)),
                      this, SLOT(gotPreview(const KFileItem &,const QPixmap &)) );

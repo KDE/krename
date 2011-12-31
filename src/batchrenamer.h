@@ -173,7 +173,7 @@ class BatchRenamer : public QObject {
          * Replace the token [dirsep] with a slash "/".
          * This token is useful to create directories from within regular expressions.
          */
-        static QString findDirSep( QString token, QString path );
+        static QString findDirSep( const QString & token, const QString & path );
 
         static QString & doEscape( QString & text );
         static QString & unEscape( QString & text );

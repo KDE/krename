@@ -76,7 +76,7 @@ private:
 };
 
 const int TokenHelpDialog::S_MAX_RECENT = 10;
-const QString TokenHelpDialog::S_TOKEN_SEPARATOR = ";;";
+const char* TokenHelpDialog::S_TOKEN_SEPARATOR = ";;";
 
 TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
                                   QLineEdit* edit, QWidget* parent )
@@ -112,6 +112,11 @@ TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
 TokenHelpDialog::~TokenHelpDialog() 
 {
     delete m_model;
+}
+
+const QString TokenHelpDialog::getTokenSeparator() 
+{
+    return QString::fromLatin1(S_TOKEN_SEPARATOR);
 }
 
 void TokenHelpDialog::add( const QString & headline, const QStringList & commands, const QPixmap & icon, bool first )
@@ -164,8 +169,8 @@ void TokenHelpDialog::slotCategoryChanged( QTreeWidgetItem* item )
     for( int i=0;i<commands.count(); i++ )
     {
         QTreeWidgetItem* item = new QTreeWidgetItem( m_widget.listTokens );
-        item->setText( 0, commands[i].section(S_TOKEN_SEPARATOR, 0, 0 ) );
-        item->setText( 1, commands[i].section(S_TOKEN_SEPARATOR, 1, 1 ) );
+        item->setText( 0, commands[i].section(getTokenSeparator(), 0, 0 ) );
+        item->setText( 1, commands[i].section(getTokenSeparator(), 1, 1 ) );
     }
 
     slotUpdatePreview();

@@ -115,6 +115,11 @@ bool KRenameFile::operator==( const KFileItem & item ) const
     return this->fileItem() == item;
 }
 
+int KRenameFile::getDefaultIconSize()
+{
+    return DEFAULT_ICON_SIZE;
+}
+
 void KRenameFile::setCurrentSplitMode( ESplitMode eSplitMode, unsigned int dot )
 {
     KUrl    url      = m_src.url;
