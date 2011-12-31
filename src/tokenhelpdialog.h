@@ -68,8 +68,6 @@ class TokenHelpDialog : public KDialog {
     void slotUpdatePreview();
 
  private:
-    static const char* S_TOKEN_SEPARATOR; ///< Separator between token and help
-
     void loadConfig();
     
     /**

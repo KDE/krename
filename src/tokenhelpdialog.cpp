@@ -76,7 +76,6 @@ private:
 };
 
 const int TokenHelpDialog::S_MAX_RECENT = 10;
-const char* TokenHelpDialog::S_TOKEN_SEPARATOR = ";;";
 
 TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
                                   QLineEdit* edit, QWidget* parent )
@@ -116,7 +115,7 @@ TokenHelpDialog::~TokenHelpDialog()
 
 const QString TokenHelpDialog::getTokenSeparator() 
 {
-    return QString::fromLatin1(S_TOKEN_SEPARATOR);
+    return QString::fromLatin1(";;");
 }
 
 void TokenHelpDialog::add( const QString & headline, const QStringList & commands, const QPixmap & icon, bool first )
@@ -311,7 +310,7 @@ void TokenHelpDialog::addToRecentTokens( const QString & token, const QString & 
   QStringList::iterator it = m_recent.begin();
   while( it != m_recent.end() )
   {
-    if( (*it).startsWith( token + S_TOKEN_SEPARATOR ) ) 
+    if( (*it).startsWith( token + getTokenSeparator() ) ) 
     {
       m_recent.erase( it );
       break;
@@ -327,7 +326,7 @@ void TokenHelpDialog::addToRecentTokens( const QString & token, const QString & 
   }
 
   // 3. append token
-  QString recent = token + S_TOKEN_SEPARATOR + help;
+  QString recent = token + getTokenSeparator() + help;
   m_recent << recent;
 }
 
