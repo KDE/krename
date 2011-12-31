@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
                               "Testing, bug fixes and feature requests are as welcome "
                               "as financial support (everybody needs money ;). See help files for details.</p></qt>" ),
                           KAboutData::License_GPL, ki18n("KRename Build:" __DATE__ " " __TIME__ )
-                          , ki18n("(c) 2001-2009, Dominik Seichter\n"),
+                          , ki18n("(c) 2001-2012, Dominik Seichter\n"),
                           "http://www.krename.net", "domseichter@web.de" );
 
     aboutData.addAuthor( ki18n("Dominik Seichter"), ki18n("developer and maintainer"), "domseichter@web.de",
