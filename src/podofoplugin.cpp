@@ -25,6 +25,7 @@
 #include <podofo/podofo.h>
 
 #include "batchrenamer.h"
+#include "tokenhelpdialog.h"
 
 using namespace PoDoFo;
 
@@ -38,13 +39,13 @@ PodofoPlugin::PodofoPlugin( PluginLoader* loader )
     this->addSupportedToken("pdfTitle");
     this->addSupportedToken("pdfProducer");
     this->addSupportedToken("pdfPages");
-    m_help.append( "[pdfAuthor]" + Plugin::S_TOKEN_SEPARATOR + i18n("Author of the pdf file") );
-    m_help.append( "[pdfCreator]" + Plugin::S_TOKEN_SEPARATOR + i18n("Creator of the pdf file") );
-    m_help.append( "[pdfKeywords]" + Plugin::S_TOKEN_SEPARATOR + i18n("Keywords of the pdf file") );
-    m_help.append( "[pdfSubject]" + Plugin::S_TOKEN_SEPARATOR + i18n("Subject of the pdf file") );
-    m_help.append( "[pdfTitle]" + Plugin::S_TOKEN_SEPARATOR + i18n("Title of the pdf file") );
-    m_help.append( "[pdfProducer]" + Plugin::S_TOKEN_SEPARATOR + i18n("Producer of the pdf file") );
-    m_help.append( "[pdfPages]" + Plugin::S_TOKEN_SEPARATOR + i18n("Number of pages in the pdf file") );
+    m_help.append( "[pdfAuthor]" + TokenHelpDialog::getTokenSeparator() + i18n("Author of the pdf file") );
+    m_help.append( "[pdfCreator]" + TokenHelpDialog::getTokenSeparator() + i18n("Creator of the pdf file") );
+    m_help.append( "[pdfKeywords]" + TokenHelpDialog::getTokenSeparator() + i18n("Keywords of the pdf file") );
+    m_help.append( "[pdfSubject]" + TokenHelpDialog::getTokenSeparator() + i18n("Subject of the pdf file") );
+    m_help.append( "[pdfTitle]" + TokenHelpDialog::getTokenSeparator() + i18n("Title of the pdf file") );
+    m_help.append( "[pdfProducer]" + TokenHelpDialog::getTokenSeparator() + i18n("Producer of the pdf file") );
+    m_help.append( "[pdfPages]" + TokenHelpDialog::getTokenSeparator() + i18n("Number of pages in the pdf file") );
 
     m_name = i18n("PoDoFo (PDF) Plugin");
     m_comment = i18n("<qt>This plugin supports reading tags from "
