@@ -4,14 +4,14 @@ msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-06-24 13:13+0200\n"
-"PO-Revision-Date: 2011-01-30 22:01+0100\n"
+"PO-Revision-Date: 2011-12-31 22:32+0100\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: rc.cpp:120 rc.cpp:132
@@ -228,7 +228,7 @@ msgstr "&Náhled"
 
 #: rc.cpp:474
 msgid "&Process tokens in replace string"
-msgstr ""
+msgstr "&Zpracovat symboly v nahrazovaném řetězci"
 
 #: rc.cpp:459 previewlist.cpp:37
 msgid "&Remove"
@@ -376,9 +376,9 @@ msgstr ""
 "left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Například "
 "máte názvy souborů: <span style=\" font-style:italic;\">img014</span>, <span "
 "style=\" font-style:italic;\">img015</span>, <span style=\" font-style:"
-"italic;\">img023</span> , které by se měly jmenovat<span style=\" font-style:"
+"italic;\">img023</span>, které by se měly jmenovat<span style=\" font-style:"
 "italic;\"> img010</span>, <span style=\" font-style:italic;\">img011</span> "
-"and <span style=\" font-style:italic;\">img019. </span>s pomocí tohoto "
+"and <span style=\" font-style:italic;\">img019. </span>S pomocí tohoto "
 "přídavného modulu snadno můžete přidat posun o -4, abyste dostali požadovaný "
 "výsledek.</p></body></html>"
 
@@ -531,8 +531,9 @@ msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
 "transliteration).</qt>"
 msgstr ""
-"<qt>Tento přídavný modul může přepsat názvy souborů do angličtiny (to jest "
-"zdokonalit transliteraci - přepis jinou abecedou)</qt>"
+"<qt>Tento přídavný modul může přepsat názvy souborů do angličtiny (to "
+"znamená, že "
+"provede přepis v jiné abecedě).</qt>"
 
 #: systemplugin.cpp:72
 msgid ""
@@ -791,7 +792,7 @@ msgstr "Vlastní souborová přípona"
 
 #: rc.cpp:207 rc.cpp:315
 msgid "Custom name"
-msgstr "Vlastní jméno"
+msgstr "Vlastní název"
 
 #: main.cpp:111
 msgid "Czech Translation"
@@ -898,7 +899,7 @@ msgstr "Spouštění"
 
 #: exiv2plugin.cpp:377
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
-msgstr "Exiv2 (JPEG/TIFF Exif) přídavný modul"
+msgstr "Přídavný modul Exiv2 (JPEG/TIFF Exif)"
 
 #: scriptplugin.cpp:76
 msgid "Extension of the current file"
@@ -1235,24 +1236,24 @@ msgstr "Vložit číslo řady původního názvu souboru"
 
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
-msgstr "Vloží přepsaný (přepísmenkovaný) původní název souboru"
+msgstr "Vloží přepsaný původní název souboru"
 
 #: translitplugin.cpp:97
 msgid "Inserts the transliterated original filename capitalized"
 msgstr ""
-"Vloží přepsaný (přepísmenkovaný) původní název souboru zapsaný s velkým "
+"Vloží přepsaný původní název souboru zapsaný s velkým "
 "začátečním písmenem"
 
 #: translitplugin.cpp:95
 msgid "Inserts the transliterated original filename converted to lower case"
 msgstr ""
-"Vloží přepsaný (přepísmenkovaný) původní název souboru převedený na malá "
+"Vloží přepsaný původní název souboru převedený na malá "
 "písmena"
 
 #: translitplugin.cpp:96
 msgid "Inserts the transliterated original filename converted to upper case"
 msgstr ""
-"Vloží přepsaný (přepísmenkovaný) původní název souboru převedený na velká "
+"Vloží přepsaný původní název souboru převedený na velká "
 "písmena"
 
 #: scriptplugin.cpp:242
@@ -1475,7 +1476,7 @@ msgstr "Náhled vytvořeného příkazu KRename:"
 
 #: rc.cpp:450
 msgid "Process Tokens"
-msgstr ""
+msgstr "Zpracovat symboly"
 
 #: podofoplugin.cpp:46
 msgid "Producer of the pdf file"
@@ -1644,7 +1645,7 @@ msgstr "Symbolické odkazy budou vytvořeny v: %1"
 
 #: taglibplugin.cpp:50
 msgid "TagLib (MP3/Ogg) Plugin"
-msgstr "TagLib (MP3/Ogg) přídavný modul"
+msgstr "Přídavný modul TagLib (MP3/Ogg)"
 
 #: rc.cpp:429 rc.cpp:504 rc.cpp:694 rc.cpp:697 rc.cpp:703
 msgid "TextLabel"
@@ -1759,11 +1760,11 @@ msgstr "Přeložil KRename do japonštiny"
 
 #: translitplugin.cpp:98
 msgid "Transliterates the string following the semicolon"
-msgstr "Přepíše (přepísmenkuje) řetězec, který následuje za středníkem"
+msgstr "Přepíše řetězec, který následuje za středníkem"
 
 #: translitplugin.cpp:100
 msgid "Transliteration"
-msgstr "Přepis (přepísmenkování)"
+msgstr "Přepis"
 
 #: main.cpp:76
 msgid "Trevor Semeniuk"
@@ -1887,7 +1888,7 @@ msgid ""
 "_: NAME OF TRANSLATORS\n"
 "Your names"
 msgstr ""
-"_: Jména překladatelů\n"
+"_: Překlad\n"
 "Pavel Fric"
 
 #: main.cpp:46
@@ -1939,6 +1940,8 @@ msgid ""
 "insert a '/' to create a new subdirectory (useful from within regular "
 "expressions)"
 msgstr ""
+"Vložit '/' pro vytvoření nového podadresáře (užitečné zevnitř "
+"regulárních výrazů)"
 
 #: krenameimpl.cpp:508
 msgid "insert name of directory"
