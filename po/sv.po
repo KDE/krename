@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
-# Peter Landgren <peter.talken@telia.com>, 2005, 2006, 2009, 2010.
+# Peter Landgren <peter.talken@telia.com>, 2005, 2006, 2009, 2010, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: sv\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-06-24 13:13+0200\n"
-"PO-Revision-Date: 2010-06-27 13:24+0200\n"
+"PO-Revision-Date: 2012-01-02 16:14+0100\n"
 "Last-Translator: Peter Landgren <peter.talken@telia.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -59,9 +59,8 @@ msgid "&Advanced Filename"
 msgstr "&Avancerat filnamn"
 
 #: rc.cpp:747
-#, fuzzy
 msgid "&Ascending"
-msgstr "Sortering: stigande"
+msgstr "&Stigande"
 
 #: rc.cpp:435
 msgid "&Cancel"
@@ -88,9 +87,8 @@ msgid "&Copy files to destination directory"
 msgstr "&Kopiera filer till målmapp"
 
 #: rc.cpp:765
-#, fuzzy
 msgid "&Custom"
-msgstr "Anpassat namn"
+msgstr "&Anpassning"
 
 #: rc.cpp:636
 msgid "&Definitions"
@@ -101,9 +99,8 @@ msgid "&Delete"
 msgstr "&Tag bort"
 
 #: rc.cpp:750
-#, fuzzy
 msgid "&Descending"
-msgstr "Sortering: fallande"
+msgstr "&Fallande"
 
 #: rc.cpp:57
 msgid "&Display name"
@@ -194,9 +191,8 @@ msgid "&Numbering..."
 msgstr "&Numrering..."
 
 #: rc.cpp:753
-#, fuzzy
 msgid "&Numeric"
-msgstr "Tal"
+msgstr "&Tal"
 
 #: rc.cpp:680
 msgid "&Offset:"
@@ -223,9 +219,8 @@ msgid "&Overwrite existing files"
 msgstr "&Överskrivning av befintliga filer"
 
 #: rc.cpp:762
-#, fuzzy
 msgid "&Predefined"
-msgstr "&Prefix:"
+msgstr "&Fördefinierad"
 
 #: rc.cpp:225 rc.cpp:333
 msgid "&Prefix:"
@@ -237,7 +232,7 @@ msgstr "&Förhandsgranskning"
 
 #: rc.cpp:474
 msgid "&Process tokens in replace string"
-msgstr ""
+msgstr "&Bearbeta märken i utbytessträng"
 
 #: rc.cpp:459 previewlist.cpp:37
 msgid "&Remove"
@@ -280,9 +275,8 @@ msgid "&Skip Numbers"
 msgstr "H&oppa över tal"
 
 #: rc.cpp:744
-#, fuzzy
 msgid "&Sort filenames ..."
-msgstr "&Skjut in del av filnamn..."
+msgstr "&Sorter filnamn ..."
 
 #: rc.cpp:732
 msgid "&Start index:"
@@ -305,9 +299,8 @@ msgid "&Test..."
 msgstr "&Test..."
 
 #: rc.cpp:759
-#, fuzzy
 msgid "&Token ..."
-msgstr "&Test..."
+msgstr "&Märke ..."
 
 #: rc.cpp:663
 msgid "&Type:"
@@ -529,13 +522,12 @@ msgstr ""
 "filnamnet i textrutan nedan:</qt>"
 
 #: snumplugin.cpp:50
-#, fuzzy
 msgid ""
 "<qt>This plugin can extract information from the filename of a TV series.</"
 "qt>"
 msgstr ""
-"<qt>Denna plugin kan transkribera ett filnamn till engelska (d. v. s. "
-"genomföra translitteration).</qt>"
+"<qt>Denna plugin kan plocka ut information från filnamnet på en TV-serie.<"
+"/qt>"
 
 #: translitplugin.cpp:102
 msgid ""
@@ -571,9 +563,8 @@ msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
 msgstr "<qt>Denna plugin sorterar läsmärken från PDF-filer.</qt>"
 
 #: fontplugin.cpp:42
-#, fuzzy
 msgid "<qt>This plugin supports reading tags from font files.</qt>"
-msgstr "<qt>Denna plugin sorterar läsmärken från PDF-filer.</qt>"
+msgstr "<qt>Denna plugin stöder läsande av flaggor från typsnittsfiler.</qt>"
 
 #: rc.cpp:297 rc.cpp:300 rc.cpp:321 rc.cpp:330
 msgid "?"
@@ -589,7 +580,7 @@ msgstr "&Avancerade åtkomtsrättighter"
 
 #: tokensortmodedialog.cpp:35
 msgid "Access Date"
-msgstr ""
+msgstr "Åtkomstdatum"
 
 #: rc.cpp:537 rc.cpp:615
 msgid "Access Permissions"
@@ -652,9 +643,8 @@ msgid "Arpad Biro"
 msgstr "Arpad Biro"
 
 #: rc.cpp:27
-#, fuzzy
 msgid "Ascending"
-msgstr "Sortering: stigande"
+msgstr "Stigande"
 
 #: main.cpp:109
 msgid "Asim Husanovic"
@@ -722,7 +712,7 @@ msgstr "Kan ej skapa symbolisk länk till icke-lokal URL: %1"
 
 #: batchrenamer.cpp:246
 msgid "Cannot rename: source and target filename are equal: %1"
-msgstr ""
+msgstr "Kan ej döpa om: käll- och målfilnamn är lika. %1"
 
 #: rc.cpp:204 rc.cpp:246 rc.cpp:312 rc.cpp:354 rc.cpp:423
 msgid "Capitalize"
@@ -782,21 +772,19 @@ msgstr "Skapade Gentoo Ebuild skript till KRename."
 
 #: tokensortmodedialog.cpp:36
 msgid "Creation Date"
-msgstr ""
+msgstr "Skapelsedatum"
 
 #: podofoplugin.cpp:42
 msgid "Creator of the pdf file"
 msgstr "Skapare till pdf-filen"
 
 #: rc.cpp:45
-#, fuzzy
 msgid "Custom ..."
-msgstr "Anpassat namn"
+msgstr "Anpassning"
 
 #: rc.cpp:741
-#, fuzzy
 msgid "Custom Sorting"
-msgstr "Anpassat filnamnstillägg"
+msgstr "Anpassad sortering"
 
 #: rc.cpp:249 rc.cpp:357
 msgid "Custom extension"
@@ -824,11 +812,11 @@ msgstr "Plugin för datum & klockslag"
 
 #: rc.cpp:39
 msgid "Date (Asc.)"
-msgstr ""
+msgstr "Datum (Stigande)"
 
 #: rc.cpp:42
 msgid "Date (Desc.)"
-msgstr ""
+msgstr "Datum (Fallande)"
 
 #: systemplugin.cpp:70
 msgid "Date and system functions"
@@ -847,9 +835,8 @@ msgid "Define functions that can be used from KRename templates:"
 msgstr "Definiera funktioner, som kan användas i KRename-mallar:"
 
 #: rc.cpp:30
-#, fuzzy
 msgid "Descending"
-msgstr "Sortering: fallande"
+msgstr "Fallande"
 
 #: rc.cpp:489
 msgid "Description"
@@ -948,9 +935,8 @@ msgid "Files: <b>0</b>"
 msgstr "Filer: <b>0</b>"
 
 #: tokensortmodedialog.cpp:37
-#, fuzzy
 msgid "Filesize"
-msgstr "Förhandsgranskning av fil"
+msgstr "Filstorlek"
 
 #: rc.cpp:444
 msgid "Find"
@@ -993,9 +979,8 @@ msgstr ""
 "kan tänka på och även den nya Gentoo-underhållaren för KRename."
 
 #: fontplugin.cpp:41
-#, fuzzy
 msgid "Font (FreeType2) Plugin"
-msgstr "PoDoFo (PDF) Plugin"
+msgstr "Typsnitt (FreeType2) Plugin"
 
 #: rc.cpp:543 rc.cpp:555 rc.cpp:567
 msgid "Forbidden"
@@ -1042,6 +1027,8 @@ msgstr "Grupp"
 msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
 msgstr ""
+"Hjälp till att ordna anvisningar för mallar och gjort förbättringar bland "
+"användarmeddelandena."
 
 #: rc.cpp:709
 msgid "Hint: Undo is still possible after renaming your files."
@@ -1116,17 +1103,16 @@ msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "Skjut in ett litet kodavsnitt av JavaScrip-kode (4+5 i deṫta fall)"
 
 #: fontplugin.cpp:38
-#, fuzzy
 msgid "Insert the (usually English) name of the font family."
-msgstr "skjut in längden hos infilnamnet"
+msgstr "Skjut in (det normalt engelska) namnet på typsnittsfamiljen."
 
 #: fontplugin.cpp:39
 msgid "Insert the (usually English) name of the font style."
-msgstr ""
+msgstr "Skjut in (det normalt engelska) namnet på typsnittsmallen."
 
 #: fontplugin.cpp:37
 msgid "Insert the Postscript name for Type1 and TrueType fonts."
-msgstr ""
+msgstr "Skjut in Postscripts-namn för Type1 och TrueType typsnitt."
 
 #: taglibplugin.cpp:43
 msgid "Insert the album of a track"
@@ -1186,9 +1172,8 @@ msgid "Insert the date of the last file access"
 msgstr "Skjut datumet för senaste filåtkomst"
 
 #: systemplugin.cpp:68
-#, fuzzy
 msgid "Insert the file size in bytes"
-msgstr "Skjut in filskapelsedatumen"
+msgstr "Skjut in filstorlek i byte"
 
 #: systemplugin.cpp:62
 msgid "Insert the files creation date"
@@ -1235,14 +1220,12 @@ msgid "Inserts the episode number in two or three digits"
 msgstr ""
 
 #: snumplugin.cpp:42
-#, fuzzy
 msgid "Inserts the season number in two digits"
-msgstr "Skjut in spårets nummer"
+msgstr ""
 
 #: snumplugin.cpp:41
-#, fuzzy
 msgid "Inserts the series number of original filename"
-msgstr "Skjut in det translittererade ursprungliga filnamn"
+msgstr "Skjut in det serienummer hos det ursprungliga filnamnet"
 
 #: translitplugin.cpp:94
 msgid "Inserts the transliterated original filename"
@@ -1344,7 +1327,7 @@ msgstr "Michal Smoczyk"
 
 #: tokensortmodedialog.cpp:39
 msgid "Modification Date"
-msgstr ""
+msgstr "Ändringsdatum"
 
 #: rc.cpp:69 rc.cpp:273
 msgid "Move selected files downwards."
@@ -1387,7 +1370,6 @@ msgid "Number of pages in the pdf file"
 msgstr "Antal sidor i pdf-filen"
 
 #: rc.cpp:33
-#, fuzzy
 msgid "Numeric"
 msgstr "Tal"
 
@@ -1478,7 +1460,7 @@ msgstr "Förhandsgranskning avdet skapade KRename-kommandot:"
 
 #: rc.cpp:450
 msgid "Process Tokens"
-msgstr ""
+msgstr "Bearbeta märken"
 
 #: podofoplugin.cpp:46
 msgid "Producer of the pdf file"
@@ -1506,9 +1488,8 @@ msgid "Provided the new preview and move features"
 msgstr "Bidrog med den nya förhandsgranskningens- och flytta-funktionerna"
 
 #: rc.cpp:36
-#, fuzzy
 msgid "Random"
-msgstr "Sortering: slumpmässigt"
+msgstr "Slumpmässigt"
 
 #: rc.cpp:12
 msgid "Re&move"
@@ -1524,7 +1505,7 @@ msgstr "Läs"
 
 #: tokenhelpdialog.cpp:300
 msgid "Recent"
-msgstr ""
+msgstr "Nyligen"
 
 #: rc.cpp:441
 msgid "Reg. Expression"
@@ -1575,9 +1556,8 @@ msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
 
 #: snumplugin.cpp:48
-#, fuzzy
 msgid "SeriesNumber"
-msgstr "Tal"
+msgstr "SerieNumber"
 
 #: main.cpp:93
 msgid "Some GCC 3.1 fixes for Gentoo."
@@ -1585,7 +1565,7 @@ msgstr "Några GCC 3.1 rättelser till Gentoo."
 
 #: rc.cpp:21
 msgid "Sort:"
-msgstr ""
+msgstr "Sort:"
 
 #: permissionsplugin.cpp:202
 msgid "Special"
@@ -1653,7 +1633,7 @@ msgstr "TagLib (MP3/Ogg)-plugin"
 
 #: rc.cpp:429 rc.cpp:504 rc.cpp:694 rc.cpp:697 rc.cpp:703
 msgid "TextLabel"
-msgstr ""
+msgstr "TextEtikett"
 
 #: main.cpp:95
 msgid "Thanks for creating the Mandrake RPM"
@@ -1802,9 +1782,8 @@ msgid "Undoing all renamed files."
 msgstr "Ångrar alla omdöpta filer."
 
 #: rc.cpp:24
-#, fuzzy
 msgid "Unsorted"
-msgstr "Sortering: osorterat"
+msgstr "Osorterat"
 
 #: rc.cpp:66
 msgid "Up"
@@ -1899,7 +1878,7 @@ msgstr "lägg till mappar rekursivt"
 
 #: rc.cpp:756
 msgid "by"
-msgstr ""
+msgstr "av"
 
 #: krenameimpl.cpp:506
 msgid "character x to y of old filename"
@@ -1942,6 +1921,8 @@ msgid ""
 "insert a '/' to create a new subdirectory (useful from within regular "
 "expressions)"
 msgstr ""
+"skjut in ett '/' för att skapa en ny undermapp (användbart inifrån "
+"reguljära uttryck)"
 
 #: krenameimpl.cpp:508
 msgid "insert name of directory"
