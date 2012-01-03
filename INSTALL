@@ -1,3 +1,18 @@
+
+
+To install KRename run the following commands:
+
+> mkdir build
+> cd build
+> cmake
+> make
+> sudo make install
+
+All common CMake options should also work for KRename.
+After KRename was installed, you can run a selftest using krename --test
+
+The instructions below are outdated. KRename uses CMake now!
+
 Basic Installation
 ==================
 
