@@ -13,6 +13,13 @@ DOM: Kontext menü im advance mode für alle text boxen:
 	    -> Number
 	    -> Date
 	    -> ...
+
+=========================
+> I want to rename a load of TV episodes which currently do not have the
+> episode names in the file name. I want to be able to have an external text
+> file which contains each episode name on a new line, or comma-separated, or
+> something else.
+
 ==========================================
 Oh, there is one other thing I just thought about, not related to your
 changes but related to sorting in general.  It'd be nice to be able to
