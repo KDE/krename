@@ -330,6 +330,16 @@ class KRenameFile {
     const KFileItem & fileItem() const;
 
     /**
+     * Set the icon (preview) size
+     *
+     * @param size the icon size
+     */
+    void setIconSize( int size );
+    /**
+     * @returns the icon size
+     */
+    static int iconSize();
+    /**
      * @returns the default icon size
      */
     static int getDefaultIconSize();
@@ -347,6 +357,7 @@ class KRenameFile {
 
  private:
     KFileItem        m_fileItem;
+	 static int       m_iconSize;
 
     TFileDescription m_src;
     TFileDescription m_dst;

@@ -82,7 +82,6 @@ class KRenameModel : public QAbstractListModel {
     inline QString getSortModeCustomToken() const;
     inline KRenameTokenSorter::ESimpleSortMode getSortModeCustomMode() const;
 
-
     /** Move each file in a list of indeces upwards
      *  @param files list of file indeces. Each file is moved up one position
      */
@@ -133,6 +132,11 @@ class KRenameModel : public QAbstractListModel {
      *                   if the filename text is displayed next to the preview
      */
     inline void setEnablePreview( bool preview, bool filenames );
+    /** Test if the preview of KRenameFile objects is enabled.
+     *
+     *  @return preview enabled?
+     */
+    inline bool isPreviewEnabled() const;
 
     /** Run/open the file which is pointed to by the passed modelinex
      *
@@ -214,6 +218,11 @@ const KRenameFile & KRenameModel::file( int index ) const
 KRenameFile & KRenameModel::file( int index )
 {
     return (*m_vector)[index];
+}
+
+bool KRenameModel::isPreviewEnabled() const
+{
+    return m_preview;
 }
 
 void KRenameModel::setEnablePreview( bool preview, bool filenames )

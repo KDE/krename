@@ -21,6 +21,7 @@
 #include "krenamemodel.h"
 #include "krenametest.h"
 #include "krenamewindow.h"
+#include "krenamefile.h"
 
 #include "numberdialog.h"
 #include "insertpartfilenamedlg.h"
@@ -630,6 +631,8 @@ void KRenameImpl::loadConfig()
 
     m_window->setPreviewNamesEnabled( 
 	groupGui.readEntry( "ImagePreviewName2", QVariant(true) ).toBool() );
+
+    m_vector.first().setIconSize( groupGui.readEntry( "ImagePreviewSize", QVariant(64) ).toInt() );
 
     m_window->setAdvancedMode( 
 	groupGui.readEntry( "Advanced", QVariant(false) ).toBool() );

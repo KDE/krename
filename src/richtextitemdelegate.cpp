@@ -16,6 +16,8 @@
  ***************************************************************************/
 
 #include "richtextitemdelegate.h"
+#include "krenamefile.h"
+#include "krenamemodel.h"
 
 #include <QPainter>
 #include <QRectF>
@@ -46,8 +48,7 @@ void RichTextItemDelegate::paint(QPainter* painter, const QStyleOptionViewItem& 
 
     if(!pixmap.isNull()) 
     {
-        const int DEFAULT_OFFSET = 80;
-        int offsetX = qMax(pixmap.width(), DEFAULT_OFFSET);
+        int offsetX = qMax(pixmap.width(), KRenameFile::iconSize());
         QRect pixmapRect(option.rect.x(),
                          option.rect.y(),
                          pixmap.width(),
@@ -84,6 +85,8 @@ void RichTextItemDelegate::paint(QPainter* painter, const QStyleOptionViewItem& 
 
 QSize RichTextItemDelegate::sizeHint(const QStyleOptionViewItem& option, const QModelIndex& index ) const
 {
-    return QItemDelegate::sizeHint(option, index);
+	 if ( static_cast<const KRenameModel*>(index.model())->isPreviewEnabled() )
+		 return QSize(KRenameFile::iconSize(),KRenameFile::iconSize());
+    else return QItemDelegate::sizeHint(option, index);
 }
 

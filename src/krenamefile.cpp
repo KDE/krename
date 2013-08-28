@@ -60,6 +60,7 @@ KRenamePreviewProvider* KRenamePreviewProvider::s_instance = NULL;
 
 
 const int KRenameFile::DEFAULT_ICON_SIZE = 64;
+int KRenameFile::m_iconSize = 0; // read from config file
 const char* KRenameFile::EXTRA_DATA_KEY = "KRenameFile::EXTRA_DATA_KEY";
 
 KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int dot )
@@ -113,6 +114,16 @@ const KRenameFile & KRenameFile::operator=( const KRenameFile & rhs )
 bool KRenameFile::operator==( const KFileItem & item ) const
 {
     return this->fileItem() == item;
+}
+
+void KRenameFile::setIconSize( int size )
+{
+    m_iconSize = size;
+}
+
+int KRenameFile::iconSize()
+{
+    return m_iconSize;
 }
 
 int KRenameFile::getDefaultIconSize()
