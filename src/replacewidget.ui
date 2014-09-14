@@ -65,6 +65,33 @@
         </spacer>
        </item>
        <item>
+	     <widget class="QPushButton" name="buttonSaveList">
+         <property name="text">
+          <string>&amp;Save Settings...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+	     <widget class="QPushButton" name="buttonLoadList">
+         <property name="text">
+          <string>&amp;Load Settings...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
         <widget class="QPushButton" name="buttonAdd">
          <property name="text">
           <string>&amp;Add...</string>

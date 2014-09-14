@@ -41,6 +41,9 @@ class ReplaceDialog : public QDialog {
      void slotAdd();
      void slotEdit();
      void slotRemove();
+     
+     void slotSaveList();
+     void slotLoadList();
 
      void slotEnableControls();
 

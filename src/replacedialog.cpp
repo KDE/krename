@@ -15,10 +15,19 @@
  *                                                                         *
  ***************************************************************************/
 
+#include <QFileDialog>
+#include <QTextStream>
+#include <QMessageBox>
+#include <QDomDocument>
+#include <QDomElement>
+
+#include<iostream>
+
 #include "replacedialog.h"
 
 #include "ui_replaceitemdlg.h"
 #include "batchrenamer.h"
+
 
 ReplaceDialog::ReplaceDialog( const QList<TReplaceItem> & items, QWidget* parent )
     : QDialog( parent )
@@ -32,6 +41,9 @@ ReplaceDialog::ReplaceDialog( const QList<TReplaceItem> & items, QWidget* parent
     connect(m_widget.buttonRemove, SIGNAL(clicked(bool)),          SLOT(slotRemove()));
     connect(m_widget.buttonEdit,   SIGNAL(clicked(bool)),          SLOT(slotEdit()));
 
+    connect(m_widget.buttonLoadList, SIGNAL(clicked(bool)),      SLOT(slotLoadList()));
+    connect(m_widget.buttonSaveList, SIGNAL(clicked(bool)),      SLOT(slotSaveList()));
+    
     connect(m_widget.list, SIGNAL(itemSelectionChanged()),         SLOT(slotEnableControls()));
 
     this->slotEnableControls();
@@ -53,6 +65,195 @@ ReplaceDialog::ReplaceDialog( const QList<TReplaceItem> & items, QWidget* parent
     }
 }
 
+void ReplaceDialog::slotSaveList()
+{
+      QTableWidget * table = m_widget.list;
+      
+      QString fileName = QFileDialog::getSaveFileName(this,tr("Save Find & Replace Settings as:"),
+						      QDir::currentPath(), tr("KRename Find & Replace Settings XML (*.xml)"));
+      
+      if (fileName.isEmpty()) 
+	    return;
+      
+      QFile f(fileName);  
+      
+      if (!f.open(QIODevice::WriteOnly | QIODevice::Text))
+      {
+	    QMessageBox::warning(this, tr("KRename Warning"),
+				 tr("Failed to save the Find & Replace Settings File."), QMessageBox::Cancel,
+				 QMessageBox::NoButton);
+	    return;
+      }
+      
+	    QTextStream data( &f );
+	    
+	    
+	    QDomDocument xmlDocument("KRename");
+	    QDomElement root = xmlDocument.createElement("KRename");
+	    root.setAttribute("version","1.0");
+	    
+	    QDomElement frElement = xmlDocument.createElement("FindReplaceList");
+	    frElement.setAttribute("rows",table->rowCount());
+	    root.appendChild(frElement);
+	    
+	    
+	    for( int r = 0; r < table->rowCount(); ++r )
+	    {
+		  QDomElement RegExpElement = xmlDocument.createElement("RegularExpression");
+		  QDomElement FindElement = xmlDocument.createElement("Find");
+		  QDomElement ReplaceWithElement = xmlDocument.createElement("ReplaceWith");
+		  QDomElement ProcessTokensElement = xmlDocument.createElement("ProcessTokens");			
+		  QDomElement RowElement = xmlDocument.createElement("Row");	
+		  RowElement.setAttribute("num",r);
+		  
+		  int RegExpCheck=static_cast<int>(table->item( r, 0)->checkState());
+		  QString RegExpCheckStr=QString::number( RegExpCheck, 10 );
+		  
+		  RegExpElement.appendChild( xmlDocument.createTextNode(RegExpCheckStr));
+		  RowElement.appendChild(RegExpElement);
+		  
+		  FindElement.appendChild( xmlDocument.createTextNode(table->item( r, 1)->data(Qt::EditRole).toString()  ));
+		  RowElement.appendChild(FindElement);
+		  ReplaceWithElement.appendChild( xmlDocument.createTextNode(table->item( r, 2)->data(Qt::EditRole).toString()  ));
+		  RowElement.appendChild(ReplaceWithElement);
+		  
+		  int ProcessTokensCheck=static_cast<int>(table->item( r, 3)->checkState());
+		  QString ProcessTokensCheckStr=QString::number( ProcessTokensCheck, 10 );
+		  ProcessTokensElement.appendChild( xmlDocument.createTextNode(ProcessTokensCheckStr));
+		  RowElement.appendChild(ProcessTokensElement);
+		  
+		  frElement.appendChild(RowElement);
+		  
+	    }
+	    xmlDocument.appendChild(root);
+
+	    data << xmlDocument.toString(-1);
+	    f.close();
+
+      
+      
+      
+      
+}
+
+void ReplaceDialog::slotLoadList()
+{
+      QTableWidget * table = m_widget.list;
+      
+      QString fileName =  QFileDialog::getOpenFileName(this, tr("Save Find and Replace Settings File"),
+						       QDir::currentPath(),
+						       tr("KRename Find and Replace Settings XML (*.xml)"));
+      if (fileName.isEmpty())
+	    return;
+//open file
+      QFile f(fileName);
+      if (!f.open(QFile::ReadOnly | QFile::Text)) 
+      {
+	    QMessageBox::warning(this, tr("KRename Warning"),
+				 tr("Failed to open the Find and Replace Settings File. Cannot read file %1:\n%2.").arg(fileName).arg(f.errorString()), QMessageBox::Cancel,
+				 QMessageBox::NoButton);
+	    return;
+      }
+//load XML
+      QIODevice * device = &f;
+      QDomDocument xmlDocument;
+      QString errorStr;
+      int errorLine;
+      int errorColumn;
+
+      if (!xmlDocument.setContent(device, true, &errorStr, &errorLine, &errorColumn)) 
+      {
+	    QMessageBox::information(window(), tr("KRename Find and Replace Settings XML File"),
+				     tr("Parse error at line %1, column %2:\n%3")
+				     .arg(errorLine)
+				     .arg(errorColumn)
+				     .arg(errorStr));
+	    return;
+      }
+	    
+	    QDomElement root = xmlDocument.documentElement();
+// check if valid
+      if (root.tagName() != "KRename") {
+	    QMessageBox::information(window(), tr("KRename Find and Replace Settings XML File"),
+				     tr("The file is not an KRename XML file."));
+	    return;
+      } else if (root.hasAttribute("version") && root.attribute("version") != "1.0") 
+      {
+	    QMessageBox::information(window(), tr("KRename Find and Replace Settings XML File"),
+				     tr("The file is not an KRename XML version 1.0 file."));
+	    return;
+      }
+//parse XML file
+
+QDomElement frElement = root.firstChild().toElement();
+
+      int Rows;
+      bool ok;
+      Rows = frElement.attribute("rows").toInt(&ok, 10);
+      table->setRowCount(Rows);
+      int rc;
+      rc=0;
+      
+      QDomElement RowElement = frElement.firstChildElement("Row");
+      while (!RowElement.isNull()) {
+	    
+	    
+	    QString RegExpCheckStr = RowElement.firstChildElement("RegularExpression").text();
+	    int RegExpCheck=RegExpCheckStr.toInt();
+	    
+	    switch ( RegExpCheck ) 
+	    {
+		  case 0 :
+			table->setItem( rc, 0, this->createTableItem( "", true ) );
+			table->item( rc, 0 )->setCheckState(Qt::Unchecked);
+			break;	
+		  case 1 :
+			table->setItem( rc, 0, this->createTableItem( "", true ) );
+			table->item( rc, 0 )->setCheckState(Qt::PartiallyChecked);			
+			break;
+		  case 2 :
+			table->setItem( rc, 0, this->createTableItem( "", true ) );
+			table->item( rc, 0 )->setCheckState(Qt::Checked);
+			break;
+		  default :
+			break;
+	    }
+
+	    table->setItem( rc, 1, this->createTableItem(RowElement.firstChildElement("Find").text()) );
+	    table->setItem( rc, 2, this->createTableItem(RowElement.firstChildElement("ReplaceWith").text()) );
+	    
+	    QString ProcessTokensCheckStr = RowElement.firstChildElement("ProcessTokens").text();
+	    int ProcessTokensCheck=ProcessTokensCheckStr.toInt();
+   
+	    switch ( ProcessTokensCheck ) 
+	    {
+		  case 0 :
+			table->setItem( rc, 3, this->createTableItem( "", true ) );
+			table->item( rc, 3 )->setCheckState(Qt::Unchecked);
+			break;	
+		  case 1 :
+			table->setItem( rc, 3, this->createTableItem( "", true ) );
+			table->item( rc, 3 )->setCheckState(Qt::PartiallyChecked);			
+			break;
+		  case 2 :
+			table->setItem( rc, 3, this->createTableItem( "", true ) );
+			table->item( rc, 3 )->setCheckState(Qt::Checked);
+			break;
+		  default :
+			break;
+	    }
+	    
+	    RowElement = RowElement.nextSiblingElement("Row");
+	    rc=rc+1;
+      }
+      if(rc!=Rows)
+      {
+	    QMessageBox::information(window(), tr("KRename Find and Replace Settings XML File"),
+				     tr("Problem with loading KRename XML file."));
+	    return;    
+      }
+}
+
 void ReplaceDialog::slotAdd()
 {
     QDialog dlg;
@@ -70,6 +271,8 @@ void ReplaceDialog::slotAdd()
         m_widget.list->setItem( row, 3, this->createTableItem( "", true ) );
         m_widget.list->item( row, 3 )->setCheckState( replace.checkProcess->isChecked() ? Qt::Checked : Qt::Unchecked ); 
     }
+    int row = m_widget.list->rowCount();
+    m_widget.buttonSaveList->setEnabled(row);
 }
 
 void ReplaceDialog::slotEdit()
@@ -98,6 +301,8 @@ void ReplaceDialog::slotEdit()
 void ReplaceDialog::slotRemove()
 {
     m_widget.list->removeRow( m_widget.list->currentRow() );
+    int row = m_widget.list->rowCount();
+    m_widget.buttonSaveList->setEnabled(row);
 }
 
 void ReplaceDialog::slotEnableControls()
@@ -106,6 +311,11 @@ void ReplaceDialog::slotEnableControls()
 
     m_widget.buttonEdit->setEnabled( selected.count() );
     m_widget.buttonRemove->setEnabled( selected.count() );
+    
+    m_widget.buttonLoadList->setEnabled(true);
+    
+    int row = m_widget.list->rowCount();
+    m_widget.buttonSaveList->setEnabled(row);
 }
 
 QTableWidgetItem* ReplaceDialog::createTableItem( const QString & text, bool isCheckable )
