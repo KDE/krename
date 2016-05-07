@@ -23,7 +23,7 @@
 #include <QMap>
 #include <QString>
 
-#include <kurl.h>
+#include <QUrl>
 
 class BatchRenamer;
 class Plugin;
@@ -55,7 +55,7 @@ private:
     const KRenameFile::List & m_list;
     ESimpleSortMode m_eSortMode; 
     Plugin* m_plugin;
-    QMap<KUrl,QString> m_values;
+    QMap<QUrl,QString> m_values;
 };
 
 #endif // KRENAMETOKENSORTER_H

@@ -38,7 +38,7 @@ class ProgressDialog : public QDialog {
      *
      *  @param dest the destination directory
      */
-    inline void setDestination( const KUrl & dest );
+    inline void setDestination( const QUrl &dest );
 
     /** Set the number of total steps in the progressbar
      *  which is displayed to the user.
@@ -138,7 +138,7 @@ class ProgressDialog : public QDialog {
 
     bool m_canceled;         ///< the current canceled state
     BatchRenamer* m_renamer; ///< A BatchRenamer that can undo the operation
-    KUrl m_dest;             ///< files destination
+    QUrl m_dest;             ///< files destination
 
     QPushButton* m_buttonUndo;
     QPushButton* m_buttonMore;
@@ -152,7 +152,7 @@ class ProgressDialog : public QDialog {
     unsigned int m_dot;
 };
 
-void ProgressDialog::setDestination( const KUrl & dest )
+void ProgressDialog::setDestination( const QUrl &dest )
 {
     m_dest = dest;
 }

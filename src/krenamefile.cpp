@@ -36,7 +36,7 @@ public:
         return s_instance;
     }
 
-    QPixmap loadIcon( const KUrl & url ) 
+    QPixmap loadIcon( const QUrl &url ) 
     {
         return KIO::pixmapForUrl( url );
     }
@@ -63,20 +63,6 @@ const int KRenameFile::DEFAULT_ICON_SIZE = 64;
 int KRenameFile::m_iconSize = 0; // read from config file
 const char* KRenameFile::EXTRA_DATA_KEY = "KRenameFile::EXTRA_DATA_KEY";
 
-KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int dot )
-    : m_bValid( false ), m_error( 0 ), m_manualMode( eManualChangeMode_None )
-{
-    KIO::UDSEntry entry;
-    KIO::NetAccess::stat( src, entry, NULL );
-    KFileItem file( entry, src );
-
-    m_bValid     = file.isReadable();
-    m_bDirectory = file.isDir();
-
-    m_fileItem = file;
-    initFileDescription( m_src, src, eSplitMode, dot );
-}
-
 KRenameFile::KRenameFile( const QUrl & src, ESplitMode eSplitMode, unsigned int dot )
     : m_bValid( false ), m_error( 0 ), m_manualMode( eManualChangeMode_None )
 {
@@ -92,7 +78,7 @@ KRenameFile::KRenameFile( const QUrl & src, ESplitMode eSplitMode, unsigned int 
 }
 
 
-KRenameFile::KRenameFile( const KUrl & src, bool directory, ESplitMode eSplitMode, unsigned int dot )
+KRenameFile::KRenameFile( const QUrl &src, bool directory, ESplitMode eSplitMode, unsigned int dot )
     : m_bDirectory( directory ), m_bValid( true ), m_error( 0 ), m_manualMode( eManualChangeMode_None )
 {
     initFileDescription( m_src, src, eSplitMode, dot );
@@ -148,20 +134,19 @@ int KRenameFile::getDefaultIconSize()
 
 void KRenameFile::setCurrentSplitMode( ESplitMode eSplitMode, unsigned int dot )
 {
-    KUrl    url      = m_src.url;
+    QUrl    url      = m_src.url;
     QString filename = m_src.filename;
     if( !m_src.extension.isEmpty() ) 
     {
         filename = filename + "." + m_src.extension;
     }
 
-    url.setDirectory( m_src.directory );
-    url.addPath( filename );
+    url.setPath( m_src.directory + '/' + filename );
 
     this->initFileDescription( m_src, url, eSplitMode, dot );
 }
 
-void KRenameFile::initFileDescription( TFileDescription & rDescription, const KUrl & url, 
+void KRenameFile::initFileDescription( TFileDescription & rDescription, const QUrl &url, 
                                        ESplitMode eSplitMode, unsigned int dot ) const
 {
     int splitPos = -1;
@@ -236,7 +221,7 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const KU
     }
 
     /*
-    qDebug("URL : %s", url.prettyUrl().toLatin1().data() );
+    qDebug("URL : %s", url.toDisplayString().toLatin1().data() );
     qDebug("Path: %s", rDescription.directory.toLatin1().data());
     qDebug("File: %s", rDescription.filename.toLatin1().data());
     qDebug("Ext : %s", rDescription.extension.toLatin1().data());
@@ -264,23 +249,22 @@ int KRenameFile::dots() const
     return dots;
 }
 
-const KUrl KRenameFile::srcUrl() const 
+const QUrl KRenameFile::srcUrl() const 
 {
     if( m_overrideDir.isNull() )
-	return m_src.url;
+        return m_src.url;
     else
     {
-	KUrl changed = m_src.url;
-	changed.setDirectory( m_overrideDir );
-	QString filename = m_src.filename;
-	if( !m_src.extension.isEmpty() )
-	{
-	    filename += '.';
-	    filename += m_src.extension;
-	}
+        QUrl changed = m_src.url;
+        QString filename = m_src.filename;
+        if( !m_src.extension.isEmpty() )
+        {
+            filename += '.';
+            filename += m_src.extension;
+        }
 
-	changed.setFileName( filename );
-	return changed;
+        changed.setPath(m_overrideDir + '/' +  filename );
+        return changed;
     }
 }
 

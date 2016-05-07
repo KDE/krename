@@ -128,7 +128,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     if (!data->hasFormat( m_mimeType ))
         return false;
 
-    KUrl::List                  dirs;
+    QList<QUrl>                  dirs;
     KRenameFile::List           files;
     QList<QUrl>                 urls = data->urls();
     QList<QUrl>::const_iterator it   = urls.begin();
@@ -154,7 +154,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     this->addFiles( files );
     if( dirs.count() ) 
     {
-        KUrl::List::const_iterator it = dirs.begin();
+        QList<QUrl>::const_iterator it = dirs.begin();
 
         while( it != dirs.end() )
         {

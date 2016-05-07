@@ -122,7 +122,7 @@ QString PermissionsPlugin::processFile( BatchRenamer*, int, const QString & file
 {
     const QString & filename = filenameOrToken;
 
-    if( !KUrl( filename ).isLocalFile() ) 
+    if( !QUrl( filename ).isLocalFile() ) 
         return i18n("PermissionsPlugin works only with local files. %1 is a remote file.", filename);
 
     if( m_widget->checkPermissions->isChecked() )

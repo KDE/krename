@@ -21,7 +21,7 @@
 #include "plugin.h"
 
 #include <QObject>
-#include <KUrl>
+#include <QUrl>
 
 namespace Ui {
     class DateTimePluginWidget;

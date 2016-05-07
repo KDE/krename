@@ -29,7 +29,7 @@
 
 QMutex ThreadedLister::s_mutex;
 
-ThreadedLister::ThreadedLister( const KUrl & dirname, QWidget* cache, KRenameModel* model )
+ThreadedLister::ThreadedLister( const QUrl &dirname, QWidget* cache, KRenameModel* model )
     : QObject( NULL ), m_dirname( dirname ), m_cache( cache ), m_model( model )
 {
     m_listHiddenFiles  = false;
@@ -95,8 +95,9 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
         }
         else
         {
-            KUrl url = m_dirname;
-            url.addPath( displayName ); // displayName is a relative path
+            QUrl url = m_dirname;
+            url = url.adjusted(QUrl::StripTrailingSlash);
+            url.setPath(url.path() + '/' + ( displayName ));
 
             if( (m_listDirnames || m_listDirnamesOnly) && (*it).isDir() ) 
             {

@@ -21,7 +21,7 @@
 #include <QObject>
 #include <QMutex>
 
-#include <kurl.h>
+#include <QUrl>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -63,14 +63,14 @@ class KRenameImpl : public QObject {
     /** Adds a single url to the list of files which will 
      *  be renamed.
      *
-     *  If you have a KUrl::List use addFilesOrDirs which is 
+     *  If you have a QList<QUrl> use addFilesOrDirs which is 
      *  faster.
      *
      *  \param url must be an existing file or directory.
      *
      *  \see addFilesOrDirs
      */
-    void addFileOrDir( const KUrl & url );
+    void addFileOrDir( const QUrl &url );
 
     /** Adds a list of urls to the list of files which will 
      *  be renamed.
@@ -87,7 +87,7 @@ class KRenameImpl : public QObject {
      *
      *  \see addFileOrDir
      */
-    void addFilesOrDirs( const KUrl::List & list, const QString & filter = "*", 
+    void addFilesOrDirs( const QList<QUrl> & list, const QString & filter = "*", 
                          bool recursively = false, bool dirsWithFiles = false, 
                          bool dirsOnly = false, bool hidden = false );
 

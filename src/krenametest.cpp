@@ -25,7 +25,7 @@
 #include <QTextEdit>
 #include <QVBoxLayout>
 
-#include <kurl.h>
+#include <QUrl>
 
 // Macros to simplify the test code
 
@@ -120,104 +120,104 @@ void KRenameTest::testKRenameFile()
     writeTestHeader( "KRenameFile" );
 
     // Test a simple filename
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (first dot)", KUrl("file:///home/test/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (first dot)", QUrl("file:///home/test/simple.txt"),
                           "/home/test", "simple", "txt", eSplitMode_FirstDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (last dot)", KUrl("file:///home/test/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (last dot)", QUrl("file:///home/test/simple.txt"),
                           "/home/test", "simple", "txt", eSplitMode_LastDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (no extension)", KUrl("file:///home/test/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (no extension)", QUrl("file:///home/test/simple.txt"),
                           "/home/test", "simple.txt", "", eSplitMode_NoExtension, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (no extension)", KUrl("file:///home/test/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (no extension)", QUrl("file:///home/test/simple.txt"),
                           "/home/test", "simple.txt", "", eSplitMode_NoExtension, 1, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (custom dot 0)", KUrl("file:///home/test/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (custom dot 0)", QUrl("file:///home/test/simple.txt"),
                           "/home/test", "simple.txt", "", eSplitMode_CustomDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (custom dot 1)", KUrl("file:///home/test/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt (custom dot 1)", QUrl("file:///home/test/simple.txt"),
                           "/home/test", "simple", "txt", eSplitMode_CustomDot, 1, false );
 
     // Test a simple filename and a directory with spaces
-    RUN_KRENAMEFILE_TEST( "file:///home/dir with space/simple.txt (first dot)", KUrl("file:///home/dir with space/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/dir with space/simple.txt (first dot)", QUrl("file:///home/dir with space/simple.txt"),
                           "/home/dir with space", "simple", "txt", eSplitMode_FirstDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/dir with space/simple.txt (last dot)", KUrl("file:///home/dir with space/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/dir with space/simple.txt (last dot)", QUrl("file:///home/dir with space/simple.txt"),
                           "/home/dir with space", "simple", "txt", eSplitMode_LastDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/dir with space/simple.txt (custom dot 0)", KUrl("file:///home/dir with space/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/dir with space/simple.txt (custom dot 0)", QUrl("file:///home/dir with space/simple.txt"),
                           "/home/dir with space", "simple.txt", "", eSplitMode_CustomDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/dir with space/simple.txt (custom dot 1)", KUrl("file:///home/dir with space/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/dir with space/simple.txt (custom dot 1)", QUrl("file:///home/dir with space/simple.txt"),
                           "/home/dir with space", "simple", "txt", eSplitMode_CustomDot, 1, false );
 
     // test a more complicated file extension
-    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (first dot)", KUrl("file:///home/test/complicated.tar.gz"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (first dot)", QUrl("file:///home/test/complicated.tar.gz"),
                           "/home/test", "complicated", "tar.gz", eSplitMode_FirstDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (last dot)", KUrl("file:///home/test/complicated.tar.gz"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (last dot)", QUrl("file:///home/test/complicated.tar.gz"),
                           "/home/test", "complicated.tar", "gz", eSplitMode_LastDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (custom dot 0)", KUrl("file:///home/test/complicated.tar.gz"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (custom dot 0)", QUrl("file:///home/test/complicated.tar.gz"),
                           "/home/test", "complicated.tar.gz", "", eSplitMode_CustomDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (custom dot 1)", KUrl("file:///home/test/complicated.tar.gz"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (custom dot 1)", QUrl("file:///home/test/complicated.tar.gz"),
                           "/home/test", "complicated", "tar.gz", eSplitMode_CustomDot, 1, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (custom dot 2)", KUrl("file:///home/test/complicated.tar.gz"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (custom dot 2)", QUrl("file:///home/test/complicated.tar.gz"),
                           "/home/test", "complicated.tar", "gz", eSplitMode_CustomDot, 2, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (custom dot 3)", KUrl("file:///home/test/complicated.tar.gz"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/complicated.tar.gz (custom dot 3)", QUrl("file:///home/test/complicated.tar.gz"),
                           "/home/test", "complicated.tar.gz", "", eSplitMode_CustomDot, 3, false );
 
 
     // test a directory with dot
-    RUN_KRENAMEFILE_TEST( "file:///home/dir.with.dot/simple.txt (first dot)", KUrl("file:///home/dir.with.dot/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/dir.with.dot/simple.txt (first dot)", QUrl("file:///home/dir.with.dot/simple.txt"),
                           "/home/dir.with.dot", "simple", "txt", eSplitMode_FirstDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/dir.with.dot/simple.txt (last dot)", KUrl("file:///home/dir.with.dot/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/dir.with.dot/simple.txt (last dot)", QUrl("file:///home/dir.with.dot/simple.txt"),
                           "/home/dir.with.dot", "simple", "txt", eSplitMode_LastDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/dir.with.dot/simple.txt (custom dot 0)", KUrl("file:///home/dir.with.dot/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/dir.with.dot/simple.txt (custom dot 0)", QUrl("file:///home/dir.with.dot/simple.txt"),
                           "/home/dir.with.dot", "simple.txt", "", eSplitMode_CustomDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/dir.with.dot/simple.txt (custom dot 1)", KUrl("file:///home/dir.with.dot/simple.txt"),
+    RUN_KRENAMEFILE_TEST( "file:///home/dir.with.dot/simple.txt (custom dot 1)", QUrl("file:///home/dir.with.dot/simple.txt"),
                           "/home/dir.with.dot", "simple", "txt", eSplitMode_CustomDot, 1, false );
 
     // test a directory which ends with a slash
-    RUN_KRENAMEFILE_TEST( "file:///home/test/ (first dot)", KUrl("file:///home/test/"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/ (first dot)", QUrl("file:///home/test/"),
                           "/home", "test", "", eSplitMode_FirstDot, 0, true );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/ (last dot)", KUrl("file:///home/test/"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/ (last dot)", QUrl("file:///home/test/"),
                           "/home", "test", "", eSplitMode_LastDot, 0, true );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/ (custom dot 0)", KUrl("file:///home/test/"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/ (custom dot 0)", QUrl("file:///home/test/"),
                           "/home", "test", "", eSplitMode_CustomDot, 0, true );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/ (custom dot 1)", KUrl("file:///home/test/"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/ (custom dot 1)", QUrl("file:///home/test/"),
                           "/home", "test", "", eSplitMode_CustomDot, 1, true );
 
     // test a directory which doesn't end with a slash
-    RUN_KRENAMEFILE_TEST( "file:///home/test (first dot)", KUrl("file:///home/test"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test (first dot)", QUrl("file:///home/test"),
                           "/home", "test", "", eSplitMode_FirstDot, 0, true );
-    RUN_KRENAMEFILE_TEST( "file:///home/test (last dot)", KUrl("file:///home/test"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test (last dot)", QUrl("file:///home/test"),
                           "/home", "test", "", eSplitMode_LastDot, 0, true );
-    RUN_KRENAMEFILE_TEST( "file:///home/test (custom dot 0)", KUrl("file:///home/test"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test (custom dot 0)", QUrl("file:///home/test"),
                           "/home", "test", "", eSplitMode_CustomDot, 0, true );
-    RUN_KRENAMEFILE_TEST( "file:///home/test (custom dot 1)", KUrl("file:///home/test"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test (custom dot 1)", QUrl("file:///home/test"),
                           "/home", "test", "", eSplitMode_CustomDot, 1, true );
 
     // test no file extension
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple (first dot)", KUrl("file:///home/test/simple"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple (first dot)", QUrl("file:///home/test/simple"),
                           "/home/test", "simple", "", eSplitMode_FirstDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple (last dot)", KUrl("file:///home/test/simple"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple (last dot)", QUrl("file:///home/test/simple"),
                           "/home/test", "simple", "", eSplitMode_LastDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple (custom dot 0)", KUrl("file:///home/test/simple"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple (custom dot 0)", QUrl("file:///home/test/simple"),
                           "/home/test", "simple", "", eSplitMode_CustomDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple (custom dot 1)", KUrl("file:///home/test/simple"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple (custom dot 1)", QUrl("file:///home/test/simple"),
                           "/home/test", "simple", "", eSplitMode_CustomDot, 1, false );
 
     // test very long complex file extension
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (first dot)", KUrl("file:///home/test/simple.txt.long.ext.zip"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (first dot)", QUrl("file:///home/test/simple.txt.long.ext.zip"),
                           "/home/test", "simple", "txt.long.ext.zip", eSplitMode_FirstDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (last dot)", KUrl("file:///home/test/simple.txt.long.ext.zip"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (last dot)", QUrl("file:///home/test/simple.txt.long.ext.zip"),
                           "/home/test", "simple.txt.long.ext", "zip", eSplitMode_LastDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 0)", KUrl("file:///home/test/simple.txt.long.ext.zip"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 0)", QUrl("file:///home/test/simple.txt.long.ext.zip"),
                           "/home/test", "simple.txt.long.ext.zip", "", eSplitMode_CustomDot, 0, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 1)", KUrl("file:///home/test/simple.txt.long.ext.zip"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 1)", QUrl("file:///home/test/simple.txt.long.ext.zip"),
                           "/home/test", "simple", "txt.long.ext.zip", eSplitMode_CustomDot, 1, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 2)", KUrl("file:///home/test/simple.txt.long.ext.zip"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 2)", QUrl("file:///home/test/simple.txt.long.ext.zip"),
                           "/home/test", "simple.txt", "long.ext.zip", eSplitMode_CustomDot, 2, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 3)", KUrl("file:///home/test/simple.txt.long.ext.zip"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 3)", QUrl("file:///home/test/simple.txt.long.ext.zip"),
                           "/home/test", "simple.txt.long", "ext.zip", eSplitMode_CustomDot, 3, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 4)", KUrl("file:///home/test/simple.txt.long.ext.zip"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 4)", QUrl("file:///home/test/simple.txt.long.ext.zip"),
                           "/home/test", "simple.txt.long.ext", "zip", eSplitMode_CustomDot, 4, false );
-    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 5)", KUrl("file:///home/test/simple.txt.long.ext.zip"),
+    RUN_KRENAMEFILE_TEST( "file:///home/test/simple.txt.long.ext.zip (custom dot 5)", QUrl("file:///home/test/simple.txt.long.ext.zip"),
                           "/home/test", "simple.txt.long.ext.zip", "", eSplitMode_CustomDot, 5, false );
 }
 
-bool KRenameTest::testKRenameFileInternal( const KUrl & url, const QString & directory, 
+bool KRenameTest::testKRenameFileInternal( const QUrl &url, const QString & directory, 
                                            const QString & filename, const QString & extension, 
                                            ESplitMode eSplitMode, int dot, bool isDir )
 {
@@ -487,10 +487,10 @@ void KRenameTest::testBatchRenamer()
     QStringList expected;
     QStringList expectedPaths;
 
-    files << KRenameFile( KUrl("/home/foo/bar/subdir"), true, eSplitMode_FirstDot, 1 )
-          << KRenameFile( KUrl("/home/foo"), true, eSplitMode_FirstDot, 1 )
-          << KRenameFile( KUrl("/home/foo/bar"), true, eSplitMode_FirstDot, 1 )
-          << KRenameFile( KUrl("/home/foo/bar/baz"), true, eSplitMode_FirstDot, 1 );
+    files << KRenameFile( QUrl("/home/foo/bar/subdir"), true, eSplitMode_FirstDot, 1 )
+          << KRenameFile( QUrl("/home/foo"), true, eSplitMode_FirstDot, 1 )
+          << KRenameFile( QUrl("/home/foo/bar"), true, eSplitMode_FirstDot, 1 )
+          << KRenameFile( QUrl("/home/foo/bar/baz"), true, eSplitMode_FirstDot, 1 );
     expected << "SUBDIR" << "FOO" << "BAR" << "BAZ";
     expectedPaths << "/home/foo/bar" << "/home" << "/home/FOO" << "/home/FOO/BAR";
 
@@ -502,7 +502,7 @@ bool KRenameTest::tokenTest( const char* token, const QString & filename, const 
 {
     QString directory("/home/krename/");
     KRenameFile::List list;
-    KRenameFile file( KUrl( directory + filename ), filename.isEmpty(), eSplitMode_FirstDot, 1 );
+    KRenameFile file( QUrl( directory + filename ), filename.isEmpty(), eSplitMode_FirstDot, 1 );
 
     list.push_back( file );
 
@@ -532,7 +532,7 @@ bool KRenameTest::numberingTest( int length, int start, int step, QList<int> ski
     for(int i=0;i<num;i++) 
     {
         QString filename = "any" + QString::number( i );
-        KRenameFile file( KUrl( directory + filename ), filename.isEmpty(), eSplitMode_FirstDot, 1 );
+        KRenameFile file( QUrl( directory + filename ), filename.isEmpty(), eSplitMode_FirstDot, 1 );
 
         list.push_back( file );
     }
@@ -577,7 +577,7 @@ bool KRenameTest::replaceTest( const QString & token, const QString & filename, 
 {
     QString directory("/home/krename/");
     KRenameFile::List list;
-    KRenameFile file( KUrl( directory + filename ), filename.isEmpty(), eSplitMode_FirstDot, 1 );
+    KRenameFile file( QUrl( directory + filename ), filename.isEmpty(), eSplitMode_FirstDot, 1 );
     list.push_back( file );
 
     QList<TReplaceItem> replaceList;

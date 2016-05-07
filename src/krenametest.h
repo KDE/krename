@@ -24,7 +24,7 @@
 
 #include "krenamefile.h"
 
-class KUrl;
+class QUrl;
 class QTextEdit;
 
 /** This class contains KRename's selftest.
@@ -62,7 +62,7 @@ class KRenameTest : public QWidget {
      *  \param dot the dot to use as splitter
      *  \param isDir test a file or a directory
      */
-    bool testKRenameFileInternal( const KUrl & url, const QString & directory, 
+    bool testKRenameFileInternal( const QUrl &url, const QString & directory, 
                                   const QString & filename, const QString & extension,
                                   ESplitMode eSplitMode, int dot, bool isDir );
 

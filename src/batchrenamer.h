@@ -152,9 +152,9 @@ class BatchRenamer : public QObject {
         /** Build the destination url from a KRenameFile
          *
          *  @param file a KRenameFile
-         *  @returns a valid KUrl
+         *  @returns a valid QUrl
          */
-        const KUrl buildDestinationUrl( const KRenameFile & file ) const;
+        const QUrl buildDestinationUrl( const KRenameFile & file ) const;
 
         inline void setUndoScript( const QString & t ) { m_undoScript = t; }
         inline void setUndo( bool b ) { undo = b; }
@@ -279,7 +279,7 @@ class BatchRenamer : public QObject {
          *
          *  @param url destination directory
          */
-        inline void setDestinationDir( const KUrl & url ) { m_destination = url; }
+        inline void setDestinationDir( const QUrl &url ) { m_destination = url; }
 
      private:
         /** Do find and replace on the final resulting filename.
@@ -361,7 +361,7 @@ class BatchRenamer : public QObject {
         KRenameFile::List* m_files;       ///< The list of files to rename and the resulting renamed filenames
         ERenameMode        m_renameMode;  ///< The rename mode specifies if files are renamed, copied or moved (or linked)
         bool               m_overwrite;   ///< Overwrite existing files
-        KUrl               m_destination; ///< Destination directory for copy, move and link
+        QUrl               m_destination; ///< Destination directory for copy, move and link
 
         QList<TReplaceItem> m_replace;    ///< List of strings for find and replace
 

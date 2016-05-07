@@ -129,8 +129,8 @@ void BatchRenamer::processFilenames()
         {
             (*m_files)[i].setDstDirectory( (*m_files)[i].srcDirectory() );
             
-            KUrl url = (*m_files)[i].srcUrl();
-            url.setFileName( QString::null );
+            QUrl url = (*m_files)[i].srcUrl();
+            url = url.adjusted(QUrl::RemoveFilename);
             
             (*m_files)[i].setDstUrl( url );
             
@@ -200,7 +200,7 @@ void BatchRenamer::processFilenames()
 void BatchRenamer::processFiles( ProgressDialog* p )
 {
     int     errors = 0;
-    KUrl    dest   = (*m_files)[0].dstUrl();
+    QUrl    dest   = (*m_files)[0].dstUrl();
     // TODO: error handling if dest is empty
     
     // Give the user some information...
@@ -215,21 +215,21 @@ void BatchRenamer::processFiles( ProgressDialog* p )
             p->print( i18n("Input files will be renamed.") );
             break;
         case eRenameMode_Copy:
-            p->print( i18n("Files will be copied to: %1", dest.prettyUrl() ) );
+            p->print( i18n("Files will be copied to: %1", dest.toDisplayString(QUrl::PreferLocalFile) ) );
             break;
         case eRenameMode_Move:
-            p->print( i18n("Files will be moved to: %1", dest.prettyUrl() ) );
+            p->print( i18n("Files will be moved to: %1", dest.toDisplayString(QUrl::PreferLocalFile) ) );
             break;
         case eRenameMode_Link:
-            p->print( i18n("Symbolic links will be created in: %1", dest.prettyUrl() ) );
+            p->print( i18n("Symbolic links will be created in: %1", dest.toDisplayString(QUrl::PreferLocalFile) ) );
             break;
     }
 
     for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++) 
     {
-        KUrl    dstUrl    = this->buildDestinationUrl( (*m_files)[i] );
+        QUrl    dstUrl    = this->buildDestinationUrl( (*m_files)[i] );
 
-        //p->print( QString( "%1 -> %2" ).arg( (*m_files)[i].srcUrl().prettyUrl() ).arg( dstUrl.prettyUrl() ) );
+        //p->print( QString( "%1 -> %2" ).arg( (*m_files)[i].srcUrl().prettyUrl() ).arg( dstUrl.toDisplayString() ) );
         p->setProgress( i + 1 );
 
         if( p->wasCancelled() )
@@ -240,10 +240,10 @@ void BatchRenamer::processFiles( ProgressDialog* p )
 
         KIO::JobFlags flags  = (m_overwrite ? KIO::Overwrite : KIO::DefaultFlags) | KIO::HideProgressInfo;
         KIO::Job*     job    = NULL;
-        const KUrl &  srcUrl =  (*m_files)[i].srcUrl();
+        const QUrl &srcUrl =  (*m_files)[i].srcUrl();
         if( srcUrl == dstUrl ) 
         {
-            p->warning( i18n("Cannot rename: source and target filename are equal: %1", srcUrl.prettyUrl()) );
+            p->warning( i18n("Cannot rename: source and target filename are equal: %1", srcUrl.toDisplayString(QUrl::PreferLocalFile)) );
             //(*m_files)[i].setError( 1 );
             //errors++;
             continue;
@@ -264,7 +264,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
                 if( !srcUrl.isLocalFile() ) 
                 {
                     // We can only do symlinks to local urls
-                    p->error( i18n("Cannot create symlink to non-local URL: %1", srcUrl.prettyUrl()) );
+                    p->error( i18n("Cannot create symlink to non-local URL: %1", srcUrl.toDisplayString()) );
                     (*m_files)[i].setError( 1 );
                     errors++;
                 }
@@ -277,7 +277,9 @@ void BatchRenamer::processFiles( ProgressDialog* p )
 
         if( job && !NetAccess::synchronousRun( job, p ) ) 
         {
-            p->error( i18n("Error renaming %2 (to %1)", dstUrl.prettyUrl(), srcUrl.prettyUrl()) );
+            p->error( i18n("Error renaming %2 (to %1)",
+                           dstUrl.toDisplayString(QUrl::PreferLocalFile),
+                           srcUrl.toDisplayString(QUrl::PreferLocalFile)) );
             (*m_files)[i].setError( 1 );
             errors++;
         } 
@@ -373,7 +375,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
 void BatchRenamer::undoFiles( ProgressDialog* p )
 {
     int     errors = 0;
-    KUrl    dest   = (*m_files)[0].dstUrl();
+    QUrl    dest   = (*m_files)[0].dstUrl();
     
     // Give the user some information...
     p->setProgressTotalSteps( m_files->count() );
@@ -383,9 +385,9 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
 
     for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++) 
     {
-        KUrl dstUrl = this->buildDestinationUrl( (*m_files)[i] );
+        QUrl dstUrl = this->buildDestinationUrl( (*m_files)[i] );
 
-        //p->print( QString( "%1 -> %2" ).arg( (*m_files)[i].srcUrl().prettyUrl() ).arg( dstUrl.prettyUrl() ) );
+        //p->print( QString( "%1 -> %2" ).arg( (*m_files)[i].srcUrl().prettyUrl() ).arg( dstUrl.toDisplayString() ) );
         p->setProgress( i + 1 );
 
         if( p->wasCancelled() )
@@ -411,7 +413,7 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
 
         if( job && !NetAccess::synchronousRun( job, p ) ) 
         {
-            p->error( i18n("Error during undoing %1", dstUrl.prettyUrl()) );
+            p->error( i18n("Error during undoing %1", dstUrl.toDisplayString(QUrl::PreferLocalFile)) );
             (*m_files)[i].setError( 1 );
             errors++;
         } 
@@ -794,9 +796,9 @@ void BatchRenamer::work( ProgressDialog*  )
 #endif // 0
 }
 
-const KUrl BatchRenamer::buildDestinationUrl( const KRenameFile & file ) const
+const QUrl BatchRenamer::buildDestinationUrl( const KRenameFile & file ) const
 {
-    KUrl    dstUrl    = file.dstUrl();
+    QUrl    dstUrl    = file.dstUrl();
     QString directory = file.dstDirectory();
     QString filename  = file.dstFilename();
     QString extension = file.dstExtension();
@@ -811,8 +813,7 @@ const KUrl BatchRenamer::buildDestinationUrl( const KRenameFile & file ) const
     if( !manual.isNull() )
         filename = manual;
 
-    dstUrl.setDirectory( directory );
-    dstUrl.setFileName( filename );
+    dstUrl.setPath(directory + '/' +  filename );
     
     return dstUrl;
 }
@@ -1189,14 +1190,15 @@ void BatchRenamer::createMissingSubDirs( const KRenameFile & file, ProgressDialo
         // create the missing subdir now
         int i = 0;
         QString d = directories.section( "/", i, i, QString::SectionSkipEmpty );
-        KUrl url = file.dstUrl();            
+        QUrl url = file.dstUrl();            
         while( !d.isEmpty() ) {
             // it is important to unescape here
             // to support dirnames containing "&" or 
             // similar tokens
-            url.addPath( unEscape( d ) );
+            url = url.adjusted(QUrl::StripTrailingSlash);
+            url.setPath(url.path() + '/' + ( unEscape( d ) ));
             if( !KIO::NetAccess::exists( url, true, p ) && !KIO::NetAccess::mkdir( url, p ) ) {
-                p->error( i18n("Cannot create directory %1", url.prettyUrl()) );
+                p->error( i18n("Cannot create directory %1", url.toDisplayString(QUrl::PreferLocalFile)) );
             }
 
             i++;

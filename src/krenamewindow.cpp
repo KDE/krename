@@ -451,7 +451,7 @@ void KRenameWindow::setRenameMode( ERenameMode eMode )
     emit renameModeChanged( eMode );
 }
 
-void KRenameWindow::setDestinationUrl( const KUrl & url )
+void KRenameWindow::setDestinationUrl( const QUrl &url )
 {
     m_pageDests->urlrequester->setUrl( url );
 }
@@ -475,7 +475,7 @@ void KRenameWindow::setPreviewModel( KRenamePreviewModel* model )
     m_pageFilename->listPreview->setModel( model );
 }
 
-const KUrl KRenameWindow::destinationUrl() const
+const QUrl KRenameWindow::destinationUrl() const
 {
     return m_pageDests->urlrequester->url();
 }

@@ -21,7 +21,7 @@
 #include "plugin.h"
 #include "ui_dirsortpluginwidget.h"
 
-#include <KUrl>
+#include <QUrl>
 
 class DirSortPlugin : public Plugin {
     public:
@@ -115,7 +115,7 @@ private:
      *
      * \returns the URL of the new subdirectory.
      */
-    KUrl createNewSubdirectory() const;
+    QUrl createNewSubdirectory() const;
     
 protected:
     int m_dirCounter;
@@ -123,8 +123,8 @@ protected:
     int m_filesPerDir;
     int m_digits;
     
-    KUrl m_baseDirectory;
-    KUrl m_currentDirectory;
+    QUrl m_baseDirectory;
+    QUrl m_currentDirectory;
     
     Ui::DirSortPluginWidget* m_widget;
     QStringList m_emptyList;

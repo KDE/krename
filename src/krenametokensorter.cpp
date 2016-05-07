@@ -91,9 +91,11 @@ bool descendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile
 
 bool numericKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ) 
 {
-    KUrl url1 = file1.srcUrl();
-    KUrl url2 = file2.srcUrl();
-    if( url1.directory() != url2.directory() )
+    QUrl url1 = file1.srcUrl();
+    QUrl url2 = file2.srcUrl();
+    QString directory1 = url1.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).path();
+    QString directory2 = url2.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).path();
+    if( directory1 != directory2 )
     {
         // not in the same directory so do lexical comparison
         return url1 < url2;

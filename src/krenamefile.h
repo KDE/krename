@@ -21,7 +21,7 @@
 #include <QVector>
 
 #include <kfileitem.h>
-#include <kurl.h>
+#include <QUrl>
 #include <QPixmap>
 
 #include <kio/pixmaploader.h>
@@ -54,7 +54,7 @@ class KRenameFile {
         QString extension;
         QString directory;
         
-        KUrl    url;
+        QUrl    url;
 
         const TFileDescription & operator=( const TFileDescription & rhs ) 
         {
@@ -84,20 +84,6 @@ class KRenameFile {
     }
 
     /** Construct a new KRenameFile from an url.
-     *  
-     *  The url will be tested for existance
-     *  and isValid() returns only true
-     *  if the url is existing.
-     *
-     *  \param src an url of a file or directory
-     *  \param eSplitMode splitmode which is used to separate
-     *                    filename and extension
-     *  \param dot dot to use as separator for eSplitMode_CustomDot
-     *  \see isValid()
-     */
-    KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int dot );
-
-    /** Construct a new KRenameFile from an url.
      *
      *  The url is expected to exist and is not 
      *  tested for existance. This is much faster than
@@ -110,7 +96,7 @@ class KRenameFile {
      *                    filename and extension
      *  \param dot dot to use as separator for eSplitMode_CustomDot
      */
-    KRenameFile( const KUrl & src, bool directory, ESplitMode eSplitMode, unsigned int dot );
+    KRenameFile( const QUrl &src, bool directory, ESplitMode eSplitMode, unsigned int dot );
 
     /** Construct a new KRenameFile form a KFileItem which is faster
      *  than construction from an URL.
@@ -153,7 +139,7 @@ class KRenameFile {
      */
     inline const QString toString() const
     {
-        return m_src.url.prettyUrl();
+        return m_src.url.toDisplayString(QUrl::PreferLocalFile);
     }        
 
     /** Get a preview icon of the KRenameFile
@@ -280,7 +266,7 @@ class KRenameFile {
         return (m_overrideDir.isNull() ? m_src.directory : m_overrideDir);
     }
     
-    const KUrl srcUrl() const; 
+    const QUrl srcUrl() const; 
     
     inline void setDstFilename( const QString & filename ) 
     {
@@ -312,12 +298,12 @@ class KRenameFile {
         return m_dst.directory;
     }
     
-    inline void setDstUrl( const KUrl & url ) 
+    inline void setDstUrl( const QUrl &url ) 
     {
         m_dst.url = url;
     }
 
-    inline const KUrl & dstUrl() const 
+    inline const QUrl &dstUrl() const 
     {
         return m_dst.url;
     }
@@ -350,7 +336,7 @@ class KRenameFile {
     static int getDefaultIconSize();
 
  private:
-    void initFileDescription( TFileDescription & rDescription, const KUrl & url, ESplitMode eSplitMode, unsigned int dot ) const;
+    void initFileDescription( TFileDescription & rDescription, const QUrl &url, ESplitMode eSplitMode, unsigned int dot ) const;
 
     /** Load a preview icon for this KRenameFile object
      *  using KDEs preview loading mechanism.

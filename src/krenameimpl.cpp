@@ -166,7 +166,7 @@ void KRenameImpl::setupSlots()
     connect( m_window, SIGNAL(showTokenHelpDialog(QLineEdit*)),SLOT(slotTokenHelpDialog(QLineEdit*)));
 }
 
-void KRenameImpl::addFileOrDir( const KUrl & url )
+void KRenameImpl::addFileOrDir( const QUrl &url )
 {
     KRenameFile       item( url, m_lastSplitMode, m_lastDot );
     KRenameFile::List list;
@@ -178,10 +178,10 @@ void KRenameImpl::addFileOrDir( const KUrl & url )
     this->slotUpdateCount();
 }
 
-void KRenameImpl::addFilesOrDirs( const KUrl::List & list, const QString & filter, 
+void KRenameImpl::addFilesOrDirs( const QList<QUrl> & list, const QString & filter, 
                                   bool recursively, bool dirsWithFiles, bool dirsOnly, bool hidden )
 {
-    KUrl::List::ConstIterator it   = list.begin();
+    QList<QUrl>::ConstIterator it   = list.begin();
     
     while( it != list.end() )
     {
@@ -228,12 +228,12 @@ void KRenameImpl::parseCmdLineOptions()
         QTimer::singleShot( 0, this, SLOT( selfTest() ) );
 
     // Add all recursive directoris
-    KUrl::List recursiveList;
+    QList<QUrl> recursiveList;
     QStringList optlist = args->getOptionList ( "r" );
     for (QStringList::ConstIterator it=optlist.begin(); it!=optlist.end(); ++it)
     {
 
-        KUrl url;
+        QUrl url;
         url.setPath( *it );
 
         qDebug("Adding recursive: %s", (*it).toUtf8().data());
@@ -249,7 +249,7 @@ void KRenameImpl::parseCmdLineOptions()
 
 
     // Add all files from the commandline options
-    KUrl::List list;
+    QList<QUrl> list;
     for( int i = 0; i < args->count(); i++)
         list.append( args->url( i ) );
 
@@ -283,21 +283,21 @@ void KRenameImpl::parseCmdLineOptions()
     if( !copyDir.isEmpty() )
     {
         m_window->setRenameMode( eRenameMode_Copy );
-        m_window->setDestinationUrl( KUrl( copyDir ) );
+        m_window->setDestinationUrl( QUrl( copyDir ) );
     }
 
     QString moveDir = args->getOption( "move" );
     if( !moveDir.isEmpty() )
     {
         m_window->setRenameMode( eRenameMode_Move );
-        m_window->setDestinationUrl( KUrl( moveDir ) );
+        m_window->setDestinationUrl( QUrl( moveDir ) );
     }
 
     QString linkDir = args->getOption( "link" );
     if( !linkDir.isEmpty() )
     {
         m_window->setRenameMode( eRenameMode_Link );
-        m_window->setDestinationUrl( KUrl( linkDir ) );
+        m_window->setDestinationUrl( QUrl( linkDir ) );
     }
 
 /*        
@@ -354,7 +354,7 @@ void KRenameImpl::parseCmdLineOptions()
 void KRenameImpl::slotAddFiles()
 {
     FileDialogExtWidget* widget = new FileDialogExtWidget();
-    KFileDialog dialog( KUrl("kfiledialog://krename"), 
+    KFileDialog dialog( QUrl("kfiledialog://krename"), 
                         i18n("*|All files and directories"), 
                         m_window, widget );
     dialog.setOperationMode( KFileDialog::Opening );
@@ -569,19 +569,19 @@ void KRenameImpl::slotStart()
     progress->print( i18n("Starting conversion of %1 files.", m_vector.count()) );
 
     // Get some properties from the gui and initialize BatchRenamer
-    const KUrl & destination = m_window->destinationUrl();
+    const QUrl &destination = m_window->destinationUrl();
     if( m_renamer.renameMode() != eRenameMode_Rename && 
         !KIO::NetAccess::exists( destination, true, NULL ) )
     {
         int m = KMessageBox::warningContinueCancel( m_window, i18n("The directory %1 does not exist. "
                                                                    "Do you want KRename to create it for you?",  
-                                                                       destination.prettyUrl() ) );
+                                                                       destination.toDisplayString(QUrl::PreferLocalFile) ) );
         if( m == KMessageBox::Cancel )
             return;
 
         if( !KIO::NetAccess::mkdir( destination, NULL ) )
         {
-            KMessageBox::error( m_window, i18n("The directory %1 could not be created.").arg( destination.prettyUrl() ) );
+            KMessageBox::error( m_window, i18n("The directory %1 could not be created.").arg( destination.toDisplayString(QUrl::PreferLocalFile) ) );
             return;
         }
     }

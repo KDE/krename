@@ -118,7 +118,7 @@ QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & f
     else if( token == "second" )
         return tmp.sprintf("%0*i", 2, t.second() );
     else {
-        const KUrl & url = b->files()->at( index ).srcUrl();
+        const QUrl &url = b->files()->at( index ).srcUrl();
         KIO::UDSEntry entry;
         KIO::NetAccess::stat( url, entry, NULL );
         KFileItem item( entry, url );

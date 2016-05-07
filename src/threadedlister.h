@@ -39,7 +39,7 @@ class ThreadedLister : public QObject
 {
     Q_OBJECT
     public:
-        ThreadedLister( const KUrl & dirname, QWidget* cache, KRenameModel* model );
+        ThreadedLister( const QUrl &dirname, QWidget* cache, KRenameModel* model );
         ~ThreadedLister();
                 
         inline void start() { this->run(); }
@@ -76,7 +76,7 @@ class ThreadedLister : public QObject
     private:        
         static QMutex     s_mutex; ///< Mutex assuring that only one thread at a time will work on m_model
         
-        KUrl              m_dirname;
+        QUrl              m_dirname;
         QString           m_filter;
         bool              m_listHiddenFiles;
         bool              m_listRecursive;

@@ -98,7 +98,7 @@ QString DirSortPlugin::processFile( BatchRenamer* b, int index, const QString &,
             m_valid = false;
             return this->name() + 
                 i18n(": The output directory %1 does not exist.", 
-                     m_baseDirectory.prettyUrl() ); 
+                     m_baseDirectory.toDisplayString(QUrl::PreferLocalFile) );
         }
         else 
         {
@@ -119,17 +119,18 @@ QString DirSortPlugin::processFile( BatchRenamer* b, int index, const QString &,
         m_currentDirectory = createNewSubdirectory();
     }
 
-    KUrl srcUrl = b->buildDestinationUrl( (*b->files())[index] );
-    KUrl dstUrl = m_currentDirectory;
-    dstUrl.addPath( srcUrl.fileName() );
+    QUrl srcUrl = b->buildDestinationUrl( (*b->files())[index] );
+    QUrl dstUrl = m_currentDirectory;
+    dstUrl = dstUrl.adjusted(QUrl::StripTrailingSlash);
+    dstUrl.setPath(dstUrl.path() + '/' + ( srcUrl.fileName() ));
     KIO::JobFlags flags = KIO::DefaultFlags | KIO::HideProgressInfo;
     KIO::Job* job = KIO::file_move( srcUrl, dstUrl, -1, flags );
     m_fileCounter++;
     if( m_valid && job && !KIO::NetAccess::synchronousRun( job, m_widget->spinStart ) ) 
     {
         errorMsg = i18n("Error renaming %2 (to %1)", 
-                        dstUrl.prettyUrl(), 
-                        srcUrl.prettyUrl());
+                        dstUrl.toDisplayString(QUrl::PreferLocalFile),
+                        srcUrl.toDisplayString(QUrl::PreferLocalFile));
     } 
 
     return errorMsg;
@@ -145,17 +146,18 @@ const QStringList & DirSortPlugin::help() const
     return m_emptyList;
 }
 
-KUrl DirSortPlugin::createNewSubdirectory() const
+QUrl DirSortPlugin::createNewSubdirectory() const
 {
-    KUrl url = m_baseDirectory;
+    QUrl url = m_baseDirectory;
 
     QString dir;
     dir.sprintf("%0*i", m_digits, m_dirCounter );
-    url.addPath( dir );
+    url = url.adjusted(QUrl::StripTrailingSlash);
+    url.setPath(url.path() + '/' + ( dir ));
 
     if( !KIO::NetAccess::mkdir( url, m_widget->spinStart ) ) {
         KMessageBox::error( m_widget->spinStart, 
-                            i18n("Cannot create directory %1", url.prettyUrl()) );
+                            i18n("Cannot create directory %1", url.toDisplayString(QUrl::PreferLocalFile)) );
     }
     
     return url;    

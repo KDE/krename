@@ -67,7 +67,7 @@ QString DateTimePlugin::processFile( BatchRenamer*, int, const QString & filenam
                 m_widget->spinMinute->value(),
                 m_widget->spinSecond->value() );
 
-    if( !KUrl( filename ).isLocalFile() ) 
+    if( !QUrl( filename ).isLocalFile() ) 
         return i18n("DateTimePlugin works only with local files. %1 is a remote file.", filename);
 
     if( bModification || bAccess ) 

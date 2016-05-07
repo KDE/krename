@@ -124,7 +124,7 @@ class KRenameWindow : public KMainWindow {
      * @param url destination url for eRenameMode_Copy, 
      * eRenameMode_Move and eRenameMode_Link
      */
-    void setDestinationUrl( const KUrl & url );
+    void setDestinationUrl( const QUrl &url );
 
     /** Reset the display of the internal file list
      */
@@ -145,7 +145,7 @@ class KRenameWindow : public KMainWindow {
     /** 
      * @returns the destinationUrl selected by the user
      */
-    const KUrl destinationUrl() const;
+    const QUrl destinationUrl() const;
 
     /**
      * \returns a list of all file indexes that are selected

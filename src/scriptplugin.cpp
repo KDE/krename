@@ -294,7 +294,7 @@ void ScriptPlugin::slotLoad()
 	return;
     }
 
-    KFileDialog dialog( KUrl(ScriptPlugin::s_pszFileDialogLocation), 
+    KFileDialog dialog( QUrl(ScriptPlugin::s_pszFileDialogLocation), 
 			i18n("*|All files and directories"), 
 			m_parent );
     dialog.setOperationMode( KFileDialog::Opening );
@@ -329,7 +329,7 @@ void ScriptPlugin::slotLoad()
 
 void ScriptPlugin::slotSave()
 {
-    KFileDialog dialog( KUrl(ScriptPlugin::s_pszFileDialogLocation), 
+    KFileDialog dialog( QUrl(ScriptPlugin::s_pszFileDialogLocation), 
 			i18n("*|All files and directories"), 
 			m_parent );
     dialog.setOperationMode( KFileDialog::Saving );
@@ -337,11 +337,11 @@ void ScriptPlugin::slotSave()
 
     if( dialog.exec() == QDialog::Accepted ) 
     {
-	const KUrl url = dialog.selectedUrl();
+	const QUrl url = dialog.selectedUrl();
 	if( KIO::NetAccess::exists( url, KIO::NetAccess::DestinationSide, m_parent ) )
 	{
 	    int m = KMessageBox::warningYesNo( m_parent, i18n("The file %1 already exists. "
-							      "Do you want to overwrite it?", url.prettyUrl()) );
+                                  "Do you want to overwrite it?", url.toDisplayString(QUrl::PreferLocalFile)) );
 
 	    if( m == KMessageBox::No )
 		return;
