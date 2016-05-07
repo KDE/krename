@@ -48,8 +48,10 @@
 
 #include <QStringListModel>
 #include <QTimer>
+#include <QCommandLineParser>
+#include <QDebug>
 
-KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list )
+KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list, QCommandLineParser *commandLine )
     : QObject( (QObject*)window ), m_window( window ),
       m_lastSplitMode( eSplitMode_LastDot ), m_lastDot( 0 ),
       m_runningThreadedListersCount( 0 )
@@ -74,7 +76,10 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list 
 
     loadConfig();
 
-    parseCmdLineOptions();
+    if (commandLine) {
+        parseCmdLineOptions(commandLine);
+    }
+
     slotUpdateCount();
 
     connect( qApp, SIGNAL( aboutToQuit() ), this, SLOT( saveConfig() ) );
@@ -86,7 +91,7 @@ KRenameImpl::~KRenameImpl()
     delete m_model;
 }
 
-QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list, bool loadprofile )
+QWidget* KRenameImpl::launch(const QRect & rect, const KRenameFile::List & list, QCommandLineParser *commandLine )
 {
     KSharedConfigPtr config = KSharedConfig::openConfig();
 
@@ -100,7 +105,7 @@ QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list
 
     KRenameWindow* w  = new KRenameWindow( NULL );
     //KRenameImpl* impl = new KRenameImpl( w, list );
-    new KRenameImpl( w, list );
+    new KRenameImpl( w, list, commandLine );
 	// Windows shows KRename otherwise outside of the visible
 	// screen area
 	if( !rect.isNull() )
@@ -219,24 +224,20 @@ void KRenameImpl::addFilesOrDirs( const QList<QUrl> & list, const QString & filt
     this->slotUpdateCount();
 }
 
-void KRenameImpl::parseCmdLineOptions()
+void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
 {
     bool gotFilenames = false;
-    KCmdLineArgs* args = KCmdLineArgs::parsedArgs();
 
-    if( args->isSet( "test" ) )
+    if( parser->isSet( "test" ) )
         QTimer::singleShot( 0, this, SLOT( selfTest() ) );
 
     // Add all recursive directoris
     QList<QUrl> recursiveList;
-    QStringList optlist = args->getOptionList ( "r" );
-    for (QStringList::ConstIterator it=optlist.begin(); it!=optlist.end(); ++it)
-    {
+    QStringList directories = parser->values ( "r" );
+    foreach (const QString directory, directories) {
+        QUrl url = QUrl::fromUserInput(directory, QDir::currentPath());
 
-        QUrl url;
-        url.setPath( *it );
-
-        qDebug("Adding recursive: %s", (*it).toUtf8().data());
+        qDebug() << "Adding recursive:" << directory;
         recursiveList.append( url  );
     }
 
@@ -250,8 +251,9 @@ void KRenameImpl::parseCmdLineOptions()
 
     // Add all files from the commandline options
     QList<QUrl> list;
-    for( int i = 0; i < args->count(); i++)
-        list.append( args->url( i ) );
+    foreach (const QString &url, parser->positionalArguments()) {
+        list.append(QUrl::fromUserInput(url, QDir::currentPath()));
+    }
 
     if( !list.isEmpty() ) 
     {
@@ -263,7 +265,7 @@ void KRenameImpl::parseCmdLineOptions()
     /*
     // load the profile first, so that we do not overwrite other
     // commandline settings
-    QCString templ = args->getOption( "profile" );
+    QCString templ = parser.value( "profile" );
     if( !templ.isEmpty() )
     {
         m_hasCommandlineProfile = true;
@@ -271,29 +273,29 @@ void KRenameImpl::parseCmdLineOptions()
     }
     */
 
-    QString templ = args->getOption( "template" );
+    QString templ = parser->value( "template" );
     if( !templ.isEmpty() )
         m_window->setFilenameTemplate( templ, false );
 
-    QString extension = args->getOption( "extension" );
+    QString extension = parser->value( "extension" );
     if( !extension.isEmpty() ) 
         m_window->setExtensionTemplate( extension, false );
 
-    QString copyDir = args->getOption( "copy" );
+    QString copyDir = parser->value( "copy" );
     if( !copyDir.isEmpty() )
     {
         m_window->setRenameMode( eRenameMode_Copy );
         m_window->setDestinationUrl( QUrl( copyDir ) );
     }
 
-    QString moveDir = args->getOption( "move" );
+    QString moveDir = parser->value( "move" );
     if( !moveDir.isEmpty() )
     {
         m_window->setRenameMode( eRenameMode_Move );
         m_window->setDestinationUrl( QUrl( moveDir ) );
     }
 
-    QString linkDir = args->getOption( "link" );
+    QString linkDir = parser->value( "link" );
     if( !linkDir.isEmpty() )
     {
         m_window->setRenameMode( eRenameMode_Link );
@@ -301,7 +303,7 @@ void KRenameImpl::parseCmdLineOptions()
     }
 
 /*        
-    QCStringList uselist = args->getOptionList ( "use-plugin" );
+    QCStringList uselist = parser.values ( "use-plugin" );
     if( !uselist.isEmpty() ) 
     {
         for(unsigned int i = 0; i < uselist.count(); i++ )
@@ -320,10 +322,10 @@ void KRenameImpl::parseCmdLineOptions()
     }
 
 */
-    bool startnow = args->isSet( "start" );
+    bool startnow = parser->isSet( "start" );
 
     // Free some memory
-    args->clear();      
+          
 
     
     if( gotFilenames )

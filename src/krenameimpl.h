@@ -35,6 +35,7 @@ class KRenameWindow;
 class ThreadedLister;
 class PluginLoader;
 class QLineEdit;
+class QCommandLineParser;
 
 class KRenameImpl : public QObject {
     Q_OBJECT
@@ -42,7 +43,7 @@ class KRenameImpl : public QObject {
  public: 
     ~KRenameImpl();
 
-    static QWidget* launch( const QRect & rect, const KRenameFile::List & list, bool loadprofile = true );
+    static QWidget* launch( const QRect & rect, const KRenameFile::List & list, QCommandLineParser *commandLine = 0 );
 
  public slots:
     /** Updates the preview of the filenames after renaming
@@ -50,7 +51,7 @@ class KRenameImpl : public QObject {
     void slotUpdatePreview();
 
  private:
-    KRenameImpl( KRenameWindow* window, const KRenameFile::List & list );
+    KRenameImpl(KRenameWindow* window, const KRenameFile::List & list , QCommandLineParser *commandLine = 0);
 
     /** Creates all menu items and actions.
      */
@@ -93,7 +94,7 @@ class KRenameImpl : public QObject {
 
     /** Parses commandline options
      */
-    void parseCmdLineOptions();
+    void parseCmdLineOptions(QCommandLineParser *parser);
 
     /** Load configuration
      */
