@@ -402,7 +402,7 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
                 break;
             case eRenameMode_Link:
                 // In case of link delete created file
-                job = KIO::file_delete( dstUrl, false );
+                job = KIO::file_delete( dstUrl, KIO::HideProgressInfo );
                 break;
             case eRenameMode_Copy: // no undo possible
                 // TODO: Maybe we should delete the created files
