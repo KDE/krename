@@ -17,6 +17,8 @@ find_package(KF5 REQUIRED COMPONENTS KDELibs4Support I18n JS)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} 
                       ${CMAKE_SOURCE_DIR}/cmake/modules )
 
+# To catch potential errors when porting from KUrl
+add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 SET(KRENAME_VERSION "4.0.9")
 
