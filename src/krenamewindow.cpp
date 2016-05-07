@@ -160,7 +160,7 @@ void KRenameWindow::loadConfig()
     m_pageFilename->comboPrefixCustom->loadConfig();
     m_pageFilename->comboSuffixCustom->loadConfig();
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup groupGui = config->group( QString("GUISettings") );
 
     int width = groupGui.readEntry( "Column0", QVariant(this->previewColumnWidth( 0 )) ).toInt();
@@ -181,7 +181,7 @@ void KRenameWindow::saveConfig()
     m_pageFilename->comboPrefixCustom->saveConfig();
     m_pageFilename->comboSuffixCustom->saveConfig();
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup groupGui = config->group( QString("GUISettings") );
 
     groupGui.writeEntry( "Column0", this->previewColumnWidth( 0 ) );

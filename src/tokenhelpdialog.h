@@ -21,6 +21,7 @@
 #include <kdialog.h>
 
 #include "ui_tokenhelpwidget.h"
+#include <KTreeWidgetSearchLineWidget>
 
 class QLineEdit;
 class QTreeWidgetItem;

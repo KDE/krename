@@ -21,7 +21,9 @@
 #include <kdialog.h>
 #include "ui_customfilenamedlg.h"
 #include "batchrenamer.h"
-
+#include <KConfigGroup>
+#include <KSharedConfig>
+ 
 class KRenameFile;
 
 class CustomDialog : public KDialog {

@@ -23,6 +23,9 @@
 
 #include <kurl.h>
 
+#include <KConfigGroup>
+#include <KSharedConfig>
+
 #include "batchrenamer.h"
 #include "krenamefile.h"
 

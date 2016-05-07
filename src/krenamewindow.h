@@ -22,6 +22,7 @@
 #include "batchrenamer.h"
 
 #include <QHash>
+#include <KTreeWidgetSearchLine>
 
 class KRenameModel;
 class KRenamePreviewModel;

@@ -77,6 +77,21 @@ KRenameFile::KRenameFile( const KUrl & src, ESplitMode eSplitMode, unsigned int 
     initFileDescription( m_src, src, eSplitMode, dot );
 }
 
+KRenameFile::KRenameFile( const QUrl & src, ESplitMode eSplitMode, unsigned int dot )
+    : m_bValid( false ), m_error( 0 ), m_manualMode( eManualChangeMode_None )
+{
+    KIO::UDSEntry entry;
+    KIO::NetAccess::stat( src, entry, NULL );
+    KFileItem file( entry, src );
+
+    m_bValid     = file.isReadable();
+    m_bDirectory = file.isDir();
+
+    m_fileItem = file;
+    initFileDescription( m_src, src, eSplitMode, dot );
+}
+
+
 KRenameFile::KRenameFile( const KUrl & src, bool directory, ESplitMode eSplitMode, unsigned int dot )
     : m_bDirectory( directory ), m_bValid( true ), m_error( 0 ), m_manualMode( eManualChangeMode_None )
 {

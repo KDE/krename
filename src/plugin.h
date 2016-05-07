@@ -21,6 +21,11 @@
 #include <QPixmap>
 #include <QString>
 
+#include <KConfigGroup>
+#include <KSharedConfig>
+
+#include <KUrl>
+
 class BatchRenamer;
 class KConfigGroup;
 class PluginLoader;

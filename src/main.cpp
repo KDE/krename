@@ -28,6 +28,10 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 
+#include <k4aboutdata.h>
+
+#include <klocalizedstring.h>
+
 // Own includes
 #include "krenameimpl.h"
 
@@ -41,6 +45,7 @@
 
 int main(int argc, char *argv[])
 {
+    KLocalizedString::setApplicationDomain("krename");
     KCmdLineOptions options;
     options.add( "+[file]", ki18n("file will be added to the list of files for renaming") );
     options.add( "r +[dir]", ki18n("add directory recursively") );
@@ -55,7 +60,7 @@ int main(int argc, char *argv[])
     options.add( "test", ki18n("start KRename's selftest (developers only)") );
     // This option was never implemented in the KDE4 version:
     //options.add( "previewitems <num>",  ki18n("only show <num> preview items") );
-
+/*
     KAboutData aboutData( "krename", "krename", ki18n("KRename"), VERSION, ki18n(
                               "<qt><p>KRename is a batch file renamer which can rename a "
                               "list of files based on a set of expressions.</p>"
@@ -65,6 +70,16 @@ int main(int argc, char *argv[])
                           KAboutData::License_GPL, ki18n("KRename Build:" __DATE__ " " __TIME__ )
                           , ki18n("(c) 2001-2012, Dominik Seichter\n"),
                           "http://www.krename.net", "domseichter@web.de" );
+    */
+    K4AboutData aboutData("krename", 0, ki18n("KRename"), VERSION, ki18n(
+                              "<qt><p>KRename is a batch file renamer which can rename a "
+                              "list of files based on a set of expressions.</p>"
+                              "<p>If you like KRename you may want to support it. "
+                              "Testing, bug fixes and feature requests are as welcome "
+                              "as financial support (everybody needs money ;). See help files for details.</p></qt>" ), K4AboutData::License_GPL_V3,
+                         ki18n("(c) 2001-2012, Dominik Seichter\n"), KLocalizedString(), 
+                          "http://www.krename.net");
+    
 
     aboutData.addAuthor( ki18n("Dominik Seichter"), ki18n("developer and maintainer"), "domseichter@web.de",
                          "http://www.krename.net" );

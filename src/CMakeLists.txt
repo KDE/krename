@@ -94,7 +94,7 @@ IF(FREETYPE_FOUND)
 ENDIF(FREETYPE_FOUND)
 
 
-kde4_add_ui_files( krename_SRCS 
+ki18n_wrap_ui( krename_SRCS 
   customfilenamedlg.ui		
   datetimepluginwidget.ui
   dirsortpluginwidget.ui
@@ -118,7 +118,7 @@ kde4_add_ui_files( krename_SRCS
   )
 
 #kde4_automoc( ${krename_SRCS} )
-kde4_add_executable(krename ${krename_SRCS})
+add_executable(krename ${krename_SRCS})
 
 # find Nepomuk's libkmetadata
 find_path(KMETADATA_INCLUDE_DIR NAMES kmetadata/kmetadata.h PATHS ${KDE4_INCLUDE_DIR})
@@ -136,22 +136,20 @@ endif(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
 
 IF(EXIV2_FOUND)
   TARGET_LINK_LIBRARIES(krename 
-    ${KDE4_KDECORE_LIBS} 
-    ${KDE4_KDEUI_LIBS}
-    ${KDE4_KIO_LIBS} 
-    ${KDE4_KMETADATA}
-    ${KDE4_KJSAPI_LIBS} 
+    KF5::KDELibs4Support
+    KF5::KIOCore
+    KF5::I18n
+    KF5::JSApi
     ${TAGLIB_LIBRARIES}
     ${LIBPODOFO_LIB}
     ${FREETYPE_LIBRARIES}
     ${EXIV2_LIBRARIES} )
 ELSE(EXIV2_FOUND)
   TARGET_LINK_LIBRARIES(krename 
-    ${KDE4_KDECORE_LIBS} 
-    ${KDE4_KDEUI_LIBS}
-    ${KDE4_KIO_LIBS} 
-    ${KDE4_KMETADATA}
-    ${KDE4_KJSAPI_LIBS} 
+    KF5::KDELibs4Support
+    KF5::KIOCore
+    KF5::I18n
+    KF5::JSApi
     ${LIBPODOFO_LIB}
     ${FREETYPE_LIBRARIES}
     ${TAGLIB_LIBRARIES} )

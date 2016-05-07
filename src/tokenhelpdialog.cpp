@@ -88,8 +88,8 @@ TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
     this->setButtons( KDialog::Close | KDialog::User1 ); 
     this->setButtonText( KDialog::User1, i18n("&Insert") ); 
 
-    KPushButton* insert = this->button( KDialog::User1 );
-    KPushButton* close = this->button( KDialog::Close );
+    QPushButton* insert = this->button( KDialog::User1 );
+    QPushButton* close = this->button( KDialog::Close );
     
     m_widget.searchCategory->searchLine()->setTreeWidget( m_widget.listCategories );
     m_widget.searchToken   ->searchLine()->setTreeWidget( m_widget.listTokens );
@@ -198,7 +198,7 @@ void TokenHelpDialog::slotInsert()
 
 void TokenHelpDialog::loadConfig() 
 {
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
 
     KConfigGroup groupGui = config->group( QString("TokenHelpDialog") );
 
@@ -230,7 +230,7 @@ void TokenHelpDialog::loadConfig()
 
 void TokenHelpDialog::saveConfig() 
 {
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
 
     KConfigGroup groupGui = config->group( QString("TokenHelpDialog") );
 

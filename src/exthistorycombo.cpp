@@ -51,7 +51,7 @@ void ExtHistoryCombo::loadConfig()
     QStringList history;
     QStringList completion;
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup groupGui = config->group( QString("ExtHistoryCombo") + this->objectName() );
     
     
@@ -67,7 +67,7 @@ void ExtHistoryCombo::saveConfig()
 {
     addToHistory( currentText() );
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup groupGui = config->group( QString("ExtHistoryCombo") + this->objectName() );
     
     groupGui.writeEntry("CompletionList", this->completionObject()->items());

@@ -21,6 +21,8 @@
 #include "plugin.h"
 #include "ui_dirsortpluginwidget.h"
 
+#include <KUrl>
+
 class DirSortPlugin : public Plugin {
     public:
     DirSortPlugin( PluginLoader* loader );

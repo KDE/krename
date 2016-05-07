@@ -71,14 +71,14 @@ CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
     m_widget.lineEditCustom->setText( krenameFilename );
     slotEnableControls();
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup group = config->group( QString("CustomDialogGroup") );
     this->restoreDialogSize(group);
 }
 
 CustomDialog::~CustomDialog()
 {
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup group = config->group( QString("CustomDialogGroup") );
     this->saveDialogSize(group);
 }

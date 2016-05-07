@@ -92,7 +92,7 @@
   <customwidget>
    <class>KTreeWidgetSearchLineWidget</class>
    <extends>QLineEdit</extends>
-   <header location="global" >ktreewidgetsearchline.h</header>
+   <header location="global" >KItemViews/ktreewidgetsearchlinewidget.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

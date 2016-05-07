@@ -23,6 +23,7 @@
 
 #include "ui_permissionspluginwidget.h"
 
+#include <QDialog>
 #include <QDialogButtonBox>
 
 // OS includes

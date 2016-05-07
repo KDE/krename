@@ -24,6 +24,8 @@
 #include <kurl.h>
 #include <QPixmap>
 
+#include <kio/pixmaploader.h>
+
 class KFileItem;
 
 /** An enum to describe the mode to split 
@@ -118,6 +120,9 @@ class KRenameFile {
      *                    filename and extension
      *  \param dot dot to use as separator for eSplitMode_CustomDot
      */
+    
+    KRenameFile( const QUrl & src, ESplitMode eSplitMode, unsigned int dot );
+    
     KRenameFile( const KFileItem& item, ESplitMode eSplitMode, unsigned int dot );
 
     /** Copy constructor

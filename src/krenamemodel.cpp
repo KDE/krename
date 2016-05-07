@@ -504,7 +504,7 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
     {
         const KRenameFile& file = m_vector->at(index.row());
         if( !file.manualChanges().isNull() )
-            return QVariant( Qt::blue );
+            return QVariant( QColor(Qt::blue) );
     }
     /*
       Icons are to large, so this is disabled

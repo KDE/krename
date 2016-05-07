@@ -89,7 +89,7 @@ KRenameImpl::~KRenameImpl()
 
 QWidget* KRenameImpl::launch( const QRect & rect, const KRenameFile::List & list, bool loadprofile )
 {
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
 
     KConfigGroup groupGui = config->group( QString("GUISettings") );
     bool firststart  = groupGui.readEntry( "firststart4", QVariant(true) ).toBool();
@@ -125,7 +125,7 @@ void KRenameImpl::setupActions()
     // Disabled profiles as they are not implemented right now
     //KMenu* mnuExtra    = new KMenu( i18n("E&xtras"), m_window );
 
-    KMenu* mnuHelp     = m_window->helpMenu( QString::null, true );
+    QMenu* mnuHelp     = m_window->helpMenu( QString::null, true );
 
     //KAction* actProfiles = new KAction( i18n("&Profiles..."), m_window );
 
@@ -622,7 +622,7 @@ void KRenameImpl::slotStart()
 
 void KRenameImpl::loadConfig() 
 {
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
 
     KConfigGroup groupGui = config->group( QString("GUISettings") );
     //groupGui.readEntry( "firststart4", QVariant(true) ).toBool();
@@ -673,7 +673,7 @@ void KRenameImpl::saveConfig()
 
     m_window->saveConfig();
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
 
 
     KConfigGroup groupGui = config->group( QString("GUISettings") );
