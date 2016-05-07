@@ -77,7 +77,7 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list 
     parseCmdLineOptions();
     slotUpdateCount();
 
-    connect( kapp, SIGNAL( aboutToQuit() ), this, SLOT( saveConfig() ) );
+    connect( qApp, SIGNAL( aboutToQuit() ), this, SLOT( saveConfig() ) );
 }
 
 KRenameImpl::~KRenameImpl()
