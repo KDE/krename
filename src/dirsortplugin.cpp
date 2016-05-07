@@ -93,7 +93,7 @@ QString DirSortPlugin::processFile( BatchRenamer* b, int index, const QString &,
         m_digits = m_widget->spinDigits->value();
         m_baseDirectory = m_widget->outputUrl->url();
 
-        if( !KIO::NetAccess::exists( m_baseDirectory, true, m_widget->spinStart ) ) 
+        if( !KIO::NetAccess::exists( m_baseDirectory, KIO::NetAccess::DestinationSide, m_widget->spinStart ) )
         {
             m_valid = false;
             return this->name() + 

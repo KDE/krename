@@ -573,7 +573,7 @@ void KRenameImpl::slotStart()
     // Get some properties from the gui and initialize BatchRenamer
     const QUrl &destination = m_window->destinationUrl();
     if( m_renamer.renameMode() != eRenameMode_Rename && 
-        !KIO::NetAccess::exists( destination, true, NULL ) )
+        !KIO::NetAccess::exists( destination, KIO::NetAccess::DestinationSide, NULL ) )
     {
         int m = KMessageBox::warningContinueCancel( m_window, i18n("The directory %1 does not exist. "
                                                                    "Do you want KRename to create it for you?",  

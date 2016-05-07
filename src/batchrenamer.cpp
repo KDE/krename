@@ -1197,7 +1197,7 @@ void BatchRenamer::createMissingSubDirs( const KRenameFile & file, ProgressDialo
             // similar tokens
             url = url.adjusted(QUrl::StripTrailingSlash);
             url.setPath(url.path() + '/' + ( unEscape( d ) ));
-            if( !KIO::NetAccess::exists( url, true, p ) && !KIO::NetAccess::mkdir( url, p ) ) {
+            if( !KIO::NetAccess::exists( url, KIO::NetAccess::DestinationSide, p ) && !KIO::NetAccess::mkdir( url, p ) ) {
                 p->error( i18n("Cannot create directory %1", url.toDisplayString(QUrl::PreferLocalFile)) );
             }
 
