@@ -30,7 +30,7 @@
 #include "ui_krenameplugins.h"
 #include "ui_krenamefilename.h"
 
-#include <kicon.h>
+#include <QIcon>
 #include <klocale.h>
 #include <QPushButton>
 #include <kseparator.h>
@@ -194,8 +194,8 @@ void KRenameWindow::setupGui()
 
     m_guiMode    = &tAdvancedMode;
 
-    m_buttonFinish = new QPushButton( KIcon( "dialog-ok" ),    i18n("&Finish") );
-    m_buttonClose  = new QPushButton( KIcon( "dialog-close" ), i18n("&Close") );
+    m_buttonFinish = new QPushButton( QIcon::fromTheme(QStringLiteral("dialog-ok")),    i18n("&Finish") );
+    m_buttonClose  = new QPushButton( QIcon::fromTheme(QStringLiteral("dialog-close")), i18n("&Close") );
     
     m_buttons->addButton( m_buttonFinish, QDialogButtonBox::AcceptRole );
     m_buttons->addButton( m_buttonClose,  QDialogButtonBox::RejectRole );
