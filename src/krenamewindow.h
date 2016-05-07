@@ -27,7 +27,7 @@
 class KRenameModel;
 class KRenamePreviewModel;
 
-class KPushButton;
+class QPushButton;
 class QAbstractItemView;
 class QComboBox;
 class QDialogButtonBox;
@@ -520,8 +520,8 @@ class KRenameWindow : public KMainWindow {
 
     QTabBar*          m_tabBar;    /// The tabbar to switch pages in advanced mode
 
-    KPushButton*      m_buttonClose;
-    KPushButton*      m_buttonFinish;
+    QPushButton*      m_buttonClose;
+    QPushButton*      m_buttonFinish;
 
     Ui::KRenameFiles*       m_pageFiles;
     Ui::KRenameDestination* m_pageDests;

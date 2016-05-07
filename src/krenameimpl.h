@@ -207,7 +207,7 @@ class KMyListBox;
 class KMyListView;
 class KMenuBar;
 class KPopupMenu;
-class KPushButton;
+class QPushButton;
 class KToggleAction;
 class KURL;
 class KURLRequester;
@@ -234,7 +234,7 @@ class QVGroupBox;
 class QWidget;
 
 #include <kguiitem.h>
-KPushButton* createButton( KGuiItem item, QWidget* parent );
+QPushButton* createButton( KGuiItem item, QWidget* parent );
 
 class KRenameImpl : public QObject, public KRenameDCOP {
     Q_OBJECT
@@ -396,24 +396,24 @@ class KRenameImpl : public QObject, public KRenameDCOP {
 
         bool m_hasCommandlineProfile;
 
-        KPushButton* buttonUp;
-        KPushButton* buttonDown;
-        KPushButton* buttonUp2;
-        KPushButton* buttonDown2;
-        KPushButton* buttonAdd;
-        KPushButton* buttonRemove;
-        KPushButton* buttonRemoveAll;
-        KPushButton* buttonReplace;
-        KPushButton* buttonEasyReplace;
-        KPushButton* buttonHelp;
-        KPushButton* buttonMove;
-        KPushButton* buttonCoord;
-        KPushButton* buttonNumber;
+        QPushButton* buttonUp;
+        QPushButton* buttonDown;
+        QPushButton* buttonUp2;
+        QPushButton* buttonDown2;
+        QPushButton* buttonAdd;
+        QPushButton* buttonRemove;
+        QPushButton* buttonRemoveAll;
+        QPushButton* buttonReplace;
+        QPushButton* buttonEasyReplace;
+        QPushButton* buttonHelp;
+        QPushButton* buttonMove;
+        QPushButton* buttonCoord;
+        QPushButton* buttonNumber;
         
-        KPushButton* buttonEasy1;
-        KPushButton* buttonEasy2;
-        KPushButton* buttonEasy3;
-        KPushButton* buttonEasy4;
+        QPushButton* buttonEasy1;
+        QPushButton* buttonEasy2;
+        QPushButton* buttonEasy3;
+        QPushButton* buttonEasy4;
         KComboBox* comboSort;
         
         QLabel* description;

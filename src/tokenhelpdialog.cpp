@@ -22,7 +22,7 @@
 
 #include <kapplication.h>
 #include <kiconloader.h>
-#include <kpushbutton.h>
+#include <QPushButton>
 
 #define COLUMN_PREVIEW 2
 

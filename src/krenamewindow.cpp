@@ -32,7 +32,7 @@
 
 #include <kicon.h>
 #include <klocale.h>
-#include <kpushbutton.h>
+#include <QPushButton>
 #include <kseparator.h>
 
 #include <QDialogButtonBox>
@@ -194,8 +194,8 @@ void KRenameWindow::setupGui()
 
     m_guiMode    = &tAdvancedMode;
 
-    m_buttonFinish = new KPushButton( KIcon( "dialog-ok" ),    i18n("&Finish") );
-    m_buttonClose  = new KPushButton( KIcon( "dialog-close" ), i18n("&Close") );
+    m_buttonFinish = new QPushButton( KIcon( "dialog-ok" ),    i18n("&Finish") );
+    m_buttonClose  = new QPushButton( KIcon( "dialog-close" ), i18n("&Close") );
     
     m_buttons->addButton( m_buttonFinish, QDialogButtonBox::AcceptRole );
     m_buttons->addButton( m_buttonClose,  QDialogButtonBox::RejectRole );
