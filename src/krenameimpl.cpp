@@ -16,7 +16,6 @@
  ***************************************************************************/
 
 #include "krenameimpl.h"
-#include "krenameimpl.moc"
 #include "filedialogextwidget.h"
 #include "krenamemodel.h"
 #include "krenametest.h"

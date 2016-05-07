@@ -129,5 +129,4 @@ QString DateTimePlugin::changeDateTime( const QString & filename, bool bModifica
     return QString::null;
 }
 
-#include "datetimeplugin.moc"
 #endif // _WIN32

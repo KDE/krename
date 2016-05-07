@@ -88,6 +88,3 @@ void PreviewList::slotManually()
         m_model->file( this->currentIndex().row() ).setManualChanges( manual, mode );
     }
 }
-
-#include "previewlist.moc"
-

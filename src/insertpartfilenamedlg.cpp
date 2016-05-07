@@ -111,5 +111,3 @@ void InsertPartFilenameDlg::slotUpdateKRenameCommand()
     
     m_widget.labelPreview->setText( m_command );
 }
-
-#include "insertpartfilenamedlg.moc"

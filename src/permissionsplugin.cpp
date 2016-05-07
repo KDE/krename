@@ -375,6 +375,4 @@ void PermissionsPlugin::setCurrentPermissions( int perm )
     m_curPermission = perm;
 }
 */
-
-#include "permissionsplugin.moc"
 #endif // _WIN32

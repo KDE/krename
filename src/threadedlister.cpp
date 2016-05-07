@@ -129,5 +129,3 @@ void ThreadedLister::completed()
 
     emit listerDone( this );
 }
-
-#include "threadedlister.moc"

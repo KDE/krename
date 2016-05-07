@@ -175,5 +175,3 @@ void ProgressDialog::warning( const QString & text )
 {
     this->print( text, "help-hint" );
 }
-
-#include "progressdialog.moc"

@@ -79,5 +79,3 @@ void NumberDialog::slotRemoveNumber()
 {
     delete m_widget.listSkip->takeItem( m_widget.listSkip->currentRow() );
 }
-
-#include "numberdialog.moc"

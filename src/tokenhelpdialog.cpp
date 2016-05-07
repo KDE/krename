@@ -329,7 +329,3 @@ void TokenHelpDialog::addToRecentTokens( const QString & token, const QString & 
   QString recent = token + getTokenSeparator() + help;
   m_recent << recent;
 }
-
-#include "tokenhelpdialog.moc"
-
-

@@ -1163,5 +1163,3 @@ void KRenameWindow::blockSignalsRecursive( QObject* obj, bool b )
         }
     }
 }
-
-#include "krenamewindow.moc"

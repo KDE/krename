@@ -1214,6 +1214,3 @@ void BatchRenamer::findCounterReset( int i )
 	    m_counters[z].value = m_counters[z].start - m_counters[z].step;
 	}
 }
-
-#include "batchrenamer.moc"
-

@@ -532,5 +532,3 @@ void KRenamePreviewModel::refresh()
 {
     emit reset();
 }
-
-#include "krenamemodel.moc"

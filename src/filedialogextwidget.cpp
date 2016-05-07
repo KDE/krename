@@ -62,5 +62,3 @@ void FileDialogExtWidget::enableControls()
 {
     checkHidden->setEnabled( checkRecursive->isChecked() );
 }
-
-#include "filedialogextwidget.moc"
