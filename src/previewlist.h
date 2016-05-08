@@ -21,7 +21,7 @@
 #include <QTreeView>
 
 class KRenameModel;
-class KMenu;
+class QMenu;
 
 class PreviewList : public QTreeView {
     Q_OBJECT
@@ -49,7 +49,7 @@ class PreviewList : public QTreeView {
 
  private:
     KRenameModel* m_model;
-    KMenu*        m_menu;
+    QMenu*        m_menu;
 };
 
 #endif // _PREVIEW_LIST_H_

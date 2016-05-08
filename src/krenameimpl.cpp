@@ -39,8 +39,6 @@
 #include <kconfig.h>
 #include <kiconloader.h>
 #include <kfiledialog.h>
-#include <kmenu.h>
-#include <kmenubar.h>
 #include <kmessagebox.h>
 #include <kstandardaction.h>
 
@@ -50,6 +48,7 @@
 #include <QTimer>
 #include <QCommandLineParser>
 #include <QDebug>
+#include <QMenuBar>
 
 KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list, QCommandLineParser *commandLine )
     : QObject( (QObject*)window ), m_window( window ),
@@ -126,19 +125,8 @@ QWidget* KRenameImpl::launch(const QRect & rect, const KRenameFile::List & list,
 
 void KRenameImpl::setupActions()
 {
-    // Disabled profiles as they are not implemented right now
-    //KMenu* mnuExtra    = new KMenu( i18n("E&xtras"), m_window );
-
     QMenu* mnuHelp     = m_window->helpMenu( QString::null, true );
-
-    //KAction* actProfiles = new KAction( i18n("&Profiles..."), m_window );
-
-    //m_window->menuBar()->addMenu( mnuExtra );
     m_window->menuBar()->addMenu( mnuHelp );
-
-    //mnuExtra->addAction( actProfiles );
-
-    //connect(actProfiles, SIGNAL(triggered(bool)), SLOT(slotManageProfiles()));
 }
 
 void KRenameImpl::setupSlots()
