@@ -21,7 +21,6 @@
 #include <QDialog>
 #include "ui_customfilenamedlg.h"
 #include "batchrenamer.h"
-#include <KConfigGroup>
 #include <KSharedConfig>
  
 class KRenameFile;

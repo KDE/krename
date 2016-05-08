@@ -36,10 +36,6 @@
 #include <kseparator.h>
 
 #include <QDialogButtonBox>
-#include <QHeaderView>
-#include <QLabel>
-#include <QLineEdit>
-#include <QMenu>
 #include <QStackedWidget>
 #include <QTabBar>
 #include <QVBoxLayout>

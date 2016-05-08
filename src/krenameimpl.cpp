@@ -46,7 +46,6 @@
 
 #include <KHelpMenu>
 
-#include <QStringListModel>
 #include <QTimer>
 #include <QCommandLineParser>
 #include <QDebug>

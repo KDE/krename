@@ -21,7 +21,6 @@
 #include <QHash>
 #include <QList>
 #include <QMap>
-#include <QObject>
 
 class Plugin;
 class KConfigGroup;

@@ -19,9 +19,6 @@
 
 #include <kiconloader.h>
 
-#include <QPainter>
-#include <QPaintEvent>
-#include <QTextDocument>
 
 KRenameListView::KRenameListView(QWidget* parent)
     : QListView(parent),

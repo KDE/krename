@@ -19,6 +19,8 @@
 
 #include "krenamefile.h"
 
+#include <KConfigGroup>
+
 #include <QDialogButtonBox>
 
 CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )

@@ -23,6 +23,7 @@
 
 #include <QLineEdit>
 
+
 #define EXT_HISTORY_COMBO_MAX_COUNT 10 
 #define EXT_HISTORY_COMBO_TIMER_DELAY 500
 

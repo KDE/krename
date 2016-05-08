@@ -19,7 +19,6 @@
 
 // Qt includes
 #include <QHBoxLayout>
-#include <QToolTip>
 #include <QVBoxLayout>
 
 #include <klocale.h>

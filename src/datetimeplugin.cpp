@@ -25,7 +25,7 @@
 
 #include <QDate>
 #include <QTime>
-#include <QVBoxLayout>
+#include <QUrl>
 
 // OS includes
 #include <stdio.h>

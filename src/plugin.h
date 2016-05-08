@@ -24,7 +24,6 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-#include <QUrl>
 
 class BatchRenamer;
 class KConfigGroup;

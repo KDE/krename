@@ -25,6 +25,7 @@
 
 #include <QDialog>
 #include <QDialogButtonBox>
+#include <QUrl>
 
 // OS includes
 #include <stdio.h>

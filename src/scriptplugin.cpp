@@ -29,8 +29,6 @@
 #include <kio/netaccess.h>
 
 #include <QFile>
-#include <QLabel>
-#include <QHBoxLayout>
 #include <QMenu>
 #include <QTextStream>
 #include <QVariant>

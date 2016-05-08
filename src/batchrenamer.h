@@ -18,7 +18,6 @@
 #ifndef BATCHRENAMER_H
 #define BATCHRENAMER_H
 
-#include <QDateTime>
 #include <QList>
 #include <QObject>
 

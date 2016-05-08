@@ -23,8 +23,6 @@
 #include <klistwidget.h>
 #include <klocale.h>
 
-#include <QLabel>
-#include <QHBoxLayout>
 #include <QRegExp>
 
 

@@ -19,11 +19,9 @@
 #define KRENAMEIMPL_H
 
 #include <QObject>
-#include <QMutex>
 
 #include <QUrl>
 
-#include <KConfigGroup>
 #include <KSharedConfig>
 
 #include "batchrenamer.h"
