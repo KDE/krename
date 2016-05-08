@@ -34,6 +34,7 @@
 #include <QMenu>
 #include <QTextStream>
 #include <QVariant>
+#include <QFileDialog>
 
 #include <kjs/kjsinterpreter.h>
 
@@ -294,34 +295,31 @@ void ScriptPlugin::slotLoad()
 	return;
     }
 
-    KFileDialog dialog( QUrl(ScriptPlugin::s_pszFileDialogLocation), 
-			i18n("*|All files and directories"), 
-			m_parent );
-    dialog.setOperationMode( KFileDialog::Opening );
-    dialog.setMode( KFile::File | KFile::ExistingOnly );
+    QUrl url = QFileDialog::getOpenFileUrl(m_parent, i18n("Select file"),
+                                           QUrl(ScriptPlugin::s_pszFileDialogLocation));
 
-    if( dialog.exec() == QDialog::Accepted ) 
+    if(!url.isEmpty())
     {
-	// Also support remote files
-	QString tmpFile;
-	if( KIO::NetAccess::download( dialog.selectedUrl(), tmpFile, m_parent ) )
-	{
-	    QFile file(tmpFile);
-	    if( file.open(QFile::ReadOnly | QFile::Text) )
-	    {
-		QTextStream in(&file);
-		QString text = in.readAll();
-		m_widget->textCode->setPlainText( text );
+        // Also support remote files
+        QString tmpFile;
+        if( KIO::NetAccess::download( url, tmpFile, m_parent ) )
+        {
+            QFile file(tmpFile);
+            if( file.open(QFile::ReadOnly | QFile::Text) )
+            {
+                QTextStream in(&file);
+                QString text = in.readAll();
+                m_widget->textCode->setPlainText( text );
 
-		file.close();
-	    }
-	    else
-		KMessageBox::error(m_parent, i18n("Unable to open %1 for reading.", tmpFile ) );
+                file.close();
+            }
+            else
+                KMessageBox::error(m_parent, i18n("Unable to open %1 for reading.", tmpFile ) );
 
-	    KIO::NetAccess::removeTempFile( tmpFile );
-	}
-	else 
-	    KMessageBox::error(m_parent, KIO::NetAccess::lastErrorString() );
+            KIO::NetAccess::removeTempFile( tmpFile );
+        } else {
+            KMessageBox::error(m_parent, KIO::NetAccess::lastErrorString() );
+        }
     }
 
     slotEnableControls();
@@ -329,54 +327,50 @@ void ScriptPlugin::slotLoad()
 
 void ScriptPlugin::slotSave()
 {
-    KFileDialog dialog( QUrl(ScriptPlugin::s_pszFileDialogLocation), 
-			i18n("*|All files and directories"), 
-			m_parent );
-    dialog.setOperationMode( KFileDialog::Saving );
-    dialog.setMode( KFile::File );
+    QUrl url = QFileDialog::getSaveFileUrl(m_parent, i18n("Select file"),
+                                           QUrl(ScriptPlugin::s_pszFileDialogLocation));
 
-    if( dialog.exec() == QDialog::Accepted ) 
+    if( !url.isEmpty())
     {
-	const QUrl url = dialog.selectedUrl();
-	if( KIO::NetAccess::exists( url, KIO::NetAccess::DestinationSide, m_parent ) )
-	{
-	    int m = KMessageBox::warningYesNo( m_parent, i18n("The file %1 already exists. "
-                                  "Do you want to overwrite it?", url.toDisplayString(QUrl::PreferLocalFile)) );
+        if( KIO::NetAccess::exists( url, KIO::NetAccess::DestinationSide, m_parent ) )
+        {
+            int m = KMessageBox::warningYesNo( m_parent, i18n("The file %1 already exists. "
+                                                              "Do you want to overwrite it?", url.toDisplayString(QUrl::PreferLocalFile)) );
 
-	    if( m == KMessageBox::No )
-		return;
-	}
+            if( m == KMessageBox::No )
+                return;
+        }
 
-	QString tmpName = url.path();
-	if( !url.isLocalFile() )
-	{
-	    QTemporaryFile temp;
-	    tmpName = temp.fileName();
-	}
+        QString tmpName = url.path();
+        if( !url.isLocalFile() )
+        {
+            QTemporaryFile temp;
+            tmpName = temp.fileName();
+        }
 
 
-	QFile file(tmpName);
-	if( file.open(QIODevice::WriteOnly | QIODevice::Text) )
-	{
-	    QTextStream out(&file);
-	    out << m_widget->textCode->toPlainText();
-	    out.flush();
-	    file.close();
+        QFile file(tmpName);
+        if( file.open(QIODevice::WriteOnly | QIODevice::Text) )
+        {
+            QTextStream out(&file);
+            out << m_widget->textCode->toPlainText();
+            out.flush();
+            file.close();
 
-	    if( !url.isLocalFile() )
-	    {
-		if( !KIO::NetAccess::upload( tmpName, url, m_parent ) )
-		    KMessageBox::error(m_parent, KIO::NetAccess::lastErrorString() );
+            if( !url.isLocalFile() )
+            {
+                if( !KIO::NetAccess::upload( tmpName, url, m_parent ) )
+                    KMessageBox::error(m_parent, KIO::NetAccess::lastErrorString() );
 
-		file.remove();
-	    }
-	}
-	else
-	{
-	    KMessageBox::error(m_parent, i18n("Unable to open %1 for writing.", tmpName ) );
-	    if( !url.isLocalFile() )
-		file.remove();
-	}
+                file.remove();
+            }
+        }
+        else
+        {
+            KMessageBox::error(m_parent, i18n("Unable to open %1 for writing.", tmpName ) );
+            if( !url.isLocalFile() )
+                file.remove();
+        }
     }
 
     slotEnableControls();
