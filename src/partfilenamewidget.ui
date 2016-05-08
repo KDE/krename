@@ -31,7 +31,7 @@
          <bool>true</bool>
         </property>
         <property name="buddy" >
-         <cstring></cstring>
+         <cstring>textFilename</cstring>
         </property>
        </widget>
       </item>
