@@ -34,7 +34,7 @@
      <property name="orientation" >
       <enum>Qt::Horizontal</enum>
      </property>
-     <widget class="QWidget" name="layoutWidget" >
+     <widget class="QWidget" name="leftLayoutWidget" >
       <layout class="QVBoxLayout" >
        <item>
         <widget class="KTreeWidgetSearchLineWidget" name="searchCategory" />
@@ -65,7 +65,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="layoutWidget" >
+     <widget class="QWidget" name="rightLayoutWidget" >
       <layout class="QVBoxLayout" >
        <item>
         <widget class="KTreeWidgetSearchLineWidget" name="searchToken" />
