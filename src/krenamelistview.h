@@ -21,8 +21,6 @@
 
 #include <QListView>
 
-class QPaintEvent;
-class QTextDocument;
 
 /**
  * This is a QListView implementation

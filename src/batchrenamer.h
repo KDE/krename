@@ -56,7 +56,6 @@ enum ERenameMode {
 };
 
 class QObject;
-class QListView;
 class ProgressDialog;
 
 /** This is the core class for renaming.

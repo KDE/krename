@@ -32,7 +32,6 @@ class QWidget;
 
 namespace KIO {
     class Job;
-    class KUDSEntry;
 };
 
 class ThreadedLister : public QObject

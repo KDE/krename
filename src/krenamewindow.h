@@ -31,7 +31,6 @@ class QPushButton;
 class QAbstractItemView;
 class QComboBox;
 class QDialogButtonBox;
-class QLabel;
 class QLineEdit;
 class QModelIndex;
 class QStackedWidget;
