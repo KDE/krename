@@ -1,10 +1,7 @@
-
 add_subdirectory( pics )
 add_subdirectory( servicemenus )
 
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR} 
-                     ${KDE4_INCLUDE_DIR} 
-		     ${QT_INCLUDES} 
 		     ${CMAKE_CURRENT_SOURCE_DIR} 
 		     ${CMAKE_CURRENT_BINARY_DIR}
 		     ${TAGLIB_INCLUDE_DIR} )
@@ -23,7 +20,7 @@ ENDIF(FREETYPE_FOUND)
 
 ADD_DEFINITIONS(${TAGLIB_CFLAGS} ${EXIV2_CFLAGS} ${LIBPODOFO_CFLAGS} ${KDE4_DEFINITIONS} )
 # Exiv2 needs exceptions
-ADD_DEFINITIONS(${KDE4_ENABLE_EXCEPTIONS})
+kde_enable_exceptions()
 
 ########### next target ###############
 
@@ -121,7 +118,7 @@ ki18n_wrap_ui( krename_SRCS
 add_executable(krename ${krename_SRCS})
 
 # find Nepomuk's libkmetadata
-find_path(KMETADATA_INCLUDE_DIR NAMES kmetadata/kmetadata.h PATHS ${KDE4_INCLUDE_DIR})
+find_path(KMETADATA_INCLUDE_DIR NAMES kmetadata/kmetadata.h PATHS )
 find_library(KMETADATA_LIBRARY NAMES kmetadata PATHS ${KDE4_LIB_DIR})
 
 if(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
