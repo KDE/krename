@@ -331,7 +331,7 @@ class BatchRenamer : public QObject {
          * @param file to check for not existing directories
          * @param p ProgressDialog for error reporting
          */
-         void createMissingSubDirs( const KRenameFile & file, ProgressDialog* p );
+         void createMissingSubDirs(const KRenameFile & file, ProgressDialog* dialog );
 
 	     /** resets all counters to there start value if the directory name at @p i
           *  in m_files changes.

@@ -26,6 +26,7 @@
 #include <kio/netaccess.h>
 #include <klocale.h>
 #include <kmessagebox.h>
+#include <KJobWidgets>
 
 DirSortPlugin::DirSortPlugin( PluginLoader* loader ) 
     : Plugin( loader )
@@ -155,8 +156,11 @@ QUrl DirSortPlugin::createNewSubdirectory() const
     url = url.adjusted(QUrl::StripTrailingSlash);
     url.setPath(url.path() + '/' + ( dir ));
 
-    if( !KIO::NetAccess::mkdir( url, m_widget->spinStart ) ) {
-        KMessageBox::error( m_widget->spinStart, 
+    KIO::MkdirJob *job = KIO::mkdir(url);
+    KJobWidgets::setWindow(job, m_widget->groupBox); // we just need a random widget, FIXME use the proper parent
+
+    if( !job->exec() ) {
+        KMessageBox::error( m_widget->groupBox,
                             i18n("Cannot create directory %1", url.toDisplayString(QUrl::PreferLocalFile)) );
     }
     

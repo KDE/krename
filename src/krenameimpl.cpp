@@ -41,6 +41,7 @@
 #include <kfiledialog.h>
 #include <kmessagebox.h>
 #include <kstandardaction.h>
+#include <KJobWidgets>
 
 #include <kio/netaccess.h>
 
@@ -570,7 +571,9 @@ void KRenameImpl::slotStart()
         if( m == KMessageBox::Cancel )
             return;
 
-        if( !KIO::NetAccess::mkdir( destination, NULL ) )
+        KIO::MkdirJob *job = KIO::mkdir(destination);
+        KJobWidgets::setWindow(job, m_window);
+        if( !job->exec() )
         {
             KMessageBox::error( m_window, i18n("The directory %1 could not be created.").arg( destination.toDisplayString(QUrl::PreferLocalFile) ) );
             return;

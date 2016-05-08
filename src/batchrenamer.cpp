@@ -42,6 +42,8 @@
 #include <kapplication.h>
 #include <kio/job.h>
 #include <kio/netaccess.h>
+#include <KIO/MkpathJob>
+#include <KJobWidgets>
 #include <klocale.h>
 
 // Own includes
@@ -1180,30 +1182,23 @@ void BatchRenamer::writeUndoScript( QTextStream* t )
          << "fi" << endl;
 }
 
-void BatchRenamer::createMissingSubDirs( const KRenameFile & file, ProgressDialog* p )
+void BatchRenamer::createMissingSubDirs( const KRenameFile & file, ProgressDialog *dialog )
 {
-    int pos = 0;
-    QString dstFilename = file.dstFilename();
-    if( (pos = dstFilename.lastIndexOf( '/', -1 ) ) > 0 ) {
-        QString directories = dstFilename.left( pos );
+    QUrl url = file.dstUrl().adjusted(QUrl::RemoveFilename);
+    if (url.isEmpty()) {
+        return;
+    }
 
-        // create the missing subdir now
-        int i = 0;
-        QString d = directories.section( "/", i, i, QString::SectionSkipEmpty );
-        QUrl url = file.dstUrl();            
-        while( !d.isEmpty() ) {
-            // it is important to unescape here
-            // to support dirnames containing "&" or 
-            // similar tokens
-            url = url.adjusted(QUrl::StripTrailingSlash);
-            url.setPath(url.path() + '/' + ( unEscape( d ) ));
-            if( !KIO::NetAccess::exists( url, KIO::NetAccess::DestinationSide, p ) && !KIO::NetAccess::mkdir( url, p ) ) {
-                p->error( i18n("Cannot create directory %1", url.toDisplayString(QUrl::PreferLocalFile)) );
-            }
+    if( KIO::NetAccess::exists( url, KIO::NetAccess::DestinationSide, dialog ) ) {
+        return;
+    }
 
-            i++;
-            d = directories.section( "/", i, i, QString::SectionSkipEmpty );
-        }
+    KIO::MkpathJob *job = KIO::mkpath(url);
+    KJobWidgets::setWindow(job, dialog);
+    if(!job->exec()) {
+        dialog->error( i18n("Cannot create directory %1: %2",
+                            url.toDisplayString(QUrl::PreferLocalFile),
+                            job->errorString()) );
     }
 }
 
