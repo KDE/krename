@@ -68,7 +68,7 @@ void FilePlugin::createUI( QWidget* parent ) const
     QSpacerItem* spacer = new QSpacerItem( 20, 20, QSizePolicy::Expanding, QSizePolicy::Expanding );
     
     QVBoxLayout* l    = new QVBoxLayout( parent );
-    QHBoxLayout* hbox = new QHBoxLayout( parent );
+    QHBoxLayout* hbox = new QHBoxLayout;
     
     QLabel* pix = new QLabel( parent );
     pix->setPixmap( KIconLoader::global()->loadIcon( m_icon, KIconLoader::Desktop ) );
