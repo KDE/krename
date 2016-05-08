@@ -18,7 +18,7 @@
 #ifndef _TOKEN_HELP_DIALOG_H_
 #define _TOKEN_HELP_DIALOG_H_
 
-#include <kdialog.h>
+#include <QDialog>
 
 #include "ui_tokenhelpwidget.h"
 #include <KTreeWidgetSearchLineWidget>
@@ -30,10 +30,10 @@ class BatchRenamer;
 class KRenameModel;
 class KRenameUnformattedWrappedModel;
 
-class TokenHelpDialog : public KDialog {
+class TokenHelpDialog : public QDialog {
  Q_OBJECT
  public:
-    TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer, 
+    TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
                      QLineEdit* edit, QWidget* parent = NULL );
 
     ~TokenHelpDialog();
@@ -44,7 +44,7 @@ class TokenHelpDialog : public KDialog {
      *  \param headline headline of the category
      *  \param commands list of all tokens
      *  \param icon icon of the category
-     *  \param first if true make sure that this is the first category (after all) and is selected by 
+     *  \param first if true make sure that this is the first category (after all) and is selected by
      *         default.
      */
     void add( const QString & headline, const QStringList & commands, const QPixmap & icon, bool first = false );
@@ -70,13 +70,13 @@ class TokenHelpDialog : public KDialog {
 
  private:
     void loadConfig();
-    
+
     /**
      * Select a category by its name.
      * \param category user visible name of a category
      */
     void selectCategory( const QString & category );
-    
+
     /**
      * Add all tokens stored in the list
      * m_recent to the list of tokens and to categories.

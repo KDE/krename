@@ -23,6 +23,9 @@
 #include <kapplication.h>
 #include <kiconloader.h>
 #include <QPushButton>
+#include <KConfigGroup>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
 
 #define COLUMN_PREVIEW 2
 
@@ -79,25 +82,32 @@ const int TokenHelpDialog::S_MAX_RECENT = 10;
 
 TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
                                   QLineEdit* edit, QWidget* parent )
-    : KDialog( parent ), m_edit( edit ), m_renamer(renamer)
+    : QDialog( parent ), m_edit( edit ), m_renamer(renamer)
 {
     m_model = new KRenameUnformattedWrappedModel(model);
 
-    m_widget.setupUi( mainWidget() );
+    QWidget *mainWidget = new QWidget(this);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+    mainLayout->addWidget(mainWidget);
+    m_widget.setupUi(mainWidget);
 
-    this->setButtons( KDialog::Close | KDialog::User1 ); 
-    this->setButtonText( KDialog::User1, i18n("&Insert") ); 
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
+    QPushButton *insert = new QPushButton;
+    buttonBox->addButton(insert, QDialogButtonBox::ActionRole);
+    this->connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    this->connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    mainLayout->addWidget(buttonBox);
+    insert->setText(i18n("&Insert" ));
 
-    QPushButton* insert = this->button( KDialog::User1 );
-    QPushButton* close = this->button( KDialog::Close );
-    
+    QPushButton* close = buttonBox->button(QDialogButtonBox::Close);
+
     m_widget.searchCategory->searchLine()->setTreeWidget( m_widget.listCategories );
     m_widget.searchToken   ->searchLine()->setTreeWidget( m_widget.listTokens );
     m_widget.comboPreview->setModel( m_model );
     m_widget.listTokens->sortItems( 0, Qt::AscendingOrder );
 
     connect(insert, SIGNAL(clicked(bool)), SLOT(slotInsert()));
-    connect(this, SIGNAL(rejected()), SLOT(reject()));
     connect(close, SIGNAL(clicked(bool)), SLOT(saveConfig()));
 
     connect(m_widget.listCategories, SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(slotCategoryChanged(QTreeWidgetItem*)));
@@ -106,6 +116,7 @@ TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
     connect(m_widget.comboPreview,   SIGNAL(activated(int)), this, SLOT(slotUpdatePreview()));
 
     slotEnableControls();
+    loadConfig();
 }
 
 TokenHelpDialog::~TokenHelpDialog() 
@@ -132,7 +143,6 @@ void TokenHelpDialog::add( const QString & headline, const QStringList & command
 
 int TokenHelpDialog::exec()
 {
-    loadConfig();
     addRecentTokens();
 
     m_widget.listCategories->sortItems( 0, Qt::AscendingOrder );
@@ -220,7 +230,8 @@ void TokenHelpDialog::loadConfig()
     if( width > 0 )
 	    m_widget.listTokens->setColumnWidth( 2, width );
 
-    this->restoreDialogSize( groupGui );
+
+    restoreGeometry( groupGui.readEntry<QByteArray>("Geometry", QByteArray()));
 
     QList<int> sizes = groupGui.readEntry( "Splitter", QList<int>() );
     if( sizes.size() == 2 ) {
@@ -228,7 +239,7 @@ void TokenHelpDialog::loadConfig()
     }
 }
 
-void TokenHelpDialog::saveConfig() 
+void TokenHelpDialog::saveConfig()
 {
     KSharedConfigPtr config = KSharedConfig::openConfig();
 
@@ -242,7 +253,7 @@ void TokenHelpDialog::saveConfig()
     groupGui.writeEntry( "LastSelectedCategory", m_lastSelected );
     groupGui.writeEntry( "RecentTokens", m_recent );
 
-    this->saveDialogSize( groupGui );
+    groupGui.writeEntry( "Geometry", saveGeometry() );
 }
 
 void TokenHelpDialog::slotEnableControls()
