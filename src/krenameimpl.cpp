@@ -633,7 +633,7 @@ void KRenameImpl::loadConfig()
     m_window->setPreviewNamesEnabled( 
 	groupGui.readEntry( "ImagePreviewName2", QVariant(true) ).toBool() );
 
-    m_vector.first().setIconSize( groupGui.readEntry( "ImagePreviewSize", QVariant(64) ).toInt() );
+    KRenameFile::setIconSize( groupGui.readEntry( "ImagePreviewSize", QVariant(64) ).toInt() );
 
     m_window->setAdvancedMode( 
 	groupGui.readEntry( "Advanced", QVariant(false) ).toBool() );

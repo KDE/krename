@@ -325,7 +325,7 @@ class KRenameFile {
      *
      * @param size the icon size
      */
-    void setIconSize( int size );
+    static void setIconSize( int size );
     /**
      * @returns the icon size
      */
