@@ -44,6 +44,8 @@
 
 #include <kio/netaccess.h>
 
+#include <KHelpMenu>
+
 #include <QStringListModel>
 #include <QTimer>
 #include <QCommandLineParser>
@@ -125,8 +127,8 @@ QWidget* KRenameImpl::launch(const QRect & rect, const KRenameFile::List & list,
 
 void KRenameImpl::setupActions()
 {
-    QMenu* mnuHelp     = m_window->helpMenu( QString::null, true );
-    m_window->menuBar()->addMenu( mnuHelp );
+    KHelpMenu *helpMenu = new KHelpMenu(m_window);
+    m_window->menuBar()->addMenu(helpMenu->menu());
 }
 
 void KRenameImpl::setupSlots()
