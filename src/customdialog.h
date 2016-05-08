@@ -18,7 +18,7 @@
 #ifndef _CUSTOM_DIALOG_H_
 #define _CUSTOM_DIALOG_H_
 
-#include <kdialog.h>
+#include <QDialog>
 #include "ui_customfilenamedlg.h"
 #include "batchrenamer.h"
 #include <KConfigGroup>
@@ -26,7 +26,7 @@
  
 class KRenameFile;
 
-class CustomDialog : public KDialog {
+class CustomDialog : public QDialog {
  Q_OBJECT
  public:
     CustomDialog( const KRenameFile & file, QWidget* parent );

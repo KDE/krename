@@ -19,10 +19,21 @@
 
 #include "krenamefile.h"
 
+#include <QDialogButtonBox>
+
 CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
-    : KDialog( parent )
+    : QDialog( parent )
 {
-    m_widget.setupUi( this->mainWidget() );
+    QWidget *mainWidget = new QWidget(this);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+    mainLayout->addWidget(mainWidget);
+    m_widget.setupUi(mainWidget);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    mainLayout->addWidget(buttonBox);
 
     connect( m_widget.radioKRename, SIGNAL(clicked(bool)), this, SLOT(slotEnableControls()));
     connect( m_widget.radioInput,   SIGNAL(clicked(bool)), this, SLOT(slotEnableControls()));
@@ -73,14 +84,14 @@ CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
 
     KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup group = config->group( QString("CustomDialogGroup") );
-    this->restoreDialogSize(group);
+    restoreGeometry( group.readEntry<QByteArray>("Geometry", QByteArray()));
 }
 
 CustomDialog::~CustomDialog()
 {
     KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup group = config->group( QString("CustomDialogGroup") );
-    this->saveDialogSize(group);
+    group.writeEntry( "Geometry", saveGeometry() );
 }
 
 void CustomDialog::slotEnableControls()
