@@ -20,7 +20,7 @@
 #include "batchrenamer.h"
 
 #include <kiconloader.h>
-#include <klistwidget.h>
+#include <QListWidget>
 #include <klocale.h>
 
 #include <QLabel>
@@ -183,7 +183,7 @@ void TranslitPlugin::createUI( QWidget* parent ) const
     l->addLayout( hbox );    
     l->addWidget( new QLabel( i18n("This plugin will transliterate the following characters."), parent  ) );
 
-    KListWidget* list = new KListWidget( parent );
+    QListWidget* list = new QListWidget( parent );
 
     int i=0;
     while( TranslitPlugin::s_strUtf8[i]!=QString::null ) 

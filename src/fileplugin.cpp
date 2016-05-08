@@ -19,7 +19,7 @@
 
 #include <kapplication.h>
 #include <kiconloader.h>
-#include <klistwidget.h>
+#include <QListWidget>
 #include <klocale.h>
 #include <kservice.h>
 
@@ -83,8 +83,7 @@ void FilePlugin::createUI( QWidget* parent ) const
     l->addWidget( comment );
     l->addWidget( new QLabel( i18n("Supported tokens:"), parent  ) );
 
-    KListWidget* list = new KListWidget( parent  );
-    //list->setColumnMode( KListBox::FitToWidth );
+    QListWidget* list = new QListWidget( parent  );
     
     const QStringList & keys = supportedTokens();
 
