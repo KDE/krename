@@ -24,7 +24,7 @@
 #include <klistwidget.h>
 #include <klocale.h>
 #include <kmessagebox.h>
-#include <ktemporaryfile.h>
+#include <QTemporaryFile>
 
 #include <kio/netaccess.h>
 
@@ -350,7 +350,7 @@ void ScriptPlugin::slotSave()
 	QString tmpName = url.path();
 	if( !url.isLocalFile() )
 	{
-	    KTemporaryFile temp;
+	    QTemporaryFile temp;
 	    tmpName = temp.fileName();
 	}
 
