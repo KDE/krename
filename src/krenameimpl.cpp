@@ -342,11 +342,10 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
 
 void KRenameImpl::slotAddFiles()
 {
-    FileDialogExtWidget dialog(m_window);//= new FileDialogExtWidget(m_window);
+    FileDialogExtWidget dialog(m_window);
 
     if(dialog.exec() == QDialog::Accepted)
     {
-        qDebug() << "whaddap" << dialog.selectedUrls();
         this->addFilesOrDirs( dialog.selectedUrls(), dialog.currentFilter(),
                               dialog.addRecursively(), dialog.addDirsWithFiles(),
                               dialog.addDirsOnly(), dialog.addHidden() );
