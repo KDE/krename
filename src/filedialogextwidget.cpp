@@ -20,28 +20,49 @@
 // Qt includes
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include <QUrl>
 
+#include <QDialogButtonBox>
+#include <QPushButton>
 #include <klocale.h>
 
-FileDialogExtWidget::FileDialogExtWidget()
-    : QWidget()
+FileDialogExtWidget::FileDialogExtWidget(QWidget *parent)
+    : QDialog(parent)
 {
-    QVBoxLayout* layout = new QVBoxLayout( this );
-    QHBoxLayout* hbox   = new QHBoxLayout();
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+
+    m_fileWidget = new KFileWidget(QUrl());
+    m_fileWidget->setOperationMode( KFileWidget::Opening );
+    m_fileWidget->setMode( KFile::Files | KFile::Directory | KFile::ExistingOnly );
+
+    connect(m_fileWidget, &KFileWidget::accepted, [&]() {
+        m_fileWidget->accept();
+
+        // We have to do this manually for some reason
+        accept();
+    });
+
+    layout()->addWidget(m_fileWidget);
     
+    QWidget *extraWidget = new QWidget;
+    QVBoxLayout *extraLayout = new QVBoxLayout;
+    extraWidget->setLayout(extraLayout);
     checkDir       = new QCheckBox( i18n("Add directory names &with filenames"), this );
     checkRecursive = new QCheckBox( i18n("Add subdirectories &recursively"), this );
     checkHidden    = new QCheckBox( i18n("Add &hidden directories"), this );
     checkOnlyDir   = new QCheckBox( i18n("Add directory names only"), this );    
     
+    QHBoxLayout *hbox = new QHBoxLayout;
     hbox->addSpacing ( 20 );
     hbox->addWidget  ( checkHidden );
     hbox->setStretchFactor( checkHidden, 4 );
     
-    layout->addWidget( checkDir );
-    layout->addWidget( checkRecursive );
-    layout->addLayout( hbox );
-    layout->addWidget( checkOnlyDir );
+    extraLayout->addWidget( checkDir );
+    extraLayout->addWidget( checkRecursive );
+    extraLayout->addLayout( hbox );
+    extraLayout->addWidget( checkOnlyDir );
+    m_fileWidget->setCustomWidget(extraWidget);
     
     connect( checkRecursive, SIGNAL( clicked() ), SLOT( enableControls() ));
 
@@ -55,6 +76,13 @@ FileDialogExtWidget::FileDialogExtWidget()
                                "directory of the selected files to its list.") );
     
     enableControls();
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox;
+    buttonBox->addButton(m_fileWidget->okButton(), QDialogButtonBox::AcceptRole);
+    buttonBox->addButton(m_fileWidget->cancelButton(), QDialogButtonBox::RejectRole);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+    connect(buttonBox, &QDialogButtonBox::accepted, m_fileWidget, &KFileWidget::slotOk);
+    layout()->addWidget(buttonBox);
 }
 
 void FileDialogExtWidget::enableControls()

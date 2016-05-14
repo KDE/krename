@@ -19,12 +19,13 @@
 #define _FILE_DIALOG_EXT_WIDGET_H_
 
 #include <QCheckBox>
-#include <QWidget>
+#include <QDialog>
+#include <KFileWidget>
 
-class FileDialogExtWidget : public QWidget {
+class FileDialogExtWidget : public QDialog {
  Q_OBJECT
  public:
-    FileDialogExtWidget();
+    FileDialogExtWidget(QWidget *parent);
 
     /** 
      * \returns true if directories should be added recursively
@@ -53,6 +54,9 @@ class FileDialogExtWidget : public QWidget {
      */
     inline void setAddRecursively( bool b );
 
+    QList<QUrl> selectedUrls() { return m_fileWidget->selectedUrls(); }
+    QString currentFilter() { return m_fileWidget->currentFilter(); }
+
  private slots:
     void enableControls();
 
@@ -61,6 +65,7 @@ class FileDialogExtWidget : public QWidget {
     QCheckBox* checkHidden;
     QCheckBox* checkDir;
     QCheckBox* checkOnlyDir;
+    KFileWidget *m_fileWidget;
 };
 
 bool FileDialogExtWidget::addRecursively() const

@@ -38,7 +38,7 @@
 #include <kcmdlineargs.h>
 #include <kconfig.h>
 #include <kiconloader.h>
-#include <kfiledialog.h>
+#include <KFileWidget>
 #include <kmessagebox.h>
 #include <kstandardaction.h>
 #include <KJobWidgets>
@@ -345,18 +345,16 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
 
 void KRenameImpl::slotAddFiles()
 {
-    FileDialogExtWidget* widget = new FileDialogExtWidget();
-    KFileDialog dialog( QUrl("kfiledialog://krename"), 
-                        i18n("*|All files and directories"), 
-                        m_window, widget );
-    dialog.setOperationMode( KFileDialog::Opening );
-    dialog.setMode( KFile::Files | KFile::Directory | KFile::ExistingOnly );
+    FileDialogExtWidget dialog(m_window);//= new FileDialogExtWidget(m_window);
 
-    if( dialog.exec() == QDialog::Accepted ) 
+    if(dialog.exec() == QDialog::Accepted)
     {
-        this->addFilesOrDirs( dialog.selectedUrls(), dialog.currentFilter(), 
-                              widget->addRecursively(), widget->addDirsWithFiles(),
-                              widget->addDirsOnly(), widget->addHidden() );
+        qDebug() << "whaddap" << dialog.selectedUrls();
+        this->addFilesOrDirs( dialog.selectedUrls(), dialog.currentFilter(),
+                              dialog.addRecursively(), dialog.addDirsWithFiles(),
+                              dialog.addDirsOnly(), dialog.addHidden() );
+    } else {
+        qWarning() << "Dialog not accepted";
     }
 }
 
