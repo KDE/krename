@@ -20,9 +20,9 @@
 
 #include <QMimeData>
 #include <QPixmap>
+#include <QApplication>
 
-#include <kapplication.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <krun.h>
 #include <kio/previewjob.h>
 
@@ -133,7 +133,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     QList<QUrl>                 urls = data->urls();
     QList<QUrl>::const_iterator it   = urls.begin();
 
-    KApplication::setOverrideCursor( Qt::BusyCursor );
+    QApplication::setOverrideCursor( Qt::BusyCursor );
 
     while( it != urls.end() )
     {
@@ -173,7 +173,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     }
     else
     {
-        KApplication::restoreOverrideCursor();
+        QApplication::restoreOverrideCursor();
         emit filesDropped();
     }
 
@@ -186,7 +186,7 @@ void KRenameModel::slotListerDone( ThreadedLister* lister )
     delete lister;
 
     // restore cursor
-    KApplication::restoreOverrideCursor();
+    QApplication::restoreOverrideCursor();
 
     emit filesDropped();
 } 

@@ -20,12 +20,14 @@
 #include "batchrenamer.h"
 #include "krenamemodel.h"
 
-#include <kapplication.h>
 #include <kiconloader.h>
+#include <KSharedConfig>
+#include <KTreeWidgetSearchLine>
 #include <QPushButton>
 #include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+#include <QLineEdit>
 
 #define COLUMN_PREVIEW 2
 
@@ -292,7 +294,7 @@ void TokenHelpDialog::slotUpdatePreview()
         QString       name   = m_widget.listCategories->currentItem()->text(0);
 
         const KRenameFile & file = m_model->file( index );
-        KApplication::setOverrideCursor( Qt::WaitCursor );
+        QApplication::setOverrideCursor( Qt::WaitCursor );
 
         QString token;
         for( int i=0;i<m_widget.listTokens->topLevelItemCount();i++ )
@@ -304,7 +306,7 @@ void TokenHelpDialog::slotUpdatePreview()
                 item->setText( COLUMN_PREVIEW, token );
             }
         }
-        KApplication::restoreOverrideCursor();
+        QApplication::restoreOverrideCursor();
     }
 }
 

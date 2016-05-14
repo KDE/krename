@@ -23,7 +23,7 @@
 #include <taglib/tstring.h>
 #include <taglib/tag.h>
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include "batchrenamer.h"
 

@@ -21,7 +21,7 @@
 
 #include <kiconloader.h>
 #include <QListWidget>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QLabel>
 #include <QHBoxLayout>

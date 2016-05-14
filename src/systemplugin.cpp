@@ -23,8 +23,8 @@
 #include <QTime>
 
 #include <kfileitem.h>
-#include <kio/netaccess.h>
-#include <klocale.h>
+#include <KLocalizedString>
+#include <KIO/StatJob>
 
 SystemPlugin::SystemPlugin(  PluginLoader* loader )
     : FilePlugin( loader )
@@ -119,9 +119,12 @@ QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & f
         return tmp.sprintf("%0*i", 2, t.second() );
     else {
         const QUrl &url = b->files()->at( index ).srcUrl();
-        KIO::UDSEntry entry;
-        KIO::NetAccess::stat( url, entry, NULL );
-        KFileItem item( entry, url );
+        KIO::StatJob *statJob = KIO::stat(url, KIO::StatJob::SourceSide, 2);
+        statJob->exec();
+        if (statJob->error()) {
+            return QString::null;
+        }
+        KFileItem item( statJob->statResult(), url );
         if( token == "user" )
             return item.user();
         else if( token == "group" )

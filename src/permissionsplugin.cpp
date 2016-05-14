@@ -19,7 +19,6 @@
 #include "permissionsplugin.h"
 
 #include <kiconloader.h>
-#include <klocale.h>
 
 #include "ui_permissionspluginwidget.h"
 

@@ -23,7 +23,6 @@
 #include <kio/job.h>
 #include <kio/jobclasses.h>
 
-#include <kapplication.h>
 #include <QMutex>
 #include <QRegExp>
 

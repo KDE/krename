@@ -18,8 +18,8 @@
 #ifndef EXT_HISTORY_COMBO_H_
 #define EXT_HISTORY_COMBO_H_
 
-#include <khistorycombobox.h>
 #include <QTimer>
+#include <KHistoryComboBox>
 
 /** A combobox with an item history, additional context
  *  menu entries for KRename tokens and a delayed text input

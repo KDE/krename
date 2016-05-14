@@ -17,6 +17,8 @@
 
 #include "filedialogextwidget.h"
 
+#include <KLocalizedString>
+
 // Qt includes
 #include <QHBoxLayout>
 #include <QVBoxLayout>
@@ -24,7 +26,6 @@
 
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <klocale.h>
 
 FileDialogExtWidget::FileDialogExtWidget(QWidget *parent)
     : QDialog(parent)

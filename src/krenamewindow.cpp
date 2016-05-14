@@ -31,7 +31,6 @@
 #include "ui_krenamefilename.h"
 
 #include <QIcon>
-#include <klocale.h>
 #include <QPushButton>
 #include <kseparator.h>
 

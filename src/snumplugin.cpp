@@ -20,8 +20,7 @@
 #include "batchrenamer.h"
 
 #include <kiconloader.h>
-#include <klistwidget.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QRegExp>
 

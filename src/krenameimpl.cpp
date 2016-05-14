@@ -33,17 +33,14 @@
 
 #include "modeltest.h"
 
-#include <kaction.h>
-#include <kapplication.h>
-#include <kcmdlineargs.h>
 #include <kconfig.h>
 #include <kiconloader.h>
 #include <KFileWidget>
 #include <kmessagebox.h>
 #include <kstandardaction.h>
 #include <KJobWidgets>
-
-#include <kio/netaccess.h>
+#include <KIO/MkdirJob>
+#include <KIO/StatJob>
 
 #include <KHelpMenu>
 
@@ -183,7 +180,7 @@ void KRenameImpl::addFilesOrDirs( const QList<QUrl> & list, const QString & filt
         KRenameFile item( *it, m_lastSplitMode, m_lastDot );
         if( item.isDirectory() )
         {
-            KApplication::setOverrideCursor( Qt::BusyCursor );
+            QApplication::setOverrideCursor( Qt::BusyCursor );
 
             ThreadedLister* thl = new ThreadedLister( *it, m_window, m_model );
             connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
@@ -334,7 +331,7 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
         // so let's wait for file adding to finish first
         // before starting.
         while( m_runningThreadedListersCount > 0 )
-            kapp->processEvents();
+            qApp->processEvents();
 
         if( m_vector.count() > 0 )
             // start renaming
@@ -406,9 +403,9 @@ void KRenameImpl::slotUpdateCount()
 
 void KRenameImpl::slotUpdatePreview()
 {
-    KApplication::setOverrideCursor( Qt::WaitCursor );
+    QApplication::setOverrideCursor( Qt::WaitCursor );
     m_renamer.processFilenames();
-    KApplication::restoreOverrideCursor();
+    QApplication::restoreOverrideCursor();
 
     m_previewModel->refresh();
     //m_window->m_pageSimple->listPreview->reset();
@@ -461,7 +458,7 @@ void KRenameImpl::slotListerDone( ThreadedLister* lister )
     delete lister;
 
     // restore cursor
-    KApplication::restoreOverrideCursor();
+    QApplication::restoreOverrideCursor();
 
     // update preview
     slotUpdateCount();
@@ -560,21 +557,24 @@ void KRenameImpl::slotStart()
 
     // Get some properties from the gui and initialize BatchRenamer
     const QUrl &destination = m_window->destinationUrl();
-    if( m_renamer.renameMode() != eRenameMode_Rename && 
-        !KIO::NetAccess::exists( destination, KIO::NetAccess::DestinationSide, NULL ) )
+    if( m_renamer.renameMode() != eRenameMode_Rename)
     {
-        int m = KMessageBox::warningContinueCancel( m_window, i18n("The directory %1 does not exist. "
-                                                                   "Do you want KRename to create it for you?",  
+        KIO::StatJob *statJob = KIO::stat(destination, KIO::StatJob::DestinationSide, 0);
+        statJob->exec();
+        if (statJob->error() == KIO::ERR_DOES_NOT_EXIST) {
+            int m = KMessageBox::warningContinueCancel( m_window, i18n("The directory %1 does not exist. "
+                                                                       "Do you want KRename to create it for you?",
                                                                        destination.toDisplayString(QUrl::PreferLocalFile) ) );
-        if( m == KMessageBox::Cancel )
-            return;
+            if( m == KMessageBox::Cancel )
+                return;
 
-        KIO::MkdirJob *job = KIO::mkdir(destination);
-        KJobWidgets::setWindow(job, m_window);
-        if( !job->exec() )
-        {
-            KMessageBox::error( m_window, i18n("The directory %1 could not be created.").arg( destination.toDisplayString(QUrl::PreferLocalFile) ) );
-            return;
+            KIO::MkdirJob *job = KIO::mkdir(destination);
+            KJobWidgets::setWindow(job, m_window);
+            if( !job->exec() )
+            {
+                KMessageBox::error( m_window, i18n("The directory %1 could not be created.").arg( destination.toDisplayString(QUrl::PreferLocalFile) ) );
+                return;
+            }
         }
     }
 

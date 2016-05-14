@@ -39,12 +39,9 @@
 #include <QTextStream>
 
 // KDE includes
-#include <kapplication.h>
 #include <kio/job.h>
-#include <kio/netaccess.h>
 #include <KIO/MkpathJob>
 #include <KJobWidgets>
-#include <klocale.h>
 
 // Own includes
 #include "batchrenamer.h"
@@ -277,14 +274,17 @@ void BatchRenamer::processFiles( ProgressDialog* p )
             }
         }
 
-        if( job && !NetAccess::synchronousRun( job, p ) ) 
-        {
-            p->error( i18n("Error renaming %2 (to %1)",
-                           dstUrl.toDisplayString(QUrl::PreferLocalFile),
-                           srcUrl.toDisplayString(QUrl::PreferLocalFile)) );
-            (*m_files)[i].setError( 1 );
-            errors++;
-        } 
+        if (job) {
+            KJobWidgets::setWindow(job, p);
+            if(!job->exec())
+            {
+                p->error( i18n("Error renaming %2 (to %1)",
+                               dstUrl.toDisplayString(QUrl::PreferLocalFile),
+                               srcUrl.toDisplayString(QUrl::PreferLocalFile)) );
+                (*m_files)[i].setError( job->error() );
+                errors++;
+            }
+        }
 
         /*
          * The renamed file should be on its correct location now,
@@ -413,12 +413,16 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
                 break;
         }
 
-        if( job && !NetAccess::synchronousRun( job, p ) ) 
-        {
-            p->error( i18n("Error during undoing %1", dstUrl.toDisplayString(QUrl::PreferLocalFile)) );
-            (*m_files)[i].setError( 1 );
-            errors++;
-        } 
+        if (job) {
+            KJobWidgets::setWindow(job, p);
+            if(!job->exec())
+            {
+                p->error( i18n("Error during undoing %1", dstUrl.toDisplayString(QUrl::PreferLocalFile)) );
+                (*m_files)[i].setError( job->error() );
+                errors++;
+            }
+        }
+
     }
 
     if( errors > 0 ) 
@@ -1186,10 +1190,6 @@ void BatchRenamer::createMissingSubDirs( const KRenameFile & file, ProgressDialo
 {
     QUrl url = file.dstUrl().adjusted(QUrl::RemoveFilename);
     if (url.isEmpty()) {
-        return;
-    }
-
-    if( KIO::NetAccess::exists( url, KIO::NetAccess::DestinationSide, dialog ) ) {
         return;
     }
 

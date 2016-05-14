@@ -20,10 +20,8 @@
 #include "customdialog.h"
 #include "krenamemodel.h"
 
-#include "klocale.h"
-#include "kmenu.h"
-
 #include <QContextMenuEvent>
+#include <QMenu>
 
 PreviewList::PreviewList( QWidget* parent )
     : QTreeView( parent ), m_model( NULL )

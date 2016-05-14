@@ -17,16 +17,13 @@
 
 #include "scriptplugin.h"
 
-#include <kapplication.h>
 #include <kconfiggroup.h>
-#include <kfiledialog.h>
 #include <kiconloader.h>
-#include <klistwidget.h>
-#include <klocale.h>
 #include <kmessagebox.h>
+#include <KIO/StoredTransferJob>
+#include <KIO/StatJob>
+#include <KJobWidgets>
 #include <QTemporaryFile>
-
-#include <kio/netaccess.h>
 
 #include <QFile>
 #include <QMenu>
@@ -299,24 +296,12 @@ void ScriptPlugin::slotLoad()
     if(!url.isEmpty())
     {
         // Also support remote files
-        QString tmpFile;
-        if( KIO::NetAccess::download( url, tmpFile, m_parent ) )
-        {
-            QFile file(tmpFile);
-            if( file.open(QFile::ReadOnly | QFile::Text) )
-            {
-                QTextStream in(&file);
-                QString text = in.readAll();
-                m_widget->textCode->setPlainText( text );
-
-                file.close();
-            }
-            else
-                KMessageBox::error(m_parent, i18n("Unable to open %1 for reading.", tmpFile ) );
-
-            KIO::NetAccess::removeTempFile( tmpFile );
+        KIO::StoredTransferJob *job = KIO::storedGet(url);
+        KJobWidgets::setWindow(job, m_parent);
+        if (job->exec()) {
+            m_widget->textCode->setPlainText(QString::fromLocal8Bit(job->data()));
         } else {
-            KMessageBox::error(m_parent, KIO::NetAccess::lastErrorString() );
+            KMessageBox::error(m_parent, job->errorString() );
         }
     }
 
@@ -330,8 +315,9 @@ void ScriptPlugin::slotSave()
 
     if( !url.isEmpty())
     {
-        if( KIO::NetAccess::exists( url, KIO::NetAccess::DestinationSide, m_parent ) )
-        {
+        KIO::StatJob *statJob = KIO::stat(url, KIO::StatJob::DestinationSide, 0);
+        statJob->exec();
+        if (statJob->error() != KIO::ERR_DOES_NOT_EXIST) {
             int m = KMessageBox::warningYesNo( m_parent, i18n("The file %1 already exists. "
                                                               "Do you want to overwrite it?", url.toDisplayString(QUrl::PreferLocalFile)) );
 
@@ -339,35 +325,26 @@ void ScriptPlugin::slotSave()
                 return;
         }
 
-        QString tmpName = url.path();
-        if( !url.isLocalFile() )
-        {
-            QTemporaryFile temp;
-            tmpName = temp.fileName();
-        }
-
-
-        QFile file(tmpName);
-        if( file.open(QIODevice::WriteOnly | QIODevice::Text) )
-        {
-            QTextStream out(&file);
-            out << m_widget->textCode->toPlainText();
-            out.flush();
-            file.close();
-
-            if( !url.isLocalFile() )
+        if( url.isLocalFile() ) {
+            QFile file(url.path());
+            if( file.open(QIODevice::WriteOnly | QIODevice::Text) )
             {
-                if( !KIO::NetAccess::upload( tmpName, url, m_parent ) )
-                    KMessageBox::error(m_parent, KIO::NetAccess::lastErrorString() );
-
-                file.remove();
+                QTextStream out(&file);
+                out << m_widget->textCode->toPlainText();
+                out.flush();
+                file.close();
             }
-        }
-        else
-        {
-            KMessageBox::error(m_parent, i18n("Unable to open %1 for writing.", tmpName ) );
-            if( !url.isLocalFile() )
-                file.remove();
+            else
+            {
+                KMessageBox::error(m_parent, i18n("Unable to open %1 for writing.", url.path() ) );
+            }
+        } else {
+            KIO::StoredTransferJob *job = KIO::storedPut(m_widget->textCode->toPlainText().toLocal8Bit(), url, -1);
+            KJobWidgets::setWindow(job, m_parent);
+            job->exec();
+            if (job->error()) {
+                KMessageBox::error(m_parent, job->errorString() );
+            }
         }
     }
 

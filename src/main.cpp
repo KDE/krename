@@ -16,19 +16,15 @@
  ***************************************************************************/
 
 // Qt includes
-#include <qrect.h>
-#include <qwidget.h>
+#include <QRect>
+#include <QWidget>
 
 // KDE includes
 
 #include <kaboutdata.h>
 
 #include <kconfig.h>
-#include <kimageio.h>
-#include <klocale.h>
 #include <kmessagebox.h>
-
-
 
 #include <klocalizedstring.h>
 

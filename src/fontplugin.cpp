@@ -25,7 +25,7 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
         
-#include <klocale.h>
+#include <KLocalizedString>
 
 FontPlugin::FontPlugin( PluginLoader* loader )
     : FilePlugin( loader )

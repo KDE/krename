@@ -17,12 +17,11 @@
 
 #include "fileplugin.h"
 
-#include <kapplication.h>
-#include <kiconloader.h>
-#include <QListWidget>
-#include <klocale.h>
+#include <KIconLoader>
+#include <KLocalizedString>
 #include <kservice.h>
 
+#include <QListWidget>
 #include <QLabel>
 #include <QHBoxLayout>
 

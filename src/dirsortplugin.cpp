@@ -23,8 +23,6 @@
 // KDE includes
 #include <kiconloader.h>
 #include <kio/job.h>
-#include <kio/netaccess.h>
-#include <klocale.h>
 #include <kmessagebox.h>
 #include <KJobWidgets>
 
@@ -94,8 +92,10 @@ QString DirSortPlugin::processFile( BatchRenamer* b, int index, const QString &,
         m_digits = m_widget->spinDigits->value();
         m_baseDirectory = m_widget->outputUrl->url();
 
-        if( !KIO::NetAccess::exists( m_baseDirectory, KIO::NetAccess::DestinationSide, m_widget->spinStart ) )
-        {
+        KIO::StatJob *statJob = KIO::stat(m_baseDirectory, KIO::StatJob::DestinationSide, 2);
+        KJobWidgets::setWindow(statJob, m_widget->spinStart);
+        statJob->exec();
+        if (statJob->error()) {
             m_valid = false;
             return this->name() + 
                 i18n(": The output directory %1 does not exist.", 
@@ -127,7 +127,9 @@ QString DirSortPlugin::processFile( BatchRenamer* b, int index, const QString &,
     KIO::JobFlags flags = KIO::DefaultFlags | KIO::HideProgressInfo;
     KIO::Job* job = KIO::file_move( srcUrl, dstUrl, -1, flags );
     m_fileCounter++;
-    if( m_valid && job && !KIO::NetAccess::synchronousRun( job, m_widget->spinStart ) ) 
+    KJobWidgets::setWindow(job, m_widget->spinStart);
+    job->exec();
+    if(!job->exec())
     {
         errorMsg = i18n("Error renaming %2 (to %1)", 
                         dstUrl.toDisplayString(QUrl::PreferLocalFile),

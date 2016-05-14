@@ -17,8 +17,8 @@
 
 #include "krenamefile.h"
 
-#include <kio/netaccess.h>
 #include <kio/previewjob.h>
+#include <KJobWidgets>
 
 /** A singleton class that loads icons for urls in a synchronous way
  */
@@ -66,9 +66,13 @@ const char* KRenameFile::EXTRA_DATA_KEY = "KRenameFile::EXTRA_DATA_KEY";
 KRenameFile::KRenameFile( const QUrl & src, ESplitMode eSplitMode, unsigned int dot )
     : m_bValid( false ), m_error( 0 ), m_manualMode( eManualChangeMode_None )
 {
-    KIO::UDSEntry entry;
-    KIO::NetAccess::stat( src, entry, NULL );
-    KFileItem file( entry, src );
+    KIO::StatJob *statJob = KIO::stat(src, KIO::StatJob::DestinationSide, 2);
+    statJob->exec();
+    if (statJob->error()) {
+        return;
+    }
+
+    KFileItem file( statJob->statResult(), src );
 
     m_bValid     = file.isReadable();
     m_bDirectory = file.isDir();
@@ -274,11 +278,12 @@ const KFileItem & KRenameFile::fileItem() const
     {
         // No file item has been constructed
         // create one first.
-        KIO::UDSEntry entry;
-        KIO::NetAccess::stat( m_src.url, entry, NULL );
-        KFileItem file( entry, m_src.url );
-        
-        const_cast<KRenameFile*>(this)->m_fileItem = file;
+        KIO::StatJob *statJob = KIO::stat(m_src.url, KIO::StatJob::DestinationSide, 2);
+        statJob->exec();
+        if (!statJob->error()) {
+            KFileItem file( statJob->statResult(), m_src.url );
+            const_cast<KRenameFile*>(this)->m_fileItem = file;
+        }
     }
 
     /*

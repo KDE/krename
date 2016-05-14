@@ -20,7 +20,7 @@
 #ifdef HAVE_EXIV2
 #include "exiv2plugin.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <exiv2/error.hpp>
 #include <exiv2/exif.hpp>

@@ -21,7 +21,6 @@
 #include "pluginloader.h"
 
 #include <kiconloader.h>
-#include <klocale.h>
 
 #include <QRegExp>
 
