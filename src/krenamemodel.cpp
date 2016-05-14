@@ -309,6 +309,7 @@ void KRenameModel::removeFiles( const QList<int> & remove )
 
 void KRenameModel::sortFiles( ESortMode mode, const QString & customSortToken, KRenameTokenSorter::ESimpleSortMode customSortMode  )
 {
+    beginResetModel();
     const QString dateSortToken = "creationdate;yyyyMMddHHmm";
 
     m_eSortMode = mode;
@@ -341,10 +342,8 @@ void KRenameModel::sortFiles( ESortMode mode, const QString & customSortToken, K
                                   customSortMode);
         qSort( m_vector->begin(), m_vector->end(), sorter );
     }
-    else
-        return;
 
-    this->reset();
+    endResetModel();
 }
 
 void KRenameModel::run(const QModelIndex & index, QWidget* window ) const
@@ -366,6 +365,7 @@ void KRenameModel::moveFilesUp( const QList<int> & files )
     QList<int> copy( files );
     qSort( copy );
 
+    beginResetModel();
     QList<int>::const_iterator it = copy.begin();
     while( it != copy.end() )
     {
@@ -384,7 +384,7 @@ void KRenameModel::moveFilesUp( const QList<int> & files )
         ++it;
     }
 
-    this->reset();
+    endResetModel();
 }
 
 void KRenameModel::moveFilesDown( const QList<int> & files )
@@ -396,6 +396,7 @@ void KRenameModel::moveFilesDown( const QList<int> & files )
     // sort the list in reverse order
     qSort( copy.begin(), copy.end(), qGreater<int>() );
 
+    beginResetModel();
     QList<int>::const_iterator it = copy.begin();
     while( it != copy.end() )
     {
@@ -414,7 +415,7 @@ void KRenameModel::moveFilesDown( const QList<int> & files )
         ++it;
     }
 
-    this->reset();
+    endResetModel();
 }
 
 //////////////////////////////////////////////////////////////
@@ -528,7 +529,8 @@ QModelIndex KRenamePreviewModel::sibling ( int, int, const QModelIndex & ) const
     return QModelIndex();
 }
 
-void KRenamePreviewModel::refresh() 
+void KRenamePreviewModel::refresh()
 {
-    emit reset();
+    beginResetModel();
+    endResetModel();
 }

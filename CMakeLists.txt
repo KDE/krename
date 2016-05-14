@@ -13,7 +13,7 @@ include(KDECompilerSettings)
 include(FeatureSummary)
 
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
-find_package(KF5 REQUIRED COMPONENTS KDELibs4Support I18n JS KIO IconThemes)
+find_package(KF5 REQUIRED COMPONENTS I18n JS KIO IconThemes)
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} 
                       ${CMAKE_SOURCE_DIR}/cmake/modules )
@@ -23,7 +23,6 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 SET(KRENAME_VERSION "4.0.9")
 
-INCLUDE (MacroLibrary)
 INCLUDE (FindGettext)
 
 INCLUDE (MacroLogFeature)

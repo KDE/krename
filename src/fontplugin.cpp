@@ -94,15 +94,15 @@ QString FontPlugin::processFile( BatchRenamer* b, int index, const QString & fil
     {
         if( token == "fontpostscript" )
         {
-            result = QString::fromAscii( FT_Get_Postscript_Name( face ) );
+            result = QString::fromLocal8Bit( FT_Get_Postscript_Name( face ) );
         }
         else if( token == "fontfamily" && face->family_name ) 
         {
-            result = QString::fromAscii( face->family_name );
+            result = QString::fromLocal8Bit( face->family_name );
         }
         else if( token == "fontstyle" && face->style_name ) 
         {
-            result = QString::fromAscii( face->style_name );
+            result = QString::fromLocal8Bit( face->style_name );
         }
     }
 
