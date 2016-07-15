@@ -20,8 +20,6 @@
 #ifdef HAVE_PODOFO
 #include "podofoplugin.h"
 
-#include <klocale.h>
-
 #include <podofo/podofo.h>
 
 #include "batchrenamer.h"
