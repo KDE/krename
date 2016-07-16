@@ -13,7 +13,20 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
-find_package(KF5 REQUIRED COMPONENTS I18n JS KIO IconThemes)
+find_package(KF5 REQUIRED COMPONENTS
+    Completion
+    Config
+    CoreAddons
+    I18n
+    IconThemes
+    ItemViews
+    JobWidgets
+    JS
+    KIO
+    Service
+    WidgetsAddons
+    XmlGui
+)
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} 
                       ${CMAKE_SOURCE_DIR}/cmake/modules )
