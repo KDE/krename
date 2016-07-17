@@ -101,20 +101,3 @@ CONFIGURE_FILE(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename
 # Directories
 
 add_subdirectory(src)
-
-# Message stuff 
-
-FILE(GLOB _POFILES po/*.po)
-FOREACH(_p ${_POFILES})
-  SET(POFILES "${_p} ${POFILES}")
-ENDFOREACH(_p)
-
-SET(MESSAGES_DIR ${CMAKE_SOURCE_DIR}/src)
-CONFIGURE_FILE(
-    "${CMAKE_CURRENT_SOURCE_DIR}/cmakemodules/package_messages.sh.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/package_messages.sh"
-    IMMEDIATE
-    @ONLY)
-ADD_CUSTOM_TARGET(package-messages
-    "${CMAKE_CURRENT_BINARY_DIR}/package_messages.sh")
-
