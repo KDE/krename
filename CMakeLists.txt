@@ -42,57 +42,56 @@ INCLUDE (MacroLogFeature)
 
 # Find taglib
 set(TAGLIB_MIN_VERSION "1.5")
-find_package(Taglib)
-macro_log_feature( TAGLIB_FOUND "taglib" "Read and write tags in audio files" "http://www.freshmeat.net/projects/taglib" TRUE "1.5.0" "")
-#set_package_properties( FEATURE PROPERTIES DESCRIPTION "taglib" URL "http://www.freshmeat.net/projects/taglib" TYPE RECOMMENDED PURPOSE "Read and write tags in audio files" )
+find_package(Taglib ${TAGLIB_MIN_VERSION})
+set_package_properties(Taglib PROPERTIES
+  DESCRIPTION "Read and write tags in audio files"
+  URL "https://taglib.github.io/"
+  TYPE OPTIONAL)
 
 IF(TAGLIB_FOUND)
   ADD_DEFINITIONS( -DWITH_TAGLIB )
   #  include_directories(${TAGLIB_INCLUDE_DIRS})
-  MESSAGE("-- The tablib library was found. KRename will be built with tablib support.")
-ELSE(TAGLIB_FOUND)
-  MESSAGE("-- The tablib library was not found. KRename will not be built with tablib support.")
 ENDIF(TAGLIB_FOUND)
 
 # Find exiv2
-set(EXIV2_MIN_VERSION "0.13") # AccessMode was added in 0.13
-find_package(Exiv2)
-macro_log_feature(EXIV2_FOUND "Exiv2" "A library to access image metadata" "http://www.exiv2.org" FALSE "")
-#set_package_properties( FEATURE PROPERTIES DESCRIPTION "Exiv2" URL "http://www.exiv2.org" TYPE RECOMMENDED PURPOSE "A library to access image metadata" )
+find_package(Exiv2 0.13) # AccessMode was added in 0.13
+set_package_properties(Exiv2 PROPERTIES
+  DESCRIPTION "A library to access image metadata"
+  URL "http://www.exiv2.org"
+  TYPE OPTIONAL)
 
 IF(EXIV2_FOUND)
   ADD_DEFINITIONS( -DWITH_EXIV2 )
 #  include_directories(${EXIV2_INCLUDE_DIRS})
-  MESSAGE("-- The exiv2 library was found. KRename will be built with exiv2 support.")
-ELSE(EXIV2_FOUND)
-  MESSAGE("-- The exiv2 library was not found. KRename will not be built with exiv2 support.")
 ENDIF(EXIV2_FOUND)
 
 # Find podofo
 find_package(LIBPODOFO)
-macro_log_feature(LIBPODOFO_FOUND "libPodofo" "A library to access pdf metadata" "http://podofo.sourceforge.net/" FALSE "")
-#set_package_properties( FEATURE PROPERTIES DESCRIPTION "libPodofo" URL "http://podofo.sourceforge.net/" TYPE RECOMMENDED PURPOSE "A library to access pdf metadata" )
+set_package_properties(LIBPODOFO PROPERTIES
+  DESCRIPTION "A library to access PDF metadata"
+  URL "http://podofo.sourceforge.net/"
+  TYPE OPTIONAL)
 IF(LIBPODOFO_FOUND)
   ADD_DEFINITIONS( -DWITH_PODOFO )
   #  include_directories(${PODOFO_INCLUDE_DIRS})
-  MESSAGE("-- The podofo library was found. KRename will be built with podofo support.")
 ELSE(LIBPODOFO_FOUND)
-  MESSAGE("-- The podofo library was not found. KRename will not be built with podofo support.")
   SET(LIBPODOFO_LIB "")
 ENDIF(LIBPODOFO_FOUND)
 
 # Find freetype
 find_package(Freetype)
-macro_log_feature(FREETYPE_FOUND "FreeType2" "A library to access font metadata" "http://www.freetype.org" FALSE "")
-#set_package_properties( FEATURE PROPERTIES DESCRIPTION "FreeType2" URL "http://www.freetype.org" TYPE RECOMMENDED PURPOSE "A library to access font metadata" )
+set_package_properties(Freetype PROPERTIES
+  DESCRIPTION "A library to access font metadata"
+  URL "http://www.freetype.org"
+  TYPE OPTIONAL)
 IF(FREETYPE_FOUND)
   ADD_DEFINITIONS( -DWITH_FREETYPE )
   include_directories(${FREETYPE_INCLUDE_DIRS})
-  MESSAGE("-- The freetype library was found. KRename will be built with freetype support.")
 ELSE(FREETYPE_FOUND)
-  MESSAGE("-- The freetype library was not found. KRename will not be built with freetype support.")
   SET(FREETYPE_LIBRARIES "")
 ENDIF(FREETYPE_FOUND)
+
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 
 # Update configuration
