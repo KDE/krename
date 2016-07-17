@@ -1,9 +1,8 @@
 [Desktop Entry]
 Type=Application
-Exec=krename -caption "%c" %i %m %U
-Icon=krename.png
-MiniIcon=krename.png
-DocPath=krename/index.html
+Exec=krename -caption "%c" %i %U
+Icon=krename
+X-DocPath=krename/index.html
 Comment=A batch renamer
 Comment[de]=Ein Batch Umbenenner
 Terminal=false
