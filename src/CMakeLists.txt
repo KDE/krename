@@ -4,7 +4,11 @@ add_subdirectory( servicemenus )
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR} 
 		     ${CMAKE_CURRENT_SOURCE_DIR} 
 		     ${CMAKE_CURRENT_BINARY_DIR}
-		     ${TAGLIB_INCLUDE_DIR} )
+		     )
+
+if(TAGLIB_FOUND)
+  include_directories(${TAGLIB_INCLUDES})
+endif()
 
 IF(EXIV2_FOUND)
   INCLUDE_DIRECTORIES( ${EXIV2_INCLUDE_DIR} )

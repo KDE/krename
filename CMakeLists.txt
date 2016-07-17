@@ -50,7 +50,6 @@ set_package_properties(Taglib PROPERTIES
 
 IF(TAGLIB_FOUND)
   ADD_DEFINITIONS( -DWITH_TAGLIB )
-  #  include_directories(${TAGLIB_INCLUDE_DIRS})
 ENDIF(TAGLIB_FOUND)
 
 # Find exiv2
@@ -62,7 +61,6 @@ set_package_properties(Exiv2 PROPERTIES
 
 IF(EXIV2_FOUND)
   ADD_DEFINITIONS( -DWITH_EXIV2 )
-#  include_directories(${EXIV2_INCLUDE_DIRS})
 ENDIF(EXIV2_FOUND)
 
 # Find podofo
@@ -73,7 +71,6 @@ set_package_properties(LIBPODOFO PROPERTIES
   TYPE OPTIONAL)
 IF(LIBPODOFO_FOUND)
   ADD_DEFINITIONS( -DWITH_PODOFO )
-  #  include_directories(${PODOFO_INCLUDE_DIRS})
 ENDIF(LIBPODOFO_FOUND)
 
 # Find freetype
@@ -84,7 +81,6 @@ set_package_properties(Freetype PROPERTIES
   TYPE OPTIONAL)
 IF(FREETYPE_FOUND)
   ADD_DEFINITIONS( -DWITH_FREETYPE )
-  include_directories(${FREETYPE_INCLUDE_DIRS})
 ENDIF(FREETYPE_FOUND)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
