@@ -106,8 +106,8 @@ int main(int argc, char *argv[])
     aboutData.addCredit( i18n("Asim Husanovic"), i18n("Translated KRename into Bosnian"), "asim.h@megatel.ba" );    
     aboutData.addCredit( i18n("Michal Smoczyk"), i18n("Polish Translation"), "msmoczyk@wp.pl" );    
     aboutData.addCredit( i18n("Pavel Fric"), i18n("Czech Translation"), "pavelfric@seznam.cz" );    
-    aboutData.setTranslator(i18nc("_: NAME OF TRANSLATORS", "Your names"),
-                            i18nc("_: EMAIL OF TRANSLATORS", "Your emails"));
+    aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"),
+                            i18nc("EMAIL OF TRANSLATORS", "Your emails"));
  
 
     KAboutData::setApplicationData(aboutData);
