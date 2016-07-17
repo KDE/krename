@@ -101,7 +101,6 @@ CONFIGURE_FILE(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename
 # Directories
 
 add_subdirectory(src)
-add_subdirectory(po)
 
 # Message stuff 
 
