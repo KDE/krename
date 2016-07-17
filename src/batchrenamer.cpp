@@ -301,10 +301,10 @@ void BatchRenamer::processFiles( ProgressDialog* p )
     }
 
     if( errors > 0 ) 
-        p->warning( i18n("%1 errors occurred!", errors ) );
+        p->warning( i18np("%1 error occurred.", "%1 errors occurred.", errors) );
 
     p->print( i18n("KRename finished the renaming process."), "krename" );
-    p->print( i18n("Press close to quit!") );
+    p->print( i18n("Press close to quit.") );
     bool enableUndo = (m_renameMode != eRenameMode_Copy);
     p->renamingDone( true, enableUndo, this, errors );
     
@@ -426,10 +426,10 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
     }
 
     if( errors > 0 ) 
-        p->warning( i18n("%1 errors occurred!", errors ) );
+        p->warning( i18np("%1 error occurred.", "%1 errors occurred.", errors) );
 
     p->print( i18n("KRename finished the undo process."), "krename" );
-    p->print( i18n("Press close to quit!") );
+    p->print( i18n("Press close to quit.") );
     p->renamingDone( false, false, this, errors ); // do not allow undo from undo
 
 }
@@ -689,7 +689,7 @@ void BatchRenamer::work( ProgressDialog*  )
             writeUndoScript( tundo );
         } else {
             undo = false;
-            p->error( i18n("Can't create undo script :") + fundo->name() );
+            p->error( i18n("Cannot create undo script: %1", fundo->name()) );
             delete fundo;
         }
     }
@@ -702,11 +702,11 @@ void BatchRenamer::work( ProgressDialog*  )
      * Give the user some information...
      */
     if( m_mode == COPY)
-        p->print( QString( i18n("Files will be copied to: %1") ).arg(m_files[0].dst.directory) );
+        p->print( i18n("Files will be copied to: %1", m_files[0].dst.directory) );
     else if( m_mode == MOVE )
-        p->print( QString( i18n("Files will be moved to: %1") ).arg(m_files[0].dst.directory) );
+        p->print( i18n("Files will be moved to: %1", m_files[0].dst.directory) );
     else if( m_mode == LINK )
-        p->print( QString( i18n("Symbolic links will be created in: %1") ).arg(m_files[0].dst.directory) );
+        p->print( i18n("Symbolic links will be created in: %1", m_files[0].dst.directory) );
     else if( m_mode == RENAME )
         p->print( i18n("Input files will be renamed.") );
     
@@ -761,7 +761,7 @@ void BatchRenamer::work( ProgressDialog*  )
                 (*tundo) << "mv -f \"" << m_files[i].dst.name
                          << "\" \"" << m_files[i].src.name << "\"" << endl;
             } else
-                p->warning( QString( i18n("Undo is not possible for remote file: %1") ).arg( dst.prettyURL() ) );
+                p->warning( i18n("Undo is not possible for remote file: %1", dst.prettyURL() ) );
 
     }
 
@@ -773,15 +773,15 @@ void BatchRenamer::work( ProgressDialog*  )
         }
     }
 
-    const QString m = QString( i18n("Renamed %1 files successfully.") ).arg(i-error);
+    const QString m = i18n("Renamed %1 files successfully.", i-error);
     ( i - error ) ? p->print( m ) : p->warning( m );
 
     if( error > 0 ) 
-        p->warning( QString( i18n("%2 errors occurred!") ).arg(error));
+        p->warning( i18np("%1 error occurred.", "%1 errors occurred.", error));
 
-    p->print( QString( i18n("Elapsed time: %1 seconds") ).arg( t.elapsed()/1000 ), "kalarm" );
+    p->print( i18n("Elapsed time: %1 seconds", t.elapsed()/1000), "kalarm" );
     p->print( i18n("KRename finished the renaming process."), "krename" );
-    p->print( i18n("Press close to quit!") );
+    p->print( i18n("Press close to quit.") );
     p->setRenamedFiles( renamedFiles, m_files.count() );
     
     if( undo ) {
@@ -791,7 +791,7 @@ void BatchRenamer::work( ProgressDialog*  )
 
         // Make fundo exuteable
         if( chmod( (const char*)m_undoScript, (unsigned int) S_IRUSR | S_IWUSR | S_IXUSR ) )
-            p->error( i18n("Can't set executable bit on undo script.") );
+            p->error( i18n("Cannot set executable bit on undo script.") );
         delete fundo;
     }
 

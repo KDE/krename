@@ -109,12 +109,12 @@ QString DateTimePlugin::changeDateTime( const QString & filename, bool bModifica
     ti = mktime( &tmp );
 
     if( ti == -1 )
-        return QString( i18n("Can't change date of file %1. (Cannot mktime)") ).arg(filename);
+        return i18n("Cannot change date of file %1. (Cannot mktime)", filename);
 
     // Get current values 
     struct stat st;
     if( stat( filename.toUtf8().data(), &st ) == -1 )
-        return QString( i18n("Can't change date of file %1. (Cannot stat the file)") ).arg(filename);
+        return i18n("Cannot change date of file %1. (Cannot stat the file)", filename);
 
     // Fill structure;
     struct utimbuf buf;
@@ -123,7 +123,7 @@ QString DateTimePlugin::changeDateTime( const QString & filename, bool bModifica
     buf.modtime = (bModification ? ti: st.st_mtime);
     
     if(utime( filename.toUtf8().data(), &buf ) != 0)
-        return QString( i18n("Can't change date of file %1. (utime failed)") ).arg(filename);
+        return i18n("Cannot change date of file %1. (utime failed)", filename);
 
     return QString::null;
 }

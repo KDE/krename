@@ -97,8 +97,9 @@ QString DirSortPlugin::processFile( BatchRenamer* b, int index, const QString &,
         statJob->exec();
         if (statJob->error()) {
             m_valid = false;
-            return this->name() + 
-                i18n(": The output directory %1 does not exist.", 
+            return
+                i18n("%1: The output directory %2 does not exist.",
+                     this->name(),
                      m_baseDirectory.toDisplayString(QUrl::PreferLocalFile) );
         }
         else 

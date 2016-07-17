@@ -552,7 +552,7 @@ void KRenameImpl::slotExtensionSplitModeChanged( ESplitMode splitMode, int dot )
 void KRenameImpl::slotStart()
 {
     ProgressDialog* progress = new ProgressDialog( m_lastSplitMode, m_lastDot );
-    progress->print( i18n("Starting conversion of %1 files.", m_vector.count()) );
+    progress->print( i18np("Starting conversion of %1 file.", "Starting conversion of %1 files.", m_vector.count()) );
 
     // Get some properties from the gui and initialize BatchRenamer
     const QUrl &destination = m_window->destinationUrl();
@@ -571,7 +571,7 @@ void KRenameImpl::slotStart()
             KJobWidgets::setWindow(job, m_window);
             if( !job->exec() )
             {
-                KMessageBox::error( m_window, i18n("The directory %1 could not be created.").arg( destination.toDisplayString(QUrl::PreferLocalFile) ) );
+                KMessageBox::error( m_window, i18n("The directory %1 could not be created.", destination.toDisplayString(QUrl::PreferLocalFile)) );
                 return;
             }
         }

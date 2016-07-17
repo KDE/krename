@@ -128,7 +128,7 @@ QString PermissionsPlugin::processFile( BatchRenamer*, int, const QString & file
     if( m_widget->checkPermissions->isChecked() )
     {
         if( chmod( filename.toUtf8().data(), (mode_t)m_curPermission ) == -1 )
-            return i18n("Can't chmod %1.", filename);
+            return i18n("Cannot chmod %1.", filename);
     }
 
     if( m_widget->checkOwner->isChecked() )
@@ -137,7 +137,7 @@ QString PermissionsPlugin::processFile( BatchRenamer*, int, const QString & file
         gid_t gid = getGid( m_widget->comboGroup->currentText() );
 
         if( chown( filename.toUtf8().data(), uid, gid ) )
-            return i18n("Can't chown %1.", filename);
+            return i18n("Cannot chown %1.", filename);
     }
 
     return QString::null;

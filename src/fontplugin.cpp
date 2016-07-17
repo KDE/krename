@@ -35,7 +35,7 @@ FontPlugin::FontPlugin( PluginLoader* loader )
     this->addSupportedToken("fontpostscript");
     this->addSupportedToken("fontfamily");
     this->addSupportedToken("fontstyle");
-    m_help.append( "[fontPostscript]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the Postscript name for Type1 and TrueType fonts.") );
+    m_help.append( "[fontPostscript]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the PostScript name for Type1 and TrueType fonts.") );
     m_help.append( "[fontFamily]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the (usually English) name of the font family.") );
     m_help.append( "[fontStyle]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the (usually English) name of the font style.") );
 
