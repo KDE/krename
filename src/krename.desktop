@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=krename -caption "%c" %i %U
+Exec=krename -qwindowtitle "%c" %i %U
 Icon=krename
 X-DocPath=krename/index.html
 Comment=A batch renamer
