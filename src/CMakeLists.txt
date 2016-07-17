@@ -131,30 +131,34 @@ endif(KMETADATA_INCLUDE_DIR AND KMETADATA_LIBRARY)
 #configure_file(config-kmetadata.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kmetadata.h )
 
 
-IF(EXIV2_FOUND)
-  TARGET_LINK_LIBRARIES(krename 
-    KF5::KIOCore
-    KF5::KIOFileWidgets
-    KF5::I18n
-    KF5::JSApi
-    KF5::IconThemes
-    Qt5::Widgets
+target_link_libraries(krename
+  KF5::KIOCore
+  KF5::KIOFileWidgets
+  KF5::I18n
+  KF5::JSApi
+  KF5::IconThemes
+  Qt5::Widgets
+  )
+if(TAGLIB_FOUND)
+  target_link_libraries(krename
     ${TAGLIB_LIBRARIES}
+    )
+endif()
+if(EXIV2_FOUND)
+  target_link_libraries(krename
+    ${EXIV2_LIBRARIES}
+    )
+endif()
+if(LIBPODOFO_FOUND)
+  target_link_libraries(krename
     ${LIBPODOFO_LIB}
+    )
+endif()
+if(FREETYPE_FOUND)
+  target_link_libraries(krename
     ${FREETYPE_LIBRARIES}
-    ${EXIV2_LIBRARIES} )
-ELSE(EXIV2_FOUND)
-  TARGET_LINK_LIBRARIES(krename 
-    KF5::KIOCore
-    KF5::KIOFileWidgets
-    KF5::I18n
-    KF5::JSApi
-    KF5::IconThemes
-    Qt5::Widgets
-    ${LIBPODOFO_LIB}
-    ${FREETYPE_LIBRARIES}
-    ${TAGLIB_LIBRARIES} )
-ENDIF(EXIV2_FOUND)
+    )
+endif()
 
 # Others Files to install
 
