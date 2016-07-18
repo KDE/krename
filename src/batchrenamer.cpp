@@ -292,7 +292,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
          *
          * Remember, the token argument is the filename for this type of plugins!
          *
-         * If the return value is not empty an error has occured!
+         * If the return value is not empty an error has occurred!
          * The plugin should return an error message in this case!
          */
         int errorCount = 0;
@@ -742,7 +742,7 @@ void BatchRenamer::work( ProgressDialog*  )
          *
          * Remember, the token argument is the filename for this type of plugins!
          *
-         * If the return value is not empty an error has occured!
+         * If the return value is not empty an error has occurred!
          * The plugin should return an error message in this case!
          */
 

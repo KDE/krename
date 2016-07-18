@@ -103,7 +103,7 @@ class KRenameTest : public QWidget {
     int        m_counter;    ///< test counter (increased for each individual test)
     bool       m_result;     ///< return value of tests is stored here
     bool       m_verbose;    ///< if true print more information for each test
-    int        m_success;    ///< counter of successfull tests
+    int        m_success;    ///< counter of successful tests
     int        m_failed;     ///< counter of failed tests
 
     static const int BUFFER_LENGTH = 512; 

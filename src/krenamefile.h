@@ -171,7 +171,7 @@ class KRenameFile {
     }
 
     /** Set this error code to value != 0
-     *  if an error has occured during renaming this
+     *  if an error has occurred during renaming this
      *  particular file.
      *
      *  @param error an error code (0 means no error)

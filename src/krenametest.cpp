@@ -95,7 +95,7 @@ void KRenameTest::startTest()
     testKRenameFile();
     testBatchRenamer();
 
-    this->writeTestMessage( "<b>Results:</b>\n\nSuccessfull: %i Failed %i", m_success, m_failed );
+    this->writeTestMessage( "<b>Results:</b>\n\nSuccessful: %i Failed %i", m_success, m_failed );
 }
 
 void KRenameTest::writeTestHeader( const QString & text )

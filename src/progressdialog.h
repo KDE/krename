@@ -67,7 +67,7 @@ class ProgressDialog : public QDialog {
     inline void setCreatedDirectories( const KURL::List & list );
     *    */
 
-    //void done( int errors, int successfull, bool allowundo );
+    //void done( int errors, int successful, bool allowundo );
 
     /** Print an information message to the user
      *
@@ -97,7 +97,7 @@ class ProgressDialog : public QDialog {
      *  @param enableUndo if true the undo button will be enabled
      *  @param batchRename is a handle to a batchrenamer instance that can be used to undo the operation and
      *                     to determine URLs for a new renaming session
-     *  @param errros the number of errors that have occurred. If errors have occured the user
+     *  @param errros the number of errors that have occurred. If errors have occurred the user
      *                has the extra possibility to only rename files with errors again
      */
     void renamingDone( bool enableMore, bool enableUndo, BatchRenamer* renamer, int errors ); 

@@ -255,7 +255,7 @@ void ScriptPlugin::slotAdd()
 	if( result.isException() )
 	{
 	    KMessageBox::error( m_parent, 
-				i18n("A JavaScript error has occured: ") +
+				i18n("A JavaScript error has occurred: ") +
 				result.errorMessage(), this->name() );
 	}
 	else
