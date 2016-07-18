@@ -4,7 +4,6 @@ Exec=krename -qwindowtitle "%c" %i %U
 Icon=krename
 X-DocPath=krename/index.html
 Comment=A batch renamer
-Comment[de]=Ein Batch Umbenenner
 Terminal=false
 Name=KRename
 Categories=Qt;KDE;Utility;
