@@ -22,6 +22,7 @@
 
 #include <QContextMenuEvent>
 #include <QMenu>
+#include <QPointer>
 
 PreviewList::PreviewList( QWidget* parent )
     : QTreeView( parent ), m_model( NULL )
@@ -72,17 +73,18 @@ void PreviewList::slotRemove()
 
 void PreviewList::slotManually()
 {
-    CustomDialog dialog(m_model->file( this->currentIndex().row() ), this);
-    if( dialog.exec() == QDialog::Accepted ) 
+    QPointer<CustomDialog> dialog = new CustomDialog(m_model->file( this->currentIndex().row() ), this);
+    if( dialog->exec() == QDialog::Accepted )
     {
         QString manual = QString::null;
         EManualChangeMode mode = eManualChangeMode_None;
-        if( dialog.hasManualChanges() ) 
+        if( dialog->hasManualChanges() )
         {
-            manual = dialog.manualChanges();
-            mode = dialog.manualChangeMode();
+            manual = dialog->manualChanges();
+            mode = dialog->manualChangeMode();
         }
 
         m_model->file( this->currentIndex().row() ).setManualChanges( manual, mode );
     }
+    delete dialog;
 }

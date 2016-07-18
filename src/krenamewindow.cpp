@@ -956,11 +956,11 @@ void KRenameWindow::slotSortChanged( int index )
         case 7:
         {
             eMode = eSortMode_Token; 
-            TokenSortModeDialog dlg( eCustomSortMode, this );
-            if( dlg.exec() == QDialog::Accepted ) 
+            QPointer<TokenSortModeDialog> dlg = new TokenSortModeDialog( eCustomSortMode, this );
+            if( dlg->exec() == QDialog::Accepted )
             {
-                customToken = dlg.getToken();
-                eCustomSortMode = dlg.getSortMode();
+                customToken = dlg->getToken();
+                eCustomSortMode = dlg->getSortMode();
             }
             else
             {
@@ -970,6 +970,7 @@ void KRenameWindow::slotSortChanged( int index )
                 m_pageFiles->comboSort->setCurrentIndex( eMode );
                 return; 
             }
+            delete dlg;
             break;
         }
     }

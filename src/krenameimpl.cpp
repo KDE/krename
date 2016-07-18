@@ -48,6 +48,7 @@
 #include <QCommandLineParser>
 #include <QDebug>
 #include <QMenuBar>
+#include <QPointer>
 
 KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list, QCommandLineParser *commandLine )
     : QObject( (QObject*)window ), m_window( window ),
@@ -342,16 +343,18 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
 
 void KRenameImpl::slotAddFiles()
 {
-    FileDialogExtWidget dialog(m_window);
+    QPointer<FileDialogExtWidget> dialog = new FileDialogExtWidget(m_window);
 
-    if(dialog.exec() == QDialog::Accepted)
+    if(dialog->exec() == QDialog::Accepted)
     {
-        this->addFilesOrDirs( dialog.selectedUrls(), dialog.currentFilter(),
-                              dialog.addRecursively(), dialog.addDirsWithFiles(),
-                              dialog.addDirsOnly(), dialog.addHidden() );
+        this->addFilesOrDirs( dialog->selectedUrls(), dialog->currentFilter(),
+                              dialog->addRecursively(), dialog->addDirsWithFiles(),
+                              dialog->addDirsOnly(), dialog->addHidden() );
     } else {
         qWarning() << "Dialog not accepted";
     }
+
+    delete dialog;
 }
 
 void KRenameImpl::slotRemoveFiles()
@@ -412,43 +415,51 @@ void KRenameImpl::slotUpdatePreview()
 
 void KRenameImpl::slotAdvancedNumberingDlg()
 {
-    NumberDialog dialog( m_renamer.numberStartIndex(), m_renamer.numberStepping(), 
-                         m_renamer.numberReset(), m_renamer.numberSkipList() ,m_window );
-    if( dialog.exec() == QDialog::Accepted ) 
-    {
-        m_renamer.setNumberStartIndex( dialog.startIndex() );
-        m_renamer.setNumberStepping( dialog.numberStepping() );
-        m_renamer.setNumberReset( dialog.resetCounter() );
-        m_renamer.setNumberSkipList( dialog.skipNumbers() );
+    QPointer<NumberDialog> dialog = new NumberDialog(
+            m_renamer.numberStartIndex(), m_renamer.numberStepping(),
+            m_renamer.numberReset(), m_renamer.numberSkipList(), m_window );
 
-        m_window->setNumberStartIndex( dialog.startIndex() );
+    if( dialog->exec() == QDialog::Accepted )
+    {
+        m_renamer.setNumberStartIndex( dialog->startIndex() );
+        m_renamer.setNumberStepping( dialog->numberStepping() );
+        m_renamer.setNumberReset( dialog->resetCounter() );
+        m_renamer.setNumberSkipList( dialog->skipNumbers() );
+
+        m_window->setNumberStartIndex( dialog->startIndex() );
 
         slotUpdatePreview();
     }
+
+    delete dialog;
 }
 
 void KRenameImpl::slotInsertPartFilenameDlg()
 {
-    InsertPartFilenameDlg dialog( m_vector.first().srcFilename() );
+    QPointer<InsertPartFilenameDlg> dialog = new InsertPartFilenameDlg( m_vector.first().srcFilename() );
 
-    if( dialog.exec() == QDialog::Accepted ) 
+    if( dialog->exec() == QDialog::Accepted )
     {
-        m_window->setFilenameTemplate( dialog.command(), true );
+        m_window->setFilenameTemplate( dialog->command(), true );
 
         // Update preview will called from KRenameWindow because of the changed template
         // slotUpdatePreview();s
     }
+
+    delete dialog;
 }
 
 void KRenameImpl::slotFindReplaceDlg()
 {
-    ReplaceDialog dialog( m_renamer.replaceList(), m_window );
+    QPointer<ReplaceDialog> dialog = new ReplaceDialog( m_renamer.replaceList(), m_window );
 
-    if( dialog.exec() == QDialog::Accepted ) 
+    if( dialog->exec() == QDialog::Accepted )
     {
-        m_renamer.setReplaceList( dialog.replaceList() );
+        m_renamer.setReplaceList( dialog->replaceList() );
         slotUpdatePreview();
     }
+
+    delete dialog;
 }
 
 void KRenameImpl::slotListerDone( ThreadedLister* lister ) 

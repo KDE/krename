@@ -27,6 +27,7 @@
 
 #include <QFile>
 #include <QMenu>
+#include <QPointer>
 #include <QTextStream>
 #include <QVariant>
 #include <QFileDialog>
@@ -229,7 +230,7 @@ void ScriptPlugin::slotEnableControls()
 
 void ScriptPlugin::slotAdd()
 {
-    QDialog                dialog;
+    QPointer<QDialog> dialog = new QDialog();
     Ui::ScriptPluginDialog dlg;
 
     QStringList types;
@@ -239,10 +240,10 @@ void ScriptPlugin::slotAdd()
     types << i18n("Double");
     types << i18n("Boolean");
 
-    dlg.setupUi( &dialog );
+    dlg.setupUi( dialog );
     dlg.comboType->addItems( types );
     
-    if( dialog.exec() == QDialog::Accepted ) 
+    if( dialog->exec() == QDialog::Accepted )
     {
 	QString name  = dlg.lineName->text();
 	QString value = dlg.lineValue->text();
@@ -268,6 +269,7 @@ void ScriptPlugin::slotAdd()
 	    m_widget->listVariables->addTopLevelItem( item );
 	}
     }
+    delete dialog;
 }
 
 void ScriptPlugin::slotRemove()
