@@ -222,7 +222,7 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
     // Add all recursive directoris
     QList<QUrl> recursiveList;
     QStringList directories = parser->values ( "r" );
-    foreach (const QString directory, directories) {
+    foreach (const QString &directory, directories) {
         QUrl url = QUrl::fromUserInput(directory, QDir::currentPath());
 
         qDebug() << "Adding recursive:" << directory;
