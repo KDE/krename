@@ -25,7 +25,7 @@
 
 class DirSortPlugin : public Plugin {
     public:
-    DirSortPlugin( PluginLoader* loader );
+    explicit DirSortPlugin( PluginLoader* loader );
     ~DirSortPlugin();
 
     /** 

@@ -24,7 +24,7 @@
 
 class Exiv2Plugin : public FilePlugin {
  public:
-    Exiv2Plugin( PluginLoader* loader );
+    explicit Exiv2Plugin( PluginLoader* loader );
     
     /**
      * This function is the core of your plugin.

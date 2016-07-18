@@ -25,7 +25,7 @@ class QTextDocument;
 class RichTextItemDelegate : public QItemDelegate {
 
 public:
-    RichTextItemDelegate(QObject* parent = NULL);
+    explicit RichTextItemDelegate(QObject* parent = NULL);
     virtual ~RichTextItemDelegate() { }
 
     virtual void paint (QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index ) const;

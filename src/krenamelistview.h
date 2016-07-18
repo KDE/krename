@@ -32,7 +32,7 @@ class KRenameListView : public QListView {
     Q_OBJECT
 
 public:
-    KRenameListView(QWidget* parent);
+    explicit KRenameListView(QWidget* parent);
     virtual ~KRenameListView() { }
 
     /**

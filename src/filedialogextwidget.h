@@ -25,7 +25,7 @@
 class FileDialogExtWidget : public QDialog {
  Q_OBJECT
  public:
-    FileDialogExtWidget(QWidget *parent);
+    explicit FileDialogExtWidget(QWidget *parent);
 
     /** 
      * \returns true if directories should be added recursively

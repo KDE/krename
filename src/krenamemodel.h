@@ -44,7 +44,7 @@ enum ESortMode {
 class KRenameModel : public QAbstractListModel {
     Q_OBJECT
     public:
-    KRenameModel( KRenameFile::List* vector );
+    explicit KRenameModel( KRenameFile::List* vector );
     ~KRenameModel();
 
     /**
@@ -260,7 +260,7 @@ unsigned int KRenameModel::splitDot()
 class KRenamePreviewModel : public QAbstractTableModel {
     Q_OBJECT
     public:
-    KRenamePreviewModel( KRenameFile::List* vector );
+    explicit KRenamePreviewModel( KRenameFile::List* vector );
     ~KRenamePreviewModel();
 
     void refresh();

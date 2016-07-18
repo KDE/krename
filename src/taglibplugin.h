@@ -23,7 +23,7 @@
 
 class TagLibPlugin : public FilePlugin {
  public:
-    TagLibPlugin( PluginLoader* loader );
+    explicit TagLibPlugin( PluginLoader* loader );
     
     /**
      * This function is the core of your plugin.

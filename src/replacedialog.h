@@ -32,7 +32,7 @@ class QTableWidgetItem;
 class ReplaceDialog : public QDialog {
  Q_OBJECT
  public:
-     ReplaceDialog( const QList<TReplaceItem> & items, QWidget* parent = NULL );
+     explicit ReplaceDialog( const QList<TReplaceItem> & items, QWidget* parent = NULL );
 
      QList<TReplaceItem> replaceList() const;
 

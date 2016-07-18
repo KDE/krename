@@ -44,7 +44,7 @@ enum EPluginType {
  */
 class Plugin {
  public:
-    Plugin( PluginLoader* loader );
+    explicit Plugin( PluginLoader* loader );
     virtual ~Plugin();
 
     /** 

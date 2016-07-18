@@ -35,7 +35,7 @@ class ExtHistoryCombo : public KHistoryComboBox {
      *
      * @param parent Parent widget
      */
-    ExtHistoryCombo( QWidget* parent );
+    explicit ExtHistoryCombo( QWidget* parent );
 
     /// Fix compilation, designer needs this method
     inline void insertItems( int, QStringList & list ) { KHistoryComboBox::insertItems( list ); } 

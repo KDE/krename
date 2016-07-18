@@ -33,7 +33,7 @@ class StartUpInfo : public QFrame {
     Q_OBJECT
 
 public:
-    StartUpInfo(QWidget* parent = NULL);
+    explicit StartUpInfo(QWidget* parent = NULL);
     virtual ~StartUpInfo();
 
 signals:

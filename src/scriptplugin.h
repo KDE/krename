@@ -35,7 +35,7 @@ class ScriptPlugin : public QObject, public Plugin {
     /** Create a new ScriptPlugin from
      *
      */
-    ScriptPlugin( PluginLoader* loader );
+    explicit ScriptPlugin( PluginLoader* loader );
 
     virtual ~ScriptPlugin();
 

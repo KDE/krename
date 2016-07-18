@@ -32,7 +32,7 @@ class IncreaseCounterPlugin : public QObject, public Plugin {
  Q_OBJECT
 
  public:
-    IncreaseCounterPlugin( PluginLoader* loader );
+    explicit IncreaseCounterPlugin( PluginLoader* loader );
     virtual ~IncreaseCounterPlugin();
 
     /** 

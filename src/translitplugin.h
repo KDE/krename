@@ -24,7 +24,7 @@
 
 class TranslitPlugin : public FilePlugin {
  public:
-    TranslitPlugin( PluginLoader* loader );
+    explicit TranslitPlugin( PluginLoader* loader );
     
     ~TranslitPlugin();
 

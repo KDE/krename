@@ -31,7 +31,7 @@
 
 class FontPlugin : public FilePlugin {
  public:
-    FontPlugin( PluginLoader* loader );
+    explicit FontPlugin( PluginLoader* loader );
     
     ~FontPlugin();
 

@@ -23,7 +23,7 @@
 
 class SnumPlugin : public FilePlugin {
  public:
-    SnumPlugin( PluginLoader* loader );
+    explicit SnumPlugin( PluginLoader* loader );
     
     ~SnumPlugin();
 

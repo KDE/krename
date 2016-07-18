@@ -24,7 +24,7 @@
 
 class PodofoPlugin : public FilePlugin {
  public:
-    PodofoPlugin( PluginLoader* loader );
+    explicit PodofoPlugin( PluginLoader* loader );
     
     /**
      * This function is the core of your plugin.
