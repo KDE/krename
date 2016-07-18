@@ -38,8 +38,6 @@ SET(KRENAME_VERSION "4.0.9")
 
 INCLUDE (FindGettext)
 
-INCLUDE (MacroLogFeature)
-
 # Find taglib
 set(TAGLIB_MIN_VERSION "1.5")
 find_package(Taglib ${TAGLIB_MIN_VERSION})
