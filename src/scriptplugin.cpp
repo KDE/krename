@@ -245,29 +245,29 @@ void ScriptPlugin::slotAdd()
     
     if( dialog->exec() == QDialog::Accepted )
     {
-	QString name  = dlg.lineName->text();
-	QString value = dlg.lineValue->text();
+        QString name  = dlg.lineName->text();
+        QString value = dlg.lineValue->text();
 
-	// Build a Java script statement
-	QString script = name + " = " + value + ";";
+        // Build a Java script statement
+        QString script = name + " = " + value + ";";
 	
-	KJSInterpreter interpreter;
-	KJSResult result = m_interpreter->evaluate( script, NULL );
-	if( result.isException() )
-	{
-	    KMessageBox::error( m_parent, 
-				i18n("A JavaScript error has occurred: ") +
-				result.errorMessage(), this->name() );
-	}
-	else
-	{
-	    QTreeWidgetItem* item = new QTreeWidgetItem();
-	    item->setText( 0, name );
-	    item->setText( 1, value );
-	    item->setData( 1, Qt::UserRole, QVariant( dlg.comboType->currentIndex() ) );
+        KJSInterpreter interpreter;
+        KJSResult result = m_interpreter->evaluate( script, NULL );
+        if( result.isException() )
+        {
+            KMessageBox::error( m_parent,
+                i18n("A JavaScript error has occurred: ") +
+                result.errorMessage(), this->name() );
+        }
+        else
+        {
+            QTreeWidgetItem* item = new QTreeWidgetItem();
+            item->setText( 0, name );
+            item->setText( 1, value );
+            item->setData( 1, Qt::UserRole, QVariant( dlg.comboType->currentIndex() ) );
 
-	    m_widget->listVariables->addTopLevelItem( item );
-	}
+            m_widget->listVariables->addTopLevelItem( item );
+        }
     }
     delete dialog;
 }
