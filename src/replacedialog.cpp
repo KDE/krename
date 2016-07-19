@@ -15,6 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
+#include "replacedialog.h"
+
 #include <QFileDialog>
 #include <QTextStream>
 #include <QMessageBox>
@@ -22,8 +24,6 @@
 #include <QDomElement>
 
 #include<iostream>
-
-#include "replacedialog.h"
 
 #include "ui_replaceitemdlg.h"
 #include "batchrenamer.h"

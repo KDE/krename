@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "batchrenamer.h"
 #include "fontplugin.h"
+#include "batchrenamer.h"
 #include "tokenhelpdialog.h"
 
 #include <ft2build.h>

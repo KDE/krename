@@ -15,6 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
+#include "batchrenamer.h"
+
 #ifdef _WIN32
 #include <windows.h>
 #endif // _WIN32
@@ -40,7 +42,6 @@
 #include <KJobWidgets>
 
 // Own includes
-#include "batchrenamer.h"
 #include "progressdialog.h"
 #include "pluginloader.h"
 #include "plugin.h"
