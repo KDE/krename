@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef RICHTEXT_ITEM_DELEGTATE_H
-#define RICHTEXT_ITEM_DELEGTATE_H
+#ifndef RICHTEXT_ITEM_DELEGATE_H
+#define RICHTEXT_ITEM_DELEGATE_H
 
 #include <QItemDelegate>
 
@@ -37,4 +37,4 @@ private:
 
 };
 
-#endif // RICHTEXT_ITEM_DELEGTATE_H
+#endif // RICHTEXT_ITEM_DELEGATE_H
