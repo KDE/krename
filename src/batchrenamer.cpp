@@ -1042,7 +1042,7 @@ QString BatchRenamer::findPartStrings( QString oldname, QString token )
 
 QString BatchRenamer::findDirName( QString token, QString path )
 {
-    if( token.toLower().startsWith( "dirname" ) ) {
+    if( token.toLower().startsWith(QLatin1String("dirname"))) {
         if( path.right( 1 ) == "/" )
             path = path.left( path.length() - 1);
 
@@ -1073,7 +1073,7 @@ QString BatchRenamer::findDirSep( const QString & token, const QString & path )
 
 QString BatchRenamer::findLength( const QString & token, const QString & name )
 {
-    if( token.toLower().startsWith( "length" ) ) {
+    if( token.toLower().startsWith(QLatin1String("length"))) {
         int minus = 0;
         if( token.length() > 6 && token[6] == '-' ) {
             bool n = false;
@@ -1090,7 +1090,7 @@ QString BatchRenamer::findLength( const QString & token, const QString & name )
 
 QString BatchRenamer::findTrimmed( const QString & token, const QString & name, int index )
 {
-    if( token.toLower().startsWith( "trimmed" ) ) {
+    if( token.toLower().startsWith(QLatin1String("trimmed"))) {
         if( token.contains( ';' ) )
 	{
 	    QString processed = processString( 

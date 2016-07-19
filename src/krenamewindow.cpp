@@ -631,7 +631,7 @@ void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCus
             combo->setCurrentIndex( 1 );
             comboCustom->lineEdit()->setText( value );
         }
-        else if( templ.startsWith( "[date]" ) ) 
+        else if( templ.startsWith(QLatin1String("[date]")))
         {
             QString value = templ.right( templ.length() - 6 );
             combo->setCurrentIndex( 2 );

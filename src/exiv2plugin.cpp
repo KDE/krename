@@ -408,7 +408,7 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
               else if( token =="exifheight" )
               return QString::number( image->pixelHeight() );
             */
-            if( token.startsWith("exifexif.") ) 
+            if( token.startsWith(QLatin1String("exifexif.")))
             {         
                 ExifKey key( m_mapRealKeys[token].toLatin1().data() );
                 ExifData::const_iterator it = image->exifData().findKey( key );
@@ -418,7 +418,7 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
                     return QString::fromUtf8( val.c_str() );
                 }
             }
-            else if( token.startsWith("exifxmp.") )
+            else if( token.startsWith(QLatin1String("exifxmp.")))
             {
                 XmpKey key( m_mapRealKeys[token].toLatin1().data() );
                 XmpData::const_iterator it = image->xmpData().findKey( key );
@@ -428,7 +428,7 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
                     return QString::fromUtf8( val.c_str() );
                 }
             }
-            else if( token.startsWith("exifiptc.") )
+            else if( token.startsWith(QLatin1String("exifiptc.")))
             {
                 IptcKey key( m_mapRealKeys[token].toLatin1().data() );
                 IptcData::const_iterator it = image->iptcData().findKey( key );

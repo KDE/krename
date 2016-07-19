@@ -51,7 +51,7 @@ void ThreadedLister::run()
     if( m_listDirnames || m_listDirnamesOnly ) 
     {
         QString name = m_dirname.fileName();
-        if( !m_listHiddenFiles && !name.startsWith(".") )        
+        if( !m_listHiddenFiles && !name.startsWith(QLatin1Char('.')))
         {
             KRenameFile::List list;
             list.append( KRenameFile( m_dirname, true, m_eSplitMode, m_dot ) );
