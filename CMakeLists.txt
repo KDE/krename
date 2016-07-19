@@ -84,6 +84,11 @@ feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAG
 
 
 # Update configuration
+include(MacroBoolTo01)
+macro_bool_to_01(TAGLIB_FOUND HAVE_TAGLIB)
+macro_bool_to_01(EXIV2_FOUND HAVE_EXIV2)
+macro_bool_to_01(PoDoFo_FOUND HAVE_PODOFO)
+macro_bool_to_01(FREETYPE_FOUND HAVE_FREETYPE)
 configure_file(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h)
 
 # Directories
