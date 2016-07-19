@@ -389,7 +389,7 @@ void KRenameWindow::slotEnableControls()
 void KRenameWindow::setCount( unsigned int count )
 {
     m_fileCount = count;
-    m_pageFiles->labelCount->setText( i18n("<b>Files:<b> %1", m_fileCount ) );
+    m_pageFiles->labelCount->setText( i18n("<b>Files:</b> %1", m_fileCount ) );
 
     m_pageFiles->fileList->slotUpdateCount();
     this->slotEnableControls();
