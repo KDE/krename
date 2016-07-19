@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _FONT_PLUGIN_H_
-#define _FONT_PLUGIN_H_
+#ifndef FONT_PLUGIN_H
+#define FONT_PLUGIN_H
 
 #include "fileplugin.h"
 
@@ -82,4 +82,4 @@ inline const QStringList & FontPlugin::help() const
     return m_help; 
 }
 
-#endif // _FONT_PLUGIN_H_
+#endif // FONT_PLUGIN_H

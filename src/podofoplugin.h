@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _PODOFO_PLUGIN_H_
-#define _PODOFO_PLUGIN_H_
+#ifndef PODOFO_PLUGIN_H
+#define PODOFO_PLUGIN_H
 
 #include "fileplugin.h"
 
@@ -74,4 +74,4 @@ inline const QStringList & PodofoPlugin::help() const
     return m_help; 
 }
 
-#endif // _PODOFO_PLUGIN_H_
+#endif // PODOFO_PLUGIN_H

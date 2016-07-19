@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _KRENAME_FILE_H_
-#define _KRENAME_FILE_H_
+#ifndef KRENAME_FILE_H
+#define KRENAME_FILE_H
 
 #include <QVector>
 
@@ -365,4 +365,4 @@ class KRenameFile {
     EManualChangeMode m_manualMode;  
 };
 
-#endif // _KRENAME_FILE_H_
+#endif // KRENAME_FILE_H

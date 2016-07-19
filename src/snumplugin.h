@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _SNUM_PLUGIN_H_
-#define _SNUM_PLUGIN_H_
+#ifndef SNUM_PLUGIN_H
+#define SNUM_PLUGIN_H
 
 #include "fileplugin.h"
 
@@ -100,4 +100,4 @@ inline const QStringList & SnumPlugin::help() const
     return m_help;
 }
 
-#endif // _SNUM_PLUGIN_H_
+#endif // SNUM_PLUGIN_H

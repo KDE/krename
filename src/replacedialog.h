@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _REPLACE_DIALOG_H_
-#define _REPLACE_DIALOG_H_
+#ifndef REPLACE_DIALOG_H
+#define REPLACE_DIALOG_H
 
 #include <QDialog>
 
@@ -55,4 +55,4 @@ class ReplaceDialog : public QDialog {
     QDialogButtonBox*   m_buttons;
 };
 
-#endif // _REPLACE_DIALOG_H_
+#endif // REPLACE_DIALOG_H

@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _NUMBER_DIALOG_H_
-#define _NUMBER_DIALOG_H_
+#ifndef NUMBER_DIALOG_H
+#define NUMBER_DIALOG_H
 
 #include <QDialog>
 
@@ -85,4 +85,4 @@ inline bool NumberDialog::resetCounter() const
 }
 
 
-#endif // _NUMBER_DIALOG_H_
+#endif // NUMBER_DIALOG_H

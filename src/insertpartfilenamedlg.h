@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _INSERTPARTFILENAMEDLG_H_
-#define _INSERTPARTFILENAMEDLG_H_
+#ifndef INSERTPARTFILENAMEDLG_H
+#define INSERTPARTFILENAMEDLG_H
 
 #include <QDialog>
 
@@ -54,4 +54,4 @@ inline const QString & InsertPartFilenameDlg::command() const
     return m_command;
 }
 
-#endif // _INSERTPARTFILENAMEDLG_H_
+#endif // INSERTPARTFILENAMEDLG_H

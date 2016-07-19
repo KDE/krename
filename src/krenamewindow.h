@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _KRENAMEWINDOW_H_
-#define _KRENAMEWINDOW_H_
+#ifndef KRENAMEWINDOW_H
+#define KRENAMEWINDOW_H
 
 #include <kmainwindow.h>
 #include "batchrenamer.h"
@@ -535,4 +535,4 @@ class KRenameWindow : public KMainWindow {
 };
 
 
-#endif // _KRENAMEWINDOW_H_
+#endif // KRENAMEWINDOW_H

@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _EXIV2_PLUGIN_H_
-#define _EXIV2_PLUGIN_H_
+#ifndef EXIV2_PLUGIN_H
+#define EXIV2_PLUGIN_H
 
 #include "fileplugin.h"
 
@@ -74,4 +74,4 @@ inline const QStringList & Exiv2Plugin::help() const
     return m_help; 
 }
 
-#endif // _EXIV2_PLUGIN_H_
+#endif // EXIV2_PLUGIN_H

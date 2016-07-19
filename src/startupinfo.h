@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef START_UP_INFO_H_
-#define START_UP_INFO_H_
+#ifndef START_UP_INFO_H
+#define START_UP_INFO_H
 
 #include <QFrame>
 
@@ -51,5 +51,5 @@ private:
     Ui::StartUpInfoWidget* m_widget;
 };
 
-#endif // START_UP_INFO_H_
+#endif // START_UP_INFO_H
 

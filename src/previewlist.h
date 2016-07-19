@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _PREVIEW_LIST_H_
-#define _PREVIEW_LIST_H_
+#ifndef PREVIEW_LIST_H
+#define PREVIEW_LIST_H
 
 #include <QTreeView>
 
@@ -52,5 +52,5 @@ class PreviewList : public QTreeView {
     QMenu*        m_menu;
 };
 
-#endif // _PREVIEW_LIST_H_
+#endif // PREVIEW_LIST_H
 

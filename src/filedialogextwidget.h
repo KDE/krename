@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _FILE_DIALOG_EXT_WIDGET_H_
-#define _FILE_DIALOG_EXT_WIDGET_H_
+#ifndef FILE_DIALOG_EXT_WIDGET_H
+#define FILE_DIALOG_EXT_WIDGET_H
 
 #include <QCheckBox>
 #include <QDialog>
@@ -93,4 +93,4 @@ void FileDialogExtWidget::setAddRecursively( bool b )
     checkRecursive->setChecked( b );
 }
 
-#endif // _FILE_DIALOG_EXT_WIDGET_H_
+#endif // FILE_DIALOG_EXT_WIDGET_H

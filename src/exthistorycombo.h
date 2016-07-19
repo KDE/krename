@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef EXT_HISTORY_COMBO_H_
-#define EXT_HISTORY_COMBO_H_
+#ifndef EXT_HISTORY_COMBO_H
+#define EXT_HISTORY_COMBO_H
 
 #include <QTimer>
 #include <KHistoryComboBox>
@@ -59,5 +59,5 @@ class ExtHistoryCombo : public KHistoryComboBox {
 
 }; 
 
-#endif /* EXT_HISTORY_COMBO_H_ */
+#endif /* EXT_HISTORY_COMBO_H */
 

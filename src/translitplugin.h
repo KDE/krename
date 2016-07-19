@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _TRANSLIT_PLUGIN_H_
-#define _TRANSLIT_PLUGIN_H_
+#ifndef TRANSLIT_PLUGIN_H
+#define TRANSLIT_PLUGIN_H
 
 #include "fileplugin.h"
 
@@ -107,4 +107,4 @@ inline const QStringList & TranslitPlugin::help() const
     return m_help;
 }
 
-#endif // _TRANSLIT_PLUGIN_H_
+#endif // TRANSLIT_PLUGIN_H

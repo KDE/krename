@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _CUSTOM_DIALOG_H_
-#define _CUSTOM_DIALOG_H_
+#ifndef CUSTOM_DIALOG_H
+#define CUSTOM_DIALOG_H
 
 #include <QDialog>
 #include "ui_customfilenamedlg.h"
@@ -54,4 +54,4 @@ class CustomDialog : public QDialog {
     Ui::CustomFilenameDlg m_widget;
 };
 
-#endif // _CUSTOM_DIALOG_H_
+#endif // CUSTOM_DIALOG_H

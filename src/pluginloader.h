@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _PLUGIN_LOADER_H_
-#define _PLUGIN_LOADER_H_
+#ifndef PLUGIN_LOADER_H
+#define PLUGIN_LOADER_H
 
 #include <QHash>
 #include <QList>
@@ -103,4 +103,4 @@ class PluginLoader  {
     QList<KRenameImpl*>  m_observers;    ///< A list of KRenameImpls that should be notified on updates
 };
 
-#endif // _PLUGIN_LOADER_H_
+#endif // PLUGIN_LOADER_H

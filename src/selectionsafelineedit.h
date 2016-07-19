@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _SELECTIONSAFELINEDIT_H_
-#define _SELECTIONSAFELINEDIT_H_
+#ifndef SELECTIONSAFELINEDIT_H
+#define SELECTIONSAFELINEDIT_H
 
 #include <QLineEdit>
 
@@ -44,4 +44,4 @@ protected:
 
 };
 
-#endif // _SELECTIONSAFELINEDIT_H_
+#endif // SELECTIONSAFELINEDIT_H

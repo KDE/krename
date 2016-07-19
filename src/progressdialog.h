@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _PROGRESS_DIALOG_H_
-#define _PROGRESS_DIALOG_H_
+#ifndef PROGRESS_DIALOG_H
+#define PROGRESS_DIALOG_H
 
 #include <QDialog>
 
@@ -172,4 +172,4 @@ bool ProgressDialog::wasCancelled() const
     return m_canceled;
 }
 
-#endif // _PROGRESS_DIALOG_H_
+#endif // PROGRESS_DIALOG_H

@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _INCREASE_COUNTER_PLUGIN_H_
-#define _INCREASE_COUNTER_PLUGIN_H_
+#ifndef INCREASE_COUNTER_PLUGIN_H
+#define INCREASE_COUNTER_PLUGIN_H
 
 #include <plugin.h>
 
@@ -153,5 +153,5 @@ inline const QStringList & IncreaseCounterPlugin::help() const
     return m_tmp;
 }
 
-#endif // _INCREASE_COUNTER_PLUGIN_H_
+#endif // INCREASE_COUNTER_PLUGIN_H
 

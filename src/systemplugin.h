@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _SYSTEM_PLUGIN_H_
-#define _SYSTEM_PLUGIN_H_
+#ifndef SYSTEM_PLUGIN_H
+#define SYSTEM_PLUGIN_H
 
 #include "fileplugin.h"
 
@@ -102,4 +102,4 @@ inline const QStringList & SystemPlugin::help() const
     return m_help;
 }
 
-#endif // _SYSTEM_PLUGIN_H_
+#endif // SYSTEM_PLUGIN_H

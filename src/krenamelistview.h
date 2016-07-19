@@ -16,8 +16,8 @@
  ***************************************************************************/
 
 
-#ifndef KRENAME_LIST_VIEW_H_
-#define KRENAME_LIST_VIEW_H_
+#ifndef KRENAME_LIST_VIEW_H
+#define KRENAME_LIST_VIEW_H
 
 #include <QListView>
 
@@ -69,4 +69,4 @@ inline void KRenameListView::setInfoWidget(QWidget* w)
     positionLabel();
 }
 
-#endif // KRENAME_LIST_VIEW_H_
+#endif // KRENAME_LIST_VIEW_H

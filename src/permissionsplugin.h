@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _PERMISSIONS_PLUGIN_H_
-#define _PERMISSIONS_PLUGIN_H_
+#ifndef PERMISSIONS_PLUGIN_H
+#define PERMISSIONS_PLUGIN_H
 
 #include "plugin.h"
 
@@ -161,4 +161,4 @@ inline const QStringList & PermissionsPlugin::help() const
 }
 
 
-#endif /* _PERMISSIONS_PLUGIN_H_ */
+#endif /* PERMISSIONS_PLUGIN_H */

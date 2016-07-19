@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _DATE_TIME_PLUGIN_H_
-#define _DATE_TIME_PLUGIN_H_
+#ifndef DATE_TIME_PLUGIN_H
+#define DATE_TIME_PLUGIN_H
 
 #include "plugin.h"
 
@@ -153,4 +153,4 @@ inline const QStringList & DateTimePlugin::help() const
 }
 
 
-#endif /* _DATE_TIME_PLUGIN_H_ */
+#endif /* DATE_TIME_PLUGIN_H */

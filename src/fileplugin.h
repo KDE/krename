@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _FILE_PLUGIN_H_
-#define _FILE_PLUGIN_H_
+#ifndef FILE_PLUGIN_H
+#define FILE_PLUGIN_H
 
 #include "plugin.h"
 
@@ -170,4 +170,4 @@ inline const QStringList & FilePlugin::help() const
     return m_keys; 
 }
 
-#endif // _FILE_PLUGIN_H_
+#endif // FILE_PLUGIN_H

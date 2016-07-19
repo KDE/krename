@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _PLUGIN_H_
-#define _PLUGIN_H_
+#ifndef PLUGIN_H
+#define PLUGIN_H
 
 #include <QPixmap>
 #include <QString>
@@ -202,4 +202,4 @@ inline bool Plugin::isEnabled() const
     return this->alwaysEnabled() || m_enabled;
 }
 
-#endif // _PLUGIN_H_
+#endif // PLUGIN_H

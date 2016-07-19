@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _TOKEN_HELP_DIALOG_H_
-#define _TOKEN_HELP_DIALOG_H_
+#ifndef TOKEN_HELP_DIALOG_H
+#define TOKEN_HELP_DIALOG_H
 
 #include <QDialog>
 
@@ -108,4 +108,4 @@ class TokenHelpDialog : public QDialog {
     static const int    S_MAX_RECENT; ///< Maximum number of recent tokens
 };
 
-#endif // _TOKEN_HELP_DIALOG_H_
+#endif // TOKEN_HELP_DIALOG_H

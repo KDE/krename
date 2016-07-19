@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _TOKEN_SORT_MODE_DIALOG_H_
-#define _TOKEN_SORT_MODE_DIALOG_H_
+#ifndef TOKEN_SORT_MODE_DIALOG_H
+#define TOKEN_SORT_MODE_DIALOG_H
 
 #include <QDialog>
 
@@ -58,4 +58,4 @@ class TokenSortModeDialog : public QDialog {
 };
 
 
-#endif // _TOKEN_SORT_MODE_DIALOG_H_
+#endif // TOKEN_SORT_MODE_DIALOG_H

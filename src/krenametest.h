@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _KRENAME_TEST_H
-#define _KRENAME_TEST_H
+#ifndef KRENAME_TEST_H
+#define KRENAME_TEST_H
 
 #include <stdarg.h>
 
@@ -110,4 +110,4 @@ class KRenameTest : public QWidget {
     char       m_buffer[BUFFER_LENGTH]; ///< buffer in which messages are constructed
 };
 
-#endif // _KRENAME_TEST_H
+#endif // KRENAME_TEST_H

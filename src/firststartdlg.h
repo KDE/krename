@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _FIRSTSTARTDLG_H_
-#define _FIRSTSTARTDLG_H_
+#ifndef FIRSTSTARTDLG_H
+#define FIRSTSTARTDLG_H
 
 #include <QDialog>
 
@@ -52,4 +52,4 @@ EGuiMode FirstStartDlg::guiMode() const
     return m_selector.optionWizard->isChecked() ? eGuiMode_Wizard : eGuiMode_Advanced;
 }
 
-#endif // _FIRSTSTARTDLG_H_
+#endif // FIRSTSTARTDLG_H

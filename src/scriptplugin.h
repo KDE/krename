@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _SCRIPT_PLUGIN_H_
-#define _SCRIPT_PLUGIN_H_
+#ifndef SCRIPT_PLUGIN_H
+#define SCRIPT_PLUGIN_H
 
 #include "plugin.h"
 
@@ -220,4 +220,4 @@ inline const QStringList & ScriptPlugin::help() const
     return m_help; 
 }
 
-#endif // _FILE_PLUGIN_H_
+#endif // FILE_PLUGIN_H

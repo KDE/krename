@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _TAG_LIB_PLUGIN_H_
-#define _TAG_LIB_PLUGIN_H_
+#ifndef TAG_LIB_PLUGIN_H
+#define TAG_LIB_PLUGIN_H
 
 #include "fileplugin.h"
 
@@ -72,4 +72,4 @@ inline const QStringList & TagLibPlugin::help() const
     return m_help; 
 }
 
-#endif // _TAG_LIB_PLUGIN_H_
+#endif // TAG_LIB_PLUGIN_H
