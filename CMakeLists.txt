@@ -1,6 +1,5 @@
 project(krename)
 
-
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 # search packages used by KDE
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
@@ -34,58 +33,58 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
 # To catch potential errors when porting from KUrl
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
-SET(KRENAME_VERSION "4.0.9")
+set(KRENAME_VERSION "4.0.9")
 
-INCLUDE (FindGettext)
+include(FindGettext)
 
 # Find taglib
 set(TAGLIB_MIN_VERSION "1.5")
 find_package(Taglib ${TAGLIB_MIN_VERSION})
 set_package_properties(Taglib PROPERTIES
-  DESCRIPTION "Read and write tags in audio files"
-  URL "https://taglib.github.io/"
-  TYPE OPTIONAL)
+    DESCRIPTION "Read and write tags in audio files"
+    URL "https://taglib.github.io/"
+    TYPE OPTIONAL)
 
-IF(TAGLIB_FOUND)
-  ADD_DEFINITIONS( -DWITH_TAGLIB )
-ENDIF(TAGLIB_FOUND)
+if(TAGLIB_FOUND)
+    add_definitions(-DWITH_TAGLIB)
+endif()
 
 # Find exiv2
 find_package(Exiv2 0.13) # AccessMode was added in 0.13
 set_package_properties(Exiv2 PROPERTIES
-  DESCRIPTION "A library to access image metadata"
-  URL "http://www.exiv2.org"
-  TYPE OPTIONAL)
+    DESCRIPTION "A library to access image metadata"
+    URL "http://www.exiv2.org"
+    TYPE OPTIONAL)
 
-IF(EXIV2_FOUND)
-  ADD_DEFINITIONS( -DWITH_EXIV2 )
-ENDIF(EXIV2_FOUND)
+if(EXIV2_FOUND)
+    add_definitions(-DWITH_EXIV2)
+endif()
 
 # Find podofo
 find_package(PoDoFo)
 set_package_properties(PoDoFo PROPERTIES
-  DESCRIPTION "A library to access PDF metadata"
-  URL "http://podofo.sourceforge.net/"
-  TYPE OPTIONAL)
-IF(PoDoFo_FOUND)
-  ADD_DEFINITIONS( -DWITH_PODOFO )
-ENDIF(PoDoFo_FOUND)
+    DESCRIPTION "A library to access PDF metadata"
+    URL "http://podofo.sourceforge.net/"
+    TYPE OPTIONAL)
+if(PoDoFo_FOUND)
+    add_definitions(-DWITH_PODOFO)
+endif()
 
 # Find freetype
 find_package(Freetype)
 set_package_properties(Freetype PROPERTIES
-  DESCRIPTION "A library to access font metadata"
-  URL "http://www.freetype.org"
-  TYPE OPTIONAL)
-IF(FREETYPE_FOUND)
-  ADD_DEFINITIONS( -DWITH_FREETYPE )
-ENDIF(FREETYPE_FOUND)
+    DESCRIPTION "A library to access font metadata"
+    URL "http://www.freetype.org"
+    TYPE OPTIONAL)
+if(FREETYPE_FOUND)
+    add_definitions(-DWITH_FREETYPE)
+endif()
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 
 # Update configuration
-CONFIGURE_FILE(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h )
+configure_file(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h)
 
 # Directories
 

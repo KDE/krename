@@ -1,154 +1,150 @@
-add_subdirectory( pics )
-add_subdirectory( servicemenus )
+add_subdirectory(pics)
+add_subdirectory(servicemenus)
 
-INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR} 
-		     ${CMAKE_CURRENT_SOURCE_DIR} 
+include_directories(${CMAKE_SOURCE_DIR}
+		     ${CMAKE_CURRENT_SOURCE_DIR}
 		     ${CMAKE_CURRENT_BINARY_DIR}
-		     )
+)
 
 if(TAGLIB_FOUND)
-  include_directories(${TAGLIB_INCLUDES})
+    include_directories(${TAGLIB_INCLUDES})
 endif()
 
-IF(EXIV2_FOUND)
-  INCLUDE_DIRECTORIES( ${EXIV2_INCLUDE_DIR} )
-ENDIF(EXIV2_FOUND)
+if(EXIV2_FOUND)
+    include_directories(${EXIV2_INCLUDE_DIR})
+endif()
 
-IF(PoDoFo_FOUND)
-  INCLUDE_DIRECTORIES( ${PoDoFo_INCLUDE_DIRS} )
-  add_definitions(${PoDoFo_DEFINITIONS})
-ENDIF(PoDoFo_FOUND)
+if(PoDoFo_FOUND)
+    include_directories(${PoDoFo_INCLUDE_DIRS})
+    add_definitions(${PoDoFo_DEFINITIONS})
+endif()
 
-IF(FREETYPE_FOUND)
-  INCLUDE_DIRECTORIES( ${FREETYPE_INCLUDE_DIRS} )
-ENDIF(FREETYPE_FOUND)
+if(FREETYPE_FOUND)
+    include_directories(${FREETYPE_INCLUDE_DIRS})
+endif()
 
-ADD_DEFINITIONS(${TAGLIB_CFLAGS} ${EXIV2_CFLAGS})
+add_definitions(${TAGLIB_CFLAGS} ${EXIV2_CFLAGS})
 # Exiv2 needs exceptions
 kde_enable_exceptions()
 
 ########### next target ###############
 
 
-SET(krename_SRCS
-  main.cpp 
-  batchrenamer.cpp
-  customdialog.cpp
-  datetimeplugin.cpp
-  dirsortplugin.cpp
-  exthistorycombo.cpp
-  filedialogextwidget.cpp
-  fileplugin.cpp
-  increasecounterplugin.cpp
-  krenamefile.cpp 
-  krenameimpl.cpp 
-  krenamelistview.cpp
-  krenamemodel.cpp
-  krenametest.cpp
-  krenametokensorter.cpp
-  krenamewindow.cpp
-  modeltest.cpp
-  numberdialog.cpp
-  insertpartfilenamedlg.cpp
-  threadedlister.cpp
-  plugin.cpp
-  pluginloader.cpp
-  permissionsplugin.cpp
-  previewlist.cpp
-  progressdialog.cpp
-  replacedialog.cpp
-  richtextitemdelegate.cpp
-  scriptplugin.cpp
-  startupinfo.cpp
-  systemplugin.cpp
-  tokenhelpdialog.cpp
-  tokensortmodedialog.cpp
-  translitplugin.cpp
-  snumplugin.cpp
-  )
+set(krename_SRCS
+    main.cpp
+    batchrenamer.cpp
+    customdialog.cpp
+    datetimeplugin.cpp
+    dirsortplugin.cpp
+    exthistorycombo.cpp
+    filedialogextwidget.cpp
+    fileplugin.cpp
+    increasecounterplugin.cpp
+    krenamefile.cpp
+    krenameimpl.cpp
+    krenamelistview.cpp
+    krenamemodel.cpp
+    krenametest.cpp
+    krenametokensorter.cpp
+    krenamewindow.cpp
+    modeltest.cpp
+    numberdialog.cpp
+    insertpartfilenamedlg.cpp
+    threadedlister.cpp
+    plugin.cpp
+    pluginloader.cpp
+    permissionsplugin.cpp
+    previewlist.cpp
+    progressdialog.cpp
+    replacedialog.cpp
+    richtextitemdelegate.cpp
+    scriptplugin.cpp
+    startupinfo.cpp
+    systemplugin.cpp
+    tokenhelpdialog.cpp
+    tokensortmodedialog.cpp
+    translitplugin.cpp
+    snumplugin.cpp
+)
 
-IF ( EXIV2_FOUND )
-  SET(krename_SRCS
-    ${krename_SRCS}
-    exiv2plugin.cpp
+if(EXIV2_FOUND)
+    set(krename_SRCS ${krename_SRCS}
+        exiv2plugin.cpp
     )
-ENDIF ( EXIV2_FOUND )
+endif()
 
-IF ( TAGLIB_FOUND )
-  SET(krename_SRCS 
-    ${krename_SRCS}
-    taglibplugin.cpp
+if(TAGLIB_FOUND)
+    set(krename_SRCS ${krename_SRCS}
+        taglibplugin.cpp
     )
-ENDIF ( TAGLIB_FOUND )
+endif()
 
-IF ( PoDoFo_FOUND )
-  SET(krename_SRCS 
-    ${krename_SRCS}
-    podofoplugin.cpp
+if(PoDoFo_FOUND)
+    set(krename_SRCS ${krename_SRCS}
+        podofoplugin.cpp
     )
-ENDIF ( PoDoFo_FOUND )
+endif()
 
-IF(FREETYPE_FOUND)
-  SET(krename_SRCS 
-    ${krename_SRCS}
-    fontplugin.cpp
+if(FREETYPE_FOUND)
+    set(krename_SRCS ${krename_SRCS}
+        fontplugin.cpp
     )
-ENDIF(FREETYPE_FOUND)
+endif()
 
 
-ki18n_wrap_ui( krename_SRCS 
-  customfilenamedlg.ui		
-  datetimepluginwidget.ui
-  dirsortpluginwidget.ui
-  increasecounterpluginwidget.ui
-  guimodeselector.ui 
-  partfilenamewidget.ui
-  krenamefiles.ui 
-  krenamedestination.ui 
-  krenamefilename.ui 
-  krenameplugins.ui
-  numberwidget.ui
-  permissionspluginwidget.ui
-  progressdialog.ui
-  replacewidget.ui
-  replaceitemdlg.ui
-  scriptpluginwidget.ui
-  scriptplugindialog.ui
-  startupinfowidget.ui
-  tokenhelpwidget.ui
-  tokensortmodedialog.ui
-  )
+ki18n_wrap_ui(krename_SRCS
+    customfilenamedlg.ui
+    datetimepluginwidget.ui
+    dirsortpluginwidget.ui
+    increasecounterpluginwidget.ui
+    guimodeselector.ui
+    partfilenamewidget.ui
+    krenamefiles.ui
+    krenamedestination.ui
+    krenamefilename.ui
+    krenameplugins.ui
+    numberwidget.ui
+    permissionspluginwidget.ui
+    progressdialog.ui
+    replacewidget.ui
+    replaceitemdlg.ui
+    scriptpluginwidget.ui
+    scriptplugindialog.ui
+    startupinfowidget.ui
+    tokenhelpwidget.ui
+    tokensortmodedialog.ui
+)
 
 #kde4_automoc( ${krename_SRCS} )
 add_executable(krename ${krename_SRCS})
 
 
 target_link_libraries(krename
-  KF5::KIOCore
-  KF5::KIOFileWidgets
-  KF5::I18n
-  KF5::JSApi
-  KF5::IconThemes
-  Qt5::Widgets
-  )
+    KF5::KIOCore
+    KF5::KIOFileWidgets
+    KF5::I18n
+    KF5::JSApi
+    KF5::IconThemes
+    Qt5::Widgets
+)
 if(TAGLIB_FOUND)
-  target_link_libraries(krename
-    ${TAGLIB_LIBRARIES}
+    target_link_libraries(krename
+        ${TAGLIB_LIBRARIES}
     )
 endif()
 if(EXIV2_FOUND)
-  target_link_libraries(krename
-    ${EXIV2_LIBRARIES}
+    target_link_libraries(krename
+        ${EXIV2_LIBRARIES}
     )
 endif()
 if(PoDoFo_FOUND)
-  target_link_libraries(krename
-    ${PoDoFo_LIBRARIES}
+    target_link_libraries(krename
+        ${PoDoFo_LIBRARIES}
     )
 endif()
 if(FREETYPE_FOUND)
-  target_link_libraries(krename
-    ${FREETYPE_LIBRARIES}
+    target_link_libraries(krename
+        ${FREETYPE_LIBRARIES}
     )
 endif()
 
