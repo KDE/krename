@@ -22,9 +22,6 @@
 
 #include <QMap>
 
-#include "../config-krename.h"
-
-#ifdef HAVE_FREETYPE
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
@@ -84,7 +81,5 @@ inline const QStringList & FontPlugin::help() const
 { 
     return m_help; 
 }
-
-#endif // HAVE_FREETYPE
 
 #endif // _FONT_PLUGIN_H_

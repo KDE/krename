@@ -15,9 +15,6 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "../config-krename.h"
-
-#ifdef HAVE_PODOFO
 #include "podofoplugin.h"
 
 #include <podofo/podofo.h>
@@ -88,5 +85,3 @@ QString PodofoPlugin::processFile( BatchRenamer* b, int index, const QString & f
 
     return QString("");
 }
-
-#endif // HAVE_PODOFO

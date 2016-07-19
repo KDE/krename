@@ -15,9 +15,6 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "../config-krename.h"
-
-#ifdef HAVE_FREETYPE
 #include "batchrenamer.h"
 #include "fontplugin.h"
 #include "tokenhelpdialog.h"
@@ -113,5 +110,3 @@ QString FontPlugin::processFile( BatchRenamer* b, int index, const QString & fil
 
     return result;
 }
-
-#endif // HAVE_FREETYPE
