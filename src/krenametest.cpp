@@ -221,7 +221,7 @@ bool KRenameTest::testKRenameFileInternal( const QUrl &url, const QString & dire
                                            const QString & filename, const QString & extension, 
                                            ESplitMode eSplitMode, int dot, bool isDir )
 {
-    // if the expected filename and extension is empty expect a directoy
+    // if the expected filename and extension is empty expect a directory
     //bool        isDirectory = filename.isEmpty() && extension.isEmpty();
     KRenameFile file( url, isDir, eSplitMode, dot );
 
@@ -495,7 +495,7 @@ void KRenameTest::testBatchRenamer()
     expectedPaths << "/home/foo/bar" << "/home" << "/home/FOO" << "/home/FOO/BAR";
 
     RUN_KRENAME_MULTI_FILE_TEST( files, expected, expectedPaths, 
-                                 "&", "Testing a directory hirarchy" );
+                                 "&", "Testing a directory hierarchy" );
 }
 
 bool KRenameTest::tokenTest( const char* token, const QString & filename, const QString & expected) 

@@ -612,7 +612,7 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
 
     /*
      * Replace after Plugins !
-     * Replace shoud be the last the
+     * Replace should be the last the
      * before re-escaping tokens !
      */
     if( doFindReplace ) {
@@ -905,7 +905,7 @@ QString BatchRenamer::processToken( QString token, QString oldname, int i )
     /*
      * Maybe I should remove this!
      * KRename simply ignores unknown tokens!
-     * Usefull for the MP3 Plugin!
+     * Useful for the MP3 Plugin!
      */
     return QString::null;
 }

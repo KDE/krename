@@ -316,7 +316,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
         } catch( std::exception e ) {
             help = "";
             // exiv2 throws sometimes exceptions 
-            // because it trys to create std::string from NULL pointers
+            // because it tries to create std::string from NULL pointers
         }
 
         QString cur( *token );
@@ -338,7 +338,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
         } catch( std::exception e ) {
             help = "";
             // exiv2 throws sometimes exceptions 
-            // because it trys to create std::string from NULL pointers
+            // because it tries to create std::string from NULL pointers
         }
         
         QString cur( *token );
@@ -360,7 +360,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
         } catch( std::exception e ) {
             help = "";
             // exiv2 throws sometimes exceptions 
-            // because it trys to create std::string from NULL pointers
+            // because it tries to create std::string from NULL pointers
         }
 
         QString cur( *token );

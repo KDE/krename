@@ -27,7 +27,7 @@ class QDialogButtonBox;
 
 /**
  * This dialog is shown when KRename is started the first time.
- * The user can select wether he wants to use KRename
+ * The user can select whether he wants to use KRename
  * in "Wizard" or "Advanced" mode.
  *
  * It is a thin wrapper around GuiModeSelector and a QDialogButtonBox

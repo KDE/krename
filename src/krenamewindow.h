@@ -501,7 +501,7 @@ class KRenameWindow : public KMainWindow {
     int previewColumnWidth( int index );
 
     /**
-     * Set the width of the specified colum
+     * Set the width of the specified column
      * \param index (0 or 1) index of the column
      * \param width width in pixels
      */

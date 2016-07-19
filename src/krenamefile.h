@@ -86,7 +86,7 @@ class KRenameFile {
     /** Construct a new KRenameFile from an url.
      *
      *  The url is expected to exist and is not 
-     *  tested for existance. This is much faster than
+     *  tested for existence. This is much faster than
      *  the other constructor.
      *
      *  \param src an url of a file or directory
@@ -163,7 +163,7 @@ class KRenameFile {
      *  to easily and fast set the icon from one 
      *  KRenameFile onto another.
      *
-     *  Normally KRenameFile knows how to load the icon itselfs.
+     *  Normally KRenameFile knows how to load the icon itself.
      */
     inline void setIcon( const QPixmap & icon ) 
     {

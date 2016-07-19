@@ -52,7 +52,7 @@ class KRenameTest : public QWidget {
     void testKRenameFile();
 
     /** Test a KRenameFile class object for
-     *  an url if the pass is splitted correctly.
+     *  an url if the pass is split correctly.
      *
      *  \param url the url to split
      *  \param directory the expected directory

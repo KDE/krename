@@ -82,13 +82,13 @@ class KRenameModel : public QAbstractListModel {
     inline QString getSortModeCustomToken() const;
     inline KRenameTokenSorter::ESimpleSortMode getSortModeCustomMode() const;
 
-    /** Move each file in a list of indeces upwards
-     *  @param files list of file indeces. Each file is moved up one position
+    /** Move each file in a list of indices upwards
+     *  @param files list of file indices. Each file is moved up one position
      */
     void moveFilesUp( const QList<int> & files );
 
-    /** Move each file in a list of indeces downwards
-     *  @param files list of file indeces. Each file is moved down one position
+    /** Move each file in a list of indices downwards
+     *  @param files list of file indices. Each file is moved down one position
      */
     void moveFilesDown( const QList<int> & files );
 

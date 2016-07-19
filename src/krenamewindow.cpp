@@ -480,10 +480,10 @@ QList<int> KRenameWindow::selectedFileItems() const
     QList<int> selected;
 
     QItemSelectionModel* selection = m_pageFiles->fileList->selectionModel();
-    QModelIndexList      indeces = selection->selectedIndexes();
-    QModelIndexList::const_iterator it = indeces.begin();
+    QModelIndexList      indices = selection->selectedIndexes();
+    QModelIndexList::const_iterator it = indices.begin();
     
-    while( it != indeces.end() )
+    while( it != indices.end() )
     {
         selected.append( (*it).row() );
         ++it;
@@ -498,10 +498,10 @@ QList<int> KRenameWindow::selectedFileItemsPreview() const
 
     QItemSelectionModel* selection = m_pageFilename->listPreview->selectionModel();
 
-    QModelIndexList      indeces = selection->selectedIndexes();
-    QModelIndexList::const_iterator it = indeces.begin();
+    QModelIndexList      indices = selection->selectedIndexes();
+    QModelIndexList::const_iterator it = indices.begin();
     
-    while( it != indeces.end() )
+    while( it != indices.end() )
     {
         selected.append( (*it).row() );
         ++it;

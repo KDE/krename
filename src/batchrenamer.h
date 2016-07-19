@@ -254,7 +254,7 @@ class BatchRenamer : public QObject {
          */
         inline void setNumberStepping( int s ) { m_step = s; }
 
-        /** Sets wether all counters should be reset for new 
+        /** Sets whether all counters should be reset for new
          *  directories
          *
          *  @param r if true counters will be reset
