@@ -62,14 +62,14 @@ IF(EXIV2_FOUND)
 ENDIF(EXIV2_FOUND)
 
 # Find podofo
-find_package(LIBPODOFO)
-set_package_properties(LIBPODOFO PROPERTIES
+find_package(PoDoFo)
+set_package_properties(PoDoFo PROPERTIES
   DESCRIPTION "A library to access PDF metadata"
   URL "http://podofo.sourceforge.net/"
   TYPE OPTIONAL)
-IF(LIBPODOFO_FOUND)
+IF(PoDoFo_FOUND)
   ADD_DEFINITIONS( -DWITH_PODOFO )
-ENDIF(LIBPODOFO_FOUND)
+ENDIF(PoDoFo_FOUND)
 
 # Find freetype
 find_package(Freetype)
