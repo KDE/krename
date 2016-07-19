@@ -45,10 +45,6 @@ set_package_properties(Taglib PROPERTIES
     URL "https://taglib.github.io/"
     TYPE OPTIONAL)
 
-if(TAGLIB_FOUND)
-    add_definitions(-DWITH_TAGLIB)
-endif()
-
 # Find exiv2
 find_package(Exiv2 0.13) # AccessMode was added in 0.13
 set_package_properties(Exiv2 PROPERTIES
@@ -56,19 +52,12 @@ set_package_properties(Exiv2 PROPERTIES
     URL "http://www.exiv2.org"
     TYPE OPTIONAL)
 
-if(EXIV2_FOUND)
-    add_definitions(-DWITH_EXIV2)
-endif()
-
 # Find podofo
 find_package(PoDoFo)
 set_package_properties(PoDoFo PROPERTIES
     DESCRIPTION "A library to access PDF metadata"
     URL "http://podofo.sourceforge.net/"
     TYPE OPTIONAL)
-if(PoDoFo_FOUND)
-    add_definitions(-DWITH_PODOFO)
-endif()
 
 # Find freetype
 find_package(Freetype)
@@ -76,9 +65,6 @@ set_package_properties(Freetype PROPERTIES
     DESCRIPTION "A library to access font metadata"
     URL "http://www.freetype.org"
     TYPE OPTIONAL)
-if(FREETYPE_FOUND)
-    add_definitions(-DWITH_FREETYPE)
-endif()
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 

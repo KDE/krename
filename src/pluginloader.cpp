@@ -22,29 +22,30 @@
 
 #include "datetimeplugin.h"
 #include "dirsortplugin.h"
-#ifdef WITH_EXIV2
-#include "exiv2plugin.h"
-#endif // WITH_EXIV2
 #include "fileplugin.h"
 #include "increasecounterplugin.h"
 #include "permissionsplugin.h"
 #include "scriptplugin.h"
 #include "systemplugin.h"
-#ifdef WITH_TAGLIB 
-# include "taglibplugin.h"
-#endif // WITH_TAGLIB
-#ifdef WITH_PODOFO 
-# include "podofoplugin.h"
-#endif // WITH_TAGLIB
-#ifdef WITH_FREETYPE
-# include "fontplugin.h"
-#endif // WITH_FREETYPE
 #include "translitplugin.h"
 #include "snumplugin.h"
 
-#include "../config-krename.h"
-
 #include <kservice.h>
+
+#include <../config-krename.h>
+
+#if HAVE_TAGLIB
+# include "taglibplugin.h"
+#endif // HAVE_TAGLIB
+#if HAVE_EXIV2
+#include "exiv2plugin.h"
+#endif // HAVE_EXIV2
+#if HAVE_PODOFO
+# include "podofoplugin.h"
+#endif // HAVE_PODOFO
+#if HAVE_FREETYPE
+# include "fontplugin.h"
+#endif // HAVE_FREETYPE
 
 PluginLoader* PluginLoader::s_instance = NULL;
 
@@ -136,12 +137,12 @@ void PluginLoader::load()
     m_plugins.append( new DateTimePlugin( this ) );
 #endif // _WIN32
     m_plugins.append( new DirSortPlugin( this ) );
-#ifdef WITH_EXIV2
+#if HAVE_EXIV2
     m_plugins.append( new Exiv2Plugin( this ) );
-#endif // WITH_EXIV2
-#ifdef WITH_FREETYPE
+#endif // HAVE_EXIV2
+#if HAVE_FREETYPE
     m_plugins.append( new FontPlugin( this ) );
-#endif // WITH_FREETYPE
+#endif // HAVE_FREETYPE
 	m_plugins.append( new IncreaseCounterPlugin( this ) );
 #ifndef _WIN32
 	m_plugins.append( new PermissionsPlugin( this ) );
@@ -149,12 +150,12 @@ void PluginLoader::load()
     m_plugins.append( new ScriptPlugin( this ) );
     m_plugins.append( new SystemPlugin( this ) );
 
-#ifdef WITH_TAGLIB 
+#if HAVE_TAGLIB
     m_plugins.append( new TagLibPlugin( this ) );
-#endif // WITH_TAGLIB 
-#ifdef WITH_PODOFO 
+#endif // HAVE_TAGLIB
+#if HAVE_PODOFO
     m_plugins.append( new PodofoPlugin( this ) );
-#endif // WITH_TAGLIB
+#endif // HAVE_PODOFO
     m_plugins.append( new TranslitPlugin( this ) );
     m_plugins.append( new SnumPlugin( this ) );
     //this->loadFilePlugins();
