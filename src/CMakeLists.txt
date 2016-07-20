@@ -118,6 +118,7 @@ ki18n_wrap_ui(krename_SRCS
 add_executable(krename ${krename_SRCS})
 
 target_link_libraries(krename
+    KF5::Crash
     KF5::KIOCore
     KF5::KIOFileWidgets
     KF5::I18n

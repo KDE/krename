@@ -16,6 +16,7 @@ find_package(KF5 REQUIRED COMPONENTS
     Completion
     Config
     CoreAddons
+    Crash
     I18n
     IconThemes
     ItemViews

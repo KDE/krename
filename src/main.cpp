@@ -38,6 +38,7 @@
 #include <sys/types.h>
 #include <QApplication>
 #include <KAboutData>
+#include <KCrash>
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
@@ -47,8 +48,9 @@
 int main(int argc, char *argv[])
 {
     KLocalizedString::setApplicationDomain("krename");
+    QApplication app(argc, argv);
 
-    QApplication app(argc, argv); // PORTING SCRIPT: move this to before the KAboutData initialization
+    KCrash::initialize();
 
     KAboutData aboutData("krename", i18n("KRename"), VERSION);
     aboutData.setShortDescription(i18n(
