@@ -26,17 +26,17 @@
 #include <QHBoxLayout>
 
 FilePlugin::FilePlugin( PluginLoader* loader, KService* service )
-    : Plugin( loader )
+    : Plugin( loader ),
+      m_name(service->name()),
+      m_comment(QString()),
+      m_icon(service->icon())
 {
-    m_name = service->name();
-    m_icon = service->icon();
-    m_comment = QString();
 }
 
 FilePlugin::FilePlugin( PluginLoader* loader )
-    : Plugin( loader )
+    : Plugin( loader ),
+      m_name("FilePlugin")
 {
-    m_name = "FilePlugin";
 }
 
 FilePlugin::~FilePlugin()
