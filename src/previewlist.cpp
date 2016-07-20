@@ -76,7 +76,7 @@ void PreviewList::slotManually()
     QPointer<CustomDialog> dialog = new CustomDialog(m_model->file( this->currentIndex().row() ), this);
     if( dialog->exec() == QDialog::Accepted )
     {
-        QString manual = QString::null;
+        QString manual;
         EManualChangeMode mode = eManualChangeMode_None;
         if( dialog->hasManualChanges() )
         {

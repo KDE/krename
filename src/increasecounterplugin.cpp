@@ -62,7 +62,7 @@ QString IncreaseCounterPlugin::processFile( BatchRenamer*, int, const QString & 
 	QString tmpstr;
         return (prenum + tmpstr.sprintf("%0*li", splitit.cap(2).length(), tmp) + postnum);
     }
-    return QString::null;
+    return QString();
 }
 
 void IncreaseCounterPlugin::createUI( QWidget* parent ) const

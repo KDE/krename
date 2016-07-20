@@ -30,7 +30,7 @@ FilePlugin::FilePlugin( PluginLoader* loader, KService* service )
 {
     m_name = service->name();
     m_icon = service->icon();
-    m_comment = QString::null;
+    m_comment = QString();
 }
 
 FilePlugin::FilePlugin( PluginLoader* loader )

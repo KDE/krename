@@ -105,7 +105,7 @@ TranslitPlugin::TranslitPlugin( PluginLoader* loader )
     if( TranslitPlugin::s_mapFromUTF8.isEmpty() )
     {
         int i=0;
-        while( TranslitPlugin::s_strUtf8[i]!=QString::null ) 
+        while( ! TranslitPlugin::s_strUtf8[i].isEmpty() )
         {
             TranslitPlugin::s_mapFromUTF8[ TranslitPlugin::s_strUtf8[i] ] = TranslitPlugin::s_strEngl[i];
 
@@ -162,7 +162,7 @@ QString TranslitPlugin::processFile( BatchRenamer* b, int index, const QString &
         return this->transliterate( src );
     }
     */
-    return QString::null;
+    return QString();
 }
 
 /*

@@ -171,7 +171,7 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const QU
         {
             // only a filename?? can this happen?
             file = path;
-            path = QString::null;
+            path.clear();
         }
         else
         {

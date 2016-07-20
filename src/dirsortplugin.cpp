@@ -81,7 +81,7 @@ void DirSortPlugin::fillStructure()
 
 QString DirSortPlugin::processFile( BatchRenamer* b, int index, const QString &, EPluginType )
 {
-    QString errorMsg = QString::null;
+    QString errorMsg;
 
     if( index == 0 )
     {

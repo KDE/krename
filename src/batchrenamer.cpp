@@ -75,7 +75,7 @@ static bool isToken( const QChar & token )
 static int getNextToken( const QString & text, QString & token, int pos = 0 ) 
 {
     bool escaped = false;
-    token = QString::null;
+    token.clear();
 
     if( pos < 0 )
         return -1;
@@ -651,7 +651,7 @@ QString BatchRenamer::executePlugin( int index, const QString & filenameOrPath, 
             ret = (*it)->processFile( this, index, ret, static_cast<EPluginType>(type) );
             if( type == ePluginType_File ) 
             {
-                if( ret != QString::null ) 
+                if( ! ret.isEmpty() )
                 {
                     // An error occurred -> report it
                     if( p != NULL )
@@ -907,7 +907,7 @@ QString BatchRenamer::processToken( QString token, QString oldname, int i )
      * KRename simply ignores unknown tokens!
      * Useful for the MP3 Plugin!
      */
-    return QString::null;
+    return QString();
 }
 
 QString BatchRenamer::findToken( const QString & oldname, QString token, int i )
@@ -1008,7 +1008,7 @@ QString BatchRenamer::findPartStrings( QString oldname, QString token )
         int x = sec-first.toInt( &ok );
         // if first is no number, but for example length, we return here so that findLength can do its job
         if( !ok ) 
-            return QString::null;
+            return QString();
 
         if( x > (signed int)oldname.length() || x < 0 )
             x = oldname.length()-first.toInt();
@@ -1036,7 +1036,7 @@ QString BatchRenamer::findPartStrings( QString oldname, QString token )
         if( ok && (number <= (signed int)oldname.length() && number > 0 ) )
             return QString(oldname[ number -1 ]);
         else
-            return QString::null;
+            return QString();
     }
 }
 
@@ -1051,7 +1051,7 @@ QString BatchRenamer::findDirName( QString token, QString path )
             token = token.right( token.length() - 7 );
             recursion = token.count( '.' );
             if(  recursion != (signed int)token.length() )
-                return QString::null;
+                return QString();
 
             recursion++;
         }
@@ -1059,7 +1059,7 @@ QString BatchRenamer::findDirName( QString token, QString path )
         return path.section( "/", recursion * -1, recursion * -1);
     }
     
-    return QString::null;
+    return QString();
 }
 
 QString BatchRenamer::findDirSep( const QString & token, const QString & path )
@@ -1068,7 +1068,7 @@ QString BatchRenamer::findDirSep( const QString & token, const QString & path )
         return "/";
     }
     
-    return QString::null;
+    return QString();
 }
 
 QString BatchRenamer::findLength( const QString & token, const QString & name )
@@ -1085,7 +1085,7 @@ QString BatchRenamer::findLength( const QString & token, const QString & name )
         return QString::number( name.length() - minus );
     }
    
-    return QString::null;
+    return QString();
 }
 
 QString BatchRenamer::findTrimmed( const QString & token, const QString & name, int index )
@@ -1105,7 +1105,7 @@ QString BatchRenamer::findTrimmed( const QString & token, const QString & name, 
             return name.trimmed();
     }
    
-    return QString::null;
+    return QString();
 }
 
 QString BatchRenamer::findReplace( const QString & text, const QString & origFilename, int index )

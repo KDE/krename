@@ -830,18 +830,18 @@ void KRenameWindow::setSimpleTemplate( const QString & filename, const QString &
     {
         // No token found, so we have no prefix or suffix but 
         // a custom name.
-        m_pageFilename->comboPrefixCustom->lineEdit()->setText( QString::null );
+        m_pageFilename->comboPrefixCustom->lineEdit()->setText( QString() );
         m_pageFilename->comboPrefix->setCurrentIndex( 0 );
 
-        m_pageFilename->comboSuffixCustom->lineEdit()->setText( QString::null );
+        m_pageFilename->comboSuffixCustom->lineEdit()->setText( QString() );
         m_pageFilename->comboSuffix->setCurrentIndex( 0 );
 
         m_pageFilename->comboFilenameCustom->lineEdit()->setText( filename );
     }
     else 
     {
-        QString prefix = ( pos > 0 ? filename.left( pos ) : QString::null);
-        QString suffix = ( pos < filename.length() ? filename.right( filename.length() - pos - 1 ) : QString::null);
+        QString prefix = ( pos > 0 ? filename.left( pos ) : QString());
+        QString suffix = ( pos < filename.length() ? filename.right( filename.length() - pos - 1 ) : QString());
 
         setPrefixSuffixSimple( m_pageFilename->comboPrefix, m_pageFilename->comboPrefixCustom, prefix );
         setPrefixSuffixSimple( m_pageFilename->comboSuffix, m_pageFilename->comboSuffixCustom, suffix );
@@ -940,7 +940,7 @@ void KRenameWindow::slotSortChanged( int index )
     ESortMode eMode;
     KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
     KRenameTokenSorter::ESimpleSortMode eCustomSortMode = model->getSortModeCustomMode();
-    QString customToken = QString::null;
+    QString customToken;
 
     switch( index ) 
     {

@@ -87,7 +87,7 @@ QString SnumPlugin::processFile( BatchRenamer* b, int index, const QString & fil
         }
     }
 
-    return QString::null;
+    return QString();
 }
 
 

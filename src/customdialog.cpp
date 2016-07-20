@@ -114,7 +114,7 @@ const QString CustomDialog::manualChanges() const
     else if( m_widget.radioInput->isChecked() )
         return m_widget.lineEditInput->text();
     else
-        return QString::null;
+        return QString();
 }
 
 EManualChangeMode CustomDialog::manualChangeMode() const

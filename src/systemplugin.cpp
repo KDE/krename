@@ -122,7 +122,7 @@ QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & f
         KIO::StatJob *statJob = KIO::stat(url, KIO::StatJob::SourceSide, 2);
         statJob->exec();
         if (statJob->error()) {
-            return QString::null;
+            return QString();
         }
         KFileItem item( statJob->statResult(), url );
         if( token == "user" )
@@ -140,7 +140,7 @@ QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & f
             return QString::number( item.size() );
     }
     
-    return QString::null;    
+    return QString();
 }
 
 const QString SystemPlugin::time( time_t time, const QString & format )

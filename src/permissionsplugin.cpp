@@ -140,7 +140,7 @@ QString PermissionsPlugin::processFile( BatchRenamer*, int, const QString & file
             return i18n("Cannot chown %1.", filename);
     }
 
-    return QString::null;
+    return QString();
 }
 
 void PermissionsPlugin::createUI( QWidget* parent ) const

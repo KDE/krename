@@ -108,13 +108,13 @@ QString ScriptPlugin::processFile( BatchRenamer* b, int index,
 	if( result.isException() )
 	{
 	    qDebug( "JavaScript Error: %s", result.errorMessage().toUtf8().data() );
-	    return QString::null;
+	    return QString();
 	}
 
 	return result.value().toString( m_interpreter->globalContext() );
     }
 
-    return QString::null;
+    return QString();
 }
 
 const QPixmap ScriptPlugin::icon() const

@@ -72,7 +72,7 @@ QString DateTimePlugin::processFile( BatchRenamer*, int, const QString & filenam
     if( bModification || bAccess ) 
         return changeDateTime( filename, bModification, bAccess, date, time );
 
-    return QString::null;
+    return QString();
 }
 
 void DateTimePlugin::createUI( QWidget* parent ) const
@@ -125,7 +125,7 @@ QString DateTimePlugin::changeDateTime( const QString & filename, bool bModifica
     if(utime( filename.toUtf8().data(), &buf ) != 0)
         return i18n("Cannot change date of file %1. (utime failed)", filename);
 
-    return QString::null;
+    return QString();
 }
 
 #endif // _WIN32
