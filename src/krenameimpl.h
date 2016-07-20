@@ -51,10 +51,6 @@ class KRenameImpl : public QObject {
  private:
     KRenameImpl(KRenameWindow* window, const KRenameFile::List & list , QCommandLineParser *commandLine = 0);
 
-    /** Creates all menu items and actions.
-     */
-    void setupActions();
-
     /** Connect all gui components with their slots
      */
     void setupSlots();
@@ -344,7 +340,6 @@ class KRenameImpl : public QObject, public KRenameDCOP {
         bool setupBatchRenamer( BatchRenamer* b, bool preview );
         void splitFilename( QFileInfo* fi, QString* base, QString* extension );
 
-        void setupActions();
         void setupPage1();
         void setupPage2();
         void setupPage3();

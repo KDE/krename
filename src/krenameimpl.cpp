@@ -55,7 +55,6 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list,
       m_lastSplitMode( eSplitMode_LastDot ), m_lastDot( 0 ),
       m_runningThreadedListersCount( 0 )
 {
-    setupActions();
     setupSlots();
 
     m_model = new KRenameModel( &m_vector );
@@ -121,12 +120,6 @@ QWidget* KRenameImpl::launch(const QRect & rect, const KRenameFile::List & list,
     w->show();
 
     return w;
-}
-
-void KRenameImpl::setupActions()
-{
-    KHelpMenu *helpMenu = new KHelpMenu(m_window);
-    m_window->menuBar()->addMenu(helpMenu->menu());
 }
 
 void KRenameImpl::setupSlots()

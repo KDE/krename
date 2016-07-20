@@ -39,6 +39,8 @@
 #include <QTabBar>
 #include <QVBoxLayout>
 
+#include <KHelpMenu>
+
 static const KRenameWindow::TGuiMode tAdvancedMode = {
     4,
     {
@@ -191,9 +193,13 @@ void KRenameWindow::setupGui()
 
     m_buttonFinish = new QPushButton( QIcon::fromTheme(QStringLiteral("dialog-ok")),    i18n("&Finish") );
     m_buttonClose  = new QPushButton( QIcon::fromTheme(QStringLiteral("dialog-close")), i18n("&Close") );
-    
+
+    m_buttons->setStandardButtons(QDialogButtonBox::Help);
     m_buttons->addButton( m_buttonFinish, QDialogButtonBox::AcceptRole );
     m_buttons->addButton( m_buttonClose,  QDialogButtonBox::RejectRole );
+
+    KHelpMenu *helpMenu = new KHelpMenu(this);
+    m_buttons->button(QDialogButtonBox::Help)->setMenu(helpMenu->menu());
 
     setupSlots();
     slotEnableControls();
