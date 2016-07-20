@@ -115,9 +115,7 @@ ki18n_wrap_ui(krename_SRCS
     tokensortmodedialog.ui
 )
 
-#kde4_automoc( ${krename_SRCS} )
 add_executable(krename ${krename_SRCS})
-
 
 target_link_libraries(krename
     KF5::KIOCore
