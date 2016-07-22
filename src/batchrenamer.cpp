@@ -365,7 +365,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
         }
     }
 
-    p->print( QString( i18n("Filenames Processed after %1 seconds.")).arg(t.elapsed()/1000) );
+    p->print( QString( i18n("Filenames Processed after %1 seconds.", t.elapsed()/1000)) );
 
     work( p );
 #endif // 0
