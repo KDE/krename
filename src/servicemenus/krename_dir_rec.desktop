@@ -10,6 +10,7 @@ Actions=rename
 Exec=krename -r %U
 Icon=krename
 Name=Rename with KRename (with subfolders)
+Name[cs]=Přejmenovat s KRename (s podsložkami)
 Name[es]=Cambiar nombre con KRename (con subcarpetas)
 Name[nl]=Hernoemen met KRename (met submappen)
 Name[pt]=Mudar o nome com o KRename (com sub-pastas)
