@@ -149,6 +149,6 @@ endif()
 
 # Others Files to install
 
-INSTALL(TARGETS krename DESTINATION ${BIN_INSTALL_DIR})
-INSTALL(FILES krename.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(TARGETS krename DESTINATION ${KDE_INSTALL_BINDIR})
+install(FILES krename.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
