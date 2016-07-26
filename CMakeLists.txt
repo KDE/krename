@@ -28,8 +28,8 @@ find_package(KF5 REQUIRED COMPONENTS
     XmlGui
 )
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} 
-                      ${CMAKE_SOURCE_DIR}/cmake/modules )
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
+                      ${CMAKE_SOURCE_DIR}/cmake/modules)
 
 # To catch potential errors when porting from KUrl
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
