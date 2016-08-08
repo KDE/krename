@@ -11,6 +11,7 @@ Exec=krename -r %U
 Icon=krename
 Name=Rename with KRename (with subfolders)
 Name[ca]=Reanomena amb el KRename (i les subcarpetes)
+Name[ca@valencia]=Reanomena amb el KRename (i les subcarpetes)
 Name[cs]=Přejmenovat s KRename (s podsložkami)
 Name[de]=Mit KRename umbenennen (mit Unterordnern)
 Name[es]=Cambiar nombre con KRename (con subcarpetas)

@@ -11,6 +11,7 @@ Exec=krename %U
 Icon=krename
 Name=Rename with KRename
 Name[ca]=Reanomena amb el KRename
+Name[ca@valencia]=Reanomena amb el KRename
 Name[cs]=Přejmenovat s KRename
 Name[de]=Mit KRename umbenennen
 Name[es]=Cambiar nombre con KRename
