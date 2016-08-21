@@ -602,7 +602,7 @@ void KRenameImpl::slotStart()
     m_window->hide();
     m_window = NULL;
 
-    // Process files with addiational properties which were not 
+    // Process files with additional properties which were not
     // necessary or available in the preview
     m_renamer.processFilenames();
 
