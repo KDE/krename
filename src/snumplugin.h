@@ -24,10 +24,10 @@
 class SnumPlugin : public FilePlugin {
  public:
     explicit SnumPlugin( PluginLoader* loader );
-    
+
     ~SnumPlugin();
 
-    /** 
+    /**
      * @returns the type of the plugin.
      */
     inline virtual int type() const;
@@ -35,7 +35,7 @@ class SnumPlugin : public FilePlugin {
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()

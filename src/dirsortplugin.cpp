@@ -26,13 +26,13 @@
 #include <kmessagebox.h>
 #include <KJobWidgets>
 
-DirSortPlugin::DirSortPlugin( PluginLoader* loader ) 
+DirSortPlugin::DirSortPlugin( PluginLoader* loader )
     : Plugin( loader )
 {
-    m_widget = new Ui::DirSortPluginWidget();    
+    m_widget = new Ui::DirSortPluginWidget();
 }
 
-DirSortPlugin::~DirSortPlugin() 
+DirSortPlugin::~DirSortPlugin()
 {
     delete m_widget;
 }
@@ -102,18 +102,18 @@ QString DirSortPlugin::processFile( BatchRenamer* b, int index, const QString &,
                      this->name(),
                      m_baseDirectory.toDisplayString(QUrl::PreferLocalFile) );
         }
-        else 
+        else
         {
             m_valid = true;
 
             m_currentDirectory = createNewSubdirectory();
         }
     }
-    
-    if( !m_valid ) 
+
+    if( !m_valid )
         return errorMsg;
 
-    if( m_fileCounter == m_filesPerDir ) 
+    if( m_fileCounter == m_filesPerDir )
     {
         m_fileCounter = 0;
         m_dirCounter++;
@@ -132,10 +132,10 @@ QString DirSortPlugin::processFile( BatchRenamer* b, int index, const QString &,
     job->exec();
     if(!job->exec())
     {
-        errorMsg = i18n("Error renaming %2 (to %1)", 
+        errorMsg = i18n("Error renaming %2 (to %1)",
                         dstUrl.toDisplayString(QUrl::PreferLocalFile),
                         srcUrl.toDisplayString(QUrl::PreferLocalFile));
-    } 
+    }
 
     return errorMsg;
 }
@@ -166,6 +166,6 @@ QUrl DirSortPlugin::createNewSubdirectory() const
         KMessageBox::error( m_widget->groupBox,
                             i18n("Cannot create folder %1", url.toDisplayString(QUrl::PreferLocalFile)) );
     }
-    
-    return url;    
+
+    return url;
 }

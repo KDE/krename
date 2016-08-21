@@ -39,7 +39,7 @@ void KRenameListView::slotUpdateCount()
 
 void KRenameListView::positionLabel()
 {
-    if( m_label == NULL ) 
+    if( m_label == NULL )
     {
         return;
     }
@@ -52,7 +52,7 @@ void KRenameListView::positionLabel()
     {
         int x = (width() - m_label->minimumSizeHint().width()) / 2;
         int y = (height() - m_label->minimumSizeHint().height()) / 2;
-        m_label->setGeometry( x, y, 
+        m_label->setGeometry( x, y,
                               m_label->minimumSizeHint().width(), m_label->minimumSizeHint().height() );
         m_label->show();
     }

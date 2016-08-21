@@ -96,7 +96,7 @@ QWidget* KRenameImpl::launch(const QRect & rect, const KRenameFile::List & list,
     KConfigGroup groupGui = config->group( QString("GUISettings") );
     bool firststart  = groupGui.readEntry( "firststart4", QVariant(true) ).toBool();
 
-    if( firststart ) 
+    if( firststart )
     {
         // WELCOME TO KRENAME
     }
@@ -134,14 +134,14 @@ void KRenameImpl::setupSlots()
     connect( m_window, SIGNAL(accepted()),       SLOT(slotStart()));
 
     QObject::connect( m_window, SIGNAL(renameModeChanged(ERenameMode)), &m_renamer, SLOT(setRenameMode(ERenameMode)));
-    QObject::connect( m_window, SIGNAL(filenameTemplateChanged(const QString &)), 
+    QObject::connect( m_window, SIGNAL(filenameTemplateChanged(const QString &)),
                       &m_renamer, SLOT(setFilenameTemplate(const QString &)));
-    QObject::connect( m_window, SIGNAL(extensionTemplateChanged(const QString &)), 
+    QObject::connect( m_window, SIGNAL(extensionTemplateChanged(const QString &)),
                       &m_renamer, SLOT(setExtensionTemplate(const QString &)));
-    QObject::connect( m_window, SIGNAL(overwriteFilesChanged(bool)), 
+    QObject::connect( m_window, SIGNAL(overwriteFilesChanged(bool)),
                       &m_renamer, SLOT(setOverwriteExistingFiles(bool)));
 
-    QObject::connect( m_window, SIGNAL(startIndexChanged(int)), 
+    QObject::connect( m_window, SIGNAL(startIndexChanged(int)),
                       &m_renamer, SLOT(setNumberStartIndex(int)));
 
     connect( m_window, SIGNAL(extensionSplitModeChanged(ESplitMode,int)), SLOT(slotExtensionSplitModeChanged(ESplitMode,int)));
@@ -164,11 +164,11 @@ void KRenameImpl::addFileOrDir( const QUrl &url )
     this->slotUpdateCount();
 }
 
-void KRenameImpl::addFilesOrDirs( const QList<QUrl> & list, const QString & filter, 
+void KRenameImpl::addFilesOrDirs( const QList<QUrl> & list, const QString & filter,
                                   bool recursively, bool dirsWithFiles, bool dirsOnly, bool hidden )
 {
     QList<QUrl>::ConstIterator it   = list.begin();
-    
+
     while( it != list.end() )
     {
         KRenameFile item( *it, m_lastSplitMode, m_lastDot );
@@ -178,7 +178,7 @@ void KRenameImpl::addFilesOrDirs( const QList<QUrl> & list, const QString & filt
 
             ThreadedLister* thl = new ThreadedLister( *it, m_window, m_model );
             connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
-            
+
             thl->setFilter( filter );
             thl->setListDirnamesOnly( dirsOnly );
             thl->setListHidden( hidden );
@@ -188,9 +188,9 @@ void KRenameImpl::addFilesOrDirs( const QList<QUrl> & list, const QString & filt
             m_runningThreadedListersCount++;
             thl->start();
         }
-        else 
+        else
         {
-            if( !dirsOnly ) 
+            if( !dirsOnly )
             {
                 KRenameFile::List list;
                 list.append( item );
@@ -222,7 +222,7 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
         recursiveList.append( url  );
     }
 
-    if( !recursiveList.isEmpty() ) 
+    if( !recursiveList.isEmpty() )
     {
         gotFilenames = true;
         // Add all directories recursive, but no hiden files
@@ -236,7 +236,7 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
         list.append(QUrl::fromUserInput(url, QDir::currentPath()));
     }
 
-    if( !list.isEmpty() ) 
+    if( !list.isEmpty() )
     {
         gotFilenames = true;
     }
@@ -259,7 +259,7 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
         m_window->setFilenameTemplate( templ, false );
 
     QString extension = parser->value( "extension" );
-    if( !extension.isEmpty() ) 
+    if( !extension.isEmpty() )
         m_window->setExtensionTemplate( extension, false );
 
     QString copyDir = parser->value( "copy" );
@@ -283,19 +283,19 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
         m_window->setDestinationUrl( QUrl( linkDir ) );
     }
 
-/*        
+/*
     QCStringList uselist = parser.values ( "use-plugin" );
-    if( !uselist.isEmpty() ) 
+    if( !uselist.isEmpty() )
     {
         for(unsigned int i = 0; i < uselist.count(); i++ )
             uselist[i] = uselist[i].lower();
-    
+
         QPtrListIterator<PluginLoader::PluginLibrary> it( plugin->libs );
-        while ( it.current() ) 
+        while ( it.current() )
         {
             if( uselist.contains( (*it)->plugin->getName().lower().utf8() ) )
                 (*it)->check->setChecked( true );
-                
+
             ++it;
         }
 
@@ -306,9 +306,9 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
     bool startnow = parser->isSet( "start" );
 
     // Free some memory
-          
 
-    
+
+
     if( gotFilenames )
     {
         // we got already filenames over the commandline, so show directly the last
@@ -316,7 +316,7 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
         m_window->showFilenameTab();
     }
 
-    if( startnow ) 
+    if( startnow )
     {
         qDebug("Waiting for listenters: %i\n", m_runningThreadedListersCount );
         // As file adding runs in a another trhread,
@@ -377,8 +377,8 @@ void KRenameImpl::slotRemoveAllFiles()
 void KRenameImpl::selfTest()
 {
     KRenameTest* test = new KRenameTest();
-    test->startTest();    
-    
+    test->startTest();
+
     new ModelTest( m_model );
     //new ModelTest( m_previewModel );
 
@@ -455,7 +455,7 @@ void KRenameImpl::slotFindReplaceDlg()
     delete dialog;
 }
 
-void KRenameImpl::slotListerDone( ThreadedLister* lister ) 
+void KRenameImpl::slotListerDone( ThreadedLister* lister )
 {
     // Delete the listener
     delete lister;
@@ -471,13 +471,13 @@ void KRenameImpl::slotListerDone( ThreadedLister* lister )
 
     m_runningThreadedListersCount--;
 
-    if( m_runningThreadedListersCount < 0 ) 
+    if( m_runningThreadedListersCount < 0 )
     {
         // To be safe
         qDebug("m_runningThreadedListersCount=%i", m_runningThreadedListersCount);
         m_runningThreadedListersCount = 0;
     }
-} 
+}
 
 void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
 {
@@ -534,10 +534,10 @@ void KRenameImpl::slotExtensionSplitModeChanged( ESplitMode splitMode, int dot )
 {
     // only change the splitMode if it has really change since the last time
     if( splitMode != m_lastSplitMode ||
-        dot != m_lastDot ) 
+        dot != m_lastDot )
     {
         KRenameFile::List::iterator it = m_vector.begin();
-    
+
         while( it != m_vector.end() )
         {
             (*it).setCurrentSplitMode( splitMode, dot );
@@ -614,21 +614,21 @@ void KRenameImpl::slotStart()
 }
 
 
-void KRenameImpl::loadConfig() 
+void KRenameImpl::loadConfig()
 {
     KSharedConfigPtr config = KSharedConfig::openConfig();
 
     KConfigGroup groupGui = config->group( QString("GUISettings") );
     //groupGui.readEntry( "firststart4", QVariant(true) ).toBool();
-    m_window->setPreviewEnabled( 
+    m_window->setPreviewEnabled(
 	groupGui.readEntry( "ImagePreview2", QVariant(true) ).toBool() );
 
-    m_window->setPreviewNamesEnabled( 
+    m_window->setPreviewNamesEnabled(
 	groupGui.readEntry( "ImagePreviewName2", QVariant(true) ).toBool() );
 
     KRenameFile::setIconSize( groupGui.readEntry( "ImagePreviewSize", QVariant(64) ).toInt() );
 
-    m_window->setAdvancedMode( 
+    m_window->setAdvancedMode(
 	groupGui.readEntry( "Advanced", QVariant(false) ).toBool() );
 
     int index = groupGui.readEntry( "StartIndex", QVariant(1) ).toInt();
@@ -639,18 +639,18 @@ void KRenameImpl::loadConfig()
     m_window->setNumberStartIndex( index );
 
     int sortMode = groupGui.readEntry( "FileListSorting", QVariant(0) ).toInt();
-    QString customToken = groupGui.readEntry( "FileListSortingCustomToken", 
+    QString customToken = groupGui.readEntry( "FileListSortingCustomToken",
                                               m_model->getSortModeCustomToken() );
-    int customSortModel = groupGui.readEntry( "FileListSortingCustomMode", 
+    int customSortModel = groupGui.readEntry( "FileListSortingCustomMode",
                                               QVariant(static_cast<int>(m_model->getSortModeCustomMode())) ).toInt();
 
     m_window->setSortMode( sortMode, customToken, customSortModel );
 
     ESplitMode lastSplitMode = static_cast<ESplitMode>(groupGui.readEntry( "ExtensionSplitMode", static_cast<int>(m_lastSplitMode) ));
-    int lastDot = groupGui.readEntry( "ExtensionSplitDot", m_lastDot );    
+    int lastDot = groupGui.readEntry( "ExtensionSplitDot", m_lastDot );
     m_window->setExtensionSplitMode( lastSplitMode, lastDot );
     this->slotExtensionSplitModeChanged( lastSplitMode, lastDot );
-    
+
     // load Plugin configuration
     KConfigGroup groupPlugins = config->group( QString("PluginSettings") );
     m_pluginLoader->loadConfig( groupPlugins );
@@ -658,11 +658,11 @@ void KRenameImpl::loadConfig()
     m_window->loadConfig();
 }
 
-void KRenameImpl::saveConfig() 
+void KRenameImpl::saveConfig()
 {
     // Me might get a saveConfig signal because of signals and slots
     // even if m_window was already delted. So ignore these events
-    if(!m_window) 
+    if(!m_window)
         return;
 
     m_window->saveConfig();
@@ -681,7 +681,7 @@ void KRenameImpl::saveConfig()
     groupGui.writeEntry( "FileListSortingCustomMode", static_cast<int>(m_model->getSortModeCustomMode()) );
     groupGui.writeEntry( "Advanced", m_window->isAdvancedMode() );
     groupGui.writeEntry( "ExtensionSplitMode", static_cast<int>(m_lastSplitMode) );
-    groupGui.writeEntry( "ExtensionSplitDot", m_lastDot );    
+    groupGui.writeEntry( "ExtensionSplitDot", m_lastDot );
 
     // save Plugin configuration
     KConfigGroup groupPlugins = config->group( QString("PluginSettings") );

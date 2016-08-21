@@ -47,7 +47,7 @@ SystemPlugin::SystemPlugin(  PluginLoader* loader )
     this->addSupportedToken("accessdate");
     this->addSupportedToken("accessdate;.*");
     this->addSupportedToken("filesize");
- 
+
     m_help.append( Plugin::createHelpEntry("date", i18n("Insert the current date")) );
     m_help.append( Plugin::createHelpEntry("date;yyyy-MM-dd", i18n("Insert the current date using the formatting string yyyy-MM-dd")) );
     m_help.append( Plugin::createHelpEntry("year", i18n("Insert the current year")) );
@@ -68,7 +68,7 @@ SystemPlugin::SystemPlugin(  PluginLoader* loader )
     m_help.append( Plugin::createHelpEntry("filesize", i18n("Insert the file size in bytes")) );
 
     m_name = i18n("Date and system functions");
-    m_icon = "system-run";   
+    m_icon = "system-run";
     m_comment = i18n("<qt>This plugin contains tokens to get "
 		     "the creation, modification and last access "
 		     "time of files and the current system time and date.</qt>");
@@ -85,7 +85,7 @@ QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & f
     if( token.lower().startsWith( getPattern() ) )
         token = token.mid( getPattern().length(), token.length() - getPattern().length() );
     */
-    
+
     QString token( filenameOrToken );
     QDate d = QDate::currentDate();
     QTime t = QTime::currentTime();
@@ -95,7 +95,7 @@ QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & f
     {
         format = token.section( ';', 1, 1 );
         token = token.section( ';', 0, 0 ).toLower();
-    } else 
+    } else
         token = token.toLower();
 
     if( token == "date" ) {
@@ -139,7 +139,7 @@ QString SystemPlugin::processFile( BatchRenamer* b, int index, const QString & f
         else if( token == "filesize" )
             return QString::number( item.size() );
     }
-    
+
     return QString();
 }
 

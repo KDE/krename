@@ -60,22 +60,22 @@ PermissionsPlugin::PermissionsPlugin( PluginLoader* loader )
     struct group *ge;
     user = getpwuid( uid );
     setgrent();
-    for (i=0; ((ge = getgrent()) != 0L) && (i < MAXENTRIES); i++) 
+    for (i=0; ((ge = getgrent()) != 0L) && (i < MAXENTRIES); i++)
     {
-        if( uid == 0 ) 
+        if( uid == 0 )
         {
             // Add all groups if we are run as root
             m_groups.append( QString::fromLatin1(ge->gr_name) );
-        } 
-        else 
+        }
+        else
         {
             // If the current user is member of this group: add it
             char** members = ge->gr_mem;
             char* member;
-           
-            while( (member = *members) != 0L ) 
+
+            while( (member = *members) != 0L )
             {
-                if( strcmp(user->pw_name,member) == 0  ) 
+                if( strcmp(user->pw_name,member) == 0  )
                 {
                     m_groups.append( QString::fromLatin1(ge->gr_name) );
                     break;
@@ -89,7 +89,7 @@ PermissionsPlugin::PermissionsPlugin( PluginLoader* loader )
 
     // add the users group
     ge = getgrgid ( user->pw_gid );
-    if( ge ) 
+    if( ge )
     {
         QString name = QString::fromLatin1(ge->gr_name);
         if (name.isEmpty())
@@ -122,7 +122,7 @@ QString PermissionsPlugin::processFile( BatchRenamer*, int, const QString & file
 {
     const QString & filename = filenameOrToken;
 
-    if( !QUrl( filename ).isLocalFile() ) 
+    if( !QUrl( filename ).isLocalFile() )
         return i18n("PermissionsPlugin works only with local files. %1 is a remote file.", filename);
 
     if( m_widget->checkPermissions->isChecked() )
@@ -156,12 +156,12 @@ void PermissionsPlugin::createUI( QWidget* parent ) const
     m_widget->comboPermGroup->setCurrentIndex( 1 );
     m_widget->comboPermOthers->setCurrentIndex( 0 );
 
-    connect( m_widget->checkOwner, SIGNAL( clicked(bool) ), SLOT( slotEnableControls() ) ); 
-    connect( m_widget->checkPermissions, SIGNAL( clicked(bool) ), SLOT( slotEnableControls() ) ); 
-    connect( m_widget->pushButton, SIGNAL( clicked(bool) ), SLOT( slotAdvancedPermissions() ) ); 
-    connect( m_widget->comboPermOwner, SIGNAL( activated(int) ), SLOT( slotUpdatePermissions() ) ); 
-    connect( m_widget->comboPermGroup, SIGNAL( activated(int) ), SLOT( slotUpdatePermissions() ) ); 
-    connect( m_widget->comboPermOthers, SIGNAL( activated(int) ), SLOT( slotUpdatePermissions() ) ); 
+    connect( m_widget->checkOwner, SIGNAL( clicked(bool) ), SLOT( slotEnableControls() ) );
+    connect( m_widget->checkPermissions, SIGNAL( clicked(bool) ), SLOT( slotEnableControls() ) );
+    connect( m_widget->pushButton, SIGNAL( clicked(bool) ), SLOT( slotAdvancedPermissions() ) );
+    connect( m_widget->comboPermOwner, SIGNAL( activated(int) ), SLOT( slotUpdatePermissions() ) );
+    connect( m_widget->comboPermGroup, SIGNAL( activated(int) ), SLOT( slotUpdatePermissions() ) );
+    connect( m_widget->comboPermOthers, SIGNAL( activated(int) ), SLOT( slotUpdatePermissions() ) );
     connect( m_widget->checkFolder, SIGNAL( clicked(bool) ), SLOT( slotUpdatePermissions() ) );
 }
 
@@ -171,7 +171,7 @@ void PermissionsPlugin::slotEnableControls()
     m_widget->groupPermissions->setEnabled( m_widget->checkPermissions->isChecked() );
 }
 
-void PermissionsPlugin::slotAdvancedPermissions() 
+void PermissionsPlugin::slotAdvancedPermissions()
 {
     QDialog dialog;
 
@@ -244,7 +244,7 @@ void PermissionsPlugin::slotAdvancedPermissions()
     layout->addWidget( groupPermission );
     layout->addWidget( box );
 
-    if( dialog.exec() == QDialog::Accepted ) 
+    if( dialog.exec() == QDialog::Accepted )
     {
         m_curPermission = 0;
         for (int row = 0;row < 3; ++row)
@@ -277,7 +277,7 @@ void PermissionsPlugin::slotUpdatePermissions()
     m_curPermission |= (fpermOther[m_widget->comboPermOthers->currentIndex()]);
 
     m_widget->checkFolder->setTristate( false );
-    if( m_widget->checkFolder->isChecked() ) 
+    if( m_widget->checkFolder->isChecked() )
     {
         m_widget->checkFolder->setChecked( true );
         m_curPermission |= S_IXUSR;
@@ -319,7 +319,7 @@ int PermissionsPlugin::getUid( const QString & owner ) const
 }
 
 /*
-void PermissionsPlugin::setCurrentPermissions( int perm ) 
+void PermissionsPlugin::setCurrentPermissions( int perm )
 {
     m_widget->comboPermOwner->setCurrentIndex( 0 );
     m_widget->comboPermGroup->setCurrentIndex( 0 );
@@ -328,11 +328,11 @@ void PermissionsPlugin::setCurrentPermissions( int perm )
     int fpermUser [3] = { 0, S_IRUSR, S_IRUSR | S_IWUSR };
     int fpermGroup[3] = { 0, S_IRGRP, S_IRGRP | S_IWGRP };
     int fpermOther[3] = { 0, S_IROTH, S_IROTH | S_IWOTH };
-    
+
     int i;
     for( i=2; i>=0; i-- )
     {
-        if( (fpermUser[i] & perm) ) 
+        if( (fpermUser[i] & perm) )
         {
             m_widget->comboPermOwner->setCurrentIndex( i );
             break;
@@ -341,7 +341,7 @@ void PermissionsPlugin::setCurrentPermissions( int perm )
 
     for( i=2; i>=0; i-- )
     {
-        if( (fpermGroup[i] & perm) ) 
+        if( (fpermGroup[i] & perm) )
         {
             m_widget->comboPermGroup->setCurrentIndex( i );
             break;
@@ -350,14 +350,14 @@ void PermissionsPlugin::setCurrentPermissions( int perm )
 
     for( i=2; i>=0; i-- )
     {
-        if( (fpermOther[i] & perm) ) 
+        if( (fpermOther[i] & perm) )
         {
             m_widget->comboPermOthers->setCurrentIndex( i );
             break;
         }
     }
 
-    if( (perm & S_IXUSR) && 
+    if( (perm & S_IXUSR) &&
         (perm & S_IXGRP) &&
         (perm & S_IXOTH) )
     {
@@ -366,7 +366,7 @@ void PermissionsPlugin::setCurrentPermissions( int perm )
     }
     else
     {
-        if( (perm & S_IXUSR) || 
+        if( (perm & S_IXUSR) ||
             (perm & S_IXGRP) ||
             (perm & S_IXOTH) )
             m_widget->checkFolder->setCheckState( Qt::PartiallyChecked );

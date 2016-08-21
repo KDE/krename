@@ -24,11 +24,11 @@
 class TagLibPlugin : public FilePlugin {
  public:
     explicit TagLibPlugin( PluginLoader* loader );
-    
+
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()
@@ -67,9 +67,9 @@ class TagLibPlugin : public FilePlugin {
     QStringList m_help;
 };
 
-inline const QStringList & TagLibPlugin::help() const 
-{ 
-    return m_help; 
+inline const QStringList & TagLibPlugin::help() const
+{
+    return m_help;
 }
 
 #endif // TAG_LIB_PLUGIN_H

@@ -63,7 +63,7 @@ QString PodofoPlugin::processFile( BatchRenamer* b, int index, const QString & f
         doc.Load(filename.toUtf8().data());
         PdfInfo* info = doc.GetInfo();
 
-        if( token == "pdfauthor" ) 
+        if( token == "pdfauthor" )
             return QString::fromUtf8(info->GetAuthor().GetStringUtf8().c_str());
         else if( token == "pdfcreator" )
             return QString::fromUtf8(info->GetCreator().GetStringUtf8().c_str());
@@ -78,7 +78,7 @@ QString PodofoPlugin::processFile( BatchRenamer* b, int index, const QString & f
         else if( token == "pdfpages" )
             return QString::number(doc.GetPageCount());
     }
-    catch( PdfError & error ) 
+    catch( PdfError & error )
     {
         return QString::fromUtf8( error.what() );
     }

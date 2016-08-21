@@ -79,7 +79,7 @@ class PluginLoader  {
 
     void registerForUpdates( KRenameImpl* kreanme );
     void deregisterForUpdates( KRenameImpl* kreanme );
-    
+
  private:
     PluginLoader();
 
@@ -88,7 +88,7 @@ class PluginLoader  {
      */
     void clear();
 
-    /** Load all plugins 
+    /** Load all plugins
      */
     void load();
 

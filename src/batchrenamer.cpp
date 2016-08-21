@@ -48,7 +48,7 @@
 
 using namespace KIO;
 
-static bool isToken( const QChar & token ) 
+static bool isToken( const QChar & token )
 {
     const QChar tokens[] = {
         QChar('&'),
@@ -72,7 +72,7 @@ static bool isToken( const QChar & token )
     return false;
 }
 
-static int getNextToken( const QString & text, QString & token, int pos = 0 ) 
+static int getNextToken( const QString & text, QString & token, int pos = 0 )
 {
     bool escaped = false;
     token.clear();
@@ -80,7 +80,7 @@ static int getNextToken( const QString & text, QString & token, int pos = 0 )
     if( pos < 0 )
         return -1;
 
-    while( pos < text.length() ) 
+    while( pos < text.length() )
     {
         if( !escaped && text[pos] == QChar('\\') )
         {
@@ -91,7 +91,7 @@ static int getNextToken( const QString & text, QString & token, int pos = 0 )
             token = text[pos];
             return ++pos;
         }
-        else 
+        else
         {
             escaped = false;
         }
@@ -117,42 +117,42 @@ BatchRenamer::~BatchRenamer()
 void BatchRenamer::processFilenames()
 {
     m_counters.clear();
-    
-    for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++) 
+
+    for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++)
     {
         m_counter_index = 0;
         if( m_renameMode == eRenameMode_Rename ) // final Path = source Path
         {
             (*m_files)[i].setDstDirectory( (*m_files)[i].srcDirectory() );
-            
+
             QUrl url = (*m_files)[i].srcUrl();
             url = url.adjusted(QUrl::RemoveFilename);
-            
+
             (*m_files)[i].setDstUrl( url );
-            
-        } 
-        else 
+
+        }
+        else
         {
             (*m_files)[i].setDstUrl( m_destination );
             (*m_files)[i].setDstDirectory( m_destination.path() );
         }
-        
+
         if( i > 0 && m_reset )
             findCounterReset( i );
-        
+
         //qDebug("SRCFILENAME       : %s", (*m_files)[i].srcFilename().toUtf8().data() );
         //qDebug("DSTFILENAME SHOULD: %s", processString( text, (*m_files)[i].srcFilename(), i ).toUtf8().data() );
         (*m_files)[i].setDstFilename( processString( text, (*m_files)[i].srcFilename(), i ) );
         //qDebug("DSTFILENAME IS    : %s", (*m_files)[i].dstFilename().toUtf8().data());
         (*m_files)[i].setDstExtension( processString( extext, (*m_files)[i].srcExtension(), i ) );
-        
+
         // Let's run the plugins that change the final filename,
         // i.e the encodingsplugin
         int errors = 0;
         QString name = executePlugin( i, (*m_files)[i].dstFilename(), ePluginType_Filename, errors, NULL );
-        if( !name.isNull() ) 
+        if( !name.isNull() )
             (*m_files)[i].setDstFilename( name );
-                
+
         /*
          * take care of renamed directories and
          * correct the paths of their contents
@@ -161,23 +161,23 @@ void BatchRenamer::processFilenames()
              m_renameMode == eRenameMode_Move) &&
             (*m_files)[i].isDirectory() )
         {
-            const QString topDir  = (*m_files)[i].realSrcDirectory() + '/' + (*m_files)[i].srcFilename(); 
+            const QString topDir  = (*m_files)[i].realSrcDirectory() + '/' + (*m_files)[i].srcFilename();
             const QString replace = (*m_files)[i].dstDirectory() + '/' + (*m_files)[i].dstFilename();
-            
-            for( int z = i + 1; z < m_files->count(); z++ ) 
+
+            for( int z = i + 1; z < m_files->count(); z++ )
             {
                 const QString & dir = (*m_files)[z].realSrcDirectory();
                 if( dir.startsWith( topDir ) )
                 {
                     QString newDir = replace + dir.right( dir.length() - topDir.length() );
                     if( newDir != dir ) {
-                        (*m_files)[z].setOverrideSrcDirectory( newDir ); 
+                        (*m_files)[z].setOverrideSrcDirectory( newDir );
                     }
                 }
             }
         }
-        
-#if 0      
+
+#if 0
         if( m_files[i].dir && (m_mode == RENAME || m_mode == MOVE) ) {
             for( unsigned int c = i; c < m_files.count(); c++ ) {
                 if( m_files[c].src.directory.left( m_files[i].src.name.length() + 1 )
@@ -198,13 +198,13 @@ void BatchRenamer::processFiles( ProgressDialog* p )
     int     errors = 0;
     QUrl    dest   = (*m_files)[0].dstUrl();
     // TODO: error handling if dest is empty
-    
+
     // Give the user some information...
     p->setProgressTotalSteps( m_files->count() );
     p->setProgress( 0 );
     p->setDestination( dest );
 
-    switch( m_renameMode ) 
+    switch( m_renameMode )
     {
         default:
         case eRenameMode_Rename:
@@ -221,7 +221,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
             break;
     }
 
-    for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++) 
+    for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++)
     {
         QUrl    dstUrl    = this->buildDestinationUrl( (*m_files)[i] );
 
@@ -237,15 +237,15 @@ void BatchRenamer::processFiles( ProgressDialog* p )
         KIO::JobFlags flags  = (m_overwrite ? KIO::Overwrite : KIO::DefaultFlags) | KIO::HideProgressInfo;
         KIO::Job*     job    = NULL;
         const QUrl &srcUrl =  (*m_files)[i].srcUrl();
-        if( srcUrl == dstUrl ) 
+        if( srcUrl == dstUrl )
         {
             p->warning( i18n("Cannot rename: source and target filename are equal: %1", srcUrl.toDisplayString(QUrl::PreferLocalFile)) );
             //(*m_files)[i].setError( 1 );
             //errors++;
             continue;
         }
-                    
-        switch( m_renameMode ) 
+
+        switch( m_renameMode )
         {
             default:
             case eRenameMode_Rename:
@@ -257,7 +257,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
                 break;
             case eRenameMode_Link:
             {
-                if( !srcUrl.isLocalFile() ) 
+                if( !srcUrl.isLocalFile() )
                 {
                     // We can only do symlinks to local urls
                     p->error( i18n("Cannot create symlink to non-local URL: %1", srcUrl.toDisplayString()) );
@@ -297,21 +297,21 @@ void BatchRenamer::processFiles( ProgressDialog* p )
         errors += errorCount;
     }
 
-    if( errors > 0 ) 
+    if( errors > 0 )
         p->warning( i18np("%1 error occurred.", "%1 errors occurred.", errors) );
 
     p->print( i18n("KRename finished the renaming process."), "krename" );
     p->print( i18n("Press close to quit.") );
     bool enableUndo = (m_renameMode != eRenameMode_Copy);
     p->renamingDone( true, enableUndo, this, errors );
-    
+
 #if 0
     delete object;
     t.start();
 
     m_counters.clear();
 
-    for( unsigned int i = 0; i < m_files->count(); i++) 
+    for( unsigned int i = 0; i < m_files->count(); i++)
     {
 	m_counter_index = 0;
 
@@ -331,16 +331,16 @@ void BatchRenamer::processFiles( ProgressDialog* p )
 	    if( m_reset )
 		findCounterReset( i );
 	}
-	
+
         m_files[i].dst.name = processString( text, m_files[i].src.name, i );
         if( !extext.isEmpty() )
             m_files[i].dst.extension = processString( extext, m_files[i].src.extension, i );
 
         // Assemble filenames
         parseSubdirs( &m_files[i] );
-        // TODO: DOM 
+        // TODO: DOM
         // ESCAPE HERE
-   
+
         m_files[i].src.name = BatchRenamer::buildFilename( &m_files[i].src, true );
 
         // Let's run the plugins that change the final filename,
@@ -348,7 +348,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
         m_files[i].dst.name = parsePlugins( i, m_files[i].dst.name, TYPE_FINAL_FILENAME );
 
         m_files[i].dst.name = BatchRenamer::buildFilename( &m_files[i].dst, true );
-                
+
         /*
          * take care of renamed directories and
          * correct the paths of their contents
@@ -375,14 +375,14 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
 {
     int     errors = 0;
     QUrl    dest   = (*m_files)[0].dstUrl();
-    
+
     // Give the user some information...
     p->setProgressTotalSteps( m_files->count() );
     p->setProgress( 0 );
     p->setDestination( dest );
     p->print( i18n("Undoing all renamed files.") );
 
-    for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++) 
+    for( unsigned int i = 0; i < static_cast<unsigned int>(m_files->count()); i++)
     {
         QUrl dstUrl = this->buildDestinationUrl( (*m_files)[i] );
 
@@ -394,7 +394,7 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
 
         KIO::JobFlags flags = (m_overwrite ? KIO::Overwrite : KIO::DefaultFlags) | KIO::HideProgressInfo;
         KIO::Job*     job   = NULL;
-        switch( m_renameMode ) 
+        switch( m_renameMode )
         {
             default:
             case eRenameMode_Rename:
@@ -422,7 +422,7 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
 
     }
 
-    if( errors > 0 ) 
+    if( errors > 0 )
         p->warning( i18np("%1 error occurred.", "%1 errors occurred.", errors) );
 
     p->print( i18n("KRename finished the undo process."), "krename" );
@@ -436,13 +436,13 @@ QString BatchRenamer::processBrackets( QString text, int* length, const QString 
     int  pos   = 0;
     QString token;
     QString result;
- 
+
     *length = 0;
 
     // MSG: qDebug("processBrackets: %s\n", text.toUtf8().data() );
     while( (pos = getNextToken( text, token, pos )) != -1 )
     {
-        if( token == "[" ) 
+        if( token == "[" )
         {
             int localLength = 0;
             QString substitute = processBrackets( text.right( text.length() - pos ), &localLength, oldname, index );
@@ -450,7 +450,7 @@ QString BatchRenamer::processBrackets( QString text, int* length, const QString 
             // MSG: qDebug("substituted: %s\n", text.toUtf8().data() );
             // Assure that *length does not become negative,
             // this will cause infinite loops
-            if( localLength < substitute.length() ) 
+            if( localLength < substitute.length() )
             {
                 *length += localLength;
             }
@@ -459,7 +459,7 @@ QString BatchRenamer::processBrackets( QString text, int* length, const QString 
                 *length += (localLength - substitute.length() );
             }
         }
-        else if( token == "]" ) 
+        else if( token == "]" )
         {
             // Done with this token
             // MSG: qDebug("END: %s\n", text.left( pos - 1 ).toUtf8().data() );
@@ -469,10 +469,10 @@ QString BatchRenamer::processBrackets( QString text, int* length, const QString 
         }
     }
     // MSG: qDebug("processedBrackets: %s\n", result.toUtf8().data() );
-    
+
     /*
-     
-      if( pos != -1 ) 
+
+      if( pos != -1 )
       {
       result = findToken( oldname, text.left( pos - 1 ), index );
       *length = pos+1; // skip any closing bracket
@@ -481,19 +481,19 @@ QString BatchRenamer::processBrackets( QString text, int* length, const QString 
     return result;
 }
 
-QString BatchRenamer::processNumber( int length, const QString & appendix ) 
+QString BatchRenamer::processNumber( int length, const QString & appendix )
 {
     tCounterValues countervalues;
     countervalues.start = m_index;
     countervalues.step = m_step;
 
-    if( !appendix.isEmpty() ) 
+    if( !appendix.isEmpty() )
     {
         bool ok = false;
         int tmp = appendix.section( ';', 0, 0 ).toInt( &ok ); // first section = start index
         if( ok )
             countervalues.start = tmp;
-        
+
         tmp= appendix.section( ';', 1, 1 ).toInt( &ok ); // second section = stepping
         if( ok )
             countervalues.step = tmp;
@@ -510,7 +510,7 @@ QString BatchRenamer::processNumber( int length, const QString & appendix )
     do {
 	m_counters[m_counter_index].value += m_counters[m_counter_index].step;
     } while( m_skip.contains( m_counters[m_counter_index].value ) );
-    
+
     QString number;
     number.sprintf("%0*i", length, m_counters[m_counter_index].value );
 
@@ -545,14 +545,14 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
             text.replace( pos - 1, token.length(), oldname.toUpper() );
             pos += oldname.length() - 1;
         }
-        else if( token == "*" ) 
+        else if( token == "*" )
         {
-            QString tmp = capitalize( oldname ); 
+            QString tmp = capitalize( oldname );
 
             text.replace( pos - 1, token.length(), tmp );
-            pos += tmp.length() - 1;            
+            pos += tmp.length() - 1;
         }
-        else if( token == "[" ) 
+        else if( token == "[" )
         {
             int length = 0;
             QString substitute = processBrackets( text.right( text.length() - pos ), &length, oldname, index );
@@ -560,15 +560,15 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
             if( substitute.length() > 0 )
                 pos += substitute.length() - 1;
         }
-        else if( token == "]" ) 
+        else if( token == "]" )
         {
             // Ignore
         }
-        else if( token == "#" ) 
+        else if( token == "#" )
         {
             int curPos = pos;
             int count  = 1;
-            while( text[curPos] == '#' ) 
+            while( text[curPos] == '#' )
             {
                 ++curPos;
                 count++;
@@ -577,19 +577,19 @@ QString BatchRenamer::processString( QString text, const QString & originalName,
             int length = curPos - pos + 1;
             int appendixLength = 0;
             QString appendix;
-            if( text[curPos] == '{' ) 
+            if( text[curPos] == '{' )
             {
                 int     appendixPos = curPos + 1;
                 QString appendixToken;
                 while( (appendixPos = getNextToken( text, appendixToken, appendixPos )) != -1 )
                 {
-                    if( appendixToken == "}" ) 
+                    if( appendixToken == "}" )
                     {
                         break;
                     }
                 }
 
-                if( appendixPos == -1 ) 
+                if( appendixPos == -1 )
                 {
                     // Do go into endless loop if token is not completed correctly
                     appendixPos = text.length();
@@ -627,12 +627,12 @@ QString BatchRenamer::capitalize( const QString & text ) const
     QString tmp = text.toLower();
     if( tmp[0].isLetter() )
         tmp[0] = tmp[0].toUpper();
-    
+
     for( int i = 0; i < tmp.length(); i++ )
         if( tmp[i+1].isLetter() && !tmp[i].isLetter() &&
             tmp[i] != '\'' && tmp[i] != '?' && tmp[i] != '`' )
             tmp[i+1] = tmp[i+1].toUpper();
-    
+
     return tmp;
 }
 
@@ -643,13 +643,13 @@ QString BatchRenamer::executePlugin( int index, const QString & filenameOrPath, 
 
     errorCount = 0;
     QString ret = filenameOrPath;
-    while( it != plugins.end() ) 
+    while( it != plugins.end() )
     {
         if( (*it)->isEnabled() && ((*it)->type() & type) )
         {
             // Every plugin should use the return value of the previous as the new filename to work on
             ret = (*it)->processFile( this, index, ret, static_cast<EPluginType>(type) );
-            if( type == ePluginType_File ) 
+            if( type == ePluginType_File )
             {
                 if( ! ret.isEmpty() )
                 {
@@ -658,20 +658,20 @@ QString BatchRenamer::executePlugin( int index, const QString & filenameOrPath, 
                         p->error( ret );
                     ++errorCount;
                 }
-                
+
                 ret = filenameOrPath;
             }
         }
 
         ++it;
     }
-    
+
     return ret;
 }
 
 void BatchRenamer::work( ProgressDialog*  )
 {
-#if 0 
+#if 0
     // TODO: use CopyJob here
 
     FileOperation fop;
@@ -706,7 +706,7 @@ void BatchRenamer::work( ProgressDialog*  )
         p->print( i18n("Symbolic links will be created in: %1", m_files[0].dst.directory) );
     else if( m_mode == RENAME )
         p->print( i18n("Input files will be renamed.") );
-    
+
     unsigned int i;
     for( i = 0; i < m_files.count(); i++) {
         p->setProgress( i+1 );
@@ -721,7 +721,7 @@ void BatchRenamer::work( ProgressDialog*  )
         renamedFiles[i].src = src;
         renamedFiles[i].dst = dst;
         renamedFiles[i].dir = m_files[i].dir;
-        
+
         FileOperation fop;
         if( !fop.start( src, dst, m_mode, overwrite ) ) {
             p->error( fop.error() );
@@ -773,14 +773,14 @@ void BatchRenamer::work( ProgressDialog*  )
     const QString m = i18n("Renamed %1 files successfully.", i-error);
     ( i - error ) ? p->print( m ) : p->warning( m );
 
-    if( error > 0 ) 
+    if( error > 0 )
         p->warning( i18np("%1 error occurred.", "%1 errors occurred.", error));
 
     p->print( i18n("Elapsed time: %1 seconds", t.elapsed()/1000), "kalarm" );
     p->print( i18n("KRename finished the renaming process."), "krename" );
     p->print( i18n("Press close to quit.") );
     p->setRenamedFiles( renamedFiles, m_files.count() );
-    
+
     if( undo ) {
         (*tundo) << endl << "echo \"Finished undoing " << m_files.count() << " actions.\"" << endl;
         delete tundo;
@@ -812,12 +812,12 @@ const QUrl BatchRenamer::buildDestinationUrl( const KRenameFile & file ) const
         filename += ".";
         filename += extension;
     }
-    
+
     if( !manual.isNull() )
         filename = manual;
 
     dstUrl.setPath(directory + '/' +  filename );
-    
+
     return dstUrl;
 }
 
@@ -844,7 +844,7 @@ QString & BatchRenamer::doEscape( QString & text )
 }
 
 QString & BatchRenamer::unEscape( QString & text )
-{ 
+{
     BatchRenamer::escape( text, "\\\\", "\\" );
     BatchRenamer::escape( text, "\\&", "&" );
     BatchRenamer::escape( text, "\\$", "$" );
@@ -859,7 +859,7 @@ QString & BatchRenamer::unEscape( QString & text )
     BatchRenamer::escape( text, "\\{", "{" );
     BatchRenamer::escape( text, "\\}", "}" );
     BatchRenamer::escape( text, "\\*", "*" );
-    
+
     return text;
 }
 
@@ -882,7 +882,7 @@ QString BatchRenamer::processToken( QString token, QString oldname, int i )
     tmp = findLength( token, (*m_files)[i].srcFilename() );
     if( !tmp.isEmpty() )
         return tmp;
-        
+
     tmp = findTrimmed( token, (*m_files)[i].srcFilename(), i );
     if( !tmp.isEmpty() )
         return tmp;
@@ -914,7 +914,7 @@ QString BatchRenamer::findToken( const QString & oldname, QString token, int i )
 {
     enum conversion { LOWER, UPPER, MIXED, STAR, NONE, EMPTY, NUMBER };
     unsigned int numwidth = 0;
-    
+
     conversion c = EMPTY;
     if( !token.left(1).compare("$") )
         c = NONE;
@@ -931,13 +931,13 @@ QString BatchRenamer::findToken( const QString & oldname, QString token, int i )
             token.remove( 0, 1 );
             ++numwidth;
         }
-        
+
         c = NUMBER;
     }
 
     if( c != EMPTY && c != NUMBER )
         token.remove( 0, 1 );
-    
+
     QString save = token;
     token = processToken( token, oldname, i );
 
@@ -974,7 +974,7 @@ QString BatchRenamer::findPartStrings( QString oldname, QString token )
 {
     QString first, second;
     int pos = -1;
-    
+
     // MSG: qDebug("PART: %s", token.toUtf8().data() );
     // parse things like [2;4{[dirname]}]
     if( token.count( '{' ) >= 1 && token.count( '}' ) >= 1 ) {
@@ -1007,7 +1007,7 @@ QString BatchRenamer::findPartStrings( QString oldname, QString token )
          */
         int x = sec-first.toInt( &ok );
         // if first is no number, but for example length, we return here so that findLength can do its job
-        if( !ok ) 
+        if( !ok )
             return QString();
 
         if( x > (signed int)oldname.length() || x < 0 )
@@ -1058,7 +1058,7 @@ QString BatchRenamer::findDirName( QString token, QString path )
 
         return path.section( "/", recursion * -1, recursion * -1);
     }
-    
+
     return QString();
 }
 
@@ -1067,7 +1067,7 @@ QString BatchRenamer::findDirSep( const QString & token, const QString & path )
     if( token.toLower() == "dirsep" ) {
         return "/";
     }
-    
+
     return QString();
 }
 
@@ -1081,10 +1081,10 @@ QString BatchRenamer::findLength( const QString & token, const QString & name )
             if( !n )
                 minus = 0;
         }
-        
+
         return QString::number( name.length() - minus );
     }
-   
+
     return QString();
 }
 
@@ -1093,9 +1093,9 @@ QString BatchRenamer::findTrimmed( const QString & token, const QString & name, 
     if( token.toLower().startsWith(QLatin1String("trimmed"))) {
         if( token.contains( ';' ) )
 	{
-	    QString processed = processString( 
+	    QString processed = processString(
 		token.section( ';', 1, 1 ), name, index ).trimmed();
-	    
+
 	    if( processed.isNull() )
 		return name.trimmed();
 	    else
@@ -1104,7 +1104,7 @@ QString BatchRenamer::findTrimmed( const QString & token, const QString & name, 
         else
             return name.trimmed();
     }
-   
+
     return QString();
 }
 
@@ -1118,8 +1118,8 @@ QString BatchRenamer::findReplace( const QString & text, const QString & origFil
         QString find( (*it).find );
 
         // Call for each element in replace strings doReplace with correct values
-        t = doReplace( t, unEscape( find ), (*it).replace, 
-                       (*it).reg, (*it).doProcessTokens, 
+        t = doReplace( t, unEscape( find ), (*it).replace,
+                       (*it).reg, (*it).doProcessTokens,
                        origFilename, index );
         ++it;
     }
@@ -1130,24 +1130,24 @@ QString BatchRenamer::findReplace( const QString & text, const QString & origFil
 QString BatchRenamer::doReplace( const QString & text, const QString & find, const QString & replace, bool reg, bool doProcessTokens, const QString & origFilename, int index )
 {
     QString t( text );
-    if( !reg ) 
+    if( !reg )
     {
         QString escaped = find;
         escaped = doEscape( escaped );
 
-        // we use the escaped text here because the user might want 
+        // we use the escaped text here because the user might want
         // to find a "&" and replace it
         t.replace( escaped, replace );
-    } 
+    }
     else
     {
         // no doEscape() here for the regexp, because it would destroy our regular expression
-        // other wise we will not find stuff like $, [ in the text 
+        // other wise we will not find stuff like $, [ in the text
         t = unEscape( t ).replace( QRegExp( find ), replace );
         t = doEscape( t );
     }
 
-        
+
     if( doProcessTokens ) {
         t = processString( unEscape( t ), origFilename, index, false );
     }

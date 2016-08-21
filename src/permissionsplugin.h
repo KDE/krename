@@ -38,13 +38,13 @@ class PermissionsPlugin : public QObject, public Plugin {
     explicit PermissionsPlugin( PluginLoader* loader );
     virtual ~PermissionsPlugin();
 
-    /** 
+    /**
      * @returns a name of the plugin that can be displayed
      *          to the user. This name should be internationalized.
      */
     virtual const QString name() const;
 
-    /** 
+    /**
      * Determines the type of the plugin.
      * Different enum values may be or'ed together.
      *
@@ -64,11 +64,11 @@ class PermissionsPlugin : public QObject, public Plugin {
      *          disable this plugin.
      */
     inline virtual bool alwaysEnabled() const;
-    
+
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()
@@ -94,7 +94,7 @@ class PermissionsPlugin : public QObject, public Plugin {
      */
     virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
 
-    /** Get a list of all tokens supported by this plugin. 
+    /** Get a list of all tokens supported by this plugin.
      *
      *  If the token type != ePluginType_Token you have to return an empty list
      *

@@ -37,12 +37,12 @@ class NumberDialog : public QDialog {
  public:
     NumberDialog( int start, int step, bool reset, QList<int> skip, QWidget* parent = NULL );
 
-    /** 
+    /**
      * @returns the start index the user has selected
      */
     inline int startIndex() const;
 
-    /** 
+    /**
      * @returns the stepping value for counters the user has selected
      */
     inline int numberStepping() const;
@@ -52,13 +52,13 @@ class NumberDialog : public QDialog {
      */
     inline bool resetCounter() const;
 
-    /** 
+    /**
      * @returns the list of number that should be skipped in counters
      */
     QList<int> skipNumbers() const;
 
  private slots:
-     
+
      void slotAddNumber();
      void slotRemoveNumber();
 

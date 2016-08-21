@@ -28,13 +28,13 @@ class SystemPlugin : public FilePlugin {
 
     virtual ~SystemPlugin();
 
-    /** 
+    /**
      * @returns a name of the plugin that can be displayed
      *          to the user. This name should be internationalized.
      */
     inline virtual const QString name() const;
 
-    /** 
+    /**
      * @returns the type of the plugin.
      */
     inline int type() const;
@@ -43,7 +43,7 @@ class SystemPlugin : public FilePlugin {
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()

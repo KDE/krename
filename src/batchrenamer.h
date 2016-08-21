@@ -58,8 +58,8 @@ class QObject;
 class ProgressDialog;
 
 /** This is the core class for renaming.
- *  
- *  It transforms the filenames according to 
+ *
+ *  It transforms the filenames according to
  *  the users settings using custom functions
  *  and external plugins.
  *  Also the actual renaming, copying or moving
@@ -76,24 +76,24 @@ class BatchRenamer : public QObject {
 
         /** Sets the list of files
          *  which contains all filenames which should be transformed.
-         * 
+         *
          *  The renamed filenames are stored in this list, too,.
          *
          *  @param list a list of KRenameFile objects
          */
         inline void setFiles( KRenameFile::List* list );
 
-        /** Get access to the list of files used for renaming. 
+        /** Get access to the list of files used for renaming.
          *  @returns the list of files or NULL if none was set.
          */
         inline const KRenameFile::List* files() const;
 
-        /** 
+        /**
          *  @returns the current renaming mode
          */
         inline ERenameMode renameMode() const;
 
-        /** 
+        /**
          * @returns the current start index for counters
          */
         inline int numberStartIndex() const;
@@ -108,7 +108,7 @@ class BatchRenamer : public QObject {
          */
         inline int numberReset() const;
 
-        /** 
+        /**
          * @returns the list of numbers that are skipped during renaming
          */
         inline QList<int> numberSkipList() const;
@@ -123,7 +123,7 @@ class BatchRenamer : public QObject {
         void processFilenames();
 
         /** Process all files
-         * 
+         *
          *  processFilenames has to be called before
          *
          *  All files will be renamed according to the users settings.
@@ -136,7 +136,7 @@ class BatchRenamer : public QObject {
 
 
         /** undo all files
-         * 
+         *
          *  processFiles has to be called before
          *
          *  A previous renaming operation will be undone.
@@ -186,7 +186,7 @@ class BatchRenamer : public QObject {
          *  @return a capitalized version of this string (every first letter is a capital letter now)
          */
         QString capitalize( const QString & text ) const;
-        
+
         /** Handle the [length] tokens
          *
          *  @param token a token found in square brackets
@@ -281,7 +281,7 @@ class BatchRenamer : public QObject {
 
      private:
         /** Do find and replace on the final resulting filename.
-         *  
+         *
          *  \param text the new final filename with all other changes applied.
          *
          *  \returns the new filename with all find and replace being done.
@@ -304,7 +304,7 @@ class BatchRenamer : public QObject {
          *
          *  \returns the new filename with find and replace being done.
          */
-        QString doReplace( const QString & text, const QString & find, const QString & replace, 
+        QString doReplace( const QString & text, const QString & find, const QString & replace,
                            bool reg, bool doProcessTokens, const QString & origFilename, int index );
 
     private:
@@ -322,7 +322,7 @@ class BatchRenamer : public QObject {
 
         void work( ProgressDialog* p );
         void writeUndoScript( QTextStream* t );
-     
+
         /**
          * Parse a new filename and create missing subdirectories.
          *
@@ -389,13 +389,13 @@ ERenameMode BatchRenamer::renameMode() const
     return m_renameMode;
 }
 
-void BatchRenamer::setFilenameTemplate( const QString & t ) 
-{ 
+void BatchRenamer::setFilenameTemplate( const QString & t )
+{
     text = t;
 }
 
-void BatchRenamer::setExtensionTemplate( const QString & t ) 
-{ 
+void BatchRenamer::setExtensionTemplate( const QString & t )
+{
     extext = t;
 }
 

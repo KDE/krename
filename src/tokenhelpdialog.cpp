@@ -34,13 +34,13 @@
 /**
  * A wrapper class for KRenameModel that
  * replaces display role with customer Qt::UserRole
- * so that the KRenameModel will always return unformatted 
+ * so that the KRenameModel will always return unformatted
  * data, because QComboBox cannot display richtext.
  */
 class KRenameUnformattedWrappedModel : public QAbstractListModel {
 public:
-    KRenameUnformattedWrappedModel( KRenameModel* model ) 
-        : m_model(model) 
+    KRenameUnformattedWrappedModel( KRenameModel* model )
+        : m_model(model)
     {
     }
 
@@ -121,12 +121,12 @@ TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
     loadConfig();
 }
 
-TokenHelpDialog::~TokenHelpDialog() 
+TokenHelpDialog::~TokenHelpDialog()
 {
     delete m_model;
 }
 
-const QString TokenHelpDialog::getTokenSeparator() 
+const QString TokenHelpDialog::getTokenSeparator()
 {
     return QString::fromLatin1(";;");
 }
@@ -139,7 +139,7 @@ void TokenHelpDialog::add( const QString & headline, const QStringList & command
     item->setText( 0, headline );
     item->setIcon( 0, icon );
 
-    if( first ) 
+    if( first )
         m_first = headline;
 }
 
@@ -148,12 +148,12 @@ int TokenHelpDialog::exec()
     addRecentTokens();
 
     m_widget.listCategories->sortItems( 0, Qt::AscendingOrder );
-    
+
     if( !m_lastSelected.isEmpty() )
     {
         selectCategory( m_lastSelected );
     }
-    else if( !m_first.isEmpty() ) 
+    else if( !m_first.isEmpty() )
     {
         selectCategory( m_first );
     }
@@ -161,9 +161,9 @@ int TokenHelpDialog::exec()
     return QDialog::exec();
 }
 
-void TokenHelpDialog::selectCategory( const QString & category ) 
+void TokenHelpDialog::selectCategory( const QString & category )
 {
-    for( int i=0;i<m_widget.listCategories->topLevelItemCount(); i++ ) 
+    for( int i=0;i<m_widget.listCategories->topLevelItemCount(); i++ )
         if( m_widget.listCategories->topLevelItem( i )->text(0) == category )
         {
             m_widget.listCategories->topLevelItem( i )->setSelected( true );
@@ -194,7 +194,7 @@ void TokenHelpDialog::slotInsert()
         m_lastSelected = category->text(0);
 
     QTreeWidgetItem* item = m_widget.listTokens->currentItem();
-    if( item ) 
+    if( item )
     {
       const QString & token = item->text( 0 );
       const QString & help = item->text( 1 );
@@ -208,7 +208,7 @@ void TokenHelpDialog::slotInsert()
     this->accept();
 }
 
-void TokenHelpDialog::loadConfig() 
+void TokenHelpDialog::loadConfig()
 {
     KSharedConfigPtr config = KSharedConfig::openConfig();
 
@@ -268,7 +268,7 @@ void TokenHelpDialog::slotPreviewClicked(bool bPreview)
 {
     slotEnableControls();
 
-    if( bPreview ) 
+    if( bPreview )
     {
         m_widget.listTokens->setColumnHidden( COLUMN_PREVIEW, false );
         slotUpdatePreview();
@@ -289,7 +289,7 @@ void TokenHelpDialog::slotUpdatePreview()
         return;
 
     int index = m_widget.comboPreview->currentIndex();
-    if( index >= 0 && m_widget.listCategories->currentItem() != NULL ) 
+    if( index >= 0 && m_widget.listCategories->currentItem() != NULL )
     {
         QString       name   = m_widget.listCategories->currentItem()->text(0);
 
@@ -300,8 +300,8 @@ void TokenHelpDialog::slotUpdatePreview()
         for( int i=0;i<m_widget.listTokens->topLevelItemCount();i++ )
         {
             QTreeWidgetItem* item = m_widget.listTokens->topLevelItem( i );
-            if( item ) 
-            { 
+            if( item )
+            {
                 token = m_renamer->processString( item->text( 0 ), file.srcFilename(), index );
                 item->setText( COLUMN_PREVIEW, token );
             }
@@ -312,7 +312,7 @@ void TokenHelpDialog::slotUpdatePreview()
 
 void TokenHelpDialog::addRecentTokens()
 {
-  const QPixmap & icon = 
+  const QPixmap & icon =
     KIconLoader::global()->loadIcon( "document-open-recent", KIconLoader::NoGroup, KIconLoader::SizeSmall );
   this->add( i18n("Recent"), m_recent, icon );
 }
@@ -323,7 +323,7 @@ void TokenHelpDialog::addToRecentTokens( const QString & token, const QString & 
   QStringList::iterator it = m_recent.begin();
   while( it != m_recent.end() )
   {
-    if( (*it).startsWith( token + getTokenSeparator() ) ) 
+    if( (*it).startsWith( token + getTokenSeparator() ) )
     {
       m_recent.erase( it );
       break;
@@ -331,9 +331,9 @@ void TokenHelpDialog::addToRecentTokens( const QString & token, const QString & 
 
     ++it;
   }
- 
+
   // 2. remove first token if more than 10
-  if( m_recent.count() >= S_MAX_RECENT ) 
+  if( m_recent.count() >= S_MAX_RECENT )
   {
     m_recent.removeAt( 0 );
   }

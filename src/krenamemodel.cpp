@@ -63,18 +63,18 @@ QVariant KRenameModel::data ( const QModelIndex & index, int role ) const
 
     if (role == Qt::DisplayRole)
     {
-        if (!m_preview) 
+        if (!m_preview)
         {
             // Only return path
             return m_vector->at(index.row()).toString();
         }
-        else if (m_preview && m_text) 
+        else if (m_preview && m_text)
         {
             // Short filename as first line in bold
             // Path as second line
             const KRenameFile & file = m_vector->at(index.row());
             QString filename = file.srcFilename();
-            if (!file.srcExtension().isEmpty()) 
+            if (!file.srcExtension().isEmpty())
             {
                 filename = filename + "." + file.srcExtension();
             }
@@ -84,11 +84,11 @@ QVariant KRenameModel::data ( const QModelIndex & index, int role ) const
                  prettyUrl + "</qt>";
         }
     }
-    else if( role == Qt::DecorationRole && m_preview ) 
+    else if( role == Qt::DecorationRole && m_preview )
     {
         return m_vector->at(index.row()).icon();
     }
-    else if( role == Qt::UserRole ) 
+    else if( role == Qt::UserRole )
     {
         return m_vector->at(index.row()).toString();
     }
@@ -101,7 +101,7 @@ Qt::ItemFlags KRenameModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid())
         return Qt::ItemIsDropEnabled;
-    
+
     return QAbstractItemModel::flags(index) | Qt::ItemIsEditable | Qt::ItemIsDropEnabled;
 }
 
@@ -137,7 +137,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
 
     while( it != urls.end() )
     {
-        if( (*it).isValid() ) 
+        if( (*it).isValid() )
         {
             KRenameFile file( *it, m_eSplitMode, m_dot );
 
@@ -152,7 +152,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     }
 
     this->addFiles( files );
-    if( dirs.count() ) 
+    if( dirs.count() )
     {
         QList<QUrl>::const_iterator it = dirs.begin();
 
@@ -160,12 +160,12 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
         {
             ThreadedLister* thl = new ThreadedLister( *it, NULL, this );
             connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
-            
+
             thl->setListDirnamesOnly( false );
             thl->setListHidden( false );
             thl->setListRecursively( true );
             thl->setListDirnames( false );
-        
+
             thl->start();
 
             ++it;
@@ -180,7 +180,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     return true;
 }
 
-void KRenameModel::slotListerDone( ThreadedLister* lister ) 
+void KRenameModel::slotListerDone( ThreadedLister* lister )
 {
     // Delete the listener
     delete lister;
@@ -189,18 +189,18 @@ void KRenameModel::slotListerDone( ThreadedLister* lister )
     QApplication::restoreOverrideCursor();
 
     emit filesDropped();
-} 
+}
 
 bool KRenameModel::setData(const QModelIndex &index,
                            const QVariant &, int role)
 {
     if (index.isValid() && role == Qt::EditRole) {
-    
+
         //stringList.replace(index.row(), value.toString());
         emit dataChanged(index, index);
         return true;
     }
- 
+
     return false;
 }
 
@@ -210,30 +210,30 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
     {
         int oldMaxDots = m_maxDots;
         m_vector->reserve( m_vector->count() + files.count() );
-        
+
         this->beginInsertRows( QModelIndex(), m_vector->size(), m_vector->size() + files.count() - 1 );
 
         KRenameFile::List::const_iterator it = files.begin();
         while( it != files.end() )
         {
             m_vector->push_back( *it );
-            
+
             int dots  = (*it).dots();
-            if( dots > m_maxDots ) 
+            if( dots > m_maxDots )
                 m_maxDots = dots;
 
             ++it;
         }
         this->endInsertRows();
 
-        if( m_maxDots > oldMaxDots ) 
+        if( m_maxDots > oldMaxDots )
             emit maxDotsChanged( m_maxDots );
 
         // Update sorting
         this->sortFiles( m_eSortMode, m_customSortToken, m_eCustomSortMode );
 
         // Generate previews if necessary
-        if( m_preview ) 
+        if( m_preview )
         {
             // Construct a list of KFileItems
             // Only do this is necessary,
@@ -248,10 +248,10 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
             }
 
             // TODO: Enable this job, it currently crashes for me
-            
+
             // Start a job to create the real file previews
             KIO::PreviewJob* job = KIO::filePreview( fileItems, QSize(KRenameFile::iconSize(), KRenameFile::iconSize()) );
-            
+
             connect( job, SIGNAL(gotPreview(const KFileItem &,const QPixmap &)),
                      this, SLOT(gotPreview(const KFileItem &,const QPixmap &)) );
             job->start();
@@ -262,26 +262,26 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
 void KRenameModel::gotPreview (const KFileItem &item, const QPixmap &preview)
 {
     /*
-    const KRenameFile* file = 
+    const KRenameFile* file =
         static_cast<const KRenameFile*>(item.extraData(KRenameFile::EXTRA_DATA_KEY));
     */
 
     KRenameFile* file = NULL;
     // TODO: Find a more optimal "search algorithm" ....
     KRenameFile::List::iterator it = m_vector->begin();
-    while( it != m_vector->end() ) 
+    while( it != m_vector->end() )
     {
-        if( (*it).srcUrl() == item.url() ) 
+        if( (*it).srcUrl() == item.url() )
         {
             file = &(*it);
             break;
-        } 
+        }
 
         ++it;
     }
 
     //it = find( m_vector->begin(), m_vector->end(), item );
-    if( file != NULL ) // && file->fileItem() == item ) 
+    if( file != NULL ) // && file->fileItem() == item )
     {
         file->setIcon( preview );
     }
@@ -316,29 +316,29 @@ void KRenameModel::sortFiles( ESortMode mode, const QString & customSortToken, K
     m_customSortToken = customSortToken;
     m_eCustomSortMode = customSortMode;
 
-    if( mode == eSortMode_Ascending ) 
+    if( mode == eSortMode_Ascending )
         qSort( m_vector->begin(), m_vector->end(), ascendingKRenameFileLessThan );
-    else if( mode == eSortMode_Descending ) 
+    else if( mode == eSortMode_Descending )
         qSort( m_vector->begin(), m_vector->end(), descendingKRenameFileLessThan );
-    else if( mode == eSortMode_Numeric ) 
+    else if( mode == eSortMode_Numeric )
         qSort( m_vector->begin(), m_vector->end(), numericKRenameFileLessThan );
-    else if( mode == eSortMode_Random ) 
+    else if( mode == eSortMode_Random )
         qSort( m_vector->begin(), m_vector->end(), randomKRenameFileLessThan );
-    else if( mode == eSortMode_AscendingDate ) 
+    else if( mode == eSortMode_AscendingDate )
     {
-        KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector, 
+        KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector,
                                   KRenameTokenSorter::eSimpleSortMode_Ascending);
         qSort( m_vector->begin(), m_vector->end(), sorter );
     }
-    else if( mode == eSortMode_DescendingDate ) 
+    else if( mode == eSortMode_DescendingDate )
     {
-        KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector, 
+        KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector,
                                   KRenameTokenSorter::eSimpleSortMode_Descending);
         qSort( m_vector->begin(), m_vector->end(), sorter );
     }
     else if( mode == eSortMode_Token )
     {
-        KRenameTokenSorter sorter(m_renamer, customSortToken, *m_vector, 
+        KRenameTokenSorter sorter(m_renamer, customSortToken, *m_vector,
                                   customSortMode);
         qSort( m_vector->begin(), m_vector->end(), sorter );
     }
@@ -376,7 +376,7 @@ void KRenameModel::moveFilesUp( const QList<int> & files )
             continue;
         }
 
-        // swap items 
+        // swap items
         tmp                    = m_vector->at( index );
         (*m_vector)[index]     = KRenameFile( m_vector->at( index - 1 ) );
         (*m_vector)[index - 1] = tmp;
@@ -407,7 +407,7 @@ void KRenameModel::moveFilesDown( const QList<int> & files )
             continue;
         }
 
-        // swap items 
+        // swap items
         tmp                    = m_vector->at( index );
         (*m_vector)[index]     = KRenameFile( m_vector->at( index + 1 ) );
         (*m_vector)[index + 1] = tmp;
@@ -451,16 +451,16 @@ QVariant KRenamePreviewModel::headerData ( int section, Qt::Orientation orientat
         return QVariant();
 
     return (section == 0) ? i18n("Origin") : i18n("Renamed");
-} 
+}
 
 QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
 {
     if (!index.isValid())
         return QVariant();
-    
+
     if (index.row() >= m_vector->size())
         return QVariant();
-    
+
     if (index.column() >= 2 )
         return QVariant();
 
@@ -509,14 +509,14 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
     }
     /*
       Icons are to large, so this is disabled
-    else if( role == Qt::DecorationRole && index.column() == 0 ) 
+    else if( role == Qt::DecorationRole && index.column() == 0 )
     {
         return m_vector->at(index.row()).icon();
     }
     */
 
     return QVariant();
-    
+
 }
 
 QModelIndex KRenamePreviewModel::parent ( const QModelIndex & ) const

@@ -29,13 +29,13 @@ class BatchRenamer;
 class Plugin;
 
 bool ascendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 );
-bool descendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 ); 
+bool descendingKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 );
 bool numericKRenameFileLessThan( const KRenameFile & file1, const KRenameFile & file2 );
 bool randomKRenameFileLessThan( const KRenameFile &, const KRenameFile & );
 
 class KRenameTokenSorter {
 public:
-    
+
     enum ESimpleSortMode {
         eSimpleSortMode_Ascending,
         eSimpleSortMode_Descending,
@@ -53,7 +53,7 @@ private:
     BatchRenamer* m_renamer;
     const QString & m_token;
     const KRenameFile::List & m_list;
-    ESimpleSortMode m_eSortMode; 
+    ESimpleSortMode m_eSortMode;
     Plugin* m_plugin;
     QMap<QUrl,QString> m_values;
 };

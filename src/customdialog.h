@@ -22,7 +22,7 @@
 #include "ui_customfilenamedlg.h"
 #include "batchrenamer.h"
 #include <KSharedConfig>
- 
+
 class KRenameFile;
 
 class CustomDialog : public QDialog {
@@ -31,7 +31,7 @@ class CustomDialog : public QDialog {
     CustomDialog( const KRenameFile & file, QWidget* parent );
     ~CustomDialog();
 
-    /** 
+    /**
      *  \returns true if the current user settings
      *           specify manual changes to the filename
      */

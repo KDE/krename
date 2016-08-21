@@ -46,7 +46,7 @@ void RichTextItemDelegate::paint(QPainter* painter, const QStyleOptionViewItem& 
     QPixmap pixmap = index.model()->data(index, Qt::DecorationRole).value<QPixmap>();
     QString text = index.model()->data(index, Qt::DisplayRole).toString();
 
-    if(!pixmap.isNull()) 
+    if(!pixmap.isNull())
     {
         int offsetX = qMax(pixmap.width(), KRenameFile::iconSize());
         QRect pixmapRect(option.rect.x(),
@@ -55,18 +55,18 @@ void RichTextItemDelegate::paint(QPainter* painter, const QStyleOptionViewItem& 
                          option.rect.height());
 
         QRectF textRect( 0.0, 0.0,
-                         static_cast<qreal>(option.rect.width() - offsetX), 
+                         static_cast<qreal>(option.rect.width() - offsetX),
                          static_cast<qreal>(option.rect.height()));
 
-        this->drawDecoration(painter, option, 
-                             pixmapRect, 
+        this->drawDecoration(painter, option,
+                             pixmapRect,
                              pixmap);
 
         painter->save();
         painter->translate(option.rect.x() + offsetX,
                            option.rect.y());
         m_document->setHtml(text);
-        m_document->drawContents(painter, textRect); 
+        m_document->drawContents(painter, textRect);
         painter->restore();
     }
     else
@@ -78,7 +78,7 @@ void RichTextItemDelegate::paint(QPainter* painter, const QStyleOptionViewItem& 
     }
 
     this->drawFocus(painter, option, option.rect);
-    
+
     // done
     painter->restore();
 }

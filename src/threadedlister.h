@@ -1,5 +1,5 @@
 /***************************************************************************
-                          
+
                           threadedlister.h  -  description
                              -------------------
     begin                : Tue Feb 01 2005
@@ -15,7 +15,7 @@
  *   (at your option) any later version.                                   *
  *                                                                         *
  ***************************************************************************/
- 
+
 #ifndef THREADEDLISTER_H
 #define THREADEDLISTER_H
 
@@ -40,7 +40,7 @@ class ThreadedLister : public QObject
     public:
         ThreadedLister( const QUrl &dirname, QWidget* cache, KRenameModel* model );
         ~ThreadedLister();
-                
+
         inline void start() { this->run(); }
 
         /** Sets if dirnames should listed along with the filenames.
@@ -48,33 +48,33 @@ class ThreadedLister : public QObject
          *
          *  \param names if true dirnames are listed along with the filenames.
          */
-        inline void setListDirnames( bool names );        
+        inline void setListDirnames( bool names );
 
         /** Sets if only dirnames should listed.
          *  This is disabled by default.
          *
          *  \param names if true only dirnames are listed.
          */
-        inline void setListDirnamesOnly( bool names );        
+        inline void setListDirnamesOnly( bool names );
 
         inline void setFilter( const QString & filter );
         inline void setListHidden( bool h );
         inline void setListRecursively( bool r );
-        
+
     signals:
         void listerDone( ThreadedLister* );
-        
+
     protected:
         void run();
-        
+
     private slots:
         void completed();
-        
+
         void foundItem(KIO::Job*, const KIO::UDSEntryList & list);
 
-    private:        
+    private:
         static QMutex     s_mutex; ///< Mutex assuring that only one thread at a time will work on m_model
-        
+
         QUrl              m_dirname;
         QString           m_filter;
         bool              m_listHiddenFiles;

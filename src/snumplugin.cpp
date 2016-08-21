@@ -62,7 +62,7 @@ QString SnumPlugin::processFile( BatchRenamer* b, int index, const QString & fil
     QString token;
 
     // This plugin supports to types
-    if( eCurrentType == ePluginType_Token ) 
+    if( eCurrentType == ePluginType_Token )
     {
 
         token = filenameOrToken.toLower();
@@ -98,7 +98,7 @@ QString SnumPlugin::extractnum(const QString & unicoded, int a)
     QString seriesnum = "";
     QString season = "";
     QString episode = "";
-    
+
     QRegExp rx( "(\\d{1,2})[^\\d]{1}(\\d{1,3})" );
     pos = 0;
     pos = rx.indexIn( unicoded, pos );
@@ -129,22 +129,22 @@ QString SnumPlugin::extractnum(const QString & unicoded, int a)
             }
         }
     }
-    
-    
+
+
     if (season.length() == 1)
       tmp = '0' + season;
     else
         tmp = season;
     season=tmp;
-	
+
     if (episode.length() == 1)
         tmp = '0' + episode;
     else
         tmp = episode;
     episode=tmp;
-    
+
     seriesnum += season + 'e' + episode;
-    
+
     if (a==0)
         return seriesnum;
     else if (a==1)

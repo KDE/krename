@@ -39,8 +39,8 @@ InsertPartFilenameDlg::InsertPartFilenameDlg( const QString & filename, QWidget*
     connect(m_buttons, SIGNAL(rejected()), this, SLOT(reject()));
 
     connect(m_widget.checkInvert,  SIGNAL(clicked(bool)),      this, SLOT( slotUpdateKRenameCommand() ));
-    connect(m_widget.textFilename, SIGNAL(selectionChanged()), this, SLOT( slotSelectionChanged() )); 
-    connect(m_widget.comboConvert, SIGNAL(currentIndexChanged(int)), this, SLOT( slotSelectionChanged() )); 
+    connect(m_widget.textFilename, SIGNAL(selectionChanged()), this, SLOT( slotSelectionChanged() ));
+    connect(m_widget.comboConvert, SIGNAL(currentIndexChanged(int)), this, SLOT( slotSelectionChanged() ));
 
     this->slotUpdateKRenameCommand();
 }
@@ -56,18 +56,18 @@ void InsertPartFilenameDlg::slotSelectionChanged()
 
 void InsertPartFilenameDlg::slotUpdateKRenameCommand()
 {
-    m_command        = "";    
+    m_command        = "";
     bool hasSelected = m_start != -1;
     int  cursorPos   = m_widget.textFilename->cursorPosition();
     int  end         = m_end;
     int  start       = m_start;
 
     const char* conversionflag = "$";
-    if( m_widget.comboConvert->currentIndex() == 1 ) 
+    if( m_widget.comboConvert->currentIndex() == 1 )
         conversionflag = "%";
-    else if( m_widget.comboConvert->currentIndex() == 2 ) 
+    else if( m_widget.comboConvert->currentIndex() == 2 )
         conversionflag = "&";
-    else if( m_widget.comboConvert->currentIndex() == 3 ) 
+    else if( m_widget.comboConvert->currentIndex() == 3 )
         conversionflag = "*";
 
     if( !m_widget.textFilename->text().isEmpty() )
@@ -75,7 +75,7 @@ void InsertPartFilenameDlg::slotUpdateKRenameCommand()
         if( m_widget.checkInvert->isChecked() && hasSelected )
         {
             // inverted
-            if( end ) 
+            if( end )
             {
                 start++;
                 end++;
@@ -84,15 +84,15 @@ void InsertPartFilenameDlg::slotUpdateKRenameCommand()
 
                 if( end <= (signed int)m_widget.textFilename->text().length() )
                     m_command.append( QString("[%1%2-[length]]").arg(conversionflag).arg(end) );
-            } 
-        } 
+            }
+        }
         else if( m_widget.checkInvert->isChecked() && !hasSelected )
         {
             m_command = QString("[%1").arg(conversionflag) + QString("1;%1][%3%2-[length]]").arg(cursorPos).arg(cursorPos+1);
         }
         else if( !m_widget.checkInvert->isChecked() && hasSelected )
         {
-            if( end ) 
+            if( end )
             {
                 start++;
                 end++;
@@ -101,13 +101,13 @@ void InsertPartFilenameDlg::slotUpdateKRenameCommand()
                 else
                     m_command = QString("[%1%2-[length]]").arg(conversionflag).arg(start);
             }
-        } 
+        }
         else if( !m_widget.checkInvert->isChecked() && !hasSelected )
         {
             m_command = QString("[%1%2-[length]]").arg(conversionflag).arg( cursorPos );
         }
 
     }
-    
+
     m_widget.labelPreview->setText( m_command );
 }

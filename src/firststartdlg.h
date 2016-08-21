@@ -37,7 +37,7 @@ class FirstStartDlg : public QDialog {
  public:
     explicit FirstStartDlg( QWidget* parent = NULL );
 
-    /** 
+    /**
      * @returns the selected Gui Mode
      */
     inline EGuiMode guiMode() const;

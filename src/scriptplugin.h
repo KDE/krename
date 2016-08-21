@@ -39,13 +39,13 @@ class ScriptPlugin : public QObject, public Plugin {
 
     virtual ~ScriptPlugin();
 
-    /** 
+    /**
      * @returns a name of the plugin that can be displayed
      *          to the user. This name should be internationalized.
      */
     inline virtual const QString name() const;
 
-    /** 
+    /**
      * @returns the type of the plugin.
      */
     inline virtual int type() const;
@@ -66,7 +66,7 @@ class ScriptPlugin : public QObject, public Plugin {
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()
@@ -92,7 +92,7 @@ class ScriptPlugin : public QObject, public Plugin {
      */
     virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
 
-    /** Get a list of all tokens supported by this plugin. 
+    /** Get a list of all tokens supported by this plugin.
      *
      *  If the token type != ePluginType_Token you have to return an empty list
      *
@@ -143,14 +143,14 @@ class ScriptPlugin : public QObject, public Plugin {
      */
     inline void addSupportedToken( const QString & token ) { m_keys.append( token ); }
 
-    /** 
+    /**
      * Set all KRename internal variables on the internal
      * Interpreter object.
      *
      * @param file the KRenameFile where the values can be retrieved
      * @param index index of the current file
      */
-    void initKRenameVars( const KRenameFile & file, int index ); 
+    void initKRenameVars( const KRenameFile & file, int index );
 
     /**
      * Insert a variable in the definitions textfield
@@ -210,14 +210,14 @@ inline int ScriptPlugin::type() const
     return ePluginType_Token;
 }
 
-inline const QStringList & ScriptPlugin::supportedTokens() const 
-{ 
-    return m_keys; 
+inline const QStringList & ScriptPlugin::supportedTokens() const
+{
+    return m_keys;
 }
 
-inline const QStringList & ScriptPlugin::help() const 
-{ 
-    return m_help; 
+inline const QStringList & ScriptPlugin::help() const
+{
+    return m_help;
 }
 
 #endif // FILE_PLUGIN_H

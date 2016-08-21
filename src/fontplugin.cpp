@@ -21,7 +21,7 @@
 
 #include <ft2build.h>
 #include FT_FREETYPE_H
-        
+
 #include <KLocalizedString>
 
 FontPlugin::FontPlugin( PluginLoader* loader )
@@ -43,7 +43,7 @@ FontPlugin::FontPlugin( PluginLoader* loader )
     m_icon = "application-x-font-ttf";
 
     FT_Error error = FT_Init_FreeType( &m_library );
-    if( error ) 
+    if( error )
     {
         qDebug("Freetype initialization error %i.", error );
         m_library = NULL;
@@ -65,7 +65,7 @@ QString FontPlugin::processFile( BatchRenamer* b, int index, const QString & fil
     if( !this->supports( token ) )
         return QString("");
 
-    if( !m_library ) 
+    if( !m_library )
     {
         return QString("Cannot initialize FreeType");
     }
@@ -93,17 +93,17 @@ QString FontPlugin::processFile( BatchRenamer* b, int index, const QString & fil
         {
             result = QString::fromLocal8Bit( FT_Get_Postscript_Name( face ) );
         }
-        else if( token == "fontfamily" && face->family_name ) 
+        else if( token == "fontfamily" && face->family_name )
         {
             result = QString::fromLocal8Bit( face->family_name );
         }
-        else if( token == "fontstyle" && face->style_name ) 
+        else if( token == "fontstyle" && face->style_name )
         {
             result = QString::fromLocal8Bit( face->style_name );
         }
     }
 
-    if( face ) 
+    if( face )
     {
         FT_Done_Face( face );
     }

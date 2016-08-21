@@ -28,33 +28,33 @@ public:
     /** Get the KRenamePreviewProvider instance. This is a singleton
      *  as only one KRenamePreviewProvider may exist for one application.
      */
-    static KRenamePreviewProvider* Instance() 
+    static KRenamePreviewProvider* Instance()
     {
-        if( !s_instance ) 
+        if( !s_instance )
             s_instance = new KRenamePreviewProvider();
-            
+
         return s_instance;
     }
 
-    QPixmap loadIcon( const QUrl &url ) 
+    QPixmap loadIcon( const QUrl &url )
     {
         return KIO::pixmapForUrl( url );
     }
 
 private:
-    /** Create a KRenamePreviewProvider 
+    /** Create a KRenamePreviewProvider
      */
-    KRenamePreviewProvider() 
+    KRenamePreviewProvider()
     {
     }
 
-    ~KRenamePreviewProvider() 
+    ~KRenamePreviewProvider()
     {
     }
 
 private:
     static KRenamePreviewProvider* s_instance;
-}; 
+};
 
 KRenamePreviewProvider* KRenamePreviewProvider::s_instance = NULL;
 
@@ -101,7 +101,7 @@ KRenameFile::KRenameFile( const KRenameFile & rhs )
     this->operator=( rhs );
 }
 
-const KRenameFile & KRenameFile::operator=( const KRenameFile & rhs ) 
+const KRenameFile & KRenameFile::operator=( const KRenameFile & rhs )
 {
     m_bDirectory = rhs.m_bDirectory;
     m_src        = rhs.m_src;
@@ -140,7 +140,7 @@ void KRenameFile::setCurrentSplitMode( ESplitMode eSplitMode, unsigned int dot )
 {
     QUrl    url      = m_src.url;
     QString filename = m_src.filename;
-    if( !m_src.extension.isEmpty() ) 
+    if( !m_src.extension.isEmpty() )
     {
         filename = filename + "." + m_src.extension;
     }
@@ -150,7 +150,7 @@ void KRenameFile::setCurrentSplitMode( ESplitMode eSplitMode, unsigned int dot )
     this->initFileDescription( m_src, url, eSplitMode, dot );
 }
 
-void KRenameFile::initFileDescription( TFileDescription & rDescription, const QUrl &url, 
+void KRenameFile::initFileDescription( TFileDescription & rDescription, const QUrl &url,
                                        ESplitMode eSplitMode, unsigned int dot ) const
 {
     int splitPos = -1;
@@ -163,7 +163,7 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const QU
     rDescription.url       = url;
     rDescription.directory = path;
 
-    if( !m_bDirectory ) 
+    if( !m_bDirectory )
     {
         // split directory/filename
         splitPos = path.lastIndexOf( '/' );
@@ -181,7 +181,7 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const QU
 
         // split filename.extension
         splitPos = -1;
-        if( eSplitMode == eSplitMode_FirstDot ) 
+        if( eSplitMode == eSplitMode_FirstDot )
             splitPos = file.indexOf( '.' );
         else if( eSplitMode == eSplitMode_LastDot )
             splitPos = file.lastIndexOf( '.' );
@@ -189,7 +189,7 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const QU
             splitPos = file.length();
         else
         {
-            if( dot ) 
+            if( dot )
             {
                 int i = 0;
                 splitPos = 0;
@@ -203,7 +203,7 @@ void KRenameFile::initFileDescription( TFileDescription & rDescription, const QU
                 splitPos = file.length();
         }
 
-        
+
         if( splitPos == -1 )
             splitPos = file.length();
 
@@ -246,14 +246,14 @@ int KRenameFile::dots() const
 
     dots += m_src.filename.count( '.' );
     dots += m_src.extension.count( '.' );
-    
+
     if( !m_src.extension.isEmpty() )
         ++dots;
 
     return dots;
 }
 
-const QUrl KRenameFile::srcUrl() const 
+const QUrl KRenameFile::srcUrl() const
 {
     if( m_overrideDir.isNull() )
         return m_src.url;
@@ -290,7 +290,7 @@ const KFileItem & KRenameFile::fileItem() const
     // Update extra as often as possible
     // As the address is changed through sorting and moving files
     // It is only valid if no moving of data has happened!
-    const_cast<KRenameFile*>(this)->m_fileItem.setExtraData( KRenameFile::EXTRA_DATA_KEY, 
+    const_cast<KRenameFile*>(this)->m_fileItem.setExtraData( KRenameFile::EXTRA_DATA_KEY,
                                                              const_cast<KRenameFile*>(this) );
     */
     return m_fileItem;

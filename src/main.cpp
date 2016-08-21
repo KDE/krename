@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
     aboutData.setLicense(KAboutLicense::GPL_V3);
     aboutData.setCopyrightStatement(i18n("(c) 2001-2012, Dominik Seichter\n"));
     aboutData.setHomepage("http://www.krename.net");
-    
+
 
     aboutData.addAuthor( i18n("Dominik Seichter"), i18n("developer and maintainer"), "domseichter@web.de",
                          "http://www.krename.net" );
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
                          i18n("Website, testing, very good ideas and keeping me coding!"),
                          "support@stonki.de", "http://www.stonki.de" );
 
-    aboutData.addCredit( i18n("Arpad Biro"), i18n("Helped to fix style guide issues and made improvements to user messages."), "biro.arpad@gmail.com" );    
+    aboutData.addCredit( i18n("Arpad Biro"), i18n("Helped to fix style guide issues and made improvements to user messages."), "biro.arpad@gmail.com" );
     aboutData.addCredit( i18n("Trevor Semeniuk"),  i18n("Thanks to him for creating RedHat 7.x packages and some other help."),
                          "semeniuk@ee.ualberta.ca", "http://www.semeniuk.net" );
     aboutData.addCredit( i18n("Groult Richard"),   i18n("Fixed a bug with startIndex and added the BatchRenamer class\n"
@@ -104,13 +104,13 @@ int main(int argc, char *argv[])
     aboutData.addCredit( i18n("UTUMI Hirosi"), i18n("Translated KRename to Japanese"), "utuhiro@mx12.freecom.ne.jp" );
     aboutData.addCredit( i18n("Nicolas Benoit"), i18n("Translated KRename into French"), "nbenoit@tuxfamily.org" );
     aboutData.addCredit( i18n("Krzysztof Pawlak"), i18n("Translated KRename into Polish"), "jmnemonic@gazeta.pl" );
-    aboutData.addCredit( i18n("Ilya Ivkov"), i18n("Translated KRename into Russian"), "ilya-ivkov@yandex.ru" );    
-    aboutData.addCredit( i18n("Asim Husanovic"), i18n("Translated KRename into Bosnian"), "asim.h@megatel.ba" );    
-    aboutData.addCredit( i18n("Michal Smoczyk"), i18n("Polish Translation"), "msmoczyk@wp.pl" );    
-    aboutData.addCredit( i18n("Pavel Fric"), i18n("Czech Translation"), "pavelfric@seznam.cz" );    
+    aboutData.addCredit( i18n("Ilya Ivkov"), i18n("Translated KRename into Russian"), "ilya-ivkov@yandex.ru" );
+    aboutData.addCredit( i18n("Asim Husanovic"), i18n("Translated KRename into Bosnian"), "asim.h@megatel.ba" );
+    aboutData.addCredit( i18n("Michal Smoczyk"), i18n("Polish Translation"), "msmoczyk@wp.pl" );
+    aboutData.addCredit( i18n("Pavel Fric"), i18n("Czech Translation"), "pavelfric@seznam.cz" );
     aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"),
                             i18nc("EMAIL OF TRANSLATORS", "Your emails"));
- 
+
 
     KAboutData::setApplicationData(aboutData);
 

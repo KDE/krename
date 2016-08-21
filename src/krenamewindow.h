@@ -50,7 +50,7 @@ namespace Ui {
 
 /** KRenameWindow is the main window of KRename.
  *
- *  According to the window mode setting, a row of buttons 
+ *  According to the window mode setting, a row of buttons
  *  is displayed at the bottom of the window.
  */
 class KRenameWindow : public KMainWindow {
@@ -112,15 +112,15 @@ class KRenameWindow : public KMainWindow {
      */
     void setExtensionTemplate( const QString & templ, bool insert = false );
 
-    /** Change the renmae mode 
+    /** Change the renmae mode
      *
      *  @param mode the renaming mode to use
      */
     void setRenameMode( ERenameMode mode );
 
     /** Set the destination url
-     * 
-     * @param url destination url for eRenameMode_Copy, 
+     *
+     * @param url destination url for eRenameMode_Copy,
      * eRenameMode_Move and eRenameMode_Link
      */
     void setDestinationUrl( const QUrl &url );
@@ -141,7 +141,7 @@ class KRenameWindow : public KMainWindow {
      */
     void setPreviewModel( KRenamePreviewModel* model );
 
-    /** 
+    /**
      * @returns the destinationUrl selected by the user
      */
     const QUrl destinationUrl() const;
@@ -158,7 +158,7 @@ class KRenameWindow : public KMainWindow {
      */
     QList<int> selectedFileItemsPreview() const;
 
-    /** 
+    /**
      * \returns if file preview is enabled in the file tab
      */
     bool isPreviewEnabled() const;
@@ -168,7 +168,7 @@ class KRenameWindow : public KMainWindow {
      */
     void setPreviewEnabled( bool bPreview );
 
-    /** 
+    /**
      * \returns if name display is enabled in the file tab
      */
     bool isPreviewNamesEnabled() const;
@@ -193,7 +193,7 @@ class KRenameWindow : public KMainWindow {
      */
     int sortMode() const;
 
-    /** 
+    /**
      * \param sortMode sets the current sort mode in the file tab
      * \param customToken custom sort token if sortMode == eSortMode_Token
      * \param customSortMode custom sort mode if sortMode == eSortMode_Token
@@ -214,7 +214,7 @@ class KRenameWindow : public KMainWindow {
      * Shows the filename tab
      * This might be useful, if the user
      * passed filenames via the commandline
-     * and wants to immediately work with the 
+     * and wants to immediately work with the
      * filename template.
      */
     void showFilenameTab();
@@ -225,10 +225,10 @@ class KRenameWindow : public KMainWindow {
     void slotEnableControls();
 
  signals:
-    /** Called when the krenamewindow 
+    /** Called when the krenamewindow
      *  needs an update of the file cound
      *
-     *  \see setCount 
+     *  \see setCount
      */
     void updateCount();
 
@@ -238,7 +238,7 @@ class KRenameWindow : public KMainWindow {
      */
     void renameModeChanged( ERenameMode mode );
 
-    /** Called whenever the user changes the option 
+    /** Called whenever the user changes the option
      *  if existing files maybe overwritten
      *
      *  @param bool overwrite if true existing files maybe overwritten during renaming
@@ -272,7 +272,7 @@ class KRenameWindow : public KMainWindow {
 
     /** Called whenever the user changes the file preview state
      *
-     *  @param enable if true display previews 
+     *  @param enable if true display previews
      *  @param filenames if true display filenames next to preview (if enable is false
      *                   this parameter has to be ignored.
      */
@@ -326,12 +326,12 @@ class KRenameWindow : public KMainWindow {
     void slotFinish();
 
     /** Changes the current page to the page with the given index
-     * 
+     *
      *  @param index the index of the page to show
      */
     void showPage( int index );
 
-    /** Called when one of the checkboxes for 
+    /** Called when one of the checkboxes for
      *  rename, copy, more or link was clicked
      *  to change the rename mode.
      */
@@ -384,7 +384,7 @@ class KRenameWindow : public KMainWindow {
      */
     void slotSortChanged( int index );
 
-    /** Called whenever the possible maximum value of 
+    /** Called whenever the possible maximum value of
      *  dots in a filename has changed.
      *
      *  @param dots the maximum number of dots in a filename

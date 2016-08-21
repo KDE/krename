@@ -30,8 +30,8 @@ class InsertPartFilenameDlg : public QDialog {
  public:
     explicit InsertPartFilenameDlg( const QString & filename, QWidget* parent = NULL );
 
-    /** 
-     * \returns the command to insert a substring of the original 
+    /**
+     * \returns the command to insert a substring of the original
      *          filename into the new filename
      */
     inline const QString & command() const;
@@ -39,7 +39,7 @@ class InsertPartFilenameDlg : public QDialog {
  private slots:
     void slotSelectionChanged();
     void slotUpdateKRenameCommand();
-       
+
  private:
     Ui::PartFilenameWidget m_widget;
     QDialogButtonBox*      m_buttons;

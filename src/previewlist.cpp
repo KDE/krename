@@ -49,7 +49,7 @@ void PreviewList::contextMenuEvent( QContextMenuEvent* e )
     if( m_model && m_model->rowCount() && currentIndex().isValid() )
     {
         const KRenameFile& file  = m_model->file( this->currentIndex().row() );
-        
+
         m_menu->setTitle( file.srcUrl().toDisplayString(QUrl::PreferLocalFile) );
         m_menu->popup( e->globalPos() );
     }

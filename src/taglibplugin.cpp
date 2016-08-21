@@ -81,7 +81,7 @@ QString TagLibPlugin::processFile( BatchRenamer* b, int index, const QString & f
     } else if( token == "tagtrack" ) {
         unsigned int track = g.tag()->track();
         return QString::number( track );
-    } 
- 
+    }
+
     return TStringToQString( result );
 }

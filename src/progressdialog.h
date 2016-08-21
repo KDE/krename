@@ -46,17 +46,17 @@ class ProgressDialog : public QDialog {
      *  @param t the number of steps
      */
     inline void setProgressTotalSteps( int t );
-    
+
     /** Set the current progress
      *
-     *  @param p current progress (must be smaller 
+     *  @param p current progress (must be smaller
      *           than the total number of steps and bigger than 0)
      *
      *  \see setProgressTotalSteps
      */
     inline void setProgress( int p );
 
-    /** 
+    /**
      * @returns true if the user has cancelled the operation (otherwise false)
      */
     inline bool wasCancelled() const;
@@ -100,7 +100,7 @@ class ProgressDialog : public QDialog {
      *  @param errros the number of errors that have occurred. If errors have occurred the user
      *                has the extra possibility to only rename files with errors again
      */
-    void renamingDone( bool enableMore, bool enableUndo, BatchRenamer* renamer, int errors ); 
+    void renamingDone( bool enableMore, bool enableUndo, BatchRenamer* renamer, int errors );
 
  private slots:
      /** Called when the user cancels the operation
@@ -168,7 +168,7 @@ void ProgressDialog::setProgress( int p )
 }
 
 bool ProgressDialog::wasCancelled() const
-{ 
+{
     return m_canceled;
 }
 

@@ -307,7 +307,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
 
     // Add exif taks
     token = exifTags;
-    while( *token ) 
+    while( *token )
     {
         ExifKey key( *token );
         QString help;
@@ -315,7 +315,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
             help = QString::fromUtf8(key.tagLabel().c_str());
         } catch( std::exception e ) {
             help = "";
-            // exiv2 throws sometimes exceptions 
+            // exiv2 throws sometimes exceptions
             // because it tries to create std::string from NULL pointers
         }
 
@@ -329,7 +329,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
 
     // Add exif taks
     token = xmpTags;
-    while( *token ) 
+    while( *token )
     {
         XmpKey key( *token );
         QString help;
@@ -337,10 +337,10 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
             help = QString::fromUtf8(key.tagLabel().c_str());
         } catch( std::exception e ) {
             help = "";
-            // exiv2 throws sometimes exceptions 
+            // exiv2 throws sometimes exceptions
             // because it tries to create std::string from NULL pointers
         }
-        
+
         QString cur( *token );
         this->addSupportedToken( prefix + cur );
         m_help.append( QString("[") + prefix + cur + QString("]") + TokenHelpDialog::getTokenSeparator() + help );
@@ -351,7 +351,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
 
     // Add exif taks
     token = iptcTags;
-    while( *token ) 
+    while( *token )
     {
         IptcKey key( *token );
         QString help;
@@ -359,7 +359,7 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
             help = QString::fromUtf8(key.tagLabel().c_str());
         } catch( std::exception e ) {
             help = "";
-            // exiv2 throws sometimes exceptions 
+            // exiv2 throws sometimes exceptions
             // because it tries to create std::string from NULL pointers
         }
 
@@ -388,18 +388,18 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
     if( !this->supports( token ) )
         return QString("");
 
-    //const QByteArray asc = filename.toAscii(); 
+    //const QByteArray asc = filename.toAscii();
     // Use toUtf8 so that unicode filenames will work
-    const QByteArray asc = filename.toUtf8(); 
+    const QByteArray asc = filename.toUtf8();
     std::string strFilename(asc.constData(), asc.length());
 
-    try 
+    try
     {
         Image::AutoPtr image = Exiv2::ImageFactory::open( strFilename );
         if( image.get() != NULL && image->good() )
         {
             image->readMetadata();
-            
+
             if( token == "exifcomment" )
                 return QString::fromUtf8( image->comment().c_str() );
             /*
@@ -409,7 +409,7 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
               return QString::number( image->pixelHeight() );
             */
             if( token.startsWith(QLatin1String("exifexif.")))
-            {         
+            {
                 ExifKey key( m_mapRealKeys[token].toLatin1().data() );
                 ExifData::const_iterator it = image->exifData().findKey( key );
                 if( it != image->exifData().end() )
@@ -438,9 +438,9 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
                     return QString::fromUtf8( val.c_str() );
                 }
             }
-        } 
+        }
     }
-    catch( std::exception & err ) 
+    catch( std::exception & err )
     {
         return QString::fromUtf8( err.what() );
     }

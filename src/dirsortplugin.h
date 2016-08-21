@@ -28,13 +28,13 @@ class DirSortPlugin : public Plugin {
     explicit DirSortPlugin( PluginLoader* loader );
     ~DirSortPlugin();
 
-    /** 
+    /**
      * @returns a name of the plugin that can be displayed
      *          to the user. This name should be internationalized.
      */
     virtual const QString name() const;
 
-    /** 
+    /**
      * Determines the type of the plugin.
      * Different enum values may be or'ed together.
      *
@@ -54,11 +54,11 @@ class DirSortPlugin : public Plugin {
      *          disable this plugin.
      */
     virtual bool alwaysEnabled() const;
-    
+
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()
@@ -84,7 +84,7 @@ class DirSortPlugin : public Plugin {
      */
     virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
 
-    /** Get a list of all tokens supported by this plugin. 
+    /** Get a list of all tokens supported by this plugin.
      *
      *  If the token type != ePluginType_Token you have to return an empty list
      *
@@ -116,21 +116,21 @@ private:
      * \returns the URL of the new subdirectory.
      */
     QUrl createNewSubdirectory() const;
-    
+
 protected:
     int m_dirCounter;
     int m_fileCounter;
     int m_filesPerDir;
     int m_digits;
-    
+
     QUrl m_baseDirectory;
     QUrl m_currentDirectory;
-    
+
     Ui::DirSortPluginWidget* m_widget;
     QStringList m_emptyList;
-    
+
     bool m_valid;
-        
+
 };
 
 #endif // DIR_SORT_PLUGIN

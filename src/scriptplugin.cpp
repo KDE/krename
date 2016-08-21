@@ -54,7 +54,7 @@ enum EVarType {
 };
 
 ScriptPlugin::ScriptPlugin( PluginLoader* loader )
-    : QObject(), 
+    : QObject(),
       Plugin( loader ), m_parent( NULL )
 {
     m_name = i18n("JavaScript Plugin");
@@ -81,7 +81,7 @@ ScriptPlugin::~ScriptPlugin()
     delete m_interpreter;
 }
 
-QString ScriptPlugin::processFile( BatchRenamer* b, int index, 
+QString ScriptPlugin::processFile( BatchRenamer* b, int index,
 				   const QString & filenameOrToken, EPluginType )
 {
     QString token( filenameOrToken );
@@ -92,10 +92,10 @@ QString ScriptPlugin::processFile( BatchRenamer* b, int index,
     {
         script = token.section( ';', 1 ); // all sections from 1 to the last
         token  = token.section( ';', 0, 0 ).toLower();
-    } else 
+    } else
         token = token.toLower();
 
-    if( token == "js" ) 
+    if( token == "js" )
     {
 	// Setup interpreter
 	const KRenameFile & file = b->files()->at( index );
@@ -158,7 +158,7 @@ void ScriptPlugin::createUI( QWidget* parent ) const
 void ScriptPlugin::initKRenameVars( const KRenameFile & file, int index )
 {
     // KRename definitions
-    m_interpreter->globalObject().setProperty( m_interpreter->globalContext(), 
+    m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
 					       ScriptPlugin::s_pszVarNameIndex,
 					       index );
     m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
@@ -171,25 +171,25 @@ void ScriptPlugin::initKRenameVars( const KRenameFile & file, int index )
 					       ScriptPlugin::s_pszVarNameExtension,
 					       file.srcExtension() );
     m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
-					       ScriptPlugin::s_pszVarNameDirectory, 
+					       ScriptPlugin::s_pszVarNameDirectory,
 					       file.srcDirectory() );
 
 
     // User definitions, set them only on first file
-    if( index == 0 ) 
+    if( index == 0 )
     {
 	for( int i=0; i<m_widget->listVariables->topLevelItemCount(); i++ )
 	{
 	    // TODO, we have to know the type of the variable!
 	    QTreeWidgetItem* item = m_widget->listVariables->topLevelItem( i );
-	    if( item ) 
+	    if( item )
 	    {
 		EVarType eVarType = static_cast<EVarType>(item->data( 1, Qt::UserRole ).toInt());
 		const QString & name  = item->text( 0 );
 		const QString & value = item->text( 1 );
-		switch( eVarType ) 
+		switch( eVarType )
 		{
-		    default: 
+		    default:
 		    case eVarType_String:
 			m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
 								   name, value.toUtf8().data() );
@@ -197,14 +197,14 @@ void ScriptPlugin::initKRenameVars( const KRenameFile & file, int index )
 		    case eVarType_Int:
 			m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
 								   name, value.toInt() );
-			break;			
+			break;
 		    case eVarType_Double:
 			m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
 								   name, value.toDouble() );
 			break;
 		    case eVarType_Bool:
 			m_interpreter->globalObject().setProperty( m_interpreter->globalContext(),
-								   name, 
+								   name,
 								   (value.toLower() == "true" ? true : false ) );
 			break;
 
@@ -234,7 +234,7 @@ void ScriptPlugin::slotAdd()
     Ui::ScriptPluginDialog dlg;
 
     QStringList types;
-    
+
     types << i18n("String");
     types << i18n("Int");
     types << i18n("Double");
@@ -242,7 +242,7 @@ void ScriptPlugin::slotAdd()
 
     dlg.setupUi( dialog );
     dlg.comboType->addItems( types );
-    
+
     if( dialog->exec() == QDialog::Accepted )
     {
         QString name  = dlg.lineName->text();
@@ -250,7 +250,7 @@ void ScriptPlugin::slotAdd()
 
         // Build a Java script statement
         QString script = name + " = " + value + ";";
-	
+
         KJSInterpreter interpreter;
         KJSResult result = m_interpreter->evaluate( script, NULL );
         if( result.isException() )
@@ -275,7 +275,7 @@ void ScriptPlugin::slotAdd()
 void ScriptPlugin::slotRemove()
 {
     QTreeWidgetItem* item = m_widget->listVariables->currentItem();
-    if( item ) 
+    if( item )
     {
 	m_widget->listVariables->invisibleRootItem()->removeChild( item );
 	delete item;
@@ -284,9 +284,9 @@ void ScriptPlugin::slotRemove()
 
 void ScriptPlugin::slotLoad()
 {
-    if( !m_widget->textCode->toPlainText().isEmpty() && 
-	KMessageBox::questionYesNo( m_parent, 
-				    i18n("All currently entered definitions will be lost. Do you want to continue?") ) 
+    if( !m_widget->textCode->toPlainText().isEmpty() &&
+	KMessageBox::questionYesNo( m_parent,
+				    i18n("All currently entered definitions will be lost. Do you want to continue?") )
 	== KMessageBox::No )
     {
 	return;
@@ -359,27 +359,27 @@ void ScriptPlugin::slotTest()
 
 void ScriptPlugin::slotInsertIndex()
 {
-    this->insertVariable( ScriptPlugin::s_pszVarNameIndex ); 
+    this->insertVariable( ScriptPlugin::s_pszVarNameIndex );
 }
 
 void ScriptPlugin::slotInsertUrl()
 {
-    this->insertVariable( ScriptPlugin::s_pszVarNameUrl ); 
+    this->insertVariable( ScriptPlugin::s_pszVarNameUrl );
 }
 
 void ScriptPlugin::slotInsertFilename()
 {
-    this->insertVariable( ScriptPlugin::s_pszVarNameFilename ); 
+    this->insertVariable( ScriptPlugin::s_pszVarNameFilename );
 }
 
 void ScriptPlugin::slotInsertExtension()
 {
-    this->insertVariable( ScriptPlugin::s_pszVarNameExtension ); 
+    this->insertVariable( ScriptPlugin::s_pszVarNameExtension );
 }
 
 void ScriptPlugin::slotInsertDirectory()
 {
-    this->insertVariable( ScriptPlugin::s_pszVarNameDirectory ); 
+    this->insertVariable( ScriptPlugin::s_pszVarNameDirectory );
 }
 
 void ScriptPlugin::loadConfig( KConfigGroup & group )
@@ -401,7 +401,7 @@ void ScriptPlugin::loadConfig( KConfigGroup & group )
 	item->setText( 0, variableNames[i] );
 	item->setText( 1, variableValues[i] );
 	item->setData( 1, Qt::UserRole, variableTypes[i] );
-	
+
 	m_widget->listVariables->addTopLevelItem( item );
     }
 
@@ -413,11 +413,11 @@ void ScriptPlugin::saveConfig( KConfigGroup & group ) const
     QStringList  variableNames;
     QStringList  variableValues;
     QVariantList variableTypes;
-    
+
     for( int i=0; i<m_widget->listVariables->topLevelItemCount(); i++ )
     {
 	QTreeWidgetItem* item = m_widget->listVariables->topLevelItem( i );
-	if( item ) 
+	if( item )
 	{
 	    variableNames  << item->text( 0 );
 	    variableValues << item->text( 1 );

@@ -62,7 +62,7 @@ class KRenameTest : public QWidget {
      *  \param dot the dot to use as splitter
      *  \param isDir test a file or a directory
      */
-    bool testKRenameFileInternal( const QUrl &url, const QString & directory, 
+    bool testKRenameFileInternal( const QUrl &url, const QString & directory,
                                   const QString & filename, const QString & extension,
                                   ESplitMode eSplitMode, int dot, bool isDir );
 
@@ -72,7 +72,7 @@ class KRenameTest : public QWidget {
     void testBatchRenamer();
     bool tokenTest( const char* token, const QString & filename, const QString & expected) ;
     bool numberingTest( int length, int start, int step, QList<int> skip, int num = 100 );
-    bool replaceTest( const QString & token, const QString & filename, const QString & expected, 
+    bool replaceTest( const QString & token, const QString & filename, const QString & expected,
                       const QString & replace, const QString & with, bool regExp );
 
 
@@ -94,7 +94,7 @@ class KRenameTest : public QWidget {
      * @param a list of expected paths
      * @param a token to use
      */
-    bool testMultipleFiles( KRenameFile::List & files, const QStringList & expected, 
+    bool testMultipleFiles( KRenameFile::List & files, const QStringList & expected,
                             const QStringList & exptectedPaths, const QString & token );
 
  private:
@@ -106,7 +106,7 @@ class KRenameTest : public QWidget {
     int        m_success;    ///< counter of successful tests
     int        m_failed;     ///< counter of failed tests
 
-    static const int BUFFER_LENGTH = 512; 
+    static const int BUFFER_LENGTH = 512;
     char       m_buffer[BUFFER_LENGTH]; ///< buffer in which messages are constructed
 };
 

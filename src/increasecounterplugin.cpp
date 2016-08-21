@@ -68,7 +68,7 @@ QString IncreaseCounterPlugin::processFile( BatchRenamer*, int, const QString & 
 void IncreaseCounterPlugin::createUI( QWidget* parent ) const
 {
     m_widget->setupUi( parent );
-    
+
     connect( m_widget->spinOffset, SIGNAL(valueChanged(int)), SLOT(slotOffsetChanged(int)) );
 }
 

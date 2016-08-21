@@ -24,7 +24,7 @@
 #include <QLineEdit>
 
 
-#define EXT_HISTORY_COMBO_MAX_COUNT 10 
+#define EXT_HISTORY_COMBO_MAX_COUNT 10
 #define EXT_HISTORY_COMBO_TIMER_DELAY 500
 
 ExtHistoryCombo::ExtHistoryCombo( QWidget* parent )
@@ -54,8 +54,8 @@ void ExtHistoryCombo::loadConfig()
 
     KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup groupGui = config->group( QString("ExtHistoryCombo") + this->objectName() );
-    
-    
+
+
     completion = groupGui.readEntry("CompletionList", QStringList());
     history = groupGui.readEntry("HistoryList", QStringList());
 
@@ -64,13 +64,13 @@ void ExtHistoryCombo::loadConfig()
     this->lineEdit()->setText(currentText); // Preserve current text
 }
 
-void ExtHistoryCombo::saveConfig() 
+void ExtHistoryCombo::saveConfig()
 {
     addToHistory( currentText() );
 
     KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup groupGui = config->group( QString("ExtHistoryCombo") + this->objectName() );
-    
+
     groupGui.writeEntry("CompletionList", this->completionObject()->items());
     groupGui.writeEntry("HistoryList", this->historyItems());
 

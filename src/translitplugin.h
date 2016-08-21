@@ -25,10 +25,10 @@
 class TranslitPlugin : public FilePlugin {
  public:
     explicit TranslitPlugin( PluginLoader* loader );
-    
+
     ~TranslitPlugin();
 
-    /** 
+    /**
      * @returns the type of the plugin.
      */
     inline virtual int type() const;
@@ -36,7 +36,7 @@ class TranslitPlugin : public FilePlugin {
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()
@@ -78,7 +78,7 @@ class TranslitPlugin : public FilePlugin {
     //virtual void createUI( QWidget* parent ) const;
 
  private:
-    /** Transliterate a string and return the 
+    /** Transliterate a string and return the
      *  transliterated version.
      *
      *  @param unicoded the string which is to be transliterated

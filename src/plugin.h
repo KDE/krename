@@ -30,7 +30,7 @@ class KConfigGroup;
 class PluginLoader;
 
 /** An enum to determine the correct plugin type.
- * 
+ *
  *  A plugin may be of different types at a time.
  */
 enum EPluginType {
@@ -47,8 +47,8 @@ class Plugin {
     explicit Plugin( PluginLoader* loader );
     virtual ~Plugin();
 
-    /** 
-     * Creates a help entry for the QStringList returned by help, 
+    /**
+     * Creates a help entry for the QStringList returned by help,
      * adds correct separator and brackets where necessary.
      *
      * \param token the token ([ brackets ] will be added to surround it)
@@ -58,13 +58,13 @@ class Plugin {
      */
     static QString createHelpEntry( const QString & token, const QString & help );
 
-    /** 
+    /**
      * @returns a name of the plugin that can be displayed
      *          to the user. This name should be internationalized.
      */
     virtual const QString name() const = 0;
 
-    /** 
+    /**
      * Determines the type of the plugin.
      * Different enum values may be or'ed together.
      *
@@ -86,7 +86,7 @@ class Plugin {
      */
     inline void setEnabled( bool b );
 
-    /** 
+    /**
      * @returns true if this plugin is enabled.
      * Only use it if it is enabled.
      */
@@ -99,11 +99,11 @@ class Plugin {
      *          disable this plugin.
      */
     virtual bool alwaysEnabled() const = 0;
-    
+
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()
@@ -129,7 +129,7 @@ class Plugin {
      */
     virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType ) = 0;
 
-    /** Get a list of all tokens supported by this plugin. 
+    /** Get a list of all tokens supported by this plugin.
      *
      *  If the token type != ePluginType_Token you have to return an empty list
      *
@@ -175,12 +175,12 @@ class Plugin {
         virtual void fillStructure() { }
         virtual QString processFile( BatchRenamer* b, int i, QString token, int mode ) = 0;
         virtual void finished() { }
-        
+
         virtual void addHelp( HelpDialogData* data );
         virtual void removeHelp(  HelpDialogData* data );
 
         virtual void clearCache();
-        
+
         virtual const QPixmap getIcon() const;
         virtual const QStringList getKeys() const;
     */

@@ -35,13 +35,13 @@ class IncreaseCounterPlugin : public QObject, public Plugin {
     explicit IncreaseCounterPlugin( PluginLoader* loader );
     virtual ~IncreaseCounterPlugin();
 
-    /** 
+    /**
      * @returns a name of the plugin that can be displayed
      *          to the user. This name should be internationalized.
      */
     virtual const QString name() const;
 
-    /** 
+    /**
      * Determines the type of the plugin.
      * Different enum values may be or'ed together.
      *
@@ -61,11 +61,11 @@ class IncreaseCounterPlugin : public QObject, public Plugin {
      *          disable this plugin.
      */
     inline virtual bool alwaysEnabled() const;
-    
+
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()
@@ -91,7 +91,7 @@ class IncreaseCounterPlugin : public QObject, public Plugin {
      */
     virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
 
-    /** Get a list of all tokens supported by this plugin. 
+    /** Get a list of all tokens supported by this plugin.
      *
      *  If the token type != ePluginType_Token you have to return an empty list
      *
@@ -125,7 +125,7 @@ class IncreaseCounterPlugin : public QObject, public Plugin {
 
  private:
     Ui::IncreaseCounterPluginWidget* m_widget;
-    
+
     int m_offset;         ///< Increase counter by this offset
 
     QStringList m_tmp;    ///< Dummy empty list so that we can return a reference for supported tokens and help

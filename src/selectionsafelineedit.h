@@ -39,7 +39,7 @@ public:
 protected:
     void focusOutEvent( QFocusEvent *  )
     {
-        // ignore 
+        // ignore
     }
 
 };

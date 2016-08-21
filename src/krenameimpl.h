@@ -38,7 +38,7 @@ class QCommandLineParser;
 class KRenameImpl : public QObject {
     Q_OBJECT
 
- public: 
+ public:
     ~KRenameImpl();
 
     static QWidget* launch( const QRect & rect, const KRenameFile::List & list, QCommandLineParser *commandLine = 0 );
@@ -55,10 +55,10 @@ class KRenameImpl : public QObject {
      */
     void setupSlots();
 
-    /** Adds a single url to the list of files which will 
+    /** Adds a single url to the list of files which will
      *  be renamed.
      *
-     *  If you have a QList<QUrl> use addFilesOrDirs which is 
+     *  If you have a QList<QUrl> use addFilesOrDirs which is
      *  faster.
      *
      *  \param url must be an existing file or directory.
@@ -67,7 +67,7 @@ class KRenameImpl : public QObject {
      */
     void addFileOrDir( const QUrl &url );
 
-    /** Adds a list of urls to the list of files which will 
+    /** Adds a list of urls to the list of files which will
      *  be renamed.
      *
      *  Adding a whole list is much faster than adding single
@@ -82,8 +82,8 @@ class KRenameImpl : public QObject {
      *
      *  \see addFileOrDir
      */
-    void addFilesOrDirs( const QList<QUrl> & list, const QString & filter = "*", 
-                         bool recursively = false, bool dirsWithFiles = false, 
+    void addFilesOrDirs( const QList<QUrl> & list, const QString & filter = "*",
+                         bool recursively = false, bool dirsWithFiles = false,
                          bool dirsOnly = false, bool hidden = false );
 
     /** Parses commandline options
@@ -119,7 +119,7 @@ class KRenameImpl : public QObject {
      */
     void slotRemoveAllFiles();
 
-    /** Updates the count of files 
+    /** Updates the count of files
      *  in the file list of KRename
      */
     void slotUpdateCount();
@@ -134,7 +134,7 @@ class KRenameImpl : public QObject {
     void slotAdvancedNumberingDlg();
 
     /** This slots shows a dialog which allows the user
-     *  to confortably insert a part of an oldfilename into the 
+     *  to confortably insert a part of an oldfilename into the
      *  new filename (part is to be understood as "substring")
      */
     void slotInsertPartFilenameDlg();
@@ -172,7 +172,7 @@ class KRenameImpl : public QObject {
     KRenameWindow*        m_window;
     KRenameModel*         m_model;
     KRenamePreviewModel*  m_previewModel;
-    
+
     KRenameFile::List     m_vector;
 
     BatchRenamer          m_renamer;
@@ -185,7 +185,7 @@ class KRenameImpl : public QObject {
     int                   m_runningThreadedListersCount; ///< Count of running threaded listers
 };
 
-#if 0 
+#if 0
 // Own includes
 /*
 #include "batchrenamer.h"
@@ -228,17 +228,17 @@ QPushButton* createButton( KGuiItem item, QWidget* parent );
 
 class KRenameImpl : public QObject, public KRenameDCOP {
     Q_OBJECT
-    
+
     friend class ProfileManager;
     friend class ProfileDlg;
     friend class tabs;
 
-    public: 
+    public:
         KRenameImpl( QWidget* p, KMenuBar* m, QPushButton* finish );
         ~KRenameImpl();
 
         void setWizardMode( bool mode );
-        
+
         /*
          * public because both get called from KRenameImpl::launch()
          */
@@ -254,20 +254,20 @@ class KRenameImpl : public QObject, public KRenameDCOP {
         void addFileOrDir( const QString & name );
         const QString fileNameTemplate() const;
         inline int counterStart() const;
-  
+
         void setExtensionTemplate( const QString & t );
         const QString extensionTemplate() const;
 
         void setUseExtension( bool b );
         bool useExtension() const;
-        
+
         QStringList tokens() const;
 
         QString parseString( const QString & token, const QString & string );
         void addDir( const QString & name, const QString & filter, bool recursive, bool hidden, bool dirnames );
 
         const QString title( int index ) const;
-        
+
         /** @returns true if the user has specified a profile on the commandline
          *           other wise false is returned
          */
@@ -276,7 +276,7 @@ class KRenameImpl : public QObject, public KRenameDCOP {
     public slots:
         void setFileNameTemplate( const QString & t );
         void setCounterStart( int index );
-                
+
     signals:
         void pageDone( QWidget* page, const QString & title );
         void showPage( int page );
@@ -329,12 +329,12 @@ class KRenameImpl : public QObject, public KRenameDCOP {
         /** Change the GUI mode according to the current setting of m_wizard
           */
         void changeGUIMode();
-        
+
         /** Returns COPY if optionCopy is checked, RENAME if optionRename is checked
           * ...
           */
         int currentRenameMode();
-        
+
         void loadConfig();
         void fillStructures( BatchRenamer* b, bool preview );
         bool setupBatchRenamer( BatchRenamer* b, bool preview );
@@ -356,19 +356,19 @@ class KRenameImpl : public QObject, public KRenameDCOP {
         void refreshColumnMode();
         void parseWizardMode();
         void getHelpDialogString( QLineEdit* edit );
-        
+
     protected:
         QWidget* parent;
         KMenuBar* menuBar;
         KPopupMenu* mnuSort;
         KAction* loadPlugins;
-        
+
         QPushButton* finishButton;
 
         PluginLoader* plugin;
 
         QWidgetStack* fileTab;
-        
+
         QWidget* page_1;
         QWidget* page_2;
         KJanusWidget* page_3;
@@ -398,13 +398,13 @@ class KRenameImpl : public QObject, public KRenameDCOP {
         QPushButton* buttonMove;
         QPushButton* buttonCoord;
         QPushButton* buttonNumber;
-        
+
         QPushButton* buttonEasy1;
         QPushButton* buttonEasy2;
         QPushButton* buttonEasy3;
         QPushButton* buttonEasy4;
         KComboBox* comboSort;
-        
+
         QLabel* description;
         QLabel* description2;
         QLabel* description3;
@@ -452,20 +452,20 @@ class KRenameImpl : public QObject, public KRenameDCOP {
         // ==========
         // Easy mode:
         // ==========
-        
+
         KComboBox* comboKRenamePrefix;
         KComboBox* comboKRenameSuffix;
         KComboBox* comboKRenameFilename;
         KComboBox* comboKRenameExtension;
-        
+
         KMyHistoryCombo* comboPrefix;
-        KMyHistoryCombo* comboSuffix;        
+        KMyHistoryCombo* comboSuffix;
         KMyHistoryCombo* comboCustom;
         KMyHistoryCombo* comboCustomExtension;
-        
+
         KIntNumInput* spinStart;
-        KIntNumInput* spinNull;        
-        
+        KIntNumInput* spinNull;
+
         // ===========
         // Layout:
         // ===========

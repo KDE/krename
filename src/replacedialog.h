@@ -37,11 +37,11 @@ class ReplaceDialog : public QDialog {
      QList<TReplaceItem> replaceList() const;
 
  private slots:
-     
+
      void slotAdd();
      void slotEdit();
      void slotRemove();
-     
+
      void slotSaveList();
      void slotLoadList();
 

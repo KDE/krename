@@ -32,13 +32,13 @@ class FilePlugin : public Plugin {
 
     virtual ~FilePlugin();
 
-    /** 
+    /**
      * @returns a name of the plugin that can be displayed
      *          to the user. This name should be internationalized.
      */
     inline virtual const QString name() const;
 
-    /** 
+    /**
      * @returns the type of the plugin.
      */
     inline virtual int type() const;
@@ -59,7 +59,7 @@ class FilePlugin : public Plugin {
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()
@@ -85,7 +85,7 @@ class FilePlugin : public Plugin {
      */
     virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType ) = 0;
 
-    /** Get a list of all tokens supported by this plugin. 
+    /** Get a list of all tokens supported by this plugin.
      *
      *  If the token type != ePluginType_Token you have to return an empty list
      *
@@ -113,7 +113,7 @@ class FilePlugin : public Plugin {
  protected:
     FilePlugin( PluginLoader* loader );
 
-    /** 
+    /**
      *  Checks if a token is supported by this plugin.
      *
      *  @param token a token
@@ -122,7 +122,7 @@ class FilePlugin : public Plugin {
      *  @see addSupportedToken
      */
     bool supports( const QString & token );
-    
+
     /**
      *  Adds a token to the list of supported tokens
      *
@@ -130,10 +130,10 @@ class FilePlugin : public Plugin {
      *
      *  @see supports
      */
-    inline void addSupportedToken( const QString & token ) { 
-	m_keys.append( token ); 
+    inline void addSupportedToken( const QString & token ) {
+	m_keys.append( token );
     }
- 
+
  protected:
 
     QString m_name;
@@ -160,14 +160,14 @@ inline int FilePlugin::type() const
     return ePluginType_Token;
 }
 
-inline const QStringList & FilePlugin::supportedTokens() const 
-{ 
-    return m_keys; 
+inline const QStringList & FilePlugin::supportedTokens() const
+{
+    return m_keys;
 }
 
-inline const QStringList & FilePlugin::help() const 
-{ 
-    return m_keys; 
+inline const QStringList & FilePlugin::help() const
+{
+    return m_keys;
 }
 
 #endif // FILE_PLUGIN_H

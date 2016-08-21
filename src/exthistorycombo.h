@@ -38,7 +38,7 @@ class ExtHistoryCombo : public KHistoryComboBox {
     explicit ExtHistoryCombo( QWidget* parent );
 
     /// Fix compilation, designer needs this method
-    inline void insertItems( int, QStringList & list ) { KHistoryComboBox::insertItems( list ); } 
+    inline void insertItems( int, QStringList & list ) { KHistoryComboBox::insertItems( list ); }
 
     void loadConfig();
     void saveConfig();
@@ -57,7 +57,7 @@ class ExtHistoryCombo : public KHistoryComboBox {
  private:
     QTimer m_timer;
 
-}; 
+};
 
 #endif /* EXT_HISTORY_COMBO_H */
 

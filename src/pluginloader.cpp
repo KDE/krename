@@ -51,7 +51,7 @@ PluginLoader* PluginLoader::s_instance = NULL;
 
 PluginLoader* PluginLoader::Instance()
 {
-    if( !s_instance ) 
+    if( !s_instance )
         s_instance = new PluginLoader();
 
     return s_instance;
@@ -74,7 +74,7 @@ Plugin* PluginLoader::findPlugin( const QString & token )
 
     // first search in the cache
     Plugin* p = m_tokenCache[lower];
-    if( p ) 
+    if( p )
         return p;
 
 
@@ -106,7 +106,7 @@ Plugin* PluginLoader::findPluginByName( const QString & name )
 
     while( it != m_plugins.end() )
     {
-        if( (*it)->name() == name ) 
+        if( (*it)->name() == name )
             return *it;
 
         ++it;
@@ -165,9 +165,9 @@ void PluginLoader::load()
     QList<Plugin*>::iterator it = m_plugins.begin();
     while( it != m_plugins.end() )
     {
-        if( ((*it)->type() & ePluginType_Token) ) 
+        if( ((*it)->type() & ePluginType_Token) )
         {
-            const QStringList & tokens = (*it)->supportedTokens(); 
+            const QStringList & tokens = (*it)->supportedTokens();
             QStringList::const_iterator itList = tokens.begin();
             while( itList != tokens.end() )
             {
@@ -197,13 +197,13 @@ void PluginLoader::sendUpdatePreview()
     while( it != m_observers.end() )
     {
 	(*it)->slotUpdatePreview();
-	
+
 	++it;
     }
 }
 
 
-void PluginLoader::loadConfig( KConfigGroup & group ) 
+void PluginLoader::loadConfig( KConfigGroup & group )
 {
     QList<Plugin*>::const_iterator it = m_plugins.begin();
     while( it != m_plugins.end() )
@@ -214,7 +214,7 @@ void PluginLoader::loadConfig( KConfigGroup & group )
 
 }
 
-void PluginLoader::saveConfig( KConfigGroup & group ) 
+void PluginLoader::saveConfig( KConfigGroup & group )
 {
     QList<Plugin*>::const_iterator it = m_plugins.begin();
     while( it != m_plugins.end() )

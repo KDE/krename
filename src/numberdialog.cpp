@@ -44,7 +44,7 @@ NumberDialog::NumberDialog( int start, int step, bool reset, QList<int> skip, QW
     m_widget.listSkip->setSortingEnabled( true ); // TODO: sort numeric
 
     QList<int>::ConstIterator it = skip.begin();
-    while( it != skip.end() ) 
+    while( it != skip.end() )
     {
         m_widget.listSkip->addItem( QString::number( *it ) );
         ++it;
@@ -55,11 +55,11 @@ QList<int> NumberDialog::skipNumbers() const
 {
     QList<int> list;
 
-    for( int i = 0; i < m_widget.listSkip->count(); i++ ) 
+    for( int i = 0; i < m_widget.listSkip->count(); i++ )
     {
         QListWidgetItem* item = m_widget.listSkip->item( i );
         list.append( item->data( Qt::DisplayRole ).toInt() );
-        
+
     }
     return list;
 }
@@ -67,7 +67,7 @@ QList<int> NumberDialog::skipNumbers() const
 void NumberDialog::slotEnableControls()
 {
     QList<QListWidgetItem*> selected = m_widget.listSkip->selectedItems();
-    m_widget.buttonRemove->setEnabled( selected.size() ); 
+    m_widget.buttonRemove->setEnabled( selected.size() );
 }
 
 void NumberDialog::slotAddNumber()

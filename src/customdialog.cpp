@@ -54,7 +54,7 @@ CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
     }
 
     QString krenameFilename = file.dstFilename();
-    if( !file.dstExtension().isEmpty() ) 
+    if( !file.dstExtension().isEmpty() )
     {
         krenameFilename += ".";
         krenameFilename += file.dstExtension();
@@ -62,7 +62,7 @@ CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
 
     if( !file.manualChanges().isNull() )
     {
-        switch( file.manualChangeMode() ) 
+        switch( file.manualChangeMode() )
         {
             case eManualChangeMode_Custom:
                 krenameFilename = file.manualChanges();

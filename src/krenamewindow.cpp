@@ -61,8 +61,8 @@ static const KRenameWindow::TGuiMode tAdvancedMode = {
 };
 
 KRenameWindow::KRenameWindow( QWidget* parent )
-    : KMainWindow( parent ), 
-      m_curPage( 0 ), m_guiMode( NULL ), 
+    : KMainWindow( parent ),
+      m_curPage( 0 ), m_guiMode( NULL ),
       m_fileCount( 0 )
 {
     QWidget*     center = new QWidget();
@@ -72,7 +72,7 @@ KRenameWindow::KRenameWindow( QWidget* parent )
     m_tabBar  = new QTabBar( center );
     m_stack   = new QStackedWidget( center );
     m_buttons = new QDialogButtonBox( center );
-    
+
     layout->addWidget( m_tabBar );
     layout->addWidget( m_stack );
     layout->addWidget( new KSeparator( Qt::Horizontal, center ) );
@@ -128,7 +128,7 @@ KRenameWindow::KRenameWindow( QWidget* parent )
     connect( m_buttonClose, SIGNAL(clicked(bool)), SLOT(close()));
     connect( m_buttons, SIGNAL(accepted()), SLOT(slotFinish()));
 
-    
+
     this->setAutoSaveSettings( "KRenameWindowSettings", true );
 
     // Show the first page in any mode
@@ -139,7 +139,7 @@ KRenameWindow::~KRenameWindow()
 {
 }
 
-void KRenameWindow::loadConfig() 
+void KRenameWindow::loadConfig()
 {
     // ExtHistoryCombo needs an object name
     m_pageFilename->filenameTemplate->setObjectName("FILENAME_TEMPLATE");
@@ -169,7 +169,7 @@ void KRenameWindow::loadConfig()
 	    this->setPreviewColumnWidth( 1, width );
 }
 
-void KRenameWindow::saveConfig() 
+void KRenameWindow::saveConfig()
 {
     m_pageFilename->filenameTemplate->saveConfig();
     m_pageFilename->extensionTemplate->saveConfig();
@@ -216,7 +216,7 @@ void KRenameWindow::setupPlugins()
     m_pluginsHash.reserve( list.count() );
 
     m_pagePlugins->searchPlugins->searchLine()->setTreeWidget( m_pagePlugins->listPlugins );
-    
+
     while( it != list.end() )
     {
         // create plugin gui
@@ -263,10 +263,10 @@ void KRenameWindow::setupIcons()
     QPixmap helpIcon = KIconLoader::global()->loadIcon( "help-hint", KIconLoader::NoGroup, KIconLoader::SizeSmall );
     QPixmap findIcon = KIconLoader::global()->loadIcon( "edit-find", KIconLoader::NoGroup, KIconLoader::SizeSmall );
 
-    m_pageFilename->buttonHelp1->setIcon( helpIcon ); 
-    m_pageFilename->buttonHelp2->setIcon( helpIcon ); 
-    m_pageFilename->buttonHelp3->setIcon( helpIcon ); 
-    m_pageFilename->buttonHelp4->setIcon( helpIcon ); 
+    m_pageFilename->buttonHelp1->setIcon( helpIcon );
+    m_pageFilename->buttonHelp2->setIcon( helpIcon );
+    m_pageFilename->buttonHelp3->setIcon( helpIcon );
+    m_pageFilename->buttonHelp4->setIcon( helpIcon );
     m_pageFilename->buttonFunctions->setIcon( helpIcon );
 
     m_pageFilename->buttonFind->setIcon( findIcon );
@@ -274,7 +274,7 @@ void KRenameWindow::setupIcons()
 
     m_pageFilename->buttonUp->setIcon( upIcon );
     m_pageFilename->buttonDown->setIcon( downIcon );
-    
+
 }
 
 void KRenameWindow::setupSlots()
@@ -344,18 +344,18 @@ void KRenameWindow::showPage( int index )
     {
         m_curPage = index;
         m_stack->setCurrentIndex( m_guiMode->mapIndex[index] );
-        
+
         slotEnableControls();
     }
 }
 
 void KRenameWindow::slotEnableControls()
 {
-    // TODO: 
+    // TODO:
     // Disable all extension widgets
     // if splitMode is NOEXTENSION
 
-    if( m_buttonFinish ) 
+    if( m_buttonFinish )
     {
         bool enable = (m_curPage == m_guiMode->numPages - 1)
             && m_fileCount > 0;
@@ -366,7 +366,7 @@ void KRenameWindow::slotEnableControls()
     m_pageFiles->buttonRemove->setEnabled( m_fileCount );
     m_pageFiles->buttonRemoveAll->setEnabled( m_fileCount );
     m_pageFiles->checkName->setEnabled( m_pageFiles->checkPreview->isChecked() );
-   
+
     m_pageFiles->buttonUp->setEnabled( m_fileCount );
     m_pageFiles->buttonDown->setEnabled( m_fileCount );
 
@@ -378,14 +378,14 @@ void KRenameWindow::slotEnableControls()
     m_pageFilename->buttonInsert->setEnabled( m_fileCount != 0 );
 
     m_pageFilename->buttonFindSimple->setEnabled( m_fileCount != 0 );
-    m_pageFilename->buttonHelp3->setEnabled( m_pageFilename->comboFilenameSimple->currentIndex() == 
+    m_pageFilename->buttonHelp3->setEnabled( m_pageFilename->comboFilenameSimple->currentIndex() ==
                                              m_pageFilename->comboFilenameSimple->count() - 1 );
-    m_pageFilename->comboFilenameCustom->setEnabled( m_pageFilename->comboFilenameSimple->currentIndex() == 
+    m_pageFilename->comboFilenameCustom->setEnabled( m_pageFilename->comboFilenameSimple->currentIndex() ==
                                                      m_pageFilename->comboFilenameSimple->count() - 1 );
 
-    m_pageFilename->buttonHelp4->setEnabled( m_pageFilename->comboExtensionSimple->currentIndex() == 
+    m_pageFilename->buttonHelp4->setEnabled( m_pageFilename->comboExtensionSimple->currentIndex() ==
                                                         m_pageFilename->comboExtensionSimple->count() - 1 );
-    m_pageFilename->comboExtensionCustom->setEnabled( m_pageFilename->comboExtensionSimple->currentIndex() == 
+    m_pageFilename->comboExtensionCustom->setEnabled( m_pageFilename->comboExtensionSimple->currentIndex() ==
                                                       m_pageFilename->comboExtensionSimple->count() - 1 );
 
     m_pageFilename->buttonUp->setEnabled( m_fileCount );
@@ -412,7 +412,7 @@ void KRenameWindow::setFilenameTemplate( const QString & templ, bool insert )
 void KRenameWindow::setExtensionTemplate( const QString & templ, bool insert )
 {
     m_pageFilename->checkExtension->setChecked( true );
-    m_pageFilename->comboExtensionSimple->setCurrentIndex( 
+    m_pageFilename->comboExtensionSimple->setCurrentIndex(
         m_pageFilename->comboExtensionSimple->count() - 1 );
 
     if( insert )
@@ -421,14 +421,14 @@ void KRenameWindow::setExtensionTemplate( const QString & templ, bool insert )
         m_pageFilename->extensionTemplate->lineEdit()->setText( templ );
 }
 
-void KRenameWindow::setRenameMode( ERenameMode eMode ) 
+void KRenameWindow::setRenameMode( ERenameMode eMode )
 {
     m_pageDests->optionRename->setChecked( false );
     m_pageDests->optionCopy->setChecked( false );
     m_pageDests->optionMove->setChecked( false );
     m_pageDests->optionLink->setChecked( false );
-    
-    switch( eMode ) 
+
+    switch( eMode )
     {
         case eRenameMode_Rename:
             m_pageDests->optionRename->setChecked( true );
@@ -457,7 +457,7 @@ void KRenameWindow::setDestinationUrl( const QUrl &url )
     m_pageDests->urlrequester->setUrl( url );
 }
 
-void KRenameWindow::resetFileList() 
+void KRenameWindow::resetFileList()
 {
     m_pageFiles->fileList->reset();
 }
@@ -488,7 +488,7 @@ QList<int> KRenameWindow::selectedFileItems() const
     QItemSelectionModel* selection = m_pageFiles->fileList->selectionModel();
     QModelIndexList      indices = selection->selectedIndexes();
     QModelIndexList::const_iterator it = indices.begin();
-    
+
     while( it != indices.end() )
     {
         selected.append( (*it).row() );
@@ -506,7 +506,7 @@ QList<int> KRenameWindow::selectedFileItemsPreview() const
 
     QModelIndexList      indices = selection->selectedIndexes();
     QModelIndexList::const_iterator it = indices.begin();
-    
+
     while( it != indices.end() )
     {
         selected.append( (*it).row() );
@@ -561,7 +561,7 @@ void KRenameWindow::setSortMode( int sortMode, const QString & customToken, int 
     bool bPrevious = m_pageFiles->comboSort->blockSignals( true );
 
     QString customTokenText;
-    if( sortMode == eSortMode_Token ) 
+    if( sortMode == eSortMode_Token )
     {
         customTokenText = customToken;
     }
@@ -569,8 +569,8 @@ void KRenameWindow::setSortMode( int sortMode, const QString & customToken, int 
     m_pageFiles->comboSort->setCurrentIndex( sortMode );
     m_pageFiles->labelCustomSort->setText( customTokenText );
 
-    model->sortFiles( static_cast<ESortMode>(sortMode), 
-                      customToken, 
+    model->sortFiles( static_cast<ESortMode>(sortMode),
+                      customToken,
                       static_cast<KRenameTokenSorter::ESimpleSortMode>(customSortMode) );
 
     m_pageFiles->comboSort->blockSignals( bPrevious );
@@ -608,9 +608,9 @@ void KRenameWindow::showFilenameTab()
     }
 }
 
-void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom, const QString & templ ) 
+void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom, const QString & templ )
 {
-    if( templ.isEmpty() ) 
+    if( templ.isEmpty() )
     {
         comboCustom->lineEdit()->setText( templ );
         combo->setCurrentIndex( 0 );
@@ -619,13 +619,13 @@ void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCus
     {
         QString number = "#";
         int c = m_pageFilename->spinDigits->value()-1;
-        
+
         while( c-- > 0 )
             number += "#";
-        
+
         number += QString("{%1}").arg( m_pageFilename->spinIndex->value() );
 
-        if( templ.startsWith( number ) ) 
+        if( templ.startsWith( number ) )
         {
             QString value = templ.right( templ.length() - number.length() );
             combo->setCurrentIndex( 1 );
@@ -645,7 +645,7 @@ void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCus
     }
 }
 
-QString KRenameWindow::getPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom ) 
+QString KRenameWindow::getPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom )
 {
     QString str;
     QString number = "#";
@@ -655,10 +655,10 @@ QString KRenameWindow::getPrefixSuffixSimple( QComboBox* combo, QComboBox* combo
         number += "#";
 
     number += QString("{%1}").arg( m_pageFilename->spinIndex->value() );
-    
-    if( combo->currentIndex() == 1 ) 
+
+    if( combo->currentIndex() == 1 )
         str = number;
-    else if( combo->currentIndex() == 2 ) 
+    else if( combo->currentIndex() == 2 )
         str = "[date]"; // TODO date
 
     str += comboCustom->currentText();
@@ -666,12 +666,12 @@ QString KRenameWindow::getPrefixSuffixSimple( QComboBox* combo, QComboBox* combo
     return str;
 }
 
-QString KRenameWindow::getFilenameSimple( QComboBox* combo, QComboBox* comboCustom ) 
+QString KRenameWindow::getFilenameSimple( QComboBox* combo, QComboBox* comboCustom )
 {
     QString str;
 
     // TODO: Replace strings with constants
-    switch( combo->currentIndex() ) 
+    switch( combo->currentIndex() )
     {
         default:
         case 0:
@@ -712,7 +712,7 @@ void KRenameWindow::slotRenameModeChanged()
         mode = eRenameMode_Rename;
     else if( m_pageDests->optionCopy->isChecked() )
         mode = eRenameMode_Copy;
-    else if( m_pageDests->optionMove->isChecked() ) 
+    else if( m_pageDests->optionMove->isChecked() )
         mode = eRenameMode_Move;
     else if( m_pageDests->optionLink->isChecked() )
         mode = eRenameMode_Link;
@@ -740,7 +740,7 @@ void KRenameWindow::slotTemplateChanged()
     QString extension;
 
     filename  = m_pageFilename->filenameTemplate->currentText();
-    extension = m_pageFilename->checkExtension->isChecked() ? "$" : 
+    extension = m_pageFilename->checkExtension->isChecked() ? "$" :
         m_pageFilename->extensionTemplate->currentText();
 
     // set the new templates also for simple mode
@@ -760,7 +760,7 @@ void KRenameWindow::slotSimpleTemplateChanged()
 
     filename = prefix + filename + suffix;
 
-    // set the new templates, but make sure signals 
+    // set the new templates, but make sure signals
     // are blockes so that slotTemplateChanged emits updatePreview()
     // which is calculation intensive only once!
     blockSignalsRecursive( this, true );
@@ -772,7 +772,7 @@ void KRenameWindow::slotSimpleTemplateChanged()
     this->templatesChanged( filename, extension );
 }
 
-void KRenameWindow::templatesChanged( const QString & filename, const QString & extension ) 
+void KRenameWindow::templatesChanged( const QString & filename, const QString & extension )
 {
     emit filenameTemplateChanged( filename );
     emit extensionTemplateChanged( extension );
@@ -783,10 +783,10 @@ void KRenameWindow::templatesChanged( const QString & filename, const QString & 
     this->slotEnableControls();
 }
 
-void KRenameWindow::setSimpleTemplate( const QString & filename, const QString & extension ) 
+void KRenameWindow::setSimpleTemplate( const QString & filename, const QString & extension )
 {
     // First set the simple extension from a template string
-    if( extension == "$" ) 
+    if( extension == "$" )
         m_pageFilename->comboExtensionSimple->setCurrentIndex( 0 );
     else if( extension == "%" )
         m_pageFilename->comboExtensionSimple->setCurrentIndex( 1 );
@@ -794,7 +794,7 @@ void KRenameWindow::setSimpleTemplate( const QString & filename, const QString &
         m_pageFilename->comboExtensionSimple->setCurrentIndex( 2 );
     else if( extension == "*" )
         m_pageFilename->comboExtensionSimple->setCurrentIndex( 3 );
-    else 
+    else
     {
         m_pageFilename->comboExtensionSimple->setCurrentIndex( 4 );
         m_pageFilename->comboExtensionCustom->lineEdit()->setText( extension );
@@ -804,19 +804,19 @@ void KRenameWindow::setSimpleTemplate( const QString & filename, const QString &
     // TODO: Make sure we do not find something like [*5-] or \$
     int index = 4;
     int pos   = filename.indexOf( "$" );
-    if( pos == -1 ) 
+    if( pos == -1 )
     {
         pos = filename.indexOf( "%" );
         if( pos == -1 )
         {
             pos = filename.indexOf( "&" );
-            if( pos == -1 ) 
+            if( pos == -1 )
             {
                 pos = filename.indexOf( "*" );
                 if( pos != -1 )
                     index = 3;
             }
-            else 
+            else
                 index = 2;
         }
         else
@@ -826,9 +826,9 @@ void KRenameWindow::setSimpleTemplate( const QString & filename, const QString &
         index = 0;
 
     m_pageFilename->comboFilenameSimple->setCurrentIndex( index );
-    if( pos == -1 ) 
+    if( pos == -1 )
     {
-        // No token found, so we have no prefix or suffix but 
+        // No token found, so we have no prefix or suffix but
         // a custom name.
         m_pageFilename->comboPrefixCustom->lineEdit()->setText( QString() );
         m_pageFilename->comboPrefix->setCurrentIndex( 0 );
@@ -838,7 +838,7 @@ void KRenameWindow::setSimpleTemplate( const QString & filename, const QString &
 
         m_pageFilename->comboFilenameCustom->lineEdit()->setText( filename );
     }
-    else 
+    else
     {
         QString prefix = ( pos > 0 ? filename.left( pos ) : QString());
         QString suffix = ( pos < filename.length() ? filename.right( filename.length() - pos - 1 ) : QString());
@@ -876,7 +876,7 @@ void KRenameWindow::slotTokenHelpRequestedWizard4()
 void KRenameWindow::setExtensionSplitMode( ESplitMode splitMode, int dot )
 {
     int index;
-    switch( splitMode ) 
+    switch( splitMode )
     {
         default:
         case eSplitMode_FirstDot:
@@ -899,7 +899,7 @@ void KRenameWindow::setExtensionSplitMode( ESplitMode splitMode, int dot )
 void KRenameWindow::slotExtensionSplitModeChanged( int index )
 {
     ESplitMode splitMode;
-    switch( index ) 
+    switch( index )
     {
         case 0:
             splitMode = eSplitMode_FirstDot;
@@ -942,14 +942,14 @@ void KRenameWindow::slotSortChanged( int index )
     KRenameTokenSorter::ESimpleSortMode eCustomSortMode = model->getSortModeCustomMode();
     QString customToken;
 
-    switch( index ) 
+    switch( index )
     {
         default:
         case 0:
             eMode = eSortMode_Unsorted;  break;
         case 1:
             eMode = eSortMode_Ascending; break;
-        case 2: 
+        case 2:
             eMode = eSortMode_Descending; break;
         case 3:
             eMode = eSortMode_Numeric; break;
@@ -961,7 +961,7 @@ void KRenameWindow::slotSortChanged( int index )
             eMode = eSortMode_DescendingDate; break;
         case 7:
         {
-            eMode = eSortMode_Token; 
+            eMode = eSortMode_Token;
             QPointer<TokenSortModeDialog> dlg = new TokenSortModeDialog( eCustomSortMode, this );
             if( dlg->exec() == QDialog::Accepted )
             {
@@ -974,7 +974,7 @@ void KRenameWindow::slotSortChanged( int index )
                 // Do not change anything
                 // Reset combo box
                 m_pageFiles->comboSort->setCurrentIndex( eMode );
-                return; 
+                return;
             }
             delete dlg;
             break;
@@ -1010,14 +1010,14 @@ void KRenameWindow::slotMoveUp()
 {
     QList<int> sel = this->selectedFileItems();
 
-    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());    
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
     model->moveFilesUp( sel );
 
     QItemSelectionModel* selection = m_pageFiles->fileList->selectionModel();
     QList<int>::const_iterator it  = sel.begin();
     while( it != sel.end() )
     {
-        if( *it - 1 > 0 ) 
+        if( *it - 1 > 0 )
             selection->select( model->createIndex( *it - 1 ), QItemSelectionModel::Select );
 
         ++it;
@@ -1033,7 +1033,7 @@ void KRenameWindow::slotMoveDown()
 {
     QList<int> sel = this->selectedFileItems();
 
-    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());    
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
     model->moveFilesDown( sel );
 
 
@@ -1041,7 +1041,7 @@ void KRenameWindow::slotMoveDown()
     QList<int>::const_iterator it  = sel.begin();
     while( it != sel.end() )
     {
-        if( *it + 1 < model->rowCount() ) 
+        if( *it + 1 < model->rowCount() )
             selection->select( model->createIndex( *it + 1 ), QItemSelectionModel::Select );
 
         ++it;
@@ -1069,9 +1069,9 @@ void KRenameWindow::slotMoveDownPreview()
     moveDown( sel, view );
 }
 
-void KRenameWindow::moveUp( const QList<int> & selected, QAbstractItemView* view ) 
+void KRenameWindow::moveUp( const QList<int> & selected, QAbstractItemView* view )
 {
-    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());    
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
     model->moveFilesUp( selected );
 
     updatePreview();
@@ -1080,7 +1080,7 @@ void KRenameWindow::moveUp( const QList<int> & selected, QAbstractItemView* view
     QList<int>::const_iterator it  = selected.begin();
     while( it != selected.end() )
     {
-        if( *it - 1 > 0 ) 
+        if( *it - 1 > 0 )
             selection->select( model->createIndex( *it - 1 ), QItemSelectionModel::Select );
 
         ++it;
@@ -1094,7 +1094,7 @@ void KRenameWindow::moveUp( const QList<int> & selected, QAbstractItemView* view
 
 void KRenameWindow::moveDown( const QList<int> & selected, QAbstractItemView* view )
 {
-    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());    
+    KRenameModel* model = static_cast<KRenameModel*>(m_pageFiles->fileList->model());
     model->moveFilesDown( selected );
 
     updatePreview();
@@ -1103,7 +1103,7 @@ void KRenameWindow::moveDown( const QList<int> & selected, QAbstractItemView* vi
     QList<int>::const_iterator it  = selected.begin();
     while( it != selected.end() )
     {
-        if( *it + 1 < model->rowCount() ) 
+        if( *it + 1 < model->rowCount() )
             selection->select( model->createIndex( *it + 1 ), QItemSelectionModel::Select );
 
         ++it;
@@ -1135,32 +1135,32 @@ void KRenameWindow::slotPluginChanged(QTreeWidgetItem* selected)
 void KRenameWindow::slotPluginEnabled()
 {
     QTreeWidgetItem* selected = m_pagePlugins->listPlugins->currentItem();
-    if( selected ) 
+    if( selected )
     {
         QWidget* w = m_pluginsWidgetHash[selected->text(0)];
         Plugin*  p = m_pluginsHash[selected->text(0)];
-        
+
         p->setEnabled( m_pagePlugins->checkEnablePlugin->isChecked() );
         w->setEnabled( p->alwaysEnabled() || m_pagePlugins->checkEnablePlugin->isChecked() );
     }
 }
 
-void KRenameWindow::blockSignalsRecursive( QObject* obj, bool b ) 
+void KRenameWindow::blockSignalsRecursive( QObject* obj, bool b )
 {
     if( obj )
     {
         obj->blockSignals(b);
-        
+
         QList<QObject*> list = obj->children();
         QList<QObject*>::iterator it = list.begin();
         QObject* o = NULL;
-        
-        while( it != list.end() ) 
+
+        while( it != list.end() )
         {
             o = *it;
-            if( o && o != obj) 
+            if( o && o != obj)
                 blockSignalsRecursive(o, b);
-            
+
             ++it;
         }
     }

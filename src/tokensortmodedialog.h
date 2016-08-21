@@ -43,14 +43,14 @@ class TokenSortModeDialog : public QDialog {
      */
     QString getToken() const;
 
- private:                                                 
+ private:
     /**
      * Load all available tokens.
      */
     void initTokens();
 
  private slots:
-    
+
     void slotEnableControls();
 
  private:

@@ -30,7 +30,7 @@ class PreviewList : public QTreeView {
     explicit PreviewList( QWidget* parent );
     ~PreviewList();
 
-    inline void setKRenameModel( KRenameModel* model ) 
+    inline void setKRenameModel( KRenameModel* model )
     {
         m_model = model;
     }

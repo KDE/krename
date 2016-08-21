@@ -29,13 +29,13 @@
 class FontPlugin : public FilePlugin {
  public:
     explicit FontPlugin( PluginLoader* loader );
-    
+
     ~FontPlugin();
 
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()
@@ -77,9 +77,9 @@ class FontPlugin : public FilePlugin {
     FT_Library            m_library;
 };
 
-inline const QStringList & FontPlugin::help() const 
-{ 
-    return m_help; 
+inline const QStringList & FontPlugin::help() const
+{
+    return m_help;
 }
 
 #endif // FONT_PLUGIN_H

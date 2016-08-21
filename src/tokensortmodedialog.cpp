@@ -50,9 +50,9 @@ void TokenSortModeDialog::initTokens()
     QList<Plugin*>::const_iterator it = PluginLoader::Instance()->plugins().begin();
     while( it != PluginLoader::Instance()->plugins().end() )
     {
-        if( ((*it)->type() & ePluginType_Token) ) 
+        if( ((*it)->type() & ePluginType_Token) )
         {
-            const QStringList & tokens = (*it)->supportedTokens(); 
+            const QStringList & tokens = (*it)->supportedTokens();
             allTokens.append( tokens );
         }
 

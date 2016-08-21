@@ -15,7 +15,7 @@
  *   (at your option) any later version.                                   *
  *                                                                         *
  ***************************************************************************/
- 
+
 #include "threadedlister.h"
 
 #include "krenamemodel.h"
@@ -48,7 +48,7 @@ ThreadedLister::~ThreadedLister()
 void ThreadedLister::run()
 {
     s_mutex.lock();
-    if( m_listDirnames || m_listDirnamesOnly ) 
+    if( m_listDirnames || m_listDirnamesOnly )
     {
         QString name = m_dirname.fileName();
         if( !m_listHiddenFiles && !name.startsWith(QLatin1Char('.')))
@@ -63,7 +63,7 @@ void ThreadedLister::run()
 
     KIO::ListJob* job   = NULL; // Will delete itself automatically
     KIO::JobFlags flags = KIO::HideProgressInfo;
-    if( m_listRecursive ) 
+    if( m_listRecursive )
         job = KIO::listRecursive( m_dirname, flags, m_listHiddenFiles );
     else
         job = KIO::listDir( m_dirname, flags, m_listHiddenFiles );
@@ -80,16 +80,16 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
     QRegExp filter( m_filter );
     filter.setPatternSyntax( QRegExp::Wildcard );
 
-    m_files.reserve( m_files.count() + list.count() ); 
-    
+    m_files.reserve( m_files.count() + list.count() );
+
     KIO::UDSEntryList::const_iterator it = list.begin();
-    while( it != list.end() ) 
+    while( it != list.end() )
     {
         displayName = (*it).stringValue( KIO::UDSEntry::UDS_NAME );
         if( !filter.isEmpty() && !filter.exactMatch( displayName ) )
         {
             // does not match filter
-            // skip it 
+            // skip it
             ++it;
         }
         else
@@ -98,7 +98,7 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
             url = url.adjusted(QUrl::StripTrailingSlash);
             url.setPath(url.path() + '/' + ( displayName ));
 
-            if( (m_listDirnames || m_listDirnamesOnly) && (*it).isDir() ) 
+            if( (m_listDirnames || m_listDirnamesOnly) && (*it).isDir() )
             {
                 // Filter out parent and current directory
                 if( displayName != "." && displayName != ".." )
@@ -108,7 +108,7 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
             {
                 m_files.append( KRenameFile( KFileItem( *it, url), m_eSplitMode, m_dot ) );
             }
- 
+
             ++it;
         }
     }
@@ -116,7 +116,7 @@ void ThreadedLister::foundItem(KIO::Job*, const KIO::UDSEntryList & list)
 
 void ThreadedLister::completed()
 {
-    if( m_files.count() > 0 ) 
+    if( m_files.count() > 0 )
     {
         // We add the files in the completed slot
         // and not directly in the foundItem slot,

@@ -27,19 +27,19 @@ class FileDialogExtWidget : public QDialog {
  public:
     explicit FileDialogExtWidget(QWidget *parent);
 
-    /** 
+    /**
      * \returns true if directories should be added recursively
      */
     inline bool addRecursively() const;
 
-    /** 
+    /**
      * \returns true if hidden directories should be added too
      *               when adding directories recusively
      */
     inline bool addHidden() const;
 
     /**
-     * \returns true if directory names should be added along with 
+     * \returns true if directory names should be added along with
      *               their contents
      */
     inline bool addDirsWithFiles() const;
@@ -49,7 +49,7 @@ class FileDialogExtWidget : public QDialog {
      */
     inline bool addDirsOnly() const;
 
-    /** 
+    /**
      * \param b if true adding recursively will be enabled by default
      */
     inline void setAddRecursively( bool b );

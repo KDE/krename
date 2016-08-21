@@ -45,7 +45,7 @@ FileDialogExtWidget::FileDialogExtWidget(QWidget *parent)
     });
 
     layout()->addWidget(m_fileWidget);
-    
+
     QWidget *extraWidget = new QWidget;
     QVBoxLayout *extraLayout = new QVBoxLayout;
     extraWidget->setLayout(extraLayout);
@@ -58,13 +58,13 @@ FileDialogExtWidget::FileDialogExtWidget(QWidget *parent)
     hbox->addSpacing ( 20 );
     hbox->addWidget  ( checkHidden );
     hbox->setStretchFactor( checkHidden, 4 );
-    
+
     extraLayout->addWidget( checkDir );
     extraLayout->addWidget( checkRecursive );
     extraLayout->addLayout( hbox );
     extraLayout->addWidget( checkOnlyDir );
     m_fileWidget->setCustomWidget(extraWidget);
-    
+
     connect( checkRecursive, SIGNAL( clicked() ), SLOT( enableControls() ));
 
     checkRecursive->setToolTip( i18n("Walk recursively through the folder tree and also add the content "

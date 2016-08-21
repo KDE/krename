@@ -71,7 +71,7 @@ class KRenameModel : public QAbstractListModel {
      *  @param customSortToken customSortToken if mode is eSortMode_Token
      *  @param customSortMode mode for sorting if mode is eSortMode_Token
      */
-    void sortFiles( ESortMode mode, const QString & customSortToken, 
+    void sortFiles( ESortMode mode, const QString & customSortToken,
                     KRenameTokenSorter::ESimpleSortMode customSortMode );
 
     /** Get the current sort mode.
@@ -156,7 +156,7 @@ class KRenameModel : public QAbstractListModel {
     inline unsigned int splitDot();
 
 signals:
-    /** This signal is emitted when the maximum number of 
+    /** This signal is emitted when the maximum number of
      *  dots in a filename that can be used to separate
      *  filename and extension has changed (by adding a new file).
      *
@@ -167,7 +167,7 @@ signals:
     /** Emitted when files have been added using drag and drop
      */
     void filesDropped();
-   
+
 private slots:
     void slotListerDone( ThreadedLister* lister );
     void gotPreview (const KFileItem &item, const QPixmap &preview);
@@ -175,17 +175,17 @@ private slots:
 private:
     BatchRenamer* m_renamer;
     KRenameFile::List* m_vector;
-    
+
     bool               m_preview;
     bool               m_text;
-    
+
     int                m_maxDots;  ///< The maximum number of dots in a filename which can be used to separate filename and extension
     const char*        m_mimeType; ///< MIME type for drag and drop operations
 
     ESortMode          m_eSortMode; ///< Last used sort mode
     QString            m_customSortToken; ///< if m_eSortMode = eSortMode_Token
     KRenameTokenSorter::ESimpleSortMode m_eCustomSortMode;  ///< if m_eSortMode = eSortMode_Token
-    
+
     ESplitMode        m_eSplitMode;
     unsigned int      m_dot;
 };
@@ -228,7 +228,7 @@ bool KRenameModel::isPreviewEnabled() const
 void KRenameModel::setEnablePreview( bool preview, bool filenames )
 {
     bool update = false;
-    if( m_preview != preview || filenames != m_text ) 
+    if( m_preview != preview || filenames != m_text )
         update = true;
 
     m_preview = preview;

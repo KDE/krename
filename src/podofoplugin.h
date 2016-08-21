@@ -25,11 +25,11 @@
 class PodofoPlugin : public FilePlugin {
  public:
     explicit PodofoPlugin( PluginLoader* loader );
-    
+
     /**
      * This function is the core of your plugin.
      *
-     * It does the actual processing of a file, filename or token depending of the type 
+     * It does the actual processing of a file, filename or token depending of the type
      * of your plugin.
      *
      * \see type()
@@ -69,9 +69,9 @@ class PodofoPlugin : public FilePlugin {
     QMap<QString,QString> m_mapRealKeys;
 };
 
-inline const QStringList & PodofoPlugin::help() const 
-{ 
-    return m_help; 
+inline const QStringList & PodofoPlugin::help() const
+{
+    return m_help;
 }
 
 #endif // PODOFO_PLUGIN_H

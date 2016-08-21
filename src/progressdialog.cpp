@@ -25,7 +25,7 @@
 #include <kiconloader.h>
 #include <krun.h>
 
-ProgressDialog::ProgressDialog( ESplitMode eSplitMode, unsigned int dot, QWidget* parent ) 
+ProgressDialog::ProgressDialog( ESplitMode eSplitMode, unsigned int dot, QWidget* parent )
     : QDialog( parent ), m_canceled( false ), m_renamer( NULL ), m_eSplitMode( eSplitMode ), m_dot( dot )
 {
     m_widget.setupUi( this );
@@ -157,7 +157,7 @@ void ProgressDialog::renamingDone( bool enableMore, bool enableUndo, BatchRename
     m_actUnprocessed->setEnabled( 0 != errors );
 
     m_renamer = renamer;
-} 
+}
 
 void ProgressDialog::print( const QString & text, const QString & pixmap )
 {

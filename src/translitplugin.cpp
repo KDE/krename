@@ -127,13 +127,13 @@ QString TranslitPlugin::processFile( BatchRenamer* b, int index, const QString &
     QString token;
 
     // This plugin supports to types
-    if( eCurrentType == ePluginType_Token ) 
+    if( eCurrentType == ePluginType_Token )
     {
         if( filenameOrToken.contains( ";" ) )
         {
             src   = filenameOrToken.section( ';', 1, 1 );
             token = filenameOrToken.section( ';', 0, 0 ).toLower();
-        } else 
+        } else
             token = filenameOrToken.toLower();
 
         if( token == "transliterated" )
@@ -141,20 +141,20 @@ QString TranslitPlugin::processFile( BatchRenamer* b, int index, const QString &
             if( src.isEmpty() )
             {
                 // TODO: If extension .....
-                if( true ) 
+                if( true )
                     src = b->files()->at( index ).srcFilename();
                 else
-                    src = b->files()->at( index ).srcExtension();                
+                    src = b->files()->at( index ).srcExtension();
             }
 
             return this->transliterate( src );
         }
     }
     /*
-    else if( eCurrentType == ePluginType_Filename ) 
+    else if( eCurrentType == ePluginType_Filename )
     {
         // TODO: If extension .....
-        if( true ) 
+        if( true )
             src = b->files()->at( index ).srcFilename();
         else
             src = b->files()->at( index ).srcExtension();
@@ -169,34 +169,34 @@ QString TranslitPlugin::processFile( BatchRenamer* b, int index, const QString &
 void TranslitPlugin::createUI( QWidget* parent ) const
 {
     QSpacerItem* spacer = new QSpacerItem( 20, 20, QSizePolicy::Expanding, QSizePolicy::Expanding );
-    
+
     QVBoxLayout* l    = new QVBoxLayout( parent );
     QHBoxLayout* hbox = new QHBoxLayout( parent );
-    
+
     QLabel* pix = new QLabel( parent );
     pix->setPixmap( KIconLoader::global()->loadIcon( m_icon, K3Icon::Desktop ) );
-    
+
     hbox->addWidget( pix );
     hbox->addWidget( new QLabel( "<qt><b>"+name()+"</b></qt>", parent  ) );
     hbox->addItem( spacer );
 
-    l->addLayout( hbox );    
+    l->addLayout( hbox );
     l->addWidget( new QLabel( i18n("This plugin will transliterate the following characters."), parent  ) );
 
     QListWidget* list = new QListWidget( parent );
 
     int i=0;
-    while( TranslitPlugin::s_strUtf8[i]!=QString::null ) 
+    while( TranslitPlugin::s_strUtf8[i]!=QString::null )
     {
         QString text = QString::fromUtf8( TranslitPlugin::s_strUtf8[i].toUtf8().data() );
         text += " -> ";
         text += TranslitPlugin::s_strEngl[i];;
 
         list->insertItem( 0, text );
-        
+
         ++i;
     }
-    
+
     l->addWidget( list );
     l->setStretchFactor( list, 2 );
 }
@@ -206,10 +206,10 @@ QString TranslitPlugin::transliterate(const QString & unicoded)
 {
     int i;
     QString transed = "";
-    
+
     transed.reserve(unicoded.length());
 
-    for(i=0; i<(int)unicoded.length(); i++) 
+    for(i=0; i<(int)unicoded.length(); i++)
     {
         QString charIn = unicoded.mid(i, 1);
         if( TranslitPlugin::s_mapFromUTF8.contains( charIn.toUtf8() ) )
@@ -219,7 +219,7 @@ QString TranslitPlugin::transliterate(const QString & unicoded)
         }
         else
             transed.append(charIn);
-       
+
     }
 
     return transed;

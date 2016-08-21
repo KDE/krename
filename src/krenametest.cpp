@@ -87,7 +87,7 @@ KRenameTest::KRenameTest()
 
 KRenameTest::~KRenameTest()
 {
-    
+
 }
 
 void KRenameTest::startTest()
@@ -217,8 +217,8 @@ void KRenameTest::testKRenameFile()
                           "/home/test", "simple.txt.long.ext.zip", "", eSplitMode_CustomDot, 5, false );
 }
 
-bool KRenameTest::testKRenameFileInternal( const QUrl &url, const QString & directory, 
-                                           const QString & filename, const QString & extension, 
+bool KRenameTest::testKRenameFileInternal( const QUrl &url, const QString & directory,
+                                           const QString & filename, const QString & extension,
                                            ESplitMode eSplitMode, int dot, bool isDir )
 {
     // if the expected filename and extension is empty expect a directory
@@ -227,24 +227,24 @@ bool KRenameTest::testKRenameFileInternal( const QUrl &url, const QString & dire
 
     if( file.srcDirectory() != directory )
     {
-        writeTestMessage( "Directory=(%s) expected (%s).\n", 
-                          file.srcDirectory().toLatin1().data(), 
+        writeTestMessage( "Directory=(%s) expected (%s).\n",
+                          file.srcDirectory().toLatin1().data(),
                           directory.toLatin1().data() );
         return false;
     }
 
     if( file.srcFilename() != filename )
     {
-        writeTestMessage( "Filename=(%s) expected (%s).\n", 
-                          file.srcFilename().toLatin1().data(), 
+        writeTestMessage( "Filename=(%s) expected (%s).\n",
+                          file.srcFilename().toLatin1().data(),
                           filename.toLatin1().data() );
         return false;
     }
 
     if( file.srcExtension() != extension )
     {
-        writeTestMessage( "Extension=(%s) expected (%s).\n", 
-                          file.srcExtension().toLatin1().data(), 
+        writeTestMessage( "Extension=(%s) expected (%s).\n",
+                          file.srcExtension().toLatin1().data(),
                           extension.toLatin1().data() );
         return false;
     }
@@ -260,7 +260,7 @@ void KRenameTest::testBatchRenamer()
     QString filename( " Test File name " );
     QString directory1( "krename" );
     QString directory2( "home" );
-    
+
     RUN_TOKEN_TEST( "$ Test", "$", filename, filename );
     RUN_TOKEN_TEST( "& Test", "&", filename, filename.toUpper() );
     RUN_TOKEN_TEST( "% Test", "%", filename, filename.toLower() );
@@ -272,7 +272,7 @@ void KRenameTest::testBatchRenamer()
     RUN_TOKEN_TEST( "##### Test", "#####", filename, QString().sprintf("%05i", 0 ) );
     RUN_TOKEN_TEST( "#{100;2} Test", "#{100;2}", filename, QString::number( 100 ) );
     RUN_TOKEN_TEST( "####{100;2} Test", "####{100;2}", filename, QString().sprintf("%04i", 100 ) );
-    RUN_TOKEN_TEST( "####{2;2}## Test", "####{2;2}##", filename, 
+    RUN_TOKEN_TEST( "####{2;2}## Test", "####{2;2}##", filename,
 		    QString().sprintf("%04i", 2 ) + QString().sprintf("%02i", 0 ));
     RUN_TOKEN_TEST( "[1] Test", "[1]", filename, QString( filename[0] ) );
     RUN_TOKEN_TEST( "[2] Test", "[2]", filename, QString( filename[1] )  );
@@ -316,7 +316,7 @@ void KRenameTest::testBatchRenamer()
     RUN_TOKEN_TEST( "[$6;4] Test", "[$6;4]", filename, filename.mid( 5, 4 ) );
     RUN_TOKEN_TEST( "[%6;4] Test", "[%6;4]", filename, filename.mid( 5, 4 ).toLower() );
     RUN_TOKEN_TEST( "[*6;4] Test", "[*6;4]", filename, filename.mid( 5, 4 ) );
-    RUN_TOKEN_TEST( "[1;1{[length]}] Test", "[1;1{[length]}]", filename,  "1" );    
+    RUN_TOKEN_TEST( "[1;1{[length]}] Test", "[1;1{[length]}]", filename,  "1" );
     RUN_TOKEN_TEST( "[trimmed;[6;4]] Test", "[trimmed;[6;4]]", filename, filename.mid( 5, 4 ).trimmed() );
     RUN_TOKEN_TEST( "[trimmed; Hallo ] Test", "[trimmed; Hallo ]", filename, "Hallo" );
     RUN_TOKEN_TEST( "[dirname] Test", "[dirname]", filename, directory1 );
@@ -374,11 +374,11 @@ void KRenameTest::testBatchRenamer()
 
     // Testing system functions
     RUN_TOKEN_TEST( "Date Test", "[date]", filename, QDateTime::currentDateTime().toString( "dd-MM-yyyy") );
-    RUN_TOKEN_TEST( "dd-MM-yyyy Date Test", "[date;dd-MM-yyyy]", 
+    RUN_TOKEN_TEST( "dd-MM-yyyy Date Test", "[date;dd-MM-yyyy]",
                     filename, QDateTime::currentDateTime().toString( "dd-MM-yyyy") );
-    RUN_TOKEN_TEST( "dd:MM:yyyy Date Test", "[date;dd:MM:yyyy]", 
+    RUN_TOKEN_TEST( "dd:MM:yyyy Date Test", "[date;dd:MM:yyyy]",
                     filename, QDateTime::currentDateTime().toString( "dd:MM:yyyy") );
-    RUN_TOKEN_TEST( "yy.mm.dd Date Test", "[date;yy.mm.dd]", 
+    RUN_TOKEN_TEST( "yy.mm.dd Date Test", "[date;yy.mm.dd]",
                     filename, QDateTime::currentDateTime().toString( "yy.mm.dd") );
     RUN_TOKEN_TEST( "d Date Test", "[date;d]", filename, QDateTime::currentDateTime().toString( "d") );
     RUN_TOKEN_TEST( "dd Date Test", "[date;dd]", filename, QDateTime::currentDateTime().toString( "dd") );
@@ -494,11 +494,11 @@ void KRenameTest::testBatchRenamer()
     expected << "SUBDIR" << "FOO" << "BAR" << "BAZ";
     expectedPaths << "/home/foo/bar" << "/home" << "/home/FOO" << "/home/FOO/BAR";
 
-    RUN_KRENAME_MULTI_FILE_TEST( files, expected, expectedPaths, 
+    RUN_KRENAME_MULTI_FILE_TEST( files, expected, expectedPaths,
                                  "&", "Testing a directory hierarchy" );
 }
 
-bool KRenameTest::tokenTest( const char* token, const QString & filename, const QString & expected) 
+bool KRenameTest::tokenTest( const char* token, const QString & filename, const QString & expected)
 {
     QString directory("/home/krename/");
     KRenameFile::List list;
@@ -515,8 +515,8 @@ bool KRenameTest::tokenTest( const char* token, const QString & filename, const 
 
     bool result = (str == expected);
     if( m_verbose || !result )
-        writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)", 
-                         expected.toLatin1().data(), 
+        writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)",
+                         expected.toLatin1().data(),
                          str.toLatin1().data(), token );
 
     return result;
@@ -529,7 +529,7 @@ bool KRenameTest::numberingTest( int length, int start, int step, QList<int> ski
     QString token;
     token.fill( '#', length );
 
-    for(int i=0;i<num;i++) 
+    for(int i=0;i<num;i++)
     {
         QString filename = "any" + QString::number( i );
         KRenameFile file( QUrl( directory + filename ), filename.isEmpty(), eSplitMode_FirstDot, 1 );
@@ -554,12 +554,12 @@ bool KRenameTest::numberingTest( int length, int start, int step, QList<int> ski
 
     KRenameFile::List::ConstIterator it = list.begin();
 
-    while( it != list.end()  && result ) 
+    while( it != list.end()  && result )
     {
         expected.sprintf("%0*i", length, cur );
         result = ((*it).dstFilename() == expected);
         if( m_verbose || !result )
-            qDebug(" ---> Expected: (%s) Got: (%s) Start: %i Step: %i Token: (%s)", 
+            qDebug(" ---> Expected: (%s) Got: (%s) Start: %i Step: %i Token: (%s)",
                    expected.toLatin1().data(), (*it).dstFilename().toLatin1().data(), start, step, token.toLatin1().data() );
 
         do {
@@ -572,8 +572,8 @@ bool KRenameTest::numberingTest( int length, int start, int step, QList<int> ski
     return result;
 }
 
-bool KRenameTest::replaceTest( const QString & token, const QString & filename, const QString & expected, 
-                               const QString & replace, const QString & with, bool regExp ) 
+bool KRenameTest::replaceTest( const QString & token, const QString & filename, const QString & expected,
+                               const QString & replace, const QString & with, bool regExp )
 {
     QString directory("/home/krename/");
     KRenameFile::List list;
@@ -600,15 +600,15 @@ bool KRenameTest::replaceTest( const QString & token, const QString & filename, 
     QString str = list[0].dstFilename();
     bool result = (str == expected);
     if( m_verbose || !result )
-        writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)", 
-                         expected.toLatin1().data(), 
+        writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)",
+                         expected.toLatin1().data(),
                          str.toLatin1().data(), token.toLatin1().data() );
 
     return result;
 
 }
 
-bool KRenameTest::testMultipleFiles( KRenameFile::List & files, const QStringList & expected, const QStringList & expectedPath, const QString & token ) 
+bool KRenameTest::testMultipleFiles( KRenameFile::List & files, const QStringList & expected, const QStringList & expectedPath, const QString & token )
 {
     BatchRenamer b;
     b.setFilenameTemplate( token );
@@ -623,15 +623,15 @@ bool KRenameTest::testMultipleFiles( KRenameFile::List & files, const QStringLis
         bool strResult = (str == expected[i]);
         bool pathResult = (strPath == expectedPath[i]);
         if( m_verbose || !strResult ) {
-            writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)", 
-                             expected[i].toLatin1().data(), 
+            writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)",
+                             expected[i].toLatin1().data(),
                              str.toLatin1().data(), token.toLatin1().data() );
-        }        
+        }
         if( m_verbose || !pathResult ) {
-            writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)", 
-                             expectedPath[i].toLatin1().data(), 
+            writeTestMessage(" ---> Expected: (%s) Got: (%s) Token: (%s)",
+                             expectedPath[i].toLatin1().data(),
                              strPath.toLatin1().data(), token.toLatin1().data() );
-        }        
+        }
 
         result = result && strResult && pathResult;
     }
