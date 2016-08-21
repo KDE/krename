@@ -36,7 +36,7 @@ p, li { white-space: pre-wrap; }
      <item>
       <widget class="QLabel" name="krenameIcon" >
        <property name="text" >
-        <string>TextLabel</string>
+        <string comment="KDE::DoNotExtract">TextLabel</string>
        </property>
        <property name="scaledContents" >
         <bool>false</bool>
@@ -50,7 +50,7 @@ p, li { white-space: pre-wrap; }
      <item row="0" column="0" >
       <widget class="QLabel" name="addIcon" >
        <property name="text" >
-        <string>TextLabel</string>
+        <string comment="KDE::DoNotExtract">TextLabel</string>
        </property>
       </widget>
      </item>
@@ -64,7 +64,7 @@ p, li { white-space: pre-wrap; }
      <item row="1" column="0" >
       <widget class="QLabel" name="templateIcon" >
        <property name="text" >
-        <string>TextLabel</string>
+        <string comment="KDE::DoNotExtract">TextLabel</string>
        </property>
       </widget>
      </item>
