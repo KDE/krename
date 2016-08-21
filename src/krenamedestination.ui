@@ -59,21 +59,21 @@
       <item>
        <widget class="QRadioButton" name="optionCopy" >
         <property name="text" >
-         <string>&amp;Copy files to destination directory</string>
+         <string>&amp;Copy files to destination folder</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QRadioButton" name="optionMove" >
         <property name="text" >
-         <string>&amp;Move files to destination directory</string>
+         <string>&amp;Move files to destination folder</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QRadioButton" name="optionLink" >
         <property name="text" >
-         <string>Create symbolic &amp;links in destination directory</string>
+         <string>Create symbolic &amp;links in destination folder</string>
         </property>
        </widget>
       </item>

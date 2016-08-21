@@ -39,7 +39,7 @@ DirSortPlugin::~DirSortPlugin()
 
 const QString DirSortPlugin::name() const
 {
-    return i18n("Subdirectory-Sort Plugin");
+    return i18n("Subfolder-Sort Plugin");
 }
 
 int DirSortPlugin::type() const
@@ -98,7 +98,7 @@ QString DirSortPlugin::processFile( BatchRenamer* b, int index, const QString &,
         if (statJob->error()) {
             m_valid = false;
             return
-                i18n("%1: The output directory %2 does not exist.",
+                i18n("%1: The output folder %2 does not exist.",
                      this->name(),
                      m_baseDirectory.toDisplayString(QUrl::PreferLocalFile) );
         }
@@ -164,7 +164,7 @@ QUrl DirSortPlugin::createNewSubdirectory() const
 
     if( !job->exec() ) {
         KMessageBox::error( m_widget->groupBox,
-                            i18n("Cannot create directory %1", url.toDisplayString(QUrl::PreferLocalFile)) );
+                            i18n("Cannot create folder %1", url.toDisplayString(QUrl::PreferLocalFile)) );
     }
     
     return url;    

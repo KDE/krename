@@ -14,15 +14,15 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>This plugin sorts files after renaming into numbered subdirectories.
+      <string>This plugin sorts files into numbered subfolders after renaming.
 
 Example:
-	directory/001/file1
-	directory/001/file2
-	directory/002/file3
-	directory/002/file4
-	directory/003/file5
- 	...</string>
+	folder/001/file1
+	folder/001/file2
+	folder/002/file3
+	folder/002/file4
+	folder/003/file5
+	...</string>
      </property>
     </widget>
    </item>
@@ -35,7 +35,7 @@ Example:
       <item row="0" column="0">
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>&amp;Files per directory:</string>
+         <string>Number of &amp;files per folder:</string>
         </property>
         <property name="buddy">
          <cstring>spinFiles</cstring>

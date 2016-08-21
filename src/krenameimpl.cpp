@@ -492,12 +492,12 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
     help.append("[&1][%2-]" + TokenHelpDialog::getTokenSeparator() + i18n("first letter of filename upper case") );
     help.append("#" + TokenHelpDialog::getTokenSeparator() + i18n("number (try also ##, ###, ... for leading zeros)") );
     help.append("#{0;1}" + TokenHelpDialog::getTokenSeparator() + i18n("counter with custom start value 0 and custom stepping 1") );
-    help.append("/" + TokenHelpDialog::getTokenSeparator() + i18n("create a subdirectory") );
+    help.append("/" + TokenHelpDialog::getTokenSeparator() + i18n("create a subdfolder") );
     help.append("[$x-y]" + TokenHelpDialog::getTokenSeparator() + i18n("character x to y of old filename") );
     help.append("[$x;y]" + TokenHelpDialog::getTokenSeparator() + i18n("y characters of old filename starting at x") );
-    help.append("[$dirname]" + TokenHelpDialog::getTokenSeparator() + i18n("insert name of directory") );
-    help.append("[$dirname.]" + TokenHelpDialog::getTokenSeparator() + i18n("insert name of parent directory") );
-    help.append("[dirsep]" + TokenHelpDialog::getTokenSeparator() + i18n("insert a '/' to create a new subdirectory (useful from within regular expressions)") );
+    help.append("[$dirname]" + TokenHelpDialog::getTokenSeparator() + i18n("insert name of folder") );
+    help.append("[$dirname.]" + TokenHelpDialog::getTokenSeparator() + i18n("insert name of parent folder") );
+    help.append("[dirsep]" + TokenHelpDialog::getTokenSeparator() + i18n("insert a '/' to create a new subfolder (useful from within regular expressions)") );
     help.append("[#length-0]" + TokenHelpDialog::getTokenSeparator() + i18n("insert the length of the input filename") );
     help.append("[trimmed]" + TokenHelpDialog::getTokenSeparator() + i18n("strip whitespaces leading and trailing") );
     help.append("[trimmed;.*]" + TokenHelpDialog::getTokenSeparator() + i18n("strip whitespaces leading and trailing of an arbitrary string") );
@@ -565,7 +565,7 @@ void KRenameImpl::slotStart()
         KIO::StatJob *statJob = KIO::stat(destination, KIO::StatJob::DestinationSide, 0);
         statJob->exec();
         if (statJob->error() == KIO::ERR_DOES_NOT_EXIST) {
-            int m = KMessageBox::warningContinueCancel( m_window, i18n("The directory %1 does not exist. "
+            int m = KMessageBox::warningContinueCancel( m_window, i18n("The folder %1 does not exist. "
                                                                        "Do you want KRename to create it for you?",
                                                                        destination.toDisplayString(QUrl::PreferLocalFile) ) );
             if( m == KMessageBox::Cancel )
@@ -575,7 +575,7 @@ void KRenameImpl::slotStart()
             KJobWidgets::setWindow(job, m_window);
             if( !job->exec() )
             {
-                KMessageBox::error( m_window, i18n("The directory %1 could not be created.", destination.toDisplayString(QUrl::PreferLocalFile)) );
+                KMessageBox::error( m_window, i18n("The folder %1 could not be created.", destination.toDisplayString(QUrl::PreferLocalFile)) );
                 return;
             }
         }

@@ -119,13 +119,13 @@ int main(int argc, char *argv[])
     parser.addHelpOption();
 
     parser.addPositionalArgument(QLatin1String("files"), i18n("Files to be added to the list to be renamed"), i18n("[files...]"));
-    parser.addOption(QCommandLineOption(QStringList() << QLatin1String("r"), i18n("add directory recursively"), i18n("directory")));
+    parser.addOption(QCommandLineOption(QStringList() << QLatin1String("r"), i18n("add folder recursively"), i18n("folder")));
     parser.addOption(QCommandLineOption(QStringList() << QLatin1String("template"), i18n("set a template")));
     parser.addOption(QCommandLineOption(QStringList() << QLatin1String("extension"), i18n("set a template for the file extension")));
     parser.addOption(QCommandLineOption(QStringList() << QLatin1String("use-plugin"), i18n("enable a plugin for use")));
-    parser.addOption(QCommandLineOption(QStringList() << QLatin1String("copy"), i18n("copy files to directory or url"), i18n("path or url")));
-    parser.addOption(QCommandLineOption(QStringList() << QLatin1String("move"), i18n("move files to directory or url"), i18n("path or url")));
-    parser.addOption(QCommandLineOption(QStringList() << QLatin1String("link"), i18n("link files to directory or url"), i18n("path or url")));
+    parser.addOption(QCommandLineOption(QStringList() << QLatin1String("copy"), i18n("copy files to folder or url"), i18n("path or url")));
+    parser.addOption(QCommandLineOption(QStringList() << QLatin1String("move"), i18n("move files to folder or url"), i18n("path or url")));
+    parser.addOption(QCommandLineOption(QStringList() << QLatin1String("link"), i18n("link files to folder or url"), i18n("path or url")));
     parser.addOption(QCommandLineOption(QStringList() << QLatin1String("start"), i18n("start renaming immediately")));
     parser.addOption(QCommandLineOption(QStringList() << QLatin1String("test"), i18n("start KRename's selftest (developers only)")));
     // This option was never implemented in the KDE4 version:
