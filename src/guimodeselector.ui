@@ -54,7 +54,7 @@
       <item>
        <widget class="QRadioButton" name="optionWizard" >
         <property name="text" >
-         <string>Use &amp;wizard style GUI (beginners)</string>
+         <string>Use &amp;assistant style GUI (beginners)</string>
         </property>
         <property name="checked" >
          <bool>true</bool>
