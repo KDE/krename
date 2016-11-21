@@ -192,11 +192,10 @@ void KRenameWindow::setupGui()
     m_guiMode    = &tAdvancedMode;
 
     m_buttonFinish = new QPushButton( QIcon::fromTheme(QStringLiteral("dialog-ok")),    i18n("&Finish") );
-    m_buttonClose  = new QPushButton( QIcon::fromTheme(QStringLiteral("dialog-close")), i18n("&Close") );
 
-    m_buttons->setStandardButtons(QDialogButtonBox::Help);
+    m_buttons->setStandardButtons(QDialogButtonBox::Help | QDialogButtonBox::Close);
     m_buttons->addButton( m_buttonFinish, QDialogButtonBox::AcceptRole );
-    m_buttons->addButton( m_buttonClose,  QDialogButtonBox::RejectRole );
+    m_buttonClose = m_buttons->button( QDialogButtonBox::Close );
 
     KHelpMenu *helpMenu = new KHelpMenu(this);
     m_buttons->button(QDialogButtonBox::Help)->setMenu(helpMenu->menu());
