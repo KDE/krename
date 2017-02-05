@@ -10,6 +10,7 @@ Actions=rename
 Exec=krename %U
 Icon=krename
 Name=Rename with KRename
+Name[ar]=أعد التّسمية ب‍«مغيّر أسمائك»
 Name[ca]=Reanomena amb el KRename
 Name[ca@valencia]=Reanomena amb el KRename
 Name[cs]=Přejmenovat s KRename
