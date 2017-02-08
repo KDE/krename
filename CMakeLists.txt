@@ -84,3 +84,4 @@ configure_file(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename
 # Directories
 
 add_subdirectory(src)
+add_subdirectory(autotests)
