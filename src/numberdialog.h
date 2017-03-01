@@ -57,7 +57,7 @@ class NumberDialog : public QDialog {
      */
     QList<int> skipNumbers() const;
 
- private slots:
+ private Q_SLOTS:
 
      void slotAddNumber();
      void slotRemoveNumber();

@@ -43,7 +43,7 @@ class KRenameImpl : public QObject {
 
     static QWidget* launch( const QRect & rect, const KRenameFile::List & list, QCommandLineParser *commandLine = 0 );
 
- public slots:
+ public Q_SLOTS:
     /** Updates the preview of the filenames after renaming
      */
     void slotUpdatePreview();
@@ -94,7 +94,7 @@ class KRenameImpl : public QObject {
      */
     void loadConfig();
 
- private slots:
+ private Q_SLOTS:
     /** Save configuration
      */
     void saveConfig();
@@ -273,16 +273,16 @@ class KRenameImpl : public QObject, public KRenameDCOP {
          */
         inline bool hasCommandlineProfile() const;
 
-    public slots:
+    public Q_SLOTS:
         void setFileNameTemplate( const QString & t );
         void setCounterStart( int index );
 
-    signals:
+    Q_SIGNALS:
         void pageDone( QWidget* page, const QString & title );
         void showPage( int page );
         void enableFinish( bool b );
 
-    private slots:
+    private Q_SLOTS:
         void about();
         void addFile();
         bool checkErrors();

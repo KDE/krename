@@ -211,7 +211,7 @@ class BatchRenamer : public QObject {
         QString processNumber( int length, const QString & appendix );
         QString processToken( QString token, QString oldname, int i );
 
-    public slots:
+    public Q_SLOTS:
 
         /** Sets the current mode of renaming.
          *  KRename can rename files, move them while

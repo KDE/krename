@@ -36,7 +36,7 @@ class InsertPartFilenameDlg : public QDialog {
      */
     inline const QString & command() const;
 
- private slots:
+ private Q_SLOTS:
     void slotSelectionChanged();
     void slotUpdateKRenameCommand();
 

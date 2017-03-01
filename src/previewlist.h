@@ -35,11 +35,11 @@ class PreviewList : public QTreeView {
         m_model = model;
     }
 
- signals:
+ Q_SIGNALS:
     void addFiles();
     void updateCount();
 
- private slots:
+ private Q_SLOTS:
      void slotOpen();
      void slotRemove();
      void slotManually();

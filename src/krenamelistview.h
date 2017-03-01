@@ -45,7 +45,7 @@ public:
      */
     inline void setInfoWidget(QWidget* w);
 
-public slots:
+public Q_SLOTS:
     void slotUpdateCount();
 
 protected:

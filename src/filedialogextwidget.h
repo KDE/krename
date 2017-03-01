@@ -57,7 +57,7 @@ class FileDialogExtWidget : public QDialog {
     QList<QUrl> selectedUrls() { return m_fileWidget->selectedUrls(); }
     QString currentFilter() { return m_fileWidget->currentFilter(); }
 
- private slots:
+ private Q_SLOTS:
     void enableControls();
 
  private:

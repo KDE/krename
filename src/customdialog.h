@@ -47,7 +47,7 @@ class CustomDialog : public QDialog {
      */
     EManualChangeMode manualChangeMode() const;
 
- private slots:
+ private Q_SLOTS:
     void slotEnableControls();
 
  private:

@@ -120,7 +120,7 @@ class DateTimePlugin : public QObject, public Plugin {
      */
     virtual void createUI( QWidget* parent ) const;
 
- private slots:
+ private Q_SLOTS:
      void slotGetCurrentTime();
 
  private:

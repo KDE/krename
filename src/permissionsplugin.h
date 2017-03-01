@@ -118,7 +118,7 @@ class PermissionsPlugin : public QObject, public Plugin {
      */
     virtual void createUI( QWidget* parent ) const;
 
- private slots:
+ private Q_SLOTS:
     void slotEnableControls();
     void slotAdvancedPermissions();
     void slotUpdatePermissions();

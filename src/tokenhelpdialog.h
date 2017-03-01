@@ -55,10 +55,10 @@ class TokenHelpDialog : public QDialog {
      */
     static const QString getTokenSeparator();
 
- public slots:
+ public Q_SLOTS:
      int exec();
 
- private slots:
+ private Q_SLOTS:
     void slotInsert();
 
     void slotCategoryChanged( QTreeWidgetItem* item );

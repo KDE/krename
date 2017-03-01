@@ -219,12 +219,12 @@ class KRenameWindow : public KMainWindow {
      */
     void showFilenameTab();
 
- public slots:
+ public Q_SLOTS:
     /** Resets the enabled/disabled state of all GUI elements correctly
      */
     void slotEnableControls();
 
- signals:
+ Q_SIGNALS:
     /** Called when the krenamewindow
      *  needs an update of the file cound
      *
@@ -320,7 +320,7 @@ class KRenameWindow : public KMainWindow {
      */
     void accepted();
 
- private slots:
+ private Q_SLOTS:
     void slotBack();
     void slotNext();
     void slotFinish();

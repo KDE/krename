@@ -36,7 +36,7 @@ public:
     explicit StartUpInfo(QWidget* parent = NULL);
     virtual ~StartUpInfo();
 
-signals:
+Q_SIGNALS:
     /**
      * Emitted when the user clicks the link to add more files.
      */

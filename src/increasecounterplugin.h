@@ -115,7 +115,7 @@ class IncreaseCounterPlugin : public QObject, public Plugin {
      */
     virtual void createUI( QWidget* parent ) const;
 
- private slots:
+ private Q_SLOTS:
     /**
      * Called when the user changes the offset through the UI
      *

@@ -155,7 +155,7 @@ class KRenameModel : public QAbstractListModel {
     inline ESplitMode splitMode();
     inline unsigned int splitDot();
 
-signals:
+Q_SIGNALS:
     /** This signal is emitted when the maximum number of
      *  dots in a filename that can be used to separate
      *  filename and extension has changed (by adding a new file).
@@ -168,7 +168,7 @@ signals:
      */
     void filesDropped();
 
-private slots:
+private Q_SLOTS:
     void slotListerDone( ThreadedLister* lister );
     void gotPreview (const KFileItem &item, const QPixmap &preview);
 

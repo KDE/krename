@@ -32,7 +32,10 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
                       ${CMAKE_SOURCE_DIR}/cmake/modules)
 
 # To catch potential errors when porting from KUrl
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
+add_definitions(
+    -DQT_NO_URL_CAST_FROM_STRING
+    -DQT_NO_SIGNALS_SLOTS_KEYWORDS
+)
 
 set(KRENAME_VERSION "4.0.9")
 

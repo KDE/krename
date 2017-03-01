@@ -49,7 +49,7 @@ class TokenSortModeDialog : public QDialog {
      */
     void initTokens();
 
- private slots:
+ private Q_SLOTS:
 
     void slotEnableControls();
 

@@ -48,10 +48,10 @@ class ExtHistoryCombo : public KHistoryComboBox {
      */
     void selectAll();
 
- signals:
+ Q_SIGNALS:
     void delayedTextChanged();
 
- private slots:
+ private Q_SLOTS:
      void slotTextChanged();
 
  private:

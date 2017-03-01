@@ -61,13 +61,13 @@ class ThreadedLister : public QObject
         inline void setListHidden( bool h );
         inline void setListRecursively( bool r );
 
-    signals:
+    Q_SIGNALS:
         void listerDone( ThreadedLister* );
 
     protected:
         void run();
 
-    private slots:
+    private Q_SLOTS:
         void completed();
 
         void foundItem(KIO::Job*, const KIO::UDSEntryList & list);

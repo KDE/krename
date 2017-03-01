@@ -102,7 +102,7 @@ class ProgressDialog : public QDialog {
      */
     void renamingDone( bool enableMore, bool enableUndo, BatchRenamer* renamer, int errors );
 
- private slots:
+ private Q_SLOTS:
      /** Called when the user cancels the operation
       */
      void slotCancelled();

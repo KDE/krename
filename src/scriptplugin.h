@@ -160,7 +160,7 @@ class ScriptPlugin : public QObject, public Plugin {
      */
     void insertVariable( const char* name );
 
- private slots:
+ private Q_SLOTS:
     void slotEnableControls();
     void slotAdd();
     void slotRemove();
