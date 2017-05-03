@@ -292,7 +292,7 @@ void KRenameModel::removeFiles( const QList<int> & remove )
     int offset = 0;
 
     QList<int> copy( remove );
-    qSort( copy );
+    std::sort( copy.begin(), copy.end() );
 
     QList<int>::const_iterator it = copy.begin();
     this->beginRemoveRows( QModelIndex(), *it, copy.back() );
@@ -317,30 +317,30 @@ void KRenameModel::sortFiles( ESortMode mode, const QString & customSortToken, K
     m_eCustomSortMode = customSortMode;
 
     if( mode == eSortMode_Ascending )
-        qSort( m_vector->begin(), m_vector->end(), ascendingKRenameFileLessThan );
+        std::sort( m_vector->begin(), m_vector->end(), ascendingKRenameFileLessThan );
     else if( mode == eSortMode_Descending )
-        qSort( m_vector->begin(), m_vector->end(), descendingKRenameFileLessThan );
+        std::sort( m_vector->begin(), m_vector->end(), descendingKRenameFileLessThan );
     else if( mode == eSortMode_Numeric )
-        qSort( m_vector->begin(), m_vector->end(), numericKRenameFileLessThan );
+        std::sort( m_vector->begin(), m_vector->end(), numericKRenameFileLessThan );
     else if( mode == eSortMode_Random )
-        qSort( m_vector->begin(), m_vector->end(), randomKRenameFileLessThan );
+        std::sort( m_vector->begin(), m_vector->end(), randomKRenameFileLessThan );
     else if( mode == eSortMode_AscendingDate )
     {
         KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector,
                                   KRenameTokenSorter::eSimpleSortMode_Ascending);
-        qSort( m_vector->begin(), m_vector->end(), sorter );
+        std::sort( m_vector->begin(), m_vector->end(), sorter );
     }
     else if( mode == eSortMode_DescendingDate )
     {
         KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector,
                                   KRenameTokenSorter::eSimpleSortMode_Descending);
-        qSort( m_vector->begin(), m_vector->end(), sorter );
+        std::sort( m_vector->begin(), m_vector->end(), sorter );
     }
     else if( mode == eSortMode_Token )
     {
         KRenameTokenSorter sorter(m_renamer, customSortToken, *m_vector,
                                   customSortMode);
-        qSort( m_vector->begin(), m_vector->end(), sorter );
+        std::sort( m_vector->begin(), m_vector->end(), sorter );
     }
 
     endResetModel();
@@ -363,7 +363,7 @@ void KRenameModel::moveFilesUp( const QList<int> & files )
     KRenameFile tmp;
 
     QList<int> copy( files );
-    qSort( copy );
+    std::sort( copy.begin(), copy.end() );
 
     beginResetModel();
     QList<int>::const_iterator it = copy.begin();
@@ -394,7 +394,7 @@ void KRenameModel::moveFilesDown( const QList<int> & files )
 
     QList<int> copy( files );
     // sort the list in reverse order
-    qSort( copy.begin(), copy.end(), qGreater<int>() );
+    std::sort( copy.begin(), copy.end(), std::greater<int>() );
 
     beginResetModel();
     QList<int>::const_iterator it = copy.begin();
