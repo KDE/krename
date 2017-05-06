@@ -15,8 +15,6 @@
   </description>
   <url type="homepage">https://www.kde.org/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=krename</url>
-  <screenshots>
-  </screenshots>
   <project_group>KDE</project_group>
   <provides>
     <binary>krename</binary>
