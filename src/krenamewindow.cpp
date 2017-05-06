@@ -486,9 +486,9 @@ QList<int> KRenameWindow::selectedFileItems() const
 
     QItemSelectionModel* selection = m_pageFiles->fileList->selectionModel();
     QModelIndexList      indices = selection->selectedIndexes();
-    QModelIndexList::const_iterator it = indices.begin();
+    QModelIndexList::const_iterator it = indices.constBegin();
 
-    while( it != indices.end() )
+    while( it != indices.constEnd() )
     {
         selected.append( (*it).row() );
         ++it;
@@ -504,9 +504,9 @@ QList<int> KRenameWindow::selectedFileItemsPreview() const
     QItemSelectionModel* selection = m_pageFilename->listPreview->selectionModel();
 
     QModelIndexList      indices = selection->selectedIndexes();
-    QModelIndexList::const_iterator it = indices.begin();
+    QModelIndexList::const_iterator it = indices.constBegin();
 
-    while( it != indices.end() )
+    while( it != indices.constEnd() )
     {
         selected.append( (*it).row() );
         ++it;
@@ -1013,8 +1013,8 @@ void KRenameWindow::slotMoveUp()
     model->moveFilesUp( sel );
 
     QItemSelectionModel* selection = m_pageFiles->fileList->selectionModel();
-    QList<int>::const_iterator it  = sel.begin();
-    while( it != sel.end() )
+    QList<int>::const_iterator it  = sel.constBegin();
+    while( it != sel.constEnd() )
     {
         if( *it - 1 > 0 )
             selection->select( model->createIndex( *it - 1 ), QItemSelectionModel::Select );
@@ -1037,8 +1037,8 @@ void KRenameWindow::slotMoveDown()
 
 
     QItemSelectionModel* selection = m_pageFiles->fileList->selectionModel();
-    QList<int>::const_iterator it  = sel.begin();
-    while( it != sel.end() )
+    QList<int>::const_iterator it  = sel.constBegin();
+    while( it != sel.constEnd() )
     {
         if( *it + 1 < model->rowCount() )
             selection->select( model->createIndex( *it + 1 ), QItemSelectionModel::Select );

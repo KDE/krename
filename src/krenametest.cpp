@@ -552,7 +552,7 @@ bool KRenameTest::numberingTest( int length, int start, int step, QList<int> ski
     while( skip.contains( cur ) )
         cur += step;
 
-    KRenameFile::List::ConstIterator it = list.begin();
+    KRenameFile::List::ConstIterator it = list.constBegin();
 
     while( it != list.end()  && result )
     {

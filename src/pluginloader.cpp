@@ -79,8 +79,8 @@ Plugin* PluginLoader::findPlugin( const QString & token )
 
 
     // now search in all tokens
-    QMap<QString,Plugin*>::const_iterator it = m_tokenMap.begin();
-    while( it != m_tokenMap.end() )
+    QMap<QString,Plugin*>::const_iterator it = m_tokenMap.constBegin();
+    while( it != m_tokenMap.constEnd() )
     {
         if( QRegExp( it.key() ).exactMatch( lower ) )
         {
@@ -205,8 +205,8 @@ void PluginLoader::sendUpdatePreview()
 
 void PluginLoader::loadConfig( KConfigGroup & group )
 {
-    QList<Plugin*>::const_iterator it = m_plugins.begin();
-    while( it != m_plugins.end() )
+    QList<Plugin*>::const_iterator it = m_plugins.constBegin();
+    while( it != m_plugins.constEnd() )
     {
 	(*it)->loadConfig( group );
         ++it;
@@ -216,8 +216,8 @@ void PluginLoader::loadConfig( KConfigGroup & group )
 
 void PluginLoader::saveConfig( KConfigGroup & group )
 {
-    QList<Plugin*>::const_iterator it = m_plugins.begin();
-    while( it != m_plugins.end() )
+    QList<Plugin*>::const_iterator it = m_plugins.constBegin();
+    while( it != m_plugins.constEnd() )
     {
 	(*it)->saveConfig( group );
         ++it;

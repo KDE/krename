@@ -43,8 +43,8 @@ NumberDialog::NumberDialog( int start, int step, bool reset, QList<int> skip, QW
     m_widget.checkReset->setChecked( reset );
     m_widget.listSkip->setSortingEnabled( true ); // TODO: sort numeric
 
-    QList<int>::ConstIterator it = skip.begin();
-    while( it != skip.end() )
+    QList<int>::ConstIterator it = skip.constBegin();
+    while( it != skip.constEnd() )
     {
         m_widget.listSkip->addItem( QString::number( *it ) );
         ++it;

@@ -131,11 +131,11 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     QList<QUrl>                  dirs;
     KRenameFile::List           files;
     QList<QUrl>                 urls = data->urls();
-    QList<QUrl>::const_iterator it   = urls.begin();
+    QList<QUrl>::const_iterator it   = urls.constBegin();
 
     QApplication::setOverrideCursor( Qt::BusyCursor );
 
-    while( it != urls.end() )
+    while( it != urls.constEnd() )
     {
         if( (*it).isValid() )
         {
@@ -154,9 +154,9 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     this->addFiles( files );
     if( dirs.count() )
     {
-        QList<QUrl>::const_iterator it = dirs.begin();
+        QList<QUrl>::const_iterator it = dirs.constBegin();
 
-        while( it != dirs.end() )
+        while( it != dirs.constEnd() )
         {
             ThreadedLister* thl = new ThreadedLister( *it, NULL, this );
             connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
@@ -294,9 +294,9 @@ void KRenameModel::removeFiles( const QList<int> & remove )
     QList<int> copy( remove );
     std::sort( copy.begin(), copy.end() );
 
-    QList<int>::const_iterator it = copy.begin();
+    QList<int>::const_iterator it = copy.constBegin();
     this->beginRemoveRows( QModelIndex(), *it, copy.back() );
-    while( it != copy.end() )
+    while( it != copy.constEnd() )
     {
         m_vector->erase( m_vector->begin() + *it - offset );
 
@@ -366,8 +366,8 @@ void KRenameModel::moveFilesUp( const QList<int> & files )
     std::sort( copy.begin(), copy.end() );
 
     beginResetModel();
-    QList<int>::const_iterator it = copy.begin();
-    while( it != copy.end() )
+    QList<int>::const_iterator it = copy.constBegin();
+    while( it != copy.constEnd() )
     {
         index                     = *it;
         if( index <= 0 ) // cannot swap top item
@@ -397,8 +397,8 @@ void KRenameModel::moveFilesDown( const QList<int> & files )
     std::sort( copy.begin(), copy.end(), std::greater<int>() );
 
     beginResetModel();
-    QList<int>::const_iterator it = copy.begin();
-    while( it != copy.end() )
+    QList<int>::const_iterator it = copy.constBegin();
+    while( it != copy.constEnd() )
     {
         index                     = *it;
         if( index + 1 >= m_vector->size() ) // cannot swap bottom item

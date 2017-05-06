@@ -1110,10 +1110,10 @@ QString BatchRenamer::findTrimmed( const QString & token, const QString & name, 
 
 QString BatchRenamer::findReplace( const QString & text, const QString & origFilename, int index )
 {
-    QList<TReplaceItem>::const_iterator it = m_replace.begin();
+    QList<TReplaceItem>::const_iterator it = m_replace.constBegin();
 
     QString t( text );
-    while( it != m_replace.end() )
+    while( it != m_replace.constEnd() )
     {
         QString find( (*it).find );
 
