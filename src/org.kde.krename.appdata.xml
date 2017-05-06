@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<component type="desktop">
+  <id>org.kde.krename.desktop</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0</project_license>
+  <name>Krename</name>
+  <summary>A powerful batch file renamer</summary>
+  <description>
+    <p>
+      Krename is a very powerful batch file renamer which can rename a list of
+      files based on a set of expressions. It can copy/move the files to
+      another directory or simply rename the input files. Krename supports many
+      conversion operations.
+    </p>
+  </description>
+  <url type="homepage">https://www.kde.org/</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=krename</url>
+  <screenshots>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>krename</binary>
+  </provides>
+</component>

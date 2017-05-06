@@ -151,4 +151,5 @@ endif()
 
 install(TARGETS krename DESTINATION ${KDE_INSTALL_BINDIR})
 install(FILES org.kde.krename.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES org.kde.krename.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
