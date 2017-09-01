@@ -159,7 +159,8 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
         while( it != dirs.constEnd() )
         {
             ThreadedLister* thl = new ThreadedLister( *it, NULL, this );
-            connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
+            connect(thl, &ThreadedLister::listerDone,
+                    this, &KRenameModel::slotListerDone);
 
             thl->setListDirnamesOnly( false );
             thl->setListHidden( false );
@@ -252,8 +253,8 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
             // Start a job to create the real file previews
             KIO::PreviewJob* job = KIO::filePreview( fileItems, QSize(KRenameFile::iconSize(), KRenameFile::iconSize()) );
 
-            connect( job, SIGNAL(gotPreview(const KFileItem &,const QPixmap &)),
-                     this, SLOT(gotPreview(const KFileItem &,const QPixmap &)) );
+            connect(job, &KIO::PreviewJob::gotPreview,
+                    this, &KRenameModel::gotPreview);
             job->start();
         }
     }

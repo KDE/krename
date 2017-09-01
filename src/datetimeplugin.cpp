@@ -79,7 +79,8 @@ void DateTimePlugin::createUI( QWidget* parent ) const
 {
     m_widget->setupUi( parent );
 
-    connect( m_widget->buttonCurrent, SIGNAL( clicked(bool) ), SLOT( slotGetCurrentTime() ) );
+    connect(m_widget->buttonCurrent, &QPushButton::clicked,
+            this, &DateTimePlugin::slotGetCurrentTime);
 }
 
 void DateTimePlugin::slotGetCurrentTime()

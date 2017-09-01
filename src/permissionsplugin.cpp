@@ -156,13 +156,20 @@ void PermissionsPlugin::createUI( QWidget* parent ) const
     m_widget->comboPermGroup->setCurrentIndex( 1 );
     m_widget->comboPermOthers->setCurrentIndex( 0 );
 
-    connect( m_widget->checkOwner, SIGNAL( clicked(bool) ), SLOT( slotEnableControls() ) );
-    connect( m_widget->checkPermissions, SIGNAL( clicked(bool) ), SLOT( slotEnableControls() ) );
-    connect( m_widget->pushButton, SIGNAL( clicked(bool) ), SLOT( slotAdvancedPermissions() ) );
-    connect( m_widget->comboPermOwner, SIGNAL( activated(int) ), SLOT( slotUpdatePermissions() ) );
-    connect( m_widget->comboPermGroup, SIGNAL( activated(int) ), SLOT( slotUpdatePermissions() ) );
-    connect( m_widget->comboPermOthers, SIGNAL( activated(int) ), SLOT( slotUpdatePermissions() ) );
-    connect( m_widget->checkFolder, SIGNAL( clicked(bool) ), SLOT( slotUpdatePermissions() ) );
+    connect(m_widget->checkOwner, &QCheckBox::clicked,
+            this, &PermissionsPlugin::slotEnableControls);
+    connect(m_widget->checkPermissions, &QCheckBox::clicked,
+            this, &PermissionsPlugin::slotEnableControls);
+    connect(m_widget->pushButton, &QPushButton::clicked,
+            this, &PermissionsPlugin::slotAdvancedPermissions);
+    connect(m_widget->comboPermOwner, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated),
+            this, &PermissionsPlugin::slotUpdatePermissions);
+    connect(m_widget->comboPermGroup, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated),
+            this, &PermissionsPlugin::slotUpdatePermissions);
+    connect(m_widget->comboPermOthers, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated),
+            this, &PermissionsPlugin::slotUpdatePermissions);
+    connect(m_widget->checkFolder, &QCheckBox::clicked,
+            this, &PermissionsPlugin::slotUpdatePermissions);
 }
 
 void PermissionsPlugin::slotEnableControls()
@@ -238,8 +245,10 @@ void PermissionsPlugin::slotAdvancedPermissions()
     }
 
     QDialogButtonBox* box = new QDialogButtonBox( QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, &dialog );
-    connect( box, SIGNAL( accepted() ), &dialog, SLOT(accept() ) );
-    connect( box, SIGNAL( rejected() ), &dialog, SLOT(reject() ) );
+    connect(box, &QDialogButtonBox::accepted,
+            &dialog, &QDialog::accept);
+    connect(box, &QDialogButtonBox::rejected,
+            &dialog, &QDialog::reject);
 
     layout->addWidget( groupPermission );
     layout->addWidget( box );

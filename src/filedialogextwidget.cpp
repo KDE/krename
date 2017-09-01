@@ -43,7 +43,6 @@ FileDialogExtWidget::FileDialogExtWidget(QWidget *parent)
         // We have to do this manually for some reason
         accept();
     });
-
     layout()->addWidget(m_fileWidget);
 
     QWidget *extraWidget = new QWidget;
@@ -65,7 +64,8 @@ FileDialogExtWidget::FileDialogExtWidget(QWidget *parent)
     extraLayout->addWidget( checkOnlyDir );
     m_fileWidget->setCustomWidget(extraWidget);
 
-    connect( checkRecursive, SIGNAL( clicked() ), SLOT( enableControls() ));
+    connect(checkRecursive, &QCheckBox::clicked,
+            this, &FileDialogExtWidget::enableControls);
 
     checkRecursive->setToolTip( i18n("Walk recursively through the folder tree and also add the content "
                                      "of all subfolders to the list of files to rename.") );
@@ -82,7 +82,8 @@ FileDialogExtWidget::FileDialogExtWidget(QWidget *parent)
     buttonBox->addButton(m_fileWidget->okButton(), QDialogButtonBox::AcceptRole);
     buttonBox->addButton(m_fileWidget->cancelButton(), QDialogButtonBox::RejectRole);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
-    connect(buttonBox, &QDialogButtonBox::accepted, m_fileWidget, &KFileWidget::slotOk);
+    connect(buttonBox, &QDialogButtonBox::accepted,
+            m_fileWidget, &KFileWidget::slotOk);
     layout()->addWidget(buttonBox);
 }
 

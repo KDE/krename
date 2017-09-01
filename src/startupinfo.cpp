@@ -30,8 +30,10 @@ StartUpInfo::StartUpInfo(QWidget* parent)
     m_widget->addIcon->setPixmap( BarIcon("document-open-folder") );
     m_widget->templateIcon->setPixmap( BarIcon("edit-rename") );
 
-    connect(m_widget->labelAdd, SIGNAL(leftClickedUrl()), SIGNAL(addFiles()));
-    connect(m_widget->labelTemplate, SIGNAL(leftClickedUrl()), SIGNAL(enterTemplate()));
+    connect(m_widget->labelAdd, static_cast<void (KUrlLabel::*)()>(&KUrlLabel::leftClickedUrl),
+            this, &StartUpInfo::addFiles);
+    connect(m_widget->labelTemplate, static_cast<void (KUrlLabel::*)()>(&KUrlLabel::leftClickedUrl),
+            this, &StartUpInfo::enterTemplate);
 }
 
 StartUpInfo::~StartUpInfo()

@@ -116,17 +116,21 @@ KRenameWindow::KRenameWindow( QWidget* parent )
     setupIcons();
 
     StartUpInfo* startUp = new StartUpInfo();
-    connect( startUp, SIGNAL(addFiles()), SIGNAL(addFiles()));
-    connect( startUp, SIGNAL(enterTemplate()), SLOT(slotGotoTemplatesPage()));
+    connect(startUp, &StartUpInfo::addFiles, this, &KRenameWindow::addFiles);
+    connect(startUp, &StartUpInfo::enterTemplate,
+            this, &KRenameWindow::slotGotoTemplatesPage);
 
     m_pageDests->urlrequester->setMode( KFile::Directory | KFile::ExistingOnly );
     m_pageFiles->fileList->setItemDelegate( m_delegate );
     m_pageFiles->fileList->setInfoWidget( startUp );
 
     // Make sure that now signal occurs before setupGui was called
-    connect( m_tabBar, SIGNAL(currentChanged(int)), SLOT(showPage(int)));
-    connect( m_buttonClose, SIGNAL(clicked(bool)), SLOT(close()));
-    connect( m_buttons, SIGNAL(accepted()), SLOT(slotFinish()));
+    connect(m_tabBar, &QTabBar::currentChanged,
+            this, &KRenameWindow::showPage);
+    connect(m_buttonClose, &QPushButton::clicked,
+            this, &KRenameWindow::close);
+    connect(m_buttons, &QDialogButtonBox::accepted,
+            this, &KRenameWindow::slotFinish);
 
 
     this->setAutoSaveSettings( "KRenameWindowSettings", true );
@@ -278,63 +282,105 @@ void KRenameWindow::setupIcons()
 
 void KRenameWindow::setupSlots()
 {
-    connect( m_pageFiles->buttonAdd,       SIGNAL(clicked(bool)), SIGNAL(addFiles()));
-    connect( m_pageFiles->buttonRemove,    SIGNAL(clicked(bool)), SIGNAL(removeFiles()));
-    connect( m_pageFiles->buttonRemoveAll, SIGNAL(clicked(bool)), SIGNAL(removeAllFiles()));
-    connect( m_pageFiles->checkPreview,    SIGNAL(clicked(bool)), SLOT( slotPreviewChanged()));
-    connect( m_pageFiles->checkName,       SIGNAL(clicked(bool)), SLOT( slotPreviewChanged()));
-    connect( m_pageFiles->comboSort,       SIGNAL(currentIndexChanged(int)), SLOT( slotSortChanged(int)));
-    connect( m_pageFiles->fileList,        SIGNAL(doubleClicked(const QModelIndex&)), SLOT( slotOpenFile(const QModelIndex&)));
-    connect( m_pageFiles->buttonUp,        SIGNAL(clicked(bool)), SLOT( slotMoveUp() ) );
-    connect( m_pageFiles->buttonDown,      SIGNAL(clicked(bool)), SLOT( slotMoveDown() ) );
+    connect(m_pageFiles->buttonAdd, &QPushButton::clicked,
+            this, &KRenameWindow::addFiles);
+    connect(m_pageFiles->buttonRemove, &QPushButton::clicked,
+            this, &KRenameWindow::removeFiles);
+    connect(m_pageFiles->buttonRemoveAll, &QPushButton::clicked,
+            this, &KRenameWindow::removeAllFiles);
+    connect(m_pageFiles->checkPreview, &QCheckBox::clicked,
+            this, &KRenameWindow::slotPreviewChanged);
+    connect(m_pageFiles->checkName, &QCheckBox::clicked,
+            this, &KRenameWindow::slotPreviewChanged);
+    connect(m_pageFiles->comboSort, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
+            this, &KRenameWindow::slotSortChanged);
+    connect(m_pageFiles->fileList, &KRenameListView::doubleClicked,
+            this, &KRenameWindow::slotOpenFile);
+    connect(m_pageFiles->buttonUp, &QPushButton::clicked,
+            this, &KRenameWindow::slotMoveUp);
+    connect(m_pageFiles->buttonDown, &QPushButton::clicked,
+            this, &KRenameWindow::slotMoveDown);
 
-    connect( m_pageDests->optionRename,    SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
-    connect( m_pageDests->optionCopy,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
-    connect( m_pageDests->optionMove,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
-    connect( m_pageDests->optionLink,      SIGNAL(clicked(bool)), SLOT(slotRenameModeChanged()));
-    connect( m_pageDests->checkOverwrite,  SIGNAL(clicked(bool)), SIGNAL(overwriteFilesChanged(bool)));
+    connect(m_pageDests->optionRename, &QRadioButton::clicked,
+            this, &KRenameWindow::slotRenameModeChanged);
+    connect(m_pageDests->optionCopy, &QRadioButton::clicked,
+            this, &KRenameWindow::slotRenameModeChanged);
+    connect(m_pageDests->optionMove, &QRadioButton::clicked,
+            this, &KRenameWindow::slotRenameModeChanged);
+    connect(m_pageDests->optionLink, &QRadioButton::clicked,
+            this, &KRenameWindow::slotRenameModeChanged);
+    connect(m_pageDests->checkOverwrite, &QCheckBox::clicked,
+            this, &KRenameWindow::overwriteFilesChanged);
 
-    connect( m_pagePlugins->listPlugins,   SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(slotPluginChanged(QTreeWidgetItem*)));
-    connect( m_pagePlugins->checkEnablePlugin, SIGNAL(clicked(bool)), SLOT(slotPluginEnabled()));
+    connect(m_pagePlugins->listPlugins, &QTreeWidget::itemClicked,
+            this, &KRenameWindow::slotPluginChanged);
+    connect(m_pagePlugins->checkEnablePlugin, &QCheckBox::clicked,
+            this, &KRenameWindow::slotPluginEnabled);
 
-    connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotEnableControls()));
-    connect( m_pageFilename->buttonNumbering,    SIGNAL(clicked(bool))       , SIGNAL(showAdvancedNumberingDialog()));
-    connect( m_pageFilename->buttonInsert,       SIGNAL(clicked(bool))       , SIGNAL(showInsertPartFilenameDialog()));
-    connect( m_pageFilename->buttonFind,         SIGNAL(clicked(bool))       , SIGNAL(showFindReplaceDialog()));
+    connect(m_pageFilename->checkExtension, &QCheckBox::clicked,
+            this, &KRenameWindow::slotEnableControls);
+    connect(m_pageFilename->buttonNumbering, &QPushButton::clicked,
+            this, &KRenameWindow::showAdvancedNumberingDialog);
+    connect(m_pageFilename->buttonInsert, &QPushButton::clicked,
+            this, &KRenameWindow::showInsertPartFilenameDialog);
+    connect(m_pageFilename->buttonFind, &QPushButton::clicked,
+            this, &KRenameWindow::showFindReplaceDialog);
 
-    connect( m_pageFilename->filenameTemplate,   SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
-    connect( m_pageFilename->extensionTemplate,  SIGNAL(delayedTextChanged()), SLOT(slotTemplateChanged()));
-    connect( m_pageFilename->checkExtension,     SIGNAL(clicked(bool))       , SLOT(slotTemplateChanged()));
-    connect( m_pageFilename->buttonFunctions,    SIGNAL(clicked(bool))       , SLOT(slotTokenHelpRequested()));
-    connect( m_pageFilename->comboExtension,     SIGNAL(currentIndexChanged(int)), SLOT(slotExtensionSplitModeChanged(int)));
+    connect(m_pageFilename->filenameTemplate, &ExtHistoryCombo::delayedTextChanged,
+            this, &KRenameWindow::slotTemplateChanged);
+    connect(m_pageFilename->extensionTemplate, &ExtHistoryCombo::delayedTextChanged,
+            this, &KRenameWindow::slotTemplateChanged);
+    connect(m_pageFilename->checkExtension, &QCheckBox::clicked,
+            this, &KRenameWindow::slotTemplateChanged);
+    connect(m_pageFilename->buttonFunctions, &QPushButton::clicked,
+            this, &KRenameWindow::slotTokenHelpRequested);
+    connect(m_pageFilename->comboExtension, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
+            this, &KRenameWindow::slotExtensionSplitModeChanged);
 
-    connect( m_pageFilename->buttonUp,           SIGNAL(clicked(bool)), SLOT( slotMoveUpPreview() ) );
-    connect( m_pageFilename->buttonDown,         SIGNAL(clicked(bool)), SLOT( slotMoveDownPreview() ) );
+    connect(m_pageFilename->buttonUp, &QPushButton::clicked,
+            this, &KRenameWindow::slotMoveUpPreview);
+    connect(m_pageFilename->buttonDown, &QPushButton::clicked,
+            this, &KRenameWindow::slotMoveDownPreview);
 
-    connect( m_pageFilename->listPreview,        SIGNAL(addFiles()),    SIGNAL(addFiles()));
-    connect( m_pageFilename->listPreview,        SIGNAL(updateCount()), SIGNAL(updateCount()));
+    connect(m_pageFilename->listPreview, &PreviewList::addFiles,
+            this, &KRenameWindow::addFiles);
+    connect(m_pageFilename->listPreview, &PreviewList::updateCount,
+            this, &KRenameWindow::updateCount);
 
-    connect( m_pageFilename->comboFilenameCustom,  SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
-    connect( m_pageFilename->comboSuffixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
-    connect( m_pageFilename->comboPrefixCustom,    SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
-    connect( m_pageFilename->comboExtensionCustom, SIGNAL(delayedTextChanged()), SLOT(slotSimpleTemplateChanged()));
+    connect(m_pageFilename->comboFilenameCustom, &ExtHistoryCombo::delayedTextChanged,
+            this, &KRenameWindow::slotSimpleTemplateChanged);
+    connect(m_pageFilename->comboSuffixCustom, &ExtHistoryCombo::delayedTextChanged,
+            this, &KRenameWindow::slotSimpleTemplateChanged);
+    connect(m_pageFilename->comboPrefixCustom, &ExtHistoryCombo::delayedTextChanged,
+            this, &KRenameWindow::slotSimpleTemplateChanged);
+    connect(m_pageFilename->comboExtensionCustom, &ExtHistoryCombo::delayedTextChanged,
+            this, &KRenameWindow::slotSimpleTemplateChanged);
 
-    connect( m_pageFilename->comboPrefix,          SIGNAL(currentIndexChanged(int)), SLOT(slotSimpleTemplateChanged()));
-    connect( m_pageFilename->comboSuffix,          SIGNAL(currentIndexChanged(int)), SLOT(slotSimpleTemplateChanged()));
-    connect( m_pageFilename->comboFilenameSimple,  SIGNAL(currentIndexChanged(int)), SLOT(slotSimpleTemplateChanged()));
-    connect( m_pageFilename->comboExtensionSimple, SIGNAL(currentIndexChanged(int)), SLOT(slotSimpleTemplateChanged()));
+    connect(m_pageFilename->comboPrefix, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
+            this, &KRenameWindow::slotSimpleTemplateChanged);
+    connect(m_pageFilename->comboSuffix, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
+            this, &KRenameWindow::slotSimpleTemplateChanged);
+    connect(m_pageFilename->comboFilenameSimple, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
+            this, &KRenameWindow::slotSimpleTemplateChanged);
+    connect(m_pageFilename->comboExtensionSimple, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
+            this, &KRenameWindow::slotSimpleTemplateChanged);
 
-    connect( m_pageFilename->comboExtensionSimple, SIGNAL(currentIndexChanged(int)), SLOT(slotEnableControls()));
-    connect( m_pageFilename->comboFilenameSimple,  SIGNAL(currentIndexChanged(int)), SLOT(slotEnableControls()));
+    connect(m_pageFilename->comboExtensionSimple, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
+            this, &KRenameWindow::slotEnableControls);
+    connect(m_pageFilename->comboFilenameSimple, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
+            this, &KRenameWindow::slotEnableControls);
 
-    connect( m_pageFilename->buttonHelp1,          SIGNAL(clicked(bool)),        SLOT(slotTokenHelpRequestedWizard1()));
-    connect( m_pageFilename->buttonHelp2,          SIGNAL(clicked(bool)),        SLOT(slotTokenHelpRequestedWizard2()));
-    connect( m_pageFilename->buttonHelp3,          SIGNAL(clicked(bool)),        SLOT(slotTokenHelpRequestedWizard3()));
-    connect( m_pageFilename->buttonHelp4,          SIGNAL(clicked(bool)),        SLOT(slotTokenHelpRequestedWizard4()));
-    connect( m_pageFilename->buttonFindSimple,     SIGNAL(clicked(bool))       , SIGNAL(showFindReplaceDialog()));
+    connect(m_pageFilename->buttonHelp1, &QPushButton::clicked, this, &KRenameWindow::slotTokenHelpRequestedWizard1);
+    connect(m_pageFilename->buttonHelp2, &QPushButton::clicked, this, &KRenameWindow::slotTokenHelpRequestedWizard2);
+    connect(m_pageFilename->buttonHelp3, &QPushButton::clicked, this, &KRenameWindow::slotTokenHelpRequestedWizard3);
+    connect(m_pageFilename->buttonHelp4, &QPushButton::clicked, this, &KRenameWindow::slotTokenHelpRequestedWizard4);
+    connect(m_pageFilename->buttonFindSimple, &QPushButton::clicked,
+            this, &KRenameWindow::showFindReplaceDialog);
 
-    connect( m_pageFilename->spinDigits,           SIGNAL(valueChanged(int)),    SLOT(slotSimpleTemplateChanged()));
-    connect( m_pageFilename->spinIndex,            SIGNAL(valueChanged(int)),    SLOT(slotSimpleStartIndexChanged()));
+    connect(m_pageFilename->spinDigits, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),
+            this, &KRenameWindow::slotSimpleTemplateChanged);
+    connect(m_pageFilename->spinIndex, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),
+            this, &KRenameWindow::slotSimpleStartIndexChanged);
 }
 
 void KRenameWindow::showPage( int index )
@@ -467,7 +513,8 @@ void KRenameWindow::setModel( KRenameModel* model )
 
     m_pageFilename->listPreview->setKRenameModel( model );
 
-    connect( model, SIGNAL( maxDotsChanged(int) ), SLOT( slotMaxDotsChanged(int)) );
+    connect(model, &KRenameModel::maxDotsChanged,
+            this, &KRenameWindow::slotMaxDotsChanged);
 }
 
 void KRenameWindow::setPreviewModel( KRenamePreviewModel* model )

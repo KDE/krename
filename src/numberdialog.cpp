@@ -32,12 +32,17 @@ NumberDialog::NumberDialog( int start, int step, bool reset, QList<int> skip, QW
     layout->addWidget( widget );
     layout->addWidget( m_buttons );
 
-    connect(m_buttons, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(m_buttons, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(m_buttons, &QDialogButtonBox::accepted,
+            this, &NumberDialog::accept);
+    connect(m_buttons, &QDialogButtonBox::rejected,
+            this, &NumberDialog::reject);
 
-    connect(m_widget.buttonAdd,    SIGNAL(clicked(bool)),          SLOT(slotAddNumber()));
-    connect(m_widget.buttonRemove, SIGNAL(clicked(bool)),          SLOT(slotRemoveNumber()));
-    connect(m_widget.listSkip,     SIGNAL(itemSelectionChanged()), SLOT(slotEnableControls()));
+    connect(m_widget.buttonAdd, &QPushButton::clicked,
+            this, &NumberDialog::slotAddNumber);
+    connect(m_widget.buttonRemove, &QPushButton::clicked, this,
+            &NumberDialog::slotRemoveNumber);
+    connect(m_widget.listSkip, &QListWidget::itemSelectionChanged,
+            this, &NumberDialog::slotEnableControls);
     m_widget.spinStart->setValue( start );
     m_widget.spinStep->setValue( step );
     m_widget.checkReset->setChecked( reset );

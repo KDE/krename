@@ -34,17 +34,25 @@ ReplaceDialog::ReplaceDialog( const QList<TReplaceItem> & items, QWidget* parent
 {
     m_widget.setupUi( this );
 
-    connect(m_widget.buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(m_widget.buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(m_widget.buttonBox, &QDialogButtonBox::accepted,
+             this, &ReplaceDialog::accept);
+    connect(m_widget.buttonBox, &QDialogButtonBox::rejected,
+            this, &ReplaceDialog::reject);
 
-    connect(m_widget.buttonAdd,    SIGNAL(clicked(bool)),          SLOT(slotAdd()));
-    connect(m_widget.buttonRemove, SIGNAL(clicked(bool)),          SLOT(slotRemove()));
-    connect(m_widget.buttonEdit,   SIGNAL(clicked(bool)),          SLOT(slotEdit()));
+    connect(m_widget.buttonAdd, &QPushButton::clicked,
+            this, &ReplaceDialog::slotAdd);
+    connect(m_widget.buttonRemove, &QPushButton::clicked,
+            this, &ReplaceDialog::slotRemove);
+    connect(m_widget.buttonEdit, &QPushButton::clicked,
+            this, &ReplaceDialog::slotEdit);
 
-    connect(m_widget.buttonLoadList, SIGNAL(clicked(bool)),      SLOT(slotLoadList()));
-    connect(m_widget.buttonSaveList, SIGNAL(clicked(bool)),      SLOT(slotSaveList()));
+    connect(m_widget.buttonLoadList, &QPushButton::clicked,
+            this, &ReplaceDialog::slotLoadList);
+    connect(m_widget.buttonSaveList, &QPushButton::clicked,
+            this, &ReplaceDialog::slotSaveList);
 
-    connect(m_widget.list, SIGNAL(itemSelectionChanged()),         SLOT(slotEnableControls()));
+    connect(m_widget.list, &QTableWidget::itemSelectionChanged,
+            this, &ReplaceDialog::slotEnableControls);
 
     this->slotEnableControls();
 

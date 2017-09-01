@@ -97,8 +97,10 @@ TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
     QPushButton *insert = new QPushButton;
     buttonBox->addButton(insert, QDialogButtonBox::ActionRole);
-    this->connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    this->connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    this->connect(buttonBox, &QDialogButtonBox::accepted,
+                  this, &TokenHelpDialog::accept);
+    this->connect(buttonBox, &QDialogButtonBox::rejected,
+                  this, &TokenHelpDialog::reject);
     mainLayout->addWidget(buttonBox);
     insert->setText(i18n("&Insert" ));
 
@@ -109,13 +111,19 @@ TokenHelpDialog::TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
     m_widget.comboPreview->setModel( m_model );
     m_widget.listTokens->sortItems( 0, Qt::AscendingOrder );
 
-    connect(insert, SIGNAL(clicked(bool)), SLOT(slotInsert()));
-    connect(close, SIGNAL(clicked(bool)), SLOT(saveConfig()));
+    connect(insert, &QPushButton::clicked,
+            this, &TokenHelpDialog::slotInsert);
+    connect(close, &QPushButton::clicked,
+            this, &TokenHelpDialog::saveConfig);
 
-    connect(m_widget.listCategories, SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(slotCategoryChanged(QTreeWidgetItem*)));
-    connect(m_widget.listTokens,     SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(slotInsert()));
-    connect(m_widget.checkPreview,   SIGNAL(clicked(bool)), this, SLOT(slotPreviewClicked(bool)));
-    connect(m_widget.comboPreview,   SIGNAL(activated(int)), this, SLOT(slotUpdatePreview()));
+    connect(m_widget.listCategories, &QTreeWidget::itemClicked,
+            this, &TokenHelpDialog::slotCategoryChanged);
+    connect(m_widget.listTokens, &QTreeWidget::itemClicked,
+            this, &TokenHelpDialog::slotInsert);
+    connect(m_widget.checkPreview, &QCheckBox::clicked,
+            this, &TokenHelpDialog::slotPreviewClicked);
+    connect(m_widget.comboPreview, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated),
+            this, &TokenHelpDialog::slotUpdatePreview);
 
     slotEnableControls();
     loadConfig();

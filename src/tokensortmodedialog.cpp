@@ -29,8 +29,10 @@ TokenSortModeDialog::TokenSortModeDialog( KRenameTokenSorter::ESimpleSortMode eS
     m_dialog.radioDescending->setChecked( eSortMode == KRenameTokenSorter::eSimpleSortMode_Descending );
     m_dialog.radioNumeric->setChecked( eSortMode == KRenameTokenSorter::eSimpleSortMode_Numeric );
 
-    connect( m_dialog.radioPredefined, SIGNAL( clicked(bool) ), SLOT( slotEnableControls() ) );
-    connect( m_dialog.radioCustom, SIGNAL( clicked(bool) ), SLOT( slotEnableControls() ) );
+    connect(m_dialog.radioPredefined, &QRadioButton::clicked,
+            this, &TokenSortModeDialog::slotEnableControls);
+    connect(m_dialog.radioCustom, &QRadioButton::clicked,
+            this, &TokenSortModeDialog::slotEnableControls);
 
     m_dialog.comboPredefined->addItem( i18n("Access Date"), "accessdate;yyyyMMddHHmm" );
     m_dialog.comboPredefined->addItem( i18n("Creation Date"), "creationdate;yyyyMMddHHmm" );

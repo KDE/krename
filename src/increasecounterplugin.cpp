@@ -69,7 +69,8 @@ void IncreaseCounterPlugin::createUI( QWidget* parent ) const
 {
     m_widget->setupUi( parent );
 
-    connect( m_widget->spinOffset, SIGNAL(valueChanged(int)), SLOT(slotOffsetChanged(int)) );
+    connect(m_widget->spinOffset, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),
+            this, &IncreaseCounterPlugin::slotOffsetChanged);
 }
 
 void IncreaseCounterPlugin::slotOffsetChanged( int offset )

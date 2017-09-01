@@ -35,7 +35,7 @@ PreviewList::PreviewList( QWidget* parent )
     m_menu->addAction( i18n("&Add..."), this, SIGNAL( addFiles() ) );
     m_menu->addAction( i18n("&Remove"), this, SLOT( slotRemove() ) );
 
-    connect( this, SIGNAL( activated(const QModelIndex&)), this, SLOT( slotManually() ) );
+    connect(this, &PreviewList::activated, this, &PreviewList::slotManually);
 }
 
 PreviewList::~PreviewList()

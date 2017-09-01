@@ -133,12 +133,18 @@ void ScriptPlugin::createUI( QWidget* parent ) const
     m_widget->listVariables->setColumnCount( 2 );
     m_widget->listVariables->setHeaderLabels( labels );
 
-    connect( m_widget->listVariables, SIGNAL(itemSelectionChanged()), SLOT(slotEnableControls()) );
-    connect( m_widget->buttonAdd,     SIGNAL(clicked(bool)), SLOT(slotAdd()) );
-    connect( m_widget->buttonRemove,  SIGNAL(clicked(bool)), SLOT(slotRemove()) );
-    connect( m_widget->buttonLoad,    SIGNAL(clicked(bool)), SLOT(slotLoad()) );
-    connect( m_widget->buttonSave,    SIGNAL(clicked(bool)), SLOT(slotSave()) );
-    connect( m_widget->textCode,      SIGNAL(textChanged()), SLOT(slotEnableControls()) );
+    connect(m_widget->listVariables, &QTreeWidget::itemSelectionChanged,
+            this, &ScriptPlugin::slotEnableControls);
+    connect(m_widget->buttonAdd, &QPushButton::clicked,
+            this, &ScriptPlugin::slotAdd);
+    connect(m_widget->buttonRemove, &QPushButton::clicked,
+            this, &ScriptPlugin::slotRemove);
+    connect(m_widget->buttonLoad, &QPushButton::clicked,
+            this, &ScriptPlugin::slotLoad);
+    connect(m_widget->buttonSave, &QPushButton::clicked,
+            this, &ScriptPlugin::slotSave);
+    connect(m_widget->textCode, &QTextEdit::textChanged,
+            this, &ScriptPlugin::slotEnableControls);
 
     const_cast<ScriptPlugin*>(this)->slotEnableControls();
 

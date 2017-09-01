@@ -35,12 +35,17 @@ InsertPartFilenameDlg::InsertPartFilenameDlg( const QString & filename, QWidget*
     layout->addWidget( widget );
     layout->addWidget( m_buttons );
 
-    connect(m_buttons, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(m_buttons, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(m_buttons, &QDialogButtonBox::accepted,
+            this, &InsertPartFilenameDlg::accept);
+    connect(m_buttons, &QDialogButtonBox::rejected,
+            this, &InsertPartFilenameDlg::reject);
 
-    connect(m_widget.checkInvert,  SIGNAL(clicked(bool)),      this, SLOT( slotUpdateKRenameCommand() ));
-    connect(m_widget.textFilename, SIGNAL(selectionChanged()), this, SLOT( slotSelectionChanged() ));
-    connect(m_widget.comboConvert, SIGNAL(currentIndexChanged(int)), this, SLOT( slotSelectionChanged() ));
+    connect(m_widget.checkInvert, &QCheckBox::clicked,
+            this, &InsertPartFilenameDlg::slotUpdateKRenameCommand);
+    connect(m_widget.textFilename, &SelectionSafeLineEdit::selectionChanged,
+            this, &InsertPartFilenameDlg::slotSelectionChanged);
+    connect(m_widget.comboConvert, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
+            this, &InsertPartFilenameDlg::slotSelectionChanged);
 
     this->slotUpdateKRenameCommand();
 }

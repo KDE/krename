@@ -30,9 +30,12 @@
 ExtHistoryCombo::ExtHistoryCombo( QWidget* parent )
     : KHistoryComboBox( parent )
 {
-    connect( this, SIGNAL( activated( const QString& )), SLOT( addToHistory( const QString& )));
-    connect( this, SIGNAL( editTextChanged(const QString &)), SLOT( slotTextChanged()));
-    connect( &m_timer, SIGNAL( timeout() ), this, SIGNAL( delayedTextChanged() ) );
+    connect(this, static_cast<void (ExtHistoryCombo::*)(const QString&)>(&ExtHistoryCombo::activated),
+            this, &ExtHistoryCombo::addToHistory);
+    connect(this, &ExtHistoryCombo::editTextChanged,
+            this, &ExtHistoryCombo::slotTextChanged);
+    connect(&m_timer, &QTimer::timeout,
+            this, &ExtHistoryCombo::delayedTextChanged);
 
     this->setMaxCount( EXT_HISTORY_COMBO_MAX_COUNT );
     this->setDuplicatesEnabled( false );

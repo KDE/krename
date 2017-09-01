@@ -32,6 +32,7 @@ FirstStartDlg::FirstStartDlg( QWidget* parent )
     layout->addWidget( widget );
     layout->addWidget( m_buttons );
 
-    connect(m_buttons, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(m_buttons, &QDialogButtonBox::accepted,
+            this, &FirstStartDlg::accept);
 }
 

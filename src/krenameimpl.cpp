@@ -60,7 +60,8 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list,
     m_model = new KRenameModel( &m_vector );
     m_window->setModel( m_model );
 
-    connect( m_model,  SIGNAL(filesDropped()),   SLOT(slotUpdateCount()));
+    connect(m_model, &KRenameModel::filesDropped,
+            this, &KRenameImpl::slotUpdateCount);
 
     m_previewModel = new KRenamePreviewModel( &m_vector );
     m_window->setPreviewModel( m_previewModel );
@@ -80,7 +81,7 @@ KRenameImpl::KRenameImpl( KRenameWindow* window, const KRenameFile::List & list,
 
     slotUpdateCount();
 
-    connect( qApp, SIGNAL( aboutToQuit() ), this, SLOT( saveConfig() ) );
+    connect(qApp, &QApplication::aboutToQuit, this, &KRenameImpl::saveConfig);
 }
 
 KRenameImpl::~KRenameImpl()
@@ -124,32 +125,44 @@ QWidget* KRenameImpl::launch(const QRect & rect, const KRenameFile::List & list,
 
 void KRenameImpl::setupSlots()
 {
-    connect( m_window, SIGNAL(addFiles()),       SLOT(slotAddFiles()));
-    connect( m_window, SIGNAL(removeFiles()),    SLOT(slotRemoveFiles()));
-    connect( m_window, SIGNAL(removeAllFiles()), SLOT(slotRemoveAllFiles()));
+    connect(m_window, &KRenameWindow::addFiles,
+            this, &KRenameImpl::slotAddFiles);
+    connect(m_window, &KRenameWindow::removeFiles,
+            this, &KRenameImpl::slotRemoveFiles);
+    connect(m_window, &KRenameWindow::removeAllFiles,
+            this, &KRenameImpl::slotRemoveAllFiles);
 
-    connect( m_window, SIGNAL(updatePreview()),  SLOT(slotUpdatePreview()));
-    connect( m_window, SIGNAL(updateCount()),    SLOT(slotUpdateCount()));
+    connect(m_window, &KRenameWindow::updatePreview,
+            this, &KRenameImpl::slotUpdatePreview);
+    connect(m_window, &KRenameWindow::updateCount,
+            this, &KRenameImpl::slotUpdateCount);
 
-    connect( m_window, SIGNAL(accepted()),       SLOT(slotStart()));
+    connect(m_window, &KRenameWindow::accepted,
+            this, &KRenameImpl::slotStart);
 
-    QObject::connect( m_window, SIGNAL(renameModeChanged(ERenameMode)), &m_renamer, SLOT(setRenameMode(ERenameMode)));
-    QObject::connect( m_window, SIGNAL(filenameTemplateChanged(const QString &)),
-                      &m_renamer, SLOT(setFilenameTemplate(const QString &)));
-    QObject::connect( m_window, SIGNAL(extensionTemplateChanged(const QString &)),
-                      &m_renamer, SLOT(setExtensionTemplate(const QString &)));
-    QObject::connect( m_window, SIGNAL(overwriteFilesChanged(bool)),
-                      &m_renamer, SLOT(setOverwriteExistingFiles(bool)));
+    QObject::connect(m_window, &KRenameWindow::renameModeChanged,
+                     &m_renamer, &BatchRenamer::setRenameMode);
+    QObject::connect(m_window, &KRenameWindow::filenameTemplateChanged,
+                     &m_renamer, &BatchRenamer::setFilenameTemplate);
+    QObject::connect(m_window, &KRenameWindow::extensionTemplateChanged,
+                     &m_renamer, &BatchRenamer::setExtensionTemplate);
+    QObject::connect(m_window, &KRenameWindow::overwriteFilesChanged,
+                     &m_renamer, &BatchRenamer::setOverwriteExistingFiles);
 
-    QObject::connect( m_window, SIGNAL(startIndexChanged(int)),
-                      &m_renamer, SLOT(setNumberStartIndex(int)));
+    QObject::connect(m_window, &KRenameWindow::startIndexChanged,
+                     &m_renamer, &BatchRenamer::setNumberStartIndex);
 
-    connect( m_window, SIGNAL(extensionSplitModeChanged(ESplitMode,int)), SLOT(slotExtensionSplitModeChanged(ESplitMode,int)));
+    connect(m_window, &KRenameWindow::extensionSplitModeChanged,
+            this, &KRenameImpl::slotExtensionSplitModeChanged);
 
-    connect( m_window, SIGNAL(showAdvancedNumberingDialog()),  SLOT(slotAdvancedNumberingDlg()));
-    connect( m_window, SIGNAL(showInsertPartFilenameDialog()), SLOT(slotInsertPartFilenameDlg()));
-    connect( m_window, SIGNAL(showFindReplaceDialog()),        SLOT(slotFindReplaceDlg()));
-    connect( m_window, SIGNAL(showTokenHelpDialog(QLineEdit*)),SLOT(slotTokenHelpDialog(QLineEdit*)));
+    connect(m_window, &KRenameWindow::showAdvancedNumberingDialog,
+            this, &KRenameImpl::slotAdvancedNumberingDlg);
+    connect(m_window, &KRenameWindow::showInsertPartFilenameDialog,
+            this, &KRenameImpl::slotInsertPartFilenameDlg);
+    connect(m_window, &KRenameWindow::showFindReplaceDialog,
+            this, &KRenameImpl::slotFindReplaceDlg);
+    connect(m_window, &KRenameWindow::showTokenHelpDialog,
+            this, &KRenameImpl::slotTokenHelpDialog);
 }
 
 void KRenameImpl::addFileOrDir( const QUrl &url )
@@ -177,7 +190,8 @@ void KRenameImpl::addFilesOrDirs( const QList<QUrl> & list, const QString & filt
             QApplication::setOverrideCursor( Qt::BusyCursor );
 
             ThreadedLister* thl = new ThreadedLister( *it, m_window, m_model );
-            connect( thl, SIGNAL( listerDone( ThreadedLister* ) ), SLOT( slotListerDone( ThreadedLister* ) ) );
+            connect(thl, &ThreadedLister::listerDone,
+                    this, &KRenameImpl::slotListerDone);
 
             thl->setFilter( filter );
             thl->setListDirnamesOnly( dirsOnly );

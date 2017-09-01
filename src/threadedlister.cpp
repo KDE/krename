@@ -68,8 +68,8 @@ void ThreadedLister::run()
     else
         job = KIO::listDir( m_dirname, flags, m_listHiddenFiles );
 
-    connect( job, SIGNAL(entries( KIO::Job*, const KIO::UDSEntryList & )), SLOT(foundItem(KIO::Job*, const KIO::UDSEntryList &)));
-    connect( job, SIGNAL(result( KJob* )), SLOT( completed() ) );
+    connect(job, &KIO::ListJob::entries, this, &ThreadedLister::foundItem);
+    connect(job, &KIO::ListJob::result, this, &ThreadedLister::completed);
 
     job->start();
 }

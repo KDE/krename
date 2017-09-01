@@ -39,9 +39,12 @@ ProgressDialog::ProgressDialog( ESplitMode eSplitMode, unsigned int dot, QWidget
     m_buttonMore->setEnabled( false );
     m_buttonClose->setEnabled( false );
 
-    connect( m_widget.buttonCancel, SIGNAL(clicked(bool)), SLOT(slotCancelled()));
-    connect( m_buttonDest,          SIGNAL(clicked(bool)), SLOT(slotOpenDestination()));
-    connect( m_buttonUndo,          SIGNAL(clicked(bool)), SLOT(slotUndo()));
+    connect(m_widget.buttonCancel, &QPushButton::clicked,
+            this, &ProgressDialog::slotCancelled);
+    connect(m_buttonDest, &QPushButton::clicked,
+            this, &ProgressDialog::slotOpenDestination);
+    connect(m_buttonUndo, &QPushButton::clicked,
+            this, &ProgressDialog::slotUndo);
 
     QMenu* menu = new QMenu( this );
     menu->addAction( i18n("Restart &KRename..."), this, SLOT(slotRestartKRename()) );

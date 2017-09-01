@@ -33,13 +33,18 @@ CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
     m_widget.setupUi(mainWidget);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted,
+            this, &CustomDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected,
+            this, &CustomDialog::reject);
     mainLayout->addWidget(buttonBox);
 
-    connect( m_widget.radioKRename, SIGNAL(clicked(bool)), this, SLOT(slotEnableControls()));
-    connect( m_widget.radioInput,   SIGNAL(clicked(bool)), this, SLOT(slotEnableControls()));
-    connect( m_widget.radioCustom,  SIGNAL(clicked(bool)), this, SLOT(slotEnableControls()));
+    connect(m_widget.radioKRename, &QRadioButton::clicked,
+            this, &CustomDialog::slotEnableControls);
+    connect(m_widget.radioInput, &QRadioButton::clicked,
+            this, &CustomDialog::slotEnableControls);
+    connect(m_widget.radioCustom, &QRadioButton::clicked,
+            this, &CustomDialog::slotEnableControls);
 
     // Set default vallues
     m_widget.radioCustom->setChecked( true );
