@@ -1041,9 +1041,9 @@ void KRenameWindow::slotMaxDotsChanged( int dots )
          i++ )
         m_pageFilename->comboExtension->removeItem( i );
 
-    for( i=1;i<=dots;i++ )
+    for (i=1; i<=dots; ++i) {
         m_pageFilename->comboExtension->addItem( QString::number( i ) );
-
+    }
 }
 
 void KRenameWindow::slotOpenFile(const QModelIndex& index)

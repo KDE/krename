@@ -49,18 +49,19 @@ PermissionsPlugin::PermissionsPlugin( PluginLoader* loader )
     // Get all users on the system
     struct passwd* user;
     setpwent();
-    for ( i=0; ((user = getpwent()) != 0L) && (i < MAXENTRIES); i++)
+    for (i=0; ((user = getpwent()) != 0L) && (i < MAXENTRIES); ++i) {
         if( uid == 0 || uid == user->pw_uid )
         {
             m_users.append( QString::fromLatin1(user->pw_name) );
         }
+    }
     endpwent();
 
     // Get all groups on the system
     struct group *ge;
     user = getpwuid( uid );
     setgrent();
-    for (i=0; ((ge = getgrent()) != 0L) && (i < MAXENTRIES); i++)
+    for (i=0; ((ge = getgrent()) != 0L) && (i < MAXENTRIES); ++i)
     {
         if( uid == 0 )
         {
