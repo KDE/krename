@@ -25,6 +25,7 @@
 #include <QDate>
 #include <QTime>
 #include <QUrl>
+#include <qplatformdefs.h>
 
 // OS includes
 #include <stdio.h>
@@ -113,8 +114,8 @@ QString DateTimePlugin::changeDateTime( const QString & filename, bool bModifica
         return i18n("Cannot change date of file %1. (Cannot mktime)", filename);
 
     // Get current values
-    struct stat st;
-    if( stat( filename.toUtf8().data(), &st ) == -1 )
+    QT_STATBUF st;
+    if( QT_STAT( filename.toUtf8().data(), &st ) == -1 )
         return i18n("Cannot change date of file %1. (Cannot stat the file)", filename);
 
     // Fill structure;
