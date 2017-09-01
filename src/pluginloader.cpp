@@ -133,9 +133,9 @@ void PluginLoader::clear()
 
 void PluginLoader::load()
 {
-#ifndef _WIN32
+#ifndef Q_OS_WIN
     m_plugins.append( new DateTimePlugin( this ) );
-#endif // _WIN32
+#endif
     m_plugins.append( new DirSortPlugin( this ) );
 #if HAVE_EXIV2
     m_plugins.append( new Exiv2Plugin( this ) );
@@ -144,9 +144,9 @@ void PluginLoader::load()
     m_plugins.append( new FontPlugin( this ) );
 #endif // HAVE_FREETYPE
 	m_plugins.append( new IncreaseCounterPlugin( this ) );
-#ifndef _WIN32
+#ifndef Q_OS_WIN
 	m_plugins.append( new PermissionsPlugin( this ) );
-#endif // _WIN32
+#endif
     m_plugins.append( new ScriptPlugin( this ) );
     m_plugins.append( new SystemPlugin( this ) );
 

@@ -32,9 +32,9 @@
 #include "krenameimpl.h"
 
 // OS includes
-#ifndef _WIN32
+#ifndef Q_OS_WIN
 #include <unistd.h>
-#endif // _WIN32
+#endif
 #include <sys/types.h>
 #include <QApplication>
 #include <KAboutData>
@@ -152,7 +152,7 @@ int main(int argc, char *argv[])
             "system if you do not know exactly what you are "
             "doing!"
         ), i18n("Error"), "KrenameRootWarning" );
-#endif // _WIN32
+#endif // Q_OS_WIN
 
 /*
  * Activate this warning message for unstable development releases.

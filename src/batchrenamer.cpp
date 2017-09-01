@@ -17,15 +17,15 @@
 
 #include "batchrenamer.h"
 
-#ifdef _WIN32
+#ifdef Q_OS_WIN
 #include <windows.h>
-#endif // _WIN32
+#endif
 
 // OS includes
 #include <stdio.h>
-#ifndef _WIN32
+#ifndef Q_OS_WIN
 #include <unistd.h>
-#endif // _WIN32
+#endif
 
 #include "../config-krename.h"
 

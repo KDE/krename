@@ -15,7 +15,7 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef _WIN32
+#ifndef Q_OS_WIN
 #include "permissionsplugin.h"
 
 #include <kiconloader.h>
@@ -375,4 +375,4 @@ void PermissionsPlugin::setCurrentPermissions( int perm )
     m_curPermission = perm;
 }
 */
-#endif // _WIN32
+#endif // Q_OS_WIN
