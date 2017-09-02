@@ -23,7 +23,9 @@
 #include <QDomDocument>
 #include <QDomElement>
 
-#include<iostream>
+#include <KMessageBox>
+
+#include <iostream>
 
 #include "ui_replaceitemdlg.h"
 #include "batchrenamer.h"
@@ -87,9 +89,7 @@ void ReplaceDialog::slotSaveList()
 
       if (!f.open(QIODevice::WriteOnly | QIODevice::Text))
       {
-	    QMessageBox::warning(this, tr("KRename Warning"),
-				 tr("Failed to save the Find & Replace Settings File."), QMessageBox::Cancel,
-				 QMessageBox::NoButton);
+	    KMessageBox::sorry(this, tr("Failed to save the Find & Replace Settings File."));
 	    return;
       }
 
@@ -157,9 +157,8 @@ void ReplaceDialog::slotLoadList()
       QFile f(fileName);
       if (!f.open(QFile::ReadOnly | QFile::Text))
       {
-	    QMessageBox::warning(this, tr("KRename Warning"),
-				 tr("Failed to open the Find and Replace Settings File. Cannot read file %1:\n%2.").arg(fileName).arg(f.errorString()), QMessageBox::Cancel,
-				 QMessageBox::NoButton);
+	    KMessageBox::sorry(this,
+				 tr("Failed to open the Find and Replace Settings File. Cannot read file %1:\n%2.").arg(fileName).arg(f.errorString()));
 	    return;
       }
 //load XML
@@ -171,7 +170,7 @@ void ReplaceDialog::slotLoadList()
 
       if (!xmlDocument.setContent(device, true, &errorStr, &errorLine, &errorColumn))
       {
-	    QMessageBox::information(window(), tr("KRename Find and Replace Settings XML File"),
+	    KMessageBox::information(window(), tr("KRename Find and Replace Settings XML File"),
 				     tr("Parse error at line %1, column %2:\n%3")
 				     .arg(errorLine)
 				     .arg(errorColumn)
@@ -182,13 +181,15 @@ void ReplaceDialog::slotLoadList()
 	    QDomElement root = xmlDocument.documentElement();
 // check if valid
       if (root.tagName() != "KRename") {
-	    QMessageBox::information(window(), tr("KRename Find and Replace Settings XML File"),
-				     tr("The file is not an KRename XML file."));
+	    KMessageBox::information(window(),
+				     tr("The file is not an KRename XML file."),
+                     tr("KRename Find and Replace Settings XML File"));
 	    return;
       } else if (root.hasAttribute("version") && root.attribute("version") != "1.0")
       {
-	    QMessageBox::information(window(), tr("KRename Find and Replace Settings XML File"),
-				     tr("The file is not an KRename XML version 1.0 file."));
+	    KMessageBox::information(window(),
+				     tr("The file is not an KRename XML version 1.0 file."),
+                     tr("KRename Find and Replace Settings XML File"));
 	    return;
       }
 //parse XML file
@@ -256,8 +257,9 @@ QDomElement frElement = root.firstChild().toElement();
       }
       if(rc!=Rows)
       {
-	    QMessageBox::information(window(), tr("KRename Find and Replace Settings XML File"),
-				     tr("Problem with loading KRename XML file."));
+	    KMessageBox::information(window(),
+				     tr("Problem with loading KRename XML file."),
+                     tr("KRename Find and Replace Settings XML File"));
 	    return;
       }
 }
