@@ -67,13 +67,13 @@ void InsertPartFilenameDlg::slotUpdateKRenameCommand()
     int  end         = m_end;
     int  start       = m_start;
 
-    const char* conversionflag = "$";
+    char conversionflag = '$';
     if( m_widget.comboConvert->currentIndex() == 1 )
-        conversionflag = "%";
+        conversionflag = '%';
     else if( m_widget.comboConvert->currentIndex() == 2 )
-        conversionflag = "&";
+        conversionflag = '&';
     else if( m_widget.comboConvert->currentIndex() == 3 )
-        conversionflag = "*";
+        conversionflag = '*';
 
     if( !m_widget.textFilename->text().isEmpty() )
     {

@@ -499,14 +499,14 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit* edit)
 
     // add built-in tokens
     QStringList help;
-    help.append("$" + TokenHelpDialog::getTokenSeparator() + i18n("old filename") );
-    help.append("%" + TokenHelpDialog::getTokenSeparator() + i18n("old filename converted to lower case") );
-    help.append("&" + TokenHelpDialog::getTokenSeparator() + i18n("old filename converted to upper case") );
-    help.append("*" + TokenHelpDialog::getTokenSeparator() + i18n("first letter of every word upper case") );
+    help.append('$' + TokenHelpDialog::getTokenSeparator() + i18n("old filename") );
+    help.append('%' + TokenHelpDialog::getTokenSeparator() + i18n("old filename converted to lower case") );
+    help.append('&' + TokenHelpDialog::getTokenSeparator() + i18n("old filename converted to upper case") );
+    help.append('*' + TokenHelpDialog::getTokenSeparator() + i18n("first letter of every word upper case") );
     help.append("[&1][%2-]" + TokenHelpDialog::getTokenSeparator() + i18n("first letter of filename upper case") );
-    help.append("#" + TokenHelpDialog::getTokenSeparator() + i18n("number (try also ##, ###, ... for leading zeros)") );
+    help.append('#' + TokenHelpDialog::getTokenSeparator() + i18n("number (try also ##, ###, ... for leading zeros)") );
     help.append("#{0;1}" + TokenHelpDialog::getTokenSeparator() + i18n("counter with custom start value 0 and custom stepping 1") );
-    help.append("/" + TokenHelpDialog::getTokenSeparator() + i18n("create a subdfolder") );
+    help.append('/' + TokenHelpDialog::getTokenSeparator() + i18n("create a subdfolder") );
     help.append("[$x-y]" + TokenHelpDialog::getTokenSeparator() + i18n("character x to y of old filename") );
     help.append("[$x;y]" + TokenHelpDialog::getTokenSeparator() + i18n("y characters of old filename starting at x") );
     help.append("[$dirname]" + TokenHelpDialog::getTokenSeparator() + i18n("insert name of folder") );

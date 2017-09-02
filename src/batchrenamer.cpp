@@ -809,7 +809,7 @@ const QUrl BatchRenamer::buildDestinationUrl( const KRenameFile & file ) const
 
     if( !extension.isEmpty() )
     {
-        filename += ".";
+        filename += '.';
         filename += extension;
     }
 

@@ -663,11 +663,11 @@ void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCus
     }
     else
     {
-        QString number = "#";
+        QString number('#');
         int c = m_pageFilename->spinDigits->value()-1;
 
         while( c-- > 0 )
-            number += "#";
+            number += '#';
 
         number += QString("{%1}").arg( m_pageFilename->spinIndex->value() );
 
@@ -694,11 +694,11 @@ void KRenameWindow::setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCus
 QString KRenameWindow::getPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom )
 {
     QString str;
-    QString number = "#";
+    QString number('#');
     int c = m_pageFilename->spinDigits->value()-1;
 
     while( c-- > 0 )
-        number += "#";
+        number += '#';
 
     number += QString("{%1}").arg( m_pageFilename->spinIndex->value() );
 
@@ -721,13 +721,13 @@ QString KRenameWindow::getFilenameSimple( QComboBox* combo, QComboBox* comboCust
     {
         default:
         case 0:
-            str = "$"; break;
+            str = '$'; break;
         case 1:
-            str = "%"; break;
+            str = '%'; break;
         case 2:
-            str = "&"; break;
+            str = '&'; break;
         case 3:
-            str = "*"; break;
+            str = '*'; break;
         case 4:
             str = comboCustom->currentText();
     }

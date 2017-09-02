@@ -142,7 +142,7 @@ void KRenameFile::setCurrentSplitMode( ESplitMode eSplitMode, unsigned int dot )
     QString filename = m_src.filename;
     if( !m_src.extension.isEmpty() )
     {
-        filename = filename + "." + m_src.extension;
+        filename = filename + '.' + m_src.extension;
     }
 
     url.setPath( m_src.directory + '/' + filename );

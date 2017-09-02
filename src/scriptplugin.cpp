@@ -102,7 +102,7 @@ QString ScriptPlugin::processFile( BatchRenamer* b, int index,
 	initKRenameVars( file, index );
 
 	// Make sure definitions are executed first
-	script = definitions + "\n" + script;
+	script = definitions + '\n' + script;
 
 	KJSResult result = m_interpreter->evaluate( script, NULL );
 	if( result.isException() )
@@ -255,7 +255,7 @@ void ScriptPlugin::slotAdd()
         QString value = dlg.lineValue->text();
 
         // Build a Java script statement
-        QString script = name + " = " + value + ";";
+        QString script = name + " = " + value + ';';
 
         KJSInterpreter interpreter;
         KJSResult result = m_interpreter->evaluate( script, NULL );

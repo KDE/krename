@@ -41,8 +41,8 @@ void Plugin::saveConfig( KConfigGroup & ) const
 
 QString Plugin::createHelpEntry( const QString & token, const QString & help )
 {
-  QString cmd = "[";
-  cmd = cmd + token + "]" + TokenHelpDialog::getTokenSeparator();
+  QString cmd('[');
+  cmd = cmd + token + ']' + TokenHelpDialog::getTokenSeparator();
   cmd = cmd + help;
 
   return cmd;

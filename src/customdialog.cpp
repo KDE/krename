@@ -54,14 +54,14 @@ CustomDialog::CustomDialog( const KRenameFile & file, QWidget* parent )
     QString srcFilename = file.srcFilename();
     if( !file.srcExtension().isEmpty() )
     {
-        srcFilename += ".";
+        srcFilename += '.';
         srcFilename += file.srcExtension();
     }
 
     QString krenameFilename = file.dstFilename();
     if( !file.dstExtension().isEmpty() )
     {
-        krenameFilename += ".";
+        krenameFilename += '.';
         krenameFilename += file.dstExtension();
     }
 

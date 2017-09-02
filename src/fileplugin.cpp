@@ -87,7 +87,7 @@ void FilePlugin::createUI( QWidget* parent ) const
     const QStringList & keys = supportedTokens();
 
     for( int i = 0; i < keys.count(); i++ )
-        list->insertItem( 0, "[" + keys[i] + "]" );
+        list->insertItem( 0, '[' + keys[i] + ']' );
 
     l->addWidget( list );
     l->setStretchFactor( list, 2 );

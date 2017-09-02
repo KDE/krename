@@ -76,7 +76,7 @@ QVariant KRenameModel::data ( const QModelIndex & index, int role ) const
             QString filename = file.srcFilename();
             if (!file.srcExtension().isEmpty())
             {
-                filename = filename + "." + file.srcExtension();
+                filename = filename + '.' + file.srcExtension();
             }
 
             const QString & prettyUrl = file.toString();
@@ -491,7 +491,7 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
 
         if( !extension.isEmpty() )
         {
-            filename += ".";
+            filename += '.';
             filename += extension;
         }
 
