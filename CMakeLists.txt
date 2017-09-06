@@ -38,7 +38,7 @@ add_definitions(
     -DQT_DISABLE_DEPRECATED_BEFORE=0x050700
 )
 
-set(KRENAME_VERSION "4.0.9")
+set(KRENAME_VERSION "4.1.0")
 
 include(FindGettext)
 
