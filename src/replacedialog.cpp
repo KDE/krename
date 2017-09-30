@@ -181,7 +181,7 @@ void ReplaceDialog::slotLoadList()
 // check if valid
       if (root.tagName() != "KRename") {
 	    KMessageBox::information(window(),
-				     i18n("The file is not an KRename XML file."),
+				     i18n("The file is not a KRename XML file."),
                      i18n("KRename Find and Replace Settings XML File"));
 	    return;
       } else if (root.hasAttribute("version") && root.attribute("version") != "1.0")
