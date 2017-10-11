@@ -116,9 +116,6 @@ int main(int argc, char *argv[])
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
-    parser.addVersionOption();
-    parser.addHelpOption();
-
     parser.addPositionalArgument(QLatin1String("files"), i18n("Files to be added to the list to be renamed"), i18n("[files...]"));
     parser.addOption(QCommandLineOption(QStringList() << QLatin1String("r"), i18n("add folder recursively"), i18n("folder")));
     parser.addOption(QCommandLineOption(QStringList() << QLatin1String("template"), i18n("set a template")));
