@@ -73,7 +73,7 @@ const QString TranslitPlugin::s_strUtf8[] = {
     "\xC3\x96","\xC5\x90","\xC5\x94",
     "\xC5\xA0","\xC5\xA4","\xC3\x9A",
     "\xC5\xAE","\xC3\x9C","\xC5\xB0",
-    "\xC3\x9D","\xC5\xBD",  QString::null};
+    "\xC3\x9D","\xC5\xBD",  QString()};
 
 const QString TranslitPlugin::s_strEngl[]= {"a","b","v","g","d","e","yo","zh","z","i",
     "j","k","l","m","n","o","p","r","s","t","u","f","h","c","ch","sh","sh","","y","",
@@ -81,7 +81,7 @@ const QString TranslitPlugin::s_strEngl[]= {"a","b","v","g","d","e","yo","zh","z
     "A","B","V","G","D","E","Yo","Zh","Z","I","J","K","L","M","N","O","P",
     "R","S","T","U","F","H","C","Ch","Sh","Sh","","Y","","E","Yu","Ya",
     "a","a","c","d","e","e","i","l","l","n","o","o","o","o","r","r","s","t","u","u","u","u","y","z",
-    "A","A","C","D","E","E","I","L","L","N","O","O","O","O","R","R","S","T","U","U","U","U","Y","Z",QString::null};
+    "A","A","C","D","E","E","I","L","L","N","O","O","O","O","R","R","S","T","U","U","U","U","Y","Z",QString()};
 
 QHash<QString,QString> TranslitPlugin::s_mapFromUTF8;
 
