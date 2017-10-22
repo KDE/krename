@@ -59,7 +59,7 @@ class KRenameWindow : public KMainWindow {
      friend class KRenameImpl;
 
  public:
-    explicit KRenameWindow( QWidget* parent = NULL );
+    explicit KRenameWindow( QWidget* parent = nullptr );
 
     ~KRenameWindow();
 

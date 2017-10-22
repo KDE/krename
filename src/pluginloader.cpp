@@ -47,7 +47,7 @@
 # include "fontplugin.h"
 #endif // HAVE_FREETYPE
 
-PluginLoader* PluginLoader::s_instance = NULL;
+PluginLoader* PluginLoader::s_instance = nullptr;
 
 PluginLoader* PluginLoader::Instance()
 {
@@ -96,8 +96,8 @@ Plugin* PluginLoader::findPlugin( const QString & token )
 
     // add typos to the cache, too:
     // So that we find immediately that this key is not supported.
-    m_tokenCache.insert( lower, NULL );
-    return NULL;
+    m_tokenCache.insert( lower, nullptr );
+    return nullptr;
 }
 
 Plugin* PluginLoader::findPluginByName( const QString & name )
@@ -112,7 +112,7 @@ Plugin* PluginLoader::findPluginByName( const QString & name )
         ++it;
     }
 
-    return NULL;
+    return nullptr;
 }
 
 void PluginLoader::clear()

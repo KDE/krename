@@ -46,14 +46,14 @@ FontPlugin::FontPlugin( PluginLoader* loader )
     if( error )
     {
         qDebug("Freetype initialization error %i.", error );
-        m_library = NULL;
+        m_library = nullptr;
     }
 }
 
 FontPlugin::~FontPlugin()
 {
     FT_Done_FreeType( m_library );
-    m_library = NULL;
+    m_library = nullptr;
 
 }
 
@@ -79,12 +79,12 @@ QString FontPlugin::processFile( BatchRenamer* b, int index, const QString & fil
 
     if ( error == FT_Err_Unknown_File_Format )
     {
-        face = NULL;
+        face = nullptr;
         result = QString("Unknown font file format error: %1").arg(error);
     }
     else if ( error )
     {
-        face = NULL;
+        face = nullptr;
         result = QString("Unknown error: %1.").arg(error);
     }
     else

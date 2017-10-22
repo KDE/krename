@@ -102,7 +102,7 @@ QWidget* KRenameImpl::launch(const QRect & rect, const KRenameFile::List & list,
         // WELCOME TO KRENAME
     }
 
-    KRenameWindow* w  = new KRenameWindow( NULL );
+    KRenameWindow* w  = new KRenameWindow( nullptr );
     //KRenameImpl* impl = new KRenameImpl( w, list );
     new KRenameImpl( w, list, commandLine );
 	// Windows shows KRename otherwise outside of the visible
@@ -602,8 +602,8 @@ void KRenameImpl::slotStart()
     saveConfig();
 
     // Make sure the GUI will not delete our models
-    m_window->setModel( NULL );
-    m_window->setPreviewModel( NULL );
+    m_window->setModel( nullptr );
+    m_window->setPreviewModel( nullptr );
 
     // show the progress dialog
     progress->show();
@@ -614,7 +614,7 @@ void KRenameImpl::slotStart()
     //delete m_window;
     //m_window = NULL;
     m_window->hide();
-    m_window = NULL;
+    m_window = nullptr;
 
     // Process files with additional properties which were not
     // necessary or available in the preview

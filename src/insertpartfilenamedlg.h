@@ -28,7 +28,7 @@ class InsertPartFilenameDlg : public QDialog {
  Q_OBJECT
 
  public:
-    explicit InsertPartFilenameDlg( const QString & filename, QWidget* parent = NULL );
+    explicit InsertPartFilenameDlg( const QString & filename, QWidget* parent = nullptr );
 
     /**
      * \returns the command to insert a substring of the original

@@ -25,7 +25,7 @@
 #include <QPointer>
 
 PreviewList::PreviewList( QWidget* parent )
-    : QTreeView( parent ), m_model( NULL )
+    : QTreeView( parent ), m_model( nullptr )
 {
     m_menu = new QMenu( "KRename", this ); // we need any text here so that we have a title
     m_menu->addAction( i18n("&Change filename manually..."), this, SLOT(slotManually()), QKeySequence("F2") );

@@ -156,7 +156,7 @@ bool KRenameTokenSorter::operator()( const KRenameFile & file1, const KRenameFil
 QString KRenameTokenSorter::processString( int index ) const
 {
     QString ret = m_token;
-    if( m_plugin != NULL )
+    if( m_plugin != nullptr )
     {
         ret = m_plugin->processFile( m_renamer, index, ret, ePluginType_Token );
     }

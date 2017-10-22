@@ -396,7 +396,7 @@ QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & fi
     try
     {
         Image::AutoPtr image = Exiv2::ImageFactory::open( strFilename );
-        if( image.get() != NULL && image->good() )
+        if( image.get() != nullptr && image->good() )
         {
             image->readMetadata();
 

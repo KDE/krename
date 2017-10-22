@@ -35,7 +35,7 @@ class QDialogButtonBox;
 class NumberDialog : public QDialog {
  Q_OBJECT
  public:
-    NumberDialog( int start, int step, bool reset, QList<int> skip, QWidget* parent = NULL );
+    NumberDialog( int start, int step, bool reset, QList<int> skip, QWidget* parent = nullptr );
 
     /**
      * @returns the start index the user has selected

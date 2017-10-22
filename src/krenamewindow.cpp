@@ -62,7 +62,7 @@ static const KRenameWindow::TGuiMode tAdvancedMode = {
 
 KRenameWindow::KRenameWindow( QWidget* parent )
     : KMainWindow( parent ),
-      m_curPage( 0 ), m_guiMode( NULL ),
+      m_curPage( 0 ), m_guiMode( nullptr ),
       m_fileCount( 0 )
 {
     QWidget*     center = new QWidget();
@@ -1199,7 +1199,7 @@ void KRenameWindow::blockSignalsRecursive( QObject* obj, bool b )
 
         QList<QObject*> list = obj->children();
         QList<QObject*>::iterator it = list.begin();
-        QObject* o = NULL;
+        QObject* o = nullptr;
 
         while( it != list.end() )
         {

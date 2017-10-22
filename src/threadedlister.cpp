@@ -29,7 +29,7 @@
 QMutex ThreadedLister::s_mutex;
 
 ThreadedLister::ThreadedLister( const QUrl &dirname, QWidget* cache, KRenameModel* model )
-    : QObject( NULL ), m_dirname( dirname ), m_cache( cache ), m_model( model )
+    : QObject( nullptr ), m_dirname( dirname ), m_cache( cache ), m_model( model )
 {
     m_listHiddenFiles  = false;
     m_listRecursive    = false;
@@ -61,7 +61,7 @@ void ThreadedLister::run()
     }
     s_mutex.unlock();
 
-    KIO::ListJob* job   = NULL; // Will delete itself automatically
+    KIO::ListJob* job   = nullptr; // Will delete itself automatically
     KIO::JobFlags flags = KIO::HideProgressInfo;
     if( m_listRecursive )
         job = KIO::listRecursive( m_dirname, flags, m_listHiddenFiles );

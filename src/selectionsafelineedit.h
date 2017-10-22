@@ -30,7 +30,7 @@ public:
      *
      *  @param parent parent widget
      */
-    explicit SelectionSafeLineEdit( QWidget* parent = NULL )
+    explicit SelectionSafeLineEdit( QWidget* parent = nullptr )
         : QLineEdit( parent )
     {
 

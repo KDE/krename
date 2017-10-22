@@ -56,7 +56,7 @@ private:
     static KRenamePreviewProvider* s_instance;
 };
 
-KRenamePreviewProvider* KRenamePreviewProvider::s_instance = NULL;
+KRenamePreviewProvider* KRenamePreviewProvider::s_instance = nullptr;
 
 
 const int KRenameFile::DEFAULT_ICON_SIZE = 64;

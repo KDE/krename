@@ -55,7 +55,7 @@ enum EVarType {
 
 ScriptPlugin::ScriptPlugin( PluginLoader* loader )
     : QObject(),
-      Plugin( loader ), m_parent( NULL )
+      Plugin( loader ), m_parent( nullptr )
 {
     m_name = i18n("JavaScript Plugin");
     m_icon = "applications-development";
@@ -104,7 +104,7 @@ QString ScriptPlugin::processFile( BatchRenamer* b, int index,
 	// Make sure definitions are executed first
 	script = definitions + '\n' + script;
 
-	KJSResult result = m_interpreter->evaluate( script, NULL );
+	KJSResult result = m_interpreter->evaluate( script, nullptr );
 	if( result.isException() )
 	{
 	    qDebug( "JavaScript Error: %s", result.errorMessage().toUtf8().data() );
@@ -258,7 +258,7 @@ void ScriptPlugin::slotAdd()
         QString script = name + " = " + value + ';';
 
         KJSInterpreter interpreter;
-        KJSResult result = m_interpreter->evaluate( script, NULL );
+        KJSResult result = m_interpreter->evaluate( script, nullptr );
         if( result.isException() )
         {
             KMessageBox::error( m_parent,

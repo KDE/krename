@@ -297,7 +297,7 @@ void TokenHelpDialog::slotUpdatePreview()
         return;
 
     int index = m_widget.comboPreview->currentIndex();
-    if( index >= 0 && m_widget.listCategories->currentItem() != NULL )
+    if( index >= 0 && m_widget.listCategories->currentItem() != nullptr )
     {
         QString       name   = m_widget.listCategories->currentItem()->text(0);
 

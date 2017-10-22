@@ -26,7 +26,7 @@
 #include <krun.h>
 
 ProgressDialog::ProgressDialog( ESplitMode eSplitMode, unsigned int dot, QWidget* parent )
-    : QDialog( parent ), m_canceled( false ), m_renamer( NULL ), m_eSplitMode( eSplitMode ), m_dot( dot )
+    : QDialog( parent ), m_canceled( false ), m_renamer( nullptr ), m_eSplitMode( eSplitMode ), m_dot( dot )
 {
     m_widget.setupUi( this );
 

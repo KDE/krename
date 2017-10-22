@@ -158,7 +158,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
 
         while( it != dirs.constEnd() )
         {
-            ThreadedLister* thl = new ThreadedLister( *it, NULL, this );
+            ThreadedLister* thl = new ThreadedLister( *it, nullptr, this );
             connect(thl, &ThreadedLister::listerDone,
                     this, &KRenameModel::slotListerDone);
 
@@ -267,7 +267,7 @@ void KRenameModel::gotPreview (const KFileItem &item, const QPixmap &preview)
         static_cast<const KRenameFile*>(item.extraData(KRenameFile::EXTRA_DATA_KEY));
     */
 
-    KRenameFile* file = NULL;
+    KRenameFile* file = nullptr;
     // TODO: Find a more optimal "search algorithm" ....
     KRenameFile::List::iterator it = m_vector->begin();
     while( it != m_vector->end() )
@@ -282,7 +282,7 @@ void KRenameModel::gotPreview (const KFileItem &item, const QPixmap &preview)
     }
 
     //it = find( m_vector->begin(), m_vector->end(), item );
-    if( file != NULL ) // && file->fileItem() == item )
+    if( file != nullptr ) // && file->fileItem() == item )
     {
         file->setIcon( preview );
     }

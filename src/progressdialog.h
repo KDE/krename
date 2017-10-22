@@ -30,7 +30,7 @@ class ProgressDialog : public QDialog {
     Q_OBJECT
 
  public:
-    ProgressDialog( ESplitMode eSplitMode, unsigned int dot, QWidget* parent = NULL );
+    ProgressDialog( ESplitMode eSplitMode, unsigned int dot, QWidget* parent = nullptr );
 
     /** Set the destination of the files
      *  so that the user can easily open a file browser
@@ -74,7 +74,7 @@ class ProgressDialog : public QDialog {
      *  @param text message
      *  @param pixmap an optional icon
      */
-    void print( const QString & text, const QString & pixmap = NULL );
+    void print( const QString & text, const QString & pixmap = nullptr );
 
     /** Print an error message to the user
      *

@@ -35,7 +35,7 @@ class QDialogButtonBox;
  */
 class FirstStartDlg : public QDialog {
  public:
-    explicit FirstStartDlg( QWidget* parent = NULL );
+    explicit FirstStartDlg( QWidget* parent = nullptr );
 
     /**
      * @returns the selected Gui Mode

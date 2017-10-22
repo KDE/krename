@@ -29,7 +29,7 @@
 class TokenSortModeDialog : public QDialog {
  Q_OBJECT
  public:
-    explicit TokenSortModeDialog( KRenameTokenSorter::ESimpleSortMode eSortMode, QWidget* parent = NULL );
+    explicit TokenSortModeDialog( KRenameTokenSorter::ESimpleSortMode eSortMode, QWidget* parent = nullptr );
 
     /**
      * Get the currently selected sort mode.

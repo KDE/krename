@@ -103,7 +103,7 @@ static int getNextToken( const QString & text, QString & token, int pos = 0 )
 }
 
 BatchRenamer::BatchRenamer()
-    : m_index( 0 ), m_step( 1 ), m_files( NULL ), m_renameMode( eRenameMode_Rename )
+    : m_index( 0 ), m_step( 1 ), m_files( nullptr ), m_renameMode( eRenameMode_Rename )
 {
     m_counter_index = 0;
     m_reset         = false;
@@ -149,7 +149,7 @@ void BatchRenamer::processFilenames()
         // Let's run the plugins that change the final filename,
         // i.e the encodingsplugin
         int errors = 0;
-        QString name = executePlugin( i, (*m_files)[i].dstFilename(), ePluginType_Filename, errors, NULL );
+        QString name = executePlugin( i, (*m_files)[i].dstFilename(), ePluginType_Filename, errors, nullptr );
         if( !name.isNull() )
             (*m_files)[i].setDstFilename( name );
 
@@ -235,7 +235,7 @@ void BatchRenamer::processFiles( ProgressDialog* p )
         createMissingSubDirs( (*m_files)[i], p );
 
         KIO::JobFlags flags  = (m_overwrite ? KIO::Overwrite : KIO::DefaultFlags) | KIO::HideProgressInfo;
-        KIO::Job*     job    = NULL;
+        KIO::Job*     job    = nullptr;
         const QUrl &srcUrl =  (*m_files)[i].srcUrl();
         if( srcUrl == dstUrl )
         {
@@ -393,7 +393,7 @@ void BatchRenamer::undoFiles( ProgressDialog* p )
             break;
 
         KIO::JobFlags flags = (m_overwrite ? KIO::Overwrite : KIO::DefaultFlags) | KIO::HideProgressInfo;
-        KIO::Job*     job   = NULL;
+        KIO::Job*     job   = nullptr;
         switch( m_renameMode )
         {
             default:
@@ -654,7 +654,7 @@ QString BatchRenamer::executePlugin( int index, const QString & filenameOrPath, 
                 if( ! ret.isEmpty() )
                 {
                     // An error occurred -> report it
-                    if( p != NULL )
+                    if( p != nullptr )
                         p->error( ret );
                     ++errorCount;
                 }

@@ -22,7 +22,7 @@
 
 KRenameListView::KRenameListView(QWidget* parent)
     : QListView(parent),
-      m_label(NULL)
+      m_label(nullptr)
 {
 }
 
@@ -39,7 +39,7 @@ void KRenameListView::slotUpdateCount()
 
 void KRenameListView::positionLabel()
 {
-    if( m_label == NULL )
+    if( m_label == nullptr )
     {
         return;
     }

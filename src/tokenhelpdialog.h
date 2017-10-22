@@ -34,7 +34,7 @@ class TokenHelpDialog : public QDialog {
  Q_OBJECT
  public:
     TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
-                     QLineEdit* edit, QWidget* parent = NULL );
+                     QLineEdit* edit, QWidget* parent = nullptr );
 
     ~TokenHelpDialog();
 
