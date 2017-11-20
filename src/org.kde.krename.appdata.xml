@@ -8,6 +8,7 @@
   <name xml:lang="ca">Krename</name>
   <name xml:lang="ca-valencia">Krename</name>
   <name xml:lang="cs">KRename</name>
+  <name xml:lang="da">Krename</name>
   <name xml:lang="de">Krename</name>
   <name xml:lang="el">Krename</name>
   <name xml:lang="en-GB">Krename</name>
@@ -25,6 +26,7 @@
   <summary xml:lang="ca">Un potent canviador de noms per lots</summary>
   <summary xml:lang="ca-valencia">Un potent canviador de noms per lots</summary>
   <summary xml:lang="cs">Mocný nástroj pro dávkové přejmenovávání</summary>
+  <summary xml:lang="da">En kraftfuld batchfilomdøber</summary>
   <summary xml:lang="de">Leistungsfähiges Programm zum Umbenennen in einer Stapelverarbeitung</summary>
   <summary xml:lang="el">Μια ισχυρή εφαρμογή ομαδικής μετονομασίας αρχείων</summary>
   <summary xml:lang="en-GB">A powerful batch file renamer</summary>
@@ -47,6 +49,7 @@
     </p>
     <p xml:lang="ca">El Krename és un canviador de noms per lots molt potent que pot reanomenar una llista de fitxers basada en un conjunt d'expressions. Pot copiar/moure els fitxers a un altre directori o senzillament reanomenar els fitxers d'entrada. El Krename admet moltes operacions de conversió.</p>
     <p xml:lang="ca-valencia">El Krename és un canviador de noms per lots molt potent que pot reanomenar una llista de fitxers basada en un conjunt d'expressions. Pot copiar/moure els fitxers a un altre directori o senzillament reanomenar els fitxers d'entrada. El Krename admet moltes operacions de conversió.</p>
+    <p xml:lang="da">Krename er en meget kraftfuld batchfilomdøber som kan omdøbe en liste af filer baseret på et sæt af udtryk. Den kan kopiere/flytte filerne til en anden mappe eller blot omdøbe inputfilerne. Krename understøtter mange konverteringshandlinger.</p>
     <p xml:lang="el">Το Krename είναι μια πανίσχυρη εφαρμογή ομαδικής μετονομασίας αρχείων η οποία μετονομάζει μια λίστα αρχείων με βάση ένα σύνολο εκφράσεων. Μπορεί να αντιγράψει/μεταφέρει αρχεία σε άλλον κατάλογο ή απλώς να μετονομάσει τα δοσμένα αρχεία . Το Krename υποστηρίζει πολλές λειτουργίες μετατροπής.</p>
     <p xml:lang="en-GB">Krename is a very powerful batch file renamer which can rename a list of files based on a set of expressions. It can copy/move the files to another directory or simply rename the input files. Krename supports many conversion operations.</p>
     <p xml:lang="es">Krename es un potente cambiador de nombres de archivos por lotes que permite cambiar el nombre de una lista de archivos basándose en un conjunto de expresiones. Puede copiar y mover los archivos a otro directorio o solo cambiar los nombres de los archivos de entrada. Krename permite realizar muchas operaciones de cambio de nombre.</p>
