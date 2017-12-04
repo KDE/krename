@@ -312,7 +312,7 @@ void KRenameWindow::setupSlots()
     connect(m_pageDests->checkOverwrite, &QCheckBox::clicked,
             this, &KRenameWindow::overwriteFilesChanged);
 
-    connect(m_pagePlugins->listPlugins, &QTreeWidget::itemClicked,
+    connect(m_pagePlugins->listPlugins, &QTreeWidget::currentItemChanged,
             this, &KRenameWindow::slotPluginChanged);
     connect(m_pagePlugins->checkEnablePlugin, &QCheckBox::clicked,
             this, &KRenameWindow::slotPluginEnabled);
