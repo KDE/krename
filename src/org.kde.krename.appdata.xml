@@ -64,6 +64,11 @@
     <p xml:lang="x-test">xxKrename is a very powerful batch file renamer which can rename a list of files based on a set of expressions. It can copy/move the files to another directory or simply rename the input files. Krename supports many conversion operations.xx</p>
     <p xml:lang="zh-CN">Krename 是一个非常强大的批量文件重命名工具，它可以基于一些表达式来重命名一系列文件。它可以复制 / 移动文件到其他目录，或者只是重命名输入文件。Krename 支持需要转换操作。</p>
   </description>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source" width="1039" height="782">https://cdn.kde.org/screenshots/krename/krename.png</image>
+    </screenshot>
+  </screenshots>
   <url type="homepage">https://www.kde.org/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=krename</url>
   <project_group>KDE</project_group>
