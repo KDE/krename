@@ -7,7 +7,7 @@ DOM: Create header file with constants for all groups and config keys
 DOM: Copying extremely slows
 DOM: Display in Realtime Preview a new first column which contains a small warning icons
      If the new and the old filename are identical
-DOM: Kontext men� im advance mode f�r alle text boxen:
+DOM: Kontext menü im advance mode für alle text boxen:
      Insert -> Filename To Lowercase
             -> Filename To Upercase
 	    -> Number
@@ -101,51 +101,51 @@ Cheers and thanks again for this great piece of software.
 Hallo
 
 
-Erst mal vielen Dank fÃ¼r das Programm; es sparte mir eine Menge Zeit 
+Erst mal vielen Dank für das Programm; es sparte mir eine Menge Zeit
 beim Re-Organisieren meiner MP3-Sammlung.
 
-Dabei habe ich es ziemlich oft benutzt, und mir sind einige Dinge 
-aufgefallen, die vielleicht verbessert werden kÃ¶nnten. (Ich beziehe mich 
-auf die Version 2.8.5. Falls eine neuere Version da ist, die meine 
-Anmerkungen Ã¼berflÃ¼ssig macht, verzeih mir bitte):
-- Beim HinzufÃ¼gen von Verzeichnissen werden die selbst definierten 
-Filter (*.mp3) und die Einstellung fÃ¼r "Unterverzeichnisse rekursiv 
-hinzufÃ¼gen" nicht gespeichert; vor allem die RekursivitÃ¤t hat mich 
+Dabei habe ich es ziemlich oft benutzt, und mir sind einige Dinge
+aufgefallen, die vielleicht verbessert werden könnten. (Ich beziehe mich
+auf die Version 2.8.5. Falls eine neuere Version da ist, die meine
+Anmerkungen überflüssig macht, verzeih mir bitte):
+- Beim Hinzufügen von Verzeichnissen werden die selbst definierten
+Filter (*.mp3) und die Einstellung für "Unterverzeichnisse rekursiv
+hinzufügen" nicht gespeichert; vor allem die Rekursivität hat mich
 genervt, weil ich die immer wieder vergessen hab.
 
-DankeschÃ¶n fÃ¼r deine MÃ¼he!
+Dankeschön für deine Mühe!
 
 Regards/MfG,
 Christian Weiske
 =======================================
 Hi,
 
-Ich habe ein paar verbesserungsvorschlÃ¤ge fÃ¼r Dein super Tool KRename:
+Ich habe ein paar verbesserungsvorschläge für Dein super Tool KRename:
 
--) Bei den Plugins fÃ¼r auf KFilePlugins zurÃ¼ckgreifen, listest Du all ihre 
-mÃ¶glichen Felder auf. I fÃ¤nde es sehr hilfreich, wenn der ausgewÃ¤hlte 
-Platzhalter automatisch bei einem Doppelklick darauf an Cursorposition in das 
-Eingabefeld fÃ¼r das Namensmuster eingefÃ¼hgt wÃ¼rde.
-FÃ¼r die Ãbersicht wÃ¤re es auch schÃ¶n, wenn dieses Eingabefeld nochmal (ohne 
-drop-down menÃ¼) unter den plugins sichtbar wÃ¤re....
+-) Bei den Plugins für auf KFilePlugins zurückgreifen, listest Du all ihre
+möglichen Felder auf. I fände es sehr hilfreich, wenn der ausgewählte
+Platzhalter automatisch bei einem Doppelklick darauf an Cursorposition in das
+Eingabefeld für das Namensmuster eingefügt würde.
+Für die Übersicht wäre es auch schön, wenn dieses Eingabefeld nochmal (ohne
+drop-down menü) unter den plugins sichtbar wäre....
 
--) WÃ¤re es mÃ¶glich, als Startwert nicht nur eine Zahl (0, 1, 2,...) sondern 
-auch Buchstaben (a, b, c, ... / A, B, C, ...) angeben zu kÃ¶nnen?
+-) Wäre es möglich, als Startwert nicht nur eine Zahl (0, 1, 2,...) sondern
+auch Buchstaben (a, b, c, ... / A, B, C, ...) angeben zu können?
 
--) Es wÃ¤re super, wenn man verschiedene ZÃ¤hler seperat definieren kÃ¶nnte. zB. 
-mit einem Tabinterface fÃ¼r den Konfigurationsdialog "1. ZÃ¤hler", "2. ZÃ¤hler", 
+-) Es wäre super, wenn man verschiedene Zähler seperat definieren könnte. zB.
+mit einem Tabinterface für den Konfigurationsdialog "1. Zähler", "2. Zähler",
 etc, wenn mehr als eine ##-Grupe im Muster auftaucht
 
--) Was ich immer wieder brauche ist eine reset-Bedingung, die den ZÃ¤hler 
-wieder auf seinen Startwert setzt, so das er quasi im Kreis zÃ¤hlt (1, 2, 3, 
+-) Was ich immer wieder brauche ist eine reset-Bedingung, die den Zähler
+wieder auf seinen Startwert setzt, so das er quasi im Kreis zählt (1, 2, 3,
 1, 2, 3, 1, 2, 3,... mit 3 als reset)
-Ich kÃ¶nnte mir das als eine Zeile mit
-Checkbox "reset bei"; Combobox "<self> | 1. ZÃ¤hler | 2. ZÃ¤hler | ..."; 
-Combobox "> | >= | = | <= | <"; Spinbox fÃ¼r Zahl
+Ich könnte mir das als eine Zeile mit
+Checkbox "reset bei"; Combobox "<self> | 1. Zähler | 2. Zähler | ...";
+Combobox "> | >= | = | <= | <"; Spinbox für Zahl
 
--) Was ich persÃ¶nlich seltener brauche, fÃ¼r manche aber bestimmt hilfreich 
-ist, wÃ¤re die MÃ¶glichkeit auch Schrittweiten a la "1/2" od. "1/3" zuzulassen.
-Im Falle "1/3" wÃ¼rde dann so gezÃ¤hlt: "1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 
+-) Was ich persönlich seltener brauche, für manche aber bestimmt hilfreich
+ist, wäre die Möglichkeit auch Schrittweiten a la "1/2" od. "1/3" zuzulassen.
+Im Falle "1/3" würde dann so gezählt: "1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4,
 5, ..."
 
 Gruss,
@@ -294,11 +294,11 @@ MfG,
 Christian Goehl
 
 ==================================================
-[14:43:43] <[Stonki]> 1) Man kann kein existierendes Profil ?berschreiben !
-[14:44:33] <Dom64> ok, stimmt das sollte m�glich sein.
+[14:43:43] <[Stonki]> 1) Man kann kein existierendes Profil überschreiben !
+[14:44:33] <Dom64> ok, stimmt das sollte möglich sein.
 [14:44:37] <Dom64> Kann man leicht hinzugeben
-[14:45:41] <[Stonki]> und bei den profilen m?chte ich noch paar andere EInstellungen sein
-[14:46:15] <[Stonki]> zum beispiel rufe ich krename ?ber krusader auf. Da w?re eine option bei den profilen toll, in der man automatisch im Reiter "Dateiname" landet
+[14:45:41] <[Stonki]> und bei den profilen möchte ich noch paar andere EInstellungen sein
+[14:46:15] <[Stonki]> zum beispiel rufe ich krename über krusader auf. Da wäre eine option bei den profilen toll, in der man automatisch im Reiter "Dateiname" landet
 [14:46:24] <[Stonki]> und NACH dem umbenennen automatisch krename schliessen
 [14:46:54] <Dom64> Praktisch einen "Profile Settings" Dialog mit:
 [14:46:58] <Dom64> -> Krename Default Page
@@ -306,7 +306,7 @@ Christian Goehl
 [14:47:04] <Dom64> -> Close Krename after renaming
 [14:47:23] <[Stonki]> -> Behaviour after renaming
 [14:47:30] <[Stonki]> rather than just closing
-[14:47:47] <Dom64> Ok, und da evtl. auch alles zum �ndern. Also dass man dort auch direkt zum beispiel das template umstellen kann.
+[14:47:47] <Dom64> Ok, und da evtl. auch alles zum ändern. Also dass man dort auch direkt zum beispiel das template umstellen kann.
 [14:47:58] <Dom64> Stimmt, kann man ja mehr optionen machen als nur schliessen.
 [14:48:25] <[Stonki]> viel spass :)
 [14:48:29] <[Stonki]> UND
@@ -416,7 +416,7 @@ best regards,
 
 Morgen!
 
-Danke f�r die Idee. Das ist auf jeden Fall sinvoll, werde ich f�r die n�chste Version hinzuf�gen.
+Danke für die Idee. Das ist auf jeden Fall sinvoll, werde ich für die nächste Version hinzufügen.
 
 CU Dom
 
@@ -426,7 +426,7 @@ Am Friday, 1. December 2006 19:38 schrieben Sie:
 > Bei den Settings von krename einstellen, wie viele Dateien er
 > wirklich anzeigt im Preview Fenster. Default: unlimited, aber wenn
 > man wirklich mal 10.000 Dateien umbenennt, dann kann man das z.B
-> auf 200 stellen, er macht das preview dann nur f�r 200 und erst
+> auf 200 stellen, er macht das preview dann nur für 200 und erst
 > beim eigentlich start dann alle 10.000
 >
 >
