@@ -64,8 +64,9 @@ int main(int argc, char *argv[])
     aboutData.setCopyrightStatement(i18n("(c) 2001-2012, Dominik Seichter\n"));
     aboutData.setHomepage("http://www.krename.net");
 
-
-    aboutData.addAuthor( i18n("Dominik Seichter"), i18n("developer and maintainer"), "domseichter@web.de",
+    aboutData.addAuthor( i18n("Heiko Becker"), i18n("Current maintainer"),
+                         "heirecka@exherbo.org" );
+    aboutData.addAuthor( i18n("Dominik Seichter"), i18n("Developer and former maintainer"), "domseichter@web.de",
                          "http://www.krename.net" );
     aboutData.addAuthor( i18n("Stefan \"Stonki\" Onken"),
                          i18n("Website, testing, very good ideas and keeping me coding!"),
