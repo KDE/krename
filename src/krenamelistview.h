@@ -15,12 +15,10 @@
  *                                                                         *
  ***************************************************************************/
 
-
 #ifndef KRENAME_LIST_VIEW_H
 #define KRENAME_LIST_VIEW_H
 
 #include <QListView>
-
 
 /**
  * This is a QListView implementation
@@ -28,11 +26,12 @@
  * if there are no items in the list
  * view.
  */
-class KRenameListView : public QListView {
+class KRenameListView : public QListView
+{
     Q_OBJECT
 
 public:
-    explicit KRenameListView(QWidget* parent);
+    explicit KRenameListView(QWidget *parent);
     virtual ~KRenameListView() { }
 
     /**
@@ -43,13 +42,13 @@ public:
      *
      * @param w use widget as info widget
      */
-    inline void setInfoWidget(QWidget* w);
+    inline void setInfoWidget(QWidget *w);
 
 public Q_SLOTS:
     void slotUpdateCount();
 
 protected:
-    virtual void resizeEvent(QResizeEvent* e);
+    virtual void resizeEvent(QResizeEvent *e);
 
 private:
     /**
@@ -59,10 +58,10 @@ private:
     void positionLabel();
 
 private:
-    QWidget* m_label; ///< The information widget
+    QWidget *m_label; ///< The information widget
 };
 
-inline void KRenameListView::setInfoWidget(QWidget* w)
+inline void KRenameListView::setInfoWidget(QWidget *w)
 {
     m_label = w;
     m_label->setParent(this);

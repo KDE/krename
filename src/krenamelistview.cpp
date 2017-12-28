@@ -19,16 +19,15 @@
 
 #include <kiconloader.h>
 
-
-KRenameListView::KRenameListView(QWidget* parent)
+KRenameListView::KRenameListView(QWidget *parent)
     : QListView(parent),
       m_label(nullptr)
 {
 }
 
-void KRenameListView::resizeEvent(QResizeEvent* e)
+void KRenameListView::resizeEvent(QResizeEvent *e)
 {
-    QListView::resizeEvent( e );
+    QListView::resizeEvent(e);
     positionLabel();
 }
 
@@ -39,21 +38,17 @@ void KRenameListView::slotUpdateCount()
 
 void KRenameListView::positionLabel()
 {
-    if( m_label == nullptr )
-    {
+    if (m_label == nullptr) {
         return;
     }
 
-    if( !this->model() || this->model()->rowCount() )
-    {
+    if (!this->model() || this->model()->rowCount()) {
         m_label->hide();
-    }
-    else
-    {
+    } else {
         int x = (width() - m_label->minimumSizeHint().width()) / 2;
         int y = (height() - m_label->minimumSizeHint().height()) / 2;
-        m_label->setGeometry( x, y,
-                              m_label->minimumSizeHint().width(), m_label->minimumSizeHint().height() );
+        m_label->setGeometry(x, y,
+                             m_label->minimumSizeHint().width(), m_label->minimumSizeHint().height());
         m_label->show();
     }
 }

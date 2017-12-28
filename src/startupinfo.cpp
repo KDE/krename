@@ -20,15 +20,15 @@
 #include "ui_startupinfowidget.h"
 #include <kiconloader.h>
 
-StartUpInfo::StartUpInfo(QWidget* parent)
+StartUpInfo::StartUpInfo(QWidget *parent)
     : QFrame(parent)
 {
     m_widget = new Ui::StartUpInfoWidget();
     m_widget->setupUi(this);
 
-    m_widget->krenameIcon->setPixmap( DesktopIcon("krename") );
-    m_widget->addIcon->setPixmap( BarIcon("document-open-folder") );
-    m_widget->templateIcon->setPixmap( BarIcon("edit-rename") );
+    m_widget->krenameIcon->setPixmap(DesktopIcon("krename"));
+    m_widget->addIcon->setPixmap(BarIcon("document-open-folder"));
+    m_widget->templateIcon->setPixmap(BarIcon("edit-rename"));
 
     connect(m_widget->labelAdd, static_cast<void (KUrlLabel::*)()>(&KUrlLabel::leftClickedUrl),
             this, &StartUpInfo::addFiles);
@@ -40,5 +40,4 @@ StartUpInfo::~StartUpInfo()
 {
     delete m_widget;
 }
-
 

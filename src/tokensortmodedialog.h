@@ -26,10 +26,11 @@
 /**
  * This is a dialog to define custom sorting.
  */
-class TokenSortModeDialog : public QDialog {
- Q_OBJECT
- public:
-    explicit TokenSortModeDialog( KRenameTokenSorter::ESimpleSortMode eSortMode, QWidget* parent = nullptr );
+class TokenSortModeDialog : public QDialog
+{
+    Q_OBJECT
+public:
+    explicit TokenSortModeDialog(KRenameTokenSorter::ESimpleSortMode eSortMode, QWidget *parent = nullptr);
 
     /**
      * Get the currently selected sort mode.
@@ -43,19 +44,18 @@ class TokenSortModeDialog : public QDialog {
      */
     QString getToken() const;
 
- private:
+private:
     /**
      * Load all available tokens.
      */
     void initTokens();
 
- private Q_SLOTS:
+private Q_SLOTS:
 
     void slotEnableControls();
 
- private:
+private:
     Ui::TokenSortModeDialog m_dialog;
 };
-
 
 #endif // TOKEN_SORT_MODE_DIALOG_H

@@ -22,18 +22,18 @@
 
 class QTextDocument;
 
-class RichTextItemDelegate : public QItemDelegate {
+class RichTextItemDelegate : public QItemDelegate
+{
 
 public:
-    explicit RichTextItemDelegate(QObject* parent = nullptr);
+    explicit RichTextItemDelegate(QObject *parent = nullptr);
     virtual ~RichTextItemDelegate() { }
 
-    virtual void paint (QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index ) const;
-    virtual QSize sizeHint(const QStyleOptionViewItem& option, const QModelIndex& index ) const;
-
+    virtual void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    virtual QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
 
 private:
-    QTextDocument* m_document;
+    QTextDocument *m_document;
 
 };
 

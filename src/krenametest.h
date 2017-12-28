@@ -35,8 +35,9 @@ class QTextEdit;
  *
  *  - KRenameFile
  */
-class KRenameTest : public QWidget {
- public:
+class KRenameTest : public QWidget
+{
+public:
     /** Construct a new KRenameTest dialog
      */
     KRenameTest();
@@ -46,7 +47,7 @@ class KRenameTest : public QWidget {
      */
     void startTest();
 
- private:
+private:
     /** Test the KRenameFile class
      */
     void testKRenameFile();
@@ -62,30 +63,27 @@ class KRenameTest : public QWidget {
      *  \param dot the dot to use as splitter
      *  \param isDir test a file or a directory
      */
-    bool testKRenameFileInternal( const QUrl &url, const QString & directory,
-                                  const QString & filename, const QString & extension,
-                                  ESplitMode eSplitMode, int dot, bool isDir );
-
+    bool testKRenameFileInternal(const QUrl &url, const QString &directory,
+                                 const QString &filename, const QString &extension,
+                                 ESplitMode eSplitMode, int dot, bool isDir);
 
     /** Test the BatchRenamer class
      */
     void testBatchRenamer();
-    bool tokenTest( const char* token, const QString & filename, const QString & expected) ;
-    bool numberingTest( int length, int start, int step, QList<int> skip, int num = 100 );
-    bool replaceTest( const QString & token, const QString & filename, const QString & expected,
-                      const QString & replace, const QString & with, bool regExp );
-
+    bool tokenTest(const char *token, const QString &filename, const QString &expected) ;
+    bool numberingTest(int length, int start, int step, QList<int> skip, int num = 100);
+    bool replaceTest(const QString &token, const QString &filename, const QString &expected,
+                     const QString &replace, const QString &with, bool regExp);
 
     /** Write a test caption to the output window
      *  \param text the text which will be output
      */
-    void writeTestHeader( const QString & text );
+    void writeTestHeader(const QString &text);
 
     /** Write a message about to the output window
      *  \param text the text which will be output
      */
-    void writeTestMessage( const char* format, ... );
-
+    void writeTestMessage(const char *format, ...);
 
     /**
      * Test a list of multiple files.
@@ -94,11 +92,11 @@ class KRenameTest : public QWidget {
      * @param a list of expected paths
      * @param a token to use
      */
-    bool testMultipleFiles( KRenameFile::List & files, const QStringList & expected,
-                            const QStringList & exptectedPaths, const QString & token );
+    bool testMultipleFiles(KRenameFile::List &files, const QStringList &expected,
+                           const QStringList &exptectedPaths, const QString &token);
 
- private:
-    QTextEdit* m_text;       ///< output window
+private:
+    QTextEdit *m_text;       ///< output window
 
     int        m_counter;    ///< test counter (increased for each individual test)
     bool       m_result;     ///< return value of tests is stored here

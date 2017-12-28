@@ -26,19 +26,23 @@
  *  signal which is only emitted after the user has typed
  *  sevaral characters.
  */
-class ExtHistoryCombo : public KHistoryComboBox {
- Q_OBJECT
+class ExtHistoryCombo : public KHistoryComboBox
+{
+    Q_OBJECT
 
- public:
+public:
     /**
      * Create a new ExtHistoryCombo object with a parent and a name.
      *
      * @param parent Parent widget
      */
-    explicit ExtHistoryCombo( QWidget* parent );
+    explicit ExtHistoryCombo(QWidget *parent);
 
     /// Fix compilation, designer needs this method
-    inline void insertItems( int, QStringList & list ) { KHistoryComboBox::insertItems( list ); }
+    inline void insertItems(int, QStringList &list)
+    {
+        KHistoryComboBox::insertItems(list);
+    }
 
     void loadConfig();
     void saveConfig();
@@ -48,13 +52,13 @@ class ExtHistoryCombo : public KHistoryComboBox {
      */
     void selectAll();
 
- Q_SIGNALS:
+Q_SIGNALS:
     void delayedTextChanged();
 
- private Q_SLOTS:
-     void slotTextChanged();
+private Q_SLOTS:
+    void slotTextChanged();
 
- private:
+private:
     QTimer m_timer;
 
 };

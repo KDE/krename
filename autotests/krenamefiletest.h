@@ -30,27 +30,28 @@
  *
  *  - KRenameFile
  */
-class KRenameFileTest : public QObject {
+class KRenameFileTest : public QObject
+{
     Q_OBJECT
 
-    private Q_SLOTS:
-        void testKRenameFile();
+private Q_SLOTS:
+    void testKRenameFile();
 
-    private:
-        /** Test a KRenameFile class object for
-         *  an url if the pass is split correctly.
-         *
-         *  \param url the url to split
-         *  \param directory the expected directory
-         *  \param filename the expected filename
-         *  \param extension the expected extension
-         *  \param eSplitMode the splitmode to use
-         *  \param dot the dot to use as splitter
-         *  \param isDir test a file or a directory
-         */
-        void testKRenameFileInternal(const QUrl &url, const QString & directory,
-                                     const QString & filename, const QString & extension,
-                                     ESplitMode eSplitMode, int dot, bool isDir);
+private:
+    /** Test a KRenameFile class object for
+     *  an url if the pass is split correctly.
+     *
+     *  \param url the url to split
+     *  \param directory the expected directory
+     *  \param filename the expected filename
+     *  \param extension the expected extension
+     *  \param eSplitMode the splitmode to use
+     *  \param dot the dot to use as splitter
+     *  \param isDir test a file or a directory
+     */
+    void testKRenameFileInternal(const QUrl &url, const QString &directory,
+                                 const QString &filename, const QString &extension,
+                                 ESplitMode eSplitMode, int dot, bool isDir);
 
 };
 

@@ -24,8 +24,8 @@
 
 using namespace PoDoFo;
 
-PodofoPlugin::PodofoPlugin( PluginLoader* loader )
-    : FilePlugin( loader )
+PodofoPlugin::PodofoPlugin(PluginLoader *loader)
+    : FilePlugin(loader)
 {
     this->addSupportedToken("pdfAuthor");
     this->addSupportedToken("pdfCreator");
@@ -34,13 +34,13 @@ PodofoPlugin::PodofoPlugin( PluginLoader* loader )
     this->addSupportedToken("pdfTitle");
     this->addSupportedToken("pdfProducer");
     this->addSupportedToken("pdfPages");
-    m_help.append( "[pdfAuthor]" + TokenHelpDialog::getTokenSeparator() + i18n("Author of the PDF file") );
-    m_help.append( "[pdfCreator]" + TokenHelpDialog::getTokenSeparator() + i18n("Creator of the PDF file") );
-    m_help.append( "[pdfKeywords]" + TokenHelpDialog::getTokenSeparator() + i18n("Keywords of the PDF file") );
-    m_help.append( "[pdfSubject]" + TokenHelpDialog::getTokenSeparator() + i18n("Subject of the PDF file") );
-    m_help.append( "[pdfTitle]" + TokenHelpDialog::getTokenSeparator() + i18n("Title of the PDF file") );
-    m_help.append( "[pdfProducer]" + TokenHelpDialog::getTokenSeparator() + i18n("Producer of the PDF file") );
-    m_help.append( "[pdfPages]" + TokenHelpDialog::getTokenSeparator() + i18n("Number of pages in the PDF file") );
+    m_help.append("[pdfAuthor]" + TokenHelpDialog::getTokenSeparator() + i18n("Author of the PDF file"));
+    m_help.append("[pdfCreator]" + TokenHelpDialog::getTokenSeparator() + i18n("Creator of the PDF file"));
+    m_help.append("[pdfKeywords]" + TokenHelpDialog::getTokenSeparator() + i18n("Keywords of the PDF file"));
+    m_help.append("[pdfSubject]" + TokenHelpDialog::getTokenSeparator() + i18n("Subject of the PDF file"));
+    m_help.append("[pdfTitle]" + TokenHelpDialog::getTokenSeparator() + i18n("Title of the PDF file"));
+    m_help.append("[pdfProducer]" + TokenHelpDialog::getTokenSeparator() + i18n("Producer of the PDF file"));
+    m_help.append("[pdfPages]" + TokenHelpDialog::getTokenSeparator() + i18n("Number of pages in the PDF file"));
 
     m_name = i18n("PoDoFo (PDF) Plugin");
     m_comment = i18n("<qt>This plugin supports reading tags from "
@@ -49,38 +49,37 @@ PodofoPlugin::PodofoPlugin( PluginLoader* loader )
     m_icon = "application-pdf";
 }
 
-
-QString PodofoPlugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType )
+QString PodofoPlugin::processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType)
 {
-    QString token( filenameOrToken.toLower() );
+    QString token(filenameOrToken.toLower());
     QString filename = (*b->files())[index].srcUrl().path();
 
-    if( !this->supports( token ) )
+    if (!this->supports(token)) {
         return QString("");
+    }
 
     try {
         PdfMemDocument doc;
         doc.Load(filename.toUtf8().data());
-        PdfInfo* info = doc.GetInfo();
+        PdfInfo *info = doc.GetInfo();
 
-        if( token == "pdfauthor" )
+        if (token == "pdfauthor") {
             return QString::fromUtf8(info->GetAuthor().GetStringUtf8().c_str());
-        else if( token == "pdfcreator" )
+        } else if (token == "pdfcreator") {
             return QString::fromUtf8(info->GetCreator().GetStringUtf8().c_str());
-        else if( token == "pdfkeywords" )
+        } else if (token == "pdfkeywords") {
             return QString::fromUtf8(info->GetKeywords().GetStringUtf8().c_str());
-        else if( token == "pdfsubject" )
+        } else if (token == "pdfsubject") {
             return QString::fromUtf8(info->GetSubject().GetStringUtf8().c_str());
-        else if( token == "pdftitle" )
+        } else if (token == "pdftitle") {
             return QString::fromUtf8(info->GetTitle().GetStringUtf8().c_str());
-        else if( token == "pdfproducer" )
+        } else if (token == "pdfproducer") {
             return QString::fromUtf8(info->GetProducer().GetStringUtf8().c_str());
-        else if( token == "pdfpages" )
+        } else if (token == "pdfpages") {
             return QString::number(doc.GetPageCount());
-    }
-    catch( PdfError & error )
-    {
-        return QString::fromUtf8( error.what() );
+        }
+    } catch (PdfError &error) {
+        return QString::fromUtf8(error.what());
     }
 
     return QString("");

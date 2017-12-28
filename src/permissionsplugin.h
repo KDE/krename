@@ -22,20 +22,21 @@
 
 #include <QObject>
 
-namespace Ui {
-    class PermissionsPluginWidget;
+namespace Ui
+{
+class PermissionsPluginWidget;
 };
-
 
 /** This is the abstract interface that has to be implemented
  *  by all KRename plugins.
  */
-class PermissionsPlugin : public QObject, public Plugin {
+class PermissionsPlugin : public QObject, public Plugin
+{
 
- Q_OBJECT
+    Q_OBJECT
 
- public:
-    explicit PermissionsPlugin( PluginLoader* loader );
+public:
+    explicit PermissionsPlugin(PluginLoader *loader);
     virtual ~PermissionsPlugin();
 
     /**
@@ -92,7 +93,7 @@ class PermissionsPlugin : public QObject, public Plugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
+    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType);
 
     /** Get a list of all tokens supported by this plugin.
      *
@@ -101,7 +102,7 @@ class PermissionsPlugin : public QObject, public Plugin {
      *  @returns a list of all supported tokens. The returned strings will be treated
      *           as regular expressions to find a plugin which supports a token.
      */
-    inline virtual const QStringList & supportedTokens() const;
+    inline virtual const QStringList &supportedTokens() const;
 
     /** Returns help descriptions for the supported tokens
      *
@@ -110,28 +111,28 @@ class PermissionsPlugin : public QObject, public Plugin {
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    inline virtual const QStringList & help() const;
+    inline virtual const QStringList &help() const;
 
     /** Create a user interface for this plugin
      *
      *  @param parent the parent widget of this plugin
      */
-    virtual void createUI( QWidget* parent ) const;
+    virtual void createUI(QWidget *parent) const;
 
- private Q_SLOTS:
+private Q_SLOTS:
     void slotEnableControls();
     void slotAdvancedPermissions();
     void slotUpdatePermissions();
 
- private:
+private:
 
-    int getGid( const QString & group ) const;
-    int getUid( const QString & owner ) const;
+    int getGid(const QString &group) const;
+    int getUid(const QString &owner) const;
 
     //void setCurrentPermissions( int perm );
 
- private:
-    Ui::PermissionsPluginWidget* m_widget;
+private:
+    Ui::PermissionsPluginWidget *m_widget;
 
     int m_curPermission;  ///< The current permissions
 
@@ -150,15 +151,14 @@ inline bool PermissionsPlugin::alwaysEnabled() const
     return false;
 }
 
-inline const QStringList & PermissionsPlugin::supportedTokens() const
+inline const QStringList &PermissionsPlugin::supportedTokens() const
 {
     return m_tmp;
 }
 
-inline const QStringList & PermissionsPlugin::help() const
+inline const QStringList &PermissionsPlugin::help() const
 {
     return m_tmp;
 }
-
 
 #endif /* PERMISSIONS_PLUGIN_H */

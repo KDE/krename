@@ -25,17 +25,19 @@ class QMenu;
 class KJSInterpreter;
 class KRenameFile;
 
-namespace Ui {
-    class ScriptPluginWidget;
+namespace Ui
+{
+class ScriptPluginWidget;
 };
 
-class ScriptPlugin : public QObject, public Plugin {
- Q_OBJECT
- public:
+class ScriptPlugin : public QObject, public Plugin
+{
+    Q_OBJECT
+public:
     /** Create a new ScriptPlugin from
      *
      */
-    explicit ScriptPlugin( PluginLoader* loader );
+    explicit ScriptPlugin(PluginLoader *loader);
 
     virtual ~ScriptPlugin();
 
@@ -90,7 +92,7 @@ class ScriptPlugin : public QObject, public Plugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
+    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType);
 
     /** Get a list of all tokens supported by this plugin.
      *
@@ -98,7 +100,7 @@ class ScriptPlugin : public QObject, public Plugin {
      *
      *  @returns a list of all supported tokens.
      */
-    inline virtual const QStringList & supportedTokens() const;
+    inline virtual const QStringList &supportedTokens() const;
 
     /** Returns help descriptions for the supported tokens
      *
@@ -107,7 +109,7 @@ class ScriptPlugin : public QObject, public Plugin {
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    inline virtual const QStringList & help() const;
+    inline virtual const QStringList &help() const;
 
     /** Create a user interface for this plugin
      *
@@ -115,7 +117,7 @@ class ScriptPlugin : public QObject, public Plugin {
      *
      *  This is implemented here for all FilePlugin based classed
      */
-    void createUI( QWidget* parent ) const;
+    void createUI(QWidget *parent) const;
 
     /** Load the plugin configuration.
      *
@@ -123,7 +125,7 @@ class ScriptPlugin : public QObject, public Plugin {
      *
      *  @param group config group where the configuration should be read from
      */
-    virtual void loadConfig( KConfigGroup & group );
+    virtual void loadConfig(KConfigGroup &group);
 
     /** Save the plugin configuration.
      *
@@ -131,9 +133,9 @@ class ScriptPlugin : public QObject, public Plugin {
      *
      *  @param group config group where the configuration should be stored
      */
-    virtual void saveConfig( KConfigGroup & group ) const;
+    virtual void saveConfig(KConfigGroup &group) const;
 
- protected:
+protected:
     /**
      *  Adds a token to the list of supported tokens
      *
@@ -141,7 +143,10 @@ class ScriptPlugin : public QObject, public Plugin {
      *
      *  @see supports
      */
-    inline void addSupportedToken( const QString & token ) { m_keys.append( token ); }
+    inline void addSupportedToken(const QString &token)
+    {
+        m_keys.append(token);
+    }
 
     /**
      * Set all KRename internal variables on the internal
@@ -150,7 +155,7 @@ class ScriptPlugin : public QObject, public Plugin {
      * @param file the KRenameFile where the values can be retrieved
      * @param index index of the current file
      */
-    void initKRenameVars( const KRenameFile & file, int index );
+    void initKRenameVars(const KRenameFile &file, int index);
 
     /**
      * Insert a variable in the definitions textfield
@@ -158,9 +163,9 @@ class ScriptPlugin : public QObject, public Plugin {
      *
      * @param name variable name
      */
-    void insertVariable( const char* name );
+    void insertVariable(const char *name);
 
- private Q_SLOTS:
+private Q_SLOTS:
     void slotEnableControls();
     void slotAdd();
     void slotRemove();
@@ -174,26 +179,25 @@ class ScriptPlugin : public QObject, public Plugin {
     void slotInsertExtension();
     void slotInsertDirectory();
 
- private:
+private:
     QString             m_name;
     QString             m_icon;
 
     QStringList         m_keys;
     QStringList         m_help;
-    KJSInterpreter*     m_interpreter;
-    QWidget*            m_parent;
-    QMenu*              m_menu;
+    KJSInterpreter     *m_interpreter;
+    QWidget            *m_parent;
+    QMenu              *m_menu;
 
-    Ui::ScriptPluginWidget* m_widget;
+    Ui::ScriptPluginWidget *m_widget;
 
-    static const char*  s_pszFileDialogLocation; ///< Static URL for KFileDialog
-    static const char* s_pszVarNameIndex;
-    static const char* s_pszVarNameUrl;
-    static const char* s_pszVarNameFilename;
-    static const char* s_pszVarNameExtension;
-    static const char* s_pszVarNameDirectory;
+    static const char  *s_pszFileDialogLocation; ///< Static URL for KFileDialog
+    static const char *s_pszVarNameIndex;
+    static const char *s_pszVarNameUrl;
+    static const char *s_pszVarNameFilename;
+    static const char *s_pszVarNameExtension;
+    static const char *s_pszVarNameDirectory;
 };
-
 
 inline const QString ScriptPlugin::name() const
 {
@@ -210,12 +214,12 @@ inline int ScriptPlugin::type() const
     return ePluginType_Token;
 }
 
-inline const QStringList & ScriptPlugin::supportedTokens() const
+inline const QStringList &ScriptPlugin::supportedTokens() const
 {
     return m_keys;
 }
 
-inline const QStringList & ScriptPlugin::help() const
+inline const QStringList &ScriptPlugin::help() const
 {
     return m_help;
 }

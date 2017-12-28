@@ -34,8 +34,8 @@ FileDialogExtWidget::FileDialogExtWidget(QWidget *parent)
     setLayout(mainLayout);
 
     m_fileWidget = new KFileWidget(QUrl());
-    m_fileWidget->setOperationMode( KFileWidget::Opening );
-    m_fileWidget->setMode( KFile::Files | KFile::Directory | KFile::ExistingOnly );
+    m_fileWidget->setOperationMode(KFileWidget::Opening);
+    m_fileWidget->setMode(KFile::Files | KFile::Directory | KFile::ExistingOnly);
 
     connect(m_fileWidget, &KFileWidget::accepted, [&]() {
         m_fileWidget->accept();
@@ -48,33 +48,33 @@ FileDialogExtWidget::FileDialogExtWidget(QWidget *parent)
     QWidget *extraWidget = new QWidget;
     QVBoxLayout *extraLayout = new QVBoxLayout;
     extraWidget->setLayout(extraLayout);
-    checkDir       = new QCheckBox( i18n("Add folder names &with filenames"), this );
-    checkRecursive = new QCheckBox( i18n("Add subfolders &recursively"), this );
-    checkHidden    = new QCheckBox( i18n("Add &hidden folders"), this );
-    checkOnlyDir   = new QCheckBox( i18n("Add folder names only"), this );
+    checkDir       = new QCheckBox(i18n("Add folder names &with filenames"), this);
+    checkRecursive = new QCheckBox(i18n("Add subfolders &recursively"), this);
+    checkHidden    = new QCheckBox(i18n("Add &hidden folders"), this);
+    checkOnlyDir   = new QCheckBox(i18n("Add folder names only"), this);
 
     QHBoxLayout *hbox = new QHBoxLayout;
-    hbox->addSpacing ( 20 );
-    hbox->addWidget  ( checkHidden );
-    hbox->setStretchFactor( checkHidden, 4 );
+    hbox->addSpacing(20);
+    hbox->addWidget(checkHidden);
+    hbox->setStretchFactor(checkHidden, 4);
 
-    extraLayout->addWidget( checkDir );
-    extraLayout->addWidget( checkRecursive );
-    extraLayout->addLayout( hbox );
-    extraLayout->addWidget( checkOnlyDir );
+    extraLayout->addWidget(checkDir);
+    extraLayout->addWidget(checkRecursive);
+    extraLayout->addLayout(hbox);
+    extraLayout->addWidget(checkOnlyDir);
     m_fileWidget->setCustomWidget(extraWidget);
 
     connect(checkRecursive, &QCheckBox::clicked,
             this, &FileDialogExtWidget::enableControls);
 
-    checkRecursive->setToolTip( i18n("Walk recursively through the folder tree and also add the content "
-                                     "of all subfolders to the list of files to rename.") );
-    checkHidden->setToolTip( i18n("If not checked, KRename will ignore folders starting "
-                                  "with a dot during recursive adding.") );
-    checkOnlyDir->setToolTip( i18n("Add only the folder names and not the names "
-                                   "of the files in the folder to KRename.") );
-    checkDir->setToolTip( i18n("This option causes KRename to also add the name of the base "
-                               "folder of the selected files to its list.") );
+    checkRecursive->setToolTip(i18n("Walk recursively through the folder tree and also add the content "
+                                    "of all subfolders to the list of files to rename."));
+    checkHidden->setToolTip(i18n("If not checked, KRename will ignore folders starting "
+                                 "with a dot during recursive adding."));
+    checkOnlyDir->setToolTip(i18n("Add only the folder names and not the names "
+                                  "of the files in the folder to KRename."));
+    checkDir->setToolTip(i18n("This option causes KRename to also add the name of the base "
+                              "folder of the selected files to its list."));
 
     enableControls();
 
@@ -89,5 +89,5 @@ FileDialogExtWidget::FileDialogExtWidget(QWidget *parent)
 
 void FileDialogExtWidget::enableControls()
 {
-    checkHidden->setEnabled( checkRecursive->isChecked() );
+    checkHidden->setEnabled(checkRecursive->isChecked());
 }

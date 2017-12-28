@@ -32,10 +32,11 @@ class QDialogButtonBox;
  *  - skip numbers list
  *
  */
-class NumberDialog : public QDialog {
- Q_OBJECT
- public:
-    NumberDialog( int start, int step, bool reset, QList<int> skip, QWidget* parent = nullptr );
+class NumberDialog : public QDialog
+{
+    Q_OBJECT
+public:
+    NumberDialog(int start, int step, bool reset, QList<int> skip, QWidget *parent = nullptr);
 
     /**
      * @returns the start index the user has selected
@@ -57,16 +58,16 @@ class NumberDialog : public QDialog {
      */
     QList<int> skipNumbers() const;
 
- private Q_SLOTS:
+private Q_SLOTS:
 
-     void slotAddNumber();
-     void slotRemoveNumber();
+    void slotAddNumber();
+    void slotRemoveNumber();
 
-     void slotEnableControls();
+    void slotEnableControls();
 
- private:
+private:
     Ui::NumberWidget    m_widget;
-    QDialogButtonBox*   m_buttons;
+    QDialogButtonBox   *m_buttons;
 };
 
 inline int NumberDialog::startIndex() const
@@ -83,6 +84,5 @@ inline bool NumberDialog::resetCounter() const
 {
     return m_widget.checkReset->isChecked();
 }
-
 
 #endif // NUMBER_DIALOG_H

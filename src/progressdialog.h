@@ -26,11 +26,12 @@
 
 class BatchRenamer;
 
-class ProgressDialog : public QDialog {
+class ProgressDialog : public QDialog
+{
     Q_OBJECT
 
- public:
-    ProgressDialog( ESplitMode eSplitMode, unsigned int dot, QWidget* parent = nullptr );
+public:
+    ProgressDialog(ESplitMode eSplitMode, unsigned int dot, QWidget *parent = nullptr);
 
     /** Set the destination of the files
      *  so that the user can easily open a file browser
@@ -38,14 +39,14 @@ class ProgressDialog : public QDialog {
      *
      *  @param dest the destination directory
      */
-    inline void setDestination( const QUrl &dest );
+    inline void setDestination(const QUrl &dest);
 
     /** Set the number of total steps in the progressbar
      *  which is displayed to the user.
      *
      *  @param t the number of steps
      */
-    inline void setProgressTotalSteps( int t );
+    inline void setProgressTotalSteps(int t);
 
     /** Set the current progress
      *
@@ -54,7 +55,7 @@ class ProgressDialog : public QDialog {
      *
      *  \see setProgressTotalSteps
      */
-    inline void setProgress( int p );
+    inline void setProgress(int p);
 
     /**
      * @returns true if the user has cancelled the operation (otherwise false)
@@ -74,19 +75,19 @@ class ProgressDialog : public QDialog {
      *  @param text message
      *  @param pixmap an optional icon
      */
-    void print( const QString & text, const QString & pixmap = nullptr );
+    void print(const QString &text, const QString &pixmap = nullptr);
 
     /** Print an error message to the user
      *
      *  @param text message
      */
-    void error( const QString & text );
+    void error(const QString &text);
 
     /** Print a warning message to the user
      *
      *  @param text message
      */
-    void warning( const QString & text );
+    void warning(const QString &text);
 
     /** Renaming is done.
      *
@@ -100,71 +101,71 @@ class ProgressDialog : public QDialog {
      *  @param errros the number of errors that have occurred. If errors have occurred the user
      *                has the extra possibility to only rename files with errors again
      */
-    void renamingDone( bool enableMore, bool enableUndo, BatchRenamer* renamer, int errors );
+    void renamingDone(bool enableMore, bool enableUndo, BatchRenamer *renamer, int errors);
 
- private Q_SLOTS:
-     /** Called when the user cancels the operation
-      */
-     void slotCancelled();
+private Q_SLOTS:
+    /** Called when the user cancels the operation
+     */
+    void slotCancelled();
 
-     /** Called when the users presses the "Open Destination..." button
-      */
-     void slotOpenDestination();
+    /** Called when the users presses the "Open Destination..." button
+     */
+    void slotOpenDestination();
 
-     /** Called when the user wants to rename some more files
-      */
-     void slotRestartKRename();
+    /** Called when the user wants to rename some more files
+     */
+    void slotRestartKRename();
 
-     /** Called when the user wants to rename all files again
-      *  that have been processed without an error.
-      */
-     void slotRenameProcessedAgain();
+    /** Called when the user wants to rename all files again
+     *  that have been processed without an error.
+     */
+    void slotRenameProcessedAgain();
 
-     /** Called when the user wants to rename all files again
-      *  that have been processed with an error.
-      */
-     void slotRenameUnprocessedAgain();
+    /** Called when the user wants to rename all files again
+     *  that have been processed with an error.
+     */
+    void slotRenameUnprocessedAgain();
 
-     /** Called when the user wants to rename all files again.
-      */
-     void slotRenameAllAgain();
+    /** Called when the user wants to rename all files again.
+     */
+    void slotRenameAllAgain();
 
-     /** Called when the user wants instant undo
-      */
-     void slotUndo();
+    /** Called when the user wants instant undo
+     */
+    void slotUndo();
 
- private:
+private:
     Ui::ProgressDialog m_widget;
 
     bool m_canceled;         ///< the current canceled state
-    BatchRenamer* m_renamer; ///< A BatchRenamer that can undo the operation
+    BatchRenamer *m_renamer; ///< A BatchRenamer that can undo the operation
     QUrl m_dest;             ///< files destination
 
-    QPushButton* m_buttonUndo;
-    QPushButton* m_buttonMore;
-    QPushButton* m_buttonDest;
-    QPushButton* m_buttonClose;
+    QPushButton *m_buttonUndo;
+    QPushButton *m_buttonMore;
+    QPushButton *m_buttonDest;
+    QPushButton *m_buttonClose;
 
-    QAction*     m_actProcessed;
-    QAction*     m_actUnprocessed;
+    QAction     *m_actProcessed;
+    QAction     *m_actUnprocessed;
 
     ESplitMode   m_eSplitMode;
     unsigned int m_dot;
 };
 
-void ProgressDialog::setDestination( const QUrl &dest )
+void ProgressDialog::setDestination(const QUrl &dest)
 {
     m_dest = dest;
 }
 
-void ProgressDialog::setProgressTotalSteps( int t )
+void ProgressDialog::setProgressTotalSteps(int t)
 {
-    m_widget.bar->setMaximum( t );
+    m_widget.bar->setMaximum(t);
 }
 
-void ProgressDialog::setProgress( int p )
+void ProgressDialog::setProgress(int p)
 {
-    m_widget.bar->setValue( p );
+    m_widget.bar->setValue(p);
 }
 
 bool ProgressDialog::wasCancelled() const

@@ -23,33 +23,34 @@
 class KRenameModel;
 class QMenu;
 
-class PreviewList : public QTreeView {
+class PreviewList : public QTreeView
+{
     Q_OBJECT
 
- public:
-    explicit PreviewList( QWidget* parent );
+public:
+    explicit PreviewList(QWidget *parent);
     ~PreviewList();
 
-    inline void setKRenameModel( KRenameModel* model )
+    inline void setKRenameModel(KRenameModel *model)
     {
         m_model = model;
     }
 
- Q_SIGNALS:
+Q_SIGNALS:
     void addFiles();
     void updateCount();
 
- private Q_SLOTS:
-     void slotOpen();
-     void slotRemove();
-     void slotManually();
+private Q_SLOTS:
+    void slotOpen();
+    void slotRemove();
+    void slotManually();
 
- protected:
-    void contextMenuEvent( QContextMenuEvent* e );
+protected:
+    void contextMenuEvent(QContextMenuEvent *e);
 
- private:
-    KRenameModel* m_model;
-    QMenu*        m_menu;
+private:
+    KRenameModel *m_model;
+    QMenu        *m_menu;
 };
 
 #endif // PREVIEW_LIST_H

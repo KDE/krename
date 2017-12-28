@@ -72,8 +72,9 @@ ModelTest::ModelTest(QAbstractItemModel *_model, QObject *parent) : QObject(pare
 
 void ModelTest::runAllTests()
 {
-    if (fetchingMore)
+    if (fetchingMore) {
         return;
+    }
     nonDestructiveBasicTest();
     rowCount();
     columnCount();
@@ -130,16 +131,18 @@ void ModelTest::rowCount()
     QModelIndex topIndex = model->index(0, 0, QModelIndex());
     int rows = model->rowCount(topIndex);
     Q_ASSERT(rows >= 0);
-    if (rows > 0)
+    if (rows > 0) {
         Q_ASSERT(model->hasChildren(topIndex) == true);
+    }
 
     QModelIndex secondLevelIndex = model->index(0, 0, topIndex);
     if (secondLevelIndex.isValid()) { // not the top level
         // check a row count where parent is valid
         rows = model->rowCount(secondLevelIndex);
         Q_ASSERT(rows >= 0);
-        if (rows > 0)
+        if (rows > 0) {
             Q_ASSERT(model->hasChildren(secondLevelIndex) == true);
+        }
     }
 
     // The models rowCount() is tested more extensively in checkChildren(),
@@ -157,8 +160,9 @@ void ModelTest::columnCount()
 
     // check a column count where parent is valid
     QModelIndex childIndex = model->index(0, 0, topIndex);
-    if (childIndex.isValid())
+    if (childIndex.isValid()) {
         Q_ASSERT(model->columnCount(childIndex) >= 0);
+    }
 
     // columnCount() is tested more extensively in checkChildren(),
     // but this catches the big mistakes
@@ -181,8 +185,9 @@ void ModelTest::hasIndex()
     Q_ASSERT(model->hasIndex(rows, columns) == false);
     Q_ASSERT(model->hasIndex(rows + 1, columns + 1) == false);
 
-    if (rows > 0)
+    if (rows > 0) {
         Q_ASSERT(model->hasIndex(0, 0) == true);
+    }
 
     // hasIndex() is tested more extensively in checkChildren(),
     // but this catches the big mistakes
@@ -201,8 +206,9 @@ void ModelTest::index()
     int rows = model->rowCount();
     int columns = model->columnCount();
 
-    if (rows == 0)
+    if (rows == 0) {
         return;
+    }
 
     // Catch off by one errors
     Q_ASSERT(model->index(rows, columns) == QModelIndex());
@@ -226,8 +232,9 @@ void ModelTest::parent()
     // when asked for the parent of an invalid index.
     Q_ASSERT(model->parent(QModelIndex()) == QModelIndex());
 
-    if (model->rowCount() == 0)
+    if (model->rowCount() == 0) {
         return;
+    }
 
     // Column 0                | Column 1    |
     // QModelIndex()           |             |
@@ -279,8 +286,9 @@ void ModelTest::checkChildren(const QModelIndex &parent, int currentDepth)
 {
     // First just try walking back up the tree.
     QModelIndex p = parent;
-    while (p.isValid())
+    while (p.isValid()) {
         p = p.parent();
+    }
 
     // For models that are dynamically populated
     if (model->canFetchMore(parent)) {
@@ -292,14 +300,16 @@ void ModelTest::checkChildren(const QModelIndex &parent, int currentDepth)
     int rows = model->rowCount(parent);
     int columns = model->columnCount(parent);
 
-    if (rows > 0)
+    if (rows > 0) {
         Q_ASSERT(model->hasChildren(parent));
+    }
 
     // Some further testing against rows(), columns(), and hasChildren()
     Q_ASSERT(rows >= 0);
     Q_ASSERT(columns >= 0);
-    if (rows > 0)
+    if (rows > 0) {
         Q_ASSERT(model->hasChildren(parent) == true);
+    }
 
     //qDebug() << "parent:" << model->data(parent).toString() << "rows:" << rows
     //         << "columns:" << columns << "parent column:" << parent.column();
@@ -351,7 +361,7 @@ void ModelTest::checkChildren(const QModelIndex &parent, int currentDepth)
             Q_ASSERT(model->parent(index) == parent);
 
             // recursively go down the children
-            if (model->hasChildren(index) && currentDepth < 10 ) {
+            if (model->hasChildren(index) && currentDepth < 10) {
                 //qDebug() << r << c << "has children" << model->rowCount(index);
                 checkChildren(index, ++currentDepth);
             }/* else { if (currentDepth >= 10) qDebug() << "checked 10 deep"; };*/
@@ -371,8 +381,9 @@ void ModelTest::data()
     // Invalid index should return an invalid qvariant
     Q_ASSERT(!model->data(QModelIndex()).isValid());
 
-    if (model->rowCount() == 0)
+    if (model->rowCount() == 0) {
         return;
+    }
 
     // A valid index should have a valid QVariant data
     Q_ASSERT(model->index(0, 0).isValid());
@@ -458,7 +469,7 @@ void ModelTest::rowsAboutToBeInserted(const QModelIndex &parent, int start, int 
 
     \sa rowsAboutToBeInserted()
  */
-void ModelTest::rowsInserted(const QModelIndex & parent, int start, int end)
+void ModelTest::rowsInserted(const QModelIndex &parent, int start, int end)
 {
     Changing c = insert.pop();
     Q_ASSERT(c.parent == parent);
@@ -495,7 +506,7 @@ void ModelTest::rowsAboutToBeRemoved(const QModelIndex &parent, int start, int e
 
     \sa rowsAboutToBeRemoved()
  */
-void ModelTest::rowsRemoved(const QModelIndex & parent, int start, int end)
+void ModelTest::rowsRemoved(const QModelIndex &parent, int start, int end)
 {
     Changing c = remove.pop();
     Q_ASSERT(c.parent == parent);

@@ -23,9 +23,10 @@
 
 #include <QUrl>
 
-class DirSortPlugin : public Plugin {
-    public:
-    explicit DirSortPlugin( PluginLoader* loader );
+class DirSortPlugin : public Plugin
+{
+public:
+    explicit DirSortPlugin(PluginLoader *loader);
     ~DirSortPlugin();
 
     /**
@@ -82,7 +83,7 @@ class DirSortPlugin : public Plugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
+    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType);
 
     /** Get a list of all tokens supported by this plugin.
      *
@@ -91,7 +92,7 @@ class DirSortPlugin : public Plugin {
      *  @returns a list of all supported tokens. The returned strings will be treated
      *           as regular expressions to find a plugin which supports a token.
      */
-    virtual const QStringList & supportedTokens() const;
+    virtual const QStringList &supportedTokens() const;
 
     /** Returns help descriptions for the supported tokens
      *
@@ -100,13 +101,13 @@ class DirSortPlugin : public Plugin {
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    virtual const QStringList & help() const;
+    virtual const QStringList &help() const;
 
     /** Create a user interface for this plugin
      *
      *  @param parent the parent widget of this plugin
      */
-    virtual void createUI( QWidget* parent ) const;
+    virtual void createUI(QWidget *parent) const;
 
 private:
     /**
@@ -126,7 +127,7 @@ protected:
     QUrl m_baseDirectory;
     QUrl m_currentDirectory;
 
-    Ui::DirSortPluginWidget* m_widget;
+    Ui::DirSortPluginWidget *m_widget;
     QStringList m_emptyList;
 
     bool m_valid;

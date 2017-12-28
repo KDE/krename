@@ -24,17 +24,17 @@
 
 #include <KLocalizedString>
 
-FontPlugin::FontPlugin( PluginLoader* loader )
-    : FilePlugin( loader )
+FontPlugin::FontPlugin(PluginLoader *loader)
+    : FilePlugin(loader)
 {
     const QString prefix("font");
 
     this->addSupportedToken("fontpostscript");
     this->addSupportedToken("fontfamily");
     this->addSupportedToken("fontstyle");
-    m_help.append( "[fontPostscript]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the PostScript name for Type1 and TrueType fonts.") );
-    m_help.append( "[fontFamily]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the (usually English) name of the font family.") );
-    m_help.append( "[fontStyle]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the (usually English) name of the font style.") );
+    m_help.append("[fontPostscript]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the PostScript name for Type1 and TrueType fonts."));
+    m_help.append("[fontFamily]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the (usually English) name of the font family."));
+    m_help.append("[fontStyle]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the (usually English) name of the font style."));
 
     m_name = i18n("Font (FreeType2) Plugin");
     m_comment = i18n("<qt>This plugin supports reading tags from "
@@ -42,70 +42,58 @@ FontPlugin::FontPlugin( PluginLoader* loader )
 
     m_icon = "application-x-font-ttf";
 
-    FT_Error error = FT_Init_FreeType( &m_library );
-    if( error )
-    {
-        qDebug("Freetype initialization error %i.", error );
+    FT_Error error = FT_Init_FreeType(&m_library);
+    if (error) {
+        qDebug("Freetype initialization error %i.", error);
         m_library = nullptr;
     }
 }
 
 FontPlugin::~FontPlugin()
 {
-    FT_Done_FreeType( m_library );
+    FT_Done_FreeType(m_library);
     m_library = nullptr;
 
 }
 
-QString FontPlugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType )
+QString FontPlugin::processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType)
 {
-    QString token( filenameOrToken.toLower() );
+    QString token(filenameOrToken.toLower());
     QString filename = (*b->files())[index].srcUrl().path();
 
-    if( !this->supports( token ) )
+    if (!this->supports(token)) {
         return QString("");
+    }
 
-    if( !m_library )
-    {
+    if (!m_library) {
         return QString("Cannot initialize FreeType");
     }
 
     FT_Face face;
-    FT_Error error = FT_New_Face( m_library,
-                                  filename.toUtf8().data(),
-                                  0,
-                                  &face );
+    FT_Error error = FT_New_Face(m_library,
+                                 filename.toUtf8().data(),
+                                 0,
+                                 &face);
     QString result = QString("");
 
-    if ( error == FT_Err_Unknown_File_Format )
-    {
+    if (error == FT_Err_Unknown_File_Format) {
         face = nullptr;
         result = QString("Unknown font file format error: %1").arg(error);
-    }
-    else if ( error )
-    {
+    } else if (error) {
         face = nullptr;
         result = QString("Unknown error: %1.").arg(error);
-    }
-    else
-    {
-        if( token == "fontpostscript" )
-        {
-            result = QString::fromLocal8Bit( FT_Get_Postscript_Name( face ) );
-        }
-        else if( token == "fontfamily" && face->family_name )
-        {
-            result = QString::fromLocal8Bit( face->family_name );
-        }
-        else if( token == "fontstyle" && face->style_name )
-        {
-            result = QString::fromLocal8Bit( face->style_name );
+    } else {
+        if (token == "fontpostscript") {
+            result = QString::fromLocal8Bit(FT_Get_Postscript_Name(face));
+        } else if (token == "fontfamily" && face->family_name) {
+            result = QString::fromLocal8Bit(face->family_name);
+        } else if (token == "fontstyle" && face->style_name) {
+            result = QString::fromLocal8Bit(face->style_name);
         }
     }
 
-    if( face )
-    {
-        FT_Done_Face( face );
+    if (face) {
+        FT_Done_Face(face);
     }
 
     return result;

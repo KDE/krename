@@ -35,21 +35,22 @@ class PluginLoader;
 class QLineEdit;
 class QCommandLineParser;
 
-class KRenameImpl : public QObject {
+class KRenameImpl : public QObject
+{
     Q_OBJECT
 
- public:
+public:
     ~KRenameImpl();
 
-    static QWidget* launch( const QRect & rect, const KRenameFile::List & list, QCommandLineParser *commandLine = 0 );
+    static QWidget *launch(const QRect &rect, const KRenameFile::List &list, QCommandLineParser *commandLine = 0);
 
- public Q_SLOTS:
+public Q_SLOTS:
     /** Updates the preview of the filenames after renaming
      */
     void slotUpdatePreview();
 
- private:
-    KRenameImpl(KRenameWindow* window, const KRenameFile::List & list , QCommandLineParser *commandLine = 0);
+private:
+    KRenameImpl(KRenameWindow *window, const KRenameFile::List &list , QCommandLineParser *commandLine = 0);
 
     /** Connect all gui components with their slots
      */
@@ -65,7 +66,7 @@ class KRenameImpl : public QObject {
      *
      *  \see addFilesOrDirs
      */
-    void addFileOrDir( const QUrl &url );
+    void addFileOrDir(const QUrl &url);
 
     /** Adds a list of urls to the list of files which will
      *  be renamed.
@@ -82,9 +83,9 @@ class KRenameImpl : public QObject {
      *
      *  \see addFileOrDir
      */
-    void addFilesOrDirs( const QList<QUrl> & list, const QString & filter = "*",
-                         bool recursively = false, bool dirsWithFiles = false,
-                         bool dirsOnly = false, bool hidden = false );
+    void addFilesOrDirs(const QList<QUrl> &list, const QString &filter = "*",
+                        bool recursively = false, bool dirsWithFiles = false,
+                        bool dirsOnly = false, bool hidden = false);
 
     /** Parses commandline options
      */
@@ -94,7 +95,7 @@ class KRenameImpl : public QObject {
      */
     void loadConfig();
 
- private Q_SLOTS:
+private Q_SLOTS:
     /** Save configuration
      */
     void saveConfig();
@@ -153,25 +154,25 @@ class KRenameImpl : public QObject {
      *
      *  \param lister a ThreadedLister which has done his work
      */
-    void slotListerDone( ThreadedLister* lister );
+    void slotListerDone(ThreadedLister *lister);
 
     /** Show a TokenHelpDialog that works on a QLineEdit
      *
      *  \param edit insert user selected tokens into this linedit
      */
-    void slotTokenHelpDialog(QLineEdit* edit);
+    void slotTokenHelpDialog(QLineEdit *edit);
 
     /** Called when the user selects another extension split mode
      *
      *  @param splitMode the mode which is used to split filename and extension
      *  @param dot the n-th dot to use for splitting if splitMode = eSplitMode_CustomDot
      */
-    void slotExtensionSplitModeChanged( ESplitMode splitMode, int dot );
+    void slotExtensionSplitModeChanged(ESplitMode splitMode, int dot);
 
- private:
-    KRenameWindow*        m_window;
-    KRenameModel*         m_model;
-    KRenamePreviewModel*  m_previewModel;
+private:
+    KRenameWindow        *m_window;
+    KRenameModel         *m_model;
+    KRenamePreviewModel  *m_previewModel;
 
     KRenameFile::List     m_vector;
 
@@ -180,7 +181,7 @@ class KRenameImpl : public QObject {
     ESplitMode            m_lastSplitMode; ///< The last used split mode
     int                   m_lastDot;       ///< The last used dot value for splitmode
 
-    PluginLoader*         m_pluginLoader;  ///< Global plugin loader instance
+    PluginLoader         *m_pluginLoader;  ///< Global plugin loader instance
 
     int                   m_runningThreadedListersCount; ///< Count of running threaded listers
 };
@@ -224,285 +225,285 @@ class QVGroupBox;
 class QWidget;
 
 #include <kguiitem.h>
-QPushButton* createButton( KGuiItem item, QWidget* parent );
+QPushButton *createButton(KGuiItem item, QWidget *parent);
 
-class KRenameImpl : public QObject, public KRenameDCOP {
+class KRenameImpl : public QObject, public KRenameDCOP
+{
     Q_OBJECT
 
     friend class ProfileManager;
     friend class ProfileDlg;
     friend class tabs;
 
-    public:
-        KRenameImpl( QWidget* p, KMenuBar* m, QPushButton* finish );
-        ~KRenameImpl();
+public:
+    KRenameImpl(QWidget *p, KMenuBar *m, QPushButton *finish);
+    ~KRenameImpl();
 
-        void setWizardMode( bool mode );
+    void setWizardMode(bool mode);
 
-        /*
-         * public because both get called from KRenameImpl::launch()
-         */
-        void updatePre();
-        void addFileOrDir( const KURL & name );
+    /*
+     * public because both get called from KRenameImpl::launch()
+     */
+    void updatePre();
+    void addFileOrDir(const KURL &name);
 
-        void setup( bool wizardmode );
-        void changeParent( QWidget* p, KMenuBar* m, QPushButton* finish, QRect r );
-        static QWidget* launch( QRect rect, const KURL::List & list, KRenameImpl* impl = 0, bool loadprofile = true );
+    void setup(bool wizardmode);
+    void changeParent(QWidget *p, KMenuBar *m, QPushButton *finish, QRect r);
+    static QWidget *launch(QRect rect, const KURL::List &list, KRenameImpl *impl = 0, bool loadprofile = true);
 
-        /** DCOP functions we have to implement
-          */
-        void addFileOrDir( const QString & name );
-        const QString fileNameTemplate() const;
-        inline int counterStart() const;
+    /** DCOP functions we have to implement
+      */
+    void addFileOrDir(const QString &name);
+    const QString fileNameTemplate() const;
+    inline int counterStart() const;
 
-        void setExtensionTemplate( const QString & t );
-        const QString extensionTemplate() const;
+    void setExtensionTemplate(const QString &t);
+    const QString extensionTemplate() const;
 
-        void setUseExtension( bool b );
-        bool useExtension() const;
+    void setUseExtension(bool b);
+    bool useExtension() const;
 
-        QStringList tokens() const;
+    QStringList tokens() const;
 
-        QString parseString( const QString & token, const QString & string );
-        void addDir( const QString & name, const QString & filter, bool recursive, bool hidden, bool dirnames );
+    QString parseString(const QString &token, const QString &string);
+    void addDir(const QString &name, const QString &filter, bool recursive, bool hidden, bool dirnames);
 
-        const QString title( int index ) const;
+    const QString title(int index) const;
 
-        /** @returns true if the user has specified a profile on the commandline
-         *           other wise false is returned
-         */
-        inline bool hasCommandlineProfile() const;
+    /** @returns true if the user has specified a profile on the commandline
+     *           other wise false is returned
+     */
+    inline bool hasCommandlineProfile() const;
 
-    public Q_SLOTS:
-        void setFileNameTemplate( const QString & t );
-        void setCounterStart( int index );
+public Q_SLOTS:
+    void setFileNameTemplate(const QString &t);
+    void setCounterStart(int index);
 
-    Q_SIGNALS:
-        void pageDone( QWidget* page, const QString & title );
-        void showPage( int page );
-        void enableFinish( bool b );
+Q_SIGNALS:
+    void pageDone(QWidget *page, const QString &title);
+    void showPage(int page);
+    void enableFinish(bool b);
 
-    private Q_SLOTS:
-        void about();
-        void addFile();
-        bool checkErrors();
-        void clearList();
-        void enableControls();
-        void toggleImagePreview();
-        void moveUp();
-        void moveDown();
-        void help();
-        void removeFile();
-        void removeFile( int index );
-        void preferences();
-        void replace();
-        void saveConfig();
-        void start();
-        void updateCount();
-        void undo();
-        void changeUndoScriptName();
-        void pluginHelpChanged();
-        void getCoordinates();
-        void changeNumbers();
-        void updateDots();
-        void updatePreview();
-        void showTokenHelp();
-        void toggleName();
-        void changed();
-        void loadFilePlugins();
-        void reloadFilePluginData();
-        void manageProfiles();
-        QString easyOptions( KComboBox* combo, KMyHistoryCombo* custom );
-        void slotEasy1();
-        void slotEasy2();
-        void slotEasy3();
-        void slotEasy4();
+private Q_SLOTS:
+    void about();
+    void addFile();
+    bool checkErrors();
+    void clearList();
+    void enableControls();
+    void toggleImagePreview();
+    void moveUp();
+    void moveDown();
+    void help();
+    void removeFile();
+    void removeFile(int index);
+    void preferences();
+    void replace();
+    void saveConfig();
+    void start();
+    void updateCount();
+    void undo();
+    void changeUndoScriptName();
+    void pluginHelpChanged();
+    void getCoordinates();
+    void changeNumbers();
+    void updateDots();
+    void updatePreview();
+    void showTokenHelp();
+    void toggleName();
+    void changed();
+    void loadFilePlugins();
+    void reloadFilePluginData();
+    void manageProfiles();
+    QString easyOptions(KComboBox *combo, KMyHistoryCombo *custom);
+    void slotEasy1();
+    void slotEasy2();
+    void slotEasy3();
+    void slotEasy4();
 
-        /** Update the preview only if the passed
-         *  plugin is enabled for use.
-         */
-        void updatePluginPreview( Plugin* p );
+    /** Update the preview only if the passed
+     *  plugin is enabled for use.
+     */
+    void updatePluginPreview(Plugin *p);
 
-    private:
-        static int numRealTimePreview;
+private:
+    static int numRealTimePreview;
 
-        /** Change the GUI mode according to the current setting of m_wizard
-          */
-        void changeGUIMode();
+    /** Change the GUI mode according to the current setting of m_wizard
+      */
+    void changeGUIMode();
 
-        /** Returns COPY if optionCopy is checked, RENAME if optionRename is checked
-          * ...
-          */
-        int currentRenameMode();
+    /** Returns COPY if optionCopy is checked, RENAME if optionRename is checked
+      * ...
+      */
+    int currentRenameMode();
 
-        void loadConfig();
-        void fillStructures( BatchRenamer* b, bool preview );
-        bool setupBatchRenamer( BatchRenamer* b, bool preview );
-        void splitFilename( QFileInfo* fi, QString* base, QString* extension );
+    void loadConfig();
+    void fillStructures(BatchRenamer *b, bool preview);
+    bool setupBatchRenamer(BatchRenamer *b, bool preview);
+    void splitFilename(QFileInfo *fi, QString *base, QString *extension);
 
-        void setupPage1();
-        void setupPage2();
-        void setupPage3();
-        void setupPage4();
-        void setupTab1();
-        void setupFileTab1();
-        void setupFileTab2();
-        void setupPages();
-        void updateHist();
-        void parseCommandline();
-        void addTitle( QWidget* p, QVBoxLayout* layout, QString title );
+    void setupPage1();
+    void setupPage2();
+    void setupPage3();
+    void setupPage4();
+    void setupTab1();
+    void setupFileTab1();
+    void setupFileTab2();
+    void setupPages();
+    void updateHist();
+    void parseCommandline();
+    void addTitle(QWidget *p, QVBoxLayout *layout, QString title);
 
-        QValueList<manualchanges> changes;
-        void refreshColumnMode();
-        void parseWizardMode();
-        void getHelpDialogString( QLineEdit* edit );
+    QValueList<manualchanges> changes;
+    void refreshColumnMode();
+    void parseWizardMode();
+    void getHelpDialogString(QLineEdit *edit);
 
-    protected:
-        QWidget* parent;
-        KMenuBar* menuBar;
-        KPopupMenu* mnuSort;
-        KAction* loadPlugins;
+protected:
+    QWidget *parent;
+    KMenuBar *menuBar;
+    KPopupMenu *mnuSort;
+    KAction *loadPlugins;
 
-        QPushButton* finishButton;
+    QPushButton *finishButton;
 
-        PluginLoader* plugin;
+    PluginLoader *plugin;
 
-        QWidgetStack* fileTab;
+    QWidgetStack *fileTab;
 
-        QWidget* page_1;
-        QWidget* page_2;
-        KJanusWidget* page_3;
-        QWidget* page_4;
+    QWidget *page_1;
+    QWidget *page_2;
+    KJanusWidget *page_3;
+    QWidget *page_4;
 
-        bool m_wizard;
-        bool m_loadplugins;
-        bool m_switching;
-        bool m_autosize;
-        int m_hist;
-        int m_index;
-        int m_step;
-	bool m_reset;
+    bool m_wizard;
+    bool m_loadplugins;
+    bool m_switching;
+    bool m_autosize;
+    int m_hist;
+    int m_index;
+    int m_step;
+    bool m_reset;
 
-        bool m_hasCommandlineProfile;
+    bool m_hasCommandlineProfile;
 
-        QPushButton* buttonUp;
-        QPushButton* buttonDown;
-        QPushButton* buttonUp2;
-        QPushButton* buttonDown2;
-        QPushButton* buttonAdd;
-        QPushButton* buttonRemove;
-        QPushButton* buttonRemoveAll;
-        QPushButton* buttonReplace;
-        QPushButton* buttonEasyReplace;
-        QPushButton* buttonHelp;
-        QPushButton* buttonMove;
-        QPushButton* buttonCoord;
-        QPushButton* buttonNumber;
+    QPushButton *buttonUp;
+    QPushButton *buttonDown;
+    QPushButton *buttonUp2;
+    QPushButton *buttonDown2;
+    QPushButton *buttonAdd;
+    QPushButton *buttonRemove;
+    QPushButton *buttonRemoveAll;
+    QPushButton *buttonReplace;
+    QPushButton *buttonEasyReplace;
+    QPushButton *buttonHelp;
+    QPushButton *buttonMove;
+    QPushButton *buttonCoord;
+    QPushButton *buttonNumber;
 
-        QPushButton* buttonEasy1;
-        QPushButton* buttonEasy2;
-        QPushButton* buttonEasy3;
-        QPushButton* buttonEasy4;
-        KComboBox* comboSort;
+    QPushButton *buttonEasy1;
+    QPushButton *buttonEasy2;
+    QPushButton *buttonEasy3;
+    QPushButton *buttonEasy4;
+    KComboBox *comboSort;
 
-        QLabel* description;
-        QLabel* description2;
-        QLabel* description3;
-        QLabel* description4;
+    QLabel *description;
+    QLabel *description2;
+    QLabel *description3;
+    QLabel *description4;
 
-        QLabel* labelTemplate;
-        QLabel* labelHelp;
-        QLabel* labelCount;
-        QLabel* labelPoint;
+    QLabel *labelTemplate;
+    QLabel *labelHelp;
+    QLabel *labelCount;
+    QLabel *labelPoint;
 
-        KMyListBox* fileList;
-        KMyListView* preview;
-        QButtonGroup* groupOptions;
+    KMyListBox *fileList;
+    KMyListView *preview;
+    QButtonGroup *groupOptions;
 
-        QRadioButton* optionCopy;
-        QRadioButton* optionMove;
-        QRadioButton* optionRename;
-        QRadioButton* optionLink;
+    QRadioButton *optionCopy;
+    QRadioButton *optionMove;
+    QRadioButton *optionRename;
+    QRadioButton *optionLink;
 
-        QGroupBox* groupExtension;
-        QVGroupBox* groupUndo;
+    QGroupBox *groupExtension;
+    QVGroupBox *groupUndo;
 
-        KMyHistoryCombo* dirname;
-        KURLRequester* urlrequester;
-        KURLRequester* undorequester;
-        KMyHistoryCombo* filename;
-        KMyHistoryCombo* extemplate;
+    KMyHistoryCombo *dirname;
+    KURLRequester *urlrequester;
+    KURLRequester *undorequester;
+    KMyHistoryCombo *filename;
+    KMyHistoryCombo *extemplate;
 
-        QCheckBox* checkName;
-        QCheckBox* checkExtension;
-        QCheckBox* checkOverwrite;
-        QCheckBox* checkPreview;
-        QCheckBox* checkUndoScript;
+    QCheckBox *checkName;
+    QCheckBox *checkExtension;
+    QCheckBox *checkOverwrite;
+    QCheckBox *checkPreview;
+    QCheckBox *checkUndoScript;
 
-        KComboBox* comboExtension;
+    KComboBox *comboExtension;
 
-        MyHelpCombo* comboHelp;
-        HelpDialog* helpDialog;
-        HelpDialogData* helpDialogData;
+    MyHelpCombo *comboHelp;
+    HelpDialog *helpDialog;
+    HelpDialogData *helpDialogData;
 
-        BatchRenamer* b;
-        QValueList<int> skip;
-        QValueList<replacestrings> rep;
+    BatchRenamer *b;
+    QValueList<int> skip;
+    QValueList<replacestrings> rep;
 
-        // ==========
-        // Easy mode:
-        // ==========
+    // ==========
+    // Easy mode:
+    // ==========
 
-        KComboBox* comboKRenamePrefix;
-        KComboBox* comboKRenameSuffix;
-        KComboBox* comboKRenameFilename;
-        KComboBox* comboKRenameExtension;
+    KComboBox *comboKRenamePrefix;
+    KComboBox *comboKRenameSuffix;
+    KComboBox *comboKRenameFilename;
+    KComboBox *comboKRenameExtension;
 
-        KMyHistoryCombo* comboPrefix;
-        KMyHistoryCombo* comboSuffix;
-        KMyHistoryCombo* comboCustom;
-        KMyHistoryCombo* comboCustomExtension;
+    KMyHistoryCombo *comboPrefix;
+    KMyHistoryCombo *comboSuffix;
+    KMyHistoryCombo *comboCustom;
+    KMyHistoryCombo *comboCustomExtension;
 
-        KIntNumInput* spinStart;
-        KIntNumInput* spinNull;
+    KIntNumInput *spinStart;
+    KIntNumInput *spinNull;
 
-        // ===========
-        // Layout:
-        // ===========
+    // ===========
+    // Layout:
+    // ===========
 
-        QHBoxLayout* pageLayout;
-        QVBoxLayout* pageLayout_2;
-        QVBoxLayout* pageLayout_3;
-        QVBoxLayout* pageLayout_4;
+    QHBoxLayout *pageLayout;
+    QVBoxLayout *pageLayout_2;
+    QVBoxLayout *pageLayout_3;
+    QVBoxLayout *pageLayout_4;
 
-        QHBoxLayout* tabLayout_0;
-        QHBoxLayout* tabLayout_1;
-        QHBoxLayout* tabLayout_2;
-        QVBoxLayout* tabLayout_3;
-        QVBoxLayout* groupAdvancedExtensionLayout;
-        QVBoxLayout* groupOptionsLayout;
-        QHBoxLayout* groupDirLayout;
-        QVBoxLayout* groupNumberLayout;
-        QHBoxLayout* groupExtensionLayout;
+    QHBoxLayout *tabLayout_0;
+    QHBoxLayout *tabLayout_1;
+    QHBoxLayout *tabLayout_2;
+    QVBoxLayout *tabLayout_3;
+    QVBoxLayout *groupAdvancedExtensionLayout;
+    QVBoxLayout *groupOptionsLayout;
+    QHBoxLayout *groupDirLayout;
+    QVBoxLayout *groupNumberLayout;
+    QHBoxLayout *groupExtensionLayout;
 
-        // page1
-        QHBoxLayout* Layout2;
-        QVBoxLayout* Layout3;
-        QHBoxLayout* Layout4;
-        QVBoxLayout* Layout5;
+    // page1
+    QHBoxLayout *Layout2;
+    QVBoxLayout *Layout3;
+    QHBoxLayout *Layout4;
+    QVBoxLayout *Layout5;
 
-        // page4
-        QVBoxLayout* Layout10;
-        QHBoxLayout* Layout15;
-        QVBoxLayout* Layout16;
-        QHBoxLayout* Layout22;
-        QVBoxLayout* Layout23;
+    // page4
+    QVBoxLayout *Layout10;
+    QHBoxLayout *Layout15;
+    QVBoxLayout *Layout16;
+    QHBoxLayout *Layout22;
+    QVBoxLayout *Layout23;
 
-        // tab
-        QHBoxLayout* Layout100;
-        QHBoxLayout* Layout101;
+    // tab
+    QHBoxLayout *Layout100;
+    QHBoxLayout *Layout101;
 };
-
 
 int KRenameImpl::counterStart() const
 {

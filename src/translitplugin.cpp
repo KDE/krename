@@ -36,77 +36,77 @@ const QString TranslitPlugin::s_strUtf8[] = {"а","б","в","г","д","е","ё",
     "Á","Ä","Č","Ď","É","Ě","Í","Ľ","Ĺ","Ň","Ó","Ô","Ö","Ő","Ř","Ŕ","Š","Ť","Ú","Ů","Ü","Ű","Ý","Ž",QString::null};
 */
 const QString TranslitPlugin::s_strUtf8[] = {
-    "\xD0\xB0","\xD0\xB1","\xD0\xB2",
-    "\xD0\xB3","\xD0\xB4","\xD0\xB5",
-    "\xD1\x91","\xD0\xB6","\xD0\xB7",
-    "\xD0\xB8","\xD0\xB9","\xD0\xBA",
-    "\xD0\xBB","\xD0\xBC","\xD0\xBD",
-    "\xD0\xBE","\xD0\xBF","\xD1\x80",
-    "\xD1\x81","\xD1\x82","\xD1\x83",
-    "\xD1\x84","\xD1\x85","\xD1\x86",
-    "\xD1\x87","\xD1\x88","\xD1\x89",
-    "\xD1\x8A","\xD1\x8B","\xD1\x8C",
-    "\xD1\x8D","\xD1\x8E","\xD1\x8F",
-    "\xD0\x90","\xD0\x91","\xD0\x92",
-    "\xD0\x93","\xD0\x94","\xD0\x95",
-    "\xD0\x81","\xD0\x96","\xD0\x97",
-    "\xD0\x98","\xD0\x99","\xD0\x9A",
-    "\xD0\x9B","\xD0\x9C","\xD0\x9D",
-    "\xD0\x9E","\xD0\x9F","\xD0\xA0",
-    "\xD0\xA1","\xD0\xA2","\xD0\xA3",
-    "\xD0\xA4","\xD0\xA5","\xD0\xA6",
-    "\xD0\xA7","\xD0\xA8","\xD0\xA9",
-    "\xD0\xAA","\xD0\xAB","\xD0\xAC",
-    "\xD0\xAD","\xD0\xAE","\xD0\xAF",
-    "\xC3\xA1","\xC3\xA4","\xC4\x8D",
-    "\xC4\x8F","\xC3\xA9","\xC4\x9B",
-    "\xC3\xAD","\xC4\xBE","\xC4\xBA",
-    "\xC5\x88","\xC3\xB3","\xC3\xB4",
-    "\xC3\xB6","\xC5\x91","\xC5\x99",
-    "\xC5\x95","\xC5\xA1","\xC5\xA5",
-    "\xC3\xBA","\xC5\xAF","\xC3\xBC",
-    "\xC5\xB1","\xC3\xBD","\xC5\xBE",
-    "\xC3\x81","\xC3\x84","\xC4\x8C",
-    "\xC4\x8E","\xC3\x89","\xC4\x9A",
-    "\xC3\x8D","\xC4\xBD","\xC4\xB9",
-    "\xC5\x87","\xC3\x93","\xC3\x94",
-    "\xC3\x96","\xC5\x90","\xC5\x94",
-    "\xC5\xA0","\xC5\xA4","\xC3\x9A",
-    "\xC5\xAE","\xC3\x9C","\xC5\xB0",
-    "\xC3\x9D","\xC5\xBD",  QString()};
+    "\xD0\xB0", "\xD0\xB1", "\xD0\xB2",
+    "\xD0\xB3", "\xD0\xB4", "\xD0\xB5",
+    "\xD1\x91", "\xD0\xB6", "\xD0\xB7",
+    "\xD0\xB8", "\xD0\xB9", "\xD0\xBA",
+    "\xD0\xBB", "\xD0\xBC", "\xD0\xBD",
+    "\xD0\xBE", "\xD0\xBF", "\xD1\x80",
+    "\xD1\x81", "\xD1\x82", "\xD1\x83",
+    "\xD1\x84", "\xD1\x85", "\xD1\x86",
+    "\xD1\x87", "\xD1\x88", "\xD1\x89",
+    "\xD1\x8A", "\xD1\x8B", "\xD1\x8C",
+    "\xD1\x8D", "\xD1\x8E", "\xD1\x8F",
+    "\xD0\x90", "\xD0\x91", "\xD0\x92",
+    "\xD0\x93", "\xD0\x94", "\xD0\x95",
+    "\xD0\x81", "\xD0\x96", "\xD0\x97",
+    "\xD0\x98", "\xD0\x99", "\xD0\x9A",
+    "\xD0\x9B", "\xD0\x9C", "\xD0\x9D",
+    "\xD0\x9E", "\xD0\x9F", "\xD0\xA0",
+    "\xD0\xA1", "\xD0\xA2", "\xD0\xA3",
+    "\xD0\xA4", "\xD0\xA5", "\xD0\xA6",
+    "\xD0\xA7", "\xD0\xA8", "\xD0\xA9",
+    "\xD0\xAA", "\xD0\xAB", "\xD0\xAC",
+    "\xD0\xAD", "\xD0\xAE", "\xD0\xAF",
+    "\xC3\xA1", "\xC3\xA4", "\xC4\x8D",
+    "\xC4\x8F", "\xC3\xA9", "\xC4\x9B",
+    "\xC3\xAD", "\xC4\xBE", "\xC4\xBA",
+    "\xC5\x88", "\xC3\xB3", "\xC3\xB4",
+    "\xC3\xB6", "\xC5\x91", "\xC5\x99",
+    "\xC5\x95", "\xC5\xA1", "\xC5\xA5",
+    "\xC3\xBA", "\xC5\xAF", "\xC3\xBC",
+    "\xC5\xB1", "\xC3\xBD", "\xC5\xBE",
+    "\xC3\x81", "\xC3\x84", "\xC4\x8C",
+    "\xC4\x8E", "\xC3\x89", "\xC4\x9A",
+    "\xC3\x8D", "\xC4\xBD", "\xC4\xB9",
+    "\xC5\x87", "\xC3\x93", "\xC3\x94",
+    "\xC3\x96", "\xC5\x90", "\xC5\x94",
+    "\xC5\xA0", "\xC5\xA4", "\xC3\x9A",
+    "\xC5\xAE", "\xC3\x9C", "\xC5\xB0",
+    "\xC3\x9D", "\xC5\xBD",  QString()
+};
 
-const QString TranslitPlugin::s_strEngl[]= {"a","b","v","g","d","e","yo","zh","z","i",
-    "j","k","l","m","n","o","p","r","s","t","u","f","h","c","ch","sh","sh","","y","",
-    "e","yu","ya",
-    "A","B","V","G","D","E","Yo","Zh","Z","I","J","K","L","M","N","O","P",
-    "R","S","T","U","F","H","C","Ch","Sh","Sh","","Y","","E","Yu","Ya",
-    "a","a","c","d","e","e","i","l","l","n","o","o","o","o","r","r","s","t","u","u","u","u","y","z",
-    "A","A","C","D","E","E","I","L","L","N","O","O","O","O","R","R","S","T","U","U","U","U","Y","Z",QString()};
+const QString TranslitPlugin::s_strEngl[] = {"a", "b", "v", "g", "d", "e", "yo", "zh", "z", "i",
+                                             "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "f", "h", "c", "ch", "sh", "sh", "", "y", "",
+                                             "e", "yu", "ya",
+                                             "A", "B", "V", "G", "D", "E", "Yo", "Zh", "Z", "I", "J", "K", "L", "M", "N", "O", "P",
+                                             "R", "S", "T", "U", "F", "H", "C", "Ch", "Sh", "Sh", "", "Y", "", "E", "Yu", "Ya",
+                                             "a", "a", "c", "d", "e", "e", "i", "l", "l", "n", "o", "o", "o", "o", "r", "r", "s", "t", "u", "u", "u", "u", "y", "z",
+                                             "A", "A", "C", "D", "E", "E", "I", "L", "L", "N", "O", "O", "O", "O", "R", "R", "S", "T", "U", "U", "U", "U", "Y", "Z", QString()
+                                            };
 
-QHash<QString,QString> TranslitPlugin::s_mapFromUTF8;
+QHash<QString, QString> TranslitPlugin::s_mapFromUTF8;
 
-TranslitPlugin::TranslitPlugin( PluginLoader* loader )
-    : FilePlugin( loader )
+TranslitPlugin::TranslitPlugin(PluginLoader *loader)
+    : FilePlugin(loader)
 {
     this->addSupportedToken("transliterated");
     this->addSupportedToken("transliterated;.*");
 
-    m_help.append( Plugin::createHelpEntry("transliterated", i18n("Inserts the transliterated original filename")) );
-    m_help.append( Plugin::createHelpEntry("%transliterated", i18n("Inserts the transliterated original filename converted to lower case")) );
-    m_help.append( Plugin::createHelpEntry("&transliterated", i18n("Inserts the transliterated original filename converted to upper case")) );
-    m_help.append( Plugin::createHelpEntry("*transliterated", i18n("Inserts the transliterated original filename capitalized")) );
-    m_help.append( Plugin::createHelpEntry("transliterated;Some string", i18n("Transliterates the string following the semicolon")) );
+    m_help.append(Plugin::createHelpEntry("transliterated", i18n("Inserts the transliterated original filename")));
+    m_help.append(Plugin::createHelpEntry("%transliterated", i18n("Inserts the transliterated original filename converted to lower case")));
+    m_help.append(Plugin::createHelpEntry("&transliterated", i18n("Inserts the transliterated original filename converted to upper case")));
+    m_help.append(Plugin::createHelpEntry("*transliterated", i18n("Inserts the transliterated original filename capitalized")));
+    m_help.append(Plugin::createHelpEntry("transliterated;Some string", i18n("Transliterates the string following the semicolon")));
 
     m_name = i18n("Transliteration");
     m_icon = "applications-education-language";
     m_comment = i18n("<qt>This plugin can transcribe a filename "
-		     "into English (i.e. perform transliteration).</qt>");
+                     "into English (i.e. perform transliteration).</qt>");
 
-    if( TranslitPlugin::s_mapFromUTF8.isEmpty() )
-    {
-        int i=0;
-        while( ! TranslitPlugin::s_strUtf8[i].isEmpty() )
-        {
+    if (TranslitPlugin::s_mapFromUTF8.isEmpty()) {
+        int i = 0;
+        while (! TranslitPlugin::s_strUtf8[i].isEmpty()) {
             TranslitPlugin::s_mapFromUTF8[ TranslitPlugin::s_strUtf8[i] ] = TranslitPlugin::s_strEngl[i];
 
             ++i;
@@ -120,34 +120,31 @@ TranslitPlugin::~TranslitPlugin()
 
 }
 
-
-QString TranslitPlugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType )
+QString TranslitPlugin::processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType)
 {
     QString src;
     QString token;
 
     // This plugin supports to types
-    if( eCurrentType == ePluginType_Token )
-    {
-        if( filenameOrToken.contains( ";" ) )
-        {
-            src   = filenameOrToken.section( ';', 1, 1 );
-            token = filenameOrToken.section( ';', 0, 0 ).toLower();
-        } else
+    if (eCurrentType == ePluginType_Token) {
+        if (filenameOrToken.contains(";")) {
+            src   = filenameOrToken.section(';', 1, 1);
+            token = filenameOrToken.section(';', 0, 0).toLower();
+        } else {
             token = filenameOrToken.toLower();
+        }
 
-        if( token == "transliterated" )
-        {
-            if( src.isEmpty() )
-            {
+        if (token == "transliterated") {
+            if (src.isEmpty()) {
                 // TODO: If extension .....
-                if( true )
-                    src = b->files()->at( index ).srcFilename();
-                else
-                    src = b->files()->at( index ).srcExtension();
+                if (true) {
+                    src = b->files()->at(index).srcFilename();
+                } else {
+                    src = b->files()->at(index).srcExtension();
+                }
             }
 
-            return this->transliterate( src );
+            return this->transliterate(src);
         }
     }
     /*
@@ -202,23 +199,21 @@ void TranslitPlugin::createUI( QWidget* parent ) const
 }
 */
 
-QString TranslitPlugin::transliterate(const QString & unicoded)
+QString TranslitPlugin::transliterate(const QString &unicoded)
 {
     int i;
     QString transed = "";
 
     transed.reserve(unicoded.length());
 
-    for(i=0; i<(int)unicoded.length(); i++)
-    {
+    for (i = 0; i < (int)unicoded.length(); i++) {
         QString charIn = unicoded.mid(i, 1);
-        if( TranslitPlugin::s_mapFromUTF8.contains( charIn.toUtf8() ) )
-        {
+        if (TranslitPlugin::s_mapFromUTF8.contains(charIn.toUtf8())) {
             QString charTrans = TranslitPlugin::s_mapFromUTF8[charIn.toUtf8()];
             transed.append(charTrans);
-        }
-        else
+        } else {
             transed.append(charIn);
+        }
 
     }
 

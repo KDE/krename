@@ -33,18 +33,19 @@ class QDialogButtonBox;
  * It is a thin wrapper around GuiModeSelector and a QDialogButtonBox
  * so that the user has an OK button.
  */
-class FirstStartDlg : public QDialog {
- public:
-    explicit FirstStartDlg( QWidget* parent = nullptr );
+class FirstStartDlg : public QDialog
+{
+public:
+    explicit FirstStartDlg(QWidget *parent = nullptr);
 
     /**
      * @returns the selected Gui Mode
      */
     inline EGuiMode guiMode() const;
 
- private:
+private:
     Ui::GuiModeSelector m_selector;
-    QDialogButtonBox*   m_buttons;
+    QDialogButtonBox   *m_buttons;
 };
 
 EGuiMode FirstStartDlg::guiMode() const

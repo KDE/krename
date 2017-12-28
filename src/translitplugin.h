@@ -22,9 +22,10 @@
 
 #include <QHash>
 
-class TranslitPlugin : public FilePlugin {
- public:
-    explicit TranslitPlugin( PluginLoader* loader );
+class TranslitPlugin : public FilePlugin
+{
+public:
+    explicit TranslitPlugin(PluginLoader *loader);
 
     ~TranslitPlugin();
 
@@ -60,7 +61,7 @@ class TranslitPlugin : public FilePlugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
+    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType);
 
     /** Returns help descriptions for the supported tokens
      *
@@ -69,7 +70,7 @@ class TranslitPlugin : public FilePlugin {
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    inline const QStringList & help() const;
+    inline const QStringList &help() const;
 
     /** Create a user interface for this plugin
      *
@@ -77,7 +78,7 @@ class TranslitPlugin : public FilePlugin {
      */
     //virtual void createUI( QWidget* parent ) const;
 
- private:
+private:
     /** Transliterate a string and return the
      *  transliterated version.
      *
@@ -85,15 +86,15 @@ class TranslitPlugin : public FilePlugin {
      *
      *  @returns a transliterated copy of the string
      */
-    QString transliterate(const QString & unicoded);
+    QString transliterate(const QString &unicoded);
 
- private:
+private:
     QStringList m_help;
 
     static const QString s_strUtf8[];
     static const QString s_strEngl[];
 
-    static QHash<QString,QString> s_mapFromUTF8;
+    static QHash<QString, QString> s_mapFromUTF8;
 };
 
 inline int TranslitPlugin::type() const
@@ -102,7 +103,7 @@ inline int TranslitPlugin::type() const
     return ePluginType_Token;
 }
 
-inline const QStringList & TranslitPlugin::help() const
+inline const QStringList &TranslitPlugin::help() const
 {
     return m_help;
 }

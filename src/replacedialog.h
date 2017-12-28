@@ -29,30 +29,31 @@ class QTableWidgetItem;
 /**
  * This is a dialog with a list of strings for find and replace
  */
-class ReplaceDialog : public QDialog {
- Q_OBJECT
- public:
-     explicit ReplaceDialog( const QList<TReplaceItem> & items, QWidget* parent = nullptr );
+class ReplaceDialog : public QDialog
+{
+    Q_OBJECT
+public:
+    explicit ReplaceDialog(const QList<TReplaceItem> &items, QWidget *parent = nullptr);
 
-     QList<TReplaceItem> replaceList() const;
+    QList<TReplaceItem> replaceList() const;
 
- private Q_SLOTS:
+private Q_SLOTS:
 
-     void slotAdd();
-     void slotEdit();
-     void slotRemove();
+    void slotAdd();
+    void slotEdit();
+    void slotRemove();
 
-     void slotSaveList();
-     void slotLoadList();
+    void slotSaveList();
+    void slotLoadList();
 
-     void slotEnableControls();
+    void slotEnableControls();
 
- private:
-     QTableWidgetItem* createTableItem( const QString & text, bool isCheckable = false );
+private:
+    QTableWidgetItem *createTableItem(const QString &text, bool isCheckable = false);
 
- private:
+private:
     Ui::ReplaceWidget   m_widget;
-    QDialogButtonBox*   m_buttons;
+    QDialogButtonBox   *m_buttons;
 };
 
 #endif // REPLACE_DIALOG_H

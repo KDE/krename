@@ -47,17 +47,16 @@ private Q_SLOTS:
 protected Q_SLOTS:
     void runAllTests();
     void rowsAboutToBeInserted(const QModelIndex &parent, int start, int end);
-    void rowsInserted(const QModelIndex & parent, int start, int end);
+    void rowsInserted(const QModelIndex &parent, int start, int end);
     void rowsAboutToBeRemoved(const QModelIndex &parent, int start, int end);
-    void rowsRemoved(const QModelIndex & parent, int start, int end);
+    void rowsRemoved(const QModelIndex &parent, int start, int end);
 
 private:
     void checkChildren(const QModelIndex &parent, int currentDepth = 0);
 
     QAbstractItemModel *model;
 
-    struct Changing
-    {
+    struct Changing {
         QModelIndex parent;
         int oldSize;
         QVariant last;

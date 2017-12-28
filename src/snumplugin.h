@@ -20,10 +20,10 @@
 
 #include "fileplugin.h"
 
-
-class SnumPlugin : public FilePlugin {
- public:
-    explicit SnumPlugin( PluginLoader* loader );
+class SnumPlugin : public FilePlugin
+{
+public:
+    explicit SnumPlugin(PluginLoader *loader);
 
     ~SnumPlugin();
 
@@ -59,7 +59,7 @@ class SnumPlugin : public FilePlugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
+    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType);
 
     /** Returns help descriptions for the supported tokens
      *
@@ -68,24 +68,23 @@ class SnumPlugin : public FilePlugin {
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    inline const QStringList & help() const;
+    inline const QStringList &help() const;
 
     /** Create a user interface for this plugin
      *
      *  @param parent the parent widget of this plugin
      */
 
-
- private:
+private:
     /** Return the number.
      *
      *  @param unicoded the string which is to be extracted
      *
      *  @returns the number part of the string, season, or episode or both
      */
-    QString extractnum(const QString & unicoded, int a);
+    QString extractnum(const QString &unicoded, int a);
 
- private:
+private:
     QStringList m_help;
 
 };
@@ -95,7 +94,7 @@ inline int SnumPlugin::type() const
     return ePluginType_Token;
 }
 
-inline const QStringList & SnumPlugin::help() const
+inline const QStringList &SnumPlugin::help() const
 {
     return m_help;
 }

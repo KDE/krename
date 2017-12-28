@@ -24,16 +24,16 @@
 #include <QMenu>
 #include <QPointer>
 
-PreviewList::PreviewList( QWidget* parent )
-    : QTreeView( parent ), m_model( nullptr )
+PreviewList::PreviewList(QWidget *parent)
+    : QTreeView(parent), m_model(nullptr)
 {
-    m_menu = new QMenu( "KRename", this ); // we need any text here so that we have a title
-    m_menu->addAction( i18n("&Change filename manually..."), this, SLOT(slotManually()), QKeySequence("F2") );
+    m_menu = new QMenu("KRename", this);   // we need any text here so that we have a title
+    m_menu->addAction(i18n("&Change filename manually..."), this, SLOT(slotManually()), QKeySequence("F2"));
     m_menu->addSeparator();
-    m_menu->addAction( i18n("&Open"), this, SLOT( slotOpen() ) );
+    m_menu->addAction(i18n("&Open"), this, SLOT(slotOpen()));
     m_menu->addSeparator();
-    m_menu->addAction( i18n("&Add..."), this, SIGNAL( addFiles() ) );
-    m_menu->addAction( i18n("&Remove"), this, SLOT( slotRemove() ) );
+    m_menu->addAction(i18n("&Add..."), this, SIGNAL(addFiles()));
+    m_menu->addAction(i18n("&Remove"), this, SLOT(slotRemove()));
 
     connect(this, &PreviewList::activated, this, &PreviewList::slotManually);
 }
@@ -43,48 +43,45 @@ PreviewList::~PreviewList()
 
 }
 
-void PreviewList::contextMenuEvent( QContextMenuEvent* e )
+void PreviewList::contextMenuEvent(QContextMenuEvent *e)
 {
     // only show a context menu if we have model and contents
-    if( m_model && m_model->rowCount() && currentIndex().isValid() )
-    {
-        const KRenameFile& file  = m_model->file( this->currentIndex().row() );
+    if (m_model && m_model->rowCount() && currentIndex().isValid()) {
+        const KRenameFile &file  = m_model->file(this->currentIndex().row());
 
-        m_menu->setTitle( file.srcUrl().toDisplayString(QUrl::PreferLocalFile) );
-        m_menu->popup( e->globalPos() );
+        m_menu->setTitle(file.srcUrl().toDisplayString(QUrl::PreferLocalFile));
+        m_menu->popup(e->globalPos());
     }
 }
 
 void PreviewList::slotOpen()
 {
-    m_model->run( this->currentIndex(), this );
+    m_model->run(this->currentIndex(), this);
 }
 
 void PreviewList::slotRemove()
 {
     QList<int> list;
 
-    list.append( this->currentIndex().row() );
+    list.append(this->currentIndex().row());
 
-    m_model->removeFiles( list );
+    m_model->removeFiles(list);
 
     emit updateCount();
 }
 
 void PreviewList::slotManually()
 {
-    QPointer<CustomDialog> dialog = new CustomDialog(m_model->file( this->currentIndex().row() ), this);
-    if( dialog->exec() == QDialog::Accepted )
-    {
+    QPointer<CustomDialog> dialog = new CustomDialog(m_model->file(this->currentIndex().row()), this);
+    if (dialog->exec() == QDialog::Accepted) {
         QString manual;
         EManualChangeMode mode = eManualChangeMode_None;
-        if( dialog->hasManualChanges() )
-        {
+        if (dialog->hasManualChanges()) {
             manual = dialog->manualChanges();
             mode = dialog->manualChangeMode();
         }
 
-        m_model->file( this->currentIndex().row() ).setManualChanges( manual, mode );
+        m_model->file(this->currentIndex().row()).setManualChanges(manual, mode);
     }
     delete dialog;
 }

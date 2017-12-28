@@ -23,30 +23,29 @@
 
 #include <QLineEdit>
 
-
 #define EXT_HISTORY_COMBO_MAX_COUNT 10
 #define EXT_HISTORY_COMBO_TIMER_DELAY 500
 
-ExtHistoryCombo::ExtHistoryCombo( QWidget* parent )
-    : KHistoryComboBox( parent )
+ExtHistoryCombo::ExtHistoryCombo(QWidget *parent)
+    : KHistoryComboBox(parent)
 {
-    connect(this, static_cast<void (ExtHistoryCombo::*)(const QString&)>(&ExtHistoryCombo::activated),
+    connect(this, static_cast<void (ExtHistoryCombo::*)(const QString &)>(&ExtHistoryCombo::activated),
             this, &ExtHistoryCombo::addToHistory);
     connect(this, &ExtHistoryCombo::editTextChanged,
             this, &ExtHistoryCombo::slotTextChanged);
     connect(&m_timer, &QTimer::timeout,
             this, &ExtHistoryCombo::delayedTextChanged);
 
-    this->setMaxCount( EXT_HISTORY_COMBO_MAX_COUNT );
-    this->setDuplicatesEnabled( false );
+    this->setMaxCount(EXT_HISTORY_COMBO_MAX_COUNT);
+    this->setDuplicatesEnabled(false);
 
-    m_timer.setSingleShot( true );
+    m_timer.setSingleShot(true);
 }
 
 void ExtHistoryCombo::slotTextChanged()
 {
     m_timer.stop();
-    m_timer.start( EXT_HISTORY_COMBO_TIMER_DELAY );
+    m_timer.start(EXT_HISTORY_COMBO_TIMER_DELAY);
 }
 
 void ExtHistoryCombo::loadConfig()
@@ -56,8 +55,7 @@ void ExtHistoryCombo::loadConfig()
     QStringList completion;
 
     KSharedConfigPtr config = KSharedConfig::openConfig();
-    KConfigGroup groupGui = config->group( QString("ExtHistoryCombo") + this->objectName() );
-
+    KConfigGroup groupGui = config->group(QString("ExtHistoryCombo") + this->objectName());
 
     completion = groupGui.readEntry("CompletionList", QStringList());
     history = groupGui.readEntry("HistoryList", QStringList());
@@ -69,10 +67,10 @@ void ExtHistoryCombo::loadConfig()
 
 void ExtHistoryCombo::saveConfig()
 {
-    addToHistory( currentText() );
+    addToHistory(currentText());
 
     KSharedConfigPtr config = KSharedConfig::openConfig();
-    KConfigGroup groupGui = config->group( QString("ExtHistoryCombo") + this->objectName() );
+    KConfigGroup groupGui = config->group(QString("ExtHistoryCombo") + this->objectName());
 
     groupGui.writeEntry("CompletionList", this->completionObject()->items());
     groupGui.writeEntry("HistoryList", this->historyItems());

@@ -48,7 +48,8 @@ enum EManualChangeMode {
     eManualChangeMode_Custom ///< Use custom filename
 };
 
-class KRenameFile {
+class KRenameFile
+{
     struct TFileDescription {
         QString filename;
         QString extension;
@@ -56,7 +57,7 @@ class KRenameFile {
 
         QUrl    url;
 
-        const TFileDescription & operator=( const TFileDescription & rhs )
+        const TFileDescription &operator=(const TFileDescription &rhs)
         {
             filename  = rhs.filename;
             extension = rhs.extension;
@@ -67,7 +68,7 @@ class KRenameFile {
         }
     };
 
- public:
+public:
 
     /** A list of KRenameFile objects
      */
@@ -79,7 +80,7 @@ class KRenameFile {
      *  \see isValid
      */
     KRenameFile()
-        : m_bValid( false )
+        : m_bValid(false)
     {
     }
 
@@ -96,7 +97,7 @@ class KRenameFile {
      *                    filename and extension
      *  \param dot dot to use as separator for eSplitMode_CustomDot
      */
-    KRenameFile( const QUrl &src, bool directory, ESplitMode eSplitMode, unsigned int dot );
+    KRenameFile(const QUrl &src, bool directory, ESplitMode eSplitMode, unsigned int dot);
 
     /** Construct a new KRenameFile form a KFileItem which is faster
      *  than construction from an URL.
@@ -107,14 +108,14 @@ class KRenameFile {
      *  \param dot dot to use as separator for eSplitMode_CustomDot
      */
 
-    KRenameFile( const QUrl & src, ESplitMode eSplitMode, unsigned int dot );
+    KRenameFile(const QUrl &src, ESplitMode eSplitMode, unsigned int dot);
 
-    KRenameFile( const KFileItem& item, ESplitMode eSplitMode, unsigned int dot );
+    KRenameFile(const KFileItem &item, ESplitMode eSplitMode, unsigned int dot);
 
     /** Copy constructor
      *  \param rhs KRenameFile to copy
      */
-    KRenameFile( const KRenameFile & rhs );
+    KRenameFile(const KRenameFile &rhs);
 
     /** Set the splitmode to separate filename from fileextension
      *
@@ -125,7 +126,7 @@ class KRenameFile {
      *  \see srcFilename()
      *  \see srcExtension()
      */
-    void setCurrentSplitMode( ESplitMode eSplitMode, unsigned int dot = 1 );
+    void setCurrentSplitMode(ESplitMode eSplitMode, unsigned int dot = 1);
 
     /**
      * \returns the number of dots in this filename that can be used to separate filename and extension
@@ -147,10 +148,11 @@ class KRenameFile {
      *  @returns a QPixmap containing a preview of this KRenameFile.
      *           This might be only a mimetype icon depending on the current KDE settings.
      */
-    inline const QPixmap & icon() const
+    inline const QPixmap &icon() const
     {
-        if( m_icon.isNull() )
-            const_cast<KRenameFile*>(this)->loadPreviewIcon();
+        if (m_icon.isNull()) {
+            const_cast<KRenameFile *>(this)->loadPreviewIcon();
+        }
 
         return m_icon;
     }
@@ -165,7 +167,7 @@ class KRenameFile {
      *
      *  Normally KRenameFile knows how to load the icon itself.
      */
-    inline void setIcon( const QPixmap & icon )
+    inline void setIcon(const QPixmap &icon)
     {
         m_icon = icon;
     }
@@ -176,7 +178,7 @@ class KRenameFile {
      *
      *  @param error an error code (0 means no error)
      */
-    inline void setError( int error )
+    inline void setError(int error)
     {
         m_error = error;;
     }
@@ -192,14 +194,14 @@ class KRenameFile {
     /** Assigns another KRenameFile to this KRenameFile
      *  \param rhs object to assign
      */
-    const KRenameFile & operator=( const KRenameFile & rhs );
+    const KRenameFile &operator=(const KRenameFile &rhs);
 
     /** Compare a KRenameFile object to a KFileItem
      *
      *  \returns true if the file item of this KRenameFile
      *           is identical to the parameter
      */
-    bool operator==( const KFileItem & item ) const;
+    bool operator==(const KFileItem &item) const;
 
     /**
      * \returns true if this file references
@@ -213,7 +215,7 @@ class KRenameFile {
     /**
      * \returns manualChanges the user has made to the filename
      */
-    inline const QString & manualChanges() const
+    inline const QString &manualChanges() const
     {
         return m_manual;
     }
@@ -224,7 +226,7 @@ class KRenameFile {
      * \param manual manual changes for filename and extension
      * \param mode mode of change
      */
-    inline void setManualChanges( const QString & manual, EManualChangeMode mode )
+    inline void setManualChanges(const QString &manual, EManualChangeMode mode)
     {
         m_manual = manual;
         m_manualMode = mode;
@@ -241,64 +243,64 @@ class KRenameFile {
     /**
      * \returns always the original source directory
      */
-    inline const QString & realSrcDirectory() const
+    inline const QString &realSrcDirectory() const
     {
-            return m_src.directory;
+        return m_src.directory;
     }
 
-    inline void setOverrideSrcDirectory( const QString & dir )
+    inline void setOverrideSrcDirectory(const QString &dir)
     {
         m_overrideDir = dir;
     }
 
-    inline const QString & srcFilename() const
+    inline const QString &srcFilename() const
     {
         return m_src.filename;
     }
 
-    inline const QString & srcExtension() const
+    inline const QString &srcExtension() const
     {
         return m_src.extension;
     }
 
-    inline const QString & srcDirectory() const
+    inline const QString &srcDirectory() const
     {
         return (m_overrideDir.isNull() ? m_src.directory : m_overrideDir);
     }
 
     const QUrl srcUrl() const;
 
-    inline void setDstFilename( const QString & filename )
+    inline void setDstFilename(const QString &filename)
     {
         m_dst.filename = filename;
     }
 
-    inline const QString & dstFilename() const
+    inline const QString &dstFilename() const
     {
         return m_dst.filename;
     }
 
-    inline void setDstExtension( const QString & extension )
+    inline void setDstExtension(const QString &extension)
     {
         m_dst.extension = extension;
     }
 
-    inline const QString & dstExtension() const
+    inline const QString &dstExtension() const
     {
         return m_dst.extension;
     }
 
-    inline void setDstDirectory( const QString & directory )
+    inline void setDstDirectory(const QString &directory)
     {
         m_dst.directory = directory;
     }
 
-    inline const QString & dstDirectory() const
+    inline const QString &dstDirectory() const
     {
         return m_dst.directory;
     }
 
-    inline void setDstUrl( const QUrl &url )
+    inline void setDstUrl(const QUrl &url)
     {
         m_dst.url = url;
     }
@@ -318,14 +320,14 @@ class KRenameFile {
      *
      * @returns a KFileItem
      */
-    const KFileItem & fileItem() const;
+    const KFileItem &fileItem() const;
 
     /**
      * Set the icon (preview) size
      *
      * @param size the icon size
      */
-    static void setIconSize( int size );
+    static void setIconSize(int size);
     /**
      * @returns the icon size
      */
@@ -335,8 +337,8 @@ class KRenameFile {
      */
     static int getDefaultIconSize();
 
- private:
-    void initFileDescription( TFileDescription & rDescription, const QUrl &url, ESplitMode eSplitMode, unsigned int dot ) const;
+private:
+    void initFileDescription(TFileDescription &rDescription, const QUrl &url, ESplitMode eSplitMode, unsigned int dot) const;
 
     /** Load a preview icon for this KRenameFile object
      *  using KDEs preview loading mechanism.
@@ -344,11 +346,11 @@ class KRenameFile {
     void loadPreviewIcon();
 
     static const int DEFAULT_ICON_SIZE;
-    static const char* EXTRA_DATA_KEY;
+    static const char *EXTRA_DATA_KEY;
 
- private:
+private:
     KFileItem        m_fileItem;
-	 static int       m_iconSize;
+    static int       m_iconSize;
 
     TFileDescription m_src;
     TFileDescription m_dst;

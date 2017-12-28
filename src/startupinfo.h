@@ -20,8 +20,9 @@
 
 #include <QFrame>
 
-namespace Ui {
-   class StartUpInfoWidget;
+namespace Ui
+{
+class StartUpInfoWidget;
 };
 
 /**
@@ -29,11 +30,12 @@ namespace Ui {
  * when using KRename.
  *
  */
-class StartUpInfo : public QFrame {
+class StartUpInfo : public QFrame
+{
     Q_OBJECT
 
 public:
-    explicit StartUpInfo(QWidget* parent = nullptr);
+    explicit StartUpInfo(QWidget *parent = nullptr);
     virtual ~StartUpInfo();
 
 Q_SIGNALS:
@@ -48,7 +50,7 @@ Q_SIGNALS:
     void enterTemplate();
 
 private:
-    Ui::StartUpInfoWidget* m_widget;
+    Ui::StartUpInfoWidget *m_widget;
 };
 
 #endif // START_UP_INFO_H

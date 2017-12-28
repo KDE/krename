@@ -24,7 +24,6 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-
 class BatchRenamer;
 class KConfigGroup;
 class PluginLoader;
@@ -42,9 +41,10 @@ enum EPluginType {
 /** This is the abstract interface that has to be implemented
  *  by all KRename plugins.
  */
-class Plugin {
- public:
-    explicit Plugin( PluginLoader* loader );
+class Plugin
+{
+public:
+    explicit Plugin(PluginLoader *loader);
     virtual ~Plugin();
 
     /**
@@ -56,7 +56,7 @@ class Plugin {
      *
      * \see help()
      */
-    static QString createHelpEntry( const QString & token, const QString & help );
+    static QString createHelpEntry(const QString &token, const QString &help);
 
     /**
      * @returns a name of the plugin that can be displayed
@@ -84,7 +84,7 @@ class Plugin {
      *
      *  This has no effect if alwaysEnabled returns true
      */
-    inline void setEnabled( bool b );
+    inline void setEnabled(bool b);
 
     /**
      * @returns true if this plugin is enabled.
@@ -127,7 +127,7 @@ class Plugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType ) = 0;
+    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType) = 0;
 
     /** Get a list of all tokens supported by this plugin.
      *
@@ -136,7 +136,7 @@ class Plugin {
      *  @returns a list of all supported tokens. The returned strings will be treated
      *           as regular expressions to find a plugin which supports a token.
      */
-    virtual const QStringList & supportedTokens() const = 0;
+    virtual const QStringList &supportedTokens() const = 0;
 
     /** Returns help descriptions for the supported tokens
      *
@@ -145,13 +145,13 @@ class Plugin {
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    virtual const QStringList & help() const = 0;
+    virtual const QStringList &help() const = 0;
 
     /** Create a user interface for this plugin
      *
      *  @param parent the parent widget of this plugin
      */
-    virtual void createUI( QWidget* parent ) const = 0;
+    virtual void createUI(QWidget *parent) const = 0;
 
     /** Load the plugin configuration.
      *
@@ -159,7 +159,7 @@ class Plugin {
      *
      *  @param group config group where the configuration should be read from
      */
-    virtual void loadConfig( KConfigGroup & group );
+    virtual void loadConfig(KConfigGroup &group);
 
     /** Save the plugin configuration.
      *
@@ -167,7 +167,7 @@ class Plugin {
      *
      *  @param group config group where the configuration should be stored
      */
-    virtual void saveConfig( KConfigGroup & group ) const;
+    virtual void saveConfig(KConfigGroup &group) const;
 
     /*
         virtual bool checkError() = 0;
@@ -185,14 +185,14 @@ class Plugin {
         virtual const QStringList getKeys() const;
     */
 
- protected:
-    PluginLoader* m_pluginLoader;
+protected:
+    PluginLoader *m_pluginLoader;
 
- private:
+private:
     bool m_enabled;
 };
 
-inline void Plugin::setEnabled( bool b )
+inline void Plugin::setEnabled(bool b)
 {
     m_enabled = b;
 }

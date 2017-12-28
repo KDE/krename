@@ -30,11 +30,12 @@ class BatchRenamer;
 class KRenameModel;
 class KRenameUnformattedWrappedModel;
 
-class TokenHelpDialog : public QDialog {
- Q_OBJECT
- public:
-    TokenHelpDialog( KRenameModel* model, BatchRenamer* renamer,
-                     QLineEdit* edit, QWidget* parent = nullptr );
+class TokenHelpDialog : public QDialog
+{
+    Q_OBJECT
+public:
+    TokenHelpDialog(KRenameModel *model, BatchRenamer *renamer,
+                    QLineEdit *edit, QWidget *parent = nullptr);
 
     ~TokenHelpDialog();
 
@@ -47,7 +48,7 @@ class TokenHelpDialog : public QDialog {
      *  \param first if true make sure that this is the first category (after all) and is selected by
      *         default.
      */
-    void add( const QString & headline, const QStringList & commands, const QPixmap & icon, bool first = false );
+    void add(const QString &headline, const QStringList &commands, const QPixmap &icon, bool first = false);
 
     /**
      * Retrieve the separator between token and help
@@ -55,27 +56,27 @@ class TokenHelpDialog : public QDialog {
      */
     static const QString getTokenSeparator();
 
- public Q_SLOTS:
-     int exec();
+public Q_SLOTS:
+    int exec();
 
- private Q_SLOTS:
+private Q_SLOTS:
     void slotInsert();
 
-    void slotCategoryChanged( QTreeWidgetItem* item );
+    void slotCategoryChanged(QTreeWidgetItem *item);
     void saveConfig();
 
     void slotEnableControls();
     void slotPreviewClicked(bool bPreview);
     void slotUpdatePreview();
 
- private:
+private:
     void loadConfig();
 
     /**
      * Select a category by its name.
      * \param category user visible name of a category
      */
-    void selectCategory( const QString & category );
+    void selectCategory(const QString &category);
 
     /**
      * Add all tokens stored in the list
@@ -88,17 +89,17 @@ class TokenHelpDialog : public QDialog {
      * \param token the token itself
      * \param help the help string for the token
      */
-    void addToRecentTokens( const QString & token, const QString & help );
+    void addToRecentTokens(const QString &token, const QString &help);
 
- private:
-    KRenameUnformattedWrappedModel* m_model;
+private:
+    KRenameUnformattedWrappedModel *m_model;
 
     Ui::TokenHelpWidget m_widget;
 
-    QLineEdit*          m_edit;
-    BatchRenamer*       m_renamer;
+    QLineEdit          *m_edit;
+    BatchRenamer       *m_renamer;
 
-    QMap<QString,QStringList> m_map;
+    QMap<QString, QStringList> m_map;
 
     QString             m_first;
 

@@ -22,9 +22,10 @@
 #include <QDialog>
 #include <KFileWidget>
 
-class FileDialogExtWidget : public QDialog {
- Q_OBJECT
- public:
+class FileDialogExtWidget : public QDialog
+{
+    Q_OBJECT
+public:
     explicit FileDialogExtWidget(QWidget *parent);
 
     /**
@@ -52,19 +53,25 @@ class FileDialogExtWidget : public QDialog {
     /**
      * \param b if true adding recursively will be enabled by default
      */
-    inline void setAddRecursively( bool b );
+    inline void setAddRecursively(bool b);
 
-    QList<QUrl> selectedUrls() { return m_fileWidget->selectedUrls(); }
-    QString currentFilter() { return m_fileWidget->currentFilter(); }
+    QList<QUrl> selectedUrls()
+    {
+        return m_fileWidget->selectedUrls();
+    }
+    QString currentFilter()
+    {
+        return m_fileWidget->currentFilter();
+    }
 
- private Q_SLOTS:
+private Q_SLOTS:
     void enableControls();
 
- private:
-    QCheckBox* checkRecursive;
-    QCheckBox* checkHidden;
-    QCheckBox* checkDir;
-    QCheckBox* checkOnlyDir;
+private:
+    QCheckBox *checkRecursive;
+    QCheckBox *checkHidden;
+    QCheckBox *checkDir;
+    QCheckBox *checkOnlyDir;
     KFileWidget *m_fileWidget;
 };
 
@@ -88,9 +95,9 @@ bool FileDialogExtWidget::addDirsOnly() const
     return checkOnlyDir->isChecked();
 }
 
-void FileDialogExtWidget::setAddRecursively( bool b )
+void FileDialogExtWidget::setAddRecursively(bool b)
 {
-    checkRecursive->setChecked( b );
+    checkRecursive->setChecked(b);
 }
 
 #endif // FILE_DIALOG_EXT_WIDGET_H

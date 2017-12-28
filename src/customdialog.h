@@ -25,10 +25,11 @@
 
 class KRenameFile;
 
-class CustomDialog : public QDialog {
- Q_OBJECT
- public:
-    CustomDialog( const KRenameFile & file, QWidget* parent );
+class CustomDialog : public QDialog
+{
+    Q_OBJECT
+public:
+    CustomDialog(const KRenameFile &file, QWidget *parent);
     ~CustomDialog();
 
     /**
@@ -47,10 +48,10 @@ class CustomDialog : public QDialog {
      */
     EManualChangeMode manualChangeMode() const;
 
- private Q_SLOTS:
+private Q_SLOTS:
     void slotEnableControls();
 
- private:
+private:
     Ui::CustomFilenameDlg m_widget;
 };
 

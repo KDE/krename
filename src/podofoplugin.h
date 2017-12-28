@@ -22,9 +22,10 @@
 
 #include <QMap>
 
-class PodofoPlugin : public FilePlugin {
- public:
-    explicit PodofoPlugin( PluginLoader* loader );
+class PodofoPlugin : public FilePlugin
+{
+public:
+    explicit PodofoPlugin(PluginLoader *loader);
 
     /**
      * This function is the core of your plugin.
@@ -53,7 +54,7 @@ class PodofoPlugin : public FilePlugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType );
+    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType);
 
     /** Returns help descriptions for the supported tokens
      *
@@ -62,14 +63,14 @@ class PodofoPlugin : public FilePlugin {
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    inline virtual const QStringList & help() const;
+    inline virtual const QStringList &help() const;
 
- private:
+private:
     QStringList           m_help;
-    QMap<QString,QString> m_mapRealKeys;
+    QMap<QString, QString> m_mapRealKeys;
 };
 
-inline const QStringList & PodofoPlugin::help() const
+inline const QStringList &PodofoPlugin::help() const
 {
     return m_help;
 }

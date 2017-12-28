@@ -40,12 +40,13 @@ class QTreeWidgetItem;
 class Plugin;
 class RichTextItemDelegate;
 
-namespace Ui {
-    class KRenameFiles;
-    class KRenameDestination;
-    class KRenameSimple;
-    class KRenamePlugins;
-    class KRenameFilename;
+namespace Ui
+{
+class KRenameFiles;
+class KRenameDestination;
+class KRenameSimple;
+class KRenamePlugins;
+class KRenameFilename;
 };
 
 /** KRenameWindow is the main window of KRename.
@@ -53,13 +54,14 @@ namespace Ui {
  *  According to the window mode setting, a row of buttons
  *  is displayed at the bottom of the window.
  */
-class KRenameWindow : public KMainWindow {
- Q_OBJECT
+class KRenameWindow : public KMainWindow
+{
+    Q_OBJECT
 
-     friend class KRenameImpl;
+    friend class KRenameImpl;
 
- public:
-    explicit KRenameWindow( QWidget* parent = nullptr );
+public:
+    explicit KRenameWindow(QWidget *parent = nullptr);
 
     ~KRenameWindow();
 
@@ -75,11 +77,10 @@ class KRenameWindow : public KMainWindow {
      */
     typedef struct {
         const int   numPages;
-        const char* pageTitles[KRenameWindow::MAX_PAGES];
+        const char *pageTitles[KRenameWindow::MAX_PAGES];
         const int   mapIndex[KRenameWindow::MAX_PAGES];
-        const char* pageIcons[KRenameWindow::MAX_PAGES];
+        const char *pageIcons[KRenameWindow::MAX_PAGES];
     } TGuiMode;
-
 
     /**
      * Load UI configuration where necessary.
@@ -94,7 +95,7 @@ class KRenameWindow : public KMainWindow {
     /** Set the count displayed on the files tab of KRename
      *  @param count typically the number of files in the list
      */
-    void setCount( unsigned int count );
+    void setCount(unsigned int count);
 
     /** Set the template for the filename.
      *
@@ -102,7 +103,7 @@ class KRenameWindow : public KMainWindow {
      *  @param insert if true the template string will be inserted into the current
      *         template otherwise it will be replaced
      */
-    void setFilenameTemplate( const QString & templ, bool insert = false );
+    void setFilenameTemplate(const QString &templ, bool insert = false);
 
     /** Set the template for the filename extension.
      *
@@ -110,20 +111,20 @@ class KRenameWindow : public KMainWindow {
      *  @param insert if true the template string will be inserted into the current
      *         template otherwise it will be replaced
      */
-    void setExtensionTemplate( const QString & templ, bool insert = false );
+    void setExtensionTemplate(const QString &templ, bool insert = false);
 
     /** Change the renmae mode
      *
      *  @param mode the renaming mode to use
      */
-    void setRenameMode( ERenameMode mode );
+    void setRenameMode(ERenameMode mode);
 
     /** Set the destination url
      *
      * @param url destination url for eRenameMode_Copy,
      * eRenameMode_Move and eRenameMode_Link
      */
-    void setDestinationUrl( const QUrl &url );
+    void setDestinationUrl(const QUrl &url);
 
     /** Reset the display of the internal file list
      */
@@ -133,13 +134,13 @@ class KRenameWindow : public KMainWindow {
      *
      *  @param model a krename model
      */
-    void setModel( KRenameModel* model );
+    void setModel(KRenameModel *model);
 
     /** Set the preview model
      *
      * @param model a preview model
      */
-    void setPreviewModel( KRenamePreviewModel* model );
+    void setPreviewModel(KRenamePreviewModel *model);
 
     /**
      * @returns the destinationUrl selected by the user
@@ -166,7 +167,7 @@ class KRenameWindow : public KMainWindow {
     /**
      * \param bPreview enable/disable file preview in the file tab
      */
-    void setPreviewEnabled( bool bPreview );
+    void setPreviewEnabled(bool bPreview);
 
     /**
      * \returns if name display is enabled in the file tab
@@ -176,7 +177,7 @@ class KRenameWindow : public KMainWindow {
     /**
      * \param bPreview enable/disable file name display in the file tab
      */
-    void setPreviewNamesEnabled( bool bPreview );
+    void setPreviewNamesEnabled(bool bPreview);
 
     /**
      * \returns the start index for numbers
@@ -186,7 +187,7 @@ class KRenameWindow : public KMainWindow {
     /**
      * \param index start index for numbers
      */
-    void setNumberStartIndex( int index );
+    void setNumberStartIndex(int index);
 
     /**
      * \returns the current sort mode in the file tab
@@ -198,17 +199,17 @@ class KRenameWindow : public KMainWindow {
      * \param customToken custom sort token if sortMode == eSortMode_Token
      * \param customSortMode custom sort mode if sortMode == eSortMode_Token
      */
-    void setSortMode( int sortMode, const QString & customToken, int customSortMode );
+    void setSortMode(int sortMode, const QString &customToken, int customSortMode);
 
     /**
      * Specify the extension split mode.
      * \param splitMode split mode
      * \param dot dot t use for eSplitMode_CustomDot
      */
-    void setExtensionSplitMode( ESplitMode splitMode, int dot );
+    void setExtensionSplitMode(ESplitMode splitMode, int dot);
 
     bool isAdvancedMode() const;
-    void setAdvancedMode( bool bAdvanced );
+    void setAdvancedMode(bool bAdvanced);
 
     /**
      * Shows the filename tab
@@ -219,12 +220,12 @@ class KRenameWindow : public KMainWindow {
      */
     void showFilenameTab();
 
- public Q_SLOTS:
+public Q_SLOTS:
     /** Resets the enabled/disabled state of all GUI elements correctly
      */
     void slotEnableControls();
 
- Q_SIGNALS:
+Q_SIGNALS:
     /** Called when the krenamewindow
      *  needs an update of the file cound
      *
@@ -236,7 +237,7 @@ class KRenameWindow : public KMainWindow {
      *
      *  @param mode the renaming mode selected by the user
      */
-    void renameModeChanged( ERenameMode mode );
+    void renameModeChanged(ERenameMode mode);
 
     /** Called whenever the user changes the option
      *  if existing files maybe overwritten
@@ -249,26 +250,26 @@ class KRenameWindow : public KMainWindow {
      *
      *  @param filename the new template for the filename
      */
-    void filenameTemplateChanged( const QString & filename );
+    void filenameTemplateChanged(const QString &filename);
 
     /** Called whenever the user has changed the template for the extension
      *
      *  @param filename the new template for the extension
      */
-    void extensionTemplateChanged( const QString & extension );
+    void extensionTemplateChanged(const QString &extension);
 
     /** Called whenever the user change the splitmode between filename and extension
      *
      *  @param splitMode the mode which is used to split filename and extension
      *  @param dot the n-th dot to use for splitting if splitMode = eSplitMode_CustomDot
      */
-    void extensionSplitModeChanged( ESplitMode splitMode, int dot );
+    void extensionSplitModeChanged(ESplitMode splitMode, int dot);
 
     /** Called whenever the user changes the start index
      *
      *  @param index the new start index for numberings
      */
-    void startIndexChanged( int index );
+    void startIndexChanged(int index);
 
     /** Called whenever the user changes the file preview state
      *
@@ -276,7 +277,7 @@ class KRenameWindow : public KMainWindow {
      *  @param filenames if true display filenames next to preview (if enable is false
      *                   this parameter has to be ignored.
      */
-    void filePreviewChanged( bool enable, bool filenames );
+    void filePreviewChanged(bool enable, bool filenames);
 
     /** Called whenever the GUI wants an updated preview
      */
@@ -308,19 +309,18 @@ class KRenameWindow : public KMainWindow {
      */
     void removeFiles();
 
-
     /** Show a token help dialog which inserts a token
      *  into a KLineEdit
      *
      *  \param edit the QLineEdit which is used to insert tokens selected by the user
      */
-    void showTokenHelpDialog( QLineEdit* edit );
+    void showTokenHelpDialog(QLineEdit *edit);
 
     /** Called when the user wants to rename with current settings
      */
     void accepted();
 
- private Q_SLOTS:
+private Q_SLOTS:
     void slotBack();
     void slotNext();
     void slotFinish();
@@ -329,7 +329,7 @@ class KRenameWindow : public KMainWindow {
      *
      *  @param index the index of the page to show
      */
-    void showPage( int index );
+    void showPage(int index);
 
     /** Called when one of the checkboxes for
      *  rename, copy, more or link was clicked
@@ -372,7 +372,7 @@ class KRenameWindow : public KMainWindow {
 
     /** Called when the user selects another extension split mode
      */
-    void slotExtensionSplitModeChanged( int index );
+    void slotExtensionSplitModeChanged(int index);
 
     /** Called when one of the preview checkboxes is clicked.
      */
@@ -382,7 +382,7 @@ class KRenameWindow : public KMainWindow {
      *
      *  @param index currently selected sort index
      */
-    void slotSortChanged( int index );
+    void slotSortChanged(int index);
 
     /** Called whenever the possible maximum value of
      *  dots in a filename has changed.
@@ -390,14 +390,14 @@ class KRenameWindow : public KMainWindow {
      *  @param dots the maximum number of dots in a filename
      *              that can be used to separate fileanem and extension
      */
-    void slotMaxDotsChanged( int dots );
+    void slotMaxDotsChanged(int dots);
 
     /** Called whenever the user clicks a file
      *  in a listview to open it.
      *
      *  @param index the model index of the requested file in a model
      */
-    void slotOpenFile(const QModelIndex& index);
+    void slotOpenFile(const QModelIndex &index);
 
     /** Called when the user wants to move files up
      *  in the file list box.
@@ -421,7 +421,7 @@ class KRenameWindow : public KMainWindow {
 
     /** Called when the user selects a plugin in the plugins tab
      */
-    void slotPluginChanged(QTreeWidgetItem* selected);
+    void slotPluginChanged(QTreeWidgetItem *selected);
 
     /** Called when a plugin is enabled or disabled
      */
@@ -438,7 +438,7 @@ class KRenameWindow : public KMainWindow {
      */
     void slotGotoTemplatesPage();
 
- private:
+private:
     /** Configures the GUI for the current GUI mode
      */
     void setupGui();
@@ -463,7 +463,7 @@ class KRenameWindow : public KMainWindow {
      *  @param comboCustom additional user defined text
      *  @returns a template string
      */
-    QString getPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom );
+    QString getPrefixSuffixSimple(QComboBox *combo, QComboBox *comboCustom);
 
     /** Get a template for the filename or extension in wizard mode
      *  from 2 combo boxes
@@ -472,7 +472,7 @@ class KRenameWindow : public KMainWindow {
      *  @param comboCustom additional user defined text
      *  @returns a template string
      */
-    QString getFilenameSimple( QComboBox* combo, QComboBox* comboCustom );
+    QString getFilenameSimple(QComboBox *combo, QComboBox *comboCustom);
 
     /** Set the GUI elements in the simple filename tab using a template
      *  that has specified in advanced mode
@@ -480,59 +480,58 @@ class KRenameWindow : public KMainWindow {
      *  @param filename template of the filename
      *  @param extension template of the extension
      */
-    void setSimpleTemplate( const QString & filename, const QString & extension );
+    void setSimpleTemplate(const QString &filename, const QString &extension);
 
     /** Emit signals that the template has been changed in some way by the user
      *
      *  @param filename template of the filename
      *  @param extension template of the extension
      */
-    void templatesChanged( const QString & filename, const QString & extension );
+    void templatesChanged(const QString &filename, const QString &extension);
 
-    void setPrefixSuffixSimple( QComboBox* combo, QComboBox* comboCustom, const QString & templ );
+    void setPrefixSuffixSimple(QComboBox *combo, QComboBox *comboCustom, const QString &templ);
 
-    void moveUp( const QList<int> & selected, QAbstractItemView* view );
-    void moveDown( const QList<int> & selected, QAbstractItemView* view );
+    void moveUp(const QList<int> &selected, QAbstractItemView *view);
+    void moveDown(const QList<int> &selected, QAbstractItemView *view);
 
     /**
      * \param index (0 or 1) index of the column
      * \returns the column width of column index
      */
-    int previewColumnWidth( int index );
+    int previewColumnWidth(int index);
 
     /**
      * Set the width of the specified column
      * \param index (0 or 1) index of the column
      * \param width width in pixels
      */
-    void setPreviewColumnWidth( int index, int width );
+    void setPreviewColumnWidth(int index, int width);
 
-    void blockSignalsRecursive( QObject* obj, bool b );
+    void blockSignalsRecursive(QObject *obj, bool b);
 
- private:
+private:
     int               m_curPage;   /// The index of the current page in the current gui mode
-    const TGuiMode*   m_guiMode;   /// The description structure of the current gui mode
+    const TGuiMode   *m_guiMode;   /// The description structure of the current gui mode
     int               m_fileCount; /// Current number of files; used for enabled disabled state
 
-    QStackedWidget*   m_stack;
-    QDialogButtonBox* m_buttons;
+    QStackedWidget   *m_stack;
+    QDialogButtonBox *m_buttons;
 
-    QTabBar*          m_tabBar;    /// The tabbar to switch pages in advanced mode
+    QTabBar          *m_tabBar;    /// The tabbar to switch pages in advanced mode
 
-    QPushButton*      m_buttonClose;
-    QPushButton*      m_buttonFinish;
+    QPushButton      *m_buttonClose;
+    QPushButton      *m_buttonFinish;
 
-    Ui::KRenameFiles*       m_pageFiles;
-    Ui::KRenameDestination* m_pageDests;
+    Ui::KRenameFiles       *m_pageFiles;
+    Ui::KRenameDestination *m_pageDests;
     //Ui::KRenameSimple*      m_pageSimple;
-    Ui::KRenamePlugins*     m_pagePlugins;
-    Ui::KRenameFilename*    m_pageFilename;
+    Ui::KRenamePlugins     *m_pagePlugins;
+    Ui::KRenameFilename    *m_pageFilename;
 
-    QHash<QString,QWidget*> m_pluginsWidgetHash;
-    QHash<QString,Plugin*>  m_pluginsHash;
+    QHash<QString, QWidget *> m_pluginsWidgetHash;
+    QHash<QString, Plugin *>  m_pluginsHash;
 
-    RichTextItemDelegate*   m_delegate;
+    RichTextItemDelegate   *m_delegate;
 };
-
 
 #endif // KRENAMEWINDOW_H

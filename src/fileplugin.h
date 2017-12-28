@@ -22,13 +22,14 @@
 
 class KService;
 
-class FilePlugin : public Plugin {
- public:
+class FilePlugin : public Plugin
+{
+public:
     /** Create a new FilePlugin from a KService
      *
      *  @param service pointer to a KService
      */
-    FilePlugin( PluginLoader* loader, KService* service );
+    FilePlugin(PluginLoader *loader, KService *service);
 
     virtual ~FilePlugin();
 
@@ -83,7 +84,7 @@ class FilePlugin : public Plugin {
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType eCurrentType ) = 0;
+    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType) = 0;
 
     /** Get a list of all tokens supported by this plugin.
      *
@@ -91,7 +92,7 @@ class FilePlugin : public Plugin {
      *
      *  @returns a list of all supported tokens.
      */
-    inline virtual const QStringList & supportedTokens() const;
+    inline virtual const QStringList &supportedTokens() const;
 
     /** Returns help descriptions for the supported tokens
      *
@@ -100,7 +101,7 @@ class FilePlugin : public Plugin {
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    inline virtual const QStringList & help() const;
+    inline virtual const QStringList &help() const;
 
     /** Create a user interface for this plugin
      *
@@ -108,10 +109,10 @@ class FilePlugin : public Plugin {
      *
      *  This is implemented here for all FilePlugin based classed
      */
-    void createUI( QWidget* parent ) const;
+    void createUI(QWidget *parent) const;
 
- protected:
-    FilePlugin( PluginLoader* loader );
+protected:
+    FilePlugin(PluginLoader *loader);
 
     /**
      *  Checks if a token is supported by this plugin.
@@ -121,7 +122,7 @@ class FilePlugin : public Plugin {
      *
      *  @see addSupportedToken
      */
-    bool supports( const QString & token );
+    bool supports(const QString &token);
 
     /**
      *  Adds a token to the list of supported tokens
@@ -130,20 +131,20 @@ class FilePlugin : public Plugin {
      *
      *  @see supports
      */
-    inline void addSupportedToken( const QString & token ) {
-	m_keys.append( token );
+    inline void addSupportedToken(const QString &token)
+    {
+        m_keys.append(token);
     }
 
- protected:
+protected:
 
     QString m_name;
     QString m_comment;
     QString m_icon;
 
- private:
+private:
     QStringList m_keys;
 };
-
 
 inline const QString FilePlugin::name() const
 {
@@ -160,12 +161,12 @@ inline int FilePlugin::type() const
     return ePluginType_Token;
 }
 
-inline const QStringList & FilePlugin::supportedTokens() const
+inline const QStringList &FilePlugin::supportedTokens() const
 {
     return m_keys;
 }
 
-inline const QStringList & FilePlugin::help() const
+inline const QStringList &FilePlugin::help() const
 {
     return m_keys;
 }

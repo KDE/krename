@@ -41,28 +41,29 @@ enum ESortMode {
     eSortMode_Token
 };
 
-class KRenameModel : public QAbstractListModel {
+class KRenameModel : public QAbstractListModel
+{
     Q_OBJECT
-    public:
-    explicit KRenameModel( KRenameFile::List* vector );
+public:
+    explicit KRenameModel(KRenameFile::List *vector);
     ~KRenameModel();
 
     /**
      * Set the batchrenamer instance.
      */
-    inline void setRenamer( BatchRenamer* renamer );
+    inline void setRenamer(BatchRenamer *renamer);
 
     /** Add a KRenameFile to the model
      *
      *  @param files a KRenameFile::List which is added to the internal list
      */
-    void addFiles( const KRenameFile::List & files );
+    void addFiles(const KRenameFile::List &files);
 
     /** Remove items in the model
      *
      *  @param remove list of indexes to remove
      */
-    void removeFiles( const QList<int> & remove );
+    void removeFiles(const QList<int> &remove);
 
     /** Sort the data in the model
      *  using the selected sort mode.
@@ -71,8 +72,8 @@ class KRenameModel : public QAbstractListModel {
      *  @param customSortToken customSortToken if mode is eSortMode_Token
      *  @param customSortMode mode for sorting if mode is eSortMode_Token
      */
-    void sortFiles( ESortMode mode, const QString & customSortToken,
-                    KRenameTokenSorter::ESimpleSortMode customSortMode );
+    void sortFiles(ESortMode mode, const QString &customSortToken,
+                   KRenameTokenSorter::ESimpleSortMode customSortMode);
 
     /** Get the current sort mode.
      *  @returns the current sort mode
@@ -85,19 +86,19 @@ class KRenameModel : public QAbstractListModel {
     /** Move each file in a list of indices upwards
      *  @param files list of file indices. Each file is moved up one position
      */
-    void moveFilesUp( const QList<int> & files );
+    void moveFilesUp(const QList<int> &files);
 
     /** Move each file in a list of indices downwards
      *  @param files list of file indices. Each file is moved down one position
      */
-    void moveFilesDown( const QList<int> & files );
+    void moveFilesDown(const QList<int> &files);
 
     /** Creates a new model index
      *
      *  @param row the index of the requested file
      *  @returns the model index for a certain row
      */
-    const QModelIndex createIndex( int row ) const;
+    const QModelIndex createIndex(int row) const;
 
     /** Get the file at position index.
      *
@@ -105,7 +106,7 @@ class KRenameModel : public QAbstractListModel {
      *
      *  @returns a KRenameFile object
      */
-    inline const KRenameFile & file( int index ) const;
+    inline const KRenameFile &file(int index) const;
 
     /** Get the file at position index.
      *
@@ -113,16 +114,16 @@ class KRenameModel : public QAbstractListModel {
      *
      *  @returns a KRenameFile object
      */
-    inline KRenameFile & file( int index );
+    inline KRenameFile &file(int index);
 
-    virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const;
-    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
+    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
+    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
     Qt::DropActions supportedDropActions() const;
     QStringList mimeTypes() const;
     Qt::ItemFlags flags(const QModelIndex &index) const;
     bool dropMimeData(const QMimeData *data, Qt::DropAction action,
-                      int row, int column,const QModelIndex &parent);
+                      int row, int column, const QModelIndex &parent);
     bool setData(const QModelIndex &index, const QVariant &value, int role);
 
     /** Enable the preview of KRenameFile objects.
@@ -131,7 +132,7 @@ class KRenameModel : public QAbstractListModel {
      *  @param filenames if preview is true this items decides
      *                   if the filename text is displayed next to the preview
      */
-    inline void setEnablePreview( bool preview, bool filenames );
+    inline void setEnablePreview(bool preview, bool filenames);
     /** Test if the preview of KRenameFile objects is enabled.
      *
      *  @return preview enabled?
@@ -143,14 +144,14 @@ class KRenameModel : public QAbstractListModel {
      *  @param index a modelindex specifying a file to open
      *  @param window a window used to cache authentication information
      */
-    void run(const QModelIndex & index, QWidget* window ) const;
+    void run(const QModelIndex &index, QWidget *window) const;
 
     /**
      * Specify the extension split mode.
      * \param splitMode split mode
      * \param dot dot t use for eSplitMode_CustomDot
      */
-    inline void setExtensionSplitMode( ESplitMode splitMode, unsigned int dot );
+    inline void setExtensionSplitMode(ESplitMode splitMode, unsigned int dot);
 
     inline ESplitMode splitMode();
     inline unsigned int splitDot();
@@ -162,25 +163,25 @@ Q_SIGNALS:
      *
      *  @param dots the maximum number of dots in a filename
      */
-    void maxDotsChanged( int dots );
+    void maxDotsChanged(int dots);
 
     /** Emitted when files have been added using drag and drop
      */
     void filesDropped();
 
 private Q_SLOTS:
-    void slotListerDone( ThreadedLister* lister );
-    void gotPreview (const KFileItem &item, const QPixmap &preview);
+    void slotListerDone(ThreadedLister *lister);
+    void gotPreview(const KFileItem &item, const QPixmap &preview);
 
 private:
-    BatchRenamer* m_renamer;
-    KRenameFile::List* m_vector;
+    BatchRenamer *m_renamer;
+    KRenameFile::List *m_vector;
 
     bool               m_preview;
     bool               m_text;
 
     int                m_maxDots;  ///< The maximum number of dots in a filename which can be used to separate filename and extension
-    const char*        m_mimeType; ///< MIME type for drag and drop operations
+    const char        *m_mimeType; ///< MIME type for drag and drop operations
 
     ESortMode          m_eSortMode; ///< Last used sort mode
     QString            m_customSortToken; ///< if m_eSortMode = eSortMode_Token
@@ -190,7 +191,7 @@ private:
     unsigned int      m_dot;
 };
 
-void KRenameModel::setRenamer( BatchRenamer* renamer )
+void KRenameModel::setRenamer(BatchRenamer *renamer)
 {
     m_renamer = renamer;
 }
@@ -210,12 +211,12 @@ KRenameTokenSorter::ESimpleSortMode KRenameModel::getSortModeCustomMode() const
     return m_eCustomSortMode;
 }
 
-const KRenameFile & KRenameModel::file( int index ) const
+const KRenameFile &KRenameModel::file(int index) const
 {
     return m_vector->at(index);
 }
 
-KRenameFile & KRenameModel::file( int index )
+KRenameFile &KRenameModel::file(int index)
 {
     return (*m_vector)[index];
 }
@@ -225,23 +226,23 @@ bool KRenameModel::isPreviewEnabled() const
     return m_preview;
 }
 
-void KRenameModel::setEnablePreview( bool preview, bool filenames )
+void KRenameModel::setEnablePreview(bool preview, bool filenames)
 {
     bool update = false;
-    if( m_preview != preview || filenames != m_text )
+    if (m_preview != preview || filenames != m_text) {
         update = true;
+    }
 
     m_preview = preview;
     m_text    = filenames;
 
-    if( update )
-    {
+    if (update) {
         // TODO: update the model
         ;
     }
 }
 
-void KRenameModel::setExtensionSplitMode( ESplitMode splitMode, unsigned int dot )
+void KRenameModel::setExtensionSplitMode(ESplitMode splitMode, unsigned int dot)
 {
     m_eSplitMode = splitMode;
     m_dot = dot;
@@ -257,24 +258,25 @@ unsigned int KRenameModel::splitDot()
     return m_dot;
 }
 
-class KRenamePreviewModel : public QAbstractTableModel {
+class KRenamePreviewModel : public QAbstractTableModel
+{
     Q_OBJECT
-    public:
-    explicit KRenamePreviewModel( KRenameFile::List* vector );
+public:
+    explicit KRenamePreviewModel(KRenameFile::List *vector);
     ~KRenamePreviewModel();
 
     void refresh();
 
-    virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const;
-    virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const;
-    virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
+    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
+    virtual int columnCount(const QModelIndex &parent = QModelIndex()) const;
+    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
-    virtual QModelIndex parent ( const QModelIndex & index ) const;
-    virtual QModelIndex sibling ( int row, int column, const QModelIndex & index ) const;
+    virtual QModelIndex parent(const QModelIndex &index) const;
+    virtual QModelIndex sibling(int row, int column, const QModelIndex &index) const;
 
-    virtual QVariant headerData ( int section, Qt::Orientation orientation, int role ) const;
+    virtual QVariant headerData(int section, Qt::Orientation orientation, int role) const;
 private:
-    KRenameFile::List* m_vector;
+    KRenameFile::List *m_vector;
 };
 
 #endif // KRENAMEMODEL_H

@@ -31,7 +31,7 @@
 
 using namespace Exiv2;
 
-static const char* exifTags[] = {
+static const char *exifTags[] = {
     "Exif.Image.ImageWidth",
     "Exif.Image.ImageLength",
     "Exif.Image.BitsPerSample",
@@ -138,7 +138,7 @@ static const char* exifTags[] = {
     NULL
 };
 
-static const char* xmpTags[] = {
+static const char *xmpTags[] = {
     "Xmp.tiff.ImageWidth",
     "Xmp.tiff.ImageLength",
     "Xmp.tiff.BitsPerSample",
@@ -266,7 +266,7 @@ static const char* xmpTags[] = {
     NULL
 };
 
-static const char* iptcTags[] = {
+static const char *iptcTags[] = {
     "Iptc.Application2.ObjectName",
     "Iptc.Application2.Urgency",
     "Iptc.Application2.Category",
@@ -291,86 +291,81 @@ static const char* iptcTags[] = {
     NULL
 };
 
-
-Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
-    : FilePlugin( loader )
+Exiv2Plugin::Exiv2Plugin(PluginLoader *loader)
+    : FilePlugin(loader)
 {
     const QString prefix("exif");
-    const char** token;
+    const char **token;
 
     this->addSupportedToken("exifComment");
     //this->addSupportedToken("exifWidth");
     //this->addSupportedToken("exifHeight");
-    m_help.append( "[exifComment]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the comment of an image") );
+    m_help.append("[exifComment]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the comment of an image"));
     //m_help.append( "[exifWidth]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the width in pixel of an image") );
     //m_help.append( "[exifHeight]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert the height in pixel of an image") );
 
     // Add exif taks
     token = exifTags;
-    while( *token )
-    {
-        ExifKey key( *token );
+    while (*token) {
+        ExifKey key(*token);
         QString help;
         try {
             help = QString::fromUtf8(key.tagLabel().c_str());
-        } catch( std::exception e ) {
+        } catch (std::exception e) {
             help = "";
             // exiv2 throws sometimes exceptions
             // because it tries to create std::string from NULL pointers
         }
 
-        QString cur( *token );
-        this->addSupportedToken( prefix + cur );
-        m_help.append( QString("[") + prefix + cur + QString("]")  + TokenHelpDialog::getTokenSeparator() + help );
+        QString cur(*token);
+        this->addSupportedToken(prefix + cur);
+        m_help.append(QString("[") + prefix + cur + QString("]")  + TokenHelpDialog::getTokenSeparator() + help);
 
-        m_mapRealKeys[QString( prefix + cur ).toLower()] = cur;
+        m_mapRealKeys[QString(prefix + cur).toLower()] = cur;
         ++token;
     }
 
     // Add exif taks
     token = xmpTags;
-    while( *token )
-    {
-        XmpKey key( *token );
+    while (*token) {
+        XmpKey key(*token);
         QString help;
         try {
             help = QString::fromUtf8(key.tagLabel().c_str());
-        } catch( std::exception e ) {
+        } catch (std::exception e) {
             help = "";
             // exiv2 throws sometimes exceptions
             // because it tries to create std::string from NULL pointers
         }
 
-        QString cur( *token );
-        this->addSupportedToken( prefix + cur );
-        m_help.append( QString("[") + prefix + cur + QString("]") + TokenHelpDialog::getTokenSeparator() + help );
+        QString cur(*token);
+        this->addSupportedToken(prefix + cur);
+        m_help.append(QString("[") + prefix + cur + QString("]") + TokenHelpDialog::getTokenSeparator() + help);
 
-        m_mapRealKeys[QString( prefix + cur ).toLower()] = cur;
+        m_mapRealKeys[QString(prefix + cur).toLower()] = cur;
         ++token;
     }
 
     // Add exif taks
     token = iptcTags;
-    while( *token )
-    {
-        IptcKey key( *token );
+    while (*token) {
+        IptcKey key(*token);
         QString help;
         try {
             help = QString::fromUtf8(key.tagLabel().c_str());
-        } catch( std::exception e ) {
+        } catch (std::exception e) {
             help = "";
             // exiv2 throws sometimes exceptions
             // because it tries to create std::string from NULL pointers
         }
 
-        QString cur( *token );
-        this->addSupportedToken( prefix + cur );
-        m_help.append( QString("[") + prefix + cur + QString("]") + TokenHelpDialog::getTokenSeparator() + help );
+        QString cur(*token);
+        this->addSupportedToken(prefix + cur);
+        m_help.append(QString("[") + prefix + cur + QString("]") + TokenHelpDialog::getTokenSeparator() + help);
 
-        m_mapRealKeys[QString( prefix + cur ).toLower()] = cur;
+        m_mapRealKeys[QString(prefix + cur).toLower()] = cur;
         ++token;
     }
-
 
     m_name = i18n("Exiv2 (JPEG/TIFF Exif) Plugin");
     m_comment = i18n("<qt>This plugin supports reading tags from "
@@ -379,70 +374,59 @@ Exiv2Plugin::Exiv2Plugin( PluginLoader* loader )
     m_icon = "image-x-generic";
 }
 
-
-QString Exiv2Plugin::processFile( BatchRenamer* b, int index, const QString & filenameOrToken, EPluginType )
+QString Exiv2Plugin::processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType)
 {
-    QString token( filenameOrToken.toLower() );
+    QString token(filenameOrToken.toLower());
     QString filename = (*b->files())[index].srcUrl().path();
 
-    if( !this->supports( token ) )
+    if (!this->supports(token)) {
         return QString("");
+    }
 
     //const QByteArray asc = filename.toAscii();
     // Use toUtf8 so that unicode filenames will work
     const QByteArray asc = filename.toUtf8();
     std::string strFilename(asc.constData(), asc.length());
 
-    try
-    {
-        Image::AutoPtr image = Exiv2::ImageFactory::open( strFilename );
-        if( image.get() != nullptr && image->good() )
-        {
+    try {
+        Image::AutoPtr image = Exiv2::ImageFactory::open(strFilename);
+        if (image.get() != nullptr && image->good()) {
             image->readMetadata();
 
-            if( token == "exifcomment" )
-                return QString::fromUtf8( image->comment().c_str() );
+            if (token == "exifcomment") {
+                return QString::fromUtf8(image->comment().c_str());
+            }
             /*
               else if( token =="exifwidth" )
               return QString::number( image->pixelWidth() );
               else if( token =="exifheight" )
               return QString::number( image->pixelHeight() );
             */
-            if( token.startsWith(QLatin1String("exifexif.")))
-            {
-                ExifKey key( m_mapRealKeys[token].toLatin1().data() );
-                ExifData::const_iterator it = image->exifData().findKey( key );
-                if( it != image->exifData().end() )
-                {
+            if (token.startsWith(QLatin1String("exifexif."))) {
+                ExifKey key(m_mapRealKeys[token].toLatin1().data());
+                ExifData::const_iterator it = image->exifData().findKey(key);
+                if (it != image->exifData().end()) {
                     std::string val = (*it).toString();
-                    return QString::fromUtf8( val.c_str() );
+                    return QString::fromUtf8(val.c_str());
                 }
-            }
-            else if( token.startsWith(QLatin1String("exifxmp.")))
-            {
-                XmpKey key( m_mapRealKeys[token].toLatin1().data() );
-                XmpData::const_iterator it = image->xmpData().findKey( key );
-                if( it != image->xmpData().end() )
-                {
+            } else if (token.startsWith(QLatin1String("exifxmp."))) {
+                XmpKey key(m_mapRealKeys[token].toLatin1().data());
+                XmpData::const_iterator it = image->xmpData().findKey(key);
+                if (it != image->xmpData().end()) {
                     std::string val = (*it).toString();
-                    return QString::fromUtf8( val.c_str() );
+                    return QString::fromUtf8(val.c_str());
                 }
-            }
-            else if( token.startsWith(QLatin1String("exifiptc.")))
-            {
-                IptcKey key( m_mapRealKeys[token].toLatin1().data() );
-                IptcData::const_iterator it = image->iptcData().findKey( key );
-                if( it != image->iptcData().end() )
-                {
+            } else if (token.startsWith(QLatin1String("exifiptc."))) {
+                IptcKey key(m_mapRealKeys[token].toLatin1().data());
+                IptcData::const_iterator it = image->iptcData().findKey(key);
+                if (it != image->iptcData().end()) {
                     std::string val = (*it).toString();
-                    return QString::fromUtf8( val.c_str() );
+                    return QString::fromUtf8(val.c_str());
                 }
             }
         }
-    }
-    catch( std::exception & err )
-    {
-        return QString::fromUtf8( err.what() );
+    } catch (std::exception &err) {
+        return QString::fromUtf8(err.what());
     }
 
     return QString("");

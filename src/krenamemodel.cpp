@@ -26,16 +26,16 @@
 #include <krun.h>
 #include <kio/previewjob.h>
 
-KRenameModel::KRenameModel( KRenameFile::List* vector )
+KRenameModel::KRenameModel(KRenameFile::List *vector)
     : QAbstractListModel(),
-      m_vector( vector ),
-      m_preview( false ),
-      m_text( false ),
-      m_maxDots( 0 ),
+      m_vector(vector),
+      m_preview(false),
+      m_text(false),
+      m_maxDots(0),
       m_mimeType("text/uri-list"),
-      m_eSortMode( eSortMode_Unsorted ),
-      m_customSortToken( "creationdate;yyyyMMddHHmm" ),
-      m_eCustomSortMode( KRenameTokenSorter::eSimpleSortMode_Ascending )
+      m_eSortMode(eSortMode_Unsorted),
+      m_customSortToken("creationdate;yyyyMMddHHmm"),
+      m_eCustomSortMode(KRenameTokenSorter::eSimpleSortMode_Ascending)
 {
 
 }
@@ -45,62 +45,56 @@ KRenameModel::~KRenameModel()
 
 }
 
-int KRenameModel::rowCount ( const QModelIndex & index ) const
+int KRenameModel::rowCount(const QModelIndex &index) const
 {
-    if( !index.isValid() )
+    if (!index.isValid()) {
         return m_vector->size();
+    }
 
     return 0;
 }
 
-QVariant KRenameModel::data ( const QModelIndex & index, int role ) const
+QVariant KRenameModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid())
+    if (!index.isValid()) {
         return QVariant();
+    }
 
-    if (index.row() >= m_vector->size())
+    if (index.row() >= m_vector->size()) {
         return QVariant();
+    }
 
-    if (role == Qt::DisplayRole)
-    {
-        if (!m_preview)
-        {
+    if (role == Qt::DisplayRole) {
+        if (!m_preview) {
             // Only return path
             return m_vector->at(index.row()).toString();
-        }
-        else if (m_preview && m_text)
-        {
+        } else if (m_preview && m_text) {
             // Short filename as first line in bold
             // Path as second line
-            const KRenameFile & file = m_vector->at(index.row());
+            const KRenameFile &file = m_vector->at(index.row());
             QString filename = file.srcFilename();
-            if (!file.srcExtension().isEmpty())
-            {
+            if (!file.srcExtension().isEmpty()) {
                 filename = filename + '.' + file.srcExtension();
             }
 
-            const QString & prettyUrl = file.toString();
+            const QString &prettyUrl = file.toString();
             return "<qt><b>" + filename + "</b><br/>" +
-                 prettyUrl + "</qt>";
+                   prettyUrl + "</qt>";
         }
-    }
-    else if( role == Qt::DecorationRole && m_preview )
-    {
+    } else if (role == Qt::DecorationRole && m_preview) {
         return m_vector->at(index.row()).icon();
-    }
-    else if( role == Qt::UserRole )
-    {
+    } else if (role == Qt::UserRole) {
         return m_vector->at(index.row()).toString();
     }
-
 
     return QVariant();
 }
 
 Qt::ItemFlags KRenameModel::flags(const QModelIndex &index) const
 {
-    if (!index.isValid())
+    if (!index.isValid()) {
         return Qt::ItemIsDropEnabled;
+    }
 
     return QAbstractItemModel::flags(index) | Qt::ItemIsEditable | Qt::ItemIsDropEnabled;
 }
@@ -122,58 +116,56 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
                                 int, int,
                                 const QModelIndex &)
 {
-    if (action == Qt::IgnoreAction)
+    if (action == Qt::IgnoreAction) {
         return true;
+    }
 
-    if (!data->hasFormat( m_mimeType ))
+    if (!data->hasFormat(m_mimeType)) {
         return false;
+    }
 
     QList<QUrl>                  dirs;
     KRenameFile::List           files;
     QList<QUrl>                 urls = data->urls();
     QList<QUrl>::const_iterator it   = urls.constBegin();
 
-    QApplication::setOverrideCursor( Qt::BusyCursor );
+    QApplication::setOverrideCursor(Qt::BusyCursor);
 
-    while( it != urls.constEnd() )
-    {
-        if( (*it).isValid() )
-        {
-            KRenameFile file( *it, m_eSplitMode, m_dot );
+    while (it != urls.constEnd()) {
+        if ((*it).isValid()) {
+            KRenameFile file(*it, m_eSplitMode, m_dot);
 
-            if( file.isValid() && !file.isDirectory() )
-                files.append( file );
-            else if( file.isValid() && file.isDirectory() )
+            if (file.isValid() && !file.isDirectory()) {
+                files.append(file);
+            } else if (file.isValid() && file.isDirectory())
                 // Add directories recursively
-                dirs.append( *it );
+            {
+                dirs.append(*it);
+            }
         }
 
         ++it;
     }
 
-    this->addFiles( files );
-    if( dirs.count() )
-    {
+    this->addFiles(files);
+    if (dirs.count()) {
         QList<QUrl>::const_iterator it = dirs.constBegin();
 
-        while( it != dirs.constEnd() )
-        {
-            ThreadedLister* thl = new ThreadedLister( *it, nullptr, this );
+        while (it != dirs.constEnd()) {
+            ThreadedLister *thl = new ThreadedLister(*it, nullptr, this);
             connect(thl, &ThreadedLister::listerDone,
                     this, &KRenameModel::slotListerDone);
 
-            thl->setListDirnamesOnly( false );
-            thl->setListHidden( false );
-            thl->setListRecursively( true );
-            thl->setListDirnames( false );
+            thl->setListDirnamesOnly(false);
+            thl->setListHidden(false);
+            thl->setListRecursively(true);
+            thl->setListDirnames(false);
 
             thl->start();
 
             ++it;
         }
-    }
-    else
-    {
+    } else {
         QApplication::restoreOverrideCursor();
         emit filesDropped();
     }
@@ -181,7 +173,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
     return true;
 }
 
-void KRenameModel::slotListerDone( ThreadedLister* lister )
+void KRenameModel::slotListerDone(ThreadedLister *lister)
 {
     // Delete the listener
     delete lister;
@@ -205,44 +197,42 @@ bool KRenameModel::setData(const QModelIndex &index,
     return false;
 }
 
-void KRenameModel::addFiles( const KRenameFile::List & files )
+void KRenameModel::addFiles(const KRenameFile::List &files)
 {
-    if( files.count() )
-    {
+    if (files.count()) {
         int oldMaxDots = m_maxDots;
-        m_vector->reserve( m_vector->count() + files.count() );
+        m_vector->reserve(m_vector->count() + files.count());
 
-        this->beginInsertRows( QModelIndex(), m_vector->size(), m_vector->size() + files.count() - 1 );
+        this->beginInsertRows(QModelIndex(), m_vector->size(), m_vector->size() + files.count() - 1);
 
         KRenameFile::List::const_iterator it = files.begin();
-        while( it != files.end() )
-        {
-            m_vector->push_back( *it );
+        while (it != files.end()) {
+            m_vector->push_back(*it);
 
             int dots  = (*it).dots();
-            if( dots > m_maxDots )
+            if (dots > m_maxDots) {
                 m_maxDots = dots;
+            }
 
             ++it;
         }
         this->endInsertRows();
 
-        if( m_maxDots > oldMaxDots )
-            emit maxDotsChanged( m_maxDots );
+        if (m_maxDots > oldMaxDots) {
+            emit maxDotsChanged(m_maxDots);
+        }
 
         // Update sorting
-        this->sortFiles( m_eSortMode, m_customSortToken, m_eCustomSortMode );
+        this->sortFiles(m_eSortMode, m_customSortToken, m_eCustomSortMode);
 
         // Generate previews if necessary
-        if( m_preview )
-        {
+        if (m_preview) {
             // Construct a list of KFileItems
             // Only do this is necessary,
             // as this might create new KFileItems which is slow.
             KFileItemList fileItems;
             it = files.begin();
-            while( it != files.end() )
-            {
+            while (it != files.end()) {
                 fileItems << (*it).fileItem();
 
                 ++it;
@@ -251,7 +241,7 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
             // TODO: Enable this job, it currently crashes for me
 
             // Start a job to create the real file previews
-            KIO::PreviewJob* job = KIO::filePreview( fileItems, QSize(KRenameFile::iconSize(), KRenameFile::iconSize()) );
+            KIO::PreviewJob *job = KIO::filePreview(fileItems, QSize(KRenameFile::iconSize(), KRenameFile::iconSize()));
 
             connect(job, &KIO::PreviewJob::gotPreview,
                     this, &KRenameModel::gotPreview);
@@ -260,20 +250,18 @@ void KRenameModel::addFiles( const KRenameFile::List & files )
     }
 }
 
-void KRenameModel::gotPreview (const KFileItem &item, const QPixmap &preview)
+void KRenameModel::gotPreview(const KFileItem &item, const QPixmap &preview)
 {
     /*
     const KRenameFile* file =
         static_cast<const KRenameFile*>(item.extraData(KRenameFile::EXTRA_DATA_KEY));
     */
 
-    KRenameFile* file = nullptr;
+    KRenameFile *file = nullptr;
     // TODO: Find a more optimal "search algorithm" ....
     KRenameFile::List::iterator it = m_vector->begin();
-    while( it != m_vector->end() )
-    {
-        if( (*it).srcUrl() == item.url() )
-        {
+    while (it != m_vector->end()) {
+        if ((*it).srcUrl() == item.url()) {
             file = &(*it);
             break;
         }
@@ -282,24 +270,22 @@ void KRenameModel::gotPreview (const KFileItem &item, const QPixmap &preview)
     }
 
     //it = find( m_vector->begin(), m_vector->end(), item );
-    if( file != nullptr ) // && file->fileItem() == item )
-    {
-        file->setIcon( preview );
+    if (file != nullptr) { // && file->fileItem() == item )
+        file->setIcon(preview);
     }
 }
 
-void KRenameModel::removeFiles( const QList<int> & remove )
+void KRenameModel::removeFiles(const QList<int> &remove)
 {
     int offset = 0;
 
-    QList<int> copy( remove );
-    std::sort( copy.begin(), copy.end() );
+    QList<int> copy(remove);
+    std::sort(copy.begin(), copy.end());
 
     QList<int>::const_iterator it = copy.constBegin();
-    this->beginRemoveRows( QModelIndex(), *it, copy.back() );
-    while( it != copy.constEnd() )
-    {
-        m_vector->erase( m_vector->begin() + *it - offset );
+    this->beginRemoveRows(QModelIndex(), *it, copy.back());
+    while (it != copy.constEnd()) {
+        m_vector->erase(m_vector->begin() + *it - offset);
 
         ++offset;
         ++it;
@@ -308,7 +294,7 @@ void KRenameModel::removeFiles( const QList<int> & remove )
     this->endRemoveRows();
 }
 
-void KRenameModel::sortFiles( ESortMode mode, const QString & customSortToken, KRenameTokenSorter::ESimpleSortMode customSortMode  )
+void KRenameModel::sortFiles(ESortMode mode, const QString &customSortToken, KRenameTokenSorter::ESimpleSortMode customSortMode)
 {
     beginResetModel();
     const QString dateSortToken = "creationdate;yyyyMMddHHmm";
@@ -317,69 +303,62 @@ void KRenameModel::sortFiles( ESortMode mode, const QString & customSortToken, K
     m_customSortToken = customSortToken;
     m_eCustomSortMode = customSortMode;
 
-    if( mode == eSortMode_Ascending )
-        std::sort( m_vector->begin(), m_vector->end(), ascendingKRenameFileLessThan );
-    else if( mode == eSortMode_Descending )
-        std::sort( m_vector->begin(), m_vector->end(), descendingKRenameFileLessThan );
-    else if( mode == eSortMode_Numeric )
-        std::sort( m_vector->begin(), m_vector->end(), numericKRenameFileLessThan );
-    else if( mode == eSortMode_Random )
-        std::sort( m_vector->begin(), m_vector->end(), randomKRenameFileLessThan );
-    else if( mode == eSortMode_AscendingDate )
-    {
+    if (mode == eSortMode_Ascending) {
+        std::sort(m_vector->begin(), m_vector->end(), ascendingKRenameFileLessThan);
+    } else if (mode == eSortMode_Descending) {
+        std::sort(m_vector->begin(), m_vector->end(), descendingKRenameFileLessThan);
+    } else if (mode == eSortMode_Numeric) {
+        std::sort(m_vector->begin(), m_vector->end(), numericKRenameFileLessThan);
+    } else if (mode == eSortMode_Random) {
+        std::sort(m_vector->begin(), m_vector->end(), randomKRenameFileLessThan);
+    } else if (mode == eSortMode_AscendingDate) {
         KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector,
                                   KRenameTokenSorter::eSimpleSortMode_Ascending);
-        std::sort( m_vector->begin(), m_vector->end(), sorter );
-    }
-    else if( mode == eSortMode_DescendingDate )
-    {
+        std::sort(m_vector->begin(), m_vector->end(), sorter);
+    } else if (mode == eSortMode_DescendingDate) {
         KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector,
                                   KRenameTokenSorter::eSimpleSortMode_Descending);
-        std::sort( m_vector->begin(), m_vector->end(), sorter );
-    }
-    else if( mode == eSortMode_Token )
-    {
+        std::sort(m_vector->begin(), m_vector->end(), sorter);
+    } else if (mode == eSortMode_Token) {
         KRenameTokenSorter sorter(m_renamer, customSortToken, *m_vector,
                                   customSortMode);
-        std::sort( m_vector->begin(), m_vector->end(), sorter );
+        std::sort(m_vector->begin(), m_vector->end(), sorter);
     }
 
     endResetModel();
 }
 
-void KRenameModel::run(const QModelIndex & index, QWidget* window ) const
+void KRenameModel::run(const QModelIndex &index, QWidget *window) const
 {
     KRenameFile file = m_vector->at(index.row());
-    new KRun( file.srcUrl(), window );
+    new KRun(file.srcUrl(), window);
 }
 
-const QModelIndex KRenameModel::createIndex( int row ) const
+const QModelIndex KRenameModel::createIndex(int row) const
 {
-    return QAbstractItemModel::createIndex( row, 0 );
+    return QAbstractItemModel::createIndex(row, 0);
 }
 
-void KRenameModel::moveFilesUp( const QList<int> & files )
+void KRenameModel::moveFilesUp(const QList<int> &files)
 {
     int         index;
     KRenameFile tmp;
 
-    QList<int> copy( files );
-    std::sort( copy.begin(), copy.end() );
+    QList<int> copy(files);
+    std::sort(copy.begin(), copy.end());
 
     beginResetModel();
     QList<int>::const_iterator it = copy.constBegin();
-    while( it != copy.constEnd() )
-    {
+    while (it != copy.constEnd()) {
         index                     = *it;
-        if( index <= 0 ) // cannot swap top item
-        {
+        if (index <= 0) { // cannot swap top item
             ++it;
             continue;
         }
 
         // swap items
-        tmp                    = m_vector->at( index );
-        (*m_vector)[index]     = KRenameFile( m_vector->at( index - 1 ) );
+        tmp                    = m_vector->at(index);
+        (*m_vector)[index]     = KRenameFile(m_vector->at(index - 1));
         (*m_vector)[index - 1] = tmp;
 
         ++it;
@@ -388,29 +367,27 @@ void KRenameModel::moveFilesUp( const QList<int> & files )
     endResetModel();
 }
 
-void KRenameModel::moveFilesDown( const QList<int> & files )
+void KRenameModel::moveFilesDown(const QList<int> &files)
 {
     int         index;
     KRenameFile tmp;
 
-    QList<int> copy( files );
+    QList<int> copy(files);
     // sort the list in reverse order
-    std::sort( copy.begin(), copy.end(), std::greater<int>() );
+    std::sort(copy.begin(), copy.end(), std::greater<int>());
 
     beginResetModel();
     QList<int>::const_iterator it = copy.constBegin();
-    while( it != copy.constEnd() )
-    {
+    while (it != copy.constEnd()) {
         index                     = *it;
-        if( index + 1 >= m_vector->size() ) // cannot swap bottom item
-        {
+        if (index + 1 >= m_vector->size()) { // cannot swap bottom item
             ++it;
             continue;
         }
 
         // swap items
-        tmp                    = m_vector->at( index );
-        (*m_vector)[index]     = KRenameFile( m_vector->at( index + 1 ) );
+        tmp                    = m_vector->at(index);
+        (*m_vector)[index]     = KRenameFile(m_vector->at(index + 1));
         (*m_vector)[index + 1] = tmp;
 
         ++it;
@@ -422,8 +399,8 @@ void KRenameModel::moveFilesDown( const QList<int> & files )
 //////////////////////////////////////////////////////////////
 // Preview model starts below
 //////////////////////////////////////////////////////////////
-KRenamePreviewModel::KRenamePreviewModel( KRenameFile::List* vector )
-    : m_vector( vector )
+KRenamePreviewModel::KRenamePreviewModel(KRenameFile::List *vector)
+    : m_vector(vector)
 {
 
 }
@@ -433,80 +410,77 @@ KRenamePreviewModel::~KRenamePreviewModel()
 
 }
 
-int KRenamePreviewModel::rowCount ( const QModelIndex & parent ) const
+int KRenamePreviewModel::rowCount(const QModelIndex &parent) const
 {
-    if( !parent.isValid() )
-       return m_vector->size();
+    if (!parent.isValid()) {
+        return m_vector->size();
+    }
 
     return 0;
 }
 
-int KRenamePreviewModel::columnCount ( const QModelIndex & ) const
+int KRenamePreviewModel::columnCount(const QModelIndex &) const
 {
     return 2;
 }
 
-QVariant KRenamePreviewModel::headerData ( int section, Qt::Orientation orientation, int role ) const
+QVariant KRenamePreviewModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
-    if (orientation != Qt::Horizontal || section > 1 || role != Qt::DisplayRole )
+    if (orientation != Qt::Horizontal || section > 1 || role != Qt::DisplayRole) {
         return QVariant();
+    }
 
     return (section == 0) ? i18n("Origin") : i18n("Renamed");
 }
 
-QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
+QVariant KRenamePreviewModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid())
+    if (!index.isValid()) {
         return QVariant();
+    }
 
-    if (index.row() >= m_vector->size())
+    if (index.row() >= m_vector->size()) {
         return QVariant();
+    }
 
-    if (index.column() >= 2 )
+    if (index.column() >= 2) {
         return QVariant();
+    }
 
-    if (role == Qt::DisplayRole)
-    {
-        const KRenameFile& file = m_vector->at(index.row());
+    if (role == Qt::DisplayRole) {
+        const KRenameFile &file = m_vector->at(index.row());
         QString filename;
         QString extension;
         QString manual;
 
-        if( index.column() )
-        {
+        if (index.column()) {
             manual    = file.manualChanges();
-            if( manual.isNull() )
-            {
+            if (manual.isNull()) {
                 filename  = file.dstFilename();
                 extension = file.dstExtension();
-            }
-            else
+            } else {
                 filename = manual;
-        }
-        else
-        {
+            }
+        } else {
             filename  = file.srcFilename();
             extension = file.srcExtension();
         }
 
-        if( !extension.isEmpty() )
-        {
+        if (!extension.isEmpty()) {
             filename += '.';
             filename += extension;
         }
 
-        if( file.isDirectory() )
-        {
+        if (file.isDirectory()) {
             filename = (index.column() ? file.dstDirectory() : file.srcDirectory()) + '/' + filename;
         }
 
         return filename;
-    }
-    else if( role == Qt::ForegroundRole )
-    {
-        const KRenameFile& file = m_vector->at(index.row());
-        if( !file.manualChanges().isNull() )
-            return QVariant( QColor(Qt::blue) );
+    } else if (role == Qt::ForegroundRole) {
+        const KRenameFile &file = m_vector->at(index.row());
+        if (!file.manualChanges().isNull()) {
+            return QVariant(QColor(Qt::blue));
+        }
     }
     /*
       Icons are to large, so this is disabled
@@ -520,12 +494,12 @@ QVariant KRenamePreviewModel::data ( const QModelIndex & index, int role ) const
 
 }
 
-QModelIndex KRenamePreviewModel::parent ( const QModelIndex & ) const
+QModelIndex KRenamePreviewModel::parent(const QModelIndex &) const
 {
     return QModelIndex();
 }
 
-QModelIndex KRenamePreviewModel::sibling ( int, int, const QModelIndex & ) const
+QModelIndex KRenamePreviewModel::sibling(int, int, const QModelIndex &) const
 {
     return QModelIndex();
 }

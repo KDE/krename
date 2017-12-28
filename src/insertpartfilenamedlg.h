@@ -24,32 +24,33 @@
 
 class QDialogButtonBox;
 
-class InsertPartFilenameDlg : public QDialog {
- Q_OBJECT
+class InsertPartFilenameDlg : public QDialog
+{
+    Q_OBJECT
 
- public:
-    explicit InsertPartFilenameDlg( const QString & filename, QWidget* parent = nullptr );
+public:
+    explicit InsertPartFilenameDlg(const QString &filename, QWidget *parent = nullptr);
 
     /**
      * \returns the command to insert a substring of the original
      *          filename into the new filename
      */
-    inline const QString & command() const;
+    inline const QString &command() const;
 
- private Q_SLOTS:
+private Q_SLOTS:
     void slotSelectionChanged();
     void slotUpdateKRenameCommand();
 
- private:
+private:
     Ui::PartFilenameWidget m_widget;
-    QDialogButtonBox*      m_buttons;
+    QDialogButtonBox      *m_buttons;
 
     QString m_command;
     int     m_start;
     int     m_end;
 };
 
-inline const QString & InsertPartFilenameDlg::command() const
+inline const QString &InsertPartFilenameDlg::command() const
 {
     return m_command;
 }

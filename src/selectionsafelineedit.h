@@ -23,21 +23,22 @@
 /** A QLineEdit that does not loose its selection
  *  on focusout events
  */
-class SelectionSafeLineEdit : public QLineEdit {
+class SelectionSafeLineEdit : public QLineEdit
+{
 public:
     /** Create a SeletionSafeLineEdit that keeps its selection
      *  even when the widget does not have the current keyboard focus.
      *
      *  @param parent parent widget
      */
-    explicit SelectionSafeLineEdit( QWidget* parent = nullptr )
-        : QLineEdit( parent )
+    explicit SelectionSafeLineEdit(QWidget *parent = nullptr)
+        : QLineEdit(parent)
     {
 
     }
 
 protected:
-    void focusOutEvent( QFocusEvent *  )
+    void focusOutEvent(QFocusEvent *)
     {
         // ignore
     }
