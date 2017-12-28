@@ -1172,9 +1172,8 @@ void BatchRenamer::createMissingSubDirs(const KRenameFile &file, ProgressDialog 
 
 void BatchRenamer::findCounterReset(int i)
 {
-    int z;
     if ((*m_files)[i - 1].srcDirectory() != (*m_files)[i].srcDirectory())
-        for (z = 0; z < (int)m_counters.count(); z++) {
+        for (int z = 0; z < (int)m_counters.count(); z++) {
             m_counters[z].value = m_counters[z].start - m_counters[z].step;
         }
 }
