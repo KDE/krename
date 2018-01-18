@@ -39,7 +39,7 @@ add_definitions(
     -DQT_STRICT_ITERATORS
 )
 
-set(KRENAME_VERSION "4.1.0")
+set(KRENAME_VERSION "4.90.90")
 
 include(FindGettext)
 
