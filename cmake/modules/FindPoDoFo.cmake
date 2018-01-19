@@ -60,6 +60,28 @@ if(PoDoFo_FOUND)
       endif(PoDoFo_USE_SHARED)
     endif()
   endif()
+
+  # PoDoFo-0.9.5 unconditionally includes openssl/opensslconf.h in a public
+  # header. The fix is in https://sourceforge.net/p/podofo/code/1830/ and will
+  # hopefully be released soon with 0.9.6. Note that krename doesn't use
+  # OpenSSL in any way.
+  file(STRINGS "${PoDoFo_INCLUDE_DIRS}/podofo/base/podofo_config.h" PoDoFo_MAJOR_VER_LINE REGEX "^#define[ \t]+PODOFO_VERSION_MAJOR[ \t]+[0-9]+$")
+  file(STRINGS "${PoDoFo_INCLUDE_DIRS}/podofo/base/podofo_config.h" PoDoFo_MINOR_VER_LINE REGEX "^#define[ \t]+PODOFO_VERSION_MINOR[ \t]+[0-9]+$")
+  file(STRINGS "${PoDoFo_INCLUDE_DIRS}/podofo/base/podofo_config.h" PoDoFo_PATCH_VER_LINE REGEX "^#define[ \t]+PODOFO_VERSION_PATCH[ \t]+[0-9]+$")
+  string(REGEX REPLACE "^#define[ \t]+PODOFO_VERSION_MAJOR[ \t]+([0-9]+)$" "\\1" PoDoFo_MAJOR_VER "${PoDoFo_MAJOR_VER_LINE}")
+  string(REGEX REPLACE "^#define[ \t]+PODOFO_VERSION_MINOR[ \t]+([0-9]+)$" "\\1" PoDoFo_MINOR_VER "${PoDoFo_MINOR_VER_LINE}")
+  string(REGEX REPLACE "^#define[ \t]+PODOFO_VERSION_PATCH[ \t]+([0-9]+)$" "\\1" PoDoFo_PATCH_VER "${PoDoFo_PATCH_VER_LINE}")
+  set(PoDoFo_VERSION "${PoDoFo_MAJOR_VER}.${PoDoFo_MINOR_VER}.${PoDoFo_PATCH_VER}")
+  if(PoDoFo_VERSION VERSION_EQUAL "0.9.5")
+    find_package(OpenSSL)
+    if (OpenSSL_FOUND)
+      message("OpenSSL found, which is required for this version of PoDofo (0.9.5)")
+      set(PoDoFo_INCLUDE_DIRS ${PoDoFo_INCLUDE_DIRS} ${OPENSSL_INCLUDE_DIR})
+    else()
+      unset(PoDoFo_FOUND)
+      message("OpenSSL NOT found, which is required for this version of PoDofo (0.9.5)")
+    endif()
+  endif()
 endif()
 
 mark_as_advanced(PoDoFo_INCLUDE_DIRS PoDoFo_LIBRARIES PoDoFo_DEFINITIONS)
