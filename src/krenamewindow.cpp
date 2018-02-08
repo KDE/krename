@@ -200,6 +200,7 @@ void KRenameWindow::setupGui()
     m_buttons->setStandardButtons(QDialogButtonBox::Help | QDialogButtonBox::Close);
     m_buttons->addButton(m_buttonFinish, QDialogButtonBox::AcceptRole);
     m_buttonClose = m_buttons->button(QDialogButtonBox::Close);
+    m_buttonClose->setShortcut(QKeySequence(QKeySequence::Quit));
 
     KHelpMenu *helpMenu = new KHelpMenu(this);
     m_buttons->button(QDialogButtonBox::Help)->setMenu(helpMenu->menu());

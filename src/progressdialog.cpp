@@ -148,6 +148,7 @@ void ProgressDialog::renamingDone(bool enableMore, bool enableUndo, BatchRenamer
     m_buttonUndo->setEnabled(enableUndo);
     m_buttonMore->setEnabled(enableMore);   // Do allow renaming processed files after undo
     m_buttonClose->setEnabled(true);
+    m_buttonClose->setShortcut(QKeySequence(QKeySequence::Quit));
 
     m_actProcessed->setEnabled(renamer->files()->count() != errors);
     m_actUnprocessed->setEnabled(0 != errors);
