@@ -15,6 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
+#include <QtGlobal>
+
 #include "pluginloader.h"
 
 #include "krenameimpl.h"
