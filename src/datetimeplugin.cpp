@@ -15,6 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
+#include <QtGlobal>
+
 #ifndef Q_OS_WIN
 #include "datetimeplugin.h"
 
