@@ -18,6 +18,10 @@
 #ifndef PERMISSIONS_PLUGIN_H
 #define PERMISSIONS_PLUGIN_H
 
+#include <QtGlobal>
+
+#ifndef Q_OS_WIN
+
 #include "plugin.h"
 
 #include <QObject>
@@ -160,5 +164,7 @@ inline const QStringList &PermissionsPlugin::help() const
 {
     return m_tmp;
 }
+
+#endif // Q_OS_WIN
 
 #endif /* PERMISSIONS_PLUGIN_H */

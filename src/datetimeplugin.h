@@ -18,6 +18,9 @@
 #ifndef DATE_TIME_PLUGIN_H
 #define DATE_TIME_PLUGIN_H
 
+#include <QtGlobal>
+#ifndef Q_OS_WIN
+
 #include "plugin.h"
 
 #include <QObject>
@@ -153,5 +156,7 @@ inline const QStringList &DateTimePlugin::help() const
 {
     return m_tmp;
 }
+
+#endif // Q_OS_WIN
 
 #endif /* DATE_TIME_PLUGIN_H */
