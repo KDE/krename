@@ -363,10 +363,10 @@ private:
      *
      * This will look for '/' and create all not existing directories
      *
-     * @param file to check for not existing directories
-     * @param p ProgressDialog for error reporting
+     * @param destUrl to check for not existing directories
+     * @param dialog ProgressDialog for error reporting
      */
-    void createMissingSubDirs(const KRenameFile &file, ProgressDialog *dialog);
+    void createMissingSubDirs(const QUrl &destUrl, ProgressDialog *dialog);
 
     /** resets all counters to there start value if the directory name at @p i
      *  in m_files changes.

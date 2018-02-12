@@ -15,8 +15,9 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef Q_OS_WIN
 #include "permissionsplugin.h"
+
+#ifndef Q_OS_WIN
 
 #include <kiconloader.h>
 

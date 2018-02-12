@@ -17,6 +17,8 @@
 
 #include "batchrenamer.h"
 
+#include <QtGlobal>
+
 #ifdef Q_OS_WIN
 #include <windows.h>
 #endif
@@ -221,7 +223,7 @@ void BatchRenamer::processFiles(ProgressDialog *p)
         }
 
         // Assemble filenames
-        createMissingSubDirs((*m_files)[i], p);
+        createMissingSubDirs(dstUrl, p);
 
         KIO::JobFlags flags  = (m_overwrite ? KIO::Overwrite : KIO::DefaultFlags) | KIO::HideProgressInfo;
         KIO::Job     *job    = nullptr;
@@ -1154,9 +1156,9 @@ void BatchRenamer::writeUndoScript(QTextStream *t)
          << "fi" << endl;
 }
 
-void BatchRenamer::createMissingSubDirs(const KRenameFile &file, ProgressDialog *dialog)
+void BatchRenamer::createMissingSubDirs(const QUrl &destUrl, ProgressDialog *dialog)
 {
-    QUrl url = file.dstUrl().adjusted(QUrl::RemoveFilename);
+    QUrl url = destUrl.adjusted(QUrl::RemoveFilename);
     if (url.isEmpty()) {
         return;
     }

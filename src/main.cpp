@@ -17,6 +17,7 @@
 
 // Qt includes
 #include <QRect>
+#include <QtGlobal>
 #include <QWidget>
 
 // KDE includes
