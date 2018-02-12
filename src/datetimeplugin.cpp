@@ -15,9 +15,9 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef Q_OS_WIN
 #include "datetimeplugin.h"
 
+#ifndef Q_OS_WIN
 #include <kiconloader.h>
 
 #include "ui_datetimepluginwidget.h"
