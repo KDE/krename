@@ -89,7 +89,7 @@ QString SystemPlugin::processFile(BatchRenamer *b, int index, const QString &fil
     QString token(filenameOrToken);
     QDate d = QDate::currentDate();
     QTime t = QTime::currentTime();
-    QString tmp, text;
+    QString tmp;
     QString format = "dd-MM-yyyy";
     if (token.contains(";")) {
         format = token.section(';', 1, 1);
