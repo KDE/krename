@@ -110,7 +110,7 @@ QString SystemPlugin::processFile(BatchRenamer *b, int index, const QString &fil
         QString hour   = QString().sprintf("%0*i", 2, t.hour());
         QString minute = QString().sprintf("%0*i", 2, t.minute());
         QString second = QString().sprintf("%0*i", 2, t.second());
-        return QString("%1-%2-%3").arg(hour).arg(minute).arg(second);
+        return QString("%1-%2-%3").arg(hour, minute, second);
     } else if (token == "hour") {
         return tmp.sprintf("%0*i", 2, t.hour());
     } else if (token == "minute") {
