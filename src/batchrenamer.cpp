@@ -996,6 +996,8 @@ QString BatchRenamer::findPartStrings(QString oldname, QString token)
             x++;
         }
 
+        oldname = unEscape(oldname);
+
         return oldname.mid(first.toInt() - 1, x);
     } else if (token.contains(';')) {
         pos = token.indexOf(';', 0);
@@ -1003,10 +1005,14 @@ QString BatchRenamer::findPartStrings(QString oldname, QString token)
         first = token.left(pos);
         second = token.mid(pos + 1, token.length());
 
+        oldname = unEscape(oldname);
+
         return oldname.mid(first.toInt() - 1, second.toInt());
     } else {
         bool ok = false;
         int number = token.toInt(&ok);
+
+        oldname = unEscape(oldname);
 
         if (ok && (number <= (signed int)oldname.length() && number > 0)) {
             return QString(oldname[ number - 1 ]);
@@ -1061,7 +1067,10 @@ QString BatchRenamer::findLength(const QString &token, const QString &name)
             }
         }
 
-        return QString::number(name.length() - minus);
+        QString escaped = name;
+        escaped = doEscape(escaped);
+
+        return QString::number(escaped.length() - minus);
     }
 
     return QString();
