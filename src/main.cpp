@@ -141,7 +141,7 @@ int main(int argc, char *argv[])
     QWidget *krename = KRenameImpl::launch(QRect(0, 0, 0, 0), KRenameFile::List(), &parser);
 
 #ifndef Q_OS_WIN
-    /* Check if Krename
+    /* Check if KRename
      * was started from root!
      */
     unsigned int uid = geteuid();
