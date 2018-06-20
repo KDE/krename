@@ -45,6 +45,9 @@
 #if HAVE_PODOFO
 # include "podofoplugin.h"
 #endif // HAVE_PODOFO
+#if HAVE_KARCHIVE
+# include "odfplugin.h"
+#endif // HAVE_KARCHIVE
 #if HAVE_FREETYPE
 # include "fontplugin.h"
 #endif // HAVE_FREETYPE
@@ -155,6 +158,9 @@ void PluginLoader::load()
 #if HAVE_PODOFO
     m_plugins.append(new PodofoPlugin(this));
 #endif // HAVE_PODOFO
+#if HAVE_KARCHIVE
+    m_plugins.append(new OdfPlugin(this));
+#endif // HAVE_KARCHIVE
     m_plugins.append(new TranslitPlugin(this));
     m_plugins.append(new SnumPlugin(this));
     //this->loadFilePlugins();

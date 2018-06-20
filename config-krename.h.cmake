@@ -9,6 +9,9 @@
 /* have PoDoFo */
 #define HAVE_PODOFO ${HAVE_PODOFO}
 
+/* have KArchive */
+#define HAVE_KARCHIVE ${HAVE_KARCHIVE}
+
 /* have Freetype */
 #define HAVE_FREETYPE ${HAVE_FREETYPE}
 

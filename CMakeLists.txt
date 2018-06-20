@@ -42,6 +42,13 @@ add_definitions(
     -DQT_STRICT_ITERATORS
 )
 
+
+# Find KArchive
+find_package(KF5Archive)
+set_package_properties(KF5Archive PROPERTIES
+    PURPOSE "Needed for ODF plugin"
+    TYPE OPTIONAL)
+
 # Find taglib
 set(TAGLIB_MIN_VERSION "1.5")
 find_package(Taglib ${TAGLIB_MIN_VERSION})
@@ -79,6 +86,7 @@ include(MacroBoolTo01)
 macro_bool_to_01(TAGLIB_FOUND HAVE_TAGLIB)
 macro_bool_to_01(EXIV2_FOUND HAVE_EXIV2)
 macro_bool_to_01(PoDoFo_FOUND HAVE_PODOFO)
+macro_bool_to_01(KF5Archive_FOUND HAVE_KARCHIVE)
 macro_bool_to_01(FREETYPE_FOUND HAVE_FREETYPE)
 configure_file(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h)
 

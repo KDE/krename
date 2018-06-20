@@ -91,6 +91,12 @@ if(FREETYPE_FOUND)
     )
 endif()
 
+if(KF5Archive_FOUND)
+    set(krename_SRCS ${krename_SRCS}
+        odfplugin.cpp
+    )
+endif()
+
 
 ki18n_wrap_ui(krename_SRCS
     customfilenamedlg.ui
@@ -139,6 +145,12 @@ endif()
 if(PoDoFo_FOUND)
     target_link_libraries(krename
         ${PoDoFo_LIBRARIES}
+    )
+endif()
+if(KF5Archive_FOUND)
+    target_link_libraries(krename
+        Qt5::Xml
+        KF5::Archive
     )
 endif()
 if(FREETYPE_FOUND)
