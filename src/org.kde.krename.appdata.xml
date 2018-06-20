@@ -84,7 +84,7 @@
       <image type="source" width="1039" height="782">https://cdn.kde.org/screenshots/krename/krename.png</image>
     </screenshot>
   </screenshots>
-  <url type="homepage">https://www.kde.org/</url>
+  <url type="homepage">https://userbase.kde.org/KRename</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=krename</url>
   <project_group>KDE</project_group>
   <provides>

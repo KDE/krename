@@ -317,7 +317,7 @@ if( !m_result ) { \
         RUN_TOKEN_TEST("[&dirname] Test", "[&dirname]", filename, directory1.toUpper());
         RUN_TOKEN_TEST("[$dirname] Test", "[$dirname]", filename, directory1);
         RUN_TOKEN_TEST("[%dirname] Test", "[%dirname]", filename, directory1.toLower());
-        RUN_TOKEN_TEST("[*dirname] Test", "[*dirname]", filename, "Krename");
+        RUN_TOKEN_TEST("[*dirname] Test", "[*dirname]", filename, "KRename");
         RUN_TOKEN_TEST("[trimmed;[dirname]] Test", "[trimmed;[dirname]]", filename, directory1);
         RUN_TOKEN_TEST("[dirname.] Test", "[dirname.]", filename, directory2);
         RUN_TOKEN_TEST("[&dirname.] Test", "[&dirname.]", filename, directory2.toUpper());

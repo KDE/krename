@@ -1,4 +1,4 @@
-# Sending all kinds of files recursively from a directory to Krename
+# Sending all kinds of files recursively from a directory to KRename
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,inode/directory

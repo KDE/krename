@@ -1,4 +1,4 @@
-# Sending all kinds of file to Krename
+# Sending all kinds of file to KRename
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,all/allfiles,inode/directory

@@ -48,8 +48,8 @@
 
 int main(int argc, char *argv[])
 {
-    KLocalizedString::setApplicationDomain("krename");
     QApplication app(argc, argv);
+    KLocalizedString::setApplicationDomain("krename");
 
     KCrash::initialize();
 
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
                                "as financial support (everybody needs money ;). See help files for details."));
     aboutData.setLicense(KAboutLicense::GPL_V3);
     aboutData.setCopyrightStatement(i18n("(c) 2001-2012, Dominik Seichter\n"));
-    aboutData.setHomepage("http://www.krename.net");
+    aboutData.setHomepage("https://userbase.kde.org/KRename");
 
     aboutData.addAuthor(i18n("Heiko Becker"), i18n("Current maintainer"),
                         "heirecka@exherbo.org");
@@ -116,6 +116,7 @@ int main(int argc, char *argv[])
     aboutData.setDesktopFileName(QStringLiteral("org.kde.krename"));
 
     KAboutData::setApplicationData(aboutData);
+    QApplication::setWindowIcon(QIcon::fromTheme("krename", QApplication::windowIcon()));
 
     QCommandLineParser parser;
     parser.addPositionalArgument(QLatin1String("files"), i18n("Files to be added to the list to be renamed"), i18n("[files...]"));
@@ -140,7 +141,7 @@ int main(int argc, char *argv[])
     QWidget *krename = KRenameImpl::launch(QRect(0, 0, 0, 0), KRenameFile::List(), &parser);
 
 #ifndef Q_OS_WIN
-    /* Check if Krename
+    /* Check if KRename
      * was started from root!
      */
     unsigned int uid = geteuid();
