@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
                         "Franz.Schmid@altmuehlnet.de", "http://web2.altmuehlnet.de/fschmid/index.html");
     aboutData.addCredit(i18n("Rolf Magnus"), i18n("Parts of the PNG support are copied from his KFile plugin for png support."),
                         "ramagnus@kde.org");
-    aboutData.addCredit(i18n("Michael v.Ostheim"), i18n("Created the Gentoo Ebuild scripts for Krename."),
+    aboutData.addCredit(i18n("Michael v.Ostheim"), i18n("Created the Gentoo Ebuild scripts for KRename."),
                         "MvOstheim@web.de", "http://www.vonostheim.de");
     aboutData.addCredit(i18n("Brandon Low"), i18n("Some GCC 3.1 fixes for Gentoo."),
                         "lostlogic@gentoo.org", "http://www.gentoo.org");
@@ -147,8 +147,8 @@ int main(int argc, char *argv[])
     unsigned int uid = geteuid();
     if (uid == 0)
         KMessageBox::information(krename, i18n(
-                                     "<b>Krename was started from root!</b><br>"
-                                     "When started from root, Krename may damage your "
+                                     "<b>KRename was started from root!</b><br>"
+                                     "When started from root, KRename may damage your "
                                      "system if you do not know exactly what you are "
                                      "doing!"
                                  ), i18n("Error"), "KrenameRootWarning");
