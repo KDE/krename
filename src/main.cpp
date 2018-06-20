@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
                                "as financial support (everybody needs money ;). See help files for details."));
     aboutData.setLicense(KAboutLicense::GPL_V3);
     aboutData.setCopyrightStatement(i18n("(c) 2001-2012, Dominik Seichter\n"));
-    aboutData.setHomepage("http://www.krename.net");
+    aboutData.setHomepage("https://userbase.kde.org/KRename");
 
     aboutData.addAuthor(i18n("Heiko Becker"), i18n("Current maintainer"),
                         "heirecka@exherbo.org");
