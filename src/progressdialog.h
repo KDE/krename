@@ -103,6 +103,9 @@ public:
      */
     void renamingDone(bool enableMore, bool enableUndo, BatchRenamer *renamer, int errors);
 
+protected:
+    void closeEvent(QCloseEvent *event) override;
+
 private Q_SLOTS:
     /** Called when the user cancels the operation
      */
