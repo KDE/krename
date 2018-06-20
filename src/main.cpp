@@ -48,8 +48,8 @@
 
 int main(int argc, char *argv[])
 {
-    KLocalizedString::setApplicationDomain("krename");
     QApplication app(argc, argv);
+    KLocalizedString::setApplicationDomain("krename");
 
     KCrash::initialize();
 
