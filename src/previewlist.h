@@ -29,7 +29,7 @@ class PreviewList : public QTreeView
 
 public:
     explicit PreviewList(QWidget *parent);
-    ~PreviewList();
+    ~PreviewList() override;
 
     inline void setKRenameModel(KRenameModel *model)
     {
@@ -46,7 +46,7 @@ private Q_SLOTS:
     void slotManually();
 
 protected:
-    void contextMenuEvent(QContextMenuEvent *e);
+    void contextMenuEvent(QContextMenuEvent *e) override;
 
 private:
     KRenameModel *m_model;

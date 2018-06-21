@@ -39,23 +39,23 @@ public:
      */
     explicit ScriptPlugin(PluginLoader *loader);
 
-    virtual ~ScriptPlugin();
+    ~ScriptPlugin() override;
 
     /**
      * @returns a name of the plugin that can be displayed
      *          to the user. This name should be internationalized.
      */
-    inline virtual const QString name() const;
+    inline const QString name() const override;
 
     /**
      * @returns the type of the plugin.
      */
-    inline virtual int type() const;
+    inline int type() const override;
 
     /**
      * @returns an icon for this plugin.
      */
-    virtual const QPixmap icon() const;
+    const QPixmap icon() const override;
 
     /**
      * @returns true if this plugins is always enabled
@@ -63,7 +63,7 @@ public:
      * Warning: If you return true here, the user has no possibility to
      *          disable this plugin.
      */
-    inline virtual bool alwaysEnabled() const;
+    inline bool alwaysEnabled() const override;
 
     /**
      * This function is the core of your plugin.
@@ -92,7 +92,7 @@ public:
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType);
+    QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType) override;
 
     /** Get a list of all tokens supported by this plugin.
      *
@@ -100,7 +100,7 @@ public:
      *
      *  @returns a list of all supported tokens.
      */
-    inline virtual const QStringList &supportedTokens() const;
+    inline const QStringList &supportedTokens() const override;
 
     /** Returns help descriptions for the supported tokens
      *
@@ -109,7 +109,7 @@ public:
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    inline virtual const QStringList &help() const;
+    inline const QStringList &help() const override;
 
     /** Create a user interface for this plugin
      *
@@ -117,7 +117,7 @@ public:
      *
      *  This is implemented here for all FilePlugin based classed
      */
-    void createUI(QWidget *parent) const;
+    void createUI(QWidget *parent) const override;
 
     /** Load the plugin configuration.
      *
@@ -125,7 +125,7 @@ public:
      *
      *  @param group config group where the configuration should be read from
      */
-    virtual void loadConfig(KConfigGroup &group);
+    void loadConfig(KConfigGroup &group) override;
 
     /** Save the plugin configuration.
      *
@@ -133,7 +133,7 @@ public:
      *
      *  @param group config group where the configuration should be stored
      */
-    virtual void saveConfig(KConfigGroup &group) const;
+    void saveConfig(KConfigGroup &group) const override;
 
 protected:
     /**

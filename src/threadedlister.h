@@ -40,7 +40,7 @@ class ThreadedLister : public QObject
     Q_OBJECT
 public:
     ThreadedLister(const QUrl &dirname, QWidget *cache, KRenameModel *model);
-    ~ThreadedLister();
+    ~ThreadedLister() override;
 
     inline void start()
     {

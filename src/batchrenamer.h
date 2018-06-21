@@ -73,7 +73,7 @@ class BatchRenamer : public QObject
 
 public:
     BatchRenamer();
-    ~BatchRenamer();
+    ~BatchRenamer() override;
 
     /** Sets the list of files
      *  which contains all filenames which should be transformed.

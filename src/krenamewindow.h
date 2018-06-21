@@ -63,7 +63,7 @@ class KRenameWindow : public KMainWindow
 public:
     explicit KRenameWindow(QWidget *parent = nullptr);
 
-    ~KRenameWindow();
+    ~KRenameWindow() override;
 
     /** The maximum number of pages in any gui mode.
      *  No gui mode can have more pages than this.

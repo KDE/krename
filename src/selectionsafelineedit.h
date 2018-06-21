@@ -38,7 +38,7 @@ public:
     }
 
 protected:
-    void focusOutEvent(QFocusEvent *)
+    void focusOutEvent(QFocusEvent *) override
     {
         // ignore
     }

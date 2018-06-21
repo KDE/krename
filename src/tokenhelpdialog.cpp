@@ -67,7 +67,7 @@ public:
         return m_model->file(index);
     }
 
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (role == Qt::DisplayRole) {
             return static_cast<KRenameModel *>(m_model)->data(index, Qt::UserRole);
@@ -76,7 +76,7 @@ public:
         }
     }
 
-    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         return m_model->rowCount(parent);
     }

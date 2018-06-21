@@ -27,10 +27,10 @@ class RichTextItemDelegate : public QItemDelegate
 
 public:
     explicit RichTextItemDelegate(QObject *parent = nullptr);
-    virtual ~RichTextItemDelegate() { }
+    ~RichTextItemDelegate() override { }
 
-    virtual void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
-    virtual QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
 private:
     QTextDocument *m_document;

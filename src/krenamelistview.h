@@ -32,7 +32,7 @@ class KRenameListView : public QListView
 
 public:
     explicit KRenameListView(QWidget *parent);
-    virtual ~KRenameListView() { }
+    ~KRenameListView() override { }
 
     /**
      * Specify the info widget to display
@@ -48,7 +48,7 @@ public Q_SLOTS:
     void slotUpdateCount();
 
 protected:
-    virtual void resizeEvent(QResizeEvent *e);
+    void resizeEvent(QResizeEvent *e) override;
 
 private:
     /**

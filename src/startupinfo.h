@@ -36,7 +36,7 @@ class StartUpInfo : public QFrame
 
 public:
     explicit StartUpInfo(QWidget *parent = nullptr);
-    virtual ~StartUpInfo();
+    ~StartUpInfo() override;
 
 Q_SIGNALS:
     /**

@@ -30,7 +30,7 @@ class CustomDialog : public QDialog
     Q_OBJECT
 public:
     CustomDialog(const KRenameFile &file, QWidget *parent);
-    ~CustomDialog();
+    ~CustomDialog() override;
 
     /**
      *  \returns true if the current user settings

@@ -46,7 +46,7 @@ class KRenameModel : public QAbstractListModel
     Q_OBJECT
 public:
     explicit KRenameModel(KRenameFile::List *vector);
-    ~KRenameModel();
+    ~KRenameModel() override;
 
     /**
      * Set the batchrenamer instance.
@@ -116,15 +116,15 @@ public:
      */
     inline KRenameFile &file(int index);
 
-    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-    Qt::DropActions supportedDropActions() const;
-    QStringList mimeTypes() const;
-    Qt::ItemFlags flags(const QModelIndex &index) const;
+    Qt::DropActions supportedDropActions() const override;
+    QStringList mimeTypes() const override;
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
     bool dropMimeData(const QMimeData *data, Qt::DropAction action,
-                      int row, int column, const QModelIndex &parent);
-    bool setData(const QModelIndex &index, const QVariant &value, int role);
+                      int row, int column, const QModelIndex &parent) override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
     /** Enable the preview of KRenameFile objects.
      *
@@ -263,18 +263,18 @@ class KRenamePreviewModel : public QAbstractTableModel
     Q_OBJECT
 public:
     explicit KRenamePreviewModel(KRenameFile::List *vector);
-    ~KRenamePreviewModel();
+    ~KRenamePreviewModel() override;
 
     void refresh();
 
-    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
-    virtual int columnCount(const QModelIndex &parent = QModelIndex()) const;
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-    virtual QModelIndex parent(const QModelIndex &index) const;
-    virtual QModelIndex sibling(int row, int column, const QModelIndex &index) const;
+    QModelIndex parent(const QModelIndex &index) const override;
+    QModelIndex sibling(int row, int column, const QModelIndex &index) const override;
 
-    virtual QVariant headerData(int section, Qt::Orientation orientation, int role) const;
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
 private:
     KRenameFile::List *m_vector;
 };

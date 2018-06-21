@@ -41,7 +41,7 @@ public:
     /** Construct a new KRenameTest dialog
      */
     KRenameTest();
-    ~KRenameTest();
+    ~KRenameTest() override;
 
     /** Starts the selftest
      */

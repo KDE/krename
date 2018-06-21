@@ -27,12 +27,12 @@ class TranslitPlugin : public FilePlugin
 public:
     explicit TranslitPlugin(PluginLoader *loader);
 
-    ~TranslitPlugin();
+    ~TranslitPlugin() override;
 
     /**
      * @returns the type of the plugin.
      */
-    inline virtual int type() const;
+    inline int type() const override;
 
     /**
      * This function is the core of your plugin.
@@ -61,7 +61,7 @@ public:
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType);
+    QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType) override;
 
     /** Returns help descriptions for the supported tokens
      *
@@ -70,7 +70,7 @@ public:
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    inline const QStringList &help() const;
+    inline const QStringList &help() const override;
 
     /** Create a user interface for this plugin
      *

@@ -40,7 +40,7 @@ class KRenameImpl : public QObject
     Q_OBJECT
 
 public:
-    ~KRenameImpl();
+    ~KRenameImpl() override;
 
     static QWidget *launch(const QRect &rect, const KRenameFile::List &list, QCommandLineParser *commandLine = 0);
 

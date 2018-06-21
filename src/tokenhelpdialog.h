@@ -37,7 +37,7 @@ public:
     TokenHelpDialog(KRenameModel *model, BatchRenamer *renamer,
                     QLineEdit *edit, QWidget *parent = nullptr);
 
-    ~TokenHelpDialog();
+    ~TokenHelpDialog() override;
 
     /** Adds a category to the help dialog.
      *  The category will be added and all its commands will also be added to the "All" category.
@@ -57,7 +57,7 @@ public:
     static const QString getTokenSeparator();
 
 public Q_SLOTS:
-    int exec();
+    int exec() override;
 
 private Q_SLOTS:
     void slotInsert();

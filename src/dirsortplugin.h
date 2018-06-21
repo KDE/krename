@@ -27,13 +27,13 @@ class DirSortPlugin : public Plugin
 {
 public:
     explicit DirSortPlugin(PluginLoader *loader);
-    ~DirSortPlugin();
+    ~DirSortPlugin() override;
 
     /**
      * @returns a name of the plugin that can be displayed
      *          to the user. This name should be internationalized.
      */
-    virtual const QString name() const;
+    const QString name() const override;
 
     /**
      * Determines the type of the plugin.
@@ -41,12 +41,12 @@ public:
      *
      * @returns the type of the plugin.
      */
-    virtual int type() const;
+    int type() const override;
 
     /**
      * @returns an icon for this plugin.
      */
-    virtual const QPixmap icon() const;
+    const QPixmap icon() const override;
 
     /**
      * @returns true if this plugins is always enabled
@@ -54,7 +54,7 @@ public:
      * Warning: If you return true here, the user has no possibility to
      *          disable this plugin.
      */
-    virtual bool alwaysEnabled() const;
+    bool alwaysEnabled() const override;
 
     /**
      * This function is the core of your plugin.
@@ -83,7 +83,7 @@ public:
      * @returns the value of the token if type is ePluginType_Token
      * @returns an error message or QString::null if type is ePluginType_File
      */
-    virtual QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType);
+    QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType) override;
 
     /** Get a list of all tokens supported by this plugin.
      *
@@ -92,7 +92,7 @@ public:
      *  @returns a list of all supported tokens. The returned strings will be treated
      *           as regular expressions to find a plugin which supports a token.
      */
-    virtual const QStringList &supportedTokens() const;
+    const QStringList &supportedTokens() const override;
 
     /** Returns help descriptions for the supported tokens
      *
@@ -101,13 +101,13 @@ public:
      *
      *  @returns a stringlist containing help on the supported tokens
      */
-    virtual const QStringList &help() const;
+    const QStringList &help() const override;
 
     /** Create a user interface for this plugin
      *
      *  @param parent the parent widget of this plugin
      */
-    virtual void createUI(QWidget *parent) const;
+    void createUI(QWidget *parent) const override;
 
 private:
     /**
