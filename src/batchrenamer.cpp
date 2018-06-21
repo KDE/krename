@@ -830,7 +830,7 @@ QString &BatchRenamer::unEscape(QString &text)
     return text;
 }
 
-QString BatchRenamer::processToken(QString token, QString oldname, int i)
+QString BatchRenamer::processToken(const QString &token, const QString &oldname, int i)
 {
     QString tmp;
 

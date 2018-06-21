@@ -226,7 +226,7 @@ public:
     QString processString(QString text, const QString &originalName, int i, bool doFindReplace = true);
     QString processBrackets(QString text, int *length, const QString &oldname, int index);
     QString processNumber(int length, const QString &appendix);
-    QString processToken(QString token, QString oldname, int i);
+    QString processToken(const QString &token, const QString &oldname, int i);
 
 public Q_SLOTS:
 

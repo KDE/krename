@@ -20,7 +20,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
-NumberDialog::NumberDialog(int start, int step, bool reset, QList<int> skip, QWidget *parent)
+NumberDialog::NumberDialog(int start, int step, bool reset, const QList<int> &skip, QWidget *parent)
     : QDialog(parent)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);

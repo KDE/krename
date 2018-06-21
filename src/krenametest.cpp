@@ -516,7 +516,7 @@ if( !m_result ) { \
         return result;
     }
 
-    bool KRenameTest::numberingTest(int length, int start, int step, QList<int> skip, int num)
+    bool KRenameTest::numberingTest(int length, int start, int step, const QList<int> &skip, int num)
     {
         QString directory("/home/krename/");
         KRenameFile::List list;
