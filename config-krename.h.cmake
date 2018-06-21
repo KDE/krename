@@ -12,4 +12,4 @@
 /* have Freetype */
 #define HAVE_FREETYPE ${HAVE_FREETYPE}
 
-#define VERSION "${KRENAME_VERSION}"
+#define VERSION "${krename_VERSION}"

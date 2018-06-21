@@ -1,6 +1,7 @@
-project(krename)
+cmake_minimum_required(VERSION 3.0)
 
-cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
+project(krename VERSION "5.0.60")
+
 # search packages used by KDE
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
@@ -38,8 +39,6 @@ add_definitions(
     -DQT_NO_URL_CAST_FROM_STRING
     -DQT_STRICT_ITERATORS
 )
-
-set(KRENAME_VERSION "5.0.60")
 
 # Find taglib
 set(TAGLIB_MIN_VERSION "1.5")
