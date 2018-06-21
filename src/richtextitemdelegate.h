@@ -24,7 +24,7 @@ class QTextDocument;
 
 class RichTextItemDelegate : public QItemDelegate
 {
-
+    Q_OBJECT
 public:
     explicit RichTextItemDelegate(QObject *parent = nullptr);
     ~RichTextItemDelegate() override { }

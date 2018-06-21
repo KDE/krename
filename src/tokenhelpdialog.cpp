@@ -39,6 +39,7 @@
  */
 class KRenameUnformattedWrappedModel : public QAbstractListModel
 {
+    Q_OBJECT
 public:
     KRenameUnformattedWrappedModel(KRenameModel *model)
         : m_model(model)
@@ -343,3 +344,5 @@ void TokenHelpDialog::addToRecentTokens(const QString &token, const QString &hel
     QString recent = token + getTokenSeparator() + help;
     m_recent << recent;
 }
+
+#include "tokenhelpdialog.moc"
