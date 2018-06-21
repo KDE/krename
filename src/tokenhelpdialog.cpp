@@ -299,8 +299,6 @@ void TokenHelpDialog::slotUpdatePreview()
 
     int index = m_widget.comboPreview->currentIndex();
     if (index >= 0 && m_widget.listCategories->currentItem() != nullptr) {
-        QString       name   = m_widget.listCategories->currentItem()->text(0);
-
         const KRenameFile &file = m_model->file(index);
         QApplication::setOverrideCursor(Qt::WaitCursor);
 

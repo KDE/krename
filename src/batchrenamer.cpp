@@ -909,7 +909,6 @@ QString BatchRenamer::findToken(const QString &oldname, QString token, int i)
         token.remove(0, 1);
     }
 
-    QString save = token;
     token = processToken(token, oldname, i);
 
     switch (c) {

@@ -27,8 +27,6 @@
 FontPlugin::FontPlugin(PluginLoader *loader)
     : FilePlugin(loader)
 {
-    const QString prefix("font");
-
     this->addSupportedToken("fontpostscript");
     this->addSupportedToken("fontfamily");
     this->addSupportedToken("fontstyle");
