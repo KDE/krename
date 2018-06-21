@@ -32,4 +32,4 @@ Name[x-test]=xxKRenamexx
 Name[zh_CN]=KRename
 Name[zh_TW]=KRename
 GenericName=Batch File Renamer
-Categories=Qt;KDE;Utility;
+Categories=Qt;KDE;Utility;FileTools;
