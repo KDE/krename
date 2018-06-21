@@ -6,7 +6,7 @@ set(QT5_MIN_VERSION "5.7.0")
 set(KF5_MIN_VERSION "5.18.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake/modules)
 
 include(KDEInstallDirs)
 include(ECMInstallIcons)
@@ -33,9 +33,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     WidgetsAddons
     XmlGui
 )
-# where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
-                      ${CMAKE_SOURCE_DIR}/cmake/modules)
 
 add_definitions(
     -DQT_DEPRECATED_WARNINGS
