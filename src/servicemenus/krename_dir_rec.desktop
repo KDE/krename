@@ -2,7 +2,7 @@
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,inode/directory
-Actions=rename
+Actions=rename;
 
 [Desktop Action rename]
 Exec=krename -r %U
