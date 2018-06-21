@@ -2,7 +2,6 @@
 Type=Application
 Exec=krename -qwindowtitle "%c" %i %U
 Icon=krename
-X-DocPath=krename/index.html
 Comment=A batch renamer
 Comment[ar]=مُعيد تسمية لدفعة ملفّات
 Comment[ast]=Un renomador per llotes
