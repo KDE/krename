@@ -67,7 +67,6 @@ public:
 
 private:
     QStringList           m_help;
-    QMap<QString, QString> m_mapRealKeys;
 };
 
 inline const QStringList &PodofoPlugin::help() const

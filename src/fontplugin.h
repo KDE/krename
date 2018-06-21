@@ -72,7 +72,6 @@ public:
 
 private:
     QStringList           m_help;
-    QMap<QString, QString> m_mapRealKeys;
 
     FT_Library            m_library;
 };
