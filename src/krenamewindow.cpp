@@ -1101,7 +1101,7 @@ void KRenameWindow::moveUp(const QList<int> &selected, QAbstractItemView *view)
     KRenameModel *model = static_cast<KRenameModel *>(m_pageFiles->fileList->model());
     model->moveFilesUp(selected);
 
-    updatePreview();
+    emit updatePreview();
 
     QItemSelectionModel *selection = view->selectionModel();
     QList<int>::const_iterator it  = selected.begin();
@@ -1125,7 +1125,7 @@ void KRenameWindow::moveDown(const QList<int> &selected, QAbstractItemView *view
     KRenameModel *model = static_cast<KRenameModel *>(m_pageFiles->fileList->model());
     model->moveFilesDown(selected);
 
-    updatePreview();
+    emit updatePreview();
 
     QItemSelectionModel *selection = view->selectionModel();
     QList<int>::const_iterator it  = selected.begin();
