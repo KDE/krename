@@ -41,8 +41,6 @@ add_definitions(
 
 set(KRENAME_VERSION "5.0.60")
 
-include(FindGettext)
-
 # Find taglib
 set(TAGLIB_MIN_VERSION "1.5")
 find_package(Taglib ${TAGLIB_MIN_VERSION})
