@@ -135,7 +135,7 @@ static const char *exifTags[] = {
     "Exif.GPSInfo.GPSProcessingMethod",
     "Exif.GPSInfo.GPSAreaInformation",
     "Exif.GPSInfo.GPSDifferential",
-    NULL
+    nullptr
 };
 
 static const char *xmpTags[] = {
@@ -263,7 +263,7 @@ static const char *xmpTags[] = {
     "Xmp.dc.rights",
     "Xmp.dc.description",
     "Xmp.photoshop.CaptionWriter",
-    NULL
+    nullptr
 };
 
 static const char *iptcTags[] = {
@@ -288,7 +288,7 @@ static const char *iptcTags[] = {
     "Iptc.Application2.Copyright",
     "Iptc.Application2.Caption",
     "Iptc.Application2.Writer",
-    NULL
+    nullptr
 };
 
 Exiv2Plugin::Exiv2Plugin(PluginLoader *loader)

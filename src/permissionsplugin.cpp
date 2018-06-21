@@ -50,7 +50,7 @@ PermissionsPlugin::PermissionsPlugin(PluginLoader *loader)
     // Get all users on the system
     struct passwd *user;
     setpwent();
-    for (i = 0; ((user = getpwent()) != 0L) && (i < MAXENTRIES); ++i) {
+    for (i = 0; ((user = getpwent()) != nullptr) && (i < MAXENTRIES); ++i) {
         if (uid == 0 || uid == user->pw_uid) {
             m_users.append(QString::fromLatin1(user->pw_name));
         }
@@ -61,7 +61,7 @@ PermissionsPlugin::PermissionsPlugin(PluginLoader *loader)
     struct group *ge;
     user = getpwuid(uid);
     setgrent();
-    for (i = 0; ((ge = getgrent()) != 0L) && (i < MAXENTRIES); ++i) {
+    for (i = 0; ((ge = getgrent()) != nullptr) && (i < MAXENTRIES); ++i) {
         if (uid == 0) {
             // Add all groups if we are run as root
             m_groups.append(QString::fromLatin1(ge->gr_name));
@@ -70,7 +70,7 @@ PermissionsPlugin::PermissionsPlugin(PluginLoader *loader)
             char **members = ge->gr_mem;
             char *member;
 
-            while ((member = *members) != 0L) {
+            while ((member = *members) != nullptr) {
                 if (strcmp(user->pw_name, member) == 0) {
                     m_groups.append(QString::fromLatin1(ge->gr_name));
                     break;
@@ -293,7 +293,7 @@ int PermissionsPlugin::getGid(const QString &group) const
     int i, r = 0;
     struct group *ge;
     setgrent();
-    for (i = 0; ((ge = getgrent()) != 0L) && (i < MAXENTRIES); i++)
+    for (i = 0; ((ge = getgrent()) != nullptr) && (i < MAXENTRIES); i++)
         if (!strcmp(ge->gr_name, group.toUtf8().data())) {
             r = ge->gr_gid;
             break;
@@ -308,7 +308,7 @@ int PermissionsPlugin::getUid(const QString &owner) const
     int i, r = 0;
     struct passwd *user;
     setpwent();
-    for (i = 0; ((user = getpwent()) != 0L) && (i < MAXENTRIES); i++)
+    for (i = 0; ((user = getpwent()) != nullptr) && (i < MAXENTRIES); i++)
         if (!strcmp(user->pw_name, owner.toUtf8().data())) {
             r = user->pw_uid;
             break;

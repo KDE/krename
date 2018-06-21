@@ -42,7 +42,7 @@ class KRenameImpl : public QObject
 public:
     ~KRenameImpl() override;
 
-    static QWidget *launch(const QRect &rect, const KRenameFile::List &list, QCommandLineParser *commandLine = 0);
+    static QWidget *launch(const QRect &rect, const KRenameFile::List &list, QCommandLineParser *commandLine = nullptr);
 
 public Q_SLOTS:
     /** Updates the preview of the filenames after renaming
@@ -50,7 +50,7 @@ public Q_SLOTS:
     void slotUpdatePreview();
 
 private:
-    KRenameImpl(KRenameWindow *window, const KRenameFile::List &list , QCommandLineParser *commandLine = 0);
+    KRenameImpl(KRenameWindow *window, const KRenameFile::List &list , QCommandLineParser *commandLine = nullptr);
 
     /** Connect all gui components with their slots
      */
