@@ -45,6 +45,8 @@ ProgressDialog::ProgressDialog(ESplitMode eSplitMode, unsigned int dot, QWidget 
             this, &ProgressDialog::slotOpenDestination);
     connect(m_buttonUndo, &QPushButton::clicked,
             this, &ProgressDialog::slotUndo);
+    connect(m_buttonClose, &QPushButton::clicked,
+            qApp, &QApplication::quit, Qt::QueuedConnection);
 
     QMenu *menu = new QMenu(this);
     menu->addAction(i18n("Restart &KRename..."), this, SLOT(slotRestartKRename()));
@@ -154,6 +156,17 @@ void ProgressDialog::renamingDone(bool enableMore, bool enableUndo, BatchRenamer
     m_actUnprocessed->setEnabled(0 != errors);
 
     m_renamer = renamer;
+}
+
+void ProgressDialog::closeEvent(QCloseEvent *event)
+{
+    // KRenameWindow is still around but hidden. When we close this dialog we
+    // want to quit the app completely if there isn't some operation still
+    // running.
+    if (m_buttonClose->isEnabled()) {
+        qApp->quit();
+        QWidget::closeEvent(event);
+    }
 }
 
 void ProgressDialog::print(const QString &text, const QString &pixmap)
