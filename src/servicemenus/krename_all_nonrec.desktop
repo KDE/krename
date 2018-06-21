@@ -2,7 +2,6 @@
 [Desktop Entry]
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin,all/allfiles,inode/directory
-ExcludeServiceTypes=kdedevice/*
 Actions=rename
 
 [Desktop Action rename]
