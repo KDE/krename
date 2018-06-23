@@ -5,6 +5,7 @@
   <project_license>GPL-2.0</project_license>
   <name>KRename</name>
   <name xml:lang="ca">KRename</name>
+  <name xml:lang="ca-valencia">KRename</name>
   <name xml:lang="cs">KRename</name>
   <name xml:lang="nl">KRename</name>
   <name xml:lang="pt">KRename</name>
@@ -42,6 +43,7 @@
       conversion operations.
     </p>
     <p xml:lang="ca">El KRename és un canviador de noms per lots molt potent que pot reanomenar una llista de fitxers basada en un conjunt d'expressions. Pot copiar/moure els fitxers a un altre directori o senzillament reanomenar els fitxers d'entrada. El KRename admet moltes operacions de conversió.</p>
+    <p xml:lang="ca-valencia">El KRename és un canviador de noms per lots molt potent que pot reanomenar una llista de fitxers basada en un conjunt d'expressions. Pot copiar/moure els fitxers a un altre directori o senzillament reanomenar els fitxers d'entrada. El KRename admet moltes operacions de conversió.</p>
     <p xml:lang="nl">KRename is een erg krachtig programma om in bulk bestanden te hernoemen die een lijst met bestanden gebaseerd op een set uitdrukkingen kan hernoemen. Het kan de bestanden kopiëren/verplaatsen naar een andere map of eenvoudig de invoerbestanden hernomen. KRename ondersteunt veel conversiebewerkingen.</p>
     <p xml:lang="pt">O KRename é um sistema de mudança de nomes dos ficheiros em lote, que consegue mudar o nome a uma lista de ficheiros com base num conjunto de expressões. Poderá copiar/mover os ficheiros para outra pasta ou simplesmente mudar o nome dos ficheiros de entrada. O KRename suporta muitas operações de conversão.</p>
     <p xml:lang="sv">KRename är ett mycket kraftfullt verktyg för namnbyte i bakgrunden som kan byta namn på en lista med filer baserat på en uppsättning uttryck. Det kan kopiera eller flytta filerna till en annan katalog, eller helt enkelt byta namn på angivna filer. KRename stöder många konverteringsoperationer.</p>
