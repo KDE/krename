@@ -80,14 +80,11 @@ set_package_properties(Freetype PROPERTIES
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
-
-# Update configuration
-include(MacroBoolTo01)
-macro_bool_to_01(TAGLIB_FOUND HAVE_TAGLIB)
-macro_bool_to_01(EXIV2_FOUND HAVE_EXIV2)
-macro_bool_to_01(PoDoFo_FOUND HAVE_PODOFO)
-macro_bool_to_01(KF5Archive_FOUND HAVE_KARCHIVE)
-macro_bool_to_01(FREETYPE_FOUND HAVE_FREETYPE)
+set(HAVE_TAGLIB TAGLIB_FOUND)
+set(HAVE_EXIV2 EXIV2_FOUND)
+set(HAVE_PODOFO PoDoFo_FOUND)
+set(HAVE_KARCHIVE KF5Archive_FOUND)
+set(HAVE_FREETYPE FREETYPE_FOUND)
 configure_file(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h)
 
 # Directories
