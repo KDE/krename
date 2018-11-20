@@ -17,13 +17,19 @@
 
 #include "exiv2plugin.h"
 
+#include "../config-krename.h"
+
 #include <KLocalizedString>
 
 #include <exiv2/error.hpp>
 #include <exiv2/exif.hpp>
 #include <exiv2/image.hpp>
 #include <exiv2/iptc.hpp>
-#include <exiv2/xmp.hpp>
+#ifdef HAVE_LIBEXIV2_0_27
+    #include <exiv2/xmp_exiv2.hpp>
+#else
+    #include <exiv2/xmp.hpp>
+#endif
 #include <exiv2/tags.hpp>
 
 #include "batchrenamer.h"
