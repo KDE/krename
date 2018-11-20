@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.7)
 
 project(krename VERSION "5.0.60")
 
@@ -58,11 +58,12 @@ set_package_properties(Taglib PROPERTIES
     TYPE OPTIONAL)
 
 # Find exiv2
-find_package(Exiv2 0.13) # AccessMode was added in 0.13
-set_package_properties(Exiv2 PROPERTIES
-    DESCRIPTION "A library to access image metadata"
-    URL "http://www.exiv2.org"
-    TYPE OPTIONAL)
+find_package(LibExiv2 0.13) # AccessMode was added in 0.13
+set_package_properties(LibExiv2 PROPERTIES TYPE OPTIONAL)
+
+if (LibExiv2_VERSION VERSION_GREATER_EQUAL "0.27")
+    set(HAVE_LIBEXIV2_0_27 TRUE)
+endif()
 
 # Find podofo
 find_package(PoDoFo)
@@ -81,7 +82,7 @@ set_package_properties(Freetype PROPERTIES
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 set(HAVE_TAGLIB TAGLIB_FOUND)
-set(HAVE_EXIV2 EXIV2_FOUND)
+set(HAVE_EXIV2 LibExiv2_FOUND)
 set(HAVE_PODOFO PoDoFo_FOUND)
 set(HAVE_KARCHIVE KF5Archive_FOUND)
 set(HAVE_FREETYPE FREETYPE_FOUND)
