@@ -68,10 +68,10 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(i18n("Heiko Becker"), i18n("Current maintainer"),
                         "heirecka@exherbo.org");
     aboutData.addAuthor(i18n("Dominik Seichter"), i18n("Developer and former maintainer"), "domseichter@web.de",
-                        "http://www.krename.net");
+                        "https://www.krename.net/");
     aboutData.addAuthor(i18n("Stefan \"Stonki\" Onken"),
                         i18n("Website, testing, very good ideas and keeping me coding!"),
-                        "support@stonki.de", "http://www.stonki.de");
+                        "support@stonki.de", "https://www.stonki.com/");
 
     aboutData.addCredit(i18n("Arpad Biro"), i18n("Helped to fix style guide issues and made improvements to user messages."), "biro.arpad@gmail.com");
     aboutData.addCredit(i18n("Trevor Semeniuk"),  i18n("Thanks to him for creating RedHat 7.x packages and some other help."),
