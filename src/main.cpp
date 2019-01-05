@@ -68,23 +68,23 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(i18n("Heiko Becker"), i18n("Current maintainer"),
                         "heirecka@exherbo.org");
     aboutData.addAuthor(i18n("Dominik Seichter"), i18n("Developer and former maintainer"), "domseichter@web.de",
-                        "http://www.krename.net");
+                        "https://www.krename.net/");
     aboutData.addAuthor(i18n("Stefan \"Stonki\" Onken"),
                         i18n("Website, testing, very good ideas and keeping me coding!"),
-                        "support@stonki.de", "http://www.stonki.de");
+                        "support@stonki.de", "https://www.stonki.com/");
 
     aboutData.addCredit(i18n("Arpad Biro"), i18n("Helped to fix style guide issues and made improvements to user messages."), "biro.arpad@gmail.com");
     aboutData.addCredit(i18n("Trevor Semeniuk"),  i18n("Thanks to him for creating RedHat 7.x packages and some other help."),
                         "semeniuk@ee.ualberta.ca", "http://www.semeniuk.net");
     aboutData.addCredit(i18n("Groult Richard"),   i18n("Fixed a bug with startIndex and added the BatchRenamer class\n"
                         "to his excellent image viewer showimg."),
-                        "rgroult@jalix.org", "http://ric.jalix.org/");
+                        "rgroult@jalix.org");
     aboutData.addCredit(i18n("Michael Elvers"),  i18n("Fixed a bug that caused krename not closing open files."),
-                        "m_elvers@yahoo.com", "http://come.to/melvers");
+                        "m_elvers@yahoo.com");
     aboutData.addCredit(i18n("Andreas Pour"),  i18n("Thanks for his great job at apps.kde.com and help with contributing krename to apps.kde.com."),
-                        "pour@mieterra.com", "http://apps.kde.com");
+                        "pour@mieterra.com");
     aboutData.addCredit(i18n("Charles Samuels"), i18n("Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."),
-                        "charles@kde.org", "http://noatun.kde.org/");
+                        "charles@kde.org");
     aboutData.addCredit(i18n("Franz Schmid"), i18n("Gave me a good start into writing plugins with his application scribus."),
                         "Franz.Schmid@altmuehlnet.de", "http://web2.altmuehlnet.de/fschmid/index.html");
     aboutData.addCredit(i18n("Rolf Magnus"), i18n("Parts of the PNG support are copied from his KFile plugin for png support."),
@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
     aboutData.addCredit(i18n("Michael v.Ostheim"), i18n("Created the Gentoo Ebuild scripts for KRename."),
                         "MvOstheim@web.de", "http://www.vonostheim.de");
     aboutData.addCredit(i18n("Brandon Low"), i18n("Some GCC 3.1 fixes for Gentoo."),
-                        "lostlogic@gentoo.org", "http://www.gentoo.org");
+                        "lostlogic@gentoo.org");
     aboutData.addCredit(i18n("Per Oyvind Karlsen"), i18n("Thanks for creating the Mandrake RPM"),
                         "peroyvind@delonic.no");
     aboutData.addCredit(i18n("Vincenzo Reale"), i18n("Italian translation"), "smart2128@baslug.org");

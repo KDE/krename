@@ -442,7 +442,7 @@ regards marcel
 P.S.: and I tried sending this via the report feature but got:
 Unable to send the bug report.
 Please submit a bug report manually...
-See http://bugs.kde.org/ for instructions.
+See https://bugs.kde.org/ for instructions.
 Server said: "550 5.7.0 Need to authenticate via SMTP-AUTH-Login {mp049}"
 
 By the way will your genius tool be on board for KDE4 ??

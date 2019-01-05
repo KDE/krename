@@ -76,7 +76,7 @@ set_package_properties(PoDoFo PROPERTIES
 find_package(Freetype)
 set_package_properties(Freetype PROPERTIES
     DESCRIPTION "A library to access font metadata"
-    URL "http://www.freetype.org"
+    URL "https://www.freetype.org"
     TYPE OPTIONAL)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
