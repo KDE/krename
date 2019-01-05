@@ -53,4 +53,5 @@ GenericName[pt_BR]=Renomeação de arquivos em lote
 GenericName[sv]=Ett verktyg för filnamnsbyte i bakgrunden
 GenericName[uk]=Пакетне перейменовування файлів
 GenericName[x-test]=xxBatch File Renamerxx
+GenericName[zh_TW]=批次重新命名工具
 Categories=Qt;KDE;Utility;FileTools;
