@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Application
 Exec=krename -qwindowtitle "%c" %i %U
+StartupWMClass=krename
 Icon=krename
 Terminal=false
 Name=KRename
