@@ -59,6 +59,7 @@
   <summary xml:lang="uk">Потужна програма для пакетного перейменовування</summary>
   <summary xml:lang="x-test">xxA powerful batch file renamerxx</summary>
   <summary xml:lang="zh-CN">强大的批量文件重命名工具</summary>
+  <summary xml:lang="zh-TW">強大的批次檔案重命名工具</summary>
   <description>
     <p>
       Krename is a very powerful batch file renamer which can rename a list of
