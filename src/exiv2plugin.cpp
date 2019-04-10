@@ -317,7 +317,7 @@ Exiv2Plugin::Exiv2Plugin(PluginLoader *loader)
         QString help;
         try {
             help = QString::fromUtf8(key.tagLabel().c_str());
-        } catch (std::exception e) {
+        } catch (const std::exception &e) {
             help = "";
             // exiv2 throws sometimes exceptions
             // because it tries to create std::string from NULL pointers
@@ -338,7 +338,7 @@ Exiv2Plugin::Exiv2Plugin(PluginLoader *loader)
         QString help;
         try {
             help = QString::fromUtf8(key.tagLabel().c_str());
-        } catch (std::exception e) {
+        } catch (const std::exception &e) {
             help = "";
             // exiv2 throws sometimes exceptions
             // because it tries to create std::string from NULL pointers
@@ -359,7 +359,7 @@ Exiv2Plugin::Exiv2Plugin(PluginLoader *loader)
         QString help;
         try {
             help = QString::fromUtf8(key.tagLabel().c_str());
-        } catch (std::exception e) {
+        } catch (const std::exception &e) {
             help = "";
             // exiv2 throws sometimes exceptions
             // because it tries to create std::string from NULL pointers
@@ -431,7 +431,7 @@ QString Exiv2Plugin::processFile(BatchRenamer *b, int index, const QString &file
                 }
             }
         }
-    } catch (std::exception &err) {
+    } catch (const std::exception &err) {
         return QString::fromUtf8(err.what());
     }
 
