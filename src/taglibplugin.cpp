@@ -17,11 +17,12 @@
 
 #include "taglibplugin.h"
 
-#include <taglib/taglib.h>
-#include <taglib/fileref.h>
-#include <taglib/tfile.h>
-#include <taglib/tstring.h>
-#include <taglib/tag.h>
+// taglib includes
+#include <taglib.h>
+#include <fileref.h>
+#include <tfile.h>
+#include <tstring.h>
+#include <tag.h>
 
 #include <KLocalizedString>
 
