@@ -8,6 +8,7 @@
   <name xml:lang="ca-valencia">KRename</name>
   <name xml:lang="cs">KRename</name>
   <name xml:lang="de">KRename</name>
+  <name xml:lang="el">KRename</name>
   <name xml:lang="en-GB">KRename</name>
   <name xml:lang="es">KRename</name>
   <name xml:lang="fi">KRename</name>
@@ -65,6 +66,7 @@
     <p xml:lang="ca">El KRename és un canviador de noms per lots molt potent que pot reanomenar una llista de fitxers basada en un conjunt d'expressions. Pot copiar/moure els fitxers a un altre directori o senzillament reanomenar els fitxers d'entrada. El KRename admet moltes operacions de conversió.</p>
     <p xml:lang="ca-valencia">El KRename és un canviador de noms per lots molt potent que pot reanomenar una llista de fitxers basada en un conjunt d'expressions. Pot copiar/moure els fitxers a un altre directori o senzillament reanomenar els fitxers d'entrada. El KRename admet moltes operacions de conversió.</p>
     <p xml:lang="de">KRename ist ein sehr leistungsfähiges Programm zum Umbenennen mehrerer Dateien, mit dem eine Liste von Dateien auf der Grundlage von Ausdrücken umbenannt werden kann. Es kann die Dateien in einen anderen Ordner kopieren oder verschieben oder nur die Eingabedateien Umbenennen. KRename unterstützt viele Umwandlungsoperationen.</p>
+    <p xml:lang="el">Το KRename είναι μια πανίσχυρη εφαρμογή ομαδικής μετονομασίας αρχείων η οποία μετονομάζει μια λίστα αρχείων με βάση ένα σύνολο εκφράσεων. Μπορεί να αντιγράψει/μεταφέρει αρχεία σε άλλον κατάλογο ή απλώς να μετονομάσει τα δοσμένα αρχεία . Το KRename υποστηρίζει πολλές λειτουργίες μετατροπής.</p>
     <p xml:lang="en-GB">KRename is a very powerful batch file renamer which can rename a list of files based on a set of expressions. It can copy/move the files to another directory or simply rename the input files. KRename supports many conversion operations.</p>
     <p xml:lang="es">KRename es un potente cambiador de nombres de archivos por lotes que permite cambiar el nombre de una lista de archivos basándose en un conjunto de expresiones. Puede copiar y mover los archivos a otro directorio o solo cambiar los nombres de los archivos de entrada. KRename permite realizar muchas operaciones de cambio de nombre.</p>
     <p xml:lang="fi">Krename on erittäin tehokas ohjelma tiedostonimien muuttamiseksi eräajona lausekkeiden perusteella. Tulostiedostot voi myös kopioida tai siirtää toiseen kansioon. Krename tukee monia muunnostoimenpiteitä.</p>
