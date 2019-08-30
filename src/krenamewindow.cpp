@@ -30,7 +30,9 @@
 #include "ui_krenameplugins.h"
 #include "ui_krenamefilename.h"
 
+#include <QAction>
 #include <QIcon>
+#include <QMenu>
 #include <QPushButton>
 #include <kseparator.h>
 
@@ -202,7 +204,8 @@ void KRenameWindow::setupGui()
     m_buttonClose = m_buttons->button(QDialogButtonBox::Close);
     m_buttonClose->setShortcut(QKeySequence(QKeySequence::Quit));
 
-    KHelpMenu *helpMenu = new KHelpMenu(this);
+    KHelpMenu *helpMenu = new KHelpMenu(this, QString(), false);
+    helpMenu->menu()->removeAction(helpMenu->action(KHelpMenu::menuHelpContents));
     m_buttons->button(QDialogButtonBox::Help)->setMenu(helpMenu->menu());
 
     setupSlots();
