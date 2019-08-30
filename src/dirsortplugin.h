@@ -54,7 +54,7 @@ public:
      * Warning: If you return true here, the user has no possibility to
      *          disable this plugin.
      */
-    bool alwaysEnabled() const override;
+    bool enabledByDefault() const override;
 
     /**
      * This function is the core of your plugin.

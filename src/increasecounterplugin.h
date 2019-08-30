@@ -62,7 +62,7 @@ public:
      * Warning: If you return true here, the user has no possibility to
      *          disable this plugin.
      */
-    inline bool alwaysEnabled() const override;
+    inline bool enabledByDefault() const override;
 
     /**
      * This function is the core of your plugin.
@@ -140,7 +140,7 @@ inline int IncreaseCounterPlugin::type() const
     return ePluginType_Filename;
 }
 
-inline bool IncreaseCounterPlugin::alwaysEnabled() const
+inline bool IncreaseCounterPlugin::enabledByDefault() const
 {
     return false;
 }

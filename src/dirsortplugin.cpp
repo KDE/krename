@@ -47,7 +47,7 @@ int DirSortPlugin::type() const
     return ePluginType_File;
 }
 
-bool DirSortPlugin::alwaysEnabled() const
+bool DirSortPlugin::enabledByDefault() const
 {
     return false;
 }

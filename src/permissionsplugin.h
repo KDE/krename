@@ -68,7 +68,7 @@ public:
      * Warning: If you return true here, the user has no possibility to
      *          disable this plugin.
      */
-    inline bool alwaysEnabled() const override;
+    inline bool enabledByDefault() const override;
 
     /**
      * This function is the core of your plugin.
@@ -150,7 +150,7 @@ inline int PermissionsPlugin::type() const
     return ePluginType_File;
 }
 
-inline bool PermissionsPlugin::alwaysEnabled() const
+inline bool PermissionsPlugin::enabledByDefault() const
 {
     return false;
 }

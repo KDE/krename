@@ -63,7 +63,7 @@ public:
      * Warning: If you return true here, the user has no possibility to
      *          disable this plugin.
      */
-    inline bool alwaysEnabled() const override;
+    inline bool enabledByDefault() const override;
 
     /**
      * This function is the core of your plugin.
@@ -204,7 +204,7 @@ inline const QString ScriptPlugin::name() const
     return m_name;
 }
 
-inline bool ScriptPlugin::alwaysEnabled() const
+inline bool ScriptPlugin::enabledByDefault() const
 {
     return true;
 }

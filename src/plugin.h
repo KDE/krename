@@ -81,8 +81,6 @@ public:
      *  so that it can be used.
      *
      *  \param b the enabled state of the plugin.
-     *
-     *  This has no effect if alwaysEnabled returns true
      */
     inline void setEnabled(bool b);
 
@@ -98,7 +96,7 @@ public:
      * Warning: If you return true here, the user has no possibility to
      *          disable this plugin.
      */
-    virtual bool alwaysEnabled() const = 0;
+    virtual bool enabledByDefault() const = 0;
 
     /**
      * This function is the core of your plugin.
@@ -199,7 +197,7 @@ inline void Plugin::setEnabled(bool b)
 
 inline bool Plugin::isEnabled() const
 {
-    return this->alwaysEnabled() || m_enabled;
+    return this->enabledByDefault() || m_enabled;
 }
 
 #endif // PLUGIN_H

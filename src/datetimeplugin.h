@@ -70,7 +70,7 @@ public:
      * Warning: If you return true here, the user has no possibility to
      *          disable this plugin.
      */
-    inline bool alwaysEnabled() const override;
+    inline bool enabledByDefault() const override;
 
     /**
      * This function is the core of your plugin.
@@ -142,7 +142,7 @@ inline int DateTimePlugin::type() const
     return ePluginType_File;
 }
 
-inline bool DateTimePlugin::alwaysEnabled() const
+inline bool DateTimePlugin::enabledByDefault() const
 {
     return false;
 }

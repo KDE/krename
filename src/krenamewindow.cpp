@@ -1152,13 +1152,13 @@ void KRenameWindow::slotPluginChanged(QTreeWidgetItem *selected)
     QWidget *w = m_pluginsWidgetHash[selected->text(0)];
     Plugin  *p = m_pluginsHash[selected->text(0)];
 
-    if (p->alwaysEnabled()) {
+    if (p->enabledByDefault()) {
         m_pagePlugins->checkEnablePlugin->setChecked(true);
     } else {
         m_pagePlugins->checkEnablePlugin->setChecked(p->isEnabled());
     }
 
-    m_pagePlugins->checkEnablePlugin->setEnabled(!p->alwaysEnabled());
+    //m_pagePlugins->checkEnablePlugin->setEnabled(!p->enabledByDefault());
     m_pagePlugins->stackPlugins->setCurrentWidget(w);
 
     slotPluginEnabled();
@@ -1172,7 +1172,7 @@ void KRenameWindow::slotPluginEnabled()
         Plugin  *p = m_pluginsHash[selected->text(0)];
 
         p->setEnabled(m_pagePlugins->checkEnablePlugin->isChecked());
-        w->setEnabled(p->alwaysEnabled() || m_pagePlugins->checkEnablePlugin->isChecked());
+        w->setEnabled(p->enabledByDefault() || m_pagePlugins->checkEnablePlugin->isChecked());
     }
 }
 
