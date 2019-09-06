@@ -18,6 +18,7 @@ Comment[sk]=Dávkové premenovanie
 Comment[sv]=Ett verktyg för filnamnsbyte
 Comment[uk]=Засіб для пакетного перейменовування
 Comment[x-test]=xxA batch renamerxx
+Comment[zh_CN]=批量重命名工具
 Terminal=false
 Name=KRename
 Name[ar]=مغيّر أسمائك
