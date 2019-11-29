@@ -950,7 +950,7 @@ QString BatchRenamer::findPartStrings(QString oldname, QString token)
     if (token.count('{') >= 1 && token.count('}') >= 1) {
         int pos = token.indexOf('{');
         oldname = token.mid(pos + 1, token.lastIndexOf('}') - pos - 1);
-        token = token.left(pos);
+        token.truncate(pos);
     }
 
     if (token.contains('-')) {
@@ -1023,7 +1023,7 @@ QString BatchRenamer::findPartStrings(QString oldname, QString token)
 
 QString BatchRenamer::findDirName(QString token, QString path)
 {
-    if (token.toLower().startsWith(QLatin1String("dirname"))) {
+    if (token.startsWith(QLatin1String("dirname"), Qt::CaseInsensitive)) {
         if (path.right(1) == "/") {
             path = path.left(path.length() - 1);
         }
@@ -1056,7 +1056,7 @@ QString BatchRenamer::findDirSep(const QString &token, const QString &path)
 
 QString BatchRenamer::findLength(const QString &token, const QString &name)
 {
-    if (token.toLower().startsWith(QLatin1String("length"))) {
+    if (token.startsWith(QLatin1String("length"), Qt::CaseInsensitive)) {
         int minus = 0;
         if (token.length() > 6 && token[6] == '-') {
             bool n = false;
@@ -1077,7 +1077,7 @@ QString BatchRenamer::findLength(const QString &token, const QString &name)
 
 QString BatchRenamer::findTrimmed(const QString &token, const QString &name, int index)
 {
-    if (token.toLower().startsWith(QLatin1String("trimmed"))) {
+    if (token.startsWith(QLatin1String("trimmed"), Qt::CaseInsensitive)) {
         if (token.contains(';')) {
             QString processed = processString(
                                     token.section(';', 1, 1), name, index).trimmed();

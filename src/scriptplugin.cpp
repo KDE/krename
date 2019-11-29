@@ -220,7 +220,7 @@ void ScriptPlugin::insertVariable(const char *name)
 
 void ScriptPlugin::slotEnableControls()
 {
-    bool bEnable = (m_widget->listVariables->selectedItems().count() != 0);
+    bool bEnable = !(m_widget->listVariables->selectedItems().isEmpty());
     m_widget->buttonRemove->setEnabled(bEnable);
 
     bEnable = !m_widget->textCode->toPlainText().isEmpty();

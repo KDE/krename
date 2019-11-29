@@ -172,7 +172,7 @@ void KRenameFile::initFileDescription(TFileDescription &rDescription, const QUrl
             path.clear();
         } else {
             file = path.right(path.length() - splitPos - 1);
-            path = path.left(splitPos);
+            path.truncate(splitPos);
         }
 
         // split filename.extension
@@ -215,7 +215,7 @@ void KRenameFile::initFileDescription(TFileDescription &rDescription, const QUrl
 
         int lastSlash = rDescription.directory.lastIndexOf('/');
         rDescription.filename  = rDescription.directory.right(rDescription.directory.length() - lastSlash - 1);
-        rDescription.directory = rDescription.directory.left(lastSlash);
+        rDescription.directory.truncate(lastSlash);
         rDescription.extension = "";
     }
 
