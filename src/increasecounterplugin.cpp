@@ -22,6 +22,7 @@
 
 #include <kiconloader.h>
 
+#include <QIcon>
 #include <QRegExp>
 
 IncreaseCounterPlugin::IncreaseCounterPlugin(PluginLoader *loader)
@@ -42,7 +43,7 @@ const QString IncreaseCounterPlugin::name() const
 
 const QPixmap IncreaseCounterPlugin::icon() const
 {
-    return KIconLoader::global()->loadIcon("document-properties", KIconLoader::NoGroup, KIconLoader::SizeSmall);
+    return QIcon::fromTheme("document-properties").pixmap(KIconLoader::SizeSmall);
 }
 
 QString IncreaseCounterPlugin::processFile(BatchRenamer *, int, const QString &filenameOrToken, EPluginType)

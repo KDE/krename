@@ -53,7 +53,7 @@ const QString DateTimePlugin::name() const
 
 const QPixmap DateTimePlugin::icon() const
 {
-    return KIconLoader::global()->loadIcon("chronometer", KIconLoader::NoGroup, KIconLoader::SizeSmall);
+    return QIcon::fromTheme("chronometer").pixmap(KIconLoader::SizeSmall);
 }
 
 QString DateTimePlugin::processFile(BatchRenamer *, int, const QString &filenameOrToken, EPluginType)

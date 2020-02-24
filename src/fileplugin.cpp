@@ -60,7 +60,7 @@ bool FilePlugin::supports(const QString &token)
 
 const QPixmap FilePlugin::icon() const
 {
-    return KIconLoader::global()->loadIcon(m_icon, KIconLoader::NoGroup, KIconLoader::SizeSmall);
+    return QIcon::fromTheme(m_icon).pixmap(KIconLoader::SizeSmall);
 }
 
 void FilePlugin::createUI(QWidget *parent) const
@@ -71,7 +71,7 @@ void FilePlugin::createUI(QWidget *parent) const
     QHBoxLayout *hbox = new QHBoxLayout;
 
     QLabel *pix = new QLabel(parent);
-    pix->setPixmap(KIconLoader::global()->loadIcon(m_icon, KIconLoader::Desktop));
+    pix->setPixmap(QIcon::fromTheme(m_icon).pixmap(KIconLoader::SizeMedium));
 
     hbox->addWidget(pix);
     hbox->addWidget(new QLabel("<qt><b>" + name() + "</b></qt>", parent));

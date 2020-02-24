@@ -318,7 +318,7 @@ void TokenHelpDialog::slotUpdatePreview()
 void TokenHelpDialog::addRecentTokens()
 {
     const QPixmap &icon =
-        KIconLoader::global()->loadIcon("document-open-recent", KIconLoader::NoGroup, KIconLoader::SizeSmall);
+        QIcon::fromTheme("document-open-recent").pixmap(KIconLoader::SizeSmall);
     this->add(i18n("Recent"), m_recent, icon);
 }
 

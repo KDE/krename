@@ -110,7 +110,7 @@ const QString PermissionsPlugin::name() const
 
 const QPixmap PermissionsPlugin::icon() const
 {
-    return KIconLoader::global()->loadIcon("document-properties", KIconLoader::NoGroup, KIconLoader::SizeSmall);
+    return QIcon::fromTheme("document-properties").pixmap(KIconLoader::SizeSmall);
 }
 
 QString PermissionsPlugin::processFile(BatchRenamer *, int, const QString &filenameOrToken, EPluginType)

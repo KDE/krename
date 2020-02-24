@@ -54,7 +54,7 @@ bool DirSortPlugin::enabledByDefault() const
 
 const QPixmap DirSortPlugin::icon() const
 {
-    return KIconLoader::global()->loadIcon("folder", KIconLoader::NoGroup, KIconLoader::SizeSmall);
+    return QIcon::fromTheme("folder").pixmap(KIconLoader::SizeSmall);
 }
 
 void DirSortPlugin::createUI(QWidget *parent) const

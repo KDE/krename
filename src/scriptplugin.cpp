@@ -117,7 +117,7 @@ QString ScriptPlugin::processFile(BatchRenamer *b, int index,
 
 const QPixmap ScriptPlugin::icon() const
 {
-    return KIconLoader::global()->loadIcon(m_icon, KIconLoader::NoGroup, KIconLoader::SizeSmall);
+    return QIcon::fromTheme(m_icon).pixmap(KIconLoader::SizeSmall);
 }
 
 void ScriptPlugin::createUI(QWidget *parent) const
@@ -146,15 +146,10 @@ void ScriptPlugin::createUI(QWidget *parent) const
 
     const_cast<ScriptPlugin *>(this)->slotEnableControls();
 
-    QPixmap openIcon   = KIconLoader::global()->loadIcon("document-open", KIconLoader::NoGroup, KIconLoader::SizeSmall);
-    QPixmap saveIcon   = KIconLoader::global()->loadIcon("document-save-as", KIconLoader::NoGroup, KIconLoader::SizeSmall);
-    QPixmap removeIcon = KIconLoader::global()->loadIcon("list-remove", KIconLoader::NoGroup, KIconLoader::SizeSmall);
-    QPixmap addIcon    = KIconLoader::global()->loadIcon("list-add", KIconLoader::NoGroup, KIconLoader::SizeSmall);
-
-    m_widget->buttonLoad->setIcon(openIcon);
-    m_widget->buttonSave->setIcon(saveIcon);
-    m_widget->buttonAdd->setIcon(addIcon);
-    m_widget->buttonRemove->setIcon(removeIcon);
+    m_widget->buttonLoad->setIcon(QIcon::fromTheme("document-open"));
+    m_widget->buttonSave->setIcon(QIcon::fromTheme("document-save-as"));
+    m_widget->buttonAdd->setIcon(QIcon::fromTheme("list-add"));
+    m_widget->buttonRemove->setIcon(QIcon::fromTheme("list-remove"));
 
     m_widget->buttonInsert->setMenu(m_menu);
 }
