@@ -84,7 +84,7 @@ KRenameWindow::KRenameWindow(QWidget *parent)
     this->setCentralWidget(center);
 
     for (int i = 0; i < tAdvancedMode.numPages; i++) {
-        const QIcon &icon = KIconLoader::global()->loadIcon(tAdvancedMode.pageIcons[i], KIconLoader::NoGroup, KIconLoader::SizeSmall);
+        const QIcon &icon = QIcon::fromTheme(tAdvancedMode.pageIcons[i]);
         m_tabBar->addTab(icon, i18n(tAdvancedMode.pageTitles[i]));
     }
 
@@ -251,13 +251,13 @@ void KRenameWindow::setupPlugins()
 
 void KRenameWindow::setupIcons()
 {
-    QPixmap upIcon = KIconLoader::global()->loadIcon("arrow-up", KIconLoader::NoGroup, KIconLoader::SizeSmall);
-    QPixmap downIcon = KIconLoader::global()->loadIcon("arrow-down", KIconLoader::NoGroup, KIconLoader::SizeSmall);
+    QPixmap upIcon = QIcon::fromTheme("arrow-up").pixmap(KIconLoader::SizeSmall);
+    QPixmap downIcon = QIcon::fromTheme("arrow-down").pixmap(KIconLoader::SizeSmall);
 
     // Page 1 icons
 
-    QPixmap openIcon = KIconLoader::global()->loadIcon("document-open", KIconLoader::NoGroup, KIconLoader::SizeSmall);
-    QPixmap removeIcon = KIconLoader::global()->loadIcon("list-remove", KIconLoader::NoGroup, KIconLoader::SizeSmall);
+    QPixmap openIcon = QIcon::fromTheme("document-open").pixmap(KIconLoader::SizeSmall);
+    QPixmap removeIcon = QIcon::fromTheme("list-remove").pixmap(KIconLoader::SizeSmall);
 
     m_pageFiles->buttonAdd->setIcon(openIcon);
     m_pageFiles->buttonRemove->setIcon(removeIcon);
@@ -266,8 +266,8 @@ void KRenameWindow::setupIcons()
 
     // Page 4 icons
 
-    QPixmap helpIcon = KIconLoader::global()->loadIcon("help-hint", KIconLoader::NoGroup, KIconLoader::SizeSmall);
-    QPixmap findIcon = KIconLoader::global()->loadIcon("edit-find", KIconLoader::NoGroup, KIconLoader::SizeSmall);
+    QPixmap helpIcon = QIcon::fromTheme("help-hint").pixmap(KIconLoader::SizeSmall);
+    QPixmap findIcon = QIcon::fromTheme("edit-find").pixmap(KIconLoader::SizeSmall);
 
     m_pageFilename->buttonHelp1->setIcon(helpIcon);
     m_pageFilename->buttonHelp2->setIcon(helpIcon);
