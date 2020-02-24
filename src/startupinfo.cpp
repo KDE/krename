@@ -18,6 +18,9 @@
 #include "startupinfo.h"
 
 #include "ui_startupinfowidget.h"
+
+#include <QIcon>
+
 #include <kiconloader.h>
 
 StartUpInfo::StartUpInfo(QWidget *parent)
@@ -26,9 +29,9 @@ StartUpInfo::StartUpInfo(QWidget *parent)
     m_widget = new Ui::StartUpInfoWidget();
     m_widget->setupUi(this);
 
-    m_widget->krenameIcon->setPixmap(DesktopIcon("krename"));
-    m_widget->addIcon->setPixmap(BarIcon("document-open-folder"));
-    m_widget->templateIcon->setPixmap(BarIcon("edit-rename"));
+    m_widget->krenameIcon->setPixmap(QIcon::fromTheme("krename").pixmap(KIconLoader::SizeMedium));
+    m_widget->addIcon->setPixmap(QIcon::fromTheme("document-open-folder").pixmap(KIconLoader::SizeSmallMedium));
+    m_widget->templateIcon->setPixmap(QIcon::fromTheme("edit-rename").pixmap(KIconLoader::SizeSmallMedium));
 
     connect(m_widget->labelAdd, static_cast<void (KUrlLabel::*)()>(&KUrlLabel::leftClickedUrl),
             this, &StartUpInfo::addFiles);
