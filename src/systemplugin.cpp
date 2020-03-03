@@ -132,11 +132,11 @@ QString SystemPlugin::processFile(BatchRenamer *b, int index, const QString &fil
         } else if (token == "creationdate")
             // TODO: Use toDateTime()
         {
-            return time(item.time(KFileItem::ModificationTime).toTime_t(), format);
+            return time(item.time(KFileItem::ModificationTime).toSecsSinceEpoch(), format);
         } else if (token == "modificationdate") {
-            return time(item.time(KFileItem::ModificationTime).toTime_t(), format);
+            return time(item.time(KFileItem::ModificationTime).toSecsSinceEpoch(), format);
         } else if (token == "accessdate") {
-            return time(item.time(KFileItem::AccessTime).toTime_t(), format);
+            return time(item.time(KFileItem::AccessTime).toSecsSinceEpoch(), format);
         } else if (token == "filesize") {
             return QString::number(item.size());
         }
@@ -148,6 +148,6 @@ QString SystemPlugin::processFile(BatchRenamer *b, int index, const QString &fil
 const QString SystemPlugin::time(time_t time, const QString &format)
 {
     QDateTime dt;
-    dt.setTime_t(time);
+    dt.setSecsSinceEpoch(time);
     return dt.toString(format);
 }
