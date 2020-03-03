@@ -171,7 +171,7 @@ void ProgressDialog::closeEvent(QCloseEvent *event)
 
 void ProgressDialog::print(const QString &text, const QString &pixmap)
 {
-    QPixmap icon = SmallIcon(pixmap);
+    QPixmap icon = QIcon::fromTheme(pixmap).pixmap(KIconLoader::SizeSmall);
 
     new QListWidgetItem(icon, text, m_widget.display);
 }
