@@ -24,7 +24,7 @@
 #endif
 
 // OS includes
-#include <stdio.h>
+#include <cstdio>
 #ifndef Q_OS_WIN
 #include <unistd.h>
 #endif

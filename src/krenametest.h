@@ -18,7 +18,7 @@
 #ifndef KRENAME_TEST_H
 #define KRENAME_TEST_H
 
-#include <stdarg.h>
+#include <cstdarg>
 
 #include <QWidget>
 

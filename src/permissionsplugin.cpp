@@ -28,11 +28,11 @@
 #include <QUrl>
 
 // OS includes
-#include <stdio.h>
-#include <pwd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
+#include <cstdio>
 #include <grp.h>
+#include <pwd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 #include <unistd.h>
 
 // Only maxentries users are listed in the plugin

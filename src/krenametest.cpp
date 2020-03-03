@@ -20,7 +20,7 @@
 #include "krenamefile.h"
 #include "batchrenamer.h"
 
-#include <stdio.h>
+#include <cstdio>
 
 #include <QTextEdit>
 #include <QVBoxLayout>

@@ -28,12 +28,12 @@
 #include <qplatformdefs.h>
 
 // OS includes
-#include <stdio.h>
-#include <time.h>
-#include <utime.h>
-#include <unistd.h>
-#include <sys/types.h>
+#include <cstdio>
+#include <ctime>
 #include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <utime.h>
 
 DateTimePlugin::DateTimePlugin(PluginLoader *loader)
     : QObject(nullptr), Plugin(loader)
