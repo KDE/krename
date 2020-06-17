@@ -29,7 +29,6 @@
   <name xml:lang="sl">KRename</name>
   <name xml:lang="sv">KRename</name>
   <name xml:lang="uk">KRename</name>
-  <name xml:lang="x-test">xxKRenamexx</name>
   <name xml:lang="zh-CN">KRename</name>
   <name xml:lang="zh-TW">KRename</name>
   <summary>A powerful batch file renamer</summary>
@@ -60,7 +59,6 @@
   <summary xml:lang="sv">Kraftfullt verktyg för namnbyte i bakgrunden</summary>
   <summary xml:lang="tr">Güçlü bir toplu işlem dosyası yeniden adlandırıcı</summary>
   <summary xml:lang="uk">Потужна програма для пакетного перейменовування</summary>
-  <summary xml:lang="x-test">xxA powerful batch file renamerxx</summary>
   <summary xml:lang="zh-CN">强大的批量文件重命名工具</summary>
   <summary xml:lang="zh-TW">強大的批次檔案重命名工具</summary>
   <description>
@@ -94,7 +92,6 @@
     <p xml:lang="sl">Krename je zelo zmogljiv program za paketno preimenovanje datotek, ki lahko preimenuje seznam datotek s pomočjo nabora izrazov. Vhodne datoteke lahko samo preimenuje ali pa jih tudi kopira/premakne v drugo mapo. Krename podpira številna dejanja za pretvorbo.</p>
     <p xml:lang="sv">KRename är ett mycket kraftfullt verktyg för namnbyte i bakgrunden som kan byta namn på en lista med filer baserat på en uppsättning uttryck. Det kan kopiera eller flytta filerna till en annan katalog, eller helt enkelt byta namn på angivna filer. KRename stöder många konverteringsoperationer.</p>
     <p xml:lang="uk">KRename — дуже потужна програма для пакетного перейменовування файлів, яка може виконати перейменовування списку файлів на основі набору виразів. Програма здатна копіювати або пересувати файли до іншого каталогу або просто змінити назви вказаних файлів. У KRename передбачено підтримку багатьох дій із перетворення.</p>
-    <p xml:lang="x-test">xxKRename is a very powerful batch file renamer which can rename a list of files based on a set of expressions. It can copy/move the files to another directory or simply rename the input files. KRename supports many conversion operations.xx</p>
   </description>
   <screenshots>
     <screenshot type="default">
