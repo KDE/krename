@@ -6,7 +6,7 @@ set(QT5_MIN_VERSION "5.8.0")
 set(KF5_MIN_VERSION "5.18.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake/modules)
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(ECMInstallIcons)
