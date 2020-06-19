@@ -3,7 +3,7 @@ project(krename)
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 # search packages used by KDE
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_KDE_MODULE_DIR} ${ECM_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(ECMInstallIcons)
