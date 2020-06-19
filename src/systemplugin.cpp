@@ -25,6 +25,7 @@
 #include <kfileitem.h>
 #include <KLocalizedString>
 #include <KIO/StatJob>
+#include <kio_version.h>
 
 SystemPlugin::SystemPlugin(PluginLoader *loader)
     : FilePlugin(loader)
@@ -119,7 +120,11 @@ QString SystemPlugin::processFile(BatchRenamer *b, int index, const QString &fil
         return tmp.sprintf("%0*i", 2, t.second());
     } else {
         const QUrl &url = b->files()->at(index).srcUrl();
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 69, 0)
+        KIO::StatJob *statJob = KIO::statDetails(url, KIO::StatJob::DestinationSide, KIO::StatDefaultDetails);
+#else
         KIO::StatJob *statJob = KIO::stat(url, KIO::StatJob::SourceSide, 2);
+#endif
         statJob->exec();
         if (statJob->error()) {
             return QString();

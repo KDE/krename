@@ -25,6 +25,7 @@
 #include <kio/job.h>
 #include <kmessagebox.h>
 #include <KJobWidgets>
+#include <kio_version.h>
 
 DirSortPlugin::DirSortPlugin(PluginLoader *loader)
     : Plugin(loader)
@@ -91,7 +92,11 @@ QString DirSortPlugin::processFile(BatchRenamer *b, int index, const QString &, 
         m_digits = m_widget->spinDigits->value();
         m_baseDirectory = m_widget->outputUrl->url();
 
-        KIO::StatJob *statJob = KIO::stat(m_baseDirectory, KIO::StatJob::DestinationSide, 2);
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 69, 0)
+        KIO::StatJob *statJob = KIO::statDetails(m_baseDirectory, KIO::StatJob::DestinationSide, KIO::StatNoDetails);
+#else
+        KIO::StatJob *statJob = KIO::stat(m_baseDirectory, KIO::StatJob::DestinationSide, 0);
+#endif
         KJobWidgets::setWindow(statJob, m_widget->spinStart);
         statJob->exec();
         if (statJob->error()) {
