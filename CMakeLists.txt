@@ -3,7 +3,7 @@ project(krename)
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 # search packages used by KDE
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+set(CMAKE_MODULE_PATH ${ECM_KDE_MODULE_DIR} ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(ECMInstallIcons)
@@ -28,8 +28,8 @@ find_package(KF5 REQUIRED COMPONENTS
     XmlGui
 )
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
-                      ${CMAKE_SOURCE_DIR}/cmake/modules)
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules
+                      ${CMAKE_MODULE_PATH})
 
 add_definitions(
     -DQT_DEPRECATED_WARNINGS
