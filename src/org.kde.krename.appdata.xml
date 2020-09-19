@@ -25,6 +25,7 @@
   <name xml:lang="pl">KRename</name>
   <name xml:lang="pt">KRename</name>
   <name xml:lang="pt-BR">KRename</name>
+  <name xml:lang="ro">KRename</name>
   <name xml:lang="sk">KRename</name>
   <name xml:lang="sl">KRename</name>
   <name xml:lang="sv">KRename</name>
@@ -55,6 +56,7 @@
   <summary xml:lang="pl">Wsadowa zmiana nazw plików</summary>
   <summary xml:lang="pt">Um sistema de mudança de nome dos ficheiros em lote</summary>
   <summary xml:lang="pt-BR">Uma poderosa ferramenta para renomeação em lote</summary>
+  <summary xml:lang="ro">Program puternic de redenumire în serie</summary>
   <summary xml:lang="sk">Silný nástroj na dávkové premenovanie súborov</summary>
   <summary xml:lang="sl">Zmogljiv program za paketno preimenovanje datotek</summary>
   <summary xml:lang="sv">Kraftfullt verktyg för namnbyte i bakgrunden</summary>
