@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=krename -qwindowtitle "%c" %i %U
+Exec=krename -qwindowtitle "%c" %U
 Icon=krename
 Comment=A batch renamer
 Comment[ca]=Un canviador de noms de fitxers per lots
