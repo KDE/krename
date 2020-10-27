@@ -1,9 +1,9 @@
 # KRename
 
-KRename is a very powerfull batch file renamer by KDE. It allows you to easily
+KRename is a very powerful batch file renamer by KDE. It allows you to easily
 rename hundreds or even more files in one go. The filenames can be created by
 parts of the original filename, numbering the files or accessing hundreds of
-informations about the file, like creation date or Exif informations of an
+information about the file, like creation date or Exif information of an
 image. Its features include:
 
 * renaming a list of files based on a set of expressions
