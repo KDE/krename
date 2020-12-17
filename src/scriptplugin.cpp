@@ -175,36 +175,39 @@ void ScriptPlugin::initKRenameVars(const KRenameFile &file, int index)
             file.srcDirectory());
 
     // User definitions, set them only on first file
-    if (index == 0) {
-        for (int i = 0; i < m_widget->listVariables->topLevelItemCount(); i++) {
-            // TODO, we have to know the type of the variable!
-            QTreeWidgetItem *item = m_widget->listVariables->topLevelItem(i);
-            if (item) {
-                EVarType eVarType = static_cast<EVarType>(item->data(1, Qt::UserRole).toInt());
-                const QString &name  = item->text(0);
-                const QString &value = item->text(1);
-                switch (eVarType) {
-                default:
-                case eVarType_String:
-                    m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-                            name, value.toUtf8().data());
-                    break;
-                case eVarType_Int:
-                    m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-                            name, value.toInt());
-                    break;
-                case eVarType_Double:
-                    m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-                            name, value.toDouble());
-                    break;
-                case eVarType_Bool:
-                    m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-                            name,
-                            (value.toLower() == "true" ? true : false));
-                    break;
+    if (index != 0) {
+        return;
+    }
 
-                }
-            }
+    for (int i = 0; i < m_widget->listVariables->topLevelItemCount(); i++) {
+        // TODO, we have to know the type of the variable!
+        QTreeWidgetItem *item = m_widget->listVariables->topLevelItem(i);
+        if (!item) {
+            continue;
+        }
+
+        EVarType eVarType = static_cast<EVarType>(item->data(1, Qt::UserRole).toInt());
+        const QString &name  = item->text(0);
+        const QString &value = item->text(1);
+        switch (eVarType) {
+        default:
+        case eVarType_String:
+            m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
+                    name, value.toUtf8().data());
+            break;
+        case eVarType_Int:
+            m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
+                    name, value.toInt());
+            break;
+        case eVarType_Double:
+            m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
+                    name, value.toDouble());
+            break;
+        case eVarType_Bool:
+            m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
+                    name,
+                    (value.toLower() == "true" ? true : false));
+            break;
         }
     }
 }
