@@ -28,12 +28,12 @@ PreviewList::PreviewList(QWidget *parent)
     : QTreeView(parent), m_model(nullptr)
 {
     m_menu = new QMenu("KRename", this);   // we need any text here so that we have a title
-    m_menu->addAction(i18n("&Change filename manually..."), this, SLOT(slotManually()), QKeySequence("F2"));
+    m_menu->addAction(i18n("&Change filename manually..."), this, &PreviewList::slotManually, QKeySequence("F2"));
     m_menu->addSeparator();
-    m_menu->addAction(i18n("&Open"), this, SLOT(slotOpen()));
+    m_menu->addAction(i18n("&Open"), this, &PreviewList::slotOpen);
     m_menu->addSeparator();
-    m_menu->addAction(i18n("&Add..."), this, SIGNAL(addFiles()));
-    m_menu->addAction(i18n("&Remove"), this, SLOT(slotRemove()));
+    m_menu->addAction(i18n("&Add..."), this, &PreviewList::addFiles);
+    m_menu->addAction(i18n("&Remove"), this, &PreviewList::slotRemove);
 
     connect(this, &PreviewList::activated, this, &PreviewList::slotManually);
 }

@@ -68,11 +68,11 @@ ScriptPlugin::ScriptPlugin(PluginLoader *loader)
 
     m_help.append("[js;4+5];;" + i18n("Insert a snippet of JavaScript code (4+5 in this case)"));
 
-    m_menu->addAction(i18n("Index of the current file"),     this, SLOT(slotInsertIndex()));
-    m_menu->addAction(i18n("URL of the current file"),       this, SLOT(slotInsertUrl()));
-    m_menu->addAction(i18n("Filename of the current file"),  this, SLOT(slotInsertFilename()));
-    m_menu->addAction(i18n("Extension of the current file"), this, SLOT(slotInsertExtension()));
-    m_menu->addAction(i18n("Directory of the current file"), this, SLOT(slotInsertDirectory()));
+    m_menu->addAction(i18n("Index of the current file"), this, &ScriptPlugin::slotInsertIndex);
+    m_menu->addAction(i18n("URL of the current file"), this, &ScriptPlugin::slotInsertUrl);
+    m_menu->addAction(i18n("Filename of the current file"), this, &ScriptPlugin::slotInsertFilename);
+    m_menu->addAction(i18n("Extension of the current file"), this, &ScriptPlugin::slotInsertExtension);
+    m_menu->addAction(i18n("Directory of the current file"), this, &ScriptPlugin::slotInsertDirectory);
 }
 
 ScriptPlugin::~ScriptPlugin()

@@ -49,11 +49,11 @@ ProgressDialog::ProgressDialog(ESplitMode eSplitMode, unsigned int dot, QWidget 
             qApp, &QApplication::quit, Qt::QueuedConnection);
 
     QMenu *menu = new QMenu(this);
-    menu->addAction(i18n("Restart &KRename..."), this, SLOT(slotRestartKRename()));
+    menu->addAction(i18n("Restart &KRename..."), this, &ProgressDialog::slotRestartKRename);
     menu->addSeparator();
-    m_actProcessed   = menu->addAction(i18n("Rename Processed Files &Again..."),    this, SLOT(slotRenameProcessedAgain()));
-    m_actUnprocessed = menu->addAction(i18n("Rename &Unprocessed Files Again..."), this, SLOT(slotRenameUnprocessedAgain()));
-    menu->addAction(i18n("&Rename All Files Again..."),          this, SLOT(slotRenameAllAgain()));
+    m_actProcessed = menu->addAction(i18n("Rename Processed Files &Again..."), this, &ProgressDialog::slotRenameProcessedAgain);
+    m_actUnprocessed = menu->addAction(i18n("Rename &Unprocessed Files Again..."), this, &ProgressDialog::slotRenameUnprocessedAgain);
+    menu->addAction(i18n("&Rename All Files Again..."), this, &ProgressDialog::slotRenameAllAgain);
 
     m_buttonMore->setMenu(menu);
 }
