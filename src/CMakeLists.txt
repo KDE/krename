@@ -128,9 +128,9 @@ target_link_libraries(krename
     KF5::KIOCore
     KF5::KIOFileWidgets
     KF5::I18n
-    KF5::JSApi
     KF5::IconThemes
     Qt5::Widgets
+    Qt5::Qml
 )
 if(TAGLIB_FOUND)
     target_link_libraries(krename

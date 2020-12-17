@@ -17,6 +17,7 @@ include(FeatureSummary)
 find_package(Qt5 ${QT5_MIN_VERSION} REQUIRED COMPONENTS
     Core
     Widgets
+    Qml
 )
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Completion
@@ -27,7 +28,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     IconThemes
     ItemViews
     JobWidgets
-    JS
     KIO
     Service
     WidgetsAddons

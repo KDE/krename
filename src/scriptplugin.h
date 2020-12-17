@@ -1,14 +1,16 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 // SPDX-FileCopyrightText: 2007 Dominik Seichter <domseichter@web.de>
+// SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
 
 #ifndef SCRIPT_PLUGIN_H
 #define SCRIPT_PLUGIN_H
 
 #include "plugin.h"
 
+#include <QJSEngine>
+
 class QMenu;
 
-class KJSInterpreter;
 class KRenameFile;
 
 namespace Ui
@@ -171,7 +173,7 @@ private:
 
     QStringList         m_keys;
     QStringList         m_help;
-    KJSInterpreter     *m_interpreter;
+    QJSEngine           m_engine;
     QWidget            *m_parent;
     QMenu              *m_menu;
 

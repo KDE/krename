@@ -18,8 +18,7 @@
 #include <QTextStream>
 #include <QVariant>
 #include <QFileDialog>
-
-#include <kjs/kjsinterpreter.h>
+#include <QDebug>
 
 #include "ui_scriptplugindialog.h"
 #include "ui_scriptpluginwidget.h"
@@ -46,7 +45,6 @@ ScriptPlugin::ScriptPlugin(PluginLoader *loader)
 {
     m_name = i18n("JavaScript Plugin");
     m_icon = "applications-development";
-    m_interpreter = new KJSInterpreter();
     m_menu   = new QMenu();
     m_widget = new Ui::ScriptPluginWidget();
 
@@ -65,7 +63,6 @@ ScriptPlugin::~ScriptPlugin()
 {
     delete m_widget;
     delete m_menu;
-    delete m_interpreter;
 }
 
 QString ScriptPlugin::processFile(BatchRenamer *b, int index,
@@ -90,13 +87,13 @@ QString ScriptPlugin::processFile(BatchRenamer *b, int index,
         // Make sure definitions are executed first
         script = definitions + '\n' + script;
 
-        KJSResult result = m_interpreter->evaluate(script, nullptr);
-        if (result.isException()) {
-            qDebug("JavaScript Error: %s", result.errorMessage().toUtf8().data());
+        const QJSValue result = m_engine.evaluate(script);
+        if (result.isError()) {
+            qDebug() << "JavaScript Error:" << result.toString();
             return QString();
         }
 
-        return result.value().toString(m_interpreter->globalContext());
+        return result.toString();
     }
 
     return QString();
@@ -144,21 +141,11 @@ void ScriptPlugin::createUI(QWidget *parent) const
 void ScriptPlugin::initKRenameVars(const KRenameFile &file, int index)
 {
     // KRename definitions
-    m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-            ScriptPlugin::s_pszVarNameIndex,
-            index);
-    m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-            ScriptPlugin::s_pszVarNameUrl,
-            file.srcUrl().url());
-    m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-            ScriptPlugin::s_pszVarNameFilename,
-            file.srcFilename());
-    m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-            ScriptPlugin::s_pszVarNameExtension,
-            file.srcExtension());
-    m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-            ScriptPlugin::s_pszVarNameDirectory,
-            file.srcDirectory());
+    m_engine.globalObject().setProperty(ScriptPlugin::s_pszVarNameIndex, index);
+    m_engine.globalObject().setProperty(ScriptPlugin::s_pszVarNameUrl, file.srcUrl().url());
+    m_engine.globalObject().setProperty(ScriptPlugin::s_pszVarNameFilename, file.srcFilename());
+    m_engine.globalObject().setProperty(ScriptPlugin::s_pszVarNameExtension, file.srcExtension());
+    m_engine.globalObject().setProperty(ScriptPlugin::s_pszVarNameDirectory, file.srcDirectory());
 
     // User definitions, set them only on first file
     if (index != 0) {
@@ -178,21 +165,16 @@ void ScriptPlugin::initKRenameVars(const KRenameFile &file, int index)
         switch (eVarType) {
         default:
         case eVarType_String:
-            m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-                    name, value.toUtf8().data());
+            m_engine.globalObject().setProperty(name, value);
             break;
         case eVarType_Int:
-            m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-                    name, value.toInt());
+            m_engine.globalObject().setProperty(name, value.toInt());
             break;
         case eVarType_Double:
-            m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-                    name, value.toDouble());
+            m_engine.globalObject().setProperty(name, value.toDouble());
             break;
         case eVarType_Bool:
-            m_interpreter->globalObject().setProperty(m_interpreter->globalContext(),
-                    name,
-                    (value.toLower() == "true" ? true : false));
+            m_engine.globalObject().setProperty(name, (value.toLower() == "true" ? true : false));
             break;
         }
     }
@@ -233,12 +215,9 @@ void ScriptPlugin::slotAdd()
     // Build a Java script statement
     QString script = name + " = " + value + ';';
 
-    KJSInterpreter interpreter;
-    KJSResult result = m_interpreter->evaluate(script, nullptr);
-    if (result.isException()) {
-        KMessageBox::error(m_parent,
-                            i18n("A JavaScript error has occurred: ") +
-                            result.errorMessage(), this->name());
+    const QJSValue result = m_engine.evaluate(script);
+    if (result.isError()) {
+        KMessageBox::error(m_parent, i18n("A JavaScript error has occurred: ") + result.toString(), this->name());
     } else {
         QTreeWidgetItem *item = new QTreeWidgetItem();
         item->setText(0, name);
