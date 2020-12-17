@@ -1,19 +1,5 @@
-/***************************************************************************
-                      taglibplugin.cpp  -  description
-                             -------------------
-    begin                : Tue Jul 1st 2008
-    copyright            : (C) 2008 by Dominik Seichter
-    email                : domseichter@web.de
- ***************************************************************************/
-
-/***************************************************************************
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- ***************************************************************************/
+// SPDX-License-Identifier: GPL-2.0-or-later
+// SPDX-FileCopyrightText: 2008 Dominik Seichter <domseichter@web.de>
 
 #include "taglibplugin.h"
 

@@ -1,20 +1,6 @@
-/***************************************************************************
-                   scriptplugin.cpp  -  description
-                             -------------------
-    begin                : Fri Nov 9 2007
-    copyright            : (C) 2007 by Dominik Seichter
-    email                : domseichter@web.de
-    copyright            : (C) 2020 by Harald Sitter <sitter@kde.org>
- ***************************************************************************/
-
-/***************************************************************************
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- ***************************************************************************/
+// SPDX-License-Identifier: GPL-2.0-or-later
+// SPDX-FileCopyrightText: 2007 Dominik Seichter <domseichter@web.de>
+// SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
 
 #include "scriptplugin.h"
 
