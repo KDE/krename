@@ -28,7 +28,6 @@
 #include <QTemporaryFile>
 #include <QFile>
 #include <QMenu>
-#include <QPointer>
 #include <QTextStream>
 #include <QVariant>
 #include <QFileDialog>
@@ -228,7 +227,7 @@ void ScriptPlugin::slotEnableControls()
 
 void ScriptPlugin::slotAdd()
 {
-    QPointer<QDialog> dialog = new QDialog();
+    QDialog dialog;
     Ui::ScriptPluginDialog dlg;
 
     QStringList types;
@@ -238,32 +237,33 @@ void ScriptPlugin::slotAdd()
     types << i18n("Double");
     types << i18n("Boolean");
 
-    dlg.setupUi(dialog);
+    dlg.setupUi(&dialog);
     dlg.comboType->addItems(types);
 
-    if (dialog->exec() == QDialog::Accepted) {
-        QString name  = dlg.lineName->text();
-        QString value = dlg.lineValue->text();
-
-        // Build a Java script statement
-        QString script = name + " = " + value + ';';
-
-        KJSInterpreter interpreter;
-        KJSResult result = m_interpreter->evaluate(script, nullptr);
-        if (result.isException()) {
-            KMessageBox::error(m_parent,
-                               i18n("A JavaScript error has occurred: ") +
-                               result.errorMessage(), this->name());
-        } else {
-            QTreeWidgetItem *item = new QTreeWidgetItem();
-            item->setText(0, name);
-            item->setText(1, value);
-            item->setData(1, Qt::UserRole, QVariant(dlg.comboType->currentIndex()));
-
-            m_widget->listVariables->addTopLevelItem(item);
-        }
+    if (dialog.exec() != QDialog::Accepted) {
+        return;
     }
-    delete dialog;
+
+    QString name  = dlg.lineName->text();
+    QString value = dlg.lineValue->text();
+
+    // Build a Java script statement
+    QString script = name + " = " + value + ';';
+
+    KJSInterpreter interpreter;
+    KJSResult result = m_interpreter->evaluate(script, nullptr);
+    if (result.isException()) {
+        KMessageBox::error(m_parent,
+                            i18n("A JavaScript error has occurred: ") +
+                            result.errorMessage(), this->name());
+    } else {
+        QTreeWidgetItem *item = new QTreeWidgetItem();
+        item->setText(0, name);
+        item->setText(1, value);
+        item->setData(1, Qt::UserRole, QVariant(dlg.comboType->currentIndex()));
+
+        m_widget->listVariables->addTopLevelItem(item);
+    }
 }
 
 void ScriptPlugin::slotRemove()
