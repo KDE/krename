@@ -4,6 +4,7 @@
     begin                : Fri Nov 9 2007
     copyright            : (C) 2007 by Dominik Seichter
     email                : domseichter@web.de
+    copyright            : (C) 2020 by Harald Sitter <sitter@kde.org>
  ***************************************************************************/
 
 /***************************************************************************
@@ -230,15 +231,11 @@ void ScriptPlugin::slotAdd()
     QDialog dialog;
     Ui::ScriptPluginDialog dlg;
 
-    QStringList types;
-
-    types << i18n("String");
-    types << i18n("Int");
-    types << i18n("Double");
-    types << i18n("Boolean");
-
     dlg.setupUi(&dialog);
-    dlg.comboType->addItems(types);
+    dlg.comboType->addItem(i18n("String"), eVarType_String);
+    dlg.comboType->addItem(i18n("Int"), eVarType_Int);
+    dlg.comboType->addItem(i18n("Double"), eVarType_Double);
+    dlg.comboType->addItem(i18n("Boolean"), eVarType_Bool);
 
     if (dialog.exec() != QDialog::Accepted) {
         return;
@@ -260,7 +257,7 @@ void ScriptPlugin::slotAdd()
         QTreeWidgetItem *item = new QTreeWidgetItem();
         item->setText(0, name);
         item->setText(1, value);
-        item->setData(1, Qt::UserRole, QVariant(dlg.comboType->currentIndex()));
+        item->setData(1, Qt::UserRole, dlg.comboType->currentData());
 
         m_widget->listVariables->addTopLevelItem(item);
     }
