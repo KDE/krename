@@ -18,6 +18,7 @@
 #include <QVariant>
 #include <QFileDialog>
 #include <QDebug>
+#include <QThread>
 
 #include "ui_scriptplugindialog.h"
 #include "ui_scriptpluginwidget.h"
@@ -36,6 +37,50 @@ enum EVarType {
     eVarType_Int,
     eVarType_Double,
     eVarType_Bool
+};
+
+// Wraps around QJSEngine::evaluate to force a timeout on it.
+// Doesn't require manual starting, result() takes care of that.
+// NB: Thy shalt not touch the engine after constructing the thread!
+class EvaluateThread : public QThread
+{
+public:
+    EvaluateThread(QJSEngine *engine, const QString &script, QObject *parent = nullptr)
+        : QThread(parent)
+        , m_engine(engine)
+        , m_script(script)
+    {
+        // Reset in case a previous eval was interrupted
+        m_engine->setInterrupted(false);
+    }
+
+    void run() override
+    {
+        m_value = m_engine->evaluate(m_script);
+    }
+
+    // Start thread and gather a result from the engine, either because it finished or because
+    // we forced an interrupt after timeout.
+    QJSValue result()
+    {
+        start();
+        wait(m_timeout);
+        if (!isFinished()) {
+            // This function is called by another thread and potentially races here as the run() may finish
+            // between the condition and the interrupt call. This still doesn't require locking though.
+            // m_value is only set once and only read once whether the engine is needlessly in interruption state
+            // has no impact anymore if evaluate() returned already.
+            m_engine->setInterrupted(true);
+            wait(); // this is expected to return eventually!
+        }
+        return m_value;
+    }
+
+private:
+    QJSEngine *m_engine = nullptr;
+    QString m_script;
+    QJSValue m_value;
+    const QDeadlineTimer m_timeout {30000 /* ms */};
 };
 
 ScriptPlugin::ScriptPlugin(PluginLoader *loader)
@@ -86,7 +131,8 @@ QString ScriptPlugin::processFile(BatchRenamer *b, int index,
         // Make sure definitions are executed first
         script = definitions + '\n' + script;
 
-        const QJSValue result = m_engine.evaluate(script);
+        EvaluateThread thread(&m_engine, script);
+        const QJSValue result = thread.result();
         if (result.isError()) {
             qDebug() << "JavaScript Error:" << result.toString();
             return QString();
@@ -214,7 +260,8 @@ void ScriptPlugin::slotAdd()
     // Build a Java script statement
     QString script = name + " = " + value + ';';
 
-    const QJSValue result = m_engine.evaluate(script);
+    EvaluateThread thread(&m_engine, script);
+    const QJSValue result = thread.result();
     if (result.isError()) {
         KMessageBox::error(m_parent, i18n("A JavaScript error has occurred: ") + result.toString(), this->name());
     } else {
