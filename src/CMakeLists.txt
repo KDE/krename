@@ -6,10 +6,6 @@ include_directories(${CMAKE_SOURCE_DIR}
                     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-if(TAGLIB_FOUND)
-    include_directories(${TAGLIB_INCLUDES})
-endif()
-
 if(EXIV2_FOUND)
     include_directories(${EXIV2_INCLUDE_DIR})
 endif()
@@ -23,7 +19,6 @@ if(FREETYPE_FOUND)
     include_directories(${FREETYPE_INCLUDE_DIRS})
 endif()
 
-add_definitions(${TAGLIB_CFLAGS})
 # Exiv2 needs exceptions
 kde_enable_exceptions()
 
@@ -134,7 +129,7 @@ target_link_libraries(krename
 )
 if(TAGLIB_FOUND)
     target_link_libraries(krename
-        ${TAGLIB_LIBRARIES}
+        Taglib::Taglib
     )
 endif()
 if(LibExiv2_FOUND)

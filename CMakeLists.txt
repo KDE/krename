@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.7)
 project(krename VERSION "5.0.60")
 
 set(QT5_MIN_VERSION "5.8.0")
-set(KF5_MIN_VERSION "5.18.0")
+set(KF5_MIN_VERSION "5.72.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_PATH})
