@@ -53,8 +53,6 @@ set_package_properties(KF5Archive PROPERTIES
 set(TAGLIB_MIN_VERSION "1.5")
 find_package(Taglib ${TAGLIB_MIN_VERSION})
 set_package_properties(Taglib PROPERTIES
-    DESCRIPTION "Read and write tags in audio files"
-    URL "https://taglib.github.io/"
     TYPE OPTIONAL)
 
 # Find exiv2
