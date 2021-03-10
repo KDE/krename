@@ -96,7 +96,7 @@ bool numericKRenameFileLessThan(const KRenameFile &file1, const KRenameFile &fil
 
 bool randomKRenameFileLessThan(const KRenameFile &, const KRenameFile &)
 {
-    return static_cast<double>(KRandom::random()) / static_cast<double>(RAND_MAX) < 0.5;
+    return QRandomGenerator::global()->bounded(1.0) < 0.5;
 }
 
 KRenameTokenSorter::KRenameTokenSorter(BatchRenamer *renamer, const QString &token,
