@@ -4,8 +4,6 @@
 #include "datetimeplugin.h"
 
 #ifndef Q_OS_WIN
-#include <kiconloader.h>
-
 #include "ui_datetimepluginwidget.h"
 
 #include <QDate>
@@ -37,9 +35,9 @@ const QString DateTimePlugin::name() const
     return i18n("Date & Time Plugin");
 }
 
-const QPixmap DateTimePlugin::icon() const
+const QIcon DateTimePlugin::icon() const
 {
-    return QIcon::fromTheme("chronometer").pixmap(KIconLoader::SizeSmall);
+    return QIcon::fromTheme("chronometer");
 }
 
 QString DateTimePlugin::processFile(BatchRenamer *, int, const QString &filenameOrToken, EPluginType)

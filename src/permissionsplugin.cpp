@@ -5,8 +5,6 @@
 
 #ifndef Q_OS_WIN
 
-#include <kiconloader.h>
-
 #include "ui_permissionspluginwidget.h"
 
 #include <QDialog>
@@ -94,9 +92,9 @@ const QString PermissionsPlugin::name() const
     return i18n("Permissions");
 }
 
-const QPixmap PermissionsPlugin::icon() const
+const QIcon PermissionsPlugin::icon() const
 {
-    return QIcon::fromTheme("document-properties").pixmap(KIconLoader::SizeSmall);
+    return QIcon::fromTheme("document-properties");
 }
 
 QString PermissionsPlugin::processFile(BatchRenamer *, int, const QString &filenameOrToken, EPluginType)

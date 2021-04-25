@@ -5,7 +5,6 @@
 
 #include "batchrenamer.h"
 
-#include <kiconloader.h>
 #include <QListWidget>
 #include <KLocalizedString>
 

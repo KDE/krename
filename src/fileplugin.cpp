@@ -44,9 +44,9 @@ bool FilePlugin::supports(const QString &token)
     return false;
 }
 
-const QPixmap FilePlugin::icon() const
+const QIcon FilePlugin::icon() const
 {
-    return QIcon::fromTheme(m_icon).pixmap(KIconLoader::SizeSmall);
+    return QIcon::fromTheme(m_icon);
 }
 
 void FilePlugin::createUI(QWidget *parent) const

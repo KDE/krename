@@ -61,7 +61,7 @@ public:
     /**
      * @returns an icon for this plugin.
      */
-    virtual const QPixmap icon() const = 0;
+    virtual const QIcon icon() const = 0;
 
     /** Set the enabled state of a plugin
      *  so that it can be used.

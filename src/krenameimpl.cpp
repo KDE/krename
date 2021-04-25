@@ -20,7 +20,6 @@
 #include "modeltest.h"
 
 #include <kconfig.h>
-#include <kiconloader.h>
 #include <KFileWidget>
 #include <kmessagebox.h>
 #include <kstandardaction.h>
@@ -484,7 +483,7 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit *edit)
     help.append("[#length-0]" + TokenHelpDialog::getTokenSeparator() + i18n("insert the length of the input filename"));
     help.append("[trimmed]" + TokenHelpDialog::getTokenSeparator() + i18n("strip whitespaces leading and trailing"));
     help.append("[trimmed;.*]" + TokenHelpDialog::getTokenSeparator() + i18n("strip whitespaces leading and trailing of an arbitrary string"));
-    dialog.add(i18n("Built-in Functions"), help, QIcon::fromTheme("krename").pixmap(KIconLoader::SizeSmall), true);
+    dialog.add(i18n("Built-in Functions"), help, QIcon::fromTheme("krename"), true);
 
     help.clear();
     help.append("\\$" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '$'"));
@@ -496,7 +495,7 @@ void KRenameImpl::slotTokenHelpDialog(QLineEdit *edit)
     help.append("\\[" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '['"));
     help.append("\\]" + TokenHelpDialog::getTokenSeparator() + i18n("Insert ']'"));
     help.append("\\#" + TokenHelpDialog::getTokenSeparator() + i18n("Insert '#'"));
-    dialog.add(i18n("Special Characters"), help, QIcon::fromTheme("krename").pixmap(KIconLoader::SizeSmall));
+    dialog.add(i18n("Special Characters"), help, QIcon::fromTheme("krename"));
 
     // add plugin tokens
     QList<Plugin *>::const_iterator it = m_pluginLoader->plugins().begin();

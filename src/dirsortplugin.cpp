@@ -7,7 +7,6 @@
 #include "batchrenamer.h"
 
 // KDE includes
-#include <kiconloader.h>
 #include <kio/job.h>
 #include <kmessagebox.h>
 #include <KJobWidgets>
@@ -39,9 +38,9 @@ bool DirSortPlugin::enabledByDefault() const
     return false;
 }
 
-const QPixmap DirSortPlugin::icon() const
+const QIcon DirSortPlugin::icon() const
 {
-    return QIcon::fromTheme("folder").pixmap(KIconLoader::SizeSmall);
+    return QIcon::fromTheme("folder");
 }
 
 void DirSortPlugin::createUI(QWidget *parent) const

@@ -8,7 +8,6 @@
 
 #include <QMenu>
 
-#include <kiconloader.h>
 #include <krun.h>
 
 ProgressDialog::ProgressDialog(ESplitMode eSplitMode, unsigned int dot, QWidget *parent)
@@ -157,7 +156,7 @@ void ProgressDialog::closeEvent(QCloseEvent *event)
 
 void ProgressDialog::print(const QString &text, const QString &pixmap)
 {
-    QPixmap icon = QIcon::fromTheme(pixmap).pixmap(KIconLoader::SizeSmall);
+    QIcon icon = QIcon::fromTheme(pixmap);
 
     new QListWidgetItem(icon, text, m_widget.display);
 }

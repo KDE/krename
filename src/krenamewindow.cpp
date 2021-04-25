@@ -237,13 +237,13 @@ void KRenameWindow::setupPlugins()
 
 void KRenameWindow::setupIcons()
 {
-    QPixmap upIcon = QIcon::fromTheme("arrow-up").pixmap(KIconLoader::SizeSmall);
-    QPixmap downIcon = QIcon::fromTheme("arrow-down").pixmap(KIconLoader::SizeSmall);
+    QIcon upIcon = QIcon::fromTheme("arrow-up");
+    QIcon downIcon = QIcon::fromTheme("arrow-down");
 
     // Page 1 icons
 
-    QPixmap openIcon = QIcon::fromTheme("document-open").pixmap(KIconLoader::SizeSmall);
-    QPixmap removeIcon = QIcon::fromTheme("list-remove").pixmap(KIconLoader::SizeSmall);
+    QIcon openIcon = QIcon::fromTheme("document-open");
+    QIcon removeIcon = QIcon::fromTheme("list-remove");
 
     m_pageFiles->buttonAdd->setIcon(openIcon);
     m_pageFiles->buttonRemove->setIcon(removeIcon);
@@ -252,8 +252,8 @@ void KRenameWindow::setupIcons()
 
     // Page 4 icons
 
-    QPixmap helpIcon = QIcon::fromTheme("help-hint").pixmap(KIconLoader::SizeSmall);
-    QPixmap findIcon = QIcon::fromTheme("edit-find").pixmap(KIconLoader::SizeSmall);
+    QIcon helpIcon = QIcon::fromTheme("help-hint");
+    QIcon findIcon = QIcon::fromTheme("edit-find");
 
     m_pageFilename->buttonHelp1->setIcon(helpIcon);
     m_pageFilename->buttonHelp2->setIcon(helpIcon);

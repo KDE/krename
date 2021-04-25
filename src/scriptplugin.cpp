@@ -5,7 +5,6 @@
 #include "scriptplugin.h"
 
 #include <kconfiggroup.h>
-#include <kiconloader.h>
 #include <kmessagebox.h>
 #include <KIO/StoredTransferJob>
 #include <KIO/StatJob>
@@ -99,9 +98,9 @@ QString ScriptPlugin::processFile(BatchRenamer *b, int index,
     return QString();
 }
 
-const QPixmap ScriptPlugin::icon() const
+const QIcon ScriptPlugin::icon() const
 {
-    return QIcon::fromTheme(m_icon).pixmap(KIconLoader::SizeSmall);
+    return QIcon::fromTheme(m_icon);
 }
 
 void ScriptPlugin::createUI(QWidget *parent) const

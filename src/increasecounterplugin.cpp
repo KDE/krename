@@ -6,8 +6,6 @@
 #include "ui_increasecounterpluginwidget.h"
 #include "pluginloader.h"
 
-#include <kiconloader.h>
-
 #include <QIcon>
 #include <QRegExp>
 
@@ -27,9 +25,9 @@ const QString IncreaseCounterPlugin::name() const
     return i18n("Increase Counter");
 }
 
-const QPixmap IncreaseCounterPlugin::icon() const
+const QIcon IncreaseCounterPlugin::icon() const
 {
-    return QIcon::fromTheme("document-properties").pixmap(KIconLoader::SizeSmall);
+    return QIcon::fromTheme("document-properties");
 }
 
 QString IncreaseCounterPlugin::processFile(BatchRenamer *, int, const QString &filenameOrToken, EPluginType)

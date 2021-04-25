@@ -34,7 +34,7 @@ public:
      *  \param first if true make sure that this is the first category (after all) and is selected by
      *         default.
      */
-    void add(const QString &headline, const QStringList &commands, const QPixmap &icon, bool first = false);
+    void add(const QString &headline, const QStringList &commands, const QIcon &icon, bool first = false);
 
     /**
      * Retrieve the separator between token and help

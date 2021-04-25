@@ -43,7 +43,7 @@ public:
     /**
      * @returns an icon for this plugin.
      */
-    const QPixmap icon() const override;
+    const QIcon icon() const override;
 
     /**
      * @returns true if this plugins is always enabled

@@ -6,7 +6,6 @@
 #include "batchrenamer.h"
 #include "krenamemodel.h"
 
-#include <kiconloader.h>
 #include <KSharedConfig>
 #include <KTreeWidgetSearchLine>
 #include <QPushButton>
@@ -131,7 +130,7 @@ const QString TokenHelpDialog::getTokenSeparator()
     return QString::fromLatin1(";;");
 }
 
-void TokenHelpDialog::add(const QString &headline, const QStringList &commands, const QPixmap &icon, bool first)
+void TokenHelpDialog::add(const QString &headline, const QStringList &commands, const QIcon &icon, bool first)
 {
     m_map[headline] = commands;
 
@@ -303,9 +302,7 @@ void TokenHelpDialog::slotUpdatePreview()
 
 void TokenHelpDialog::addRecentTokens()
 {
-    const QPixmap &icon =
-        QIcon::fromTheme("document-open-recent").pixmap(KIconLoader::SizeSmall);
-    this->add(i18n("Recent"), m_recent, icon);
+    this->add(i18n("Recent"), m_recent, QIcon::fromTheme("document-open-recent"));
 }
 
 void TokenHelpDialog::addToRecentTokens(const QString &token, const QString &help)

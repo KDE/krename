@@ -3,8 +3,6 @@
 
 #include "krenamelistview.h"
 
-#include <kiconloader.h>
-
 KRenameListView::KRenameListView(QWidget *parent)
     : QListView(parent),
       m_label(nullptr)
