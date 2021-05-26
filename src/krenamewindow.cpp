@@ -694,7 +694,7 @@ QString KRenameWindow::getPrefixSuffixSimple(QComboBox *combo, QComboBox *comboC
 
 QString KRenameWindow::getFilenameSimple(QComboBox *combo, QComboBox *comboCustom)
 {
-    enum days { OriginalName, LowerCase, UpperCase, Capitalize, Custom };
+    enum modification { OriginalName, LowerCase, UpperCase, Capitalize, Custom };
     QString str;
 
     switch (combo->currentIndex()) {
