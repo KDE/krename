@@ -694,20 +694,20 @@ QString KRenameWindow::getPrefixSuffixSimple(QComboBox *combo, QComboBox *comboC
 
 QString KRenameWindow::getFilenameSimple(QComboBox *combo, QComboBox *comboCustom)
 {
+    enum days { OriginalName, LowerCase, UpperCase, Capitalize, Custom };
     QString str;
 
-    // TODO: Replace strings with constants
     switch (combo->currentIndex()) {
     default:
-    case 0:
+    case OriginalName:
         str = '$'; break;
-    case 1:
+    case LowerCase:
         str = '%'; break;
-    case 2:
+    case UpperCase:
         str = '&'; break;
-    case 3:
+    case Capitalize:
         str = '*'; break;
-    case 4:
+    case Custom:
         str = comboCustom->currentText();
     }
 
