@@ -24,9 +24,11 @@ kde_enable_exceptions()
 
 ########### next target ###############
 
-
 set(krename_SRCS
     main.cpp
+)
+
+set(libkrename_SRCS
     batchrenamer.cpp
     customdialog.cpp
     datetimeplugin.cpp
@@ -63,37 +65,37 @@ set(krename_SRCS
 )
 
 if(LibExiv2_FOUND)
-    set(krename_SRCS ${krename_SRCS}
+    set(libkrename_SRCS ${libkrename_SRCS}
         exiv2plugin.cpp
     )
 endif()
 
 if(TAGLIB_FOUND)
-    set(krename_SRCS ${krename_SRCS}
+    set(libkrename_SRCS ${libkrename_SRCS}
         taglibplugin.cpp
     )
 endif()
 
 if(PoDoFo_FOUND)
-    set(krename_SRCS ${krename_SRCS}
+    set(libkrename_SRCS ${libkrename_SRCS}
         podofoplugin.cpp
     )
 endif()
 
 if(FREETYPE_FOUND)
-    set(krename_SRCS ${krename_SRCS}
+    set(libkrename_SRCS ${libkrename_SRCS}
         fontplugin.cpp
     )
 endif()
 
 if(KF5Archive_FOUND)
-    set(krename_SRCS ${krename_SRCS}
+    set(libkrename_SRCS ${libkrename_SRCS}
         odfplugin.cpp
     )
 endif()
 
 
-ki18n_wrap_ui(krename_SRCS
+ki18n_wrap_ui(libkrename_SRCS
     customfilenamedlg.ui
     datetimepluginwidget.ui
     dirsortpluginwidget.ui
@@ -116,9 +118,12 @@ ki18n_wrap_ui(krename_SRCS
     tokensortmodedialog.ui
 )
 
-add_executable(krename ${krename_SRCS})
+add_library(libkrename STATIC ${libkrename_SRCS})
+set_target_properties(libkrename PROPERTIES
+    OUTPUT_NAME krename
+)
 
-target_link_libraries(krename
+target_link_libraries(libkrename
     KF5::Crash
     KF5::KIOCore
     KF5::KIOFileWidgets
@@ -128,31 +133,36 @@ target_link_libraries(krename
     Qt5::Qml
 )
 if(TAGLIB_FOUND)
-    target_link_libraries(krename
+    target_link_libraries(libkrename
         Taglib::Taglib
     )
 endif()
 if(LibExiv2_FOUND)
-    target_link_libraries(krename
+    target_link_libraries(libkrename
         LibExiv2::LibExiv2
     )
 endif()
 if(PoDoFo_FOUND)
-    target_link_libraries(krename
+    target_link_libraries(libkrename
         ${PoDoFo_LIBRARIES}
     )
 endif()
 if(KF5Archive_FOUND)
-    target_link_libraries(krename
+    target_link_libraries(libkrename
         Qt5::Xml
         KF5::Archive
     )
 endif()
 if(FREETYPE_FOUND)
-    target_link_libraries(krename
+    target_link_libraries(libkrename
         ${FREETYPE_LIBRARIES}
     )
 endif()
+
+add_executable(krename ${krename_SRCS})
+target_link_libraries(krename
+    libkrename
+)
 
 # Others Files to install
 
