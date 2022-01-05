@@ -4,6 +4,7 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0</project_license>
   <name>KRename</name>
+  <name xml:lang="ar">مغيّر الأسماء</name>
   <name xml:lang="ca">KRename</name>
   <name xml:lang="ca-valencia">KRename</name>
   <name xml:lang="cs">KRename</name>
@@ -34,6 +35,7 @@
   <name xml:lang="zh-CN">KRename</name>
   <name xml:lang="zh-TW">KRename</name>
   <summary>A powerful batch file renamer</summary>
+  <summary xml:lang="ar">مُعيد تسمية الملفات دُفَعِي</summary>
   <summary xml:lang="ca">Un potent canviador de noms per lots</summary>
   <summary xml:lang="ca-valencia">Un potent canviador de noms per lots</summary>
   <summary xml:lang="cs">Mocný nástroj pro dávkové přejmenovávání</summary>
@@ -72,6 +74,7 @@
       another directory or simply rename the input files. KRename supports many
       conversion operations.
     </p>
+    <p xml:lang="ar">مغير الأسماء هو برنامج إعادة تسمية الملفات دُفَعِي قوي جدًا يمكنه إعادة تسمية قائمة من الملفات بناءً على مجموعة من التعبيرات. يمكنه نسخ / نقل الملفات إلى دليل آخر أو ببساطة إعادة تسمية ملفات الإدخال. يدعم مغير الأسماء العديد من عمليات التحويل.</p>
     <p xml:lang="ca">El KRename és un canviador de noms per lots molt potent que pot reanomenar una llista de fitxers basada en un conjunt d'expressions. Pot copiar/moure els fitxers a un altre directori o senzillament reanomenar els fitxers d'entrada. El KRename admet moltes operacions de conversió.</p>
     <p xml:lang="ca-valencia">El KRename és un canviador de noms per lots molt potent que pot reanomenar una llista de fitxers basada en un conjunt d'expressions. Pot copiar/moure els fitxers a un altre directori o senzillament reanomenar els fitxers d'entrada. El KRename admet moltes operacions de conversió.</p>
     <p xml:lang="de">KRename ist ein sehr leistungsfähiges Programm zum Umbenennen mehrerer Dateien, mit dem eine Liste von Dateien auf der Grundlage von Ausdrücken umbenannt werden kann. Es kann die Dateien in einen anderen Ordner kopieren oder verschieben oder nur die Eingabedateien Umbenennen. KRename unterstützt viele Umwandlungsoperationen.</p>
