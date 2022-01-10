@@ -117,4 +117,9 @@
   <provides>
     <binary>krename</binary>
   </provides>
+  <launchable type="desktop-id">org.kde.krename.desktop</launchable>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="5.0.1" date="2020-10-05"/>
+  </releases>
 </component>
