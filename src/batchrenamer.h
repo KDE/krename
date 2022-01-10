@@ -384,10 +384,6 @@ private:
 
     QList<TReplaceItem> m_replace;    ///< List of strings for find and replace
 
-protected:
-    QFile *f;
-    QTime t;
-    QProgressDialog *progress;
 };
 
 void BatchRenamer::setFiles(KRenameFile::List *list)
