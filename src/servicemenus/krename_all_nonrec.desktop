@@ -1,7 +1,7 @@
 # Sending all kinds of file to KRename
 [Desktop Entry]
 Type=Service
-X-KDE-ServiceTypes=KonqPopupMenu/Plugin,all/allfiles,inode/directory
+MimeType=application/octet-stream;inode/directory
 Actions=rename;
 
 [Desktop Action rename]
