@@ -18,7 +18,7 @@ const QString TranslitPlugin::s_strUtf8[] = {"а","б","в","г","д","е","ё",
     "А","Б","В","Г","Д","Е","Ё","Ж","З","И","Й","К","Л","М","Н","О","П",
     "Р","С","Т","У","Ф","Х","Ц","Ч","Ш","Щ","Ъ","Ы","Ь","Э","Ю","Я",
     "á","ä","č","ď","é","ě","í","ľ","ĺ","ň","ó","ô","ö","ő","ř","ŕ","š","ť","ú","ů","ü","ű","ý","ž",
-    "Á","Ä","Č","Ď","É","Ě","Í","Ľ","Ĺ","Ň","Ó","Ô","Ö","Ő","Ř","Ŕ","Š","Ť","Ú","Ů","Ü","Ű","Ý","Ž",QString::null};
+    "Á","Ä","Č","Ď","É","Ě","Í","Ľ","Ĺ","Ň","Ó","Ô","Ö","Ő","Ř","Ŕ","Š","Ť","Ú","Ů","Ü","Ű","Ý","Ž",QString()};
 */
 const QString TranslitPlugin::s_strUtf8[] = {
     "\xD0\xB0", "\xD0\xB1", "\xD0\xB2",
@@ -168,7 +168,7 @@ void TranslitPlugin::createUI( QWidget* parent ) const
     QListWidget* list = new QListWidget( parent );
 
     int i=0;
-    while( TranslitPlugin::s_strUtf8[i]!=QString::null )
+    while( TranslitPlugin::s_strUtf8[i]!=QString() )
     {
         QString text = QString::fromUtf8( TranslitPlugin::s_strUtf8[i].toUtf8().data() );
         text += " -> ";

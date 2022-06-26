@@ -195,7 +195,7 @@ public:
      *  @param token a token found in square brackets
      *  @param name the filename of the current file
      *
-     *  @return QString::null if no length token was found or the a new string
+     *  @return an empty QString if no length token was found or the new string
      */
     QString findLength(const QString &token, const QString &name);
 
@@ -205,7 +205,7 @@ public:
      *  @param name the filename of the current file
     *  @param index index of the current file
            *
-           *  @return QString::null if no length token was found or the a new string
+           *  @return an empty QString if no length token was found or the new string
            */
     QString findTrimmed(const QString &token, const QString &name, int index);
 

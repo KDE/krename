@@ -318,7 +318,7 @@ if( !m_result ) { \
         RUN_TOKEN_TEST("[$dirname..] Test", "[$dirname..]", filename, "");
         RUN_TOKEN_TEST("[%dirname..] Test", "[%dirname..]", filename, "");
         RUN_TOKEN_TEST("[*dirname..] Test", "[*dirname..]", filename, "");
-        // TODO: This test has strange effects that only occur if [dirname..] is QString::null
+        // TODO: This test has strange effects that only occur if [dirname..] is an empty QString
         //RUN_TOKEN_TEST( "[trimmed;[dirname..]] Test", "[trimmed;[dirname..]]", filename, filename.trimmed() );
         RUN_TOKEN_TEST("Complex Test1", "&[2-5]", filename, filename.toUpper() + "Test");
         RUN_TOKEN_TEST("Complex Test2", "%[2-5]", filename, filename.toLower() + "Test");

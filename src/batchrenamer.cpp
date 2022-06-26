@@ -290,7 +290,7 @@ void BatchRenamer::processFiles(ProgressDialog *p)
         if (m_mode == RENAME) { // final Path = source Path
             m_files[i].dst.directory = m_files[i].src.directory;
             m_files[i].dst.url = m_files[i].src.url;
-            m_files[i].dst.url.setFileName(QString::null);
+            m_files[i].dst.url.setFileName(QString());
         } else {
             m_files[i].dst.directory = m_destination.path();
             m_files[i].dst.url = m_destination;
@@ -692,7 +692,7 @@ void BatchRenamer::work(ProgressDialog *)
          * The plugin should return an error message in this case!
          */
 
-        QString eplug = parsePlugins(i, QString::null, TYPE_FINAL_FILE);
+        QString eplug = parsePlugins(i, QString(), TYPE_FINAL_FILE);
         if (!eplug.isEmpty()) {
             p->error(eplug);
             error++;

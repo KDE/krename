@@ -300,7 +300,7 @@ QTableWidgetItem *ReplaceDialog::createTableItem(const QString &text, bool isChe
 {
     // TODO: Enclose text in quotes, but remove them before the item is edited by the user directly in the table
     //       and add them again if the user presses enter.
-    QString t = text; // text.isEmpty() ? QString::null : "\"" + text + "\"";
+    QString t = text; // text.isEmpty() ? QString() : "\"" + text + "\"";
     QTableWidgetItem *item = new QTableWidgetItem(t);
 
     if (isCheckable) {

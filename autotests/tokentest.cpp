@@ -204,7 +204,7 @@ void TokenTest::testTokens_data()
         << QLatin1String("[%dirname..]") << filename << "";
     QTest::newRow("[*dirname..] Test")
         << QLatin1String("[*dirname..]") << filename << "";
-    // TODO: This test has strange effects that only occur if [dirname..] is QString::null
+    // TODO: This test has strange effects that only occur if [dirname..] is an empty QString
     //QTest::newRow("[trimmed;[dirname..]] Test")
     //    << QLatin1String("[trimmed;[dirname..]]") << filename << filename.trimmed();
     QTest::newRow("Complex Test1")

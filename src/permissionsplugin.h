@@ -78,10 +78,10 @@ public:
      * @param eCurrentType the current type of plugin that is requested (for plugins that support more than one type)
      *
      * @returns the result of the function, depending on type().
-     * @returns QString::null if this plugin has nothing to do.
+     * @returns an empty QString if this plugin has nothing to do.
      * @returns A new filename if type is ePluginType_Filename
      * @returns the value of the token if type is ePluginType_Token
-     * @returns an error message or QString::null if type is ePluginType_File
+     * @returns an error message or an empty QString if type is ePluginType_File
      */
     QString processFile(BatchRenamer *b, int index, const QString &filenameOrToken, EPluginType eCurrentType) override;
 
