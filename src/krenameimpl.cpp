@@ -365,7 +365,7 @@ void KRenameImpl::slotRemoveAllFiles()
 {
     // TODO: Show message box: Do you really want to remove all files.
     if (KMessageBox::questionYesNo(m_window, i18n("Do you really want to remove all files from the list?"),
-                                   i18n("KRename"), KStandardGuiItem::yes(), KStandardGuiItem::no(),
+                                   i18n("KRename"), KStandardGuiItem::remove(), KStandardGuiItem::cancel(),
                                    "KRenameRemoveAllFromFileList") == KMessageBox::Yes) {
         m_vector.clear();
         m_window->resetFileList();
