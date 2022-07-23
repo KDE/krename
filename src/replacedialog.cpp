@@ -88,7 +88,7 @@ void ReplaceDialog::slotSaveList()
     QFile f(fileName);
 
     if (!f.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        KMessageBox::sorry(this, i18n("Failed to save the Find & Replace Settings File."));
+        KMessageBox::error(this, i18n("Failed to save the Find & Replace Settings File."));
         return;
     }
 
@@ -149,7 +149,7 @@ void ReplaceDialog::slotLoadList()
 //open file
     QFile f(fileName);
     if (!f.open(QFile::ReadOnly | QFile::Text)) {
-        KMessageBox::sorry(this,
+        KMessageBox::error(this,
                            i18n("Failed to open the Find and Replace Settings File. Cannot read file %1:\n%2.", fileName, f.errorString()));
         return;
     }
