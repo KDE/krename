@@ -136,6 +136,13 @@ KRenameWindow::KRenameWindow(QWidget *parent)
 
     this->setAutoSaveSettings("KRenameWindowSettings", true);
 
+    // If there is a huge entry in the history of filenameTemplate that size
+    // apparently gets used as minimal size of the window. Setting it to some
+    // value here works around that.
+    // https://bugs.kde.org/show_bug.cgi?id=398980
+    // TODO: Find a solution without a magic number
+    setMinimumWidth(200);
+
     // Show the first page in any mode
     showPage(0);
 }
