@@ -43,7 +43,6 @@ add_definitions(
     -DQT_STRICT_ITERATORS
 )
 
-
 # Find KArchive
 find_package(KF5Archive)
 set_package_properties(KF5Archive PROPERTIES
