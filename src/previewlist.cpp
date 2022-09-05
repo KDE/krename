@@ -53,7 +53,7 @@ void PreviewList::slotRemove()
 
     m_model->removeFiles(list);
 
-    emit updateCount();
+    Q_EMIT updateCount();
 }
 
 void PreviewList::slotManually()

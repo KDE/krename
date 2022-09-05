@@ -489,7 +489,7 @@ void KRenameWindow::setRenameMode(ERenameMode eMode)
     }
 
     this->slotEnableControls();
-    emit renameModeChanged(eMode);
+    Q_EMIT renameModeChanged(eMode);
 }
 
 void KRenameWindow::setDestinationUrl(const QUrl &url)
@@ -733,7 +733,7 @@ void KRenameWindow::slotNext()
 
 void KRenameWindow::slotFinish()
 {
-    emit accepted();
+    Q_EMIT accepted();
 }
 
 void KRenameWindow::slotRenameModeChanged()
@@ -750,7 +750,7 @@ void KRenameWindow::slotRenameModeChanged()
         mode = eRenameMode_Link;
     }
 
-    emit renameModeChanged(mode);
+    Q_EMIT renameModeChanged(mode);
 
     this->slotEnableControls();
 }
@@ -762,7 +762,7 @@ void KRenameWindow::slotGotoTemplatesPage()
 
 void KRenameWindow::slotSimpleStartIndexChanged()
 {
-    emit startIndexChanged(m_pageFilename->spinIndex->value());
+    Q_EMIT startIndexChanged(m_pageFilename->spinIndex->value());
 
     slotSimpleTemplateChanged();
 }
@@ -807,10 +807,10 @@ void KRenameWindow::slotSimpleTemplateChanged()
 
 void KRenameWindow::templatesChanged(const QString &filename, const QString &extension)
 {
-    emit filenameTemplateChanged(filename);
-    emit extensionTemplateChanged(extension);
+    Q_EMIT filenameTemplateChanged(filename);
+    Q_EMIT extensionTemplateChanged(extension);
 
-    emit updatePreview();
+    Q_EMIT updatePreview();
 
     m_pageFilename->buttonNumbering->setEnabled(filename.contains('#') || extension.contains('#'));
     this->slotEnableControls();
@@ -877,27 +877,27 @@ void KRenameWindow::setSimpleTemplate(const QString &filename, const QString &ex
 
 void KRenameWindow::slotTokenHelpRequested()
 {
-    emit showTokenHelpDialog(m_pageFilename->filenameTemplate->lineEdit());
+    Q_EMIT showTokenHelpDialog(m_pageFilename->filenameTemplate->lineEdit());
 }
 
 void KRenameWindow::slotTokenHelpRequestedWizard1()
 {
-    emit showTokenHelpDialog(m_pageFilename->comboPrefixCustom->lineEdit());
+    Q_EMIT showTokenHelpDialog(m_pageFilename->comboPrefixCustom->lineEdit());
 }
 
 void KRenameWindow::slotTokenHelpRequestedWizard2()
 {
-    emit showTokenHelpDialog(m_pageFilename->comboSuffixCustom->lineEdit());
+    Q_EMIT showTokenHelpDialog(m_pageFilename->comboSuffixCustom->lineEdit());
 }
 
 void KRenameWindow::slotTokenHelpRequestedWizard3()
 {
-    emit showTokenHelpDialog(m_pageFilename->comboFilenameCustom->lineEdit());
+    Q_EMIT showTokenHelpDialog(m_pageFilename->comboFilenameCustom->lineEdit());
 }
 
 void KRenameWindow::slotTokenHelpRequestedWizard4()
 {
-    emit showTokenHelpDialog(m_pageFilename->comboExtensionCustom->lineEdit());
+    Q_EMIT showTokenHelpDialog(m_pageFilename->comboExtensionCustom->lineEdit());
 }
 
 void KRenameWindow::setExtensionSplitMode(ESplitMode splitMode, int dot)
@@ -940,7 +940,7 @@ void KRenameWindow::slotExtensionSplitModeChanged(int index)
         break;
     }
 
-    emit extensionSplitModeChanged(splitMode, index - 1);
+    Q_EMIT extensionSplitModeChanged(splitMode, index - 1);
 }
 
 void KRenameWindow::slotPreviewChanged()
@@ -954,7 +954,7 @@ void KRenameWindow::slotPreviewChanged()
     }
 
     model->setEnablePreview(m_pageFiles->checkPreview->isChecked(), m_pageFiles->checkName->isChecked());
-    emit filePreviewChanged(m_pageFiles->checkPreview->isChecked(), m_pageFiles->checkName->isChecked());
+    Q_EMIT filePreviewChanged(m_pageFiles->checkPreview->isChecked(), m_pageFiles->checkName->isChecked());
 
     m_pageFiles->fileList->setAcceptDrops(true);
     m_pageFiles->fileList->repaint();
@@ -1097,7 +1097,7 @@ void KRenameWindow::moveUp(const QList<int> &selected, QAbstractItemView *view)
     KRenameModel *model = static_cast<KRenameModel *>(m_pageFiles->fileList->model());
     model->moveFilesUp(selected);
 
-    emit updatePreview();
+    Q_EMIT updatePreview();
 
     QItemSelectionModel *selection = view->selectionModel();
     QList<int>::const_iterator it  = selected.begin();
@@ -1121,7 +1121,7 @@ void KRenameWindow::moveDown(const QList<int> &selected, QAbstractItemView *view
     KRenameModel *model = static_cast<KRenameModel *>(m_pageFiles->fileList->model());
     model->moveFilesDown(selected);
 
-    emit updatePreview();
+    Q_EMIT updatePreview();
 
     QItemSelectionModel *selection = view->selectionModel();
     QList<int>::const_iterator it  = selected.begin();

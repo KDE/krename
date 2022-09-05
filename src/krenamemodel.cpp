@@ -153,7 +153,7 @@ bool KRenameModel::dropMimeData(const QMimeData *data,
         }
     } else {
         QApplication::restoreOverrideCursor();
-        emit filesDropped();
+        Q_EMIT filesDropped();
     }
 
     return true;
@@ -167,7 +167,7 @@ void KRenameModel::slotListerDone(ThreadedLister *lister)
     // restore cursor
     QApplication::restoreOverrideCursor();
 
-    emit filesDropped();
+    Q_EMIT filesDropped();
 }
 
 bool KRenameModel::setData(const QModelIndex &index,
@@ -176,7 +176,7 @@ bool KRenameModel::setData(const QModelIndex &index,
     if (index.isValid() && role == Qt::EditRole) {
 
         //stringList.replace(index.row(), value.toString());
-        emit dataChanged(index, index);
+        Q_EMIT dataChanged(index, index);
         return true;
     }
 
@@ -205,7 +205,7 @@ void KRenameModel::addFiles(const KRenameFile::List &files)
         this->endInsertRows();
 
         if (m_maxDots > oldMaxDots) {
-            emit maxDotsChanged(m_maxDots);
+            Q_EMIT maxDotsChanged(m_maxDots);
         }
 
         // Update sorting

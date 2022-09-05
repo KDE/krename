@@ -104,5 +104,5 @@ void ThreadedLister::completed()
         //s_mutex.unlock();
     }
 
-    emit listerDone(this);
+    Q_EMIT listerDone(this);
 }
