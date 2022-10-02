@@ -1,0 +1,2717 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the krename package.
+# Jung Hee Lee <daemul72@gmail.com>, 2019, 2020.
+# Shinjo Park <kde@peremen.name>, 2019, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krename\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-01 00:48+0000\n"
+"PO-Revision-Date: 2022-08-09 13:37+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: batchrenamer.cpp:188 batchrenamer.cpp:655
+#, kde-format
+msgid "Input files will be renamed."
+msgstr "입력 파일의 이름을 변경합니다."
+
+#: batchrenamer.cpp:191 batchrenamer.cpp:649
+#, kde-format
+msgid "Files will be copied to: %1"
+msgstr "파일이 다음 위치로 복사됨: %1"
+
+#: batchrenamer.cpp:194 batchrenamer.cpp:651
+#, kde-format
+msgid "Files will be moved to: %1"
+msgstr "파일이 다음 위치로 이동됨: %1"
+
+#: batchrenamer.cpp:197 batchrenamer.cpp:653
+#, kde-format
+msgid "Symbolic links will be created in: %1"
+msgstr "심볼릭 링크가 다음 위치에 생성됨: %1"
+
+#: batchrenamer.cpp:218
+#, kde-format
+msgid "Cannot rename: source and target filename are equal: %1"
+msgstr "이름을 바꿀 수 없음: 원본 및 대상 파일 이름이 동일함: %1"
+
+#: batchrenamer.cpp:236
+#, kde-format
+msgid "Cannot create symlink to non-local URL: %1"
+msgstr "로컬이 아닌 URL에 대한 심볼릭 링크를 만들 수 없음: %1"
+
+#: batchrenamer.cpp:250 dirsortplugin.cpp:121
+#, kde-format
+msgid "Error renaming %2 (to %1)"
+msgstr "%2(%1(으)로) 이름 변경 중 오류 발생"
+
+#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:728
+#, kde-format
+msgid "%1 error occurred."
+msgid_plural "%1 errors occurred."
+msgstr[0] "오류 %1개가 발생함."
+
+#: batchrenamer.cpp:276 batchrenamer.cpp:732
+#, kde-format
+msgid "KRename finished the renaming process."
+msgstr "KRename이 이름 바꾸기 작업을 완료했습니다."
+
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:733
+#, kde-format
+msgid "Press close to quit."
+msgstr "닫기를 눌러 종료하십시오."
+
+#: batchrenamer.cpp:341
+#, kde-format
+msgid "Filenames Processed after %1 seconds."
+msgstr "파일 이름이 %1초 후에 처리되었습니다."
+
+#: batchrenamer.cpp:356
+#, kde-format
+msgid "Undoing all renamed files."
+msgstr "모든 파일 이름 바꾸기를 취소합니다."
+
+#: batchrenamer.cpp:388
+#, kde-format
+msgid "Error during undoing %1"
+msgstr "%1 실행 취소 중 오류 발생"
+
+#: batchrenamer.cpp:400
+#, kde-format
+msgid "KRename finished the undo process."
+msgstr "KRename이 실행 취소 작업을 완료했습니다."
+
+#: batchrenamer.cpp:636
+#, kde-format
+msgid "Cannot create undo script: %1"
+msgstr "실행 취소 스크립트를 만들 수 없음: %1"
+
+#: batchrenamer.cpp:710
+#, kde-format
+msgid "Undo is not possible for remote file: %1"
+msgstr "원격 파일의 실행 취소를 할 수 없음: %1"
+
+#: batchrenamer.cpp:724
+#, kde-format
+msgid "Renamed %1 files successfully."
+msgstr "파일 %1개의 이름을 성공적으로 변경했습니다."
+
+#: batchrenamer.cpp:731
+#, kde-format
+msgid "Elapsed time: %1 seconds"
+msgstr "경과 시간: %1초"
+
+#: batchrenamer.cpp:743
+#, kde-format
+msgid "Cannot set executable bit on undo script."
+msgstr "실행 취소 스크립트에 실행 비트를 설정할 수 없습니다."
+
+#: batchrenamer.cpp:1163
+#, kde-format
+msgid "Cannot create directory %1: %2"
+msgstr "%1 디렉터리를 만들 수 없음: %2"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: customfilenamedlg.ui:63
+#, kde-format
+msgid "File preview"
+msgstr "파일 미리 보기"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: customfilenamedlg.ui:91
+#, kde-format
+msgid "Please input a new filename"
+msgstr "새로운 파일 이름을 입력하십시오"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, radioKRename)
+#: customfilenamedlg.ui:97
+#, kde-format
+msgid "Rename the file using the filename created by KRename."
+msgstr "KRename에서 생성한 파일 이름을 사용하여 파일 이름을 바꿉니다."
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioKRename)
+#: customfilenamedlg.ui:100
+#, kde-format
+msgid "Use filename created by &KRename"
+msgstr "KRename에서 생성한 파일 이름 사용(&K)"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, radioInput)
+#: customfilenamedlg.ui:112
+#, kde-format
+msgid ""
+"Use the input filename when renaming this file. You may also change the "
+"input filename and use this for renaming."
+msgstr ""
+"이 파일의 이름을 변경할 때 입력 파일 이름을 사용합니다. 입력 파일 이름을 변경"
+"하고 이름을 바꾸는데 사용할 수도 있습니다."
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioInput)
+#: customfilenamedlg.ui:115
+#, kde-format
+msgid "Use &input filename"
+msgstr "입력 파일 이름 사용(&I)"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, radioCustom)
+#: customfilenamedlg.ui:122
+#, kde-format
+msgid ""
+"Use a custom filename, based on the filename currently created by KRename."
+msgstr ""
+"현재 KRename에서 생성한 파일 이름을 기준으로 사용자 지정 파일 이름을 사용합니"
+"다."
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
+#: customfilenamedlg.ui:125
+#, kde-format
+msgid "Use &custom filename"
+msgstr "사용자 정의 파일 이름 사용(&C)"
+
+#: datetimeplugin.cpp:35
+#, kde-format
+msgid "Date & Time Plugin"
+msgstr "날짜 및 시간 플러그인"
+
+#: datetimeplugin.cpp:55
+#, kde-format
+msgid "DateTimePlugin works only with local files. %1 is a remote file."
+msgstr ""
+"날짜 시간 플러그인은 로컬 파일에서만 작동합니다. %1은(는) 원격 파일입니다."
+
+#: datetimeplugin.cpp:100
+#, kde-format
+msgid "Cannot change date of file %1. (Cannot mktime)"
+msgstr "%1 파일의 날짜를 변경할 수 없습니다.(mktime을 호출할 수 없음)"
+
+#: datetimeplugin.cpp:106
+#, kde-format
+msgid "Cannot change date of file %1. (Cannot stat the file)"
+msgstr "%1 파일의 날짜를 변경할 수 없습니다.(stat을 호출할 수 없음)"
+
+#: datetimeplugin.cpp:116
+#, kde-format
+msgid "Cannot change date of file %1. (utime failed)"
+msgstr "%1 파일의 날짜를 변경할 수 없습니다.(utime 실패함)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkAccess)
+#: datetimepluginwidget.ui:19
+#, kde-format
+msgid "Change &access date && time"
+msgstr "접근한 날짜 및 시간 변경(&A)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkModification)
+#: datetimepluginwidget.ui:26
+#, kde-format
+msgid "Change &modifcation date && time"
+msgstr "수정한 날짜 및 시간 변경(&M)"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: datetimepluginwidget.ui:35
+#, kde-format
+msgid "Time:"
+msgstr "시간:"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonCurrent)
+#: datetimepluginwidget.ui:63
+#, kde-format
+msgid "Get &Current Time"
+msgstr "현재 시간 가져오기(&C)"
+
+#: dirsortplugin.cpp:28
+#, kde-format
+msgid "Subfolder-Sort Plugin"
+msgstr "하위 폴더 정렬 플러그인"
+
+#: dirsortplugin.cpp:90
+#, kde-format
+msgid "%1: The output folder %2 does not exist."
+msgstr "%1: 출력 폴더 %2이(가) 없습니다."
+
+#: dirsortplugin.cpp:153
+#, kde-format
+msgid "Cannot create folder %1"
+msgstr "%1 폴더를 만들 수 없습니다"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dirsortpluginwidget.ui:25
+#, kde-format
+msgid ""
+"This plugin sorts files into numbered subfolders after renaming.\n"
+"\n"
+"Example:\n"
+"\tfolder/001/file1\n"
+"\tfolder/001/file2\n"
+"\tfolder/002/file3\n"
+"\tfolder/002/file4\n"
+"\tfolder/003/file5\n"
+"\t..."
+msgstr ""
+"이 플러그인은 이름을 바꾼 후 번호가 매겨진 하위 폴더로 파일을 정렬합니다.\n"
+"\n"
+"예제:\n"
+"\t폴더/001/파일1\n"
+"\t폴더/001/파일2\n"
+"\t폴더/002/파일3\n"
+"\t폴더/002/파일4\n"
+"\t폴더/003/파일5\n"
+"\t..."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: dirsortpluginwidget.ui:32
+#, kde-format
+msgid "&Options:"
+msgstr "옵션(&O):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dirsortpluginwidget.ui:38
+#, kde-format
+msgid "Number of &files per folder:"
+msgstr "폴더별 파일 수(&F):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: dirsortpluginwidget.ui:58
+#, kde-format
+msgid "&Start index:"
+msgstr "시작 인덱스(&S):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: dirsortpluginwidget.ui:75
+#, kde-format
+msgid "Number &of digits:"
+msgstr "자릿수(&O):"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: dirsortpluginwidget.ui:98
+#, kde-format
+msgid "Out&put:"
+msgstr "출력(&P):"
+
+#: exiv2plugin.cpp:295
+#, kde-format
+msgid "Insert the comment of an image"
+msgstr "이미지의 주석 삽입"
+
+#: exiv2plugin.cpp:362
+#, kde-format
+msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
+msgstr "Exiv2(JPEG/TIFF Exif) 플러그인"
+
+#: exiv2plugin.cpp:363
+#, kde-format
+msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
+msgstr ""
+"<qt>이 플러그인은 JPEG 및 TIFF 파일의 태그를 읽을 수 있도록 지원합니다. </qt>"
+
+#: filedialogextwidget.cpp:37
+#, kde-format
+msgid "Add folder names &with filenames"
+msgstr "파일 이름으로 폴더 이름 추가(&W)"
+
+#: filedialogextwidget.cpp:38
+#, kde-format
+msgid "Add subfolders &recursively"
+msgstr "재귀적으로 하위 폴더 추가(&R)"
+
+#: filedialogextwidget.cpp:39
+#, kde-format
+msgid "Add &hidden folders"
+msgstr "숨겨진 폴더 추가(&H)"
+
+#: filedialogextwidget.cpp:40
+#, kde-format
+msgid "Add folder names only"
+msgstr "폴더 이름만 추가"
+
+#: filedialogextwidget.cpp:56
+#, kde-format
+msgid ""
+"Walk recursively through the folder tree and also add the content of all "
+"subfolders to the list of files to rename."
+msgstr ""
+"폴더 트리를 재귀적으로 탐색하고 모든 하위 폴더의 내용을 파일 목록에 추가하여 "
+"이름을 바꿉니다."
+
+#: filedialogextwidget.cpp:58
+#, kde-format
+msgid ""
+"If not checked, KRename will ignore folders starting with a dot during "
+"recursive adding."
+msgstr ""
+"이 옵션을 선택하지 않으면 KRename은 재귀적으로 추가하는 동안 이름이 점으로 시"
+"작하는 폴더를 무시합니다."
+
+#: filedialogextwidget.cpp:60
+#, kde-format
+msgid ""
+"Add only the folder names and not the names of the files in the folder to "
+"KRename."
+msgstr "KRename 폴더에 있는 파일의 이름이 아닌 폴더 이름만 추가합니다."
+
+#: filedialogextwidget.cpp:62
+#, kde-format
+msgid ""
+"This option causes KRename to also add the name of the base folder of the "
+"selected files to its list."
+msgstr ""
+"이 옵션을 사용하면 KRename은 선택한 파일의 기본 폴더 이름을 목록에 추가합니"
+"다."
+
+#: fileplugin.cpp:70
+#, kde-format
+msgid "Supported tokens:"
+msgstr "지원하는 토큰:"
+
+#: fontplugin.cpp:19
+#, kde-format
+msgid "Insert the PostScript name for Type1 and TrueType fonts."
+msgstr "Type1 및 트루타입 글꼴의 포스트스크립트 이름을 삽입합니다."
+
+#: fontplugin.cpp:20
+#, kde-format
+msgid "Insert the (usually English) name of the font family."
+msgstr "글꼴 모음의 이름(일반적으로 영어)을 삽입합니다."
+
+#: fontplugin.cpp:21
+#, kde-format
+msgid "Insert the (usually English) name of the font style."
+msgstr "글꼴 스타일의 이름(일반적으로 영어)을 삽입합니다."
+
+#: fontplugin.cpp:23
+#, kde-format
+msgid "Font (FreeType2) Plugin"
+msgstr "글꼴(FreeType2) 플러그인"
+
+#: fontplugin.cpp:24
+#, kde-format
+msgid "<qt>This plugin supports reading tags from font files.</qt>"
+msgstr "<qt>이 플러그인은 글꼴 파일의 태그를 읽을 수 있도록 지원합니다.</qt>"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: guimodeselector.ui:22
+#, kde-format
+msgid "Look and Feel"
+msgstr "모습과 느낌"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: guimodeselector.ui:34
+#, kde-format
+msgid "Configure the look and feel of the KRename GUI:"
+msgstr "KRename GUI의 모습과 느낌 설정:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, optionWizard)
+#: guimodeselector.ui:57
+#, kde-format
+msgid "Use &assistant style GUI (beginners)"
+msgstr "도우미 방식 GUI 사용(초보자)(&A)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, optionTabs)
+#: guimodeselector.ui:67
+#, kde-format
+msgid "Use &tabbed style GUI (advanced users)"
+msgstr "탭 방식 GUI 사용(고급 사용자)(&T)"
+
+#: increasecounterplugin.cpp:25
+#, kde-format
+msgid "Increase Counter"
+msgstr "카운터 증가"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: increasecounterpluginwidget.ui:17
+#, kde-format
+msgid "&Increase Counter"
+msgstr "카운터 증가(&I)"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: increasecounterpluginwidget.ui:24
+#, kde-format
+msgid ""
+"<p><b>This plugin adds a given offset to numbers in filenames.</b><br/>\n"
+"E.g. you have the filenames: <i>img014</i>, <i>img015</i>, <i>img023</i> "
+"which should be named <i>img010</i>, <i>img011</i> and <i>img019</i>. Using "
+"this plugin, you can easily add an offset of -4 to get the desired result.</"
+"p>"
+msgstr ""
+"<p><b>이 플러그인은 파일 이름의 숫자를 지정한 만큼 변경합니다.</b><br/>\n"
+"예를 들어 <i>img014</i>, <i>img015</i>, <i>img023</i> 파일이 있고 해당 파일"
+"을 <i>img010</i>, <i>img011</i>, <i>img019</i>로 이름을 바꿔야 한다면 오프셋"
+"을 -4로 지정하여 숫자를 변경할 수 있습니다.</p>"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: increasecounterpluginwidget.ui:49
+#, kde-format
+msgid "Offse&t:"
+msgstr "오프셋(&T):"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupOptions)
+#: krenamedestination.ui:31
+#, kde-format
+msgid "&Options"
+msgstr "옵션(&O)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, optionRename)
+#: krenamedestination.ui:52
+#, kde-format
+msgid "&Rename input files"
+msgstr "입력 파일 이름 바꾸기(&R)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, optionCopy)
+#: krenamedestination.ui:62
+#, kde-format
+msgid "&Copy files to destination folder"
+msgstr "대상 폴더로 파일 복사(&C)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, optionMove)
+#: krenamedestination.ui:69
+#, kde-format
+msgid "&Move files to destination folder"
+msgstr "대상 폴더로 파일 이동(&M)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, optionLink)
+#: krenamedestination.ui:76
+#, kde-format
+msgid "Create symbolic &links in destination folder"
+msgstr "대상 폴더에 심볼릭 링크 만들기(&l)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkOverwrite)
+#: krenamedestination.ui:99
+#, kde-format
+msgid "&Overwrite existing files"
+msgstr "기존 파일 덮어쓰기(&O)"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
+#: krenamefilename.ui:27
+#, kde-format
+msgid "&Advanced Filename"
+msgstr "고급 파일 이름(&A)"
+
+#. i18n: ectx: property (text), widget (QLabel, lblTemplate)
+#: krenamefilename.ui:50
+#, kde-format
+msgid "&Template:"
+msgstr "템플릿(&T):"
+
+#. i18n: ectx: property (toolTip), widget (ExtHistoryCombo, filenameTemplate)
+#: krenamefilename.ui:66
+#, kde-format
+msgid "<qt>Enter a template for changing the filename.</qt>"
+msgstr "<qt>파일 이름을 변경할 템플릿을 입력하십시오.</qt>"
+
+#. i18n: ectx: property (text), item, widget (ExtHistoryCombo, filenameTemplate)
+#. i18n: ectx: property (text), item, widget (ExtHistoryCombo, extensionTemplate)
+#: krenamefilename.ui:73 krenamefilename.ui:104
+#, kde-format
+msgid "$"
+msgstr "$"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDot)
+#: krenamefilename.ui:81
+#, kde-format
+msgid "<p><b>.</b></p>"
+msgstr "<p><b>.</b></p>"
+
+#. i18n: ectx: property (toolTip), widget (ExtHistoryCombo, extensionTemplate)
+#: krenamefilename.ui:97
+#, kde-format
+msgid "<qt>Enter a template for changing the file extension.</qt>"
+msgstr "<qt>파일 확장자를 변경할 템플릿을 입력하십시오.</qt>"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonFunctions)
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonHelp4)
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonHelp3)
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonHelp2)
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonHelp1)
+#: krenamefilename.ui:112 krenamefilename.ui:346 krenamefilename.ui:359
+#: krenamefilename.ui:436 krenamefilename.ui:490
+#, kde-format
+msgid ""
+"<qt>Insert special functions like the artist of an mp3 or the creation date "
+"of an image.</qt>"
+msgstr "<qt>MP3의 아티스트나 이미지 생성일과 같은 특수 함수을 삽입합니다.</qt>"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonFunctions)
+#: krenamefilename.ui:115
+#, kde-format
+msgid "&Functions..."
+msgstr "함수(&F)..."
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, checkExtension)
+#: krenamefilename.ui:141
+#, kde-format
+msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
+msgstr "<qt>파일 확장자를 그대로 유지하고 변경하지 않습니다.</qt>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkExtension)
+#: krenamefilename.ui:144
+#, kde-format
+msgid "&Use extension of the input file"
+msgstr "입력 파일의 확장자 사용(&U)"
+
+#. i18n: ectx: property (text), widget (QLabel, lblExtension)
+#: krenamefilename.ui:167
+#, kde-format
+msgid "F&ile extension starts at:"
+msgstr "파일 확장자 시작 위치(&I):"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, comboExtension)
+#: krenamefilename.ui:177
+#, kde-format
+msgid ""
+"<qt>Configure which part of the filename is considered to be the "
+"fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
+"\"Last Dot\" only \".gz\".</qt>"
+msgstr ""
+"<qt>파일 이름에서 파일 확장자로 간주되는 부분을 설정합니다. 예를 들어 \"첫 번"
+"째 점\"은 \".tar.gz\"를 확장자로 간주하고 \"마지막 점\"은 \".gz\"만 확장자로 "
+"간주합니다.</qt>"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
+#: krenamefilename.ui:181
+#, kde-format
+msgid "First Dot"
+msgstr "첫 번째 점"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
+#: krenamefilename.ui:186
+#, kde-format
+msgid "Last Dot"
+msgstr "마지막 점"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
+#: krenamefilename.ui:191
+#, kde-format
+msgid "No File Extension"
+msgstr "파일 확장자 없음"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonFind)
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonFindSimple)
+#: krenamefilename.ui:221 krenamefilename.ui:745
+#, kde-format
+msgid ""
+"<qt>Find and replace strings and regular expressions in the renamed filename."
+"</qt>"
+msgstr ""
+"<qt>이름이 바뀐 파일 이름에서 문자열과 정규 표현식을 찾아 바꿉니다.</qt>"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonFind)
+#. i18n: ectx: property (text), widget (QPushButton, buttonFindSimple)
+#: krenamefilename.ui:224 krenamefilename.ui:748 krenamesimple.ui:439
+#, kde-format
+msgid "Find &and Replace..."
+msgstr "찾기 및 바꾸기(&A)..."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonNumbering)
+#: krenamefilename.ui:234
+#, kde-format
+msgid ""
+"<qt>Configure start index, stepping and skipping for numbering of filenames."
+"</qt>"
+msgstr "<qt>파일 이름 번호를 매길 때 사용할 시작 인덱스를 설정합니다.</qt>"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonNumbering)
+#: krenamefilename.ui:237
+#, kde-format
+msgid "&Numbering..."
+msgstr "번호 매기기(&N)..."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonInsert)
+#: krenamefilename.ui:247
+#, kde-format
+msgid "<qt>Graphically select a part of a filename to insert.</qt>"
+msgstr "<qt>삽입할 파일 이름의 일부를 그래픽으로 선택합니다.</qt>"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
+#: krenamefilename.ui:250
+#, kde-format
+msgid "&Insert Part of Filename..."
+msgstr "파일 이름의 일부 삽입(&I)..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabSimple)
+#: krenamefilename.ui:289
+#, kde-format
+msgid "&Simple Filename"
+msgstr "간단한 파일 이름(&S)"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupFilename)
+#: krenamefilename.ui:312 krenamesimple.ui:48
+#, kde-format
+msgid "&Filename"
+msgstr "파일 이름(&F)"
+
+#. i18n: ectx: property (text), widget (QLabel, lblSuffix)
+#: krenamefilename.ui:333 krenamesimple.ui:72
+#, kde-format
+msgid "&Suffix:"
+msgstr "접미사(&S):"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboFilename)
+#: krenamefilename.ui:398 krenamesimple.ui:125
+#, kde-format
+msgid "Use original name"
+msgstr "원래 이름 사용"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtensionSimple)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboFilename)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
+#: krenamefilename.ui:403 krenamefilename.ui:557 krenamesimple.ui:130
+#: krenamesimple.ui:272 partfilenamewidget.ui:70
+#, kde-format
+msgid "Convert to lower case"
+msgstr "소문자로 변환"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtensionSimple)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboFilename)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
+#: krenamefilename.ui:408 krenamefilename.ui:562 krenamesimple.ui:135
+#: krenamesimple.ui:277 partfilenamewidget.ui:75
+#, kde-format
+msgid "Convert to upper case"
+msgstr "대문자로 변환"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtensionSimple)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboFilename)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
+#: krenamefilename.ui:413 krenamefilename.ui:567 krenamesimple.ui:140
+#: krenamesimple.ui:282 partfilenamewidget.ui:80
+#, kde-format
+msgid "Capitalize"
+msgstr "대문자로"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboFilename)
+#: krenamefilename.ui:418 krenamesimple.ui:145
+#, kde-format
+msgid "Custom name"
+msgstr "사용자 지정 이름"
+
+#. i18n: ectx: property (text), widget (QLabel, lblFilename)
+#: krenamefilename.ui:426 krenamesimple.ui:153
+#, kde-format
+msgid "File&name:"
+msgstr "파일 이름(&N):"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboSuffix)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPrefix)
+#: krenamefilename.ui:477 krenamefilename.ui:532 krenamesimple.ui:195
+#: krenamesimple.ui:247
+#, kde-format
+msgid "Number"
+msgstr "숫자"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboSuffix)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPrefix)
+#: krenamefilename.ui:482 krenamefilename.ui:537 krenamesimple.ui:200
+#: krenamesimple.ui:252
+#, kde-format
+msgid "Date"
+msgstr "날짜"
+
+#. i18n: ectx: property (text), widget (QLabel, lblPrefix)
+#: krenamefilename.ui:500 krenamesimple.ui:215
+#, kde-format
+msgid "&Prefix:"
+msgstr "접두사(&P):"
+
+#. i18n: ectx: property (text), widget (QLabel, lblExtension_2)
+#. i18n: ectx: property (text), widget (QLabel, lblExtension)
+#: krenamefilename.ui:510 krenamesimple.ui:225
+#, kde-format
+msgid "&Extension:"
+msgstr "확장자(&E):"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtensionSimple)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
+#: krenamefilename.ui:552 krenamesimple.ui:267
+#, kde-format
+msgid "Use original extension"
+msgstr "원래 확장자 사용"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtensionSimple)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
+#: krenamefilename.ui:572 krenamesimple.ui:287
+#, kde-format
+msgid "Custom extension"
+msgstr "사용자 지정 확장자"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupNumber)
+#: krenamefilename.ui:647 krenamesimple.ui:344
+#, kde-format
+msgid "N&umber"
+msgstr "숫자(&U)"
+
+#. i18n: ectx: property (text), widget (QLabel, lblDigits)
+#: krenamefilename.ui:697 krenamesimple.ui:397
+#, kde-format
+msgid "Number of &digits:"
+msgstr "자릿수(&D):"
+
+#. i18n: ectx: property (text), widget (QLabel, lblIndex)
+#: krenamefilename.ui:707 krenamesimple.ui:407
+#, kde-format
+msgid "Start  &index:"
+msgstr "시작 인덱스(&I):"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonUp)
+#: krenamefilename.ui:835 krenamefiles.ui:210
+#, kde-format
+msgid "Move selected files upwards."
+msgstr "선택한 파일을 위로 이동합니다."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonUp)
+#: krenamefilename.ui:838 krenamesimple.ui:526
+#, kde-format
+msgid "&Up"
+msgstr "위로(&U)"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonDown)
+#: krenamefilename.ui:845 krenamefiles.ui:220
+#, kde-format
+msgid "Move selected files downwards."
+msgstr "선택한 파일을 아래로 이동합니다."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonDown)
+#: krenamefilename.ui:848 krenamesimple.ui:533
+#, kde-format
+msgid "&Down"
+msgstr "아래로(&D)"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonAdd)
+#: krenamefiles.ui:53
+#, kde-format
+msgid "Add files for renaming."
+msgstr "이름을 변경할 파일을 추가합니다."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonAdd)
+#: krenamefiles.ui:56 previewlist.cpp:21 replacewidget.ui:97
+#: scriptpluginwidget.ui:68
+#, kde-format
+msgid "&Add..."
+msgstr "추가(&A)..."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonRemove)
+#: krenamefiles.ui:66
+#, kde-format
+msgid "Remove selected files."
+msgstr "선택한 파일을 삭제합니다."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
+#: krenamefiles.ui:69
+#, kde-format
+msgid "Re&move"
+msgstr "삭제(&M)"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonRemoveAll)
+#: krenamefiles.ui:76
+#, kde-format
+msgid "Remove all files."
+msgstr "모든 파일을 삭제합니다."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonRemoveAll)
+#: krenamefiles.ui:79
+#, kde-format
+msgid "Re&move All"
+msgstr "모두 삭제(&M)"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: krenamefiles.ui:88
+#, kde-format
+msgid "Sort:"
+msgstr "정렬:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
+#: krenamefiles.ui:99
+#, kde-format
+msgid "Unsorted"
+msgstr "정렬되지 않음"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
+#: krenamefiles.ui:104
+#, kde-format
+msgid "Ascending"
+msgstr "오름차순"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
+#: krenamefiles.ui:109
+#, kde-format
+msgid "Descending"
+msgstr "내림차순"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
+#: krenamefiles.ui:114
+#, kde-format
+msgid "Numeric"
+msgstr "숫자"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
+#: krenamefiles.ui:119
+#, kde-format
+msgid "Random"
+msgstr "무작위"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
+#: krenamefiles.ui:124
+#, kde-format
+msgid "Date (Asc.)"
+msgstr "날짜(오름차순)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
+#: krenamefiles.ui:129
+#, kde-format
+msgid "Date (Desc.)"
+msgstr "날짜(내림차순)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
+#: krenamefiles.ui:134
+#, kde-format
+msgid "Custom ..."
+msgstr "사용자 정의..."
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, checkPreview)
+#: krenamefiles.ui:151
+#, kde-format
+msgid "Display a preview image for each file."
+msgstr "각 파일마다 미리 보기 이미지를 표시합니다."
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkPreview)
+#: krenamefiles.ui:154
+#, kde-format
+msgid "&Preview"
+msgstr "미리 보기(&P)"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, checkName)
+#: krenamefiles.ui:161
+#, kde-format
+msgid "Display the filename together with the preview."
+msgstr "미리 보기와 함께 파일 이름을 표시합니다."
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkName)
+#: krenamefiles.ui:164
+#, kde-format
+msgid "&Display name"
+msgstr "이름 표시(&D)"
+
+#. i18n: ectx: property (text), widget (QLabel, labelCount)
+#: krenamefiles.ui:174
+#, kde-format
+msgid "Files: <b>0</b>"
+msgstr "파일: <b>0</b>"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonUp)
+#: krenamefiles.ui:213
+#, kde-format
+msgid "Up"
+msgstr "위로"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonDown)
+#: krenamefiles.ui:223
+#, kde-format
+msgid "Down"
+msgstr "아래로"
+
+#: krenameimpl.cpp:353
+#, kde-format
+msgid "Do you really want to remove all files from the list?"
+msgstr "목록에서 모든 파일을 삭제하시겠습니까?"
+
+#: krenameimpl.cpp:354 main.cpp:43
+#, kde-format
+msgid "KRename"
+msgstr "KRename"
+
+#: krenameimpl.cpp:470
+#, kde-format
+msgid "old filename"
+msgstr "이전 파일 이름"
+
+#: krenameimpl.cpp:471
+#, kde-format
+msgid "old filename converted to lower case"
+msgstr "이전 파일 이름 소문자로 변경"
+
+#: krenameimpl.cpp:472
+#, kde-format
+msgid "old filename converted to upper case"
+msgstr "이전 파일 이름 대문자로 변경"
+
+#: krenameimpl.cpp:473
+#, kde-format
+msgid "first letter of every word upper case"
+msgstr "모든 단어의 첫 글자 대문자"
+
+#: krenameimpl.cpp:474
+#, kde-format
+msgid "first letter of filename upper case"
+msgstr "파일 이름의 첫 글자 대문자"
+
+#: krenameimpl.cpp:475
+#, kde-format
+msgid "number (try also ##, ###, ... for leading zeros)"
+msgstr "숫자(0을 앞에 붙이려면 ##, ###, ... 를 사용)"
+
+#: krenameimpl.cpp:476
+#, kde-format
+msgid "counter with custom start value 0 and custom stepping 1"
+msgstr "사용자 지정 시작 값이 0이고 사용자 지정 단계별 값이 1인 문자 카운터"
+
+#: krenameimpl.cpp:477
+#, kde-format
+msgid "create a subdfolder"
+msgstr "하위 폴더 만들기"
+
+#: krenameimpl.cpp:478
+#, kde-format
+msgid "character x to y of old filename"
+msgstr "이전 파일 이름의 x번째부터 y번째까지 문자"
+
+#: krenameimpl.cpp:479
+#, kde-format
+msgid "y characters of old filename starting at x"
+msgstr "이전 파일 이름의 x번째부터 시작하여 y문자"
+
+#: krenameimpl.cpp:480
+#, kde-format
+msgid "insert name of folder"
+msgstr "폴더 이름 삽입"
+
+#: krenameimpl.cpp:481
+#, kde-format
+msgid "insert name of parent folder"
+msgstr "상위 폴더 이름 삽입"
+
+#: krenameimpl.cpp:482
+#, kde-format
+msgid ""
+"insert a '/' to create a new subfolder (useful from within regular "
+"expressions)"
+msgstr "'/'을 삽입하여 새 하위 폴더 생성(정규식 내에서 사용)"
+
+#: krenameimpl.cpp:483
+#, kde-format
+msgid "insert the length of the input filename"
+msgstr "입력 파일 이름 길이 삽입"
+
+#: krenameimpl.cpp:484
+#, kde-format
+msgid "strip whitespaces leading and trailing"
+msgstr "앞뒤 공백 삭제"
+
+#: krenameimpl.cpp:485
+#, kde-format
+msgid "strip whitespaces leading and trailing of an arbitrary string"
+msgstr "임의 문자열의 앞뒤 공백 삭제"
+
+#: krenameimpl.cpp:486
+#, kde-format
+msgid "Built-in Functions"
+msgstr "내장 함수"
+
+#: krenameimpl.cpp:489
+#, kde-format
+msgid "Insert '$'"
+msgstr "'$' 삽입"
+
+#: krenameimpl.cpp:490
+#, kde-format
+msgid "Insert '%'"
+msgstr "'%' 삽입"
+
+#: krenameimpl.cpp:491
+#, kde-format
+msgid "Insert '&'"
+msgstr "'&' 삽입"
+
+#: krenameimpl.cpp:492
+#, kde-format
+msgid "Insert '*'"
+msgstr "'*' 삽입"
+
+#: krenameimpl.cpp:493
+#, kde-format
+msgid "Insert '/'"
+msgstr "'/' 삽입"
+
+#: krenameimpl.cpp:494
+#, kde-format
+msgid "Insert '\\\\'"
+msgstr "'\\\\' 삽입"
+
+#: krenameimpl.cpp:495
+#, kde-format
+msgid "Insert '['"
+msgstr "'[' 삽입"
+
+#: krenameimpl.cpp:496
+#, kde-format
+msgid "Insert ']'"
+msgstr "']' 삽입"
+
+#: krenameimpl.cpp:497
+#, kde-format
+msgid "Insert '#'"
+msgstr "'#' 삽입"
+
+#: krenameimpl.cpp:498
+#, kde-format
+msgid "Special Characters"
+msgstr "특수 문자"
+
+#: krenameimpl.cpp:539
+#, kde-format
+msgid "Starting conversion of %1 file."
+msgid_plural "Starting conversion of %1 files."
+msgstr[0] "파일 %1개의 변환을 시작하는 중입니다."
+
+#: krenameimpl.cpp:551
+#, kde-format
+msgid "The folder %1 does not exist. Do you want KRename to create it for you?"
+msgstr "%1 폴더가 없습니다. 생성하시겠습니까?"
+
+#: krenameimpl.cpp:561
+#, kde-format
+msgid "The folder %1 could not be created."
+msgstr "%1 폴더를 만들 수 없습니다."
+
+#: krenamemodel.cpp:419
+#, kde-format
+msgid "Origin"
+msgstr "원래 이름"
+
+#: krenamemodel.cpp:419
+#, kde-format
+msgid "Renamed"
+msgstr "변경된 이름"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, listPlugins)
+#: krenameplugins.ui:42
+#, kde-format
+msgid "Plugins"
+msgstr "플러그인"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkEnablePlugin)
+#: krenameplugins.ui:60
+#, kde-format
+msgid "&Enable Plugin"
+msgstr "플러그인 활성화(&E)"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonHelp4)
+#. i18n: ectx: property (text), widget (QPushButton, buttonHelp3)
+#. i18n: ectx: property (text), widget (QPushButton, buttonHelp2)
+#. i18n: ectx: property (text), widget (QPushButton, buttonHelp1)
+#: krenamesimple.ui:85 krenamesimple.ui:95 krenamesimple.ui:163
+#: krenamesimple.ui:208
+#, kde-format
+msgid "?"
+msgstr "?"
+
+#: krenamewindow.cpp:35
+#, kde-format
+msgid "&1. Files"
+msgstr "&1. 파일"
+
+#: krenamewindow.cpp:36
+#, kde-format
+msgid "&2. Destination"
+msgstr "&2. 대상"
+
+#: krenamewindow.cpp:37
+#, kde-format
+msgid "&3. Plugins"
+msgstr "&3. 플러그인"
+
+#: krenamewindow.cpp:38
+#, kde-format
+msgid "&4. Filename"
+msgstr "&4. 파일 이름"
+
+#: krenamewindow.cpp:193
+#, kde-format
+msgid "&Finish"
+msgstr "완료(&F)"
+
+#: krenamewindow.cpp:437
+#, kde-format
+msgid "<b>Files:</b> %1"
+msgstr "<b>파일:</b> %1"
+
+#: main.cpp:45
+#, kde-format
+msgid ""
+"KRename is a batch file renamer which can rename a list of files based on a "
+"set of expressions."
+msgstr ""
+"KRename은 일련의 표현식을 기반으로 파일 목록의 이름을 바꿀 수 있는 일괄 파일"
+"이름 변경 프로그램입니다."
+
+#: main.cpp:48
+#, kde-format
+msgid ""
+"If you like KRename you may want to support it. Testing, bug fixes and "
+"feature requests are as welcome as financial support (everybody needs "
+"money ;). See help files for details."
+msgstr ""
+"KRename이 마음에 드시면 지원해 주세요. 테스트, 버그 수정 및 기능 요청은 재정"
+"적 지원만큼 환영합니다. 자세한 내용은 도움말 파일을 참조하십시오."
+
+#: main.cpp:52
+#, kde-format
+msgid "(c) 2001-2012, Dominik Seichter\n"
+msgstr "(c) 2001-2012, Dominik Seichter\n"
+
+#: main.cpp:55
+#, kde-format
+msgid "Heiko Becker"
+msgstr "Heiko Becker"
+
+#: main.cpp:55
+#, kde-format
+msgid "Current maintainer"
+msgstr "현재 관리자"
+
+#: main.cpp:57
+#, kde-format
+msgid "Dominik Seichter"
+msgstr "Dominik Seichter"
+
+#: main.cpp:57
+#, kde-format
+msgid "Developer and former maintainer"
+msgstr "개발자 및 이전 관리자"
+
+#: main.cpp:59
+#, kde-format
+msgid "Stefan \"Stonki\" Onken"
+msgstr "Stefan \"Stonki\" Onken"
+
+#: main.cpp:60
+#, kde-format
+msgid "Website, testing, very good ideas and keeping me coding!"
+msgstr "웹사이트, 테스트, 아주 좋은 아이디어와 날 계속 코딩하게 하네요!"
+
+#: main.cpp:63
+#, kde-format
+msgid "Arpad Biro"
+msgstr "Arpad Biro"
+
+#: main.cpp:63
+#, kde-format
+msgid ""
+"Helped to fix style guide issues and made improvements to user messages."
+msgstr "스타일 가이드 문제를 해결하고 사용자 메시지를 개선했습니다."
+
+#: main.cpp:64
+#, kde-format
+msgid "Trevor Semeniuk"
+msgstr "Trevor Semeniuk"
+
+#: main.cpp:64
+#, kde-format
+msgid "Thanks to him for creating RedHat 7.x packages and some other help."
+msgstr "레드햇 7.x 패키지를 만들고 다른 도움도 주셔서 감사합니다."
+
+#: main.cpp:66
+#, kde-format
+msgid "Groult Richard"
+msgstr "Groult Richard"
+
+#: main.cpp:66
+#, kde-format
+msgid ""
+"Fixed a bug with startIndex and added the BatchRenamer class\n"
+"to his excellent image viewer showimg."
+msgstr ""
+"시작 인덱스로 버그 수정 및 우수한 이미지 뷰어 showimg에 일괄 이름 변경 프로그"
+"램 클래스를 추가했습니다."
+
+#: main.cpp:69
+#, kde-format
+msgid "Michael Elvers"
+msgstr "Michael Elvers"
+
+#: main.cpp:69
+#, kde-format
+msgid "Fixed a bug that caused krename not closing open files."
+msgstr "KRename이 열린 파일을 닫지 못하게 하는 버그가 수정되었습니다."
+
+#: main.cpp:71
+#, kde-format
+msgid "Andreas Pour"
+msgstr "Andreas Pour"
+
+#: main.cpp:71
+#, kde-format
+msgid ""
+"Thanks for his great job at apps.kde.com and help with contributing krename "
+"to apps.kde.com."
+msgstr ""
+"apps.kde.com 사이트 작업에 감사를 드리며 KRename을 apps.kde.com에 등재하는 "
+"데 도움을 주셔서 감사합니다."
+
+#: main.cpp:73
+#, kde-format
+msgid "Charles Samuels"
+msgstr "Charles Samuels"
+
+#: main.cpp:73
+#, kde-format
+msgid ""
+"Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
+msgstr "noatun에 감사드리며 ID3/Ogg 태그 코드는 noatun 모듈을 기반으로 합니다."
+
+#: main.cpp:75
+#, kde-format
+msgid "Franz Schmid"
+msgstr "Franz Schmid"
+
+#: main.cpp:75
+#, kde-format
+msgid "Gave me a good start into writing plugins with his application scribus."
+msgstr "Scribus를 통해서 플러그인 작성 시작에 도움을 주었습니다."
+
+#: main.cpp:77
+#, kde-format
+msgid "Rolf Magnus"
+msgstr "Rolf Magnus"
+
+#: main.cpp:77
+#, kde-format
+msgid ""
+"Parts of the PNG support are copied from his KFile plugin for png support."
+msgstr "PNG 지원 부분은 KFile PNG 지원 플러그인에서 복사되었습니다."
+
+#: main.cpp:79
+#, kde-format
+msgid "Michael v.Ostheim"
+msgstr "Michael v.Ostheim"
+
+#: main.cpp:79
+#, kde-format
+msgid "Created the Gentoo Ebuild scripts for KRename."
+msgstr "KRename의 젠투 ebuild 스크립트를 작성했습니다."
+
+#: main.cpp:81
+#, kde-format
+msgid "Brandon Low"
+msgstr "Brandon Low"
+
+#: main.cpp:81
+#, kde-format
+msgid "Some GCC 3.1 fixes for Gentoo."
+msgstr "젠투용 일부 GCC 3.1 수정."
+
+#: main.cpp:83
+#, kde-format
+msgid "Per Oyvind Karlsen"
+msgstr "Per Oyvind Karlsen"
+
+#: main.cpp:83
+#, kde-format
+msgid "Thanks for creating the Mandrake RPM"
+msgstr "맨드레이크 RPM을 만들어 주셔서 감사합니다"
+
+#: main.cpp:85
+#, kde-format
+msgid "Vincenzo Reale"
+msgstr "Vincenzo Reale"
+
+#: main.cpp:85
+#, kde-format
+msgid "Italian translation"
+msgstr "이탈리아어 번역"
+
+#: main.cpp:86
+#, kde-format
+msgid "Daniele Medri"
+msgstr "Daniele Medri"
+
+#: main.cpp:86
+#, kde-format
+msgid "Italian translation work"
+msgstr "이탈리아어 번역 작업"
+
+#: main.cpp:87
+#, kde-format
+msgid "Stephan Johach"
+msgstr "Stephan Johach"
+
+#: main.cpp:87
+#, kde-format
+msgid "Provided a gcc3.x namespace patch"
+msgstr "GCC 3.x 네임스페이스 패치 제공"
+
+#: main.cpp:88
+#, kde-format
+msgid "Michael Zugaro"
+msgstr "Michael Zugaro"
+
+#: main.cpp:88
+#, kde-format
+msgid "Provided the new preview and move features"
+msgstr "새로운 미리 보기 및 이동 기능 제공"
+
+#: main.cpp:89
+#, kde-format
+msgid "Rene Gass"
+msgstr "Rene Gass"
+
+#: main.cpp:89
+#, kde-format
+msgid ""
+"Fixed problems with the spec file and contributed rpms for every SuSE "
+"version you can imagine and is also the new Gentoo maintainer for KRename"
+msgstr ""
+"spec 파일 오류 수정, 모든 출시된 SuSE 버전으로 RPM 파일 작성, 새로운 KRename"
+"의 젠투 관리자"
+
+#: main.cpp:90
+#, kde-format
+msgid "Mark Ziegler"
+msgstr "Mark Ziegler"
+
+#: main.cpp:90
+#, kde-format
+msgid "Provided SuSE RPMs and very good suggestions"
+msgstr "SuSE RPM 및 아주 좋은 제안 제공"
+
+#: main.cpp:91
+#, kde-format
+msgid "Jose Rodriguez"
+msgstr "Jose Rodriguez"
+
+#: main.cpp:91
+#, kde-format
+msgid "Contributed a Spanish translation"
+msgstr "스페인어 번역 기여"
+
+#: main.cpp:92
+#, kde-format
+msgid "Steven P. Ulrick"
+msgstr "Steven P. Ulrick"
+
+#: main.cpp:92
+#, kde-format
+msgid "Provided a RedHat RPM and was big help in improving KRename"
+msgstr "레드햇 RPM 제공 및 KRename 개선에 큰 도움 제공"
+
+#: main.cpp:93
+#, kde-format
+msgid "UTUMI Hirosi"
+msgstr "UTUMI Hirosi"
+
+#: main.cpp:93
+#, kde-format
+msgid "Translated KRename to Japanese"
+msgstr "KRename을 일본어로 번역"
+
+#: main.cpp:94
+#, kde-format
+msgid "Nicolas Benoit"
+msgstr "Nicolas Benoit"
+
+#: main.cpp:94
+#, kde-format
+msgid "Translated KRename into French"
+msgstr "KRename을 프랑스어로 번역"
+
+#: main.cpp:95
+#, kde-format
+msgid "Krzysztof Pawlak"
+msgstr "Krzysztof Pawlak"
+
+#: main.cpp:95
+#, kde-format
+msgid "Translated KRename into Polish"
+msgstr "KRename을 폴란드어로 번역"
+
+#: main.cpp:96
+#, kde-format
+msgid "Ilya Ivkov"
+msgstr "Ilya Ivkov"
+
+#: main.cpp:96
+#, kde-format
+msgid "Translated KRename into Russian"
+msgstr "KRename을 러시아어로 번역"
+
+#: main.cpp:97
+#, kde-format
+msgid "Asim Husanovic"
+msgstr "Asim Husanovic"
+
+#: main.cpp:97
+#, kde-format
+msgid "Translated KRename into Bosnian"
+msgstr "KRename을 보스니아어로 번역"
+
+#: main.cpp:98
+#, kde-format
+msgid "Michal Smoczyk"
+msgstr "Michal Smoczyk"
+
+#: main.cpp:98
+#, kde-format
+msgid "Polish Translation"
+msgstr "폴란드어 번역"
+
+#: main.cpp:99
+#, kde-format
+msgid "Pavel Fric"
+msgstr "Pavel Fric"
+
+#: main.cpp:99
+#, kde-format
+msgid "Czech Translation"
+msgstr "체코어 번역"
+
+#: main.cpp:100
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "이정희"
+
+#: main.cpp:101
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "daemul72@gmail.com"
+
+#: main.cpp:109
+#, kde-format
+msgid "Files to be added to the list to be renamed"
+msgstr "이름을 변경할 목록에 추가할 파일"
+
+#: main.cpp:109
+#, kde-format
+msgid "[files...]"
+msgstr "[파일...]"
+
+#: main.cpp:110
+#, kde-format
+msgid "add folder recursively"
+msgstr "재귀적으로 폴더 추가"
+
+#: main.cpp:110
+#, kde-format
+msgid "folder"
+msgstr "폴더"
+
+#: main.cpp:111
+#, kde-format
+msgid "set a template"
+msgstr "템플릿 설정"
+
+#: main.cpp:112
+#, kde-format
+msgid "set a template for the file extension"
+msgstr "파일 확장자에 대한 템플릿 설정"
+
+#: main.cpp:113
+#, kde-format
+msgid "enable a plugin for use"
+msgstr "사용할 플러그인 활성화"
+
+#: main.cpp:114
+#, kde-format
+msgid "copy files to folder or url"
+msgstr "파일을 폴더 또는 URL에 복사"
+
+#: main.cpp:114 main.cpp:115 main.cpp:116
+#, kde-format
+msgid "path or url"
+msgstr "경로 또는 URL"
+
+#: main.cpp:115
+#, kde-format
+msgid "move files to folder or url"
+msgstr "폴더 또는 URL로 파일 이동"
+
+#: main.cpp:116
+#, kde-format
+msgid "link files to folder or url"
+msgstr "폴더 또는 URL에 파일 링크"
+
+#: main.cpp:117
+#, kde-format
+msgid "start renaming immediately"
+msgstr "즉시 이름 바꾸기 시작"
+
+#: main.cpp:118
+#, kde-format
+msgid "start KRename's selftest (developers only)"
+msgstr "KRename의 자가 진단 시작(개발자 전용)"
+
+#: main.cpp:137
+#, kde-format
+msgid ""
+"<b>KRename was started from root!</b><br>When started from root, KRename may "
+"damage your system if you do not know exactly what you are doing!"
+msgstr ""
+"<b>KRename이 루트 권한으로 시작됨!</b><br>루트 권한으로 시작되었다면, 정확히 "
+"무엇을 하고 있는지 모른다면 KRename이 시스템을 손상시킬 수 있습니다!"
+
+#: main.cpp:141
+#, kde-format
+msgid "Error"
+msgstr "오류"
+
+#. i18n: ectx: property (title), widget (QGroupBox, grouNumbering)
+#: numberwidget.ui:17
+#, kde-format
+msgid "&Numbering"
+msgstr "번호 매기기(&N)"
+
+#. i18n: ectx: property (text), widget (QLabel, labelStart)
+#: numberwidget.ui:25
+#, kde-format
+msgid "Start &index:"
+msgstr "인덱스 시작(&I):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: numberwidget.ui:42
+#, kde-format
+msgid "&Step by:"
+msgstr "단계별(&S):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkReset)
+#: numberwidget.ui:61
+#, kde-format
+msgid "&Reset counter for every directory"
+msgstr "모든 디렉터리마다 카운터 초기화(&R)"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupSkip)
+#: numberwidget.ui:71
+#, kde-format
+msgid "&Skip Numbers"
+msgstr "숫자 건너뛰기(&S)"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonAdd)
+#: numberwidget.ui:84
+#, kde-format
+msgid "&Add Number"
+msgstr "숫자 추가(&A)"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
+#: numberwidget.ui:94
+#, kde-format
+msgid "&Remove Number"
+msgstr "숫자 삭제(&R)"
+
+#: odfplugin.cpp:62
+#, kde-format
+msgid "OpenDocument Format (ODT, ODS, ODP) Plugin"
+msgstr "OpenDocument 형식(ODT, ODS, ODP) 플러그인"
+
+#: odfplugin.cpp:63
+#, kde-format
+msgid ""
+"<qt>This plugin supports reading metadata from files in an OpenDocument "
+"format.</qt>"
+msgstr ""
+"<qt>이 플러그인은 OpenDocument 형식의 파일에서 메타데이터 읽기를 지원합니다."
+"</qt>"
+
+#: odfplugin.cpp:79
+#, kde-format
+msgid "Creator of the ODF file"
+msgstr "ODF 파일의 작성자"
+
+#: odfplugin.cpp:80
+#, kde-format
+msgid "Keywords of the ODF file"
+msgstr "ODF 파일의 키워드"
+
+#: odfplugin.cpp:81
+#, kde-format
+msgid "Subject of the ODF file"
+msgstr "ODF 파일의 주제"
+
+#: odfplugin.cpp:82
+#, kde-format
+msgid "Title of the ODF file"
+msgstr "ODF 파일의 제목"
+
+#: odfplugin.cpp:83
+#, kde-format
+msgid "Generator of the ODF file"
+msgstr "ODF 파일의 생성기"
+
+#: odfplugin.cpp:84
+#, kde-format
+msgid "Language of the ODF file"
+msgstr "ODF 파일의 언어"
+
+#: odfplugin.cpp:85
+#, kde-format
+msgid "Number of pages in the ODF file"
+msgstr "ODF 파일의 페이지 수"
+
+#: odfplugin.cpp:86
+#, kde-format
+msgid "Number of words in the ODF file"
+msgstr "ODF 파일의 단어 개수"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: partfilenamewidget.ui:25
+#, kde-format
+msgid ""
+"<qt>Please select the part of the old filename  which should be inserted "
+"into the new filename in the textbox below:</qt>"
+msgstr ""
+"<qt>아래 텍스트 상자에서 새 파일 이름에 삽입해야 하는 이전 파일 이름 부분을 "
+"선택하십시오:</qt>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkInvert)
+#: partfilenamewidget.ui:45
+#, kde-format
+msgid "&Invert selection"
+msgstr "선택 반전(&I)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: partfilenamewidget.ui:54
+#, kde-format
+msgid "&Convert selection:"
+msgstr "선택 변환(&C):"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
+#: partfilenamewidget.ui:65
+#, kde-format
+msgid "No Conversion"
+msgstr "변환 없음"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPreviewDesc)
+#: partfilenamewidget.ui:90
+#, kde-format
+msgid "Preview of the generated KRename command:"
+msgstr "생성된 KRename 명령의 미리 보기:"
+
+#: permissionsplugin.cpp:92
+#, kde-format
+msgid "Permissions"
+msgstr "권한"
+
+#: permissionsplugin.cpp:105
+#, kde-format
+msgid "PermissionsPlugin works only with local files. %1 is a remote file."
+msgstr "권한 플러그인은 로컬 파일에서만 작동합니다. %1은(는) 원격 파일입니다."
+
+#: permissionsplugin.cpp:110
+#, kde-format
+msgid "Cannot chmod %1."
+msgstr "%1을(를) chmod 할 수 없습니다."
+
+#: permissionsplugin.cpp:119
+#, kde-format
+msgid "Cannot chown %1."
+msgstr "%1을(를) chown 할 수 없습니다."
+
+#: permissionsplugin.cpp:170
+#, kde-format
+msgid "Access permissions"
+msgstr "접근 권한"
+
+#: permissionsplugin.cpp:175
+#, kde-format
+msgid "Class"
+msgstr "클래스"
+
+#: permissionsplugin.cpp:178
+#, kde-format
+msgid "Read"
+msgstr "읽기"
+
+#: permissionsplugin.cpp:181
+#, kde-format
+msgid "Write"
+msgstr "쓰기"
+
+#: permissionsplugin.cpp:184
+#, kde-format
+msgid "Exec"
+msgstr "실행"
+
+#: permissionsplugin.cpp:190
+#, kde-format
+msgid "Special"
+msgstr "특수"
+
+#: permissionsplugin.cpp:193 tokensortmodedialog.cpp:28
+#, kde-format
+msgid "User"
+msgstr "사용자"
+
+#: permissionsplugin.cpp:196 tokensortmodedialog.cpp:26
+#, kde-format
+msgid "Group"
+msgstr "그룹"
+
+#: permissionsplugin.cpp:199
+#, kde-format
+msgid "Others"
+msgstr "기타"
+
+#: permissionsplugin.cpp:202
+#, kde-format
+msgid "UID"
+msgstr "UID"
+
+#: permissionsplugin.cpp:205
+#, kde-format
+msgid "GID"
+msgstr "GID"
+
+#: permissionsplugin.cpp:208
+#, kde-format
+msgid "Sticky"
+msgstr "스티키"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, PermissionsPluginAdvanceDialog)
+#: permissionspluginadvanceddialog.ui:13
+#, kde-format
+msgid "Dialog"
+msgstr "대화 상자"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (title), widget (QGroupBox, groupPermissions)
+#: permissionspluginadvanceddialog.ui:41 permissionspluginwidget.ui:26
+#, kde-format
+msgid "Access Permissions"
+msgstr "접근 권한"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkPermissions)
+#: permissionspluginwidget.ui:16
+#, kde-format
+msgid "Change &Permissions"
+msgstr "권한 변경(&P)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: permissionspluginwidget.ui:34
+#, kde-format
+msgid "O&wner:"
+msgstr "소유자(&W):"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPermOwner)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPermGroup)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPermOthers)
+#: permissionspluginwidget.ui:51 permissionspluginwidget.ui:86
+#: permissionspluginwidget.ui:121
+#, kde-format
+msgid "Forbidden"
+msgstr "금지됨"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPermOwner)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPermGroup)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPermOthers)
+#: permissionspluginwidget.ui:56 permissionspluginwidget.ui:91
+#: permissionspluginwidget.ui:126
+#, kde-format
+msgid "Can Read"
+msgstr "읽기 가능"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPermOwner)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPermGroup)
+#. i18n: ectx: property (text), item, widget (QComboBox, comboPermOthers)
+#: permissionspluginwidget.ui:61 permissionspluginwidget.ui:96
+#: permissionspluginwidget.ui:131
+#, kde-format
+msgid "Can Read & Write"
+msgstr "읽기 및 쓰기 가능"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: permissionspluginwidget.ui:69
+#, kde-format
+msgid "Gro&up:"
+msgstr "그룹(&U):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: permissionspluginwidget.ui:104
+#, kde-format
+msgid "Ot&hers:"
+msgstr "기타(&H):"
+
+#. i18n: ectx: property (text), widget (QLabel, labelAdvanced)
+#: permissionspluginwidget.ui:139
+#, kde-format
+msgid "This file uses advanced permissions"
+msgstr "이 파일은 고급 권한을 사용합니다"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkFolder)
+#: permissionspluginwidget.ui:148
+#, kde-format
+msgid "Is Executable/Only owner &can rename and delete folder content"
+msgstr "실행 가능/소유자만 폴더 내용의 이름을 바꾸거나 삭제할 수 있음(&C)"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: permissionspluginwidget.ui:170
+#, kde-format
+msgid "A&dvanced Permissions"
+msgstr "고급 권한(&D)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkOwner)
+#: permissionspluginwidget.ui:182
+#, kde-format
+msgid "&Change Owner"
+msgstr "소유자 변경(&C)"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
+#: permissionspluginwidget.ui:192
+#, kde-format
+msgid "Ownership"
+msgstr "소유권"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: permissionspluginwidget.ui:198
+#, kde-format
+msgid "&User:"
+msgstr "사용자(&U):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: permissionspluginwidget.ui:224
+#, kde-format
+msgid "&Group:"
+msgstr "그룹(&G):"
+
+#: podofoplugin.cpp:23
+#, kde-format
+msgid "Author of the PDF file"
+msgstr "PDF 파일의 작성자"
+
+#: podofoplugin.cpp:24
+#, kde-format
+msgid "Creator of the PDF file"
+msgstr "PDF 파일의 생성자"
+
+#: podofoplugin.cpp:25
+#, kde-format
+msgid "Keywords of the PDF file"
+msgstr "PDF 파일의 키워드"
+
+#: podofoplugin.cpp:26
+#, kde-format
+msgid "Subject of the PDF file"
+msgstr "PDF 파일의 주제"
+
+#: podofoplugin.cpp:27
+#, kde-format
+msgid "Title of the PDF file"
+msgstr "PDF 파일의 제목"
+
+#: podofoplugin.cpp:28
+#, kde-format
+msgid "Producer of the PDF file"
+msgstr "PDF 파일의 제작자"
+
+#: podofoplugin.cpp:29
+#, kde-format
+msgid "Number of pages in the PDF file"
+msgstr "PDF 파일의 페이지 수"
+
+#: podofoplugin.cpp:31
+#, kde-format
+msgid "PoDoFo (PDF) Plugin"
+msgstr "PoDoFo(PDF) 플러그인"
+
+#: podofoplugin.cpp:32
+#, kde-format
+msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
+msgstr "<qt>이 플러그인은 PDF 파일에서 태그를 읽을 수 있도록 지원합니다.</qt>"
+
+#: previewlist.cpp:17
+#, kde-format
+msgid "&Change filename manually..."
+msgstr "수동으로 파일 이름 변경(&C)..."
+
+#: previewlist.cpp:19
+#, kde-format
+msgid "&Open"
+msgstr "열기(&O)"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
+#: previewlist.cpp:22 replacewidget.ui:111
+#, kde-format
+msgid "&Remove"
+msgstr "삭제(&R)"
+
+#: progressdialog.cpp:18
+#, kde-format
+msgid "&Rename more..."
+msgstr "더 많은 이름 바꾸기(&R)..."
+
+#: progressdialog.cpp:19
+#, kde-format
+msgid "&Undo"
+msgstr "실행 취소(&U)"
+
+#: progressdialog.cpp:20
+#, kde-format
+msgid "&Open Destination"
+msgstr "대상 열기(&O)"
+
+#: progressdialog.cpp:37
+#, kde-format
+msgid "Restart &KRename..."
+msgstr "KRename 다시 시작(&K)..."
+
+#: progressdialog.cpp:39
+#, kde-format
+msgid "Rename Processed Files &Again..."
+msgstr "처리된 파일의 이름 다시 바꾸기(&A)..."
+
+#: progressdialog.cpp:40
+#, kde-format
+msgid "Rename &Unprocessed Files Again..."
+msgstr "처리되지 않은 파일의 이름 다시 바꾸기(&U)..."
+
+#: progressdialog.cpp:41
+#, kde-format
+msgid "&Rename All Files Again..."
+msgstr "모든 파일의 이름 다시 바꾸기(&R)..."
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, ProgressDialog)
+#: progressdialog.ui:13
+#, kde-format
+msgid "Progress"
+msgstr "진행률"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
+#: progressdialog.ui:28
+#, kde-format
+msgid "&Cancel"
+msgstr "취소(&C)"
+
+#: replacedialog.cpp:67
+#, kde-format
+msgid "Save Find & Replace Settings as:"
+msgstr "찾기 및 바꾸기 설정 저장 위치:"
+
+#: replacedialog.cpp:68
+#, kde-format
+msgid "KRename Find & Replace Settings XML (*.xml)"
+msgstr "KRename 찾기 및 바꾸기 설정 XML (*.xml)"
+
+#: replacedialog.cpp:77
+#, kde-format
+msgid "Failed to save the Find & Replace Settings File."
+msgstr "찾기 및 바꾸기 설정 파일을 저장하지 못했습니다."
+
+#: replacedialog.cpp:129
+#, kde-format
+msgid "Save Find and Replace Settings File"
+msgstr "찾기 및 바꾸기 설정 파일 저장"
+
+#: replacedialog.cpp:131
+#, kde-format
+msgid "KRename Find and Replace Settings XML (*.xml)"
+msgstr "KRename 찾기 및 바꾸기 설정 XML (*.xml)"
+
+#: replacedialog.cpp:139
+#, kde-format
+msgid ""
+"Failed to open the Find and Replace Settings File. Cannot read file %1:\n"
+"%2."
+msgstr ""
+"찾기 및 바꾸기 설정 파일을 열지 못했습니다. %1 파일을 읽을 수 없음:\n"
+"%2."
+
+#: replacedialog.cpp:150 replacedialog.cpp:161 replacedialog.cpp:166
+#: replacedialog.cpp:232
+#, kde-format
+msgid "KRename Find and Replace Settings XML File"
+msgstr "KRename 찾기 및 바꾸기 설정 XML 파일"
+
+#: replacedialog.cpp:151
+#, kde-format
+msgid ""
+"Parse error at line %1, column %2:\n"
+"%3"
+msgstr ""
+"%1행, %2열의 해석 오류:\n"
+"%3"
+
+#: replacedialog.cpp:160
+#, kde-format
+msgid "The file is not a KRename XML file."
+msgstr "이 파일은 KRename XML 파일이 아닙니다."
+
+#: replacedialog.cpp:165
+#, kde-format
+msgid "The file is not an KRename XML version 1.0 file."
+msgstr "이 파일은 KRename XML 버전 1.0 파일이 아닙니다."
+
+#: replacedialog.cpp:231
+#, kde-format
+msgid "Problem with loading KRename XML file."
+msgstr "KRename XML 파일을 불러오는 중 문제가 발생했습니다."
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ReplaceWidget)
+#. i18n: ectx: property (windowTitle), widget (QDialog, ReplaceItemDlg)
+#: replaceitemdlg.ui:14 replacewidget.ui:14
+#, kde-format
+msgid "Find and Replace"
+msgstr "찾기 및 바꾸기"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: replaceitemdlg.ui:22
+#, kde-format
+msgid "&Find:"
+msgstr "찾기(&F):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: replaceitemdlg.ui:35
+#, kde-format
+msgid "&Replace With:"
+msgstr "바꾸기(&R):"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkRegular)
+#: replaceitemdlg.ui:50
+#, kde-format
+msgid "Find is a Regular &Expression"
+msgstr "정규 표현식으로 찾기(&E)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkProcess)
+#: replaceitemdlg.ui:57
+#, kde-format
+msgid "&Process tokens in replace string"
+msgstr "바꾸기 문자열의 처리 토큰(&P)"
+
+#. i18n: ectx: property (text), widget (QTableWidget, list)
+#: replacewidget.ui:32
+#, kde-format
+msgid "Reg. Expression"
+msgstr "정규 표현식"
+
+#. i18n: ectx: property (text), widget (QTableWidget, list)
+#: replacewidget.ui:37
+#, kde-format
+msgid "Find"
+msgstr "찾기"
+
+#. i18n: ectx: property (text), widget (QTableWidget, list)
+#: replacewidget.ui:42
+#, kde-format
+msgid "Replace With"
+msgstr "바꾸기"
+
+#. i18n: ectx: property (text), widget (QTableWidget, list)
+#: replacewidget.ui:47
+#, kde-format
+msgid "Process Tokens"
+msgstr "처리 토큰"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonSaveList)
+#: replacewidget.ui:70
+#, kde-format
+msgid "&Save Settings..."
+msgstr "설정 저장(&S)..."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonLoadList)
+#: replacewidget.ui:77
+#, kde-format
+msgid "&Load Settings..."
+msgstr "설정 불러오기(&L)..."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonEdit)
+#: replacewidget.ui:104
+#, kde-format
+msgid "&Edit..."
+msgstr "편집(&E)..."
+
+#: scriptplugin.cpp:90
+#, kde-format
+msgid "JavaScript Plugin"
+msgstr "자바스크립트 플러그인"
+
+#: scriptplugin.cpp:97
+#, kde-format
+msgid "Insert a snippet of JavaScript code (4+5 in this case)"
+msgstr "자바스크립트 코드 스니펫 삽입(이 경우 4+5)"
+
+#: scriptplugin.cpp:99
+#, kde-format
+msgid "Index of the current file"
+msgstr "현재 파일의 인덱스"
+
+#: scriptplugin.cpp:100
+#, kde-format
+msgid "URL of the current file"
+msgstr "현재 파일의 URL"
+
+#: scriptplugin.cpp:101
+#, kde-format
+msgid "Filename of the current file"
+msgstr "현재 파일의 파일 이름"
+
+#: scriptplugin.cpp:102
+#, kde-format
+msgid "Extension of the current file"
+msgstr "현재 파일의 확장자"
+
+#: scriptplugin.cpp:103
+#, kde-format
+msgid "Directory of the current file"
+msgstr "현재 파일의 디렉터리"
+
+#: scriptplugin.cpp:155
+#, kde-format
+msgid "Variable Name"
+msgstr "변수 이름"
+
+#: scriptplugin.cpp:156
+#, kde-format
+msgid "Initial Value"
+msgstr "초기 값"
+
+#: scriptplugin.cpp:248
+#, kde-format
+msgid "String"
+msgstr "문자열"
+
+#: scriptplugin.cpp:249
+#, kde-format
+msgid "Int"
+msgstr "정수"
+
+#: scriptplugin.cpp:250
+#, kde-format
+msgid "Double"
+msgstr "실수"
+
+#: scriptplugin.cpp:251
+#, kde-format
+msgid "Boolean"
+msgstr "참/거짓"
+
+#: scriptplugin.cpp:266
+#, kde-format
+msgid "A JavaScript error has occurred: "
+msgstr "자바스크립트 오류가 발생했습니다: "
+
+#: scriptplugin.cpp:290
+#, kde-format
+msgid ""
+"All currently entered definitions will be lost. Do you want to continue?"
+msgstr "현재 입력된 모든 정의가 손실됩니다. 계속 진행하시겠습니까?"
+
+#: scriptplugin.cpp:297 scriptplugin.cpp:316
+#, kde-format
+msgid "Select file"
+msgstr "파일 선택"
+
+#: scriptplugin.cpp:327
+#, kde-format
+msgid "The file %1 already exists. Do you want to overwrite it?"
+msgstr "%1 파일이 이미 있습니다. 덮어쓰시겠습니까?"
+
+#: scriptplugin.cpp:345
+#, kde-format
+msgid "Unable to open %1 for writing."
+msgstr "쓰려고 %1을(를) 열 수 없습니다."
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, ScriptPluginDialog)
+#: scriptplugindialog.ui:20
+#, kde-format
+msgid "Create Variable"
+msgstr "변수 생성"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: scriptplugindialog.ui:28
+#, kde-format
+msgid "&Name:"
+msgstr "이름(&N):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: scriptplugindialog.ui:41
+#, kde-format
+msgid "&Initial Value:"
+msgstr "초기 값(&I):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: scriptplugindialog.ui:54
+#, kde-format
+msgid "&Type:"
+msgstr "형식(&T):"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: scriptpluginwidget.ui:24
+#, kde-format
+msgid "&Variables"
+msgstr "변수(&V)"
+
+#. i18n: ectx: property (text), widget (QLabel, labelDescVariables)
+#: scriptpluginwidget.ui:30
+#, kde-format
+msgid "Declare global variables that can be used from within your functions:"
+msgstr "함수 내에서 사용할 수 있는 전역 변수 선언:"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, listVariables)
+#: scriptpluginwidget.ui:58
+#, kde-format
+msgid "1"
+msgstr "1"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
+#: scriptpluginwidget.ui:75
+#, kde-format
+msgid "&Delete"
+msgstr "삭제(&D)"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: scriptpluginwidget.ui:100
+#, kde-format
+msgid "&Definitions"
+msgstr "정의(&D)"
+
+#. i18n: ectx: property (text), widget (QLabel, labelDescDef)
+#: scriptpluginwidget.ui:106
+#, kde-format
+msgid "Define functions that can be used from KRename templates:"
+msgstr "KRename 템플릿에서 사용할 수 있는 함수를 정의합니다:"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonSave)
+#: scriptpluginwidget.ui:127
+#, kde-format
+msgid "&Save to File..."
+msgstr "파일에 저장하기(&S)..."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonLoad)
+#: scriptpluginwidget.ui:134
+#, kde-format
+msgid "&Load from File..."
+msgstr "파일에서 불러오기(&L)..."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
+#: scriptpluginwidget.ui:141
+#, kde-format
+msgid "&Insert Variable"
+msgstr "변수 삽입(&I)"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonTest)
+#: scriptpluginwidget.ui:164
+#, kde-format
+msgid "&Test..."
+msgstr "시험(&T)..."
+
+#: snumplugin.cpp:21
+#, kde-format
+msgid "Inserts the series number of original filename"
+msgstr "원래 파일 이름의 시리즈 번호 삽입"
+
+#: snumplugin.cpp:22
+#, kde-format
+msgid "Inserts the season number in two digits"
+msgstr "시즌 번호를 두 자릿수로 삽입"
+
+#: snumplugin.cpp:23
+#, kde-format
+msgid "Inserts the episode number in two or three digits"
+msgstr "두 자리 또는 세 자리 숫자로 에피소드 번호 삽입"
+
+#. i18n("Inserts the season number in at least pad digits") );
+#. m_help.append( "[episode;pad];;" + i18n("Inserts the episode number in at least pad digits") );
+#: snumplugin.cpp:27
+#, kde-format
+msgid "SeriesNumber"
+msgstr "시리즈 번호"
+
+#: snumplugin.cpp:29
+#, kde-format
+msgid ""
+"<qt>This plugin can extract information from the filename of a TV series.</"
+"qt>"
+msgstr ""
+"<qt>이 플러그인은 TV 시리즈의 파일 이름에서 정보를 추출할 수 있습니다.</qt>"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: startupinfowidget.ui:29
+#, kde-format
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
+"large; font-weight:600;\">Welcome to KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">A batch file renamer by "
+"KDE.<br />To rename your files, you have to:</p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
+"large; font-weight:600;\">KRename에 오신 것을 환영합니다. </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">KDE의 일괄 파일 이름 바꾸"
+"기 프로그램입니다.<br />파일 이름을 변경하려면 다음을 수행하십시오:</p></"
+"body></html>"
+
+#. i18n: ectx: property (text), widget (KUrlLabel, labelAdd)
+#: startupinfowidget.ui:57
+#, kde-format
+msgid "Add some files ..."
+msgstr "일부 파일 추가..."
+
+#. i18n: ectx: property (text), widget (KUrlLabel, labelTemplate)
+#: startupinfowidget.ui:71
+#, kde-format
+msgid "Specify the new filenames by giving a template ..."
+msgstr "템플릿을 지정하여 새 파일 이름 지정..."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: startupinfowidget.ui:93
+#, kde-format
+msgid "Hint: Undo is still possible after renaming your files."
+msgstr "힌트: 파일 이름을 변경한 후에도 실행 취소가 가능합니다."
+
+#: systemplugin.cpp:38
+#, kde-format
+msgid "Insert the current date"
+msgstr "현재 날짜 삽입"
+
+#: systemplugin.cpp:39
+#, kde-format
+msgid "Insert the current date using the formatting string yyyy-MM-dd"
+msgstr "yyyy-MM-dd 형식 지정 문자열을 사용하여 현재 날짜 삽입"
+
+#: systemplugin.cpp:40
+#, kde-format
+msgid "Insert the current year"
+msgstr "현재 연도를 삽입"
+
+#: systemplugin.cpp:41
+#, kde-format
+msgid "Insert the current month as number"
+msgstr "현재 달을 숫자로 삽입"
+
+#: systemplugin.cpp:42
+#, kde-format
+msgid "Insert the current day as number"
+msgstr "현재 날짜를 숫자로 삽입"
+
+#: systemplugin.cpp:43
+#, kde-format
+msgid "Insert the current time"
+msgstr "현재 시간 삽입"
+
+#: systemplugin.cpp:44
+#, kde-format
+msgid "Insert the current hour as number"
+msgstr "현재 시간을 숫자로 삽입"
+
+#: systemplugin.cpp:45
+#, kde-format
+msgid "Insert the current minute as number"
+msgstr "현재 분을 숫자로 삽입"
+
+#: systemplugin.cpp:46
+#, kde-format
+msgid "Insert the current second as number"
+msgstr "현재 초를 숫자로 삽입"
+
+#: systemplugin.cpp:47
+#, kde-format
+msgid "Owner of the file"
+msgstr "파일 소유자"
+
+#: systemplugin.cpp:48
+#, kde-format
+msgid "Owning group of the file"
+msgstr "파일 소유 그룹"
+
+#: systemplugin.cpp:49
+#, kde-format
+msgid "Insert the files creation date"
+msgstr "파일 생성 날짜 삽입"
+
+#: systemplugin.cpp:50
+#, kde-format
+msgid "Insert the formatted file creation date"
+msgstr "파일을 생성한 날짜를 형식을 지정하여 삽입"
+
+#: systemplugin.cpp:51
+#, kde-format
+msgid "Insert the files modification date"
+msgstr "파일 수정한 날짜 삽입"
+
+#: systemplugin.cpp:52
+#, kde-format
+msgid "Insert the formatted modification date"
+msgstr "수정한 날짜를 형식을 지정하여 삽입"
+
+#: systemplugin.cpp:53
+#, kde-format
+msgid "Insert the date of the last file access"
+msgstr "마지막 파일 접근 날짜 삽입"
+
+#: systemplugin.cpp:54
+#, kde-format
+msgid "Insert the formatted date of the last file access"
+msgstr "마지막으로 파일에 접근한 날짜를 형식을 지정하여 삽입"
+
+#: systemplugin.cpp:55
+#, kde-format
+msgid "Insert the file size in bytes"
+msgstr "파일 크기를 바이트 단위로 삽입"
+
+#: systemplugin.cpp:57
+#, kde-format
+msgid "Date and system functions"
+msgstr "날짜 및 시스템 함수"
+
+#: systemplugin.cpp:59
+#, kde-format
+msgid ""
+"<qt>This plugin contains tokens to get the creation, modification and last "
+"access time of files and the current system time and date.</qt>"
+msgstr ""
+"<qt>이 플러그인은 파일의 생성, 수정 및 마지막 접근 시간과 현재 시스템 시간 "
+"및 날짜를 가져올 수 있는 토큰을 포함합니다.</qt>"
+
+#: taglibplugin.cpp:28
+#, kde-format
+msgid "Insert the title of a track"
+msgstr "트랙 제목 삽입"
+
+#: taglibplugin.cpp:29
+#, kde-format
+msgid "Insert the artist of a track"
+msgstr "트랙 아티스트 삽입"
+
+#: taglibplugin.cpp:30
+#, kde-format
+msgid "Insert the album of a track"
+msgstr "트랙 앨범 삽입"
+
+#: taglibplugin.cpp:31
+#, kde-format
+msgid "Insert the comment of a track"
+msgstr "트랙의 주석 삽입"
+
+#: taglibplugin.cpp:32
+#, kde-format
+msgid "Insert the genre of a track"
+msgstr "트랙 장르 삽입"
+
+#: taglibplugin.cpp:33
+#, kde-format
+msgid "Insert the year of a track"
+msgstr "트랙 연도 삽입"
+
+#: taglibplugin.cpp:34
+#, kde-format
+msgid "Insert the number of a track"
+msgstr "트랙 번호 삽입"
+
+#: taglibplugin.cpp:35
+#, kde-format
+msgid "Insert the number of a track formatted with a leading 0"
+msgstr "앞에 0이 붙은 트랙 번호 삽입"
+
+#: taglibplugin.cpp:37
+#, kde-format
+msgid "TagLib (MP3/Ogg) Plugin"
+msgstr "TagLib(MP3/Ogg) 플러그인"
+
+#: taglibplugin.cpp:38
+#, kde-format
+msgid ""
+"<qt>This plugin supports reading tags for MP3, Ogg Vorbis, FLAC, MPC, Speex "
+"WavPack and TrueAudio files.</qt>"
+msgstr ""
+"<qt>이 플러그인은 MP3 및 Ogg Vorbis, FLAC, MPC, Spex WavPack, TrueAudio 파일"
+"의 태그 읽기를 지원합니다.</qt>"
+
+#: tokenhelpdialog.cpp:96
+#, kde-format
+msgid "&Insert"
+msgstr "삽입(&I)"
+
+#: tokenhelpdialog.cpp:305
+#, kde-format
+msgid "Recent"
+msgstr "최근"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, TokenHelpWidget)
+#: tokenhelpwidget.ui:13
+#, kde-format
+msgid "KRename Help"
+msgstr "KRename 도움말"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: tokenhelpwidget.ui:19
+#, kde-format
+msgid ""
+"All supported tokens (commands) are listed in this dialog. You can search "
+"for tokens and insert a found token into the pattern for the filename."
+msgstr ""
+"지원하는 모든 토큰(명령)이 이 대화 상자에 표시됩니다. 토큰을 검색하고 발견한 "
+"토큰을 파일 이름의 패턴에 삽입할 수 있습니다."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, listCategories)
+#: tokenhelpwidget.ui:61
+#, kde-format
+msgid "Category"
+msgstr "분류"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, listTokens)
+#: tokenhelpwidget.ui:95
+#, kde-format
+msgid "Token"
+msgstr "토큰"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, listTokens)
+#: tokenhelpwidget.ui:100
+#, kde-format
+msgid "Description"
+msgstr "설명"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, listTokens)
+#: tokenhelpwidget.ui:105
+#, kde-format
+msgid "Preview"
+msgstr "미리 보기"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkPreview)
+#: tokenhelpwidget.ui:119
+#, kde-format
+msgid "Token &Preview"
+msgstr "토큰 미리 보기(&P)"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPreview)
+#: tokenhelpwidget.ui:142
+#, kde-format
+msgid "Preview File:"
+msgstr "파일 미리 보기:"
+
+#: tokensortmodedialog.cpp:23
+#, kde-format
+msgid "Access Date"
+msgstr "접근한 날짜"
+
+#: tokensortmodedialog.cpp:24
+#, kde-format
+msgid "Creation Date"
+msgstr "만든 날짜"
+
+#: tokensortmodedialog.cpp:25
+#, kde-format
+msgid "Filesize"
+msgstr "파일 크기"
+
+#: tokensortmodedialog.cpp:27
+#, kde-format
+msgid "Modification Date"
+msgstr "수정한 날짜"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, TokenSortModeDialog)
+#: tokensortmodedialog.ui:14
+#, kde-format
+msgid "Custom Sorting"
+msgstr "사용자 정의 정렬"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: tokensortmodedialog.ui:22
+#, kde-format
+msgid "&Sort filenames ..."
+msgstr "파일 이름 정렬(&S)..."
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioAscending)
+#: tokensortmodedialog.ui:28
+#, kde-format
+msgid "&Ascending"
+msgstr "오름차순(&A)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioDescending)
+#: tokensortmodedialog.ui:38
+#, kde-format
+msgid "&Descending"
+msgstr "내림차순(&D)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioNumeric)
+#: tokensortmodedialog.ui:45
+#, kde-format
+msgid "&Numeric"
+msgstr "숫자(&N)"
+
+# 왼쪽에 "파일 이름 정렬", 오른쪽에 "토큰"이 있음.
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: tokensortmodedialog.ui:61
+#, kde-format
+msgid "by"
+msgstr "기준"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: tokensortmodedialog.ui:68
+#, kde-format
+msgid "&Token ..."
+msgstr "토큰(&T)..."
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioPredefined)
+#: tokensortmodedialog.ui:74
+#, kde-format
+msgid "&Predefined"
+msgstr "사전 정의됨(&P)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
+#: tokensortmodedialog.ui:87
+#, kde-format
+msgid "&Custom"
+msgstr "사용자 정의(&C)"
+
+#: translitplugin.cpp:81
+#, kde-format
+msgid "Inserts the transliterated original filename"
+msgstr "음역된 원래 파일 이름 삽입"
+
+#: translitplugin.cpp:82
+#, kde-format
+msgid "Inserts the transliterated original filename converted to lower case"
+msgstr "음역된 원래 파일 이름을 소문자로 변환하여 삽입"
+
+#: translitplugin.cpp:83
+#, kde-format
+msgid "Inserts the transliterated original filename converted to upper case"
+msgstr "음역된 원래 파일 이름을 대문자로 변환하여 삽입"
+
+#: translitplugin.cpp:84
+#, kde-format
+msgid "Inserts the transliterated original filename capitalized"
+msgstr "음역된 원래 파일 이름을 대문자로 삽입"
+
+#: translitplugin.cpp:85
+#, kde-format
+msgid "Transliterates the string following the semicolon"
+msgstr "쌍반점 다음의 문자열을 음역합니다"
+
+#: translitplugin.cpp:87
+#, kde-format
+msgid "Transliteration"
+msgstr "음역"
+
+#: translitplugin.cpp:89
+#, kde-format
+msgid ""
+"<qt>This plugin can transcribe a filename into English (i.e. perform "
+"transliteration).</qt>"
+msgstr ""
+"<qt>이 플러그인은 파일 이름을 영어로 변환할 수 있습니다(즉, 음역 수행).</qt>"
