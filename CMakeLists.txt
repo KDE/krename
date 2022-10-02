@@ -90,3 +90,5 @@ configure_file(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename
 
 add_subdirectory(src)
 add_subdirectory(autotests)
+
+ki18n_install(po)
