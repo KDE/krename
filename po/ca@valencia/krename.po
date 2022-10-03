@@ -1435,7 +1435,7 @@ msgstr "Jose Rodriguez"
 #: main.cpp:91
 #, kde-format
 msgid "Contributed a Spanish translation"
-msgstr "Ha col·laborat a la traducció al castellà"
+msgstr "Ha col·laborat en la traducció al castellà"
 
 #: main.cpp:92
 #, kde-format
@@ -2134,7 +2134,7 @@ msgstr "La busca és una &expressió regular"
 #: replaceitemdlg.ui:57
 #, kde-format
 msgid "&Process tokens in replace string"
-msgstr "Testimonis del &procés a la cadena de substitució"
+msgstr "Testimonis del &procés en la cadena de substitució"
 
 #. i18n: ectx: property (text), widget (QTableWidget, list)
 #: replacewidget.ui:32
