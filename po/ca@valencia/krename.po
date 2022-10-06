@@ -283,7 +283,7 @@ msgstr "&Opcions:"
 #: dirsortpluginwidget.ui:38
 #, kde-format
 msgid "Number of &files per folder:"
-msgstr "Nombre de &fitxers per carpeta:"
+msgstr "Nombre de fi&txers per carpeta:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: dirsortpluginwidget.ui:58
@@ -478,7 +478,7 @@ msgstr "&Opcions"
 #: krenamedestination.ui:52
 #, kde-format
 msgid "&Rename input files"
-msgstr "&Canvia el nom els fitxers d'entrada"
+msgstr "Ca&nvia el nom dels fitxers d'entrada"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionCopy)
 #: krenamedestination.ui:62
@@ -666,7 +666,7 @@ msgstr "Nom de fitxer &senzill"
 #: krenamefilename.ui:312 krenamesimple.ui:48
 #, kde-format
 msgid "&Filename"
-msgstr "Nom de &fitxer"
+msgstr "Nom de fi&txer"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSuffix)
 #: krenamefilename.ui:333 krenamesimple.ui:72
@@ -823,7 +823,7 @@ msgstr "Afig els fitxers a canviar de nom."
 #: scriptpluginwidget.ui:68
 #, kde-format
 msgid "&Add..."
-msgstr "&Afig..."
+msgstr "Afi&g..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonRemove)
 #: krenamefiles.ui:66
@@ -1645,7 +1645,7 @@ msgstr "O&met els números"
 #: numberwidget.ui:84
 #, kde-format
 msgid "&Add Number"
-msgstr "&Afig un número"
+msgstr "Afi&g un número"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
 #: numberwidget.ui:94
@@ -1721,13 +1721,13 @@ msgstr ""
 #: partfilenamewidget.ui:45
 #, kde-format
 msgid "&Invert selection"
-msgstr "&Invertix la selecció"
+msgstr "I&nvertix la selecció"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: partfilenamewidget.ui:54
 #, kde-format
 msgid "&Convert selection:"
-msgstr "&Convertix la selecció:"
+msgstr "Con&vertix la selecció:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #: partfilenamewidget.ui:65
@@ -1984,7 +1984,7 @@ msgstr "&Canvia el nom del fitxer manualment..."
 #: previewlist.cpp:19
 #, kde-format
 msgid "&Open"
-msgstr "&Obri"
+msgstr "O&bri"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
 #: previewlist.cpp:22 replacewidget.ui:111
@@ -1995,7 +1995,7 @@ msgstr "&Elimina"
 #: progressdialog.cpp:18
 #, kde-format
 msgid "&Rename more..."
-msgstr "&Canvia el nom més..."
+msgstr "Ca&nvia el nom més..."
 
 #: progressdialog.cpp:19
 #, kde-format
@@ -2005,7 +2005,7 @@ msgstr "&Desfés"
 #: progressdialog.cpp:20
 #, kde-format
 msgid "&Open Destination"
-msgstr "&Obri la destinació"
+msgstr "O&bri la destinació"
 
 #: progressdialog.cpp:37
 #, kde-format
@@ -2025,7 +2025,7 @@ msgstr "Canvia el nom els fitxers &sense processar una altra vegada..."
 #: progressdialog.cpp:41
 #, kde-format
 msgid "&Rename All Files Again..."
-msgstr "&Canvia el nom tots els fitxers una altra vegada..."
+msgstr "Ca&nvia el nom de tots els fitxers una altra vegada..."
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ProgressDialog)
 #: progressdialog.ui:13
@@ -2037,7 +2037,7 @@ msgstr "Progrés"
 #: progressdialog.ui:28
 #, kde-format
 msgid "&Cancel"
-msgstr "&Cancel·la"
+msgstr "C&ancel·la"
 
 #: replacedialog.cpp:67
 #, kde-format
@@ -2122,7 +2122,7 @@ msgstr "Bu&sca:"
 #: replaceitemdlg.ui:35
 #, kde-format
 msgid "&Replace With:"
-msgstr "&Substituïx amb:"
+msgstr "Su&bstituïx amb:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkRegular)
 #: replaceitemdlg.ui:50
