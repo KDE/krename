@@ -3,6 +3,8 @@
 
 #include "krenamefile.h"
 
+#include <QIcon>
+
 #include <kio/previewjob.h>
 #include <KJobWidgets>
 #include <kio_version.h>
@@ -25,9 +27,9 @@ public:
         return s_instance;
     }
 
-    QPixmap loadIcon(const QUrl &url)
+    QIcon loadIcon(const QUrl &url)
     {
-        return KIO::pixmapForUrl(url);
+        return QIcon::fromTheme(KIO::iconNameForUrl(url));
     }
 
 private:
@@ -223,7 +225,7 @@ void KRenameFile::initFileDescription(TFileDescription &rDescription, const QUrl
 
 void KRenameFile::loadPreviewIcon()
 {
-    m_icon = KRenamePreviewProvider::Instance()->loadIcon(m_src.url);
+    m_icon = KRenamePreviewProvider::Instance()->loadIcon(m_src.url).pixmap(m_iconSize);
 }
 
 int KRenameFile::dots() const
