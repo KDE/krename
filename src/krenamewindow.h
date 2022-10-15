@@ -10,6 +10,8 @@
 #include <QHash>
 #include <KTreeWidgetSearchLine>
 
+#include <KLazyLocalizedString>
+
 class KRenameModel;
 class KRenamePreviewModel;
 
@@ -63,7 +65,7 @@ public:
      */
     typedef struct {
         const int   numPages;
-        const char *pageTitles[KRenameWindow::MAX_PAGES];
+        const KLazyLocalizedString pageTitles[KRenameWindow::MAX_PAGES];
         const int   mapIndex[KRenameWindow::MAX_PAGES];
         const char *pageIcons[KRenameWindow::MAX_PAGES];
     } TGuiMode;
