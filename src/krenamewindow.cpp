@@ -28,14 +28,15 @@
 #include <QVBoxLayout>
 
 #include <KHelpMenu>
+#include <KLazyLocalizedString>
 
 static const KRenameWindow::TGuiMode tAdvancedMode = {
     4,
     {
-        I18N_NOOP("&1. Files"),
-        I18N_NOOP("&2. Destination"),
-        I18N_NOOP("&3. Plugins"),
-        I18N_NOOP("&4. Filename")
+        kli18n("&1. Files"),
+        kli18n("&2. Destination"),
+        kli18n("&3. Plugins"),
+        kli18n("&4. Filename")
     },
     {
         0, 1, 2, 3
@@ -71,7 +72,7 @@ KRenameWindow::KRenameWindow(QWidget *parent)
 
     for (int i = 0; i < tAdvancedMode.numPages; i++) {
         const QIcon &icon = QIcon::fromTheme(tAdvancedMode.pageIcons[i]);
-        m_tabBar->addTab(icon, i18n(tAdvancedMode.pageTitles[i]));
+        m_tabBar->addTab(icon, tAdvancedMode.pageTitles[i].toString());
     }
 
     m_pageFiles    = new Ui::KRenameFiles();
