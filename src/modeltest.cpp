@@ -4,6 +4,8 @@
 #include "modeltest.h"
 
 #include <QSize>
+#include <QColor>
+#include <QFont>
 
 Q_DECLARE_METATYPE(QModelIndex)
 
