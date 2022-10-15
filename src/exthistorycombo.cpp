@@ -15,7 +15,7 @@
 ExtHistoryCombo::ExtHistoryCombo(QWidget *parent)
     : KHistoryComboBox(parent)
 {
-    connect(this, static_cast<void (ExtHistoryCombo::*)(const QString &)>(&ExtHistoryCombo::activated),
+    connect(this, &ExtHistoryCombo::textActivated,
             this, &ExtHistoryCombo::addToHistory);
     connect(this, &ExtHistoryCombo::editTextChanged,
             this, &ExtHistoryCombo::slotTextChanged);
