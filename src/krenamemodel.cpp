@@ -11,7 +11,8 @@
 #include <QApplication>
 
 #include <KLocalizedString>
-#include <krun.h>
+#include <KIO/OpenUrlJob>
+#include <KIO/JobUiDelegateFactory>
 #include <kio/previewjob.h>
 
 KRenameModel::KRenameModel(KRenameFile::List *vector)
@@ -320,7 +321,9 @@ void KRenameModel::sortFiles(ESortMode mode, const QString &customSortToken, KRe
 void KRenameModel::run(const QModelIndex &index, QWidget *window) const
 {
     KRenameFile file = m_vector->at(index.row());
-    new KRun(file.srcUrl(), window);
+    auto *job = new KIO::OpenUrlJob(file.srcUrl());
+    job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled, window));
+    job->start();
 }
 
 const QModelIndex KRenameModel::createIndex(int row) const

@@ -8,7 +8,8 @@
 
 #include <QMenu>
 
-#include <krun.h>
+#include <KIO/OpenUrlJob>
+#include <KIO/JobUiDelegateFactory>
 
 ProgressDialog::ProgressDialog(ESplitMode eSplitMode, unsigned int dot, QWidget *parent)
     : QDialog(parent), m_canceled(false), m_renamer(nullptr), m_eSplitMode(eSplitMode), m_dot(dot)
@@ -50,7 +51,9 @@ void ProgressDialog::slotCancelled()
 
 void ProgressDialog::slotOpenDestination()
 {
-    new KRun(m_dest, this);
+    auto *job = new KIO::OpenUrlJob(m_dest);
+    job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled, this));
+    job->start();
 }
 
 void ProgressDialog::slotRestartKRename()
