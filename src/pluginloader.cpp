@@ -4,6 +4,7 @@
 #include "pluginloader.h"
 
 #include <QtGlobal>
+#include <QRegExp>
 
 #include "krenameimpl.h"
 #include "plugin.h"

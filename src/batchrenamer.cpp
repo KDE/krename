@@ -22,6 +22,7 @@
 #include <sys/stat.h>
 
 // QT includes
+#include <QRegExp>
 #include <QTextStream>
 
 // KDE includes
