@@ -129,8 +129,8 @@ target_link_libraries(libkrename
     KF5::KIOFileWidgets
     KF5::I18n
     KF5::IconThemes
-    Qt5::Widgets
-    Qt5::Qml
+    Qt${QT_MAJOR_VERSION}::Widgets
+    Qt${QT_MAJOR_VERSION}::Qml
 )
 if(TAGLIB_FOUND)
     target_link_libraries(libkrename
@@ -149,7 +149,7 @@ if(PoDoFo_FOUND)
 endif()
 if(KF5Archive_FOUND)
     target_link_libraries(libkrename
-        Qt5::Xml
+        Qt${QT_MAJOR_VERSION}::Xml
         KF5::Archive
     )
 endif()
