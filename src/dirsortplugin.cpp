@@ -140,8 +140,7 @@ QUrl DirSortPlugin::createNewSubdirectory() const
 {
     QUrl url = m_baseDirectory;
 
-    QString dir;
-    dir.sprintf("%0*i", m_digits, m_dirCounter);
+    QString dir = QString::asprintf("%0*i", m_digits, m_dirCounter);
     url = url.adjusted(QUrl::StripTrailingSlash);
     url.setPath(url.path() + '/' + (dir));
 
