@@ -1117,7 +1117,7 @@ QString BatchRenamer::doReplace(const QString &text, const QString &find, const 
     } else {
         // no doEscape() here for the regexp, because it would destroy our regular expression
         // other wise we will not find stuff like $, [ in the text
-        t = unEscape(t).replace(QRegExp(find), replace);
+        t = unEscape(t).replace(QRegularExpression(find), replace);
         t = doEscape(t);
     }
 
