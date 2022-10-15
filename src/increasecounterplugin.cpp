@@ -43,8 +43,7 @@ QString IncreaseCounterPlugin::processFile(BatchRenamer *, int, const QString &f
 
         tmp += m_offset;
 
-        QString tmpstr;
-        return (prenum + tmpstr.sprintf("%0*li", splitit.cap(2).length(), tmp) + postnum);
+        return (prenum + QString::asprintf("%0*li", (int)splitit.cap(2).length(), tmp) + postnum);
     }
     return QString();
 }

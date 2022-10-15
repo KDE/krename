@@ -477,8 +477,7 @@ QString BatchRenamer::processNumber(int length, const QString &appendix)
         m_counters[m_counter_index].value += m_counters[m_counter_index].step;
     } while (m_skip.contains(m_counters[m_counter_index].value));
 
-    QString number;
-    number.sprintf("%0*i", length, m_counters[m_counter_index].value);
+    QString number = QString::asprintf("%0*i", length, m_counters[m_counter_index].value);
 
     ++m_counter_index;
     return number;
@@ -920,7 +919,7 @@ QString BatchRenamer::findToken(const QString &oldname, QString token, int i)
         bool b = false;
         int n = token.toInt(&b);
         if (b) {
-            token = token.sprintf("%0*i", numwidth, n);
+            token = QString::asprintf("%0*i", numwidth, n);
         }
     }
     break;

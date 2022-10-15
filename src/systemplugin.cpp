@@ -76,7 +76,6 @@ QString SystemPlugin::processFile(BatchRenamer *b, int index, const QString &fil
     QString token(filenameOrToken);
     QDate d = QDate::currentDate();
     QTime t = QTime::currentTime();
-    QString tmp;
     QString format = "dd-MM-yyyy";
     if (token.contains(";")) {
         format = token.section(';', 1, 1);
@@ -90,20 +89,20 @@ QString SystemPlugin::processFile(BatchRenamer *b, int index, const QString &fil
     } else if (token == "year") {
         return QString("%1").arg(d.year());
     } else if (token == "month") {
-        return tmp.sprintf("%0*i", 2, d.month());
+        return QString::asprintf("%0*i", 2, d.month());
     } else if (token == "day") {
-        return tmp.sprintf("%0*i", 2, d.day());
+        return QString::asprintf("%0*i", 2, d.day());
     } else if (token == "time") {
-        QString hour   = QString().sprintf("%0*i", 2, t.hour());
-        QString minute = QString().sprintf("%0*i", 2, t.minute());
-        QString second = QString().sprintf("%0*i", 2, t.second());
+        QString hour   = QString::asprintf("%0*i", 2, t.hour());
+        QString minute = QString::asprintf("%0*i", 2, t.minute());
+        QString second = QString::asprintf("%0*i", 2, t.second());
         return QString("%1-%2-%3").arg(hour, minute, second);
     } else if (token == "hour") {
-        return tmp.sprintf("%0*i", 2, t.hour());
+        return QString::asprintf("%0*i", 2, t.hour());
     } else if (token == "minute") {
-        return tmp.sprintf("%0*i", 2, t.minute());
+        return QString::asprintf("%0*i", 2, t.minute());
     } else if (token == "second") {
-        return tmp.sprintf("%0*i", 2, t.second());
+        return QString::asprintf("%0*i", 2, t.second());
     } else {
         const QUrl &url = b->files()->at(index).srcUrl();
 #if KIO_VERSION >= QT_VERSION_CHECK(5, 69, 0)
