@@ -648,7 +648,8 @@ msgstr "&Numeració..."
 #: krenamefilename.ui:247
 #, kde-format
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
-msgstr "<qt>Selecciona gràficament una part d'un nom de fitxer a inserir.</qt>"
+msgstr ""
+"<qt>Selecciona gràficament una part d'un nom de fitxer que s'inserirà.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:250
@@ -816,7 +817,7 @@ msgstr "A&vall"
 #: krenamefiles.ui:53
 #, kde-format
 msgid "Add files for renaming."
-msgstr "Afig els fitxers a canviar de nom."
+msgstr "Afig els fitxers que es canviaran de nom."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonAdd)
 #: krenamefiles.ui:56 previewlist.cpp:21 replacewidget.ui:97
@@ -927,7 +928,7 @@ msgstr "Mostra el nom de fitxer juntament amb la vista prèvia."
 #: krenamefiles.ui:164
 #, kde-format
 msgid "&Display name"
-msgstr "Nom a &mostrar"
+msgstr "Nom que s'ha de &mostrar"
 
 #. i18n: ectx: property (text), widget (QLabel, labelCount)
 #: krenamefiles.ui:174
