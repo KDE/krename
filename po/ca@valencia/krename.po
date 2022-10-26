@@ -2016,12 +2016,12 @@ msgstr "Torna a iniciar &KRename..."
 #: progressdialog.cpp:39
 #, kde-format
 msgid "Rename Processed Files &Again..."
-msgstr "Canvia el nom els fitxers processats una altra veg&ada..."
+msgstr "Canvia el nom dels fitxers processats una altra veg&ada..."
 
 #: progressdialog.cpp:40
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
-msgstr "Canvia el nom els fitxers &sense processar una altra vegada..."
+msgstr "Canvia el nom dels fitxers &sense processar una altra vegada..."
 
 #: progressdialog.cpp:41
 #, kde-format
