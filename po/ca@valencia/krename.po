@@ -490,7 +490,7 @@ msgstr "&Copia els fitxers a la carpeta de destinació"
 #: krenamedestination.ui:69
 #, kde-format
 msgid "&Move files to destination folder"
-msgstr "&Mou els fitxers a la carpeta de destinació"
+msgstr "&Mou els fitxers cap a la carpeta de destinació"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionLink)
 #: krenamedestination.ui:76
