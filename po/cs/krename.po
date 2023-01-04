@@ -1,6 +1,6 @@
 # Pavel Fric <pavelfric@seznam.cz>, 2009, 2010, 2011, 2014.
 # Vít Pelčák <vit@pelcak.org>, 2016, 2017, 2018.
-# Vit Pelcak <vpelcak@suse.cz>, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
