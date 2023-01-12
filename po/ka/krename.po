@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-01 00:48+0000\n"
-"PO-Revision-Date: 2022-09-28 18:00+0200\n"
+"PO-Revision-Date: 2023-01-11 09:22+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
 #, kde-format
@@ -68,52 +68,52 @@ msgstr "KRename-მა სახელის გადარქმევის �
 #: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:733
 #, kde-format
 msgid "Press close to quit."
-msgstr ""
+msgstr "გასასვლელად დახურვას დააჭირეთ."
 
 #: batchrenamer.cpp:341
 #, kde-format
 msgid "Filenames Processed after %1 seconds."
-msgstr ""
+msgstr "ფაილის სახელები დამუშავებულია %1 წამის შემდეგ."
 
 #: batchrenamer.cpp:356
 #, kde-format
 msgid "Undoing all renamed files."
-msgstr ""
+msgstr "ყველა გადარქმეული სახელის დაბრუნება."
 
 #: batchrenamer.cpp:388
 #, kde-format
 msgid "Error during undoing %1"
-msgstr ""
+msgstr "შეცდომა %1-ის დაბრუნებისას"
 
 #: batchrenamer.cpp:400
 #, kde-format
 msgid "KRename finished the undo process."
-msgstr ""
+msgstr "KRename -მა დაასრულა დაბრუნების პროცესი."
 
 #: batchrenamer.cpp:636
 #, kde-format
 msgid "Cannot create undo script: %1"
-msgstr ""
+msgstr "დაბრუნებს სკრიპტის შექმნის შეცდომა: %1"
 
 #: batchrenamer.cpp:710
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
-msgstr ""
+msgstr "დაბრუნება შეუძლებელია დაშორებული ფაილისთვის: %1"
 
 #: batchrenamer.cpp:724
 #, kde-format
 msgid "Renamed %1 files successfully."
-msgstr ""
+msgstr "%1 ფაილს სახელი წარმატებით გადაერქვა."
 
 #: batchrenamer.cpp:731
 #, kde-format
 msgid "Elapsed time: %1 seconds"
-msgstr ""
+msgstr "გასული დრო: %1 წამი"
 
 #: batchrenamer.cpp:743
 #, kde-format
 msgid "Cannot set executable bit on undo script."
-msgstr ""
+msgstr "დაბრუნების სკრიპტზე გაშვების ალმის დაყენების შეცდომა."
 
 #: batchrenamer.cpp:1163
 #, kde-format
@@ -136,13 +136,13 @@ msgstr "შეიყვანეთ ახალი ფაილის სახ
 #: customfilenamedlg.ui:97
 #, kde-format
 msgid "Rename the file using the filename created by KRename."
-msgstr ""
+msgstr "ფაილის KRenameსის მიერ შექმნილ სახელზე გადარქმევა."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioKRename)
 #: customfilenamedlg.ui:100
 #, kde-format
 msgid "Use filename created by &KRename"
-msgstr ""
+msgstr "&KRename-ის მიერ შექმნილ სახელზე გადარქმევა"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioInput)
 #: customfilenamedlg.ui:112
@@ -156,7 +156,7 @@ msgstr ""
 #: customfilenamedlg.ui:115
 #, kde-format
 msgid "Use &input filename"
-msgstr ""
+msgstr "&შეყვანის ფაილის სახელის გამკოყენება"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioCustom)
 #: customfilenamedlg.ui:122
@@ -169,12 +169,12 @@ msgstr ""
 #: customfilenamedlg.ui:125
 #, kde-format
 msgid "Use &custom filename"
-msgstr ""
+msgstr "&ფაილის სახელის ხელით მითითება"
 
 #: datetimeplugin.cpp:35
 #, kde-format
 msgid "Date & Time Plugin"
-msgstr ""
+msgstr "დროისა და თარიღის დამატება"
 
 #: datetimeplugin.cpp:55
 #, kde-format
@@ -218,12 +218,12 @@ msgstr "დრო:"
 #: datetimepluginwidget.ui:63
 #, kde-format
 msgid "Get &Current Time"
-msgstr ""
+msgstr "&მიმდინარე დროის მიღება"
 
 #: dirsortplugin.cpp:28
 #, kde-format
 msgid "Subfolder-Sort Plugin"
-msgstr ""
+msgstr "ქვესაქაღალდის დალაგების დამატება"
 
 #: dirsortplugin.cpp:90
 #, kde-format
@@ -233,7 +233,7 @@ msgstr ""
 #: dirsortplugin.cpp:153
 #, kde-format
 msgid "Cannot create folder %1"
-msgstr ""
+msgstr "საქაღალდის (%1) შექმნის შეცდომა"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dirsortpluginwidget.ui:25
@@ -254,41 +254,41 @@ msgstr ""
 #: dirsortpluginwidget.ui:32
 #, kde-format
 msgid "&Options:"
-msgstr ""
+msgstr "&პარამეტრები:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: dirsortpluginwidget.ui:38
 #, kde-format
 msgid "Number of &files per folder:"
-msgstr ""
+msgstr "ფაილების &რაოდენობა თითოეულ საქაღალდეში:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: dirsortpluginwidget.ui:58
 #, kde-format
 msgid "&Start index:"
-msgstr ""
+msgstr "&ინდექსის დასაწყისი:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: dirsortpluginwidget.ui:75
 #, kde-format
 msgid "Number &of digits:"
-msgstr ""
+msgstr "&ციფრების რაოდენობა:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: dirsortpluginwidget.ui:98
 #, kde-format
 msgid "Out&put:"
-msgstr ""
+msgstr "&გამოტანა:"
 
 #: exiv2plugin.cpp:295
 #, kde-format
 msgid "Insert the comment of an image"
-msgstr ""
+msgstr "შეიყვანეთ გამოსახულების კომენტარი"
 
 #: exiv2plugin.cpp:362
 #, kde-format
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
-msgstr ""
+msgstr "Exiv2 (JPEG/TIFF Exif) დამატება"
 
 #: exiv2plugin.cpp:363
 #, kde-format
@@ -303,17 +303,17 @@ msgstr ""
 #: filedialogextwidget.cpp:38
 #, kde-format
 msgid "Add subfolders &recursively"
-msgstr ""
+msgstr "ქვესაქაღალდეების &რეკურსიული დამატება"
 
 #: filedialogextwidget.cpp:39
 #, kde-format
 msgid "Add &hidden folders"
-msgstr ""
+msgstr "&დამალული საქაღალდეების დამატება"
 
 #: filedialogextwidget.cpp:40
 #, kde-format
 msgid "Add folder names only"
-msgstr ""
+msgstr "&მხოლოდ საქაღალდის სახელების დამატება"
 
 #: filedialogextwidget.cpp:56
 #, kde-format
@@ -346,7 +346,7 @@ msgstr ""
 #: fileplugin.cpp:70
 #, kde-format
 msgid "Supported tokens:"
-msgstr ""
+msgstr "მხარდაჭერილი კოდები:"
 
 #: fontplugin.cpp:19
 #, kde-format
@@ -366,7 +366,7 @@ msgstr ""
 #: fontplugin.cpp:23
 #, kde-format
 msgid "Font (FreeType2) Plugin"
-msgstr ""
+msgstr "ფონტის (FreeType2) დამატება"
 
 #: fontplugin.cpp:24
 #, kde-format
@@ -400,13 +400,13 @@ msgstr ""
 #: increasecounterplugin.cpp:25
 #, kde-format
 msgid "Increase Counter"
-msgstr ""
+msgstr "მთვლელის გაზრდა"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: increasecounterpluginwidget.ui:17
 #, kde-format
 msgid "&Increase Counter"
-msgstr ""
+msgstr "&მთვლელის გაზრდა"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: increasecounterpluginwidget.ui:24
@@ -423,49 +423,49 @@ msgstr ""
 #: increasecounterpluginwidget.ui:49
 #, kde-format
 msgid "Offse&t:"
-msgstr ""
+msgstr "&წანაცვლება:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOptions)
 #: krenamedestination.ui:31
 #, kde-format
 msgid "&Options"
-msgstr ""
+msgstr "&პარამეტრები"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionRename)
 #: krenamedestination.ui:52
 #, kde-format
 msgid "&Rename input files"
-msgstr ""
+msgstr "&შეყვანის ფაილების გადარქმევა"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionCopy)
 #: krenamedestination.ui:62
 #, kde-format
 msgid "&Copy files to destination folder"
-msgstr ""
+msgstr "&ფაილების კოპირება სამიზნე საქაღალდეში"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionMove)
 #: krenamedestination.ui:69
 #, kde-format
 msgid "&Move files to destination folder"
-msgstr ""
+msgstr "&ფაილების გადატანა სამიზნე საქაღალდეში"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionLink)
 #: krenamedestination.ui:76
 #, kde-format
 msgid "Create symbolic &links in destination folder"
-msgstr ""
+msgstr "&სამიზნე საქაღალდეში სიმბმულების შექმნა"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkOverwrite)
 #: krenamedestination.ui:99
 #, kde-format
 msgid "&Overwrite existing files"
-msgstr ""
+msgstr "&არსებულ ფაილებზე გადაწერა"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: krenamefilename.ui:27
 #, kde-format
 msgid "&Advanced Filename"
-msgstr ""
+msgstr "&დამატებით ფაილის სახელი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblTemplate)
 #: krenamefilename.ui:50
@@ -515,7 +515,7 @@ msgstr ""
 #: krenamefilename.ui:115
 #, kde-format
 msgid "&Functions..."
-msgstr ""
+msgstr "&ფუნქციები..."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:141
@@ -533,7 +533,7 @@ msgstr ""
 #: krenamefilename.ui:167
 #, kde-format
 msgid "F&ile extension starts at:"
-msgstr ""
+msgstr "&ფაილის გაფართოების დასაწყისი:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, comboExtension)
 #: krenamefilename.ui:177
@@ -548,19 +548,19 @@ msgstr ""
 #: krenamefilename.ui:181
 #, kde-format
 msgid "First Dot"
-msgstr ""
+msgstr "პირველი წერტილი"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:186
 #, kde-format
 msgid "Last Dot"
-msgstr ""
+msgstr "ბოლო წერტილი"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:191
 #, kde-format
 msgid "No File Extension"
-msgstr ""
+msgstr "ფაილის გაფართოების გარეშე"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFind)
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFindSimple)
@@ -576,7 +576,7 @@ msgstr ""
 #: krenamefilename.ui:224 krenamefilename.ui:748 krenamesimple.ui:439
 #, kde-format
 msgid "Find &and Replace..."
-msgstr ""
+msgstr "ძებნა და &ჩანაცვლება..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:234
@@ -608,7 +608,7 @@ msgstr ""
 #: krenamefilename.ui:289
 #, kde-format
 msgid "&Simple Filename"
-msgstr ""
+msgstr "&მარტივი ფაილის სახელი"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupFilename)
 #: krenamefilename.ui:312 krenamesimple.ui:48
@@ -627,7 +627,7 @@ msgstr "&სუფიქსი:"
 #: krenamefilename.ui:398 krenamesimple.ui:125
 #, kde-format
 msgid "Use original name"
-msgstr ""
+msgstr "ფაილის საწყისი სახელის გამოყენება"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
@@ -638,7 +638,7 @@ msgstr ""
 #: krenamesimple.ui:272 partfilenamewidget.ui:70
 #, kde-format
 msgid "Convert to lower case"
-msgstr ""
+msgstr "დაბალ რეგისტრში გადაყვანა"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
@@ -649,7 +649,7 @@ msgstr ""
 #: krenamesimple.ui:277 partfilenamewidget.ui:75
 #, kde-format
 msgid "Convert to upper case"
-msgstr ""
+msgstr "მაღალ რეგისტრში გადაყვანა"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
@@ -667,13 +667,13 @@ msgstr "დიდი ასოთი აღნიშვნა"
 #: krenamefilename.ui:418 krenamesimple.ui:145
 #, kde-format
 msgid "Custom name"
-msgstr ""
+msgstr "ხელით მითითებული სახელი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblFilename)
 #: krenamefilename.ui:426 krenamesimple.ui:153
 #, kde-format
 msgid "File&name:"
-msgstr ""
+msgstr "&ფაილის სახელი:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSuffix)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPrefix)
@@ -695,46 +695,46 @@ msgstr "თარიღი"
 #: krenamefilename.ui:500 krenamesimple.ui:215
 #, kde-format
 msgid "&Prefix:"
-msgstr ""
+msgstr "&პრეფიქსი:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExtension_2)
 #. i18n: ectx: property (text), widget (QLabel, lblExtension)
 #: krenamefilename.ui:510 krenamesimple.ui:225
 #, kde-format
 msgid "&Extension:"
-msgstr ""
+msgstr "&გაფართოება:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtensionSimple)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:552 krenamesimple.ui:267
 #, kde-format
 msgid "Use original extension"
-msgstr ""
+msgstr "საწყისი გაფართოების გამოყენება"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtensionSimple)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:572 krenamesimple.ui:287
 #, kde-format
 msgid "Custom extension"
-msgstr ""
+msgstr "გაფართოების ხელით მითითება"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupNumber)
 #: krenamefilename.ui:647 krenamesimple.ui:344
 #, kde-format
 msgid "N&umber"
-msgstr ""
+msgstr "&რიცხვი"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDigits)
 #: krenamefilename.ui:697 krenamesimple.ui:397
 #, kde-format
 msgid "Number of &digits:"
-msgstr ""
+msgstr "&ციფრების რაოდენობა:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblIndex)
 #: krenamefilename.ui:707 krenamesimple.ui:407
 #, kde-format
 msgid "Start  &index:"
-msgstr ""
+msgstr "&ინდექსის დასაწყისი:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonUp)
 #: krenamefilename.ui:835 krenamefiles.ui:210
@@ -777,7 +777,7 @@ msgstr "&დამატება.."
 #: krenamefiles.ui:66
 #, kde-format
 msgid "Remove selected files."
-msgstr ""
+msgstr "მონიშნული ფაილების წაშლა."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
 #: krenamefiles.ui:69
@@ -789,13 +789,13 @@ msgstr "წა&შლა"
 #: krenamefiles.ui:76
 #, kde-format
 msgid "Remove all files."
-msgstr ""
+msgstr "ყველა ფაილის წაშლა."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemoveAll)
 #: krenamefiles.ui:79
 #, kde-format
 msgid "Re&move All"
-msgstr ""
+msgstr "&ყველას წაშლა"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: krenamefiles.ui:88
@@ -849,7 +849,7 @@ msgstr ""
 #: krenamefiles.ui:134
 #, kde-format
 msgid "Custom ..."
-msgstr ""
+msgstr "ხელით..."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkPreview)
 #: krenamefiles.ui:151
@@ -861,7 +861,7 @@ msgstr ""
 #: krenamefiles.ui:154
 #, kde-format
 msgid "&Preview"
-msgstr ""
+msgstr "&გადახედვა"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkName)
 #: krenamefiles.ui:161
@@ -873,7 +873,7 @@ msgstr ""
 #: krenamefiles.ui:164
 #, kde-format
 msgid "&Display name"
-msgstr ""
+msgstr "&სახელის ჩვენება"
 
 #. i18n: ectx: property (text), widget (QLabel, labelCount)
 #: krenamefiles.ui:174
@@ -993,47 +993,47 @@ msgstr ""
 #: krenameimpl.cpp:489
 #, kde-format
 msgid "Insert '$'"
-msgstr ""
+msgstr "'$'-ის ჩასმა"
 
 #: krenameimpl.cpp:490
 #, kde-format
 msgid "Insert '%'"
-msgstr ""
+msgstr "'%'-ის ჩასმა"
 
 #: krenameimpl.cpp:491
 #, kde-format
 msgid "Insert '&'"
-msgstr ""
+msgstr "'&'-ის ჩასმა"
 
 #: krenameimpl.cpp:492
 #, kde-format
 msgid "Insert '*'"
-msgstr ""
+msgstr "'*'-ის ჩასმა"
 
 #: krenameimpl.cpp:493
 #, kde-format
 msgid "Insert '/'"
-msgstr ""
+msgstr "'/'-ის ჩასმა"
 
 #: krenameimpl.cpp:494
 #, kde-format
 msgid "Insert '\\\\'"
-msgstr ""
+msgstr "'\\\\'-ის ჩასმა"
 
 #: krenameimpl.cpp:495
 #, kde-format
 msgid "Insert '['"
-msgstr ""
+msgstr "'['-ის ჩასმა"
 
 #: krenameimpl.cpp:496
 #, kde-format
 msgid "Insert ']'"
-msgstr ""
+msgstr "']'-ის ჩასმა"
 
 #: krenameimpl.cpp:497
 #, kde-format
 msgid "Insert '#'"
-msgstr ""
+msgstr "'#'-ის ჩასმა"
 
 #: krenameimpl.cpp:498
 #, kde-format
@@ -1065,7 +1065,7 @@ msgstr "საწყისი"
 #: krenamemodel.cpp:419
 #, kde-format
 msgid "Renamed"
-msgstr ""
+msgstr "გადარქმეულია"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listPlugins)
 #: krenameplugins.ui:42
@@ -1092,22 +1092,22 @@ msgstr "?"
 #: krenamewindow.cpp:35
 #, kde-format
 msgid "&1. Files"
-msgstr ""
+msgstr "&1. ფაილები"
 
 #: krenamewindow.cpp:36
 #, kde-format
 msgid "&2. Destination"
-msgstr ""
+msgstr "&2. სამიზნე"
 
 #: krenamewindow.cpp:37
 #, kde-format
 msgid "&3. Plugins"
-msgstr ""
+msgstr "&3. დამატებები"
 
 #: krenamewindow.cpp:38
 #, kde-format
 msgid "&4. Filename"
-msgstr ""
+msgstr "&4. ფაილის სახელი"
 
 #: krenamewindow.cpp:193
 #, kde-format
@@ -1117,7 +1117,7 @@ msgstr "&დასრულება"
 #: krenamewindow.cpp:437
 #, kde-format
 msgid "<b>Files:</b> %1"
-msgstr ""
+msgstr "<b>ფაილები:</b> %1"
 
 #: main.cpp:45
 #, kde-format
@@ -1137,7 +1137,7 @@ msgstr ""
 #: main.cpp:52
 #, kde-format
 msgid "(c) 2001-2012, Dominik Seichter\n"
-msgstr ""
+msgstr "(c) 2001-2012, Dominik Seichter\n"
 
 #: main.cpp:55
 #, kde-format
@@ -1157,7 +1157,7 @@ msgstr "Dominik Seichter"
 #: main.cpp:57
 #, kde-format
 msgid "Developer and former maintainer"
-msgstr ""
+msgstr "პროგრამისტი და ყოფილი წამყვანი"
 
 #: main.cpp:59
 #, kde-format
@@ -1294,7 +1294,7 @@ msgstr "Vincenzo Reale"
 #: main.cpp:85
 #, kde-format
 msgid "Italian translation"
-msgstr ""
+msgstr "იტალიური თარგმანი"
 
 #: main.cpp:86
 #, kde-format
@@ -1304,7 +1304,7 @@ msgstr "Daniele Medri"
 #: main.cpp:86
 #, kde-format
 msgid "Italian translation work"
-msgstr ""
+msgstr "იტალიური თარგმანზე მუშაობა"
 
 #: main.cpp:87
 #, kde-format
@@ -1356,7 +1356,7 @@ msgstr "Jose Rodriguez"
 #: main.cpp:91
 #, kde-format
 msgid "Contributed a Spanish translation"
-msgstr ""
+msgstr "ესპანური თარგმანის ნაწილი"
 
 #: main.cpp:92
 #, kde-format
@@ -1376,7 +1376,7 @@ msgstr "UTUMI Hirosi"
 #: main.cpp:93
 #, kde-format
 msgid "Translated KRename to Japanese"
-msgstr ""
+msgstr "იაპონური თარგმანი"
 
 #: main.cpp:94
 #, kde-format
@@ -1386,7 +1386,7 @@ msgstr "Nicolas Benoit"
 #: main.cpp:94
 #, kde-format
 msgid "Translated KRename into French"
-msgstr ""
+msgstr "ფრანგული თარგმანი"
 
 #: main.cpp:95
 #, kde-format
@@ -1396,7 +1396,7 @@ msgstr "Krzysztof Pawlak"
 #: main.cpp:95
 #, kde-format
 msgid "Translated KRename into Polish"
-msgstr ""
+msgstr "პოლონური თარგმანი"
 
 #: main.cpp:96
 #, kde-format
@@ -1406,7 +1406,7 @@ msgstr "Ilya Ivkov"
 #: main.cpp:96
 #, kde-format
 msgid "Translated KRename into Russian"
-msgstr ""
+msgstr "რუსული თარგმანი"
 
 #: main.cpp:97
 #, kde-format
@@ -1416,7 +1416,7 @@ msgstr "Asim Husanovic"
 #: main.cpp:97
 #, kde-format
 msgid "Translated KRename into Bosnian"
-msgstr ""
+msgstr "ბოსნიური თარგმანი"
 
 #: main.cpp:98
 #, kde-format
@@ -1426,7 +1426,7 @@ msgstr "Michal Smoczyk"
 #: main.cpp:98
 #, kde-format
 msgid "Polish Translation"
-msgstr ""
+msgstr "პოლონური თარგმანი"
 
 #: main.cpp:99
 #, kde-format
@@ -1436,7 +1436,7 @@ msgstr "Pavel Fric"
 #: main.cpp:99
 #, kde-format
 msgid "Czech Translation"
-msgstr ""
+msgstr "ჩეხური თარგმანი"
 
 #: main.cpp:100
 #, kde-format
@@ -1458,12 +1458,12 @@ msgstr ""
 #: main.cpp:109
 #, kde-format
 msgid "[files...]"
-msgstr ""
+msgstr "[ფაილები...]"
 
 #: main.cpp:110
 #, kde-format
 msgid "add folder recursively"
-msgstr ""
+msgstr "საქაღალდის რეკურსიული დამატება"
 
 #: main.cpp:110
 #, kde-format
@@ -1473,7 +1473,7 @@ msgstr "საქაღალდე"
 #: main.cpp:111
 #, kde-format
 msgid "set a template"
-msgstr ""
+msgstr "ნიმუშის დაყენება"
 
 #: main.cpp:112
 #, kde-format
@@ -1483,7 +1483,7 @@ msgstr ""
 #: main.cpp:113
 #, kde-format
 msgid "enable a plugin for use"
-msgstr ""
+msgstr "გამოსაყენებელი დამატების ჩართვა"
 
 #: main.cpp:114
 #, kde-format
@@ -1493,7 +1493,7 @@ msgstr ""
 #: main.cpp:114 main.cpp:115 main.cpp:116
 #, kde-format
 msgid "path or url"
-msgstr ""
+msgstr "ბილიკი ან ბმული"
 
 #: main.cpp:115
 #, kde-format
@@ -1531,13 +1531,13 @@ msgstr "შეცდომა"
 #: numberwidget.ui:17
 #, kde-format
 msgid "&Numbering"
-msgstr ""
+msgstr "&დანომრვა"
 
 #. i18n: ectx: property (text), widget (QLabel, labelStart)
 #: numberwidget.ui:25
 #, kde-format
 msgid "Start &index:"
-msgstr ""
+msgstr "&ინდექსის დასაწყისი:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: numberwidget.ui:42
@@ -1555,19 +1555,19 @@ msgstr ""
 #: numberwidget.ui:71
 #, kde-format
 msgid "&Skip Numbers"
-msgstr ""
+msgstr "&რიცხვების გამოტოვება"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonAdd)
 #: numberwidget.ui:84
 #, kde-format
 msgid "&Add Number"
-msgstr ""
+msgstr "&რიცხვის დამატება"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
 #: numberwidget.ui:94
 #, kde-format
 msgid "&Remove Number"
-msgstr ""
+msgstr "&რიცხვის წაშლა"
 
 #: odfplugin.cpp:62
 #, kde-format
@@ -1584,37 +1584,37 @@ msgstr ""
 #: odfplugin.cpp:79
 #, kde-format
 msgid "Creator of the ODF file"
-msgstr ""
+msgstr "ODF ფაილის შემქმნელი"
 
 #: odfplugin.cpp:80
 #, kde-format
 msgid "Keywords of the ODF file"
-msgstr ""
+msgstr "ODF ფაილის საკვანძო სიტყვები"
 
 #: odfplugin.cpp:81
 #, kde-format
 msgid "Subject of the ODF file"
-msgstr ""
+msgstr "ODF ფაილის თემა"
 
 #: odfplugin.cpp:82
 #, kde-format
 msgid "Title of the ODF file"
-msgstr ""
+msgstr "ODF ფაილის სათაური"
 
 #: odfplugin.cpp:83
 #, kde-format
 msgid "Generator of the ODF file"
-msgstr ""
+msgstr "ODF ფაილის გენერატორი"
 
 #: odfplugin.cpp:84
 #, kde-format
 msgid "Language of the ODF file"
-msgstr ""
+msgstr "ODF ფაილის ენა"
 
 #: odfplugin.cpp:85
 #, kde-format
 msgid "Number of pages in the ODF file"
-msgstr ""
+msgstr "ODF ფაილის გვერდების რაოდენობა"
 
 #: odfplugin.cpp:86
 #, kde-format
@@ -1645,7 +1645,7 @@ msgstr ""
 #: partfilenamewidget.ui:65
 #, kde-format
 msgid "No Conversion"
-msgstr ""
+msgstr "გადაყვანის გარეშე"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPreviewDesc)
 #: partfilenamewidget.ui:90
@@ -1666,17 +1666,17 @@ msgstr ""
 #: permissionsplugin.cpp:110
 #, kde-format
 msgid "Cannot chmod %1."
-msgstr ""
+msgstr "\"%1\"-ის chmod-ის შეცდომა."
 
 #: permissionsplugin.cpp:119
 #, kde-format
 msgid "Cannot chown %1."
-msgstr ""
+msgstr "\"%1\"-ის chown-ის შეცდომა."
 
 #: permissionsplugin.cpp:170
 #, kde-format
 msgid "Access permissions"
-msgstr ""
+msgstr "წვდომის უფლებები"
 
 #: permissionsplugin.cpp:175
 #, kde-format
@@ -1750,7 +1750,7 @@ msgstr "წვდომის უფლებები"
 #: permissionspluginwidget.ui:16
 #, kde-format
 msgid "Change &Permissions"
-msgstr ""
+msgstr "წვდომების &შეცვლა"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: permissionspluginwidget.ui:34
@@ -1774,7 +1774,7 @@ msgstr "აკრძალული"
 #: permissionspluginwidget.ui:126
 #, kde-format
 msgid "Can Read"
-msgstr ""
+msgstr "შეუძლია წაკითხვა"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPermOwner)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPermGroup)
@@ -1783,7 +1783,7 @@ msgstr ""
 #: permissionspluginwidget.ui:131
 #, kde-format
 msgid "Can Read & Write"
-msgstr ""
+msgstr "შეუძლია წაკითხვა და ჩაწერა"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: permissionspluginwidget.ui:69
@@ -1795,7 +1795,7 @@ msgstr "&ჯგუფი:"
 #: permissionspluginwidget.ui:104
 #, kde-format
 msgid "Ot&hers:"
-msgstr ""
+msgstr "&სხვები:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelAdvanced)
 #: permissionspluginwidget.ui:139
@@ -1819,7 +1819,7 @@ msgstr "&დამატებითი წვდომები"
 #: permissionspluginwidget.ui:182
 #, kde-format
 msgid "&Change Owner"
-msgstr ""
+msgstr "&მფლობელის შეცვლა"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
 #: permissionspluginwidget.ui:192
@@ -1831,53 +1831,53 @@ msgstr "მფლობელობა"
 #: permissionspluginwidget.ui:198
 #, kde-format
 msgid "&User:"
-msgstr ""
+msgstr "&მომხმარებელი:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: permissionspluginwidget.ui:224
 #, kde-format
 msgid "&Group:"
-msgstr ""
+msgstr "&ჯგუფი:"
 
 #: podofoplugin.cpp:23
 #, kde-format
 msgid "Author of the PDF file"
-msgstr ""
+msgstr "PDF ფაილის ავტორი"
 
 #: podofoplugin.cpp:24
 #, kde-format
 msgid "Creator of the PDF file"
-msgstr ""
+msgstr "PDF ფაილის შემქმნელი"
 
 #: podofoplugin.cpp:25
 #, kde-format
 msgid "Keywords of the PDF file"
-msgstr ""
+msgstr "PDF ფაილის საკვანძო სიტყვები"
 
 #: podofoplugin.cpp:26
 #, kde-format
 msgid "Subject of the PDF file"
-msgstr ""
+msgstr "PDF ფაილის თემა"
 
 #: podofoplugin.cpp:27
 #, kde-format
 msgid "Title of the PDF file"
-msgstr ""
+msgstr "PDF ფაილის სათაური"
 
 #: podofoplugin.cpp:28
 #, kde-format
 msgid "Producer of the PDF file"
-msgstr ""
+msgstr "PDF ფაილის პროდიუსერი"
 
 #: podofoplugin.cpp:29
 #, kde-format
 msgid "Number of pages in the PDF file"
-msgstr ""
+msgstr "PDF ფაილის გვერდების რაოდენობა"
 
 #: podofoplugin.cpp:31
 #, kde-format
 msgid "PoDoFo (PDF) Plugin"
-msgstr ""
+msgstr "PoDoFo (PDF) დამატება"
 
 #: podofoplugin.cpp:32
 #, kde-format
@@ -1887,23 +1887,23 @@ msgstr ""
 #: previewlist.cpp:17
 #, kde-format
 msgid "&Change filename manually..."
-msgstr ""
+msgstr "&ფაილის სახელის ხელით შეცვლა..."
 
 #: previewlist.cpp:19
 #, kde-format
 msgid "&Open"
-msgstr ""
+msgstr "&გახსნა"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
 #: previewlist.cpp:22 replacewidget.ui:111
 #, kde-format
 msgid "&Remove"
-msgstr ""
+msgstr "&წაშლა"
 
 #: progressdialog.cpp:18
 #, kde-format
 msgid "&Rename more..."
-msgstr ""
+msgstr "&მეტი ფაილის სახელის გადარქმევა..."
 
 #: progressdialog.cpp:19
 #, kde-format
@@ -1913,27 +1913,27 @@ msgstr "&დაბრუნება"
 #: progressdialog.cpp:20
 #, kde-format
 msgid "&Open Destination"
-msgstr ""
+msgstr "&სამიზნის გახსნა"
 
 #: progressdialog.cpp:37
 #, kde-format
 msgid "Restart &KRename..."
-msgstr ""
+msgstr "&KRename-ის გადატვირთვა..."
 
 #: progressdialog.cpp:39
 #, kde-format
 msgid "Rename Processed Files &Again..."
-msgstr ""
+msgstr "&დამუშავებული ფაილების სახელების კიდევ ერთხელ გადარქმევა..."
 
 #: progressdialog.cpp:40
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
-msgstr ""
+msgstr "&დაუმუშავებელი ფაილების სახელების კიდევ ერთხელ გადარქმევა..."
 
 #: progressdialog.cpp:41
 #, kde-format
 msgid "&Rename All Files Again..."
-msgstr ""
+msgstr "&ყველა ფაილისს სახელის კიდევ ერთხელ გადარქმევა..."
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ProgressDialog)
 #: progressdialog.ui:13
@@ -2024,13 +2024,13 @@ msgstr "&ძიება:"
 #: replaceitemdlg.ui:35
 #, kde-format
 msgid "&Replace With:"
-msgstr ""
+msgstr "&ჩანაცვლება:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkRegular)
 #: replaceitemdlg.ui:50
 #, kde-format
 msgid "Find is a Regular &Expression"
-msgstr ""
+msgstr "საპოვნელი &რეგულარული გამოსახულებაა"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkProcess)
 #: replaceitemdlg.ui:57
@@ -2042,7 +2042,7 @@ msgstr ""
 #: replacewidget.ui:32
 #, kde-format
 msgid "Reg. Expression"
-msgstr ""
+msgstr "რეგ. გამოსახულება"
 
 #. i18n: ectx: property (text), widget (QTableWidget, list)
 #: replacewidget.ui:37
@@ -2060,30 +2060,30 @@ msgstr "ჩანაცვლება"
 #: replacewidget.ui:47
 #, kde-format
 msgid "Process Tokens"
-msgstr ""
+msgstr "პროცესის კოდები"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSaveList)
 #: replacewidget.ui:70
 #, kde-format
 msgid "&Save Settings..."
-msgstr ""
+msgstr "&პარამეტრების შენახვა..."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonLoadList)
 #: replacewidget.ui:77
 #, kde-format
 msgid "&Load Settings..."
-msgstr ""
+msgstr "&პარამეტრების ჩატვირთვა..."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonEdit)
 #: replacewidget.ui:104
 #, kde-format
 msgid "&Edit..."
-msgstr ""
+msgstr "&ჩასწორება..."
 
 #: scriptplugin.cpp:90
 #, kde-format
 msgid "JavaScript Plugin"
-msgstr ""
+msgstr "JavaScript -ის დამატება"
 
 #: scriptplugin.cpp:97
 #, kde-format
@@ -2093,37 +2093,37 @@ msgstr ""
 #: scriptplugin.cpp:99
 #, kde-format
 msgid "Index of the current file"
-msgstr ""
+msgstr "მიმდინარე ფაილის ინდექსი"
 
 #: scriptplugin.cpp:100
 #, kde-format
 msgid "URL of the current file"
-msgstr ""
+msgstr "მიმდინარე ფაილის ბმული"
 
 #: scriptplugin.cpp:101
 #, kde-format
 msgid "Filename of the current file"
-msgstr ""
+msgstr "მიმდინარე ფაილის სახელი"
 
 #: scriptplugin.cpp:102
 #, kde-format
 msgid "Extension of the current file"
-msgstr ""
+msgstr "მიმდინარე ფაილის გაფართოება"
 
 #: scriptplugin.cpp:103
 #, kde-format
 msgid "Directory of the current file"
-msgstr ""
+msgstr "მიმდინარე ფაილის საქაღლდე"
 
 #: scriptplugin.cpp:155
 #, kde-format
 msgid "Variable Name"
-msgstr ""
+msgstr "ცვლადის სახელი"
 
 #: scriptplugin.cpp:156
 #, kde-format
 msgid "Initial Value"
-msgstr ""
+msgstr "საწყისი მნიშვნელობა"
 
 #: scriptplugin.cpp:248
 #, kde-format
@@ -2133,7 +2133,7 @@ msgstr "სტრიქონი"
 #: scriptplugin.cpp:249
 #, kde-format
 msgid "Int"
-msgstr ""
+msgstr "მთელი რიცხვი"
 
 #: scriptplugin.cpp:250
 #, kde-format
@@ -2175,19 +2175,19 @@ msgstr ""
 #: scriptplugindialog.ui:20
 #, kde-format
 msgid "Create Variable"
-msgstr ""
+msgstr "ცვლადის შექმნა"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: scriptplugindialog.ui:28
 #, kde-format
 msgid "&Name:"
-msgstr ""
+msgstr "&სახელი:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: scriptplugindialog.ui:41
 #, kde-format
 msgid "&Initial Value:"
-msgstr ""
+msgstr "&საწყისი მნიშვნელობა:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: scriptplugindialog.ui:54
@@ -2199,7 +2199,7 @@ msgstr "&ტიპი:"
 #: scriptpluginwidget.ui:24
 #, kde-format
 msgid "&Variables"
-msgstr ""
+msgstr "&ცვლადები"
 
 #. i18n: ectx: property (text), widget (QLabel, labelDescVariables)
 #: scriptpluginwidget.ui:30
@@ -2223,7 +2223,7 @@ msgstr "&წაშლა"
 #: scriptpluginwidget.ui:100
 #, kde-format
 msgid "&Definitions"
-msgstr ""
+msgstr "&აღწერები"
 
 #. i18n: ectx: property (text), widget (QLabel, labelDescDef)
 #: scriptpluginwidget.ui:106
@@ -2241,19 +2241,19 @@ msgstr "ფაილში &შენახვა..."
 #: scriptpluginwidget.ui:134
 #, kde-format
 msgid "&Load from File..."
-msgstr ""
+msgstr "&ფაილიდან ჩატვირთვა..."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: scriptpluginwidget.ui:141
 #, kde-format
 msgid "&Insert Variable"
-msgstr ""
+msgstr "ცვლადის &ჩასმა"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonTest)
 #: scriptpluginwidget.ui:164
 #, kde-format
 msgid "&Test..."
-msgstr ""
+msgstr "&ტესტირება..."
 
 #: snumplugin.cpp:21
 #, kde-format
@@ -2324,7 +2324,7 @@ msgstr ""
 #: systemplugin.cpp:38
 #, kde-format
 msgid "Insert the current date"
-msgstr ""
+msgstr "მიმდინარე თარიღის ჩასმა"
 
 #: systemplugin.cpp:39
 #, kde-format
@@ -2334,87 +2334,87 @@ msgstr ""
 #: systemplugin.cpp:40
 #, kde-format
 msgid "Insert the current year"
-msgstr ""
+msgstr "მიმდინარე წლის ჩასმა"
 
 #: systemplugin.cpp:41
 #, kde-format
 msgid "Insert the current month as number"
-msgstr ""
+msgstr "მიმდინარე თვის ნომრის ჩასმა"
 
 #: systemplugin.cpp:42
 #, kde-format
 msgid "Insert the current day as number"
-msgstr ""
+msgstr "მიმდინარე დღის რიცხვის ჩასმა"
 
 #: systemplugin.cpp:43
 #, kde-format
 msgid "Insert the current time"
-msgstr ""
+msgstr "მიმდინარე დროის ჩასმა"
 
 #: systemplugin.cpp:44
 #, kde-format
 msgid "Insert the current hour as number"
-msgstr ""
+msgstr "მიმდინარე საათის რიცხვის ჩასმა"
 
 #: systemplugin.cpp:45
 #, kde-format
 msgid "Insert the current minute as number"
-msgstr ""
+msgstr "მიმდინარე წუთის რიცხვის ჩასმა"
 
 #: systemplugin.cpp:46
 #, kde-format
 msgid "Insert the current second as number"
-msgstr ""
+msgstr "მიმდინა წამის რიცხვის ჩასმა"
 
 #: systemplugin.cpp:47
 #, kde-format
 msgid "Owner of the file"
-msgstr ""
+msgstr "ფაილის მფლობელი"
 
 #: systemplugin.cpp:48
 #, kde-format
 msgid "Owning group of the file"
-msgstr ""
+msgstr "ფაილის მფლობელი ჯგუფი"
 
 #: systemplugin.cpp:49
 #, kde-format
 msgid "Insert the files creation date"
-msgstr ""
+msgstr "ფაილის შექმნის თარიღის ჩასმა"
 
 #: systemplugin.cpp:50
 #, kde-format
 msgid "Insert the formatted file creation date"
-msgstr ""
+msgstr "ფაილის შექმნის ფორმატირებული თარიღის ჩასმა"
 
 #: systemplugin.cpp:51
 #, kde-format
 msgid "Insert the files modification date"
-msgstr ""
+msgstr "ფაილის შეცვლის თარიღის ჩასმა"
 
 #: systemplugin.cpp:52
 #, kde-format
 msgid "Insert the formatted modification date"
-msgstr ""
+msgstr "ფაილის შეცვლის ფორმატრებული თარიღის ჩასმა"
 
 #: systemplugin.cpp:53
 #, kde-format
 msgid "Insert the date of the last file access"
-msgstr ""
+msgstr "ფაილის უკანასკნელი წვდომის თარიღის ჩასმა"
 
 #: systemplugin.cpp:54
 #, kde-format
 msgid "Insert the formatted date of the last file access"
-msgstr ""
+msgstr "ფაილის უკანასკნელი წვდომის ფორმატირებული თარიღის ჩასმა"
 
 #: systemplugin.cpp:55
 #, kde-format
 msgid "Insert the file size in bytes"
-msgstr ""
+msgstr "ფაილის ზომის ჩასმა, ბაიტებში"
 
 #: systemplugin.cpp:57
 #, kde-format
 msgid "Date and system functions"
-msgstr ""
+msgstr "დროისა და სისტემის ფუნქციები"
 
 #: systemplugin.cpp:59
 #, kde-format
@@ -2426,42 +2426,42 @@ msgstr ""
 #: taglibplugin.cpp:28
 #, kde-format
 msgid "Insert the title of a track"
-msgstr ""
+msgstr "ტრეკის სათაურის ჩასმა"
 
 #: taglibplugin.cpp:29
 #, kde-format
 msgid "Insert the artist of a track"
-msgstr ""
+msgstr "ტრეკის შემსრულებლის ჩასმა"
 
 #: taglibplugin.cpp:30
 #, kde-format
 msgid "Insert the album of a track"
-msgstr ""
+msgstr "ტრეკის ალბომის ჩასმა"
 
 #: taglibplugin.cpp:31
 #, kde-format
 msgid "Insert the comment of a track"
-msgstr ""
+msgstr "ტრეკის კომენტარის ჩასმა"
 
 #: taglibplugin.cpp:32
 #, kde-format
 msgid "Insert the genre of a track"
-msgstr ""
+msgstr "ტრეკის ჟანრის ჩასმა"
 
 #: taglibplugin.cpp:33
 #, kde-format
 msgid "Insert the year of a track"
-msgstr ""
+msgstr "ტრეკის წლის ჩასმა"
 
 #: taglibplugin.cpp:34
 #, kde-format
 msgid "Insert the number of a track"
-msgstr ""
+msgstr "ტრეკის ნომრის ჩასმა"
 
 #: taglibplugin.cpp:35
 #, kde-format
 msgid "Insert the number of a track formatted with a leading 0"
-msgstr ""
+msgstr "ტრეკის ნომრის ჩასმა, ფორმატირებული, დაწყებული 0-ით"
 
 #: taglibplugin.cpp:37
 #, kde-format
@@ -2478,7 +2478,7 @@ msgstr ""
 #: tokenhelpdialog.cpp:96
 #, kde-format
 msgid "&Insert"
-msgstr ""
+msgstr "&ჩასმა"
 
 #: tokenhelpdialog.cpp:305
 #, kde-format
@@ -2489,7 +2489,7 @@ msgstr "Ბოლო"
 #: tokenhelpwidget.ui:13
 #, kde-format
 msgid "KRename Help"
-msgstr ""
+msgstr "KRename -ის დახმარება"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: tokenhelpwidget.ui:19
@@ -2515,7 +2515,7 @@ msgstr "ტოკენი"
 #: tokenhelpwidget.ui:100
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "აღწერა"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listTokens)
 #: tokenhelpwidget.ui:105
@@ -2527,18 +2527,18 @@ msgstr "ესკიზი"
 #: tokenhelpwidget.ui:119
 #, kde-format
 msgid "Token &Preview"
-msgstr ""
+msgstr "ტოკენის &მინიატურა"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPreview)
 #: tokenhelpwidget.ui:142
 #, kde-format
 msgid "Preview File:"
-msgstr ""
+msgstr "ფაილის მინიატურა:"
 
 #: tokensortmodedialog.cpp:23
 #, kde-format
 msgid "Access Date"
-msgstr ""
+msgstr "წვდომის დრო"
 
 #: tokensortmodedialog.cpp:24
 #, kde-format
@@ -2548,12 +2548,12 @@ msgstr "შეცვლის თარიღის მიხედვით"
 #: tokensortmodedialog.cpp:25
 #, kde-format
 msgid "Filesize"
-msgstr ""
+msgstr "ფაილისზომა"
 
 #: tokensortmodedialog.cpp:27
 #, kde-format
 msgid "Modification Date"
-msgstr ""
+msgstr "ცვლილების თარიღი"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, TokenSortModeDialog)
 #: tokensortmodedialog.ui:14
@@ -2565,7 +2565,7 @@ msgstr "ხელით მითითება"
 #: tokensortmodedialog.ui:22
 #, kde-format
 msgid "&Sort filenames ..."
-msgstr ""
+msgstr "&ფაილის სახელების დალაგება..."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioAscending)
 #: tokensortmodedialog.ui:28
@@ -2583,51 +2583,51 @@ msgstr "&დაღმავალი"
 #: tokensortmodedialog.ui:45
 #, kde-format
 msgid "&Numeric"
-msgstr ""
+msgstr "&რიცხვობრივი"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: tokensortmodedialog.ui:61
 #, kde-format
 msgid "by"
-msgstr ""
+msgstr "ავტორი"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: tokensortmodedialog.ui:68
 #, kde-format
 msgid "&Token ..."
-msgstr ""
+msgstr "&კოდი ..."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioPredefined)
 #: tokensortmodedialog.ui:74
 #, kde-format
 msgid "&Predefined"
-msgstr ""
+msgstr "&წინასწარ აღწერილი"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
 #: tokensortmodedialog.ui:87
 #, kde-format
 msgid "&Custom"
-msgstr ""
+msgstr "&ხელით"
 
 #: translitplugin.cpp:81
 #, kde-format
 msgid "Inserts the transliterated original filename"
-msgstr ""
+msgstr "საწყისი სახელის ტრანსლიტერაციის ჩასმა"
 
 #: translitplugin.cpp:82
 #, kde-format
 msgid "Inserts the transliterated original filename converted to lower case"
-msgstr ""
+msgstr "საწყისი სახელის ტრანსლიტერაციის ქვედა რეგისტრში ჩასმა"
 
 #: translitplugin.cpp:83
 #, kde-format
 msgid "Inserts the transliterated original filename converted to upper case"
-msgstr ""
+msgstr "საწყისი სახელის ტრანსლიტერაციის ზედა რეგისტრში ჩასმა"
 
 #: translitplugin.cpp:84
 #, kde-format
 msgid "Inserts the transliterated original filename capitalized"
-msgstr ""
+msgstr "საწყისი სახელის ტრანსლიტერაციის დიდი ასოებით ჩასმა"
 
 #: translitplugin.cpp:85
 #, kde-format
@@ -2637,7 +2637,7 @@ msgstr ""
 #: translitplugin.cpp:87
 #, kde-format
 msgid "Transliteration"
-msgstr ""
+msgstr "ტრანსლიტერაცია"
 
 #: translitplugin.cpp:89
 #, kde-format
