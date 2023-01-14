@@ -17,7 +17,6 @@ class Plugin;
 bool ascendingKRenameFileLessThan(const KRenameFile &file1, const KRenameFile &file2);
 bool descendingKRenameFileLessThan(const KRenameFile &file1, const KRenameFile &file2);
 bool numericKRenameFileLessThan(const KRenameFile &file1, const KRenameFile &file2);
-bool randomKRenameFileLessThan(const KRenameFile &, const KRenameFile &);
 
 class KRenameTokenSorter
 {

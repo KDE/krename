@@ -4,6 +4,8 @@
 #include "krenamemodel.h"
 #include "threadedlister.h"
 
+#include <random>
+
 #include <QMimeData>
 #include <QPixmap>
 #include <QApplication>
@@ -296,7 +298,8 @@ void KRenameModel::sortFiles(ESortMode mode, const QString &customSortToken, KRe
     } else if (mode == eSortMode_Numeric) {
         std::sort(m_vector->begin(), m_vector->end(), numericKRenameFileLessThan);
     } else if (mode == eSortMode_Random) {
-        std::sort(m_vector->begin(), m_vector->end(), randomKRenameFileLessThan);
+        std::random_device rd;
+        std::shuffle(m_vector->begin(), m_vector->end(), std::mt19937(rd()));
     } else if (mode == eSortMode_AscendingDate) {
         KRenameTokenSorter sorter(m_renamer, dateSortToken, *m_vector,
                                   KRenameTokenSorter::eSimpleSortMode_Ascending);
