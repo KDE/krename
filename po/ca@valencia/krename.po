@@ -1182,7 +1182,7 @@ msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
 "set of expressions."
 msgstr ""
-"KRename és un canviador de nom de fitxers per lots, el qual pot canviar el "
+"KRename és un canviador de noms de fitxer per lots, el qual pot canviar el "
 "nom d'una llista de fitxers basant-se en un conjunt d'expressions."
 
 #: main.cpp:48
@@ -2274,7 +2274,7 @@ msgstr "No s'ha pogut obrir %1 per a escriptura."
 #: scriptplugindialog.ui:20
 #, kde-format
 msgid "Create Variable"
-msgstr "Creació d'una variable"
+msgstr "Creeu una variable"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: scriptplugindialog.ui:28
@@ -2418,8 +2418,8 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
 "large; font-weight:600;\">Benvingut a KRename</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Un canviador de nom de "
-"fitxers per lots, creat per la comunitat KDE.<br />Per a canviar el nom dels "
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Un canviador de noms de "
+"fitxer per lots, creat per la comunitat KDE.<br />Per a canviar el nom dels "
 "fitxers, haureu de:</p></body></html>"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelAdd)
