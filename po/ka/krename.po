@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-01 02:09+0000\n"
-"PO-Revision-Date: 2023-01-21 19:36+0100\n"
+"PO-Revision-Date: 2023-01-25 07:24+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1458,7 +1458,7 @@ msgstr ""
 #: main.cpp:123
 #, kde-format
 msgid "[files...]"
-msgstr ""
+msgstr "[ფაილები...]"
 
 #: main.cpp:124
 #, kde-format
@@ -1975,7 +1975,7 @@ msgstr "&ძიება:"
 #: replaceitemdlg.ui:35
 #, kde-format
 msgid "&Replace With:"
-msgstr ""
+msgstr "&ჩანაცვლება:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkRegular)
 #: replaceitemdlg.ui:50
@@ -2226,7 +2226,7 @@ msgstr ""
 #: snumplugin.cpp:42
 #, kde-format
 msgid "SeriesNumber"
-msgstr ""
+msgstr "სერიისნომერი"
 
 #: snumplugin.cpp:44
 #, kde-format
