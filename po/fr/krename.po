@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-01 01:00+0000\n"
 "PO-Revision-Date: 2021-12-27 22:11+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -1124,12 +1124,12 @@ msgstr ""
 msgid "The folder %1 could not be created."
 msgstr "Impossible de créer le dossier %1."
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Origin"
 msgstr "Originaux"
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Renamed"
 msgstr "Renommés"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-01 01:00+0000\n"
 "PO-Revision-Date: 2022-06-05 07:47+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -1103,12 +1103,12 @@ msgstr "Folder %1 belum ada. Apakah kamu ingin KRename membuatkan untukmu?"
 msgid "The folder %1 could not be created."
 msgstr "Folder %1 tidak bisa dibuat."
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Origin"
 msgstr "Aslinya"
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Renamed"
 msgstr "Dinamai"

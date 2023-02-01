@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-01 01:00+0000\n"
 "PO-Revision-Date: 2019-12-29 10:00-0800\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -1056,12 +1056,12 @@ msgstr ""
 msgid "The folder %1 could not be created."
 msgstr "ਫੋਲਡਰ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, fuzzy, kde-format
 msgid "Origin"
 msgstr "ਸਰੋਤ"
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Renamed"
 msgstr ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-01 01:00+0000\n"
 "PO-Revision-Date: 2022-09-06 19:56+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1106,12 +1106,12 @@ msgstr "%1 karpeta ez da existitzen. Nahi duzu KRenamek zuretzako sortzea?"
 msgid "The folder %1 could not be created."
 msgstr "%1 karpeta ezin izan da sortu."
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Origin"
 msgstr "Jatorria"
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Renamed"
 msgstr "Berrizendatuta"

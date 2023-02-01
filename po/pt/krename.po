@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename 4.0.3-1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-01 01:00+0000\n"
 "PO-Revision-Date: 2018-06-25 15:30+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -1126,12 +1126,12 @@ msgstr "A pasta %1 não existe. Deseja que o KRename a crie por si?"
 msgid "The folder %1 could not be created."
 msgstr "Não foi possível criar a pasta %1."
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Origin"
 msgstr "Origem"
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Renamed"
 msgstr "Nome Modificado"

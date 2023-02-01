@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename-3.0.8-1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-01 01:00+0000\n"
 "PO-Revision-Date: 2021-03-22 08:48+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1103,12 +1103,12 @@ msgstr "Mapa %1 ne obstaja. Ali želite, da jo KRename ustvari za vas?"
 msgid "The folder %1 could not be created."
 msgstr "Mape %1 ni bilo mogoče ustvariti."
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Origin"
 msgstr "Izvor"
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Renamed"
 msgstr "Preimenovano"

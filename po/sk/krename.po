@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-01 01:00+0000\n"
 "PO-Revision-Date: 2019-01-27 19:54+0100\n"
 "Last-Translator: Mthw <jari_45@hotmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -1092,12 +1092,12 @@ msgstr "Súbor %1 neexistuje. Chcete aby ho KRename vytvoril?"
 msgid "The folder %1 could not be created."
 msgstr "Nepodarilo sa vytvoriť priečinok %1."
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Origin"
 msgstr "Pôvod"
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Renamed"
 msgstr "Premenované"

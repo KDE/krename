@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-01 00:48+0000\n"
+"POT-Creation-Date: 2023-02-01 01:00+0000\n"
 "PO-Revision-Date: 2004-07-30 23:15+0200\n"
 "Last-Translator: Asim Husanovic <asim.h@megatel.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -1082,12 +1082,12 @@ msgstr "Direktorij %1 ne postoji. KRename ga ne može kreirati za vas."
 msgid "The folder %1 could not be created."
 msgstr "Direktorij %1 ne postoji. KRename ga ne može kreirati za vas."
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Origin"
 msgstr "Originalno"
 
-#: krenamemodel.cpp:419
+#: krenamemodel.cpp:422
 #, kde-format
 msgid "Renamed"
 msgstr "Preimenovano"
