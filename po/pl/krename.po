@@ -5,20 +5,20 @@
 # Krzysztof Pawlak <jmnemonic@gazeta.pl>, 2004, 2005.
 # Dominik Seichter <domseichter@web.de>, 2005.
 # Michał Smoczyk <msmoczyk@wp.pl>, 2008.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2016, 2017, 2018, 2019, 2020, 2021.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-01 02:09+0000\n"
-"PO-Revision-Date: 2021-10-30 09:32+0200\n"
+"PO-Revision-Date: 2023-02-04 09:19+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -612,7 +612,7 @@ msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
 msgstr ""
-"<qt>Znajdź i zamień ciągi znaków i wyrażenia regularne w zmienianej nazwie "
+"<qt>Poszukaj i zamień ciągi znaków i wyrażenia regularne w zmienianej nazwie "
 "pliku.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFind)
@@ -620,7 +620,7 @@ msgstr ""
 #: krenamefilename.ui:224 krenamefilename.ui:748 krenamesimple.ui:439
 #, kde-format
 msgid "Find &and Replace..."
-msgstr "Zn&ajdź i zamień..."
+msgstr "Poszuk&aj i zamień..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:234
@@ -684,7 +684,7 @@ msgstr "Użyj nazwy źródłowej"
 #: krenamesimple.ui:272 partfilenamewidget.ui:70
 #, kde-format
 msgid "Convert to lower case"
-msgstr "Zmień na małe litery"
+msgstr "Zamień na małe litery"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
@@ -695,7 +695,7 @@ msgstr "Zmień na małe litery"
 #: krenamesimple.ui:277 partfilenamewidget.ui:75
 #, kde-format
 msgid "Convert to upper case"
-msgstr "Zmień na WIELKIE litery"
+msgstr "Zamień na WIELKIE litery"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
@@ -727,7 +727,7 @@ msgstr "&Nazwa pliku"
 #: krenamesimple.ui:247
 #, kde-format
 msgid "Number"
-msgstr "Liczba"
+msgstr "Numer"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSuffix)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPrefix)
@@ -768,7 +768,7 @@ msgstr "Własne rozszerzenie"
 #: krenamefilename.ui:647 krenamesimple.ui:344
 #, kde-format
 msgid "N&umber"
-msgstr "&Liczba"
+msgstr "N&umer"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDigits)
 #: krenamefilename.ui:697 krenamesimple.ui:397
@@ -1970,27 +1970,27 @@ msgstr "&Anuluj"
 #: replacedialog.cpp:81
 #, kde-format
 msgid "Save Find & Replace Settings as:"
-msgstr "Zapisz ustawienia Znajdź i Zastąp jako:"
+msgstr "Zapisz ustawienia Poszukaj i Zastąp jako:"
 
 #: replacedialog.cpp:82
 #, kde-format
 msgid "KRename Find & Replace Settings XML (*.xml)"
-msgstr "Plik XML ustawień Znajdź i Zastąp KRename (*.xml)"
+msgstr "Plik XML ustawień Poszukaj i Zastąp KRename (*.xml)"
 
 #: replacedialog.cpp:91
 #, kde-format
 msgid "Failed to save the Find & Replace Settings File."
-msgstr "Nie udało się zapisać pliku ustawień Znajdź i Zastąp."
+msgstr "Nie udało się zapisać pliku ustawień Poszukaj i Zastąp."
 
 #: replacedialog.cpp:143
 #, kde-format
 msgid "Save Find and Replace Settings File"
-msgstr "Zapisz pliki ustawień Znajdź i Zastąp"
+msgstr "Zapisz pliki ustawień Poszukaj i Zastąp"
 
 #: replacedialog.cpp:145
 #, kde-format
 msgid "KRename Find and Replace Settings XML (*.xml)"
-msgstr "Plik XML ustawień Znajdź i Zastąp KRename (*.xml)"
+msgstr "Plik XML ustawień Poszukaj i Zastąp KRename (*.xml)"
 
 #: replacedialog.cpp:153
 #, kde-format
@@ -1998,7 +1998,7 @@ msgid ""
 "Failed to open the Find and Replace Settings File. Cannot read file %1:\n"
 "%2."
 msgstr ""
-"Nie udało się otworzyć pliku ustawień Znajdź i Zastąp. Nie można odczytać "
+"Nie udało się otworzyć pliku ustawień Poszukaj i Zastąp. Nie można odczytać "
 "pliku %1 \n"
 "%2."
 
@@ -2006,7 +2006,7 @@ msgstr ""
 #: replacedialog.cpp:246
 #, kde-format
 msgid "KRename Find and Replace Settings XML File"
-msgstr "Plik XML ustawień Znajdź i Zastąp KRename"
+msgstr "Plik XML ustawień Poszukaj i Zastąp KRename"
 
 #: replacedialog.cpp:165
 #, kde-format
@@ -2037,7 +2037,7 @@ msgstr "Problem przy wczytywaniu pliku XML KRename."
 #: replaceitemdlg.ui:14 replacewidget.ui:14
 #, kde-format
 msgid "Find and Replace"
-msgstr "Znajdź i zastąp"
+msgstr "Poszukaj i zastąp"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: replaceitemdlg.ui:22
@@ -2233,8 +2233,7 @@ msgstr "&Zmienne"
 #, kde-format
 msgid "Declare global variables that can be used from within your functions:"
 msgstr ""
-"Zadeklaruj zmienne globalne, których będzie można używać wewnątrz twoich "
-"funkcji:"
+"Określ zmienne globalne, których będzie można używać wewnątrz twoich funkcji:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listVariables)
 #: scriptpluginwidget.ui:58
@@ -2467,7 +2466,7 @@ msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
 msgstr ""
-"<qt>Ta wtyczka udostępnia dane czasu utworzenia, zmiany i ostatniego dostęp "
+"<qt>Ta wtyczka udostępnia dane czasu utworzenia, zmiany i ostatniego dostępu "
 "do plików oraz bieżący systemowy czas i datę.</qt>"
 
 #: taglibplugin.cpp:42
@@ -2521,7 +2520,7 @@ msgid ""
 "<qt>This plugin supports reading tags for MP3, Ogg Vorbis, FLAC, MPC, Speex "
 "WavPack and TrueAudio files.</qt>"
 msgstr ""
-"<qt>Ta wtyczka wspiera odczyt znaczników dla plików audio MP3, Ogg Vorbis, "
+"<qt>Ta wtyczka obsługuje odczyt znaczników dla plików audio MP3, Ogg Vorbis, "
 "FLAC, MPC, Speex WavPack oraz TrueAudio.</qt>"
 
 #: tokenhelpdialog.cpp:110
