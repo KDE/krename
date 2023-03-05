@@ -2139,12 +2139,12 @@ msgstr "&حرّر.."
 #: scriptplugin.cpp:90
 #, kde-format
 msgid "JavaScript Plugin"
-msgstr "ملحقة جاڤاسكربت"
+msgstr "ملحقة جافاسكربت"
 
 #: scriptplugin.cpp:97
 #, kde-format
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
-msgstr "أدرج قصاصة لكود جاڤاسكربت (‎4+5 في حالتنا)"
+msgstr "أدرج قصاصة لكود جافاسكربت (‎4+5 في حالتنا)"
 
 #: scriptplugin.cpp:99
 #, kde-format
@@ -2204,7 +2204,7 @@ msgstr "قيمة منطقيّة"
 #: scriptplugin.cpp:266
 #, kde-format
 msgid "A JavaScript error has occurred: "
-msgstr "حدث خطأ جاڤاسكربت: "
+msgstr "حدث خطأ جافاسكربت: "
 
 #: scriptplugin.cpp:290
 #, kde-format
@@ -2369,7 +2369,7 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
 "large; font-weight:600;\">مرحبًا بكل في «مغيّر الأسماء»</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">برنامج «كدي» لإعادة تسمية "
+"right:0px; -qt-block-indent:0; text-indent:0px;\">برنامج «كِيدِي» لإعادة تسمية "
 "مجموعة ملفّات.<br />لإعادة تسمية ملفّاتك، عليك:</p></body></html>"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelAdd)
