@@ -573,7 +573,7 @@ msgid ""
 msgstr ""
 "<qt>Määritä, mitä tiedostonimen osia pidetään päätteenä. Esim. "
 "”ensimmäisestä pisteestä” löytää päätteeksi ”.tar.gz”, ”viimeisestä "
-"pisteestä” vain ”.gz”."
+"pisteestä” vain ”.gz”.</qt>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:181
