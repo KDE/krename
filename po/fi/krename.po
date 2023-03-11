@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-01 02:09+0000\n"
-"PO-Revision-Date: 2018-02-23 17:39+0200\n"
+"PO-Revision-Date: 2018-08-02 23:29+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -573,7 +573,7 @@ msgid ""
 msgstr ""
 "<qt>Määritä, mitä tiedostonimen osia pidetään päätteenä. Esim. "
 "”ensimmäisestä pisteestä” löytää päätteeksi ”.tar.gz”, ”viimeisestä "
-"pisteestä” vain ”.gz”."
+"pisteestä” vain ”.gz”.</qt>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:181
