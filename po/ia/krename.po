@@ -123,7 +123,7 @@ msgstr "Non pote crear directorio %1: %2"
 #: customfilenamedlg.ui:63
 #, kde-format
 msgid "File preview"
-msgstr "Vista preliminari de file"
+msgstr "Vista preliminar de file"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: customfilenamedlg.ui:91
@@ -2546,7 +2546,7 @@ msgstr "Description"
 #: tokenhelpwidget.ui:105
 #, kde-format
 msgid "Preview"
-msgstr "Vista preliminari"
+msgstr "Vista preliminar"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkPreview)
 #: tokenhelpwidget.ui:119
@@ -2558,7 +2558,7 @@ msgstr ""
 #: tokenhelpwidget.ui:142
 #, kde-format
 msgid "Preview File:"
-msgstr "File de vista preliminari:"
+msgstr "File de vista preliminar:"
 
 #: tokensortmodedialog.cpp:23
 #, kde-format
