@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2010-10-29\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 01:00+0000\n"
+"POT-Creation-Date: 2023-04-22 00:54+0000\n"
 "PO-Revision-Date: 2019-08-13 11:14+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -1008,8 +1008,9 @@ msgstr ""
 "μέτρησης το 1"
 
 #: krenameimpl.cpp:477
-#, kde-format
-msgid "create a subdfolder"
+#, fuzzy, kde-format
+#| msgid "create a subdfolder"
+msgid "create a subfolder"
 msgstr "δημιουργία υποφακέλου"
 
 #: krenameimpl.cpp:478

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 01:00+0000\n"
+"POT-Creation-Date: 2023-04-22 00:54+0000\n"
 "PO-Revision-Date: 2019-12-29 10:00-0800\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -938,9 +938,10 @@ msgid "counter with custom start value 0 and custom stepping 1"
 msgstr ""
 
 #: krenameimpl.cpp:477
-#, kde-format
-msgid "create a subdfolder"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Cannot create folder %1"
+msgid "create a subfolder"
+msgstr "%1 ਫੋਲਡਰ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
 #: krenameimpl.cpp:478
 #, kde-format

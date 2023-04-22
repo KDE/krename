@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 01:00+0000\n"
+"POT-Creation-Date: 2023-04-22 00:54+0000\n"
 "PO-Revision-Date: 2005-01-27 20:39+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team:  <ja@li.org>\n"
@@ -950,7 +950,7 @@ msgstr "0 で始めて 1 ずつ番号を上げる"
 #: krenameimpl.cpp:477
 #, fuzzy, kde-format
 #| msgid "create a subdirectory"
-msgid "create a subdfolder"
+msgid "create a subfolder"
 msgstr "サブディレクトリを作成"
 
 #: krenameimpl.cpp:478

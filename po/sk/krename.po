@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 01:00+0000\n"
+"POT-Creation-Date: 2023-04-22 00:54+0000\n"
 "PO-Revision-Date: 2019-01-27 19:54+0100\n"
 "Last-Translator: Mthw <jari_45@hotmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -971,8 +971,9 @@ msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "počítadlo s vlastným štartom s hodnotou 0 a krokovaním 1"
 
 #: krenameimpl.cpp:477
-#, kde-format
-msgid "create a subdfolder"
+#, fuzzy, kde-format
+#| msgid "create a subdfolder"
+msgid "create a subfolder"
 msgstr "vytvoriť podpriečinok"
 
 #: krenameimpl.cpp:478

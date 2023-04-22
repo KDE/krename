@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 01:00+0000\n"
+"POT-Creation-Date: 2023-04-22 00:54+0000\n"
 "PO-Revision-Date: 2022-09-06 19:56+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -986,8 +986,9 @@ msgstr ""
 "finkatutako 1eko urratsarekin"
 
 #: krenameimpl.cpp:477
-#, kde-format
-msgid "create a subdfolder"
+#, fuzzy, kde-format
+#| msgid "create a subdfolder"
+msgid "create a subfolder"
 msgstr "sortu azpikarpeta bat"
 
 #: krenameimpl.cpp:478

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 01:00+0000\n"
+"POT-Creation-Date: 2023-04-22 00:54+0000\n"
 "PO-Revision-Date: 2017-06-25 15:12+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1023,7 +1023,7 @@ msgstr "skaitiklis su tinkinta pradžios reikšme 0 ir tinkintu žingsniu 1"
 #: krenameimpl.cpp:477
 #, fuzzy, kde-format
 #| msgid "create a subdirectory"
-msgid "create a subdfolder"
+msgid "create a subfolder"
 msgstr "sukurti poaplankį"
 
 #: krenameimpl.cpp:478

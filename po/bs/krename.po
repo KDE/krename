@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 01:00+0000\n"
+"POT-Creation-Date: 2023-04-22 00:54+0000\n"
 "PO-Revision-Date: 2004-07-30 23:15+0200\n"
 "Last-Translator: Asim Husanovic <asim.h@megatel.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -963,7 +963,7 @@ msgstr "Brojač koji počinje s vrijednošću 0 i ima korak 1"
 #: krenameimpl.cpp:477
 #, fuzzy, kde-format
 #| msgid "create a subdirectory"
-msgid "create a subdfolder"
+msgid "create a subfolder"
 msgstr "kreiraj poddirektorij"
 
 #: krenameimpl.cpp:478
