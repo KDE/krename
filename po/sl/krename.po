@@ -10,17 +10,17 @@ msgstr ""
 "Project-Id-Version: krename-3.0.8-1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-22 00:54+0000\n"
-"PO-Revision-Date: 2021-03-22 08:48+0100\n"
+"PO-Revision-Date: 2023-04-22 08:44+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
 #, kde-format
@@ -982,8 +982,7 @@ msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "števec z privzeto vrednostjo 0 in privzetim korakom 1"
 
 #: krenameimpl.cpp:477
-#, fuzzy, kde-format
-#| msgid "create a subdfolder"
+#, kde-format
 msgid "create a subfolder"
 msgstr "ustvari podmapo"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 01:00+0000\n"
+"POT-Creation-Date: 2023-04-22 00:54+0000\n"
 "PO-Revision-Date: 2019-12-19 10:49+0100\n"
 "Last-Translator: Øystein Steffensen-Alværvik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -999,8 +999,8 @@ msgstr "Teljar som lèt deg tilpassa starttalet og teljesteg"
 
 #: krenameimpl.cpp:477
 #, kde-format
-msgid "create a subdfolder"
-msgstr "Opprett undermappe"
+msgid "create a subfolder"
+msgstr ""
 
 #: krenameimpl.cpp:478
 #, kde-format

@@ -4,21 +4,22 @@
 #
 # Sofia Priego <spriego@darksylvania.net>, %Y.
 # Automatically generated, 2016.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2016, 2017, 2018.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2016, 2017, 2018, 2023.
+# Sofía Priego <spriego@darksylvania.net>, %Y.
 msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-22 00:54+0000\n"
-"PO-Revision-Date: 2018-07-03 12:13+0100\n"
-"Last-Translator: Sofia Priego <spriego@darksylvania.net>\n"
+"PO-Revision-Date: 2023-04-22 20:32+0100\n"
+"Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
 #, kde-format
@@ -996,8 +997,7 @@ msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "contador con valor inicial personalizado 0 y paso personalizado 1"
 
 #: krenameimpl.cpp:477
-#, fuzzy, kde-format
-#| msgid "create a subdfolder"
+#, kde-format
 msgid "create a subfolder"
 msgstr "crear una subcarpeta"
 
