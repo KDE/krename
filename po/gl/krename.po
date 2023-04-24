@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# Adrian Chaves <adrian@chaves.io>, 2018, 2019, 2023.
 #
-# Adrian Chaves <adrian@chaves.io>, 2018, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-22 00:54+0000\n"
-"PO-Revision-Date: 2019-10-19 22:33+0200\n"
+"PO-Revision-Date: 2023-04-23 07:31+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
 #, kde-format
@@ -450,9 +450,9 @@ msgid ""
 msgstr ""
 "<p><b>Este complemento engade o desprazamento indicado aos números nos nomes "
 "de ficheiros.</b><br/>\n"
-"Por exemplo, se ten os nomes de ficheiro <i>imx014</i>, <i>imx015</i> e "
-"<i>imx023</i> que deberían chamarse <i>imx010</i>, <i>imx011</i> e "
-"<i>imx019</i>, pode usar este complemento para engadir facilmente un "
+"Por exemplo, se ten os nomes de ficheiro <i>imaxe014</i>, <i>imaxe015</i> e "
+"<i>imaxe023</i> que deberían chamarse <i>imaxe010</i>, <i>imaxe011</i> e "
+"<i>imaxe019</i>, pode usar este complemento para engadir facilmente un "
 "desprazamento de -4 para obter o resultado desexado.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -986,15 +986,14 @@ msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "contador cun valor de inicio personalizado 0 e un paso personalizado 1"
 
 #: krenameimpl.cpp:477
-#, fuzzy, kde-format
-#| msgid "create a subdfolder"
+#, kde-format
 msgid "create a subfolder"
 msgstr "crear un subcartafol"
 
 #: krenameimpl.cpp:478
 #, kde-format
 msgid "character x to y of old filename"
-msgstr "carácteres do x ao y do nome de ficheiro vello"
+msgstr "caracteres do x ao y do nome de ficheiro vello"
 
 #: krenameimpl.cpp:479
 #, kde-format
