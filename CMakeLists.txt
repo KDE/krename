@@ -56,12 +56,8 @@ set_package_properties(Taglib PROPERTIES
     TYPE OPTIONAL)
 
 # Find exiv2
-find_package(LibExiv2 0.13) # AccessMode was added in 0.13
+find_package(LibExiv2 0.27) # EXIV2_TEST_VERSION was added in 0.27
 set_package_properties(LibExiv2 PROPERTIES TYPE OPTIONAL)
-
-if (LibExiv2_VERSION VERSION_GREATER_EQUAL "0.27")
-    set(HAVE_LIBEXIV2_0_27 TRUE)
-endif()
 
 # Find podofo
 find_package(PoDoFo)

@@ -3,20 +3,9 @@
 
 #include "exiv2plugin.h"
 
-#include "../config-krename.h"
-
 #include <KLocalizedString>
 
-#include <exiv2/error.hpp>
-#include <exiv2/exif.hpp>
-#include <exiv2/image.hpp>
-#include <exiv2/iptc.hpp>
-#ifdef HAVE_LIBEXIV2_0_27
-    #include <exiv2/xmp_exiv2.hpp>
-#else
-    #include <exiv2/xmp.hpp>
-#endif
-#include <exiv2/tags.hpp>
+#include <exiv2/exiv2.hpp>
 
 #include "batchrenamer.h"
 #include "tokenhelpdialog.h"
@@ -381,7 +370,11 @@ QString Exiv2Plugin::processFile(BatchRenamer *b, int index, const QString &file
     std::string strFilename(asc.constData(), asc.length());
 
     try {
+#if EXIV2_TEST_VERSION(0,28,0)
+        Image::UniquePtr image = Exiv2::ImageFactory::open(strFilename);
+#else
         Image::AutoPtr image = Exiv2::ImageFactory::open(strFilename);
+#endif
         if (image.get() != nullptr && image->good()) {
             image->readMetadata();
 

@@ -6,9 +6,6 @@
 /* have Exiv2 */
 #cmakedefine01 HAVE_EXIV2
 
-/* Defined if we have libexiv2 >= 0.27 */
-#cmakedefine HAVE_LIBEXIV2_0_27
-
 /* have PoDoFo */
 #cmakedefine01 HAVE_PODOFO
 
