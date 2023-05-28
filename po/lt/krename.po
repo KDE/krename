@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-22 00:54+0000\n"
+"POT-Creation-Date: 2023-05-28 00:50+0000\n"
 "PO-Revision-Date: 2017-06-25 15:12+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -322,17 +322,17 @@ msgstr "Skaitmenų kiekis:"
 msgid "Out&put:"
 msgstr "Išvedinys:"
 
-#: exiv2plugin.cpp:295
+#: exiv2plugin.cpp:284
 #, kde-format
 msgid "Insert the comment of an image"
 msgstr "Įterpti komentarą apie atvaizdą"
 
-#: exiv2plugin.cpp:362
+#: exiv2plugin.cpp:351
 #, kde-format
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
 msgstr "Exiv2 (JPEG/TIFF Exif) Įskiepis"
 
-#: exiv2plugin.cpp:363
+#: exiv2plugin.cpp:352
 #, kde-format
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
 msgstr "<qt>Šis įskiepis palaiko žymių skaitymą iš JPEG ir TIFF failų.</qt>"

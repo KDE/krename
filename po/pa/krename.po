@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-22 00:54+0000\n"
+"POT-Creation-Date: 2023-05-28 00:50+0000\n"
 "PO-Revision-Date: 2019-12-29 10:00-0800\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -279,17 +279,17 @@ msgstr ""
 msgid "Out&put:"
 msgstr "ਆਉਟਪੁੱਟ(&p):"
 
-#: exiv2plugin.cpp:295
+#: exiv2plugin.cpp:284
 #, kde-format
 msgid "Insert the comment of an image"
 msgstr ""
 
-#: exiv2plugin.cpp:362
+#: exiv2plugin.cpp:351
 #, kde-format
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
 msgstr "Exiv2 (JPEG/TIFF Exif) ਪਲੱਗਇਨ"
 
-#: exiv2plugin.cpp:363
+#: exiv2plugin.cpp:352
 #, kde-format
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
 msgstr ""

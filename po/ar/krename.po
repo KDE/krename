@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-22 00:54+0000\n"
+"POT-Creation-Date: 2023-05-28 00:50+0000\n"
 "PO-Revision-Date: 2023-04-27 11:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -297,17 +297,17 @@ msgstr "عدد ال&خانات:"
 msgid "Out&put:"
 msgstr "ال&خرج:"
 
-#: exiv2plugin.cpp:295
+#: exiv2plugin.cpp:284
 #, kde-format
 msgid "Insert the comment of an image"
 msgstr "أدرج التّعليق على الصّورة"
 
-#: exiv2plugin.cpp:362
+#: exiv2plugin.cpp:351
 #, kde-format
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
 msgstr "ملحقة Exiv2 ‏(JPEG/TIFF Exif)"
 
-#: exiv2plugin.cpp:363
+#: exiv2plugin.cpp:352
 #, kde-format
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
 msgstr "<qt>تدعم هذه الملحقة قراءة الوسوم من ملفّات JPEG وTIFF.</qt>"

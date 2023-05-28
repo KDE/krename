@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename-3.0.8-1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-22 00:54+0000\n"
+"POT-Creation-Date: 2023-05-28 00:50+0000\n"
 "PO-Revision-Date: 2023-04-24 09:48+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -303,17 +303,17 @@ msgstr "Število števk:"
 msgid "Out&put:"
 msgstr "Izhod:"
 
-#: exiv2plugin.cpp:295
+#: exiv2plugin.cpp:284
 #, kde-format
 msgid "Insert the comment of an image"
 msgstr "Vstavi opombo slike"
 
-#: exiv2plugin.cpp:362
+#: exiv2plugin.cpp:351
 #, kde-format
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
 msgstr "Vstavek Exiv2 (JPEG/TIFF Exif)"
 
-#: exiv2plugin.cpp:363
+#: exiv2plugin.cpp:352
 #, kde-format
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
 msgstr "<qt>Ta vstavek podpira branje oznak iz datotek JPEG in TIFF.</qt>"

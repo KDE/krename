@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-22 00:54+0000\n"
+"POT-Creation-Date: 2023-05-28 00:50+0000\n"
 "PO-Revision-Date: 2004-07-30 23:15+0200\n"
 "Last-Translator: Asim Husanovic <asim.h@megatel.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -284,17 +284,17 @@ msgstr "&Broj cifara:"
 msgid "Out&put:"
 msgstr ""
 
-#: exiv2plugin.cpp:295
+#: exiv2plugin.cpp:284
 #, fuzzy, kde-format
 msgid "Insert the comment of an image"
 msgstr "unesi dužinu ulaznog imena datoteke"
 
-#: exiv2plugin.cpp:362
+#: exiv2plugin.cpp:351
 #, kde-format
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
 msgstr ""
 
-#: exiv2plugin.cpp:363
+#: exiv2plugin.cpp:352
 #, fuzzy, kde-format
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
 msgstr ""
