@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -57,7 +57,6 @@ msgstr ""
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
 msgstr[0] "%2 個のエラーが発生"
-msgstr[1] "%2 個のエラーが発生"
 
 #: batchrenamer.cpp:276 batchrenamer.cpp:732
 #, kde-format
@@ -1058,7 +1057,6 @@ msgstr "特殊な文字:"
 msgid "Starting conversion of %1 file."
 msgid_plural "Starting conversion of %1 files."
 msgstr[0] "%1 個のファイルの変換を開始"
-msgstr[1] "%1 個のファイルの変換を開始"
 
 #: krenameimpl.cpp:551
 #, fuzzy, kde-format
