@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 00:50+0000\n"
-"PO-Revision-Date: 2023-04-23 07:31+0200\n"
+"PO-Revision-Date: 2023-06-05 15:00+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
 #, kde-format
@@ -943,7 +943,7 @@ msgstr "Baixar"
 #: krenameimpl.cpp:353
 #, kde-format
 msgid "Do you really want to remove all files from the list?"
-msgstr "Seguro que quere retirar todos is ficheiros da lista?"
+msgstr "Seguro que quere retirar todos os ficheiros da lista?"
 
 #: krenameimpl.cpp:354 main.cpp:43
 #, kde-format
