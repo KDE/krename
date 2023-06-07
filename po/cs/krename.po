@@ -1,19 +1,19 @@
 # Pavel Fric <pavelfric@seznam.cz>, 2009, 2010, 2011, 2014.
 # Vít Pelčák <vit@pelcak.org>, 2016, 2017, 2018.
-# Vit Pelcak <vit@pelcak.org>, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 00:50+0000\n"
-"PO-Revision-Date: 2021-07-01 14:24+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-04-26 11:27+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.04.2\n"
+"X-Generator: Lokalize 23.04.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
@@ -971,8 +971,7 @@ msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "Počítadlo s vlastní počáteční hodnotou 0 a s vlastním krokováním 1"
 
 #: krenameimpl.cpp:477
-#, fuzzy, kde-format
-#| msgid "create a subdfolder"
+#, kde-format
 msgid "create a subfolder"
 msgstr "vytvořit podsložku"
 
