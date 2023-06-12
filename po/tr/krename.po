@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 00:50+0000\n"
-"PO-Revision-Date: 2023-04-22 12:09+0300\n"
+"PO-Revision-Date: 2023-06-11 21:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
 #, kde-format
@@ -1259,7 +1259,7 @@ msgid ""
 "to his excellent image viewer showimg."
 msgstr ""
 "startIndex işlevinde bir hata düzeltti ve BatchRenamer sınıfını\n"
-"harika görsel görüntüleyici olan showmimg'e ekledi."
+"harika görsel görüntüleyicisi olan showmimg'e ekledi."
 
 #: main.cpp:69
 #, kde-format
