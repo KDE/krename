@@ -902,7 +902,7 @@ msgstr "Personalizado…"
 #: krenamefiles.ui:151
 #, kde-format
 msgid "Display a preview image for each file."
-msgstr "Mostrar unha imaxe de vista previa para cada ficheiro."
+msgstr "Amosar unha imaxe de vista previa para cada ficheiro."
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkPreview)
 #: krenamefiles.ui:154
@@ -914,13 +914,13 @@ msgstr "&Previsualizar"
 #: krenamefiles.ui:161
 #, kde-format
 msgid "Display the filename together with the preview."
-msgstr "Mostrar o nome de ficheiro xunto coa vista previa."
+msgstr "Amosar o nome de ficheiro xunto coa vista previa."
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkName)
 #: krenamefiles.ui:164
 #, kde-format
 msgid "&Display name"
-msgstr "&Nome para mostrar"
+msgstr "&Nome para amosar"
 
 #. i18n: ectx: property (text), widget (QLabel, labelCount)
 #: krenamefiles.ui:174
@@ -1545,12 +1545,12 @@ msgstr "cartafol"
 #: main.cpp:111
 #, kde-format
 msgid "set a template"
-msgstr "estabelecer un modelo"
+msgstr "definir un modelo"
 
 #: main.cpp:112
 #, kde-format
 msgid "set a template for the file extension"
-msgstr "estabelecer un modelo para a extensión de ficheiro"
+msgstr "definir un modelo para a extensión de ficheiro"
 
 #: main.cpp:113
 #, kde-format
