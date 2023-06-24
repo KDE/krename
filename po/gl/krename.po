@@ -41,7 +41,7 @@ msgstr "Crearanse ligazóns simbólicas en: %1"
 #, kde-format
 msgid "Cannot rename: source and target filename are equal: %1"
 msgstr ""
-"Non se pode cambiar de nome: o nome de ficheiro de orixe e de destino son "
+"Non se pode renomear: o nome de ficheiro de orixe e de destino son "
 "idénticos: %1"
 
 #: batchrenamer.cpp:250
@@ -52,7 +52,7 @@ msgstr "Non se pode crear unha ligazóns simbólica a un URL non local: %1"
 #: batchrenamer.cpp:264 dirsortplugin.cpp:131
 #, kde-format
 msgid "Error renaming %2 (to %1)"
-msgstr "Erro ao cambiar o nome de %2 (a %1)"
+msgstr "Erro ao renomear %2 (a %1)"
 
 #: batchrenamer.cpp:287 batchrenamer.cpp:411 batchrenamer.cpp:742
 #, kde-format
@@ -64,7 +64,7 @@ msgstr[1] "Producíronse %1 erros."
 #: batchrenamer.cpp:290 batchrenamer.cpp:746
 #, kde-format
 msgid "KRename finished the renaming process."
-msgstr "KRename completou o proceso de cambio de nome."
+msgstr "KRename completou o proceso de renomeamento."
 
 #: batchrenamer.cpp:291 batchrenamer.cpp:415 batchrenamer.cpp:747
 #, kde-format
@@ -94,7 +94,7 @@ msgstr "KRename completou o proceso de desfacer."
 #: batchrenamer.cpp:650
 #, kde-format
 msgid "Cannot create undo script: %1"
-msgstr "Non se pode crear o script de desfacer: %1"
+msgstr "Non se pode crear o guión de desfacer: %1"
 
 #: batchrenamer.cpp:724
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "Tempo transcorrido: %1 segundos"
 #: batchrenamer.cpp:757
 #, kde-format
 msgid "Cannot set executable bit on undo script."
-msgstr "Non se pode activar o bit de execución no script de desfacer."
+msgstr "Non se pode activar o bit de execución no guión de desfacer."
 
 #: batchrenamer.cpp:1178
 #, kde-format
@@ -154,7 +154,7 @@ msgid ""
 "input filename and use this for renaming."
 msgstr ""
 "Usar o nome de ficheiro de entrada ao cambiar o nome deste ficheiro. Tamén "
-"pode cambiar o nome de ficheiro de entrada e usar isto para cambiar de nome."
+"pode renomear ficheiro de entrada e usar isto para renomear."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioInput)
 #: customfilenamedlg.ui:115
@@ -342,7 +342,7 @@ msgid ""
 "subfolders to the list of files to rename."
 msgstr ""
 "Pasar de maneira recursiva pola árbore de cartafoles e tamén engadir o "
-"contido de todos os subcartafoles á lista de ficheiros para cambiar de nome."
+"contido de todos os subcartafoles á lista de ficheiros para renomear."
 
 #: filedialogextwidget.cpp:72
 #, kde-format
@@ -513,7 +513,7 @@ msgstr "&Modelo:"
 #: krenamefilename.ui:66
 #, kde-format
 msgid "<qt>Enter a template for changing the filename.</qt>"
-msgstr "<qt>Introduza un modelo para cambiar o nome de ficheiro.</qt>"
+msgstr "<qt>Introduza un modelo para renomear ficheiro.</qt>"
 
 #. i18n: ectx: property (text), item, widget (ExtHistoryCombo, filenameTemplate)
 #. i18n: ectx: property (text), item, widget (ExtHistoryCombo, extensionTemplate)
@@ -811,7 +811,7 @@ msgstr "&Baixar"
 #: krenamefiles.ui:53
 #, kde-format
 msgid "Add files for renaming."
-msgstr "Engadir ficheiros para cambiar de nome."
+msgstr "Engadir ficheiros para renomear."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonAdd)
 #: krenamefiles.ui:56 previewlist.cpp:35 replacewidget.ui:97
@@ -1174,8 +1174,8 @@ msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
 "set of expressions."
 msgstr ""
-"Krename é un cambiador de nome de ficheiro en lote que pode cambiar de nome "
-"unha lista de ficheiros en base a un grupo de expresións."
+"Krename é un cambiador de nome de ficheiro en lote que pode renomear unha "
+"lista de ficheiros en base a un grupo de expresións."
 
 #: main.cpp:62
 #, kde-format
@@ -1333,7 +1333,7 @@ msgstr "Michael v.Ostheim"
 #: main.cpp:93
 #, kde-format
 msgid "Created the Gentoo Ebuild scripts for Krename."
-msgstr "Creou os scripts de Ebuild de Gentoo para KRename."
+msgstr "Creou os guións de Ebuild de Gentoo para KRename."
 
 #: main.cpp:95
 #, kde-format
@@ -1525,7 +1525,7 @@ msgstr "adrian@chaves.io"
 #: main.cpp:123
 #, kde-format
 msgid "Files to be added to the list to be renamed"
-msgstr "Ficheiros para engadir á lista para cambiar de nome"
+msgstr "Ficheiros para engadir á lista para renomear"
 
 #: main.cpp:123
 #, kde-format
@@ -1580,7 +1580,7 @@ msgstr "ligar os ficheiros nun cartafol ou URL"
 #: main.cpp:131
 #, kde-format
 msgid "start renaming immediately"
-msgstr "comezar a cambiar de nome inmediatamente"
+msgstr "comezar a renomear inmediatamente"
 
 #: main.cpp:132
 #, kde-format
@@ -1833,8 +1833,7 @@ msgstr "Este ficheiro usa permisos avanzados"
 #, kde-format
 msgid "Is Executable/Only owner &can rename and delete folder content"
 msgstr ""
-"É executábel ou só o dono pode &cambiar de nome e eliminar contido do "
-"cartafol"
+"É executábel ou só o dono pode &renomear e eliminar contido do cartafol"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: permissionspluginwidget.ui:170
@@ -1914,7 +1913,7 @@ msgstr "<qt>Este complemento permite ler etiquetas de ficheiros PDF.</qt>"
 #: previewlist.cpp:31
 #, kde-format
 msgid "&Change filename manually..."
-msgstr "&Cambiar o nome de ficheiro manualmente…"
+msgstr "&Renomear ficheiro manualmente…"
 
 #: previewlist.cpp:33
 #, kde-format
@@ -1955,7 +1954,7 @@ msgstr "C&ambiar o nome dos ficheiros procesador de novo…"
 #: progressdialog.cpp:55
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
-msgstr "Cambiar o nome dos ficheiros &sen procesar de novo…"
+msgstr "Renomear os ficheiros &sen procesar de novo…"
 
 #: progressdialog.cpp:56
 #, kde-format
