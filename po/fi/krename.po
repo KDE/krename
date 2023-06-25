@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2018.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 00:50+0000\n"
-"PO-Revision-Date: 2018-08-02 23:29+0200\n"
+"PO-Revision-Date: 2023-05-29 21:14+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
 #, kde-format
@@ -974,8 +974,7 @@ msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "laskuri, jonka mukautettu alkuarvo on 0 ja askel 1"
 
 #: krenameimpl.cpp:477
-#, fuzzy, kde-format
-#| msgid "create a subdfolder"
+#, kde-format
 msgid "create a subfolder"
 msgstr "luo alikansio"
 
