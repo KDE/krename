@@ -498,3 +498,5 @@ void KRenamePreviewModel::refresh()
     beginResetModel();
     endResetModel();
 }
+
+#include "moc_krenamemodel.cpp"

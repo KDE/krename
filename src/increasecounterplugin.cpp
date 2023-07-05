@@ -62,3 +62,5 @@ void IncreaseCounterPlugin::slotOffsetChanged(int offset)
     m_offset = offset;
     m_pluginLoader->sendUpdatePreview();
 }
+
+#include "moc_increasecounterplugin.cpp"

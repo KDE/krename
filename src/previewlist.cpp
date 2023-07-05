@@ -71,3 +71,5 @@ void PreviewList::slotManually()
     }
     delete dialog;
 }
+
+#include "moc_previewlist.cpp"

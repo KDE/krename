@@ -359,4 +359,7 @@ void PermissionsPlugin::setCurrentPermissions( int perm )
     m_curPermission = perm;
 }
 */
+
+#include "moc_permissionsplugin.cpp"
+
 #endif // Q_OS_WIN

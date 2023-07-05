@@ -202,3 +202,5 @@ void KRenameFileTest::testKRenameFile()
     QCOMPARE(file.srcFilename(), filename);
     QCOMPARE(file.srcExtension(), extension);
 }
+
+#include "moc_krenamefiletest.cpp"

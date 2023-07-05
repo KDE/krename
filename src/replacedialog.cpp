@@ -327,3 +327,5 @@ QList<TReplaceItem> ReplaceDialog::replaceList() const
 
     return items;
 }
+
+#include "moc_replacedialog.cpp"

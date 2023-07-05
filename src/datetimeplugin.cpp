@@ -119,4 +119,6 @@ QString DateTimePlugin::changeDateTime(const QString &filename, bool bModificati
     return QString();
 }
 
+#include "moc_datetimeplugin.cpp"
+
 #endif // Q_OS_WIN

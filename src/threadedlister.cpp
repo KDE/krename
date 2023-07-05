@@ -106,3 +106,5 @@ void ThreadedLister::completed()
 
     Q_EMIT listerDone(this);
 }
+
+#include "moc_threadedlister.cpp"

@@ -36,3 +36,5 @@ void KRenameListView::positionLabel()
         m_label->show();
     }
 }
+
+#include "moc_krenamelistview.cpp"

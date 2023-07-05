@@ -30,3 +30,4 @@ StartUpInfo::~StartUpInfo()
     delete m_widget;
 }
 
+#include "moc_startupinfo.cpp"

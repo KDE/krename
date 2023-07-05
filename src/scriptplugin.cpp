@@ -432,3 +432,4 @@ void ScriptPlugin::saveConfig(KConfigGroup &group) const
     group.writeEntry("JavaScriptDefinitions", m_widget->textCode->toPlainText());
 }
 
+#include "moc_scriptplugin.cpp"

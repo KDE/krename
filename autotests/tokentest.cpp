@@ -496,3 +496,4 @@ void TokenTest::testReplacing()
     QCOMPARE(list[0].dstFilename(), expected);
 }
 
+#include "moc_tokentest.cpp"

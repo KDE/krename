@@ -116,3 +116,5 @@ EManualChangeMode CustomDialog::manualChangeMode() const
     }
 
 }
+
+#include "moc_customdialog.cpp"

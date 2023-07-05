@@ -74,3 +74,4 @@ QSize RichTextItemDelegate::sizeHint(const QStyleOptionViewItem &option, const Q
     }
 }
 
+#include "moc_richtextitemdelegate.cpp"

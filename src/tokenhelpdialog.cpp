@@ -329,3 +329,5 @@ void TokenHelpDialog::addToRecentTokens(const QString &token, const QString &hel
 }
 
 #include "tokenhelpdialog.moc"
+
+#include "moc_tokenhelpdialog.cpp"

@@ -80,3 +80,5 @@ QString TokenSortModeDialog::getToken() const
         return m_dialog.comboPredefined->itemData(index).toString();
     }
 }
+
+#include "moc_tokensortmodedialog.cpp"

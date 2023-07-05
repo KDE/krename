@@ -672,3 +672,4 @@ void KRenameImpl::saveConfig()
     config->sync();
 }
 
+#include "moc_krenameimpl.cpp"
