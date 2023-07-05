@@ -20,7 +20,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS
     Widgets
     Qml
 )
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF${QT_MAJOR_VERSION} ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Completion
     Config
     CoreAddons
@@ -44,8 +44,8 @@ add_definitions(
 )
 
 # Find KArchive
-find_package(KF5Archive)
-set_package_properties(KF5Archive PROPERTIES
+find_package(KFArchive)
+set_package_properties(KF${QT_MAJOR_VERSION}Archive PROPERTIES
     PURPOSE "Needed for ODF plugin"
     TYPE OPTIONAL)
 

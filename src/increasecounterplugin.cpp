@@ -7,7 +7,7 @@
 #include "pluginloader.h"
 
 #include <QIcon>
-#include <QRegExp>
+#include <QtCore5Compat/QRegExp>
 
 IncreaseCounterPlugin::IncreaseCounterPlugin(PluginLoader *loader)
     : Plugin(loader), m_offset(0)

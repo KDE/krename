@@ -124,11 +124,11 @@ set_target_properties(libkrename PROPERTIES
 )
 
 target_link_libraries(libkrename
-    KF5::Crash
-    KF5::KIOCore
-    KF5::KIOFileWidgets
-    KF5::I18n
-    KF5::IconThemes
+    KF${QT_MAJOR_VERSION}::Crash
+    KF${QT_MAJOR_VERSION}::KIOCore
+    KF${QT_MAJOR_VERSION}::KIOFileWidgets
+    KF${QT_MAJOR_VERSION}::I18n
+    KF${QT_MAJOR_VERSION}::IconThemes
     Qt${QT_MAJOR_VERSION}::Widgets
     Qt${QT_MAJOR_VERSION}::Qml
 )
@@ -150,7 +150,7 @@ endif()
 if(KF5Archive_FOUND)
     target_link_libraries(libkrename
         Qt${QT_MAJOR_VERSION}::Xml
-        KF5::Archive
+        KF${QT_MAJOR_VERSION}::Archive
     )
 endif()
 if(FREETYPE_FOUND)

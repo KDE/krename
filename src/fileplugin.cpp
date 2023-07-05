@@ -10,7 +10,7 @@
 #include <QListWidget>
 #include <QLabel>
 #include <QHBoxLayout>
-#include <QRegExp>
+#include <QtCore5Compat/QRegExp>
 
 FilePlugin::FilePlugin(PluginLoader *loader, KService *service)
     : Plugin(loader),
