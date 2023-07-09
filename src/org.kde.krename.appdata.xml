@@ -11,6 +11,7 @@
   <name xml:lang="de">KRename</name>
   <name xml:lang="el">KRename</name>
   <name xml:lang="en-GB">KRename</name>
+  <name xml:lang="eo">KRename</name>
   <name xml:lang="es">KRename</name>
   <name xml:lang="et">KRename</name>
   <name xml:lang="eu">KRename</name>
@@ -45,6 +46,7 @@
   <summary xml:lang="de">Leistungsfähiges Programm zum Umbenennen in einer Stapelverarbeitung</summary>
   <summary xml:lang="el">Μια ισχυρή εφαρμογή ομαδικής μετονομασίας αρχείων</summary>
   <summary xml:lang="en-GB">A powerful batch file renamer</summary>
+  <summary xml:lang="eo">Potenca stapla dosier-alinomilo</summary>
   <summary xml:lang="es">Un potente cambiador de nombres de archivos por lotes</summary>
   <summary xml:lang="et">Võimas failide nime hulgikaupa muutja</summary>
   <summary xml:lang="eu">Sortaka fitxategi berrizendatzaile ahaltsua</summary>
