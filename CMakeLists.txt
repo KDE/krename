@@ -61,10 +61,7 @@ set_package_properties(LibExiv2 PROPERTIES TYPE OPTIONAL)
 
 # Find podofo
 find_package(PoDoFo)
-set_package_properties(PoDoFo PROPERTIES
-    DESCRIPTION "A library to access PDF metadata"
-    URL "http://podofo.sourceforge.net/"
-    TYPE OPTIONAL)
+set_package_properties(PoDoFo PROPERTIES TYPE OPTIONAL)
 
 # Find freetype
 find_package(Freetype)

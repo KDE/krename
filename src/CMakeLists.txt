@@ -10,11 +10,6 @@ if(EXIV2_FOUND)
     include_directories(${EXIV2_INCLUDE_DIR})
 endif()
 
-if(PoDoFo_FOUND)
-    include_directories(${PoDoFo_INCLUDE_DIRS})
-    add_definitions(${PoDoFo_DEFINITIONS})
-endif()
-
 if(FREETYPE_FOUND)
     include_directories(${FREETYPE_INCLUDE_DIRS})
 endif()
@@ -144,7 +139,7 @@ if(LibExiv2_FOUND)
 endif()
 if(PoDoFo_FOUND)
     target_link_libraries(libkrename
-        ${PoDoFo_LIBRARIES}
+        PoDoFo::PoDoFo
     )
 endif()
 if(KF5Archive_FOUND)
