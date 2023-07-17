@@ -47,6 +47,25 @@ QString PodofoPlugin::processFile(BatchRenamer *b, int index, const QString &fil
     try {
         PdfMemDocument doc;
         doc.Load(filename.toUtf8().data());
+#if (PODOFO_VERSION_MINOR>=10 || PODOFO_VERSION_MAJOR>=1)
+        const PdfInfo *info = doc.GetInfo();
+
+        if (token == "pdfauthor") {
+            return info->GetAuthor().has_value() ? QString::fromUtf8(info->GetAuthor()->GetString().c_str()) : QString();
+        } else if (token == "pdfcreator") {
+            return info->GetCreator().has_value() ? QString::fromUtf8(info->GetCreator()->GetString().c_str()) : QString();
+        } else if (token == "pdfkeywords") {
+            return info->GetKeywords().has_value() ? QString::fromUtf8(info->GetKeywords()->GetString().c_str()) : QString();
+        } else if (token == "pdfsubject") {
+            return info->GetSubject().has_value() ? QString::fromUtf8(info->GetSubject()->GetString().c_str()) : QString();
+        } else if (token == "pdftitle") {
+            return info->GetTitle().has_value() ? QString::fromUtf8(info->GetTitle()->GetString().c_str()) : QString();
+        } else if (token == "pdfproducer") {
+            return info->GetProducer().has_value() ? QString::fromUtf8(info->GetProducer()->GetString().c_str()) : QString();
+        } else if (token == "pdfpages") {
+            return QString::number(doc.GetPages().GetCount());
+        }
+#else
         PdfInfo *info = doc.GetInfo();
 
         if (token == "pdfauthor") {
@@ -64,6 +83,7 @@ QString PodofoPlugin::processFile(BatchRenamer *b, int index, const QString &fil
         } else if (token == "pdfpages") {
             return QString::number(doc.GetPageCount());
         }
+#endif
     } catch (PdfError &error) {
         return QString::fromUtf8(error.what());
     }
