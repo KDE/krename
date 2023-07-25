@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the krename package.
 # Jung Hee Lee <daemul72@gmail.com>, 2019, 2020.
-# Shinjo Park <kde@peremen.name>, 2019, 2020, 2022.
+# Shinjo Park <kde@peremen.name>, 2019, 2020, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 00:50+0000\n"
-"PO-Revision-Date: 2022-08-09 13:37+0200\n"
+"PO-Revision-Date: 2023-07-25 00:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
 #, kde-format
@@ -967,8 +967,7 @@ msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "사용자 지정 시작 값이 0이고 사용자 지정 단계별 값이 1인 문자 카운터"
 
 #: krenameimpl.cpp:477
-#, fuzzy, kde-format
-#| msgid "create a subdfolder"
+#, kde-format
 msgid "create a subfolder"
 msgstr "하위 폴더 만들기"
 
