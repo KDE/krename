@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-28 00:50+0000\n"
-"PO-Revision-Date: 2023-06-11 21:49+0300\n"
+"PO-Revision-Date: 2023-08-11 13:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
 #, kde-format
@@ -137,14 +137,13 @@ msgstr "Lütfen yeni bir dosya adı girin"
 #, kde-format
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
-"Dosyayı K Yeniden Adlandır tarafından oluşturulan dosya adıyla yeniden "
-"adlandır."
+"Dosyayı K Adveren tarafından oluşturulan dosya adıyla yeniden adlandır."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioKRename)
 #: customfilenamedlg.ui:100
 #, kde-format
 msgid "Use filename created by &KRename"
-msgstr "&K Yeniden Adlandır tarafından oluşturulan dosya adını kullan"
+msgstr "&K Adveren tarafından oluşturulan dosya adını kullan"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioInput)
 #: customfilenamedlg.ui:112
@@ -168,8 +167,8 @@ msgstr "&Girdi dosya adını kullan"
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
 msgstr ""
-"K Yeniden Adlandır tarafından oluşturulan dosya adını taban alan özel bir "
-"dosya adı kullan."
+"K Adveren tarafından oluşturulan dosya adını taban alan özel bir dosya adı "
+"kullan."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
 #: customfilenamedlg.ui:125
@@ -347,8 +346,8 @@ msgid ""
 "If not checked, KRename will ignore folders starting with a dot during "
 "recursive adding."
 msgstr ""
-"Eğer seçili değilse K Yeniden Adlandır özyineli ekleme sırasında nokta ile "
-"başlayan klasörleri yok sayacaktır."
+"Eğer seçili değilse K Adveren özyineli ekleme sırasında nokta ile başlayan "
+"klasörleri yok sayacaktır."
 
 #: filedialogextwidget.cpp:60
 #, kde-format
@@ -356,8 +355,8 @@ msgid ""
 "Add only the folder names and not the names of the files in the folder to "
 "KRename."
 msgstr ""
-"K Yeniden Adlandır'a yalnızca klasör adlarını ekle, klasör içindeki "
-"dosyaların adlarını değil."
+"K Adveren'e yalnızca klasör adlarını ekle, klasör içindeki dosyaların "
+"adlarını değil."
 
 #: filedialogextwidget.cpp:62
 #, kde-format
@@ -365,8 +364,8 @@ msgid ""
 "This option causes KRename to also add the name of the base folder of the "
 "selected files to its list."
 msgstr ""
-"Bu seçenek, K Yeniden Adlandır'ın seçilen dosyaların ait olduğu klasörün "
-"adını de listeye eklemesini sağlar."
+"Bu seçenek, K Adveren'in seçilen dosyaların ait olduğu klasörün adını de "
+"listeye eklemesini sağlar."
 
 #: fileplugin.cpp:70
 #, kde-format
@@ -1094,8 +1093,7 @@ msgstr[1] "%1 dosyanın dönüştürülmesine başlanıyor."
 #: krenameimpl.cpp:551
 #, kde-format
 msgid "The folder %1 does not exist. Do you want KRename to create it for you?"
-msgstr ""
-"%1 klasörü yok. K Yeniden Adlandır sizin için bu klasörü oluştursun mu?"
+msgstr "%1 klasörü yok. K Adveren sizin için bu klasörü oluştursun mu?"
 
 #: krenameimpl.cpp:561
 #, kde-format
@@ -1170,8 +1168,8 @@ msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
 "set of expressions."
 msgstr ""
-"K Yeniden Adlandır bir dosya listesini belirlenen ifadelere göre yeniden "
-"adlandıran toplu yeniden adlandırma aracıdır."
+"K Adveren bir dosya listesini belirlenen ifadelere göre yeniden adlandıran "
+"toplu yeniden adlandırma aracıdır."
 
 #: main.cpp:48
 #, kde-format
@@ -1180,10 +1178,10 @@ msgid ""
 "feature requests are as welcome as financial support (everybody needs "
 "money ;). See help files for details."
 msgstr ""
-"K Yeniden Adlandır'ı beğeniyorsanız desteklemek isteyebilirsiniz. Sınama, "
-"hata giderme ve özellik isteklerinin yanında finansal destek de hoş "
-"karşılanır (herkesin paraya gereksinimi vardır ;). Ayrıntılar için yardım "
-"dosyalarına göz atın."
+"K Adveren'i beğeniyorsanız desteklemek isteyebilirsiniz. Sınama, hata "
+"giderme ve özellik isteklerinin yanında finansal destek de hoş karşılanır "
+"(herkesin paraya gereksinimi vardır ;). Ayrıntılar için yardım dosyalarına "
+"göz atın."
 
 #: main.cpp:52
 #, kde-format
@@ -1269,8 +1267,7 @@ msgstr "Michael Elvers"
 #: main.cpp:69
 #, kde-format
 msgid "Fixed a bug that caused krename not closing open files."
-msgstr ""
-"K Yeniden Adlandır'ın açık dosyaları kapatmasını engelleyen hata kapatıldı."
+msgstr "K Adveren'in açık dosyaları kapatmasını engelleyen hata kapatıldı."
 
 #: main.cpp:71
 #, kde-format
@@ -1283,7 +1280,7 @@ msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
 "to apps.kde.com."
 msgstr ""
-"apps.kde.com'daki harika katkıları ve K Yeniden Adlandır'ın apps.kde.com'da "
+"apps.kde.com'daki harika katkıları ve K Adveren'in apps.kde.com'da "
 "bulunmasına yardımları için teşekkürler."
 
 #: main.cpp:73
@@ -1331,7 +1328,7 @@ msgstr "Michael v.Ostheim"
 #: main.cpp:79
 #, kde-format
 msgid "Created the Gentoo Ebuild scripts for KRename."
-msgstr "K Yeniden Adlandır için Gentoo Ebuild betiklerini yazdı."
+msgstr "K Adveren için Gentoo Ebuild betiklerini yazdı."
 
 #: main.cpp:81
 #, kde-format
@@ -1436,8 +1433,8 @@ msgstr "Steven P. Ulrick"
 #, kde-format
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr ""
-"Bir RedHat RPM'i sağladı ve K Yeniden Adlandır'ı geliştirmede çok büyük "
-"yardımı dokundu"
+"Bir RedHat RPM'i sağladı ve K Adveren'i geliştirmede çok büyük yardımı "
+"dokundu"
 
 #: main.cpp:93
 #, kde-format
@@ -1447,7 +1444,7 @@ msgstr "UTUMI Hirosi"
 #: main.cpp:93
 #, kde-format
 msgid "Translated KRename to Japanese"
-msgstr "K Yeniden Adlandır'ı Japoncaya çevirdi"
+msgstr "K Adveren'i Japoncaya çevirdi"
 
 #: main.cpp:94
 #, kde-format
@@ -1457,7 +1454,7 @@ msgstr "Nicolas Benoit"
 #: main.cpp:94
 #, kde-format
 msgid "Translated KRename into French"
-msgstr "K Yeniden Adlandır'ı Fransızcaya çevirdi"
+msgstr "K Adveren'i Fransızcaya çevirdi"
 
 #: main.cpp:95
 #, kde-format
@@ -1467,7 +1464,7 @@ msgstr "Krzysztof Pawlak"
 #: main.cpp:95
 #, kde-format
 msgid "Translated KRename into Polish"
-msgstr "K Yeniden Adlandır'ı Lehçeye çevirdi"
+msgstr "K Adveren'i Lehçeye çevirdi"
 
 #: main.cpp:96
 #, kde-format
@@ -1477,7 +1474,7 @@ msgstr "Ilya Ivkov"
 #: main.cpp:96
 #, kde-format
 msgid "Translated KRename into Russian"
-msgstr "K Yeniden Adlandır'ı Rusçaya çevirdi"
+msgstr "K Adveren'i Rusçaya çevirdi"
 
 #: main.cpp:97
 #, kde-format
@@ -1487,7 +1484,7 @@ msgstr "Asim Husanovic"
 #: main.cpp:97
 #, kde-format
 msgid "Translated KRename into Bosnian"
-msgstr "K Yeniden Adlandır'ı Boşnakçaya çevirdi"
+msgstr "K Adveren'i Boşnakçaya çevirdi"
 
 #: main.cpp:98
 #, kde-format
@@ -1584,7 +1581,7 @@ msgstr "adlandırmayı derhal başlat"
 #: main.cpp:118
 #, kde-format
 msgid "start KRename's selftest (developers only)"
-msgstr "K Yeniden Adlandır sınamasını başlat (geliştiriciler için)"
+msgstr "K Adveren sınamasını başlat (geliştiriciler için)"
 
 #: main.cpp:137
 #, kde-format
@@ -1592,9 +1589,8 @@ msgid ""
 "<b>KRename was started from root!</b><br>When started from root, KRename may "
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
-"<b>K Yeniden Adlandır, kök dizinden başlatıldı!</b><br>Eğer ne yaptığınızı "
-"tam olarak bilmiyorsanız Krename kök dizinden başlatılınca sisteminize zarar "
-"verebilir!"
+"<b>K Adveren, kök dizinden başlatıldı!</b><br>Eğer ne yaptığınızı tam olarak "
+"bilmiyorsanız Krename kök dizinden başlatılınca sisteminize zarar verebilir!"
 
 #: main.cpp:141
 #, kde-format
@@ -1729,7 +1725,7 @@ msgstr "Dönüştürme Yok"
 #: partfilenamewidget.ui:90
 #, kde-format
 msgid "Preview of the generated KRename command:"
-msgstr "Üretilen K Yeniden Adlandır komutunun önizlemesi:"
+msgstr "Üretilen K Adveren komutunun önizlemesi:"
 
 #: permissionsplugin.cpp:92
 #, kde-format
@@ -1998,7 +1994,7 @@ msgstr "Hedefi &Aç"
 #: progressdialog.cpp:37
 #, kde-format
 msgid "Restart &KRename..."
-msgstr "&K Yeniden Adlandır'ı Yeniden Başlat..."
+msgstr "&K Adveren'i Yeniden Başlat..."
 
 #: progressdialog.cpp:39
 #, kde-format
@@ -2035,7 +2031,7 @@ msgstr "Bul & Değiştir Ayarlarını Kaydet:"
 #: replacedialog.cpp:68
 #, kde-format
 msgid "KRename Find & Replace Settings XML (*.xml)"
-msgstr "K Yeniden Adlandır Bul & Değiştir Ayarları XML (*.xml)"
+msgstr "K Adveren Bul & Değiştir Ayarları XML (*.xml)"
 
 #: replacedialog.cpp:77
 #, kde-format
@@ -2050,7 +2046,7 @@ msgstr "Bul ve Değiştir Ayarları Dosyasını Kaydet"
 #: replacedialog.cpp:131
 #, kde-format
 msgid "KRename Find and Replace Settings XML (*.xml)"
-msgstr "K Yeniden Adlandır Bul ve Değiştir Ayarları XML (*.xml)"
+msgstr "K Adveren Bul ve Değiştir Ayarları XML (*.xml)"
 
 #: replacedialog.cpp:139
 #, kde-format
@@ -2066,7 +2062,7 @@ msgstr ""
 #: replacedialog.cpp:232
 #, kde-format
 msgid "KRename Find and Replace Settings XML File"
-msgstr "K Yeniden Adlandır Bul ve Değiştir Ayarları XML Dosyası"
+msgstr "K Adveren Bul ve Değiştir Ayarları XML Dosyası"
 
 #: replacedialog.cpp:151
 #, kde-format
@@ -2080,17 +2076,17 @@ msgstr ""
 #: replacedialog.cpp:160
 #, kde-format
 msgid "The file is not a KRename XML file."
-msgstr "Dosya, K Yeniden Adlandır XML dosyası değil."
+msgstr "Dosya, K Adveren XML dosyası değil."
 
 #: replacedialog.cpp:165
 #, kde-format
 msgid "The file is not an KRename XML version 1.0 file."
-msgstr "Dosya, K Yeniden Adlandır XML sürüm 1.0 dosyası değil."
+msgstr "Dosya, K Adveren XML sürüm 1.0 dosyası değil."
 
 #: replacedialog.cpp:231
 #, kde-format
 msgid "Problem with loading KRename XML file."
-msgstr "K Yeniden Adlandır XML dosyası yükleme sorunu."
+msgstr "K Adveren XML dosyası yükleme sorunu."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ReplaceWidget)
 #. i18n: ectx: property (windowTitle), widget (QDialog, ReplaceItemDlg)
@@ -2314,8 +2310,7 @@ msgstr "&Tanımlar"
 #: scriptpluginwidget.ui:106
 #, kde-format
 msgid "Define functions that can be used from KRename templates:"
-msgstr ""
-"K Yeniden Adlandır şablonlarından kullanılabilecek işlevleri tanımlayın:"
+msgstr "K Adveren şablonlarından kullanılabilecek işlevleri tanımlayın:"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSave)
 #: scriptpluginwidget.ui:127
@@ -2397,7 +2392,7 @@ msgstr ""
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
-"large; font-weight:600;\">K Yeniden Adlandır'a Hoş Geldiniz</span></p>\n"
+"large; font-weight:600;\">K Adveren'e hoş geldiniz</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">KDE'nin toplu dosya "
 "adlandırıcısı.<br />Dosyalarınızı yeniden adlandırmak için yapmanız gereken:"
@@ -2594,7 +2589,7 @@ msgstr "Son Kullanılan"
 #: tokenhelpwidget.ui:13
 #, kde-format
 msgid "KRename Help"
-msgstr "K Yeniden Adlandır Yardım"
+msgstr "K Adveren Yardım"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: tokenhelpwidget.ui:19
