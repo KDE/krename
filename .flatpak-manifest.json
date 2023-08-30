@@ -1,0 +1,71 @@
+{
+    "id": "org.kde.krename",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15-22.08",
+    "sdk": "org.kde.Sdk",
+    "command": "krename",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland", "--filesystem=host" ],
+
+    "modules": [
+        {
+            "name": "libexif",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libexif/libexif/releases/download/v0.6.24/libexif-0.6.24.tar.bz2",
+                    "sha256": "d47564c433b733d83b6704c70477e0a4067811d184ec565258ac563d8223f6ae",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "taglib",
+            "config-opts": [ "-DBUILD_SHARED_LIBS=ON" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://taglib.github.io/releases/taglib-1.12.tar.gz",
+                    "sha256": "7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1982,
+                        "stable-only": true,
+                        "url-template": "https://taglib.github.io/releases/taglib-$version.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "kjs",
+            "config-opts": [ "-DENABLE_TESTING=OFF" ],
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://commits.kde.org/kjs.git",
+                    "tag": "v5.92.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "ff72aaa777fd7cd2df19db699e02b045c07efecb"
+                }
+            ]
+        },
+        {
+            "name": "krename",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                { "type": "dir", "path": "." }
+            ]
+        }
+    ]
+}
