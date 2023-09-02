@@ -44,23 +44,6 @@
             ]
         },
         {
-            "name": "kjs",
-            "config-opts": [ "-DENABLE_TESTING=OFF" ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://commits.kde.org/kjs.git",
-                    "tag": "v5.92.0",
-                    "x-checker-data": {
-                        "type": "git",
-                        "tag-pattern": "^v([\\d.]+)$"
-                    },
-                    "commit": "ff72aaa777fd7cd2df19db699e02b045c07efecb"
-                }
-            ]
-        },
-        {
             "name": "krename",
             "buildsystem": "cmake-ninja",
             "sources": [
