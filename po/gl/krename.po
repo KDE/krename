@@ -41,13 +41,13 @@ msgstr "Crearanse ligazóns simbólicas en: %1"
 #, kde-format
 msgid "Cannot rename: source and target filename are equal: %1"
 msgstr ""
-"Non se pode renomear: o nome de ficheiro de orixe e de destino son "
+"Non é posíbel renomear: o nome de ficheiro de orixe e de destino son "
 "idénticos: %1"
 
 #: batchrenamer.cpp:236
 #, kde-format
 msgid "Cannot create symlink to non-local URL: %1"
-msgstr "Non se pode crear unha ligazóns simbólica a un URL non local: %1"
+msgstr "Non é posíbel crear unha ligazóns simbólica a un URL non local: %1"
 
 #: batchrenamer.cpp:250 dirsortplugin.cpp:121
 #, kde-format
@@ -94,12 +94,12 @@ msgstr "KRename completou o proceso de desfacer."
 #: batchrenamer.cpp:636
 #, kde-format
 msgid "Cannot create undo script: %1"
-msgstr "Non se pode crear o guión de desfacer: %1"
+msgstr "Non é posíbel crear o guión de desfacer: %1"
 
 #: batchrenamer.cpp:710
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
-msgstr "Non se pode desfacer no caso de ficheiros remotos: %1"
+msgstr "Non é posíbel desfacer no caso de ficheiros remotos: %1"
 
 #: batchrenamer.cpp:724
 #, kde-format
@@ -114,12 +114,12 @@ msgstr "Tempo transcorrido: %1 segundos"
 #: batchrenamer.cpp:743
 #, kde-format
 msgid "Cannot set executable bit on undo script."
-msgstr "Non se pode activar o bit de execución no guión de desfacer."
+msgstr "Non é posíbel activar o bit de execución no guión de desfacer."
 
 #: batchrenamer.cpp:1163
 #, kde-format
 msgid "Cannot create directory %1: %2"
-msgstr "Non se pode crear o directorio %1: %2"
+msgstr "Non é posíbel crear o directorio %1: %2"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: customfilenamedlg.ui:63
@@ -191,19 +191,19 @@ msgstr ""
 #: datetimeplugin.cpp:100
 #, kde-format
 msgid "Cannot change date of file %1. (Cannot mktime)"
-msgstr "Non se pode cambiar a data do ficheiro %1. (Non se pode usar mktime)"
+msgstr "Non é posíbel cambiar a data do ficheiro %1. (Non se pode usar mktime)"
 
 #: datetimeplugin.cpp:106
 #, kde-format
 msgid "Cannot change date of file %1. (Cannot stat the file)"
 msgstr ""
-"Non se pode cambiar a data do ficheiro %1. (Non se pode usar stat co "
+"Non é posíbel cambiar a data do ficheiro %1. (Non se pode usar stat co "
 "ficheiro)"
 
 #: datetimeplugin.cpp:116
 #, kde-format
 msgid "Cannot change date of file %1. (utime failed)"
-msgstr "Non se pode cambiar a data do ficheiro %1. (utime fallou)"
+msgstr "Non é posíbel cambiar a data do ficheiro %1. (utime fallou)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkAccess)
 #: datetimepluginwidget.ui:19
@@ -242,7 +242,7 @@ msgstr "%1: O cartafol de saída %2 non existe."
 #: dirsortplugin.cpp:153
 #, kde-format
 msgid "Cannot create folder %1"
-msgstr "Non se pode crear o cartafol %1."
+msgstr "Non é posíbel crear o cartafol %1."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dirsortpluginwidget.ui:25
@@ -1104,7 +1104,7 @@ msgstr "O cartafol %1 non existe. Quere que KRename o cree por vostede?"
 #: krenameimpl.cpp:561
 #, kde-format
 msgid "The folder %1 could not be created."
-msgstr "Non se puido crear o cartafol %1."
+msgstr "Non foi posíbel crear o cartafol %1."
 
 #: krenamemodel.cpp:422
 #, kde-format
@@ -1745,12 +1745,12 @@ msgstr ""
 #: permissionsplugin.cpp:110
 #, kde-format
 msgid "Cannot chmod %1."
-msgstr "Non se pode usar chmod con %1."
+msgstr "Non é posíbel usar chmod con %1."
 
 #: permissionsplugin.cpp:119
 #, kde-format
 msgid "Cannot chown %1."
-msgstr "Non se pode usar chown con %1."
+msgstr "Non é posíbel usar chown con %1."
 
 #: permissionsplugin.cpp:170
 #, kde-format
@@ -2041,7 +2041,7 @@ msgstr "XML de configuración de atopar e substituír de KRename (*.xml)"
 #, kde-format
 msgid "Failed to save the Find & Replace Settings File."
 msgstr ""
-"Non se puido gardar o ficheiro de configuración de atopar e substituír."
+"Non foi posíbel gardar o ficheiro de configuración de atopar e substituír."
 
 #: replacedialog.cpp:129
 #, kde-format
@@ -2059,8 +2059,8 @@ msgid ""
 "Failed to open the Find and Replace Settings File. Cannot read file %1:\n"
 "%2."
 msgstr ""
-"Non se puido abrir o ficheiro de configuración de atopar e substituír. Non "
-"se pode ler o ficheiro %1:\n"
+"Non foi posíbel abrir o ficheiro de configuración de atopar e substituír. "
+"Non se pode ler o ficheiro %1:\n"
 "%2."
 
 #: replacedialog.cpp:150 replacedialog.cpp:161 replacedialog.cpp:166
@@ -2256,7 +2256,7 @@ msgstr "Xa existe o ficheiro %1. Quere substituílo?"
 #: scriptplugin.cpp:345
 #, kde-format
 msgid "Unable to open %1 for writing."
-msgstr "Non se pode abrir %1 para escribir nel."
+msgstr "Non é posíbel abrir %1 para escribir nel."
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ScriptPluginDialog)
 #: scriptplugindialog.ui:20
