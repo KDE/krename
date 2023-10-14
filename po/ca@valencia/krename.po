@@ -49,7 +49,7 @@ msgstr "No s'ha pogut canviar de nom: l'origen i la destinació són iguals: %1"
 #: batchrenamer.cpp:250
 #, kde-format
 msgid "Cannot create symlink to non-local URL: %1"
-msgstr "No s'ha pogut crear l'enllaç simbòlic a un URL no local: %1"
+msgstr "No s'ha pogut crear l'enllaç simbòlic cap a un URL no local: %1"
 
 #: batchrenamer.cpp:264 dirsortplugin.cpp:131
 #, kde-format
@@ -1580,7 +1580,7 @@ msgstr "camí o URL"
 #: main.cpp:129
 #, kde-format
 msgid "move files to folder or url"
-msgstr "mou els fitxers a la carpeta o URL"
+msgstr "mou els fitxers cap a la carpeta o URL"
 
 #: main.cpp:130
 #, kde-format
