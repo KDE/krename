@@ -356,7 +356,7 @@ msgid ""
 "If not checked, KRename will ignore folders starting with a dot during "
 "recursive adding."
 msgstr ""
-"Si no està marcada, KRename ignorarà les carpetes que comencen amb un punt "
+"Si no se selecciona, KRename ignorarà les carpetes que comencen amb un punt "
 "durant l'addició recursiva."
 
 #: filedialogextwidget.cpp:74
