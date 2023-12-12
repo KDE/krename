@@ -2307,7 +2307,7 @@ msgstr "&Prova..."
 #: snumplugin.cpp:36
 #, kde-format
 msgid "Inserts the series number of original filename"
-msgstr "Inserix el número de la sèrie del nom de fitxer original"
+msgstr "Inserix el número de la sèrie del nom del fitxer original"
 
 #: snumplugin.cpp:37
 #, kde-format
@@ -2685,23 +2685,23 @@ msgstr "&Personalitzat"
 #: translitplugin.cpp:96
 #, kde-format
 msgid "Inserts the transliterated original filename"
-msgstr "Inserix el nom de fitxer original transcrit"
+msgstr "Inserix el nom del fitxer original transcrit"
 
 #: translitplugin.cpp:97
 #, kde-format
 msgid "Inserts the transliterated original filename converted to lower case"
-msgstr "Inserix el nom de fitxer original transcrit convertit a minúscules"
+msgstr "Inserix el nom del fitxer original transcrit convertit a minúscules"
 
 #: translitplugin.cpp:98
 #, kde-format
 msgid "Inserts the transliterated original filename converted to upper case"
-msgstr "Inserix el nom de fitxer original transcrit convertit a majúscules"
+msgstr "Inserix el nom del fitxer original transcrit convertit a majúscules"
 
 #: translitplugin.cpp:99
 #, kde-format
 msgid "Inserts the transliterated original filename capitalized"
 msgstr ""
-"Inserix el nom de fitxer original transcrit amb majúscula la primera lletra"
+"Inserix el nom del fitxer original transcrit amb majúscula la primera lletra"
 
 #: translitplugin.cpp:100
 #, kde-format
