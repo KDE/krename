@@ -2,13 +2,13 @@
 # Emre Aladağ <emre@emrealadag.com>, 2006.
 # Koray Löker <loker@pardus.org.tr>, 2006.
 # Volkan Gezer <volkangezer@gmail.com>, 2017.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:41+0000\n"
-"PO-Revision-Date: 2023-08-11 13:49+0300\n"
+"PO-Revision-Date: 2024-03-22 16:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: batchrenamer.cpp:188 batchrenamer.cpp:655
 #, kde-format
@@ -937,7 +937,7 @@ msgstr "Aşağı"
 #: krenameimpl.cpp:353
 #, kde-format
 msgid "Do you really want to remove all files from the list?"
-msgstr "Tüm dosyaları listeden kaldırmak istediğinize emin misiniz?"
+msgstr "Tüm dosyaları listeden kaldırmak istediğinizden emin misiniz?"
 
 #: krenameimpl.cpp:354 main.cpp:43
 #, kde-format
