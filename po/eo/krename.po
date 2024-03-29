@@ -1,146 +1,148 @@
+# translation of krename.pot to Esperanto
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the krename package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-01 02:09+0000\n"
-"PO-Revision-Date: 2024-03-28 19:24\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-03-24 10:34+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-stable/messages/krename/krename.pot\n"
-"X-Crowdin-File-ID: 6864\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: batchrenamer.cpp:202 batchrenamer.cpp:669
 #, kde-format
 msgid "Input files will be renamed."
-msgstr "输入文件将会被重命名"
+msgstr "Enigdosieroj estos renomitaj."
 
 #: batchrenamer.cpp:205 batchrenamer.cpp:663
 #, kde-format
 msgid "Files will be copied to: %1"
-msgstr "文件将复制至：%1"
+msgstr "Dosieroj estos kopiitaj al: %1"
 
 #: batchrenamer.cpp:208 batchrenamer.cpp:665
 #, kde-format
 msgid "Files will be moved to: %1"
-msgstr "文件将移动至：%1"
+msgstr "Dosieroj estos movitaj al: %1"
 
 #: batchrenamer.cpp:211 batchrenamer.cpp:667
 #, kde-format
 msgid "Symbolic links will be created in: %1"
-msgstr "符号链接将生成于：%1"
+msgstr "Simbolaj ligiloj estos kreitaj en: %1"
 
 #: batchrenamer.cpp:232
 #, kde-format
 msgid "Cannot rename: source and target filename are equal: %1"
-msgstr "无法重命名：源文件名和目标文件名相同：%1"
+msgstr "Ne povas renomi: fonto kaj cela dosiernomo estas egalaj: %1"
 
 #: batchrenamer.cpp:250
 #, kde-format
 msgid "Cannot create symlink to non-local URL: %1"
-msgstr "无法创建到非本地文件的符号链接：%1"
+msgstr "Ne povas krei simbolligon al ne-loka URL: %1"
 
 #: batchrenamer.cpp:264 dirsortplugin.cpp:131
 #, kde-format
 msgid "Error renaming %2 (to %1)"
-msgstr "重命名 %2 到 %1 时出错"
+msgstr "Eraro renomante %2 (al %1)"
 
 #: batchrenamer.cpp:287 batchrenamer.cpp:411 batchrenamer.cpp:742
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
-msgstr[0] "遇到 %1 个错误。"
+msgstr[0] ""
+msgstr[1] ""
 
 #: batchrenamer.cpp:290 batchrenamer.cpp:746
 #, kde-format
 msgid "KRename finished the renaming process."
-msgstr "KRename 重命名处理完毕。"
+msgstr "KRename finis la alinoman procezon."
 
 #: batchrenamer.cpp:291 batchrenamer.cpp:415 batchrenamer.cpp:747
 #, kde-format
 msgid "Press close to quit."
-msgstr "请按关闭以退出。"
+msgstr "Premu fermi por ĉesi."
 
 #: batchrenamer.cpp:355
 #, kde-format
 msgid "Filenames Processed after %1 seconds."
-msgstr "文件名处理耗时 %1 秒"
+msgstr "Dosiernomoj Procesitaj post %1 sekundoj."
 
 #: batchrenamer.cpp:370
 #, kde-format
 msgid "Undoing all renamed files."
-msgstr "正在撤销所有重命名的文件。"
+msgstr "Malfarante ĉiujn renomitajn dosierojn."
 
 #: batchrenamer.cpp:402
 #, kde-format
 msgid "Error during undoing %1"
-msgstr "撤销 %1 时出错"
+msgstr "Eraro dum malfarado de %1"
 
 #: batchrenamer.cpp:414
 #, kde-format
 msgid "KRename finished the undo process."
-msgstr "KRename 撤销操作完成。"
+msgstr "KRename finis la malfaran procezon."
 
 #: batchrenamer.cpp:650
 #, kde-format
 msgid "Cannot create undo script: %1"
-msgstr "无法生成撤销脚本：%1"
+msgstr "Ne povas krei malfari skripton: %1"
 
 #: batchrenamer.cpp:724
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
-msgstr "远程文件不能撤销重命名：%1"
+msgstr "Malfari ne eblas por fora dosiero: %1"
 
 #: batchrenamer.cpp:738
 #, kde-format
 msgid "Renamed %1 files successfully."
-msgstr "成功重命名文件 %1。"
+msgstr "Renomis %1 dosierojn sukcese."
 
 #: batchrenamer.cpp:745
 #, kde-format
 msgid "Elapsed time: %1 seconds"
-msgstr "耗时：%1 秒"
+msgstr "Pasita tempo: %1 sekundoj"
 
 #: batchrenamer.cpp:757
 #, kde-format
 msgid "Cannot set executable bit on undo script."
-msgstr "不能在撤销脚本中设置可执行位。"
+msgstr "Ne povas agordi ruleblan biton por malfari skripton."
 
 #: batchrenamer.cpp:1178
 #, kde-format
 msgid "Cannot create directory %1: %2"
-msgstr "无法创建目录 %1：%2"
+msgstr "Ne povas krei dosierujon %1: %2"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: customfilenamedlg.ui:63
 #, kde-format
 msgid "File preview"
-msgstr "文件预览"
+msgstr "Antaŭrigardo de dosiero"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: customfilenamedlg.ui:91
 #, kde-format
 msgid "Please input a new filename"
-msgstr "请输入新文件名"
+msgstr "Bonvolu enigi novan dosiernomon"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioKRename)
 #: customfilenamedlg.ui:97
 #, kde-format
 msgid "Rename the file using the filename created by KRename."
-msgstr "用 KRename 生成的文件名重命名文件。"
+msgstr "Alinomi la dosieron per la dosiernomo kreita de KRename."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioKRename)
 #: customfilenamedlg.ui:100
 #, kde-format
 msgid "Use filename created by &KRename"
-msgstr "使用 KRename 生成的文件名(&K)"
+msgstr "Uzi dosiernomon kreitan de &KRename"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioInput)
 #: customfilenamedlg.ui:112
@@ -148,90 +150,90 @@ msgstr "使用 KRename 生成的文件名(&K)"
 msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."
-msgstr "使用输入的文件名来重命名文件。您也可以更改输入文件名，并用它来重命名。"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioInput)
 #: customfilenamedlg.ui:115
 #, kde-format
 msgid "Use &input filename"
-msgstr "使用输入的文件名(&I)"
+msgstr "Uzi en&igdosieran nomon"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioCustom)
 #: customfilenamedlg.ui:122
 #, kde-format
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
-msgstr "使用自定义文件名，基于 KRename 当前创建的文件名。"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
 #: customfilenamedlg.ui:125
 #, kde-format
 msgid "Use &custom filename"
-msgstr "使用自定义文件名(&I)"
+msgstr "Uzi &propran dosiernomon"
 
 #: datetimeplugin.cpp:51
 #, kde-format
 msgid "Date & Time Plugin"
-msgstr "日期与时间插件"
+msgstr "Dato kaj Tempo Kromaĵo"
 
 #: datetimeplugin.cpp:71
 #, kde-format
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
-msgstr "日期时间插件只对本地文件有效。而 %1 是远程文件。"
+msgstr "DateTimePlugin funkcias nur kun lokaj dosieroj. %1 estas fora dosiero."
 
 #: datetimeplugin.cpp:116
 #, kde-format
 msgid "Cannot change date of file %1. (Cannot mktime)"
-msgstr "无法变更文件 %1 的日期。(mktime 命令失败)"
+msgstr "Ne povas ŝanĝi la daton de dosiero %1. (Ne povas mktime)"
 
 #: datetimeplugin.cpp:122
 #, kde-format
 msgid "Cannot change date of file %1. (Cannot stat the file)"
-msgstr "无法变更文件 %1 的日期。(stat 命令失败)"
+msgstr "Ne povas ŝanĝi la daton de dosiero %1. (Ne povas deskribi la dosieron)"
 
 #: datetimeplugin.cpp:132
 #, kde-format
 msgid "Cannot change date of file %1. (utime failed)"
-msgstr "无法变更文件 %1 的日期。(utime 命令失败)"
+msgstr "Ne povas ŝanĝi la daton de dosiero %1. (Utime malsukcesis)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkAccess)
 #: datetimepluginwidget.ui:19
 #, kde-format
 msgid "Change &access date && time"
-msgstr "更改文件的访问时间(&A)"
+msgstr "Ŝanĝi &alirdaton && horon"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkModification)
 #: datetimepluginwidget.ui:26
 #, kde-format
 msgid "Change &modifcation date && time"
-msgstr "更改文件的修改时间(&M)"
+msgstr "Ŝanĝi &modifan daton && tempon"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: datetimepluginwidget.ui:35
 #, kde-format
 msgid "Time:"
-msgstr "时间："
+msgstr "Tempo:"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonCurrent)
 #: datetimepluginwidget.ui:63
 #, kde-format
 msgid "Get &Current Time"
-msgstr "获取当前时间(&G)"
+msgstr "Akiri Nunan Tempon"
 
 #: dirsortplugin.cpp:42
 #, kde-format
 msgid "Subfolder-Sort Plugin"
-msgstr "子目录排序插件"
+msgstr "Subdosierujo-Ordigi Kromaĵon"
 
 #: dirsortplugin.cpp:100
 #, kde-format
 msgid "%1: The output folder %2 does not exist."
-msgstr "%1：输出文件夹 %2 不存在。"
+msgstr "%1: La eliga dosierujo %2 ne ekzistas."
 
 #: dirsortplugin.cpp:163
 #, kde-format
 msgid "Cannot create folder %1"
-msgstr "无法创建文件夹 %1"
+msgstr "Ne povas krei dosierujon %1"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dirsortpluginwidget.ui:25
@@ -247,87 +249,80 @@ msgid ""
 "\tfolder/003/file5\n"
 "\t..."
 msgstr ""
-"此插件将会用编号的子文件夹排序重命名后的文件。\n"
-"\n"
-"例如：\n"
-"\t文件夹/001/文件1\n"
-"\t文件夹/001/文件2\n"
-"\t文件夹/002/文件3\n"
-"\t文件夹/002/文件4\n"
-"\t文件夹/003/文件5\n"
-"\t..."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: dirsortpluginwidget.ui:32
 #, kde-format
 msgid "&Options:"
-msgstr "选项(&O)："
+msgstr "Elektebl&oj:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: dirsortpluginwidget.ui:38
 #, kde-format
 msgid "Number of &files per folder:"
-msgstr "每个文件夹中文件的数目(&F)："
+msgstr "Nombro da &dosieroj per dosierujo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: dirsortpluginwidget.ui:58
 #, kde-format
 msgid "&Start index:"
-msgstr "起始编号(&S)："
+msgstr "Komen&ca indekso:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: dirsortpluginwidget.ui:75
 #, kde-format
 msgid "Number &of digits:"
-msgstr "编号位数(&N)："
+msgstr "N&ombro de ciferoj:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: dirsortpluginwidget.ui:98
 #, kde-format
 msgid "Out&put:"
-msgstr "输出(&P)："
+msgstr "Eli&go:"
 
 #: exiv2plugin.cpp:309
 #, kde-format
 msgid "Insert the comment of an image"
-msgstr "插入图片的注释"
+msgstr "Enigu la komenton de bildo"
 
 #: exiv2plugin.cpp:376
 #, kde-format
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
-msgstr "Exiv2 (JPEG/TIFF Exif) 插件"
+msgstr "Exiv2 (JPEG/TIFF Exif) Kromaĵo"
 
 #: exiv2plugin.cpp:377
 #, kde-format
 msgid "<qt>This plugin supports reading tags from JPEG and TIFF files.</qt>"
-msgstr "<qt>此插件支持从 JPEG 和 TIFF 文件中读取标签。</qt>"
+msgstr ""
+"<qt>Tiu ĉi kromaĵo subtenas legado de etikedoj de JPEG kaj TIFF dosieroj.</"
+"qt>"
 
 #: filedialogextwidget.cpp:51
 #, kde-format
 msgid "Add folder names &with filenames"
-msgstr "添加文件夹名和文件名(&W)"
+msgstr "Aldoni dosierujojn &kun dosiernomoj"
 
 #: filedialogextwidget.cpp:52
 #, kde-format
 msgid "Add subfolders &recursively"
-msgstr "递归添加子文件夹(&R)"
+msgstr "Aldoni subdosierujojn &rekursie"
 
 #: filedialogextwidget.cpp:53
 #, kde-format
 msgid "Add &hidden folders"
-msgstr "添加隐藏文件夹(&H)"
+msgstr "Aldoni &kaŝitajn dosierujojn"
 
 #: filedialogextwidget.cpp:54
 #, kde-format
 msgid "Add folder names only"
-msgstr "仅添加文件夹名"
+msgstr "Aldoni nur dosierujojn nomojn"
 
 #: filedialogextwidget.cpp:70
 #, kde-format
 msgid ""
 "Walk recursively through the folder tree and also add the content of all "
 "subfolders to the list of files to rename."
-msgstr "递归访问文件夹树，并将所有子文件夹中的文件添加到重命名文件列表中。"
+msgstr ""
 
 #: filedialogextwidget.cpp:72
 #, kde-format
@@ -335,87 +330,85 @@ msgid ""
 "If not checked, KRename will ignore folders starting with a dot during "
 "recursive adding."
 msgstr ""
-"如果未选此项, KRename 在递归添加时会忽略以英文点号\".\"开头的文件夹 (隐藏文件"
-"夹)"
 
 #: filedialogextwidget.cpp:74
 #, kde-format
 msgid ""
 "Add only the folder names and not the names of the files in the folder to "
 "KRename."
-msgstr "仅增加文件夹名称到 KRename，不添加文件夹中的文件名。"
+msgstr ""
 
 #: filedialogextwidget.cpp:76
 #, kde-format
 msgid ""
 "This option causes KRename to also add the name of the base folder of the "
 "selected files to its list."
-msgstr "此选项让 KRename 将选中的文件所在的文件夹名也添加到列表中。"
+msgstr ""
 
 #: fileplugin.cpp:84
 #, kde-format
 msgid "Supported tokens:"
-msgstr "支持的标记："
+msgstr "Subtenataj ĵetonoj:"
 
 #: fontplugin.cpp:35
 #, kde-format
 msgid "Insert the PostScript name for Type1 and TrueType fonts."
-msgstr "插入 Type1 和 TrueType 字体的 PostScript 名字。"
+msgstr "Enigi la PostScript-nomon por Type1 kaj TrueType-tiparoj."
 
 #: fontplugin.cpp:36
 #, kde-format
 msgid "Insert the (usually English) name of the font family."
-msgstr "插入字体家族的名字(通常是英文)。"
+msgstr "Enmeti la (kutime anglan) nomon de la tiparfamilio."
 
 #: fontplugin.cpp:37
 #, kde-format
 msgid "Insert the (usually English) name of the font style."
-msgstr "插入字体样式的名字 (通常是英文)。"
+msgstr "Enigi la (kutime anglan) nomon de la tiparostilo."
 
 #: fontplugin.cpp:39
 #, kde-format
 msgid "Font (FreeType2) Plugin"
-msgstr "字体插件 (FreeType2)"
+msgstr "Tiparo (FreeType2) Kromaĵo"
 
 #: fontplugin.cpp:40
 #, kde-format
 msgid "<qt>This plugin supports reading tags from font files.</qt>"
-msgstr "<qt>此插件从字体文件中读取标签。</qt>"
+msgstr "<qt>Ĉi tiu kromaĵo subtenas legado de etikedoj el tipardosieroj.</qt>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: guimodeselector.ui:22
 #, kde-format
 msgid "Look and Feel"
-msgstr "界面外观"
+msgstr "Rigardu kaj Sentu"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: guimodeselector.ui:34
 #, kde-format
 msgid "Configure the look and feel of the KRename GUI:"
-msgstr "配置 KRename 图形界面外观："
+msgstr "Agordi la aspekton de la KRename GUI:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionWizard)
 #: guimodeselector.ui:57
 #, kde-format
 msgid "Use &assistant style GUI (beginners)"
-msgstr "使用助手风格的图形界面 (初学者) (&A)"
+msgstr "Uzi &asistantan stilan GUI (komencantoj)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionTabs)
 #: guimodeselector.ui:67
 #, kde-format
 msgid "Use &tabbed style GUI (advanced users)"
-msgstr "使用标签页风格的图形界面 (高级用户) (&T)"
+msgstr "Uzi lange&t-stilan GUI (progresintaj uzantoj)"
 
 #: increasecounterplugin.cpp:40
 #, kde-format
 msgid "Increase Counter"
-msgstr "递增计数器"
+msgstr "Pliigi Nombrilon"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: increasecounterpluginwidget.ui:17
 #, kde-format
 msgid "&Increase Counter"
-msgstr "递增计数器(&I)"
+msgstr "&Pligrandigi Nombrilon"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: increasecounterpluginwidget.ui:24
@@ -427,70 +420,66 @@ msgid ""
 "this plugin, you can easily add an offset of -4 to get the desired result.</"
 "p>"
 msgstr ""
-"<p><b>此插件可以对文件名的编号增加偏移量。</b><br/>\n"
-"例如，您有文件名：<i>img014</i>, <i>img015</i>, <i>img023</i> 想将它们重命名"
-"成： <i>img010</i>, <i>img011</i> and <i>img019</i>。用这个插件的话，只需要设"
-"置偏移量为 -4 就能得到想要的结果。</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: increasecounterpluginwidget.ui:49
 #, kde-format
 msgid "Offse&t:"
-msgstr "偏移(&T)："
+msgstr "Offse&t:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOptions)
 #: krenamedestination.ui:31
 #, kde-format
 msgid "&Options"
-msgstr "选项(&O)"
+msgstr "&Opcioj"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionRename)
 #: krenamedestination.ui:52
 #, kde-format
 msgid "&Rename input files"
-msgstr "直接重命名原始文件(&R)"
+msgstr "Alinomi enigajn dosie&rojn"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionCopy)
 #: krenamedestination.ui:62
 #, kde-format
 msgid "&Copy files to destination folder"
-msgstr "复制文件到目标文件夹(&C)"
+msgstr "Kopii dosierojn al &celdosierujo"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionMove)
 #: krenamedestination.ui:69
 #, kde-format
 msgid "&Move files to destination folder"
-msgstr "移动文件到目标文件夹(&M)"
+msgstr "&Movi dosierojn al celdosierujo"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionLink)
 #: krenamedestination.ui:76
 #, kde-format
 msgid "Create symbolic &links in destination folder"
-msgstr "创建符号链接到目标文件夹(&L)"
+msgstr "Krei simbolajn &ligilojn en celdosierujo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkOverwrite)
 #: krenamedestination.ui:99
 #, kde-format
 msgid "&Overwrite existing files"
-msgstr "覆盖已存在的文件(&O)"
+msgstr "&Anstataŭigi ekzistantajn dosierojn"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: krenamefilename.ui:27
 #, kde-format
 msgid "&Advanced Filename"
-msgstr "高级文件名(&A)"
+msgstr "&Altnivela Dosiernomo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblTemplate)
 #: krenamefilename.ui:50
 #, kde-format
 msgid "&Template:"
-msgstr "模板(&T)："
+msgstr "&Ŝablono:"
 
 #. i18n: ectx: property (toolTip), widget (ExtHistoryCombo, filenameTemplate)
 #: krenamefilename.ui:66
 #, kde-format
 msgid "<qt>Enter a template for changing the filename.</qt>"
-msgstr "<qt>输入更改文件名的模板。</qt>"
+msgstr "<qt>Enigu ŝablonon por ŝanĝi la dosiernomon.</qt>"
 
 #. i18n: ectx: property (text), item, widget (ExtHistoryCombo, filenameTemplate)
 #. i18n: ectx: property (text), item, widget (ExtHistoryCombo, extensionTemplate)
@@ -509,7 +498,7 @@ msgstr "<p><b>.</b></p>"
 #: krenamefilename.ui:97
 #, kde-format
 msgid "<qt>Enter a template for changing the file extension.</qt>"
-msgstr "<qt>输入更改文件扩展名的模板。</qt>"
+msgstr "<qt>Enigu ŝablonon por ŝanĝi la dosieran etendon.</qt>"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFunctions)
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonHelp4)
@@ -522,31 +511,31 @@ msgstr "<qt>输入更改文件扩展名的模板。</qt>"
 msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
-msgstr "<qt>插入特殊函数，比如 MP3 的一人，或者图片的创建时间。</qt>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFunctions)
 #: krenamefilename.ui:115
 #, kde-format
 msgid "&Functions..."
-msgstr "函数(&F)..."
+msgstr "&Funkcioj..."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:141
 #, kde-format
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
-msgstr "<qt>将文件扩展名保持原样，不做改动。</qt>"
+msgstr "<qt>Konservu la dosier-etendon kiel ĝi estas kaj ne ŝanĝu ĝin.</qt>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:144
 #, kde-format
 msgid "&Use extension of the input file"
-msgstr "使用输入文件的扩展名(&U)"
+msgstr "&Uzu etendon de la eniga dosiero"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExtension)
 #: krenamefilename.ui:167
 #, kde-format
 msgid "F&ile extension starts at:"
-msgstr "扩展名起始于："
+msgstr "Dos&ierfinaĵo komenciĝas je:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, comboExtension)
 #: krenamefilename.ui:177
@@ -556,26 +545,24 @@ msgid ""
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
 msgstr ""
-"<qt>配置文件名的哪部分作为文件扩展名。例如“第一个点号”将会把“.tar.gz”作为扩展"
-"名，“最后一个点号”将只会用“.gz”。</qt>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:181
 #, kde-format
 msgid "First Dot"
-msgstr "第一个点号"
+msgstr "Unua Punkto"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:186
 #, kde-format
 msgid "Last Dot"
-msgstr "最后一个点号"
+msgstr "Lasta Punkto"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:191
 #, kde-format
 msgid "No File Extension"
-msgstr "无扩展名"
+msgstr "Neniu Dosierfinaĵo"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFind)
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFindSimple)
@@ -584,14 +571,14 @@ msgstr "无扩展名"
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
-msgstr "<qt>在文件名中查找替换字符串和正则表达式。</qt>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFind)
 #. i18n: ectx: property (text), widget (QPushButton, buttonFindSimple)
 #: krenamefilename.ui:224 krenamefilename.ui:748 krenamesimple.ui:439
 #, kde-format
 msgid "Find &and Replace..."
-msgstr "查找与替换(&A)..."
+msgstr "Trovi k&aj Anstataŭigi..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:234
@@ -599,50 +586,50 @@ msgstr "查找与替换(&A)..."
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
-msgstr "<qt>配置起始编号，步长和要跳过的编号。</qt>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:237
 #, kde-format
 msgid "&Numbering..."
-msgstr "编号(&N)..."
+msgstr "&Numerado..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:247
 #, kde-format
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
-msgstr "<qt>图形化选择插入文件名的一部分。</qt>"
+msgstr "<qt>Grafie elektu parton de dosiernomo por enmeti.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:250
 #, kde-format
 msgid "&Insert Part of Filename..."
-msgstr "插入文件名的一部分(&I)..."
+msgstr "&Enmeti Parton de Dosiernomo..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabSimple)
 #: krenamefilename.ui:289
 #, kde-format
 msgid "&Simple Filename"
-msgstr "简单文件名(&S)"
+msgstr "&Simpla Dosiernomo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupFilename)
 #: krenamefilename.ui:312 krenamesimple.ui:48
 #, kde-format
 msgid "&Filename"
-msgstr "文件名(&F)"
+msgstr "&Dosiernomo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSuffix)
 #: krenamefilename.ui:333 krenamesimple.ui:72
 #, kde-format
 msgid "&Suffix:"
-msgstr "后缀(&S)"
+msgstr "&Sufikso:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilename)
 #: krenamefilename.ui:398 krenamesimple.ui:125
 #, kde-format
 msgid "Use original name"
-msgstr "使用原始文件名"
+msgstr "Uzi originan nomon"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
@@ -653,7 +640,7 @@ msgstr "使用原始文件名"
 #: krenamesimple.ui:272 partfilenamewidget.ui:70
 #, kde-format
 msgid "Convert to lower case"
-msgstr "转换为小写"
+msgstr "Konverti al minusklo"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
@@ -664,7 +651,7 @@ msgstr "转换为小写"
 #: krenamesimple.ui:277 partfilenamewidget.ui:75
 #, kde-format
 msgid "Convert to upper case"
-msgstr "转换为大写"
+msgstr "Konverti al majuskla"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
@@ -675,20 +662,20 @@ msgstr "转换为大写"
 #: krenamesimple.ui:282 partfilenamewidget.ui:80
 #, kde-format
 msgid "Capitalize"
-msgstr "字首大写"
+msgstr "Majuskligi"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilename)
 #: krenamefilename.ui:418 krenamesimple.ui:145
 #, kde-format
 msgid "Custom name"
-msgstr "自定义文件名"
+msgstr "Propra nomo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblFilename)
 #: krenamefilename.ui:426 krenamesimple.ui:153
 #, kde-format
 msgid "File&name:"
-msgstr "文件名(&N)："
+msgstr "Dosier&nomo:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSuffix)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPrefix)
@@ -696,7 +683,7 @@ msgstr "文件名(&N)："
 #: krenamesimple.ui:247
 #, kde-format
 msgid "Number"
-msgstr "数量"
+msgstr "Nombro"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSuffix)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPrefix)
@@ -704,214 +691,214 @@ msgstr "数量"
 #: krenamesimple.ui:252
 #, kde-format
 msgid "Date"
-msgstr "日期"
+msgstr "Dato"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPrefix)
 #: krenamefilename.ui:500 krenamesimple.ui:215
 #, kde-format
 msgid "&Prefix:"
-msgstr "前缀(&P)"
+msgstr "&Prefikso:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExtension_2)
 #. i18n: ectx: property (text), widget (QLabel, lblExtension)
 #: krenamefilename.ui:510 krenamesimple.ui:225
 #, kde-format
 msgid "&Extension:"
-msgstr "扩展名(&E)"
+msgstr "&Etendaĵo:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtensionSimple)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:552 krenamesimple.ui:267
 #, kde-format
 msgid "Use original extension"
-msgstr "使用原始扩展名"
+msgstr "Uzi originan finaĵon"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtensionSimple)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:572 krenamesimple.ui:287
 #, kde-format
 msgid "Custom extension"
-msgstr "自定义扩展名"
+msgstr "Propra finaĵo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupNumber)
 #: krenamefilename.ui:647 krenamesimple.ui:344
 #, kde-format
 msgid "N&umber"
-msgstr "编号(&U)"
+msgstr "N&umero"
 
 #. i18n: ectx: property (text), widget (QLabel, lblDigits)
 #: krenamefilename.ui:697 krenamesimple.ui:397
 #, kde-format
 msgid "Number of &digits:"
-msgstr "数字位数(&D)："
+msgstr "Nombro de &ciferoj:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblIndex)
 #: krenamefilename.ui:707 krenamesimple.ui:407
 #, kde-format
 msgid "Start  &index:"
-msgstr "起始编号(&I)："
+msgstr "Komencu &indekson:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonUp)
 #: krenamefilename.ui:835 krenamefiles.ui:210
 #, kde-format
 msgid "Move selected files upwards."
-msgstr "向上移动选取的文件。"
+msgstr "Movu elektitajn dosierojn supren."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonUp)
 #: krenamefilename.ui:838 krenamesimple.ui:526
 #, kde-format
 msgid "&Up"
-msgstr "上(&U)"
+msgstr "S&upren"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonDown)
 #: krenamefilename.ui:845 krenamefiles.ui:220
 #, kde-format
 msgid "Move selected files downwards."
-msgstr "向下移动选取的文件。"
+msgstr "Movu elektitajn dosierojn malsupren."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonDown)
 #: krenamefilename.ui:848 krenamesimple.ui:533
 #, kde-format
 msgid "&Down"
-msgstr "下移(&D)"
+msgstr "&Malsupren"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonAdd)
 #: krenamefiles.ui:53
 #, kde-format
 msgid "Add files for renaming."
-msgstr "添加需要重命名的文件。"
+msgstr "Aldonu dosierojn por renomi."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonAdd)
 #: krenamefiles.ui:56 previewlist.cpp:35 replacewidget.ui:97
 #: scriptpluginwidget.ui:68
 #, kde-format
 msgid "&Add..."
-msgstr "添加(&A)..."
+msgstr "&Aldoni..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonRemove)
 #: krenamefiles.ui:66
 #, kde-format
 msgid "Remove selected files."
-msgstr "移除选中的文件。"
+msgstr "Forigu elektitajn dosierojn."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
 #: krenamefiles.ui:69
 #, kde-format
 msgid "Re&move"
-msgstr "移除(&M)"
+msgstr "&Forigi"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonRemoveAll)
 #: krenamefiles.ui:76
 #, kde-format
 msgid "Remove all files."
-msgstr "移除所有文件。"
+msgstr "Forigu ĉiujn dosierojn."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemoveAll)
 #: krenamefiles.ui:79
 #, kde-format
 msgid "Re&move All"
-msgstr "全部移除(&M)"
+msgstr "Forigu ĉion"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: krenamefiles.ui:88
 #, kde-format
 msgid "Sort:"
-msgstr "排序："
+msgstr "Ordigo:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:99
 #, kde-format
 msgid "Unsorted"
-msgstr "未排序"
+msgstr "Neordigita"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:104
 #, kde-format
 msgid "Ascending"
-msgstr "升序"
+msgstr "Kreskante"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:109
 #, kde-format
 msgid "Descending"
-msgstr "降序"
+msgstr "Malkreskanta"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:114
 #, kde-format
 msgid "Numeric"
-msgstr "数值"
+msgstr "Numera"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:119
 #, kde-format
 msgid "Random"
-msgstr "随机"
+msgstr "Hazarda"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:124
 #, kde-format
 msgid "Date (Asc.)"
-msgstr "日期 (升序)"
+msgstr "Dato (Ask.)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:129
 #, kde-format
 msgid "Date (Desc.)"
-msgstr "日期 (降序)"
+msgstr "Dato (Desk.)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:134
 #, kde-format
 msgid "Custom ..."
-msgstr "自定义 ..."
+msgstr "Propra ..."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkPreview)
 #: krenamefiles.ui:151
 #, kde-format
 msgid "Display a preview image for each file."
-msgstr "显示文件的预览图"
+msgstr "Montru antaŭrigardan bildon por ĉiu dosiero."
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkPreview)
 #: krenamefiles.ui:154
 #, kde-format
 msgid "&Preview"
-msgstr "预览(&P)"
+msgstr "&Antaŭrigardo"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkName)
 #: krenamefiles.ui:161
 #, kde-format
 msgid "Display the filename together with the preview."
-msgstr "显示文件名和预览"
+msgstr "Montru la dosiernomon kune kun la antaŭvido."
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkName)
 #: krenamefiles.ui:164
 #, kde-format
 msgid "&Display name"
-msgstr "显示文件名(&D)"
+msgstr "&Montra nomo"
 
 #. i18n: ectx: property (text), widget (QLabel, labelCount)
 #: krenamefiles.ui:174
 #, kde-format
 msgid "Files: <b>0</b>"
-msgstr "文件：<b>0</b>"
+msgstr "Dosieroj: <b>0</b>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonUp)
 #: krenamefiles.ui:213
 #, kde-format
 msgid "Up"
-msgstr "上箭头"
+msgstr "Supren"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonDown)
 #: krenamefiles.ui:223
 #, kde-format
 msgid "Down"
-msgstr "下箭头"
+msgstr "Malsupren"
 
 #: krenameimpl.cpp:367
 #, kde-format
 msgid "Do you really want to remove all files from the list?"
-msgstr "您确定要从列表中移除所有文件吗？"
+msgstr "Ĉu vi vere volas forigi ĉiujn dosierojn el la listo?"
 
 #: krenameimpl.cpp:368 main.cpp:57
 #, kde-format
@@ -921,177 +908,178 @@ msgstr "KRename"
 #: krenameimpl.cpp:484
 #, kde-format
 msgid "old filename"
-msgstr "原文件名"
+msgstr "malnova dosiernomo"
 
 #: krenameimpl.cpp:485
 #, kde-format
 msgid "old filename converted to lower case"
-msgstr "原文件名转变为小写"
+msgstr "malnova dosiernomo konvertita al minusklo"
 
 #: krenameimpl.cpp:486
 #, kde-format
 msgid "old filename converted to upper case"
-msgstr "原文件名转变为大写"
+msgstr "malnova dosiernomo konvertita al majuskla"
 
 #: krenameimpl.cpp:487
 #, kde-format
 msgid "first letter of every word upper case"
-msgstr "每个词的第一个字母大写"
+msgstr "unua litero de ĉiu vorto majuskla"
 
 #: krenameimpl.cpp:488
 #, kde-format
 msgid "first letter of filename upper case"
-msgstr "文件名的第一个字母大写"
+msgstr "unua litero de dosiernomo majuskla"
 
 #: krenameimpl.cpp:489
 #, kde-format
 msgid "number (try also ##, ###, ... for leading zeros)"
-msgstr "编号 (用 ##, ###, ... 前置补零)"
+msgstr "nombro (provu ankaŭ ##, ###, ... por antaŭaj nuloj)"
 
 #: krenameimpl.cpp:490
 #, kde-format
 msgid "counter with custom start value 0 and custom stepping 1"
-msgstr "起始值为0,步长为1的计数器"
+msgstr "nombrilo kun propra komenca valoro 0 kaj propra paŝado 1"
 
 #: krenameimpl.cpp:491
 #, kde-format
 msgid "create a subdfolder"
-msgstr "创建子文件夹"
+msgstr ""
 
 #: krenameimpl.cpp:492
 #, kde-format
 msgid "character x to y of old filename"
-msgstr "原文件名中第x到第y个字符"
+msgstr "signo x al y de malnova dosiernomo"
 
 #: krenameimpl.cpp:493
 #, kde-format
 msgid "y characters of old filename starting at x"
-msgstr "原文件名开始于x的y个字符"
+msgstr "y signoj de malnova dosiernomo komencanta je x"
 
 #: krenameimpl.cpp:494
 #, kde-format
 msgid "insert name of folder"
-msgstr "插入文件夹名"
+msgstr "enigu nomon de dosierujo"
 
 #: krenameimpl.cpp:495
 #, kde-format
 msgid "insert name of parent folder"
-msgstr "插入上级文件夹名称"
+msgstr "enigu nomon de gepatra dosierujo"
 
 #: krenameimpl.cpp:496
 #, kde-format
 msgid ""
 "insert a '/' to create a new subfolder (useful from within regular "
 "expressions)"
-msgstr "插入斜线 / 创建子文件夹 (在正则表达式中很有用)"
+msgstr ""
 
 #: krenameimpl.cpp:497
 #, kde-format
 msgid "insert the length of the input filename"
-msgstr "插入文件大小"
+msgstr "enigu la longon de la eniga dosiernomo"
 
 #: krenameimpl.cpp:498
 #, kde-format
 msgid "strip whitespaces leading and trailing"
-msgstr "删除首尾空格"
+msgstr "senigi blankspacojn gvidantajn kaj malantaŭajn"
 
 #: krenameimpl.cpp:499
 #, kde-format
 msgid "strip whitespaces leading and trailing of an arbitrary string"
-msgstr "删除任意字符串首尾空格"
+msgstr "senigi blankspacojn gvidajn kaj postajn de arbitra ĉeno"
 
 #: krenameimpl.cpp:500
 #, kde-format
 msgid "Built-in Functions"
-msgstr "内置函数"
+msgstr "Enkonstruitaj Funkcioj"
 
 #: krenameimpl.cpp:503
 #, kde-format
 msgid "Insert '$'"
-msgstr "插入 '$'"
+msgstr "Enigi '$'"
 
 #: krenameimpl.cpp:504
 #, kde-format
 msgid "Insert '%'"
-msgstr "插入 '%'"
+msgstr "Enigi '%'"
 
 #: krenameimpl.cpp:505
 #, kde-format
 msgid "Insert '&'"
-msgstr "插入 '&'"
+msgstr "Enigi '&'"
 
 #: krenameimpl.cpp:506
 #, kde-format
 msgid "Insert '*'"
-msgstr "插入 '*'"
+msgstr "Enigi '*'"
 
 #: krenameimpl.cpp:507
 #, kde-format
 msgid "Insert '/'"
-msgstr "插入 '/'"
+msgstr "Enigi '/'"
 
 #: krenameimpl.cpp:508
 #, kde-format
 msgid "Insert '\\\\'"
-msgstr "插入 '\\\\'"
+msgstr "Enigi '\\\\'"
 
 #: krenameimpl.cpp:509
 #, kde-format
 msgid "Insert '['"
-msgstr "插入 '['"
+msgstr "Enigi '['"
 
 #: krenameimpl.cpp:510
 #, kde-format
 msgid "Insert ']'"
-msgstr "插入 ']'"
+msgstr "Enigi ']'"
 
 #: krenameimpl.cpp:511
 #, kde-format
 msgid "Insert '#'"
-msgstr "插入 '#'"
+msgstr "Enigi '#'"
 
 #: krenameimpl.cpp:512
 #, kde-format
 msgid "Special Characters"
-msgstr "特殊字符"
+msgstr "Specialaj Signoj"
 
 #: krenameimpl.cpp:553
 #, kde-format
 msgid "Starting conversion of %1 file."
 msgid_plural "Starting conversion of %1 files."
-msgstr[0] "开始转换 %1 个文件。"
+msgstr[0] ""
+msgstr[1] ""
 
 #: krenameimpl.cpp:561
 #, kde-format
 msgid "The folder %1 does not exist. Do you want KRename to create it for you?"
-msgstr "文件夹 %1 不存在。您希望 KRename 创建此文件夹吗？"
+msgstr "La dosierujo %1 ne ekzistas. Ĉu vi volas, ke KRename kreu ĝin por vi?"
 
 #: krenameimpl.cpp:571
 #, kde-format
 msgid "The folder %1 could not be created."
-msgstr "无法创建文件夹“%1”。"
+msgstr "La dosierujo %1 ne povis esti kreita."
 
 #: krenamemodel.cpp:433
 #, kde-format
 msgid "Origin"
-msgstr "原始文件"
+msgstr "Origino"
 
 #: krenamemodel.cpp:433
 #, kde-format
 msgid "Renamed"
-msgstr "重命名后的文件"
+msgstr "Alinomita"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listPlugins)
 #: krenameplugins.ui:42
 #, kde-format
 msgid "Plugins"
-msgstr "插件"
+msgstr "Kromprogramoj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkEnablePlugin)
 #: krenameplugins.ui:60
 #, kde-format
 msgid "&Enable Plugin"
-msgstr "启用插件(&E)"
+msgstr "&Ebligi Kromprogramon"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonHelp4)
 #. i18n: ectx: property (text), widget (QPushButton, buttonHelp3)
@@ -1106,32 +1094,32 @@ msgstr "?"
 #: krenamewindow.cpp:49
 #, kde-format
 msgid "&1. Files"
-msgstr "&1. 文件"
+msgstr "&1. Dosieroj"
 
 #: krenamewindow.cpp:50
 #, kde-format
 msgid "&2. Destination"
-msgstr "&2. 目标"
+msgstr "&2. Celo"
 
 #: krenamewindow.cpp:51
 #, kde-format
 msgid "&3. Plugins"
-msgstr "&3. 插件"
+msgstr "&3. Kromaĵoj"
 
 #: krenamewindow.cpp:52
 #, kde-format
 msgid "&4. Filename"
-msgstr "&4. 文件名"
+msgstr "&4. Dosiernomo"
 
 #: krenamewindow.cpp:207
 #, kde-format
 msgid "&Finish"
-msgstr "完成(&F)"
+msgstr "&Fini"
 
 #: krenamewindow.cpp:451
 #, kde-format
 msgid "<b>Files:</b> %1"
-msgstr "<b>文件：</b> %1"
+msgstr "<b>Dosieroj:</b> %1"
 
 #: main.cpp:59
 #, kde-format
@@ -1139,7 +1127,6 @@ msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
 "set of expressions."
 msgstr ""
-"KRename 是一个批量文件重命名工具，可以使用一系列表达式来重命名列出的文件。"
 
 #: main.cpp:62
 #, kde-format
@@ -1148,8 +1135,6 @@ msgid ""
 "feature requests are as welcome as financial support (everybody needs "
 "money ;). See help files for details."
 msgstr ""
-"若您喜欢 Krename，也许您想支持它。欢迎参与测试、除错，以及提出功能需求。也可"
-"以提供经济上的支持 (任何人都需要钱 ;) )。请查看帮助文件以获取详情。"
 
 #: main.cpp:66
 #, kde-format
@@ -1164,7 +1149,7 @@ msgstr "Heiko Becker"
 #: main.cpp:69
 #, kde-format
 msgid "Current maintainer"
-msgstr "当前维护者"
+msgstr "Nuna prizorganto"
 
 #: main.cpp:71
 #, kde-format
@@ -1174,7 +1159,7 @@ msgstr "Dominik Seichter"
 #: main.cpp:71
 #, kde-format
 msgid "Developer and former maintainer"
-msgstr "开发者和前任维护者"
+msgstr "Ellaboranto kaj iama prizorganto"
 
 #: main.cpp:73
 #, kde-format
@@ -1184,7 +1169,7 @@ msgstr "Stefan \"Stonki\" Onken"
 #: main.cpp:74
 #, kde-format
 msgid "Website, testing, very good ideas and keeping me coding!"
-msgstr "网站、测试、好点子及让我继续写程序！"
+msgstr "Retejo, testado, tre bonaj ideoj kaj konservante min kodigado!"
 
 #: main.cpp:77
 #, kde-format
@@ -1195,7 +1180,7 @@ msgstr "Arpad Biro"
 #, kde-format
 msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
-msgstr "帮助修正界面样式问题，改进用户消息。"
+msgstr ""
 
 #: main.cpp:78
 #, kde-format
@@ -1205,12 +1190,12 @@ msgstr "Trevor Semeniuk"
 #: main.cpp:78
 #, kde-format
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
-msgstr "感谢他打包 RedHat 7.x 软件包，和其他帮助。"
+msgstr "Dankon al li pro kreado de RedHat 7.x-pakaĵoj kaj iu alia helpo."
 
 #: main.cpp:80
 #, kde-format
 msgid "Groult Richard"
-msgstr "Groult Richard"
+msgstr "Groult Rikardo"
 
 #: main.cpp:80
 #, kde-format
@@ -1218,7 +1203,6 @@ msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
 msgstr ""
-"修正一些startIndex的臭虫及添加BatchRenamer类别至他的超棒图片显视器showimg。"
 
 #: main.cpp:83
 #, kde-format
@@ -1228,7 +1212,8 @@ msgstr "Michael Elvers"
 #: main.cpp:83
 #, kde-format
 msgid "Fixed a bug that caused krename not closing open files."
-msgstr "修正一个能够导致Krename不会关闭所开启文件的臭虫。"
+msgstr ""
+"Korektis cimon, kiu kaŭzis ke krename ne fermas malfermitajn dosierojn."
 
 #: main.cpp:85
 #, kde-format
@@ -1241,8 +1226,6 @@ msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
 "to apps.kde.com."
 msgstr ""
-"感谢他在 apps.kde.com 里的功劳，同时也感谢他帮助我把 Krename 贡献予 apps.kde."
-"com。"
 
 #: main.cpp:87
 #, kde-format
@@ -1253,7 +1236,7 @@ msgstr "Charles Samuels"
 #, kde-format
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
-msgstr "感谢 noatun，ID3/Ogg 标签程序码是基于他的 noatun 模块。"
+msgstr ""
 
 #: main.cpp:89
 #, kde-format
@@ -1263,7 +1246,7 @@ msgstr "Franz Schmid"
 #: main.cpp:89
 #, kde-format
 msgid "Gave me a good start into writing plugins with his application scribus."
-msgstr "用他的 scribus 应用程序，在我写插件时给我一个好的开始点。"
+msgstr "Bone komencis verki kromaĵojn per lia aplikaĵo scribus."
 
 #: main.cpp:91
 #, kde-format
@@ -1274,17 +1257,17 @@ msgstr "Rolf Magnus"
 #, kde-format
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
-msgstr "部份的 PNG 支持是从他的 KFile 给 png 支持的插件处抄过来的。"
+msgstr ""
 
 #: main.cpp:93
 #, kde-format
 msgid "Michael v.Ostheim"
-msgstr "Michael v.Ostheim"
+msgstr "Mikaelo v.Ostheim"
 
 #: main.cpp:93
 #, kde-format
 msgid "Created the Gentoo Ebuild scripts for Krename."
-msgstr "建立了Krename的Gentoo Ebuild的脚本。"
+msgstr ""
 
 #: main.cpp:95
 #, kde-format
@@ -1294,7 +1277,7 @@ msgstr "Brandon Low"
 #: main.cpp:95
 #, kde-format
 msgid "Some GCC 3.1 fixes for Gentoo."
-msgstr "为Gentoo中的GCC 3.1做的一些修正"
+msgstr "Iuj korektoj de GCC 3.1 por Gentoo."
 
 #: main.cpp:97
 #, kde-format
@@ -1304,7 +1287,7 @@ msgstr "Per Oyvind Karlsen"
 #: main.cpp:97
 #, kde-format
 msgid "Thanks for creating the Mandrake RPM"
-msgstr "感谢创建了Mandrake RPM包"
+msgstr "Dankon pro kreado de la Mandrake RPM"
 
 #: main.cpp:99
 #, kde-format
@@ -1314,7 +1297,7 @@ msgstr "Vincenzo Reale"
 #: main.cpp:99
 #, kde-format
 msgid "Italian translation"
-msgstr "意大利语翻译"
+msgstr "Itala traduko"
 
 #: main.cpp:100
 #, kde-format
@@ -1324,7 +1307,7 @@ msgstr "Daniele Medri"
 #: main.cpp:100
 #, kde-format
 msgid "Italian translation work"
-msgstr "意大利语翻译工作"
+msgstr "Itala traduklaboro"
 
 #: main.cpp:101
 #, kde-format
@@ -1334,17 +1317,17 @@ msgstr "Stephan Johach"
 #: main.cpp:101
 #, kde-format
 msgid "Provided a gcc3.x namespace patch"
-msgstr "提供了gcc3.x命名空间补丁"
+msgstr "Disponigis gcc3.x nomspacpeceton"
 
 #: main.cpp:102
 #, kde-format
 msgid "Michael Zugaro"
-msgstr "Michael Zugaro"
+msgstr "Mikaelo Zugaro"
 
 #: main.cpp:102
 #, kde-format
 msgid "Provided the new preview and move features"
-msgstr "提供了新的预览和移动功能"
+msgstr "Provizis la novajn antaŭrigardojn kaj movajn funkciojn"
 
 #: main.cpp:103
 #, kde-format
@@ -1357,8 +1340,6 @@ msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 msgstr ""
-"修正了与spec文件有关的问题，并为所有您能想到的SuSE版本发布了rpm包。 同时，还"
-"是新的Gentoo维护者。"
 
 #: main.cpp:104
 #, kde-format
@@ -1368,17 +1349,17 @@ msgstr "Mark Ziegler"
 #: main.cpp:104
 #, kde-format
 msgid "Provided SuSE RPMs and very good suggestions"
-msgstr "提供了SuSE RPM包以及很多好的建议"
+msgstr "Provizis SuSE-RPM-ojn kaj tre bonajn sugestojn"
 
 #: main.cpp:105
 #, kde-format
 msgid "Jose Rodriguez"
-msgstr "Jose Rodriguez"
+msgstr "Jozefo Rodríguez"
 
 #: main.cpp:105
 #, kde-format
 msgid "Contributed a Spanish translation"
-msgstr "贡献了西班牙语翻译"
+msgstr "Kontribuis hispanan tradukon"
 
 #: main.cpp:106
 #, kde-format
@@ -1388,7 +1369,7 @@ msgstr "Steven P. Ulrick"
 #: main.cpp:106
 #, kde-format
 msgid "Provided a RedHat RPM and was big help in improving KRename"
-msgstr "提供了RedHat RPM包并为改进KRename提供了很大的帮助"
+msgstr "Provizis RedHat RPM kaj estis granda helpo por plibonigi KRename"
 
 #: main.cpp:107
 #, kde-format
@@ -1398,7 +1379,7 @@ msgstr "UTUMI Hirosi"
 #: main.cpp:107
 #, kde-format
 msgid "Translated KRename to Japanese"
-msgstr "将KRename翻译成日语"
+msgstr "Tradukis KRename al la japana"
 
 #: main.cpp:108
 #, kde-format
@@ -1408,7 +1389,7 @@ msgstr "Nicolas Benoit"
 #: main.cpp:108
 #, kde-format
 msgid "Translated KRename into French"
-msgstr "将KRename翻译成法语"
+msgstr "Tradukis KRename en la francan"
 
 #: main.cpp:109
 #, kde-format
@@ -1418,17 +1399,17 @@ msgstr "Krzysztof Pawlak"
 #: main.cpp:109
 #, kde-format
 msgid "Translated KRename into Polish"
-msgstr "将KRename翻译成波兰语"
+msgstr "Tradukis KRename en la polan"
 
 #: main.cpp:110
 #, kde-format
 msgid "Ilya Ivkov"
-msgstr "Ilya Ivkov"
+msgstr "Ilja Ivkov"
 
 #: main.cpp:110
 #, kde-format
 msgid "Translated KRename into Russian"
-msgstr "将KRename翻译成俄语"
+msgstr "Tradukis KRename en la rusan"
 
 #: main.cpp:111
 #, kde-format
@@ -1438,17 +1419,17 @@ msgstr "Asim Husanovic"
 #: main.cpp:111
 #, kde-format
 msgid "Translated KRename into Bosnian"
-msgstr "将KRename翻译成波斯尼亚语"
+msgstr "Tradukis KRename en la bosnian"
 
 #: main.cpp:112
 #, kde-format
 msgid "Michal Smoczyk"
-msgstr "Michal Smoczyk"
+msgstr "Miĥal Smoczyk"
 
 #: main.cpp:112
 #, kde-format
 msgid "Polish Translation"
-msgstr "波兰语翻译"
+msgstr "Pola Traduko"
 
 #: main.cpp:113
 #, kde-format
@@ -1458,84 +1439,84 @@ msgstr "Pavel Fric"
 #: main.cpp:113
 #, kde-format
 msgid "Czech Translation"
-msgstr "捷克语翻译"
+msgstr "Ĉeĥa Traduko"
 
 #: main.cpp:114
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国"
+msgstr ""
 
 #: main.cpp:115
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org"
+msgstr ""
 
 #: main.cpp:123
 #, kde-format
 msgid "Files to be added to the list to be renamed"
-msgstr "添加到列表中的文件会被重命名"
+msgstr "Dosieroj aldonotaj al la listo renomota"
 
 #: main.cpp:123
 #, kde-format
 msgid "[files...]"
-msgstr "[文件...]"
+msgstr "[dosieroj...]"
 
 #: main.cpp:124
 #, kde-format
 msgid "add folder recursively"
-msgstr "递归添加文件夹"
+msgstr "aldoni dosierujon rekursie"
 
 #: main.cpp:124
 #, kde-format
 msgid "folder"
-msgstr "文件夹"
+msgstr "dosierujo"
 
 #: main.cpp:125
 #, kde-format
 msgid "set a template"
-msgstr "设置模板"
+msgstr "starigi ŝablonon"
 
 #: main.cpp:126
 #, kde-format
 msgid "set a template for the file extension"
-msgstr "设置扩展名模板"
+msgstr "starigi ŝablonon por la dosiera etendo"
 
 #: main.cpp:127
 #, kde-format
 msgid "enable a plugin for use"
-msgstr "启用插件"
+msgstr "ebligi kromprogramon por uzo"
 
 #: main.cpp:128
 #, kde-format
 msgid "copy files to folder or url"
-msgstr "复制文件到文件夹或 URL"
+msgstr "kopii dosierojn al dosierujo aŭ url"
 
 #: main.cpp:128 main.cpp:129 main.cpp:130
 #, kde-format
 msgid "path or url"
-msgstr "路径或 URL"
+msgstr "vojo aŭ url"
 
 #: main.cpp:129
 #, kde-format
 msgid "move files to folder or url"
-msgstr "移动文件到文件夹或 URL"
+msgstr "movi dosierojn al dosierujo aŭ url"
 
 #: main.cpp:130
 #, kde-format
 msgid "link files to folder or url"
-msgstr "链接文件到文件夹或 URL"
+msgstr "ligi dosierojn al dosierujo aŭ url"
 
 #: main.cpp:131
 #, kde-format
 msgid "start renaming immediately"
-msgstr "立即开始重命名"
+msgstr "komenci tuj renomi"
 
 #: main.cpp:132
 #, kde-format
 msgid "start KRename's selftest (developers only)"
-msgstr "开始 KRename 自检程序(仅开发者用)"
+msgstr "komenci la memteston de KRename (nur programistoj)"
 
 #: main.cpp:151
 #, kde-format
@@ -1543,55 +1524,53 @@ msgid ""
 "<b>Krename was started from root!</b><br>When started from root, Krename may "
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
-"<b>Krename以root开始！</b><br>当以root开始时，若您不太确定您在做何事时，"
-"Krename 可能会危害到您的系统！"
 
 #: main.cpp:155
 #, kde-format
 msgid "Error"
-msgstr "错误"
+msgstr "Eraro"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grouNumbering)
 #: numberwidget.ui:17
 #, kde-format
 msgid "&Numbering"
-msgstr "编号(&N)"
+msgstr "&Numerado"
 
 #. i18n: ectx: property (text), widget (QLabel, labelStart)
 #: numberwidget.ui:25
 #, kde-format
 msgid "Start &index:"
-msgstr "起始编号(&I)："
+msgstr "Komenca &indekso:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: numberwidget.ui:42
 #, kde-format
 msgid "&Step by:"
-msgstr "步长(&S)："
+msgstr "&Paŝi per:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkReset)
 #: numberwidget.ui:61
 #, kde-format
 msgid "&Reset counter for every directory"
-msgstr "为每个目录重设计数器(&R)"
+msgstr "&Restarigi nombrilon por ĉiu dosierujo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupSkip)
 #: numberwidget.ui:71
 #, kde-format
 msgid "&Skip Numbers"
-msgstr "跳过编号(&S)"
+msgstr "&Salti Nombrojn"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonAdd)
 #: numberwidget.ui:84
 #, kde-format
 msgid "&Add Number"
-msgstr "添加编号(&A)"
+msgstr "&Aldoni Numeron"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
 #: numberwidget.ui:94
 #, kde-format
 msgid "&Remove Number"
-msgstr "删除编号(&R)"
+msgstr "&Forigi Numeron"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: partfilenamewidget.ui:25
@@ -1599,96 +1578,97 @@ msgstr "删除编号(&R)"
 msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
-msgstr "<qt>请在下面的文本框中选择旧文件名的一部分，插入新文件名中：</qt>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkInvert)
 #: partfilenamewidget.ui:45
 #, kde-format
 msgid "&Invert selection"
-msgstr "反向选择(&I)"
+msgstr "&Inverti elekton"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: partfilenamewidget.ui:54
 #, kde-format
 msgid "&Convert selection:"
-msgstr "转换选择(&C)"
+msgstr "&Konverti elekton:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #: partfilenamewidget.ui:65
 #, kde-format
 msgid "No Conversion"
-msgstr "不转换"
+msgstr "Neniu Konvertiĝo"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPreviewDesc)
 #: partfilenamewidget.ui:90
 #, kde-format
 msgid "Preview of the generated KRename command:"
-msgstr "预览生成的 KRename 命令："
+msgstr "Antaŭrigardo de la generita KRename-komando:"
 
 #: permissionsplugin.cpp:108
 #, kde-format
 msgid "Permissions"
-msgstr "权限"
+msgstr "Permesoj"
 
 #: permissionsplugin.cpp:121
 #, kde-format
 msgid "PermissionsPlugin works only with local files. %1 is a remote file."
-msgstr "权限插件只对本地文件起作用，而 %1 是远程文件。"
+msgstr ""
+"PermissionsPlugin funkcias nur kun lokaj dosieroj. %1 estas fora dosiero."
 
 #: permissionsplugin.cpp:126
 #, kde-format
 msgid "Cannot chmod %1."
-msgstr "无法 chmod %1 。"
+msgstr "Ne povas ŝanĝi %1."
 
 #: permissionsplugin.cpp:135
 #, kde-format
 msgid "Cannot chown %1."
-msgstr "无法 chown %1 。"
+msgstr "Ne povas manĝi %1."
 
 #: permissionsplugin.cpp:186
 #, kde-format
 msgid "Access permissions"
-msgstr "访问权限"
+msgstr "Alirpermesoj"
 
 #: permissionsplugin.cpp:191
 #, kde-format
 msgid "Class"
-msgstr "分类"
+msgstr "Klaso"
 
 #: permissionsplugin.cpp:194
 #, kde-format
 msgid "Read"
-msgstr "读取"
+msgstr "Legi"
 
 #: permissionsplugin.cpp:197
 #, kde-format
 msgid "Write"
-msgstr "写入"
+msgstr "Skribi"
 
 #: permissionsplugin.cpp:200
 #, kde-format
 msgid "Exec"
-msgstr "执行"
+msgstr "Exec"
 
 #: permissionsplugin.cpp:206
 #, kde-format
 msgid "Special"
-msgstr "特殊"
+msgstr "Speciala"
 
 #: permissionsplugin.cpp:209 tokensortmodedialog.cpp:42
 #, kde-format
 msgid "User"
-msgstr "所有者"
+msgstr "Uzanto"
 
 #: permissionsplugin.cpp:212 tokensortmodedialog.cpp:40
 #, kde-format
 msgid "Group"
-msgstr "用户组"
+msgstr "Grupo"
 
 #: permissionsplugin.cpp:215
 #, kde-format
 msgid "Others"
-msgstr "其他"
+msgstr "Aliaj"
 
 #: permissionsplugin.cpp:218
 #, kde-format
@@ -1703,32 +1683,32 @@ msgstr "GID"
 #: permissionsplugin.cpp:224
 #, kde-format
 msgid "Sticky"
-msgstr "粘性"
+msgstr "Glueca"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, PermissionsPluginAdvanceDialog)
 #: permissionspluginadvanceddialog.ui:13
 #, kde-format
 msgid "Dialog"
-msgstr "对话"
+msgstr "Dialogo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, groupPermissions)
 #: permissionspluginadvanceddialog.ui:41 permissionspluginwidget.ui:26
 #, kde-format
 msgid "Access Permissions"
-msgstr "访问权限"
+msgstr "Alirpermesoj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkPermissions)
 #: permissionspluginwidget.ui:16
 #, kde-format
 msgid "Change &Permissions"
-msgstr "变更权限(&P)"
+msgstr "Ŝanĝi &Permesojn"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: permissionspluginwidget.ui:34
 #, kde-format
 msgid "O&wner:"
-msgstr "所有者(&W)："
+msgstr "&Posedanto:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPermOwner)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPermGroup)
@@ -1737,7 +1717,7 @@ msgstr "所有者(&W)："
 #: permissionspluginwidget.ui:121
 #, kde-format
 msgid "Forbidden"
-msgstr "已禁止"
+msgstr "Malpermesite"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPermOwner)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPermGroup)
@@ -1746,7 +1726,7 @@ msgstr "已禁止"
 #: permissionspluginwidget.ui:126
 #, kde-format
 msgid "Can Read"
-msgstr "可读"
+msgstr "Povas Legi"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPermOwner)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPermGroup)
@@ -1755,194 +1735,196 @@ msgstr "可读"
 #: permissionspluginwidget.ui:131
 #, kde-format
 msgid "Can Read & Write"
-msgstr "可读写"
+msgstr "Povas Legi & Skribi"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: permissionspluginwidget.ui:69
 #, kde-format
 msgid "Gro&up:"
-msgstr "用户组(U)："
+msgstr "Gr&upo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: permissionspluginwidget.ui:104
 #, kde-format
 msgid "Ot&hers:"
-msgstr "其他(H)："
+msgstr "Aliaj&ŝiaj:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelAdvanced)
 #: permissionspluginwidget.ui:139
 #, kde-format
 msgid "This file uses advanced permissions"
-msgstr "此文件使用高级权限"
+msgstr "Ĉi tiu dosiero uzas altnivelajn permesojn"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkFolder)
 #: permissionspluginwidget.ui:148
 #, kde-format
 msgid "Is Executable/Only owner &can rename and delete folder content"
-msgstr "可执行，只有所有者可以重命名和删除文件夹内容(&C)"
+msgstr ""
+"Estas Efektivigebla/Nur posedanto &povas renomi kaj forigi enhavon de "
+"dosierujo"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: permissionspluginwidget.ui:170
 #, kde-format
 msgid "A&dvanced Permissions"
-msgstr "高级权限(&D)"
+msgstr "A&ltnivelaj Permesiloj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkOwner)
 #: permissionspluginwidget.ui:182
 #, kde-format
 msgid "&Change Owner"
-msgstr "变更所有者(&C)"
+msgstr "&Ŝanĝi Posedanton"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
 #: permissionspluginwidget.ui:192
 #, kde-format
 msgid "Ownership"
-msgstr "所有权"
+msgstr "Posedo"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: permissionspluginwidget.ui:198
 #, kde-format
 msgid "&User:"
-msgstr "用户(&U)："
+msgstr "&Uzanto:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: permissionspluginwidget.ui:224
 #, kde-format
 msgid "&Group:"
-msgstr "用户组(&G)："
+msgstr "&Grupo:"
 
 #: podofoplugin.cpp:37
 #, kde-format
 msgid "Author of the PDF file"
-msgstr "PDF 文件的作者"
+msgstr "Aŭtoro de la PDF-dosiero"
 
 #: podofoplugin.cpp:38
 #, kde-format
 msgid "Creator of the PDF file"
-msgstr "PDF 文件的创建者"
+msgstr "Kreinto de la PDF-dosiero"
 
 #: podofoplugin.cpp:39
 #, kde-format
 msgid "Keywords of the PDF file"
-msgstr "PDF 文件的关键字"
+msgstr "Ŝlosilvortoj de la PDF-dosiero"
 
 #: podofoplugin.cpp:40
 #, kde-format
 msgid "Subject of the PDF file"
-msgstr "PDF 文件的主题"
+msgstr "Temo de la PDF-dosiero"
 
 #: podofoplugin.cpp:41
 #, kde-format
 msgid "Title of the PDF file"
-msgstr "PDF 文件的标题"
+msgstr "Titolo de la PDF-dosiero"
 
 #: podofoplugin.cpp:42
 #, kde-format
 msgid "Producer of the PDF file"
-msgstr "PDF 文件的制作者"
+msgstr "Produktanto de la PDF-dosiero"
 
 #: podofoplugin.cpp:43
 #, kde-format
 msgid "Number of pages in the PDF file"
-msgstr "PDF 文件的页数"
+msgstr "Nombro da paĝoj en la PDF-dosiero"
 
 #: podofoplugin.cpp:45
 #, kde-format
 msgid "PoDoFo (PDF) Plugin"
-msgstr "PoDoFo PDF 插件"
+msgstr "PoDoFo (PDF) Kromaĵo"
 
 #: podofoplugin.cpp:46
 #, kde-format
 msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
-msgstr "<qt>此插件支持从 PDF 文件中读取标签。</qt>"
+msgstr "<qt>Tiu ĉi kromaĵo subtenas legi etikedojn el PDF-dosieroj.</qt>"
 
 #: previewlist.cpp:31
 #, kde-format
 msgid "&Change filename manually..."
-msgstr "手动修改文件名(&C)..."
+msgstr "&Ŝanĝi dosiernomon permane..."
 
 #: previewlist.cpp:33
 #, kde-format
 msgid "&Open"
-msgstr "打开(&O)"
+msgstr "&Malfermi"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
 #: previewlist.cpp:36 replacewidget.ui:111
 #, kde-format
 msgid "&Remove"
-msgstr "移除(&R)"
+msgstr "Fo&rigi"
 
 #: progressdialog.cpp:33
 #, kde-format
 msgid "&Rename more..."
-msgstr "重命名更多(&R)..."
+msgstr "&Renomu pli..."
 
 #: progressdialog.cpp:34
 #, kde-format
 msgid "&Undo"
-msgstr "撤销(&U)"
+msgstr "&Malfari"
 
 #: progressdialog.cpp:35
 #, kde-format
 msgid "&Open Destination"
-msgstr "打开目标目录(&O)"
+msgstr "&Malfermi Celon"
 
 #: progressdialog.cpp:52
 #, kde-format
 msgid "Restart &KRename..."
-msgstr "重启 KRename(&K)..."
+msgstr "Rekomenci &KRename..."
 
 #: progressdialog.cpp:54
 #, kde-format
 msgid "Rename Processed Files &Again..."
-msgstr "重新重命名已处理的文件(&P)..."
+msgstr "Alinomigi prilaboritajn dosierojn &Denove..."
 
 #: progressdialog.cpp:55
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
-msgstr "重新重命名未处理的文件(&U)..."
+msgstr "Alinom&u Refoje Neprocesitajn dosierojn..."
 
 #: progressdialog.cpp:56
 #, kde-format
 msgid "&Rename All Files Again..."
-msgstr "重新重命名所有文件(&R)..."
+msgstr "&Renomi ĉiujn dosierojn..."
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ProgressDialog)
 #: progressdialog.ui:13
 #, kde-format
 msgid "Progress"
-msgstr "处理"
+msgstr "Progreso"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
 #: progressdialog.ui:28
 #, kde-format
 msgid "&Cancel"
-msgstr "取消(&C)"
+msgstr "&Nuligi"
 
 #: replacedialog.cpp:81
 #, kde-format
 msgid "Save Find & Replace Settings as:"
-msgstr "将查找并替换配置另存为："
+msgstr "Konservi Trovi & Anstataŭigi Agordojn kiel:"
 
 #: replacedialog.cpp:82
 #, kde-format
 msgid "KRename Find & Replace Settings XML (*.xml)"
-msgstr "KRename 查找与替换配置 XML 文件 (*.xml)"
+msgstr "KRename Trovi & Anstataŭigi Agordoj XML (*.xml)"
 
 #: replacedialog.cpp:91
 #, kde-format
 msgid "Failed to save the Find & Replace Settings File."
-msgstr "无法保存查找与替换配置文件"
+msgstr "Malsukcesis konservi la Trovi & Anstataŭigi Agorddosieron."
 
 #: replacedialog.cpp:143
 #, kde-format
 msgid "Save Find and Replace Settings File"
-msgstr "保存查找与替换配置文件"
+msgstr "Konservi Trovi kaj Anstataŭigi Agordadosieron"
 
 #: replacedialog.cpp:145
 #, kde-format
 msgid "KRename Find and Replace Settings XML (*.xml)"
-msgstr "KRename 查找与替换配置 XML 文件 (*.xml)"
+msgstr "KRename Trovi kaj Anstataŭigi Agordojn XML (*.xml)"
 
 #: replacedialog.cpp:153
 #, kde-format
@@ -1950,14 +1932,12 @@ msgid ""
 "Failed to open the Find and Replace Settings File. Cannot read file %1:\n"
 "%2."
 msgstr ""
-"无法打开查找与替换配置文件。无法读取文件 %1：\n"
-"%2"
 
 #: replacedialog.cpp:164 replacedialog.cpp:175 replacedialog.cpp:180
 #: replacedialog.cpp:246
 #, kde-format
 msgid "KRename Find and Replace Settings XML File"
-msgstr "KRename 查找与替换配置 XML 文件"
+msgstr "KRename Trovi kaj Anstataŭigi Agordojn XML-Dosieron"
 
 #: replacedialog.cpp:165
 #, kde-format
@@ -1965,223 +1945,221 @@ msgid ""
 "Parse error at line %1, column %2:\n"
 "%3"
 msgstr ""
-"在行 %1，列 %2 发生语法分析错误：\n"
-"%3"
 
 #: replacedialog.cpp:174
 #, kde-format
 msgid "The file is not a KRename XML file."
-msgstr "此文件不是一个 KRename XML 文件。"
+msgstr "La dosiero ne estas KRename XML-dosiero."
 
 #: replacedialog.cpp:179
 #, kde-format
 msgid "The file is not an KRename XML version 1.0 file."
-msgstr "此文件不是一个 KRename XML 1.0 版本的文件。"
+msgstr "La dosiero ne estas KRename XML-versio 1.0 dosiero."
 
 #: replacedialog.cpp:245
 #, kde-format
 msgid "Problem with loading KRename XML file."
-msgstr "加载 KRename XML 文件时发生问题"
+msgstr "Problemo kun ŝargo de KRename XML-dosiero."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ReplaceWidget)
 #. i18n: ectx: property (windowTitle), widget (QDialog, ReplaceItemDlg)
 #: replaceitemdlg.ui:14 replacewidget.ui:14
 #, kde-format
 msgid "Find and Replace"
-msgstr "查找与替换"
+msgstr "Trovi kaj Anstataŭigi"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: replaceitemdlg.ui:22
 #, kde-format
 msgid "&Find:"
-msgstr "查找(&F)："
+msgstr "&Trovi:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: replaceitemdlg.ui:35
 #, kde-format
 msgid "&Replace With:"
-msgstr "替换为(&R)："
+msgstr "&Anstataŭigi Per:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkRegular)
 #: replaceitemdlg.ui:50
 #, kde-format
 msgid "Find is a Regular &Expression"
-msgstr "查找正则表达式"
+msgstr "Trovi estas Regula &Esprimo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkProcess)
 #: replaceitemdlg.ui:57
 #, kde-format
 msgid "&Process tokens in replace string"
-msgstr "替换字符串中的过程标记(&P)"
+msgstr "&Procezi ĵetonojn en anstataŭiga ĉeno"
 
 #. i18n: ectx: property (text), widget (QTableWidget, list)
 #: replacewidget.ui:32
 #, kde-format
 msgid "Reg. Expression"
-msgstr "正则表达式"
+msgstr "Regula. Esprimo"
 
 #. i18n: ectx: property (text), widget (QTableWidget, list)
 #: replacewidget.ui:37
 #, kde-format
 msgid "Find"
-msgstr "查找"
+msgstr "Trovi"
 
 #. i18n: ectx: property (text), widget (QTableWidget, list)
 #: replacewidget.ui:42
 #, kde-format
 msgid "Replace With"
-msgstr "替换为"
+msgstr "Anstataŭigi per"
 
 #. i18n: ectx: property (text), widget (QTableWidget, list)
 #: replacewidget.ui:47
 #, kde-format
 msgid "Process Tokens"
-msgstr "过程标记"
+msgstr "Procezaj ĵetonoj"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSaveList)
 #: replacewidget.ui:70
 #, kde-format
 msgid "&Save Settings..."
-msgstr "设置另存为(&S)..."
+msgstr "Kon&servi agordojn..."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonLoadList)
 #: replacewidget.ui:77
 #, kde-format
 msgid "&Load Settings..."
-msgstr "加载设置(&L)..."
+msgstr "Ŝargi Agordo&jn..."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonEdit)
 #: replacewidget.ui:104
 #, kde-format
 msgid "&Edit..."
-msgstr "编辑(&E)..."
+msgstr "R&edakti..."
 
 #: scriptplugin.cpp:60
 #, kde-format
 msgid "JavaScript Plugin"
-msgstr "JavaScript 插件"
+msgstr "JavaScript Kromaĵo"
 
 #: scriptplugin.cpp:68
 #, kde-format
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
-msgstr "插入一小段 JavaScript 代码 (此例中是 4+5)"
+msgstr "Enigi fragmenton de JavaScript-kodo (4+5 ĉi-kaze)"
 
 #: scriptplugin.cpp:70
 #, kde-format
 msgid "Index of the current file"
-msgstr "当前文件的索引"
+msgstr "Indekso de la aktuala dosiero"
 
 #: scriptplugin.cpp:71
 #, kde-format
 msgid "URL of the current file"
-msgstr "当前文件的 URL"
+msgstr "URL de la aktuala dosiero"
 
 #: scriptplugin.cpp:72
 #, kde-format
 msgid "Filename of the current file"
-msgstr "当前文件的文件名"
+msgstr "Dosiernomo de la nuna dosiero"
 
 #: scriptplugin.cpp:73
 #, kde-format
 msgid "Extension of the current file"
-msgstr "当前文件的扩展名"
+msgstr "Etendo de la nuna dosiero"
 
 #: scriptplugin.cpp:74
 #, kde-format
 msgid "Directory of the current file"
-msgstr "当前文件的目录"
+msgstr "Dosierujo de la aktuala dosiero"
 
 #: scriptplugin.cpp:126
 #, kde-format
 msgid "Variable Name"
-msgstr "变量名称"
+msgstr "Varia Nomo"
 
 #: scriptplugin.cpp:127
 #, kde-format
 msgid "Initial Value"
-msgstr "初始值"
+msgstr "Komenca Valoro"
 
 #: scriptplugin.cpp:237
 #, kde-format
 msgid "String"
-msgstr "字符串"
+msgstr "Ĉeno"
 
 #: scriptplugin.cpp:238
 #, kde-format
 msgid "Int"
-msgstr "整型"
+msgstr "Int"
 
 #: scriptplugin.cpp:239
 #, kde-format
 msgid "Double"
-msgstr "双精度浮点型"
+msgstr "duobla"
 
 #: scriptplugin.cpp:240
 #, kde-format
 msgid "Boolean"
-msgstr "布尔型"
+msgstr "Bulea"
 
 #: scriptplugin.cpp:256
 #, kde-format
 msgid "A JavaScript error has occurred: "
-msgstr "遇到 JavaScript 错误："
+msgstr "JavaScript-eraro okazis:"
 
 #: scriptplugin.cpp:283
 #, kde-format
 msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
-msgstr "所有目前输入的定义将会丢失。您确定要继续吗？"
+msgstr ""
 
 #: scriptplugin.cpp:290 scriptplugin.cpp:309
 #, kde-format
 msgid "Select file"
-msgstr "选择文件"
+msgstr "Elekti dosieron"
 
 #: scriptplugin.cpp:316
 #, kde-format
 msgid "The file %1 already exists. Do you want to overwrite it?"
-msgstr "文件 %1 已经存在。您想要覆盖它吗？"
+msgstr "La dosiero %1 jam ekzistas. Ĉu anstataŭigi ĝin?"
 
 #: scriptplugin.cpp:334
 #, kde-format
 msgid "Unable to open %1 for writing."
-msgstr "无法打开 %1 进行写入。"
+msgstr "Ne eblas malfermi %1 por skribado."
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ScriptPluginDialog)
 #: scriptplugindialog.ui:20
 #, kde-format
 msgid "Create Variable"
-msgstr "创建变量"
+msgstr "Krei Variablo"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: scriptplugindialog.ui:28
 #, kde-format
 msgid "&Name:"
-msgstr "文件名(&N)："
+msgstr "&Nomo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: scriptplugindialog.ui:41
 #, kde-format
 msgid "&Initial Value:"
-msgstr "初始值(&I)："
+msgstr "&Komenca valoro:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: scriptplugindialog.ui:54
 #, kde-format
 msgid "&Type:"
-msgstr "类型(&T)："
+msgstr "&Tipo:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: scriptpluginwidget.ui:24
 #, kde-format
 msgid "&Variables"
-msgstr "变量(&V)"
+msgstr "&Varibeloj"
 
 #. i18n: ectx: property (text), widget (QLabel, labelDescVariables)
 #: scriptpluginwidget.ui:30
 #, kde-format
 msgid "Declare global variables that can be used from within your functions:"
-msgstr "生命全局变量，可以在函数中使用："
+msgstr "Deklari ĉieajn variablojn uzeblajn de ene de viaj funkcioj:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listVariables)
 #: scriptpluginwidget.ui:58
@@ -2193,72 +2171,72 @@ msgstr "1"
 #: scriptpluginwidget.ui:75
 #, kde-format
 msgid "&Delete"
-msgstr "删除(&D)"
+msgstr "&Forigi"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: scriptpluginwidget.ui:100
 #, kde-format
 msgid "&Definitions"
-msgstr "定义(&D)"
+msgstr "&Difinoj"
 
 #. i18n: ectx: property (text), widget (QLabel, labelDescDef)
 #: scriptpluginwidget.ui:106
 #, kde-format
 msgid "Define functions that can be used from KRename templates:"
-msgstr "定义函数，用于 KRename 模板。"
+msgstr "Difini funkciojn uzeblajn de ŝablonoj de KRename:"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSave)
 #: scriptpluginwidget.ui:127
 #, kde-format
 msgid "&Save to File..."
-msgstr "保存到文件(&S)..."
+msgstr "&Konservi al Dosiero..."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonLoad)
 #: scriptpluginwidget.ui:134
 #, kde-format
 msgid "&Load from File..."
-msgstr "从文件加载(&L)..."
+msgstr "&Ŝargi el dosiero..."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: scriptpluginwidget.ui:141
 #, kde-format
 msgid "&Insert Variable"
-msgstr "插入变量(&I)"
+msgstr "&Enmeti Variablon"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonTest)
 #: scriptpluginwidget.ui:164
 #, kde-format
 msgid "&Test..."
-msgstr "测试(&T)..."
+msgstr "&Provo..."
 
 #: snumplugin.cpp:36
 #, kde-format
 msgid "Inserts the series number of original filename"
-msgstr "插入原文件名的系列编号"
+msgstr "Enmetas la serion de la origina dosiernomo"
 
 #: snumplugin.cpp:37
 #, kde-format
 msgid "Inserts the season number in two digits"
-msgstr "用两位数字插入季编号"
+msgstr "Enmetas la sezonnumeron en du ciferoj"
 
 #: snumplugin.cpp:38
 #, kde-format
 msgid "Inserts the episode number in two or three digits"
-msgstr "用两位或三位数字插入集编号"
+msgstr "Enmetas la epizodan numeron en du aŭ tri ciferoj"
 
 #. i18n("Inserts the season number in at least pad digits") );
 #. m_help.append( "[episode;pad];;" + i18n("Inserts the episode number in at least pad digits") );
 #: snumplugin.cpp:42
 #, kde-format
 msgid "SeriesNumber"
-msgstr "系列编号"
+msgstr "SerioNumero"
 
 #: snumplugin.cpp:44
 #, kde-format
 msgid ""
 "<qt>This plugin can extract information from the filename of a TV series.</"
 "qt>"
-msgstr "<qt>此插件可以从电视剧文件名中导出信息。</qt>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: startupinfowidget.ui:29
@@ -2278,132 +2256,119 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">A batch file renamer by "
 "KDE.<br />To rename your files, you have to:</p></body></html>"
 msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
-"large; font-weight:600;\">欢迎使用 KRename</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">KDE 的批量文件重命名工具。"
-"<br />要重命名文件，您需要：</p></body></html>"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelAdd)
 #: startupinfowidget.ui:57
 #, kde-format
 msgid "Add some files ..."
-msgstr "添加一些文件..."
+msgstr "Aldoni kelkajn dosierojn..."
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelTemplate)
 #: startupinfowidget.ui:71
 #, kde-format
 msgid "Specify the new filenames by giving a template ..."
-msgstr "用模板指定新文件名..."
+msgstr "Specifi la novajn dosiernomojn donante ŝablonon..."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: startupinfowidget.ui:93
 #, kde-format
 msgid "Hint: Undo is still possible after renaming your files."
-msgstr "提示：重命名之后也可以撤销。"
+msgstr "Sugesto: Malfari ankoraŭ eblas post renomado de viaj dosieroj."
 
 #: systemplugin.cpp:51
 #, kde-format
 msgid "Insert the current date"
-msgstr "插入当前日期"
+msgstr "Enigi la aktualan daton"
 
 #: systemplugin.cpp:52
 #, kde-format
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
-msgstr "用 yyyy-MM-dd 格式插入当前日期"
+msgstr "Enigi la aktualan daton uzante la formatan ĉenon jjjj-MM-dd"
 
 #: systemplugin.cpp:53
 #, kde-format
 msgid "Insert the current year"
-msgstr "插入当前年"
+msgstr "Enmeti la kurantan jaron"
 
 #: systemplugin.cpp:54
 #, kde-format
 msgid "Insert the current month as number"
-msgstr "以数字格式插入当前月"
+msgstr "Enigi la nunan monaton kiel nombron"
 
 #: systemplugin.cpp:55
 #, kde-format
 msgid "Insert the current day as number"
-msgstr "以数字格式插入当前日"
+msgstr "Enigi la nunan tagon kiel nombron"
 
 #: systemplugin.cpp:56
 #, kde-format
 msgid "Insert the current time"
-msgstr "插入当前时间"
+msgstr "Enigi la nunan horon"
 
 #: systemplugin.cpp:57
 #, kde-format
 msgid "Insert the current hour as number"
-msgstr "插入当前小时数"
+msgstr "Enigi la nunan horon kiel nombron"
 
 #: systemplugin.cpp:58
 #, kde-format
 msgid "Insert the current minute as number"
-msgstr "插入当前分钟数"
+msgstr "Enigi la nunan minuton kiel nombron"
 
 #: systemplugin.cpp:59
 #, kde-format
 msgid "Insert the current second as number"
-msgstr "插入当前秒数"
+msgstr "Enigi la nunan sekundon kiel nombron"
 
 #: systemplugin.cpp:60
 #, kde-format
 msgid "Owner of the file"
-msgstr "文件的所有者"
+msgstr "Posedanto de la dosiero"
 
 #: systemplugin.cpp:61
 #, kde-format
 msgid "Owning group of the file"
-msgstr "文件的用户组"
+msgstr "Posedanta grupo de la dosiero"
 
 #: systemplugin.cpp:62
 #, kde-format
 msgid "Insert the files creation date"
-msgstr "插入文件生成日期"
+msgstr "Enigi la daton de kreado de dosieroj"
 
 #: systemplugin.cpp:63
 #, kde-format
 msgid "Insert the formatted file creation date"
-msgstr "插入格式化的文件生成日期"
+msgstr "Enmeti la formatitan dosieron kreodaton"
 
 #: systemplugin.cpp:64
 #, kde-format
 msgid "Insert the files modification date"
-msgstr "插入文件修改日期"
+msgstr "Enigi la daton de modifado de dosieroj"
 
 #: systemplugin.cpp:65
 #, kde-format
 msgid "Insert the formatted modification date"
-msgstr "插入格式化的文件修改日期"
+msgstr "Enigi la formatitan modifdaton"
 
 #: systemplugin.cpp:66
 #, kde-format
 msgid "Insert the date of the last file access"
-msgstr "插入访问日期"
+msgstr "Enigi la daton de la lasta dosiera aliro"
 
 #: systemplugin.cpp:67
 #, kde-format
 msgid "Insert the formatted date of the last file access"
-msgstr "插入格式化的访问日期"
+msgstr "Enigi la formatitan daton de la lasta dosiera aliro"
 
 #: systemplugin.cpp:68
 #, kde-format
 msgid "Insert the file size in bytes"
-msgstr "插入文件大小(字节)"
+msgstr "Enigi la dosiergrandecon en bajtoj"
 
 #: systemplugin.cpp:70
 #, kde-format
 msgid "Date and system functions"
-msgstr "日期系统函数"
+msgstr "Dato kaj sistemaj funkcioj"
 
 #: systemplugin.cpp:72
 #, kde-format
@@ -2411,52 +2376,51 @@ msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
 msgstr ""
-"<qt>此插件提供文件创建时间，修改时间，最后访问时间和系统时间的标记。</qt>"
 
 #: taglibplugin.cpp:42
 #, kde-format
 msgid "Insert the title of a track"
-msgstr "插入曲目标题"
+msgstr "Enigi la titolon de trako"
 
 #: taglibplugin.cpp:43
 #, kde-format
 msgid "Insert the artist of a track"
-msgstr "插入曲目作者"
+msgstr "Enigi la artiston de trako"
 
 #: taglibplugin.cpp:44
 #, kde-format
 msgid "Insert the album of a track"
-msgstr "插入曲目专辑"
+msgstr "Enigi la albumon de trako"
 
 #: taglibplugin.cpp:45
 #, kde-format
 msgid "Insert the comment of a track"
-msgstr "插入曲目注释"
+msgstr "Enigi la komenton de trako"
 
 #: taglibplugin.cpp:46
 #, kde-format
 msgid "Insert the genre of a track"
-msgstr "插入曲目流派"
+msgstr "Enigi la ĝenron de trako"
 
 #: taglibplugin.cpp:47
 #, kde-format
 msgid "Insert the year of a track"
-msgstr "插入曲目年份"
+msgstr "Enigi la jaron de trako"
 
 #: taglibplugin.cpp:48
 #, kde-format
 msgid "Insert the number of a track"
-msgstr "插入曲目编号"
+msgstr "Enigi la numeron de trako"
 
 #: taglibplugin.cpp:49
 #, kde-format
 msgid "Insert the number of a track formatted with a leading 0"
-msgstr "插入曲目编号(带前缀0)"
+msgstr "Enigi la numeron de trako formatita kun unua 0"
 
 #: taglibplugin.cpp:51
 #, kde-format
 msgid "TagLib (MP3/Ogg) Plugin"
-msgstr "TagLib (MP3/OGG) 插件"
+msgstr "TagLib (MP3/Ogg) Kromaĵo"
 
 #: taglibplugin.cpp:52
 #, kde-format
@@ -2464,24 +2428,22 @@ msgid ""
 "<qt>This plugin supports reading tags for MP3, Ogg Vorbis, FLAC, MPC, Speex "
 "WavPack and TrueAudio files.</qt>"
 msgstr ""
-"<qt>此插件支持从 MP3，Ogg Vorbis，FLAC，MPC，WavPack 和 TrueAudio 音频文件中"
-"读取标签。</qt>"
 
 #: tokenhelpdialog.cpp:110
 #, kde-format
 msgid "&Insert"
-msgstr "插入(&I)"
+msgstr "Enmet&i"
 
 #: tokenhelpdialog.cpp:323
 #, kde-format
 msgid "Recent"
-msgstr "最近的"
+msgstr "Lastatempa"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TokenHelpWidget)
 #: tokenhelpwidget.ui:13
 #, kde-format
 msgid "KRename Help"
-msgstr "KRename 帮助"
+msgstr "KRename Helpo"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: tokenhelpwidget.ui:19
@@ -2490,151 +2452,152 @@ msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
 msgstr ""
-"所有支持的标记 (命令) 列在以下对话框中。您可以搜索标记并插入到文件名模式中。"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listCategories)
 #: tokenhelpwidget.ui:61
 #, kde-format
 msgid "Category"
-msgstr "交易类别"
+msgstr "Kategorio"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listTokens)
 #: tokenhelpwidget.ui:95
 #, kde-format
 msgid "Token"
-msgstr "标记"
+msgstr "Token"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listTokens)
 #: tokenhelpwidget.ui:100
 #, kde-format
 msgid "Description"
-msgstr "说明"
+msgstr "Priskribo"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listTokens)
 #: tokenhelpwidget.ui:105
 #, kde-format
 msgid "Preview"
-msgstr "预览"
+msgstr "Antaŭrigardo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkPreview)
 #: tokenhelpwidget.ui:119
 #, kde-format
 msgid "Token &Preview"
-msgstr "标记预览(&P)"
+msgstr "Token &Antaŭrigardo"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPreview)
 #: tokenhelpwidget.ui:142
 #, kde-format
 msgid "Preview File:"
-msgstr "预览文件："
+msgstr "Antaŭrigarda Dosiero:"
 
 #: tokensortmodedialog.cpp:37
 #, kde-format
 msgid "Access Date"
-msgstr "访问日期"
+msgstr "Alirdato"
 
 #: tokensortmodedialog.cpp:38
 #, kde-format
 msgid "Creation Date"
-msgstr "创建日期"
+msgstr "Dato de Kreo"
 
 #: tokensortmodedialog.cpp:39
 #, kde-format
 msgid "Filesize"
-msgstr "文件大小"
+msgstr "Dosiergrandeco"
 
 #: tokensortmodedialog.cpp:41
 #, kde-format
 msgid "Modification Date"
-msgstr "修改日期"
+msgstr "Dato de modifo"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, TokenSortModeDialog)
 #: tokensortmodedialog.ui:14
 #, kde-format
 msgid "Custom Sorting"
-msgstr "自定排序"
+msgstr "Propra Ordigo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: tokensortmodedialog.ui:22
 #, kde-format
 msgid "&Sort filenames ..."
-msgstr "文件名排序(&S)..."
+msgstr "&Ordigi dosiernomojn..."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioAscending)
 #: tokensortmodedialog.ui:28
 #, kde-format
 msgid "&Ascending"
-msgstr "升序(&A)"
+msgstr "Kresk&anta"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioDescending)
 #: tokensortmodedialog.ui:38
 #, kde-format
 msgid "&Descending"
-msgstr "降序(&D)"
+msgstr "&Malkreskanta"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioNumeric)
 #: tokensortmodedialog.ui:45
 #, kde-format
 msgid "&Numeric"
-msgstr "数值(&N)"
+msgstr "&Numera"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: tokensortmodedialog.ui:61
 #, kde-format
 msgid "by"
-msgstr "按"
+msgstr "de"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: tokensortmodedialog.ui:68
 #, kde-format
 msgid "&Token ..."
-msgstr "标记(&T)..."
+msgstr "&Signo..."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioPredefined)
 #: tokensortmodedialog.ui:74
 #, kde-format
 msgid "&Predefined"
-msgstr "预定义(&P)"
+msgstr "&Antaŭdifinita"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
 #: tokensortmodedialog.ui:87
 #, kde-format
 msgid "&Custom"
-msgstr "自定义(&C)"
+msgstr "&Propra"
 
 #: translitplugin.cpp:96
 #, kde-format
 msgid "Inserts the transliterated original filename"
-msgstr "插入音译的原始文件名"
+msgstr "Enmetas la transliterumitan originan dosiernomon"
 
 #: translitplugin.cpp:97
 #, kde-format
 msgid "Inserts the transliterated original filename converted to lower case"
-msgstr "插入转换为小写的音译原始文件名"
+msgstr ""
+"Enmetas la transliterumitan originan dosiernomon konvertitan al minusklo"
 
 #: translitplugin.cpp:98
 #, kde-format
 msgid "Inserts the transliterated original filename converted to upper case"
-msgstr "插入转换为大写的音译原始文件名"
+msgstr ""
+"Enmetas la transliterumitan originan dosiernomon konvertitan al majuskla"
 
 #: translitplugin.cpp:99
 #, kde-format
 msgid "Inserts the transliterated original filename capitalized"
-msgstr "插入音译的原始文件名大写"
+msgstr "Enmetas la transliterumitan originan dosiernomon majuskle"
 
 #: translitplugin.cpp:100
 #, kde-format
 msgid "Transliterates the string following the semicolon"
-msgstr "音译分号后面的字符串"
+msgstr "Transliterumas la ĉenon sekvante la punktokomon"
 
 #: translitplugin.cpp:102
 #, kde-format
 msgid "Transliteration"
-msgstr "音译"
+msgstr "Transliterumo"
 
 #: translitplugin.cpp:104
 #, kde-format
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
 "transliteration).</qt>"
-msgstr "<qt>此插件可以将文件名转录为英文 (比如音译)。</qt>"
+msgstr ""
