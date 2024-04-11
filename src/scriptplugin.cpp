@@ -286,11 +286,11 @@ void ScriptPlugin::slotRemove()
 void ScriptPlugin::slotLoad()
 {
     if (!m_widget->textCode->toPlainText().isEmpty() &&
-            KMessageBox::questionYesNo(m_parent,
+            KMessageBox::questionTwoActions(m_parent,
                                        i18n("All currently entered definitions will be lost. Do you want to continue?"), {},
                                        KStandardGuiItem::cont(),
                                        KStandardGuiItem::cancel())
-            == KMessageBox::No) {
+            == KMessageBox::SecondaryAction) {
         return;
     }
 
@@ -324,12 +324,12 @@ void ScriptPlugin::slotSave()
 #endif
         statJob->exec();
         if (statJob->error() != KIO::ERR_DOES_NOT_EXIST) {
-            int m = KMessageBox::warningYesNo(m_parent, i18n("The file %1 already exists. "
+            int m = KMessageBox::warningTwoActions(m_parent, i18n("The file %1 already exists. "
                                               "Do you want to overwrite it?", url.toDisplayString(QUrl::PreferLocalFile)), {},
                                               KStandardGuiItem::overwrite(),
                                               KStandardGuiItem::cancel());
 
-            if (m == KMessageBox::No) {
+            if (m == KMessageBox::SecondaryAction) {
                 return;
             }
         }
