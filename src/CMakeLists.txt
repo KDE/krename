@@ -39,7 +39,6 @@ set(libkrename_SRCS
     krenametest.cpp
     krenametokensorter.cpp
     krenamewindow.cpp
-    modeltest.cpp
     numberdialog.cpp
     insertpartfilenamedlg.cpp
     threadedlister.cpp
@@ -127,6 +126,18 @@ target_link_libraries(libkrename
     Qt5::Widgets
     Qt5::Qml
 )
+if (BUILD_MODELSELFTEST)
+    set(BUILD_MODELSELFTEST_VALUE 1)
+    target_link_libraries(libkrename
+        Qt5::Test
+    )
+else()
+    set(BUILD_MODELSELFTEST_VALUE 0)
+endif()
+set_source_files_properties(krenameimpl.cpp PROPERTIES
+    COMPILE_DEFINITIONS "BUILD_MODELSELFTEST=${BUILD_MODELSELFTEST_VALUE}"
+)
+
 if(TAGLIB_FOUND)
     target_link_libraries(libkrename
         Taglib::Taglib

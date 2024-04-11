@@ -17,8 +17,6 @@
 #include "threadedlister.h"
 #include "tokenhelpdialog.h"
 
-#include "modeltest.h"
-
 #include <kconfig.h>
 #include <KFileWidget>
 #include <kmessagebox.h>
@@ -30,6 +28,9 @@
 
 #include <KHelpMenu>
 
+#if BUILD_MODELSELFTEST
+#include <QAbstractItemModelTester>
+#endif
 #include <QTimer>
 #include <QCommandLineParser>
 #include <QDebug>
@@ -204,9 +205,11 @@ void KRenameImpl::parseCmdLineOptions(QCommandLineParser *parser)
 {
     bool gotFilenames = false;
 
+#if BUILD_MODELSELFTEST
     if (parser->isSet("test")) {
         QTimer::singleShot(0, this, SLOT(selfTest()));
     }
+#endif
 
     // Add all recursive directoris
     QList<QUrl> recursiveList;
@@ -362,16 +365,18 @@ void KRenameImpl::slotRemoveAllFiles()
 
 void KRenameImpl::selfTest()
 {
+#if BUILD_MODELSELFTEST
     KRenameTest *test = new KRenameTest();
     test->startTest();
 
-    new ModelTest(m_model);
-    //new ModelTest( m_previewModel );
+    new QAbstractItemModelTester(m_model);
+    //new QAbstractItemModelTester( m_previewModel );
 
     // Make _really_ sure it comes to front
     test->show();
     test->raise();
     test->activateWindow();
+#endif
 }
 
 void KRenameImpl::slotUpdateCount()

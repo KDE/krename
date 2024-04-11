@@ -16,11 +16,18 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 
+option(BUILD_MODELSELFTEST "Build model self test." OFF)
+add_feature_info(BUILD_MODELSELFTEST BUILD_MODELSELFTEST "Build model self test.")
+
 find_package(Qt5 ${QT5_MIN_VERSION} REQUIRED COMPONENTS
     Core
     Widgets
     Qml
 )
+if (BUILD_MODELSELFTEST)
+    find_package(Qt5Test REQUIRED)
+endif()
+
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Completion
     Config
