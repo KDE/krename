@@ -14,6 +14,8 @@ include(KDEInstallDirs)
 include(ECMInstallIcons)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
+
+include(ECMDeprecationSettings)
 include(FeatureSummary)
 
 option(BUILD_MODELSELFTEST "Build model self test." OFF)
@@ -44,8 +46,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 )
 
 add_definitions(
-    -DQT_DEPRECATED_WARNINGS
-    -DQT_DISABLE_DEPRECATED_BEFORE=0x050d00
     -DQT_NO_SIGNALS_SLOTS_KEYWORDS
     -DQT_NO_URL_CAST_FROM_STRING
     -DQT_STRICT_ITERATORS
@@ -79,6 +79,11 @@ set_package_properties(Freetype PROPERTIES
     TYPE OPTIONAL)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+ecm_set_disabled_deprecation_versions(
+    QT 5.15.2
+    KF 5.100
+)
 
 set(HAVE_TAGLIB ${TAGLIB_FOUND})
 set(HAVE_EXIV2 ${LibExiv2_FOUND})
