@@ -10,8 +10,6 @@
 #include <QUrl>
 #include <QPixmap>
 
-#include <kio/pixmaploader.h>
-
 class KFileItem;
 
 /** An enum to describe the mode to split
