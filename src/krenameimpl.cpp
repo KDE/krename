@@ -545,7 +545,11 @@ void KRenameImpl::slotStart()
     // Get some properties from the gui and initialize BatchRenamer
     const QUrl &destination = m_window->destinationUrl();
     if (m_renamer.renameMode() != eRenameMode_Rename) {
+#if QT_VERSION_MAJOR == 6
+        KIO::StatJob *statJob = KIO::stat(destination, KIO::StatJob::DestinationSide, KIO::StatNoDetails);
+#else
         KIO::StatJob *statJob = KIO::statDetails(destination, KIO::StatJob::DestinationSide, KIO::StatNoDetails);
+#endif
         statJob->exec();
         if (statJob->error() == KIO::ERR_DOES_NOT_EXIST) {
             int m = KMessageBox::warningContinueCancel(m_window, i18n("The folder %1 does not exist. "

@@ -7,7 +7,9 @@
 #include "batchrenamer.h"
 
 // KDE includes
-#include <kio/job.h>
+#include <KIO/StatJob>
+#include <KIO/FileCopyJob>
+#include <KIO/MkdirJob>
 #include <kmessagebox.h>
 #include <KJobWidgets>
 
@@ -76,7 +78,11 @@ QString DirSortPlugin::processFile(BatchRenamer *b, int index, const QString &, 
         m_digits = m_widget->spinDigits->value();
         m_baseDirectory = m_widget->outputUrl->url();
 
+#if QT_VERSION_MAJOR == 6
+        KIO::StatJob *statJob = KIO::stat(m_baseDirectory, KIO::StatJob::DestinationSide, KIO::StatNoDetails);
+#else
         KIO::StatJob *statJob = KIO::statDetails(m_baseDirectory, KIO::StatJob::DestinationSide, KIO::StatNoDetails);
+#endif
         KJobWidgets::setWindow(statJob, m_widget->spinStart);
         statJob->exec();
         if (statJob->error()) {

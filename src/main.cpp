@@ -35,7 +35,9 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+#if QT_VERSION_MAJOR == 5
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+#endif
     KLocalizedString::setApplicationDomain("krename");
 
     KCrash::initialize();

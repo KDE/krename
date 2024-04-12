@@ -124,17 +124,33 @@ void TokenTest::testTokens_data()
         << QLatin1String("[#length-2]") << filename
         << QString::number(filename.length() - 2);
     QTest::newRow("[####length] Test")
-        << QLatin1String("[####length]")
-        << filename << QString().asprintf("%04i", filename.length());
+        << QLatin1String("[####length]") << filename
+#if QT_VERSION_MAJOR == 5
+        << QString().asprintf("%04i", filename.length());
+#else
+        << QString().asprintf("%04" PRIiQSIZETYPE, filename.length());
+#endif
     QTest::newRow("[####length-0] Test")
         << QLatin1String("[####length-0]") << filename
+#if QT_VERSION_MAJOR == 5
         << QString().asprintf("%04i", filename.length());
+#else
+        << QString().asprintf("%04" PRIiQSIZETYPE, filename.length());
+#endif
     QTest::newRow("[####length-1] Test")
         << QLatin1String("[####length-1]") << filename
+#if QT_VERSION_MAJOR == 5
         << QString().asprintf("%04i", filename.length() - 1);
+#else
+        << QString().asprintf("%04" PRIiQSIZETYPE, filename.length() - 1);
+#endif
     QTest::newRow("[####length-2] Test")
         << QLatin1String("[####length-2]") << filename
+#if QT_VERSION_MAJOR == 5
         << QString().asprintf("%04i", filename.length() - 2);
+#else
+        << QString().asprintf("%04" PRIiQSIZETYPE, filename.length() - 2);
+#endif
     QTest::newRow("[6-9] Test")
         << QLatin1String("[6-9]") << filename << filename.mid(5, 4);
     QTest::newRow("[&6-9] Test")

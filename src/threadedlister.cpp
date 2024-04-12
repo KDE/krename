@@ -5,8 +5,7 @@
 
 #include "krenamemodel.h"
 
-#include <kio/job.h>
-#include <kio/jobclasses.h>
+#include <KIO/ListJob>
 
 #include <QMutex>
 #include <QRegExp>
@@ -46,10 +45,15 @@ void ThreadedLister::run()
 
     KIO::ListJob *job   = nullptr; // Will delete itself automatically
     KIO::JobFlags flags = KIO::HideProgressInfo;
+#if QT_VERSION_MAJOR == 6
+    KIO::ListJob::ListFlags listFlags = m_listHiddenFiles ? KIO::ListJob::ListFlag::IncludeHidden : KIO::ListJob::ListFlags();
+#else
+    bool listFlags = m_listHiddenFiles;
+#endif
     if (m_listRecursive) {
-        job = KIO::listRecursive(m_dirname, flags, m_listHiddenFiles);
+        job = KIO::listRecursive(m_dirname, flags, listFlags);
     } else {
-        job = KIO::listDir(m_dirname, flags, m_listHiddenFiles);
+        job = KIO::listDir(m_dirname, flags, listFlags);
     }
 
     connect(job, &KIO::ListJob::entries, this, &ThreadedLister::foundItem);

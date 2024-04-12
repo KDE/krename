@@ -47,7 +47,11 @@ public:
     }
     QString currentFilter()
     {
+#if QT_VERSION_MAJOR == 6
+        return m_fileWidget->currentFilter().toFilterString();
+#else
         return m_fileWidget->currentFilter();
+#endif
     }
 
 private Q_SLOTS:

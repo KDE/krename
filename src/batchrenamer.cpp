@@ -26,7 +26,10 @@
 #include <QTextStream>
 
 // KDE includes
-#include <kio/job.h>
+#include <KIO/FileCopyJob>
+#include <KIO/SimpleJob>
+#include <KIO/StatJob>
+#include <KIO/MkdirJob>
 #include <KIO/MkpathJob>
 #include <KJobWidgets>
 

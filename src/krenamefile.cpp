@@ -6,6 +6,7 @@
 #include <QIcon>
 
 #include <kio/previewjob.h>
+#include <KIO/StatJob>
 #include <KJobWidgets>
 
 /** A singleton class that loads icons for urls in a synchronous way
@@ -55,7 +56,11 @@ const char *KRenameFile::EXTRA_DATA_KEY = "KRenameFile::EXTRA_DATA_KEY";
 KRenameFile::KRenameFile(const QUrl &src, ESplitMode eSplitMode, unsigned int dot)
     : m_bValid(false), m_error(0), m_manualMode(eManualChangeMode_None)
 {
+#if QT_VERSION_MAJOR == 6
+    KIO::StatJob *statJob = KIO::stat(src, KIO::StatJob::DestinationSide, KIO::StatDefaultDetails);
+#else
     KIO::StatJob *statJob = KIO::statDetails(src, KIO::StatJob::DestinationSide, KIO::StatDefaultDetails);
+#endif
     statJob->exec();
     if (statJob->error()) {
         return;
@@ -259,7 +264,11 @@ const KFileItem &KRenameFile::fileItem() const
     if (m_fileItem.isNull()) {
         // No file item has been constructed
         // create one first.
+#if QT_VERSION_MAJOR == 6
+        KIO::StatJob *statJob = KIO::stat(m_src.url, KIO::StatJob::DestinationSide, KIO::StatDefaultDetails);
+#else
         KIO::StatJob *statJob = KIO::statDetails(m_src.url, KIO::StatJob::DestinationSide, KIO::StatDefaultDetails);
+#endif
         statJob->exec();
         if (!statJob->error()) {
             KFileItem file(statJob->statResult(), m_src.url);

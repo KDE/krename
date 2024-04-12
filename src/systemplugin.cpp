@@ -104,7 +104,11 @@ QString SystemPlugin::processFile(BatchRenamer *b, int index, const QString &fil
         return QString::asprintf("%0*i", 2, t.second());
     } else {
         const QUrl &url = b->files()->at(index).srcUrl();
+#if QT_VERSION_MAJOR == 6
+        KIO::StatJob *statJob = KIO::stat(url, KIO::StatJob::DestinationSide, KIO::StatDefaultDetails);
+#else
         KIO::StatJob *statJob = KIO::statDetails(url, KIO::StatJob::DestinationSide, KIO::StatDefaultDetails);
+#endif
         statJob->exec();
         if (statJob->error()) {
             return QString();

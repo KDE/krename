@@ -82,7 +82,7 @@ if(FREETYPE_FOUND)
     )
 endif()
 
-if(KF5Archive_FOUND)
+if(KF${KF_MAJOR_VERSION}Archive_FOUND)
     set(libkrename_SRCS ${libkrename_SRCS}
         odfplugin.cpp
     )
@@ -118,18 +118,19 @@ set_target_properties(libkrename PROPERTIES
 )
 
 target_link_libraries(libkrename
-    KF5::Crash
-    KF5::KIOCore
-    KF5::KIOFileWidgets
-    KF5::I18n
-    KF5::IconThemes
-    Qt5::Widgets
-    Qt5::Qml
+    KF${KF_MAJOR_VERSION}::Crash
+    KF${KF_MAJOR_VERSION}::KIOCore
+    KF${KF_MAJOR_VERSION}::KIOFileWidgets
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::IconThemes
+    KF${KF_MAJOR_VERSION}::XmlGui
+    Qt${QT_MAJOR_VERSION}::Widgets
+    Qt${QT_MAJOR_VERSION}::Qml
 )
 if (BUILD_MODELSELFTEST)
     set(BUILD_MODELSELFTEST_VALUE 1)
     target_link_libraries(libkrename
-        Qt5::Test
+        Qt${QT_MAJOR_VERSION}::Test
     )
 else()
     set(BUILD_MODELSELFTEST_VALUE 0)
@@ -137,6 +138,9 @@ endif()
 set_source_files_properties(krenameimpl.cpp PROPERTIES
     COMPILE_DEFINITIONS "BUILD_MODELSELFTEST=${BUILD_MODELSELFTEST_VALUE}"
 )
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(libkrename Qt6::Core5Compat)
+endif()
 
 if(TAGLIB_FOUND)
     target_link_libraries(libkrename
@@ -153,10 +157,10 @@ if(PoDoFo_FOUND)
         PoDoFo::PoDoFo
     )
 endif()
-if(KF5Archive_FOUND)
+if(KF${KF_MAJOR_VERSION}Archive_FOUND)
     target_link_libraries(libkrename
-        Qt5::Xml
-        KF5::Archive
+        Qt${QT_MAJOR_VERSION}::Xml
+        KF${KF_MAJOR_VERSION}::Archive
     )
 endif()
 if(FREETYPE_FOUND)
