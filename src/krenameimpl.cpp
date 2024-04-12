@@ -24,7 +24,6 @@
 #include <KJobWidgets>
 #include <KIO/MkdirJob>
 #include <KIO/StatJob>
-#include <kio_version.h>
 
 #include <KHelpMenu>
 
@@ -546,11 +545,7 @@ void KRenameImpl::slotStart()
     // Get some properties from the gui and initialize BatchRenamer
     const QUrl &destination = m_window->destinationUrl();
     if (m_renamer.renameMode() != eRenameMode_Rename) {
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 69, 0)
         KIO::StatJob *statJob = KIO::statDetails(destination, KIO::StatJob::DestinationSide, KIO::StatNoDetails);
-#else
-        KIO::StatJob *statJob = KIO::stat(destination, KIO::StatJob::DestinationSide, 0);
-#endif
         statJob->exec();
         if (statJob->error() == KIO::ERR_DOES_NOT_EXIST) {
             int m = KMessageBox::warningContinueCancel(m_window, i18n("The folder %1 does not exist. "

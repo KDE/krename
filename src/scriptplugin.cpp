@@ -9,7 +9,6 @@
 #include <KIO/StoredTransferJob>
 #include <KIO/StatJob>
 #include <KJobWidgets>
-#include <kio_version.h>
 
 #include <QTemporaryFile>
 #include <QFile>
@@ -317,11 +316,7 @@ void ScriptPlugin::slotSave()
                                            QUrl(ScriptPlugin::s_pszFileDialogLocation));
 
     if (!url.isEmpty()) {
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 69, 0)
         KIO::StatJob *statJob = KIO::statDetails(url, KIO::StatJob::DestinationSide, KIO::StatNoDetails);
-#else
-        KIO::StatJob *statJob = KIO::stat(url, KIO::StatJob::DestinationSide, 0);
-#endif
         statJob->exec();
         if (statJob->error() != KIO::ERR_DOES_NOT_EXIST) {
             int m = KMessageBox::warningTwoActions(m_parent, i18n("The file %1 already exists. "
