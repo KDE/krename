@@ -170,7 +170,7 @@
   <customwidget>
    <class>KTreeWidgetSearchLineWidget</class>
    <extends>QWidget</extends>
-   <header>KItemViews/ktreewidgetsearchlinewidget.h</header>
+   <header>ktreewidgetsearchlinewidget.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
