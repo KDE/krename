@@ -6,6 +6,8 @@
 #include "batchrenamer.h"
 #include "krenamefile.h"
 
+#include <KLocalizedString>
+
 #include <QtTest>
 
 QTEST_MAIN(TokenTest)
@@ -13,6 +15,7 @@ Q_DECLARE_METATYPE(QLatin1String)
 
 void TokenTest::initTestCase()
 {
+    KLocalizedString::setApplicationDomain("krename");
     qRegisterMetaType<QLatin1String>();
 }
 

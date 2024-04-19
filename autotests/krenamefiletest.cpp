@@ -5,6 +5,8 @@
 
 #include "krenamefile.h"
 
+#include <KLocalizedString>
+
 #include <QtTest>
 
 QTEST_GUILESS_MAIN(KRenameFileTest)
@@ -12,6 +14,7 @@ Q_DECLARE_METATYPE(ESplitMode)
 
 void KRenameFileTest::initTestCase()
 {
+    KLocalizedString::setApplicationDomain("krename");
     qRegisterMetaType<ESplitMode>();
 }
 
