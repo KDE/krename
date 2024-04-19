@@ -567,6 +567,7 @@ if( !m_result ) { \
         strings.find    = replace;
         strings.replace = with;
         strings.reg     = regExp;
+        strings.doProcessTokens = false;
 
         replaceList.append(strings);
 

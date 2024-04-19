@@ -484,6 +484,7 @@ void TokenTest::testReplacing()
     strings.find = replace;
     strings.replace = with;
     strings.reg = regularExpression;
+    strings.doProcessTokens = false;
 
     replaceList.append(strings);
 
