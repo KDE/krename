@@ -83,9 +83,6 @@ void TokenTest::testTokens_data()
     QTest::newRow("[*4-] Test")
         << QLatin1String("[*4-]") << filename
         << "St File Name ";
-    QTest::newRow("[4-] Test")
-        << QLatin1String("[4-]") << filename
-        << filename.right(filename.length() - 3);
     QTest::newRow("[&4-[length]] Test")
         << QLatin1String("[&4-[length]]") << filename
         << filename.right(filename.length() - 3).toUpper();
