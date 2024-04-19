@@ -520,7 +520,7 @@ QString BatchRenamer::processString(QString text, const QString &originalName, i
         } else if (token == "#") {
             int curPos = pos;
             int count  = 1;
-            while (text[curPos] == '#') {
+            while ((curPos < text.length()) && (text[curPos] == '#')) {
                 ++curPos;
                 count++;
             }
@@ -528,7 +528,7 @@ QString BatchRenamer::processString(QString text, const QString &originalName, i
             int length = curPos - pos + 1;
             int appendixLength = 0;
             QString appendix;
-            if (text[curPos] == '{') {
+            if ((curPos < text.length()) && (text[curPos] == '{')) {
                 int     appendixPos = curPos + 1;
                 QString appendixToken;
                 while ((appendixPos = getNextToken(text, appendixToken, appendixPos)) != -1) {
@@ -572,12 +572,16 @@ QString BatchRenamer::processString(QString text, const QString &originalName, i
 
 QString BatchRenamer::capitalize(const QString &text) const
 {
+    if (text.isEmpty()) {
+        return text;
+    }
+
     QString tmp = text.toLower();
     if (tmp[0].isLetter()) {
         tmp[0] = tmp[0].toUpper();
     }
 
-    for (int i = 0; i < tmp.length(); i++)
+    for (int i = 0; i < tmp.length()-1; i++)
         if (tmp[i + 1].isLetter() && !tmp[i].isLetter() &&
                 tmp[i] != '\'' && tmp[i] != '?' && tmp[i] != '`') {
             tmp[i + 1] = tmp[i + 1].toUpper();
