@@ -34,3 +34,6 @@ Dependencies:
     'frameworks/kservice': '@stable'
     'frameworks/kwidgetsaddons': '@stable'
     'frameworks/kxmlgui': '@stable'
+
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD' ]
