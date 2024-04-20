@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2024-04-20 01:46+0000\n"
 "PO-Revision-Date: 2023-07-25 00:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:655
+#: batchrenamer.cpp:188 batchrenamer.cpp:659
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "입력 파일의 이름을 변경합니다."
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:649
+#: batchrenamer.cpp:191 batchrenamer.cpp:653
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "파일이 다음 위치로 복사됨: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:651
+#: batchrenamer.cpp:194 batchrenamer.cpp:655
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "파일이 다음 위치로 이동됨: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:653
+#: batchrenamer.cpp:197 batchrenamer.cpp:657
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "심볼릭 링크가 다음 위치에 생성됨: %1"
@@ -53,18 +53,18 @@ msgstr "로컬이 아닌 URL에 대한 심볼릭 링크를 만들 수 없음: %1
 msgid "Error renaming %2 (to %1)"
 msgstr "%2(%1(으)로) 이름 변경 중 오류 발생"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:728
+#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
 msgstr[0] "오류 %1개가 발생함."
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:732
+#: batchrenamer.cpp:276 batchrenamer.cpp:736
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "KRename이 이름 바꾸기 작업을 완료했습니다."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:733
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
 #, kde-format
 msgid "Press close to quit."
 msgstr "닫기를 눌러 종료하십시오."
@@ -89,32 +89,32 @@ msgstr "%1 실행 취소 중 오류 발생"
 msgid "KRename finished the undo process."
 msgstr "KRename이 실행 취소 작업을 완료했습니다."
 
-#: batchrenamer.cpp:636
+#: batchrenamer.cpp:640
 #, kde-format
 msgid "Cannot create undo script: %1"
 msgstr "실행 취소 스크립트를 만들 수 없음: %1"
 
-#: batchrenamer.cpp:710
+#: batchrenamer.cpp:714
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "원격 파일의 실행 취소를 할 수 없음: %1"
 
-#: batchrenamer.cpp:724
+#: batchrenamer.cpp:728
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "파일 %1개의 이름을 성공적으로 변경했습니다."
 
-#: batchrenamer.cpp:731
+#: batchrenamer.cpp:735
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "경과 시간: %1초"
 
-#: batchrenamer.cpp:743
+#: batchrenamer.cpp:747
 #, kde-format
 msgid "Cannot set executable bit on undo script."
 msgstr "실행 취소 스크립트에 실행 비트를 설정할 수 없습니다."
 
-#: batchrenamer.cpp:1163
+#: batchrenamer.cpp:1167
 #, kde-format
 msgid "Cannot create directory %1: %2"
 msgstr "%1 디렉터리를 만들 수 없음: %2"

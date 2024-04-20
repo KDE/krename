@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2024-04-20 01:46+0000\n"
 "PO-Revision-Date: 2023-04-22 11:41+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,22 +21,22 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:655
+#: batchrenamer.cpp:188 batchrenamer.cpp:659
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "Es reanomenaran els fitxers d'entrada."
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:649
+#: batchrenamer.cpp:191 batchrenamer.cpp:653
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "Els fitxers seran copiats a: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:651
+#: batchrenamer.cpp:194 batchrenamer.cpp:655
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "Els fitxers seran moguts a: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:653
+#: batchrenamer.cpp:197 batchrenamer.cpp:657
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "Els enllaços simbòlics seran creats a: %1"
@@ -56,19 +56,19 @@ msgstr "No s'ha pogut crear l'enllaç simbòlic a un URL no local: %1"
 msgid "Error renaming %2 (to %1)"
 msgstr "Error en reanomenar %2 (a %1)"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:728
+#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
 msgstr[0] "S'ha detectat %1 error."
 msgstr[1] "S'han detectat %1 errors."
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:732
+#: batchrenamer.cpp:276 batchrenamer.cpp:736
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "El KRename ha finalitzat el procés de reanomenat."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:733
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
 #, kde-format
 msgid "Press close to quit."
 msgstr "Premeu el botó «Tanca» per a sortir."
@@ -93,32 +93,32 @@ msgstr "Error durant el procés de desfer %1"
 msgid "KRename finished the undo process."
 msgstr "El KRename ha finalitzat el procés de desfer."
 
-#: batchrenamer.cpp:636
+#: batchrenamer.cpp:640
 #, kde-format
 msgid "Cannot create undo script: %1"
 msgstr "No s'ha pogut crear un script del procés de desfer: %1"
 
-#: batchrenamer.cpp:710
+#: batchrenamer.cpp:714
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "No ha estat possible desfer per al fitxer remot: %1"
 
-#: batchrenamer.cpp:724
+#: batchrenamer.cpp:728
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "%1 fitxers reanomenats amb èxit."
 
-#: batchrenamer.cpp:731
+#: batchrenamer.cpp:735
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "Temps transcorregut: %1 segons"
 
-#: batchrenamer.cpp:743
+#: batchrenamer.cpp:747
 #, kde-format
 msgid "Cannot set executable bit on undo script."
 msgstr "No s'ha pogut establir el bit executable en l'script de desfer."
 
-#: batchrenamer.cpp:1163
+#: batchrenamer.cpp:1167
 #, kde-format
 msgid "Cannot create directory %1: %2"
 msgstr "No s'ha pogut crear el directori %1: %2"

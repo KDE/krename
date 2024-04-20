@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename 4.0.3-1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2024-04-20 01:46+0000\n"
 "PO-Revision-Date: 2023-04-23 12:59+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -35,22 +35,22 @@ msgstr ""
 "X-POFile-SpellExtra: Becker ODP ODS ODT ODF OpenDocument\n"
 "X-POFile-IgnoreConsistency: Write\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:655
+#: batchrenamer.cpp:188 batchrenamer.cpp:659
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "Os nomes dos ficheiros de entrada serão modificados."
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:649
+#: batchrenamer.cpp:191 batchrenamer.cpp:653
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "Os ficheiros serão copiados para: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:651
+#: batchrenamer.cpp:194 batchrenamer.cpp:655
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "Os ficheiros serão movidos para: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:653
+#: batchrenamer.cpp:197 batchrenamer.cpp:657
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "Serão criadas ligações simbólicas em: %1"
@@ -71,19 +71,19 @@ msgstr "Não é possível criar a ligação simbólica ao URL não-local: %1"
 msgid "Error renaming %2 (to %1)"
 msgstr "Erro ao mudar o nome de %2 (para %1)"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:728
+#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
 msgstr[0] "Ocorreu %1 erro."
 msgstr[1] "Ocorreram %1 erros."
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:732
+#: batchrenamer.cpp:276 batchrenamer.cpp:736
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "O KRename terminou o processo de mudança de nome."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:733
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
 #, kde-format
 msgid "Press close to quit."
 msgstr "Carregue em Fechar para sair."
@@ -108,32 +108,32 @@ msgstr "Erro ao desfazer o %1"
 msgid "KRename finished the undo process."
 msgstr "O KRename terminou o processo de anulação."
 
-#: batchrenamer.cpp:636
+#: batchrenamer.cpp:640
 #, kde-format
 msgid "Cannot create undo script: %1"
 msgstr "Não é possível criar o programa de anulação: %1"
 
-#: batchrenamer.cpp:710
+#: batchrenamer.cpp:714
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "Não é possível o Desfazer num ficheiro remoto: %1"
 
-#: batchrenamer.cpp:724
+#: batchrenamer.cpp:728
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "Foram modificados com sucesso os nomes de %1 ficheiros."
 
-#: batchrenamer.cpp:731
+#: batchrenamer.cpp:735
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "Tempo decorrido: %1 segundos"
 
-#: batchrenamer.cpp:743
+#: batchrenamer.cpp:747
 #, kde-format
 msgid "Cannot set executable bit on undo script."
 msgstr "Não é possível activar o bit de executável no programa de anulação."
 
-#: batchrenamer.cpp:1163
+#: batchrenamer.cpp:1167
 #, kde-format
 msgid "Cannot create directory %1: %2"
 msgstr "Não é possível criar a pasta %1: %2"

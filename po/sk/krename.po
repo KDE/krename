@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2024-04-20 01:46+0000\n"
 "PO-Revision-Date: 2023-12-06 18:30+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -16,22 +16,22 @@ msgstr ""
 "X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:655
+#: batchrenamer.cpp:188 batchrenamer.cpp:659
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "Vstupné súbory budú premenované"
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:649
+#: batchrenamer.cpp:191 batchrenamer.cpp:653
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "Súbory budú skopírované do: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:651
+#: batchrenamer.cpp:194 batchrenamer.cpp:655
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "Súbory budú presunuté do: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:653
+#: batchrenamer.cpp:197 batchrenamer.cpp:657
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "Symbolické odkazy budú vytvorené v: %1"
@@ -51,7 +51,7 @@ msgstr "Nemôžem vytvoriť symbolický odkaz na vzdiakenú adresu: %1"
 msgid "Error renaming %2 (to %1)"
 msgstr "Chyba v premenovaní %2 (na %1)"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:728
+#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
@@ -59,12 +59,12 @@ msgstr[0] "Nastala %1 chyba."
 msgstr[1] "Vyskytli sa %1 chyby."
 msgstr[2] "Vyskytlo sa %1 chýb."
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:732
+#: batchrenamer.cpp:276 batchrenamer.cpp:736
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "KRename dokončil proces premenovania."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:733
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
 #, kde-format
 msgid "Press close to quit."
 msgstr "Stlačte zatvoriť na ukončenie."
@@ -89,32 +89,32 @@ msgstr "Chyba počas vracania %1"
 msgid "KRename finished the undo process."
 msgstr "KRename dokončil proces vracania."
 
-#: batchrenamer.cpp:636
+#: batchrenamer.cpp:640
 #, kde-format
 msgid "Cannot create undo script: %1"
 msgstr "Nemôžem vytvoriť skript pre vrátenie: %1"
 
-#: batchrenamer.cpp:710
+#: batchrenamer.cpp:714
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "Vrátenie nie je možné pre vsdialený súbor: %1"
 
-#: batchrenamer.cpp:724
+#: batchrenamer.cpp:728
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "Úspešne premenovaných %1 súborov."
 
-#: batchrenamer.cpp:731
+#: batchrenamer.cpp:735
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "Uplynulý čas: %1 sekúnd."
 
-#: batchrenamer.cpp:743
+#: batchrenamer.cpp:747
 #, kde-format
 msgid "Cannot set executable bit on undo script."
 msgstr "Nepodarilo sa nastaviť vykonateľnosť na skript vrátenia."
 
-#: batchrenamer.cpp:1163
+#: batchrenamer.cpp:1167
 #, kde-format
 msgid "Cannot create directory %1: %2"
 msgstr "Nie je možné vytvoriť adresár %1: %2"

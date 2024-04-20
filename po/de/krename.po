@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2024-04-20 01:46+0000\n"
 "PO-Revision-Date: 2023-04-22 17:13+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,22 +19,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.07.70\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:655
+#: batchrenamer.cpp:188 batchrenamer.cpp:659
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "Eingangsdateien werden umbenannt."
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:649
+#: batchrenamer.cpp:191 batchrenamer.cpp:653
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "Dateien werden nach %1 kopiert"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:651
+#: batchrenamer.cpp:194 batchrenamer.cpp:655
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "Dateien werden nach %1 verschoben"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:653
+#: batchrenamer.cpp:197 batchrenamer.cpp:657
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "Symbolische Verknüpfungen werden in %1 erstellt"
@@ -56,19 +56,19 @@ msgstr ""
 msgid "Error renaming %2 (to %1)"
 msgstr "Fehler beim Umbenennen von %2 (nach %1)"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:728
+#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
 msgstr[0] "Es ist %1 Fehler aufgetreten."
 msgstr[1] "Es sind %1 Fehler aufgetreten."
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:732
+#: batchrenamer.cpp:276 batchrenamer.cpp:736
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "KRename hat das Umbenennen abgeschlossen."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:733
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
 #, kde-format
 msgid "Press close to quit."
 msgstr "Klicken Sie auf Schließen zum Verlassen."
@@ -93,32 +93,32 @@ msgstr "Fehler beim Rückgängig machen von %1"
 msgid "KRename finished the undo process."
 msgstr "KRename hat das Rückgängig machen abgeschlossen."
 
-#: batchrenamer.cpp:636
+#: batchrenamer.cpp:640
 #, kde-format
 msgid "Cannot create undo script: %1"
 msgstr "Undo-Skript kann nicht erstellt werden: %1"
 
-#: batchrenamer.cpp:710
+#: batchrenamer.cpp:714
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "Rückgängig machen geht nur bei lokalen Dateien: %1"
 
-#: batchrenamer.cpp:724
+#: batchrenamer.cpp:728
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "%1 Dateien erfolgreich umbenannt."
 
-#: batchrenamer.cpp:731
+#: batchrenamer.cpp:735
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "Benötigte Zeit: %1 Sekunden"
 
-#: batchrenamer.cpp:743
+#: batchrenamer.cpp:747
 #, kde-format
 msgid "Cannot set executable bit on undo script."
 msgstr "Das Undo-Skript kann nicht ausführbar gemacht werden."
 
-#: batchrenamer.cpp:1163
+#: batchrenamer.cpp:1167
 #, kde-format
 msgid "Cannot create directory %1: %2"
 msgstr "Der Ordner %1 kann nicht erstellt werden: %2"

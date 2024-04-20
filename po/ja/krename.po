@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2024-04-20 01:46+0000\n"
 "PO-Revision-Date: 2005-01-27 20:39+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team:  <ja@li.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:655
+#: batchrenamer.cpp:188 batchrenamer.cpp:659
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "入力ファイルをリネームします"
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:649
+#: batchrenamer.cpp:191 batchrenamer.cpp:653
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "Files will be copied to: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:651
+#: batchrenamer.cpp:194 batchrenamer.cpp:655
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "Files will be moved to: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:653
+#: batchrenamer.cpp:197 batchrenamer.cpp:657
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "Symlinkを作成します: %1"
@@ -52,18 +52,18 @@ msgstr "異なるホストにはファイル %1 のsymlinkを作れません"
 msgid "Error renaming %2 (to %1)"
 msgstr ""
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:728
+#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
 #, fuzzy, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
 msgstr[0] "%2 個のエラーが発生"
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:732
+#: batchrenamer.cpp:276 batchrenamer.cpp:736
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "リネームを完了しました"
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:733
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
 #, fuzzy, kde-format
 #| msgid "Press close to quit!"
 msgid "Press close to quit."
@@ -89,34 +89,34 @@ msgstr ""
 msgid "KRename finished the undo process."
 msgstr "リネームを完了しました"
 
-#: batchrenamer.cpp:636
+#: batchrenamer.cpp:640
 #, fuzzy, kde-format
 #| msgid "Can't create undo script :"
 msgid "Cannot create undo script: %1"
 msgstr "取消スクリプトを作成できません:"
 
-#: batchrenamer.cpp:710
+#: batchrenamer.cpp:714
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "リモートファイルの取り消しはできません: %1"
 
-#: batchrenamer.cpp:724
+#: batchrenamer.cpp:728
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "%1 個のファイルをリネームしました"
 
-#: batchrenamer.cpp:731
+#: batchrenamer.cpp:735
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "経過時間: %1 秒"
 
-#: batchrenamer.cpp:743
+#: batchrenamer.cpp:747
 #, fuzzy, kde-format
 #| msgid "Can't set executable bit on undo script."
 msgid "Cannot set executable bit on undo script."
 msgstr "取消スクリプトを実行ファイルにセットできません"
 
-#: batchrenamer.cpp:1163
+#: batchrenamer.cpp:1167
 #, fuzzy, kde-format
 msgid "Cannot create directory %1: %2"
 msgstr "サブディレクトリを作成"

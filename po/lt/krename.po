@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2024-04-20 01:46+0000\n"
 "PO-Revision-Date: 2017-06-25 15:12+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -21,22 +21,22 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:655
+#: batchrenamer.cpp:188 batchrenamer.cpp:659
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "Pradiniai failai bus pervadinti."
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:649
+#: batchrenamer.cpp:191 batchrenamer.cpp:653
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "Failai bus nukopijuoti į: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:651
+#: batchrenamer.cpp:194 batchrenamer.cpp:655
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "Failai bus perkelti į: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:653
+#: batchrenamer.cpp:197 batchrenamer.cpp:657
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "Nuoroda bus sukurta: %1"
@@ -58,7 +58,7 @@ msgstr "Neįmanoma sukurti nuorodą ne lokaliame URL: %1"
 msgid "Error renaming %2 (to %1)"
 msgstr "Klaida pervadinant %2 (to %1)"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:728
+#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
 #, fuzzy, kde-format
 #| msgid "%1 errors occurred!"
 msgid "%1 error occurred."
@@ -68,12 +68,12 @@ msgstr[1] "%1 Klaidos!"
 msgstr[2] "%1 Klaidos!"
 msgstr[3] ""
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:732
+#: batchrenamer.cpp:276 batchrenamer.cpp:736
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "KRename baigė pervadinimą."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:733
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
 #, fuzzy, kde-format
 #| msgid "Press close to quit!"
 msgid "Press close to quit."
@@ -99,34 +99,34 @@ msgstr "Nepavyko atšaukti pervadinimą %1"
 msgid "KRename finished the undo process."
 msgstr "KRename baigė grįžtamąjį vyksmą."
 
-#: batchrenamer.cpp:636
+#: batchrenamer.cpp:640
 #, fuzzy, kde-format
 #| msgid "Can't create undo script :"
 msgid "Cannot create undo script: %1"
 msgstr "Neįmanoma sukurti grįžtamąjį scenarijų:"
 
-#: batchrenamer.cpp:710
+#: batchrenamer.cpp:714
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "Atšaukimas neįmanomas nutolusiam failui: %1"
 
-#: batchrenamer.cpp:724
+#: batchrenamer.cpp:728
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "Sėkmingai pervadinta %1 failų."
 
-#: batchrenamer.cpp:731
+#: batchrenamer.cpp:735
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "Praėjęs laikas: %1 sekundžių"
 
-#: batchrenamer.cpp:743
+#: batchrenamer.cpp:747
 #, fuzzy, kde-format
 #| msgid "Can't set executable bit on undo script."
 msgid "Cannot set executable bit on undo script."
 msgstr "Nepavyko nustatyti vykdomuoju atšaukimo scenarijų"
 
-#: batchrenamer.cpp:1163
+#: batchrenamer.cpp:1167
 #, fuzzy, kde-format
 #| msgid "Cannot create directory %1"
 msgid "Cannot create directory %1: %2"

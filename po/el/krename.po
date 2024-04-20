@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2010-10-29\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:41+0000\n"
+"POT-Creation-Date: 2024-04-20 01:46+0000\n"
 "PO-Revision-Date: 2019-08-13 11:14+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -23,22 +23,22 @@ msgstr ""
 "X-Generator: Lokalize 18.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:655
+#: batchrenamer.cpp:188 batchrenamer.cpp:659
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "Τα εισηγμένα αρχεία θα μετονομαστούν."
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:649
+#: batchrenamer.cpp:191 batchrenamer.cpp:653
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "Τα αρχεία θα αντιγραφούν στο: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:651
+#: batchrenamer.cpp:194 batchrenamer.cpp:655
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "Τα αρχεία θα μεταφερθούν στο: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:653
+#: batchrenamer.cpp:197 batchrenamer.cpp:657
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "Συμβολικοί δεσμοί θα δημιουργηθούν στο: %1"
@@ -60,19 +60,19 @@ msgstr ""
 msgid "Error renaming %2 (to %1)"
 msgstr "Σφάλμα μετονομασίας του %2 (σε %1)"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:728
+#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
 msgstr[0] "%1 λάθος προέκυψε."
 msgstr[1] "%1 λάθη προέκυψαν."
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:732
+#: batchrenamer.cpp:276 batchrenamer.cpp:736
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "Το KRename τελείωσε τη διαδικασία μετονομασίας."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:733
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
 #, kde-format
 msgid "Press close to quit."
 msgstr "Πίεσε το «|Χ| Κλείσιμο» για να τερματίσει η εφαρμογή."
@@ -97,33 +97,33 @@ msgstr "Σφάλμα κατά την αναίρεση του %1"
 msgid "KRename finished the undo process."
 msgstr "Το KRename τελείωσε τη διαδικασία μετονομασίας."
 
-#: batchrenamer.cpp:636
+#: batchrenamer.cpp:640
 #, kde-format
 msgid "Cannot create undo script: %1"
 msgstr "Αδυναμία δημιουργίας του σεναρίου αναίρεσης: %1"
 
-#: batchrenamer.cpp:710
+#: batchrenamer.cpp:714
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "Η αναίρεση είναι αδύνατη για το απομακρυσμένο αρχείο: %1"
 
-#: batchrenamer.cpp:724
+#: batchrenamer.cpp:728
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "Επιτυχής μετονομασία %1 αρχείων."
 
-#: batchrenamer.cpp:731
+#: batchrenamer.cpp:735
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "Χρόνος που πέρασε: %1 δευτερόλεπτα"
 
-#: batchrenamer.cpp:743
+#: batchrenamer.cpp:747
 #, kde-format
 msgid "Cannot set executable bit on undo script."
 msgstr ""
 "Αδυναμία ορισμού του δυαδικού ψηφίου εκτέλεσης αρχείων στο σενάριο αναίρεσης."
 
-#: batchrenamer.cpp:1163
+#: batchrenamer.cpp:1167
 #, kde-format
 msgid "Cannot create directory %1: %2"
 msgstr "Αδυναμία δημιουργίας του καταλόγου %1: %2"
