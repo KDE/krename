@@ -316,12 +316,16 @@ void TokenTest::testTokens_data()
     QTest::newRow("mm Date Test")
         << QLatin1String("[date;mm]") << filename
         << QDateTime::currentDateTime().toString("mm");
+    /* TODO: Use something like libfaketime (https://github.com/wolfcw/libfaketime)
+     * to avoid somewhat frequent test failures when the second jumps during
+     * test execution
     QTest::newRow("s Date Test")
         << QLatin1String("[date;s]") << filename
         << QDateTime::currentDateTime().toString("s");
     QTest::newRow("ss Date Test")
         << QLatin1String("[date;ss]") << filename
         << QDateTime::currentDateTime().toString("ss");
+    */
     // Current computers are to slow to compare two milliseconds as the instruction is longer than
     // a millisecond.
     //QTest::newRow("z Date Test")
@@ -351,12 +355,16 @@ void TokenTest::testTokens_data()
     QTest::newRow("Minute Test")
         << QLatin1String("[minute]") << filename
         << QDateTime::currentDateTime().toString("mm");
+    /* TODO: Use something like libfaketime (https://github.com/wolfcw/libfaketime)
+     * to avoid somewhat frequent test failures when the second jumps during
+     * test execution
     QTest::newRow("Second Test")
         << QLatin1String("[second]") << filename
         << QDateTime::currentDateTime().toString("ss");
     QTest::newRow("Time Test")
         << QLatin1String("[time]") << filename
         << QDateTime::currentDateTime().toString("hh-mm-ss");
+    */
 
     // Regression tests
     // Caused an infinite loop
