@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 01:46+0000\n"
+"POT-Creation-Date: 2024-04-21 01:44+0000\n"
 "PO-Revision-Date: 2017-06-25 15:12+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -21,44 +21,44 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:659
+#: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "Pradiniai failai bus pervadinti."
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:653
+#: batchrenamer.cpp:195 batchrenamer.cpp:656
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "Failai bus nukopijuoti į: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:655
+#: batchrenamer.cpp:198 batchrenamer.cpp:658
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "Failai bus perkelti į: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:657
+#: batchrenamer.cpp:201 batchrenamer.cpp:660
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "Nuoroda bus sukurta: %1"
 
-#: batchrenamer.cpp:218
+#: batchrenamer.cpp:222
 #, kde-format
 msgid "Cannot rename: source and target filename are equal: %1"
 msgstr ""
 "Pervadinti neįmanoma, pradinio ir paskirties failo pavadinimas yra tas pats: "
 "%1"
 
-#: batchrenamer.cpp:236
+#: batchrenamer.cpp:240
 #, kde-format
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "Neįmanoma sukurti nuorodą ne lokaliame URL: %1"
 
-#: batchrenamer.cpp:250 dirsortplugin.cpp:121
+#: batchrenamer.cpp:254 dirsortplugin.cpp:122
 #, kde-format
 msgid "Error renaming %2 (to %1)"
 msgstr "Klaida pervadinant %2 (to %1)"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:735
 #, fuzzy, kde-format
 #| msgid "%1 errors occurred!"
 msgid "%1 error occurred."
@@ -68,65 +68,65 @@ msgstr[1] "%1 Klaidos!"
 msgstr[2] "%1 Klaidos!"
 msgstr[3] ""
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:736
+#: batchrenamer.cpp:280 batchrenamer.cpp:739
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "KRename baigė pervadinimą."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
+#: batchrenamer.cpp:281 batchrenamer.cpp:405 batchrenamer.cpp:740
 #, fuzzy, kde-format
 #| msgid "Press close to quit!"
 msgid "Press close to quit."
 msgstr "Kad baigti spauskite užverti!"
 
-#: batchrenamer.cpp:341
+#: batchrenamer.cpp:345
 #, kde-format
 msgid "Filenames Processed after %1 seconds."
 msgstr "Failų pavadinimai pakeisti per %1 sekundes."
 
-#: batchrenamer.cpp:356
+#: batchrenamer.cpp:360
 #, kde-format
 msgid "Undoing all renamed files."
 msgstr "Atšaukti visų failų pervadinimą."
 
-#: batchrenamer.cpp:388
+#: batchrenamer.cpp:392
 #, kde-format
 msgid "Error during undoing %1"
 msgstr "Nepavyko atšaukti pervadinimą %1"
 
-#: batchrenamer.cpp:400
+#: batchrenamer.cpp:404
 #, kde-format
 msgid "KRename finished the undo process."
 msgstr "KRename baigė grįžtamąjį vyksmą."
 
-#: batchrenamer.cpp:640
+#: batchrenamer.cpp:643
 #, fuzzy, kde-format
 #| msgid "Can't create undo script :"
 msgid "Cannot create undo script: %1"
 msgstr "Neįmanoma sukurti grįžtamąjį scenarijų:"
 
-#: batchrenamer.cpp:714
+#: batchrenamer.cpp:717
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "Atšaukimas neįmanomas nutolusiam failui: %1"
 
-#: batchrenamer.cpp:728
+#: batchrenamer.cpp:731
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "Sėkmingai pervadinta %1 failų."
 
-#: batchrenamer.cpp:735
+#: batchrenamer.cpp:738
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "Praėjęs laikas: %1 sekundžių"
 
-#: batchrenamer.cpp:747
+#: batchrenamer.cpp:750
 #, fuzzy, kde-format
 #| msgid "Can't set executable bit on undo script."
 msgid "Cannot set executable bit on undo script."
 msgstr "Nepavyko nustatyti vykdomuoju atšaukimo scenarijų"
 
-#: batchrenamer.cpp:1167
+#: batchrenamer.cpp:1170
 #, fuzzy, kde-format
 #| msgid "Cannot create directory %1"
 msgid "Cannot create directory %1: %2"
@@ -239,13 +239,13 @@ msgstr "Laikas:"
 msgid "Get &Current Time"
 msgstr "Imti esamą laiką"
 
-#: dirsortplugin.cpp:28
+#: dirsortplugin.cpp:29
 #, fuzzy, kde-format
 #| msgid "Subdirectory-Sort Plugin"
 msgid "Subfolder-Sort Plugin"
 msgstr "Poaplankių rikiavimo Įskiepis"
 
-#: dirsortplugin.cpp:90
+#: dirsortplugin.cpp:91
 #, fuzzy, kde-format
 #| msgid ": The output directory %1 does not exist."
 msgid "%1: The output folder %2 does not exist."
@@ -409,7 +409,7 @@ msgstr ""
 "Su šia parinktimi KRename į sąrašą pavadinimus pridės, tik iš pagrindinio "
 "aplanko, pažymėtus failus."
 
-#: fileplugin.cpp:70
+#: fileplugin.cpp:71
 #, kde-format
 msgid "Supported tokens:"
 msgstr "Palaikomi raktai:"
@@ -975,80 +975,80 @@ msgstr "Aukštyn"
 msgid "Down"
 msgstr "Žemyn"
 
-#: krenameimpl.cpp:353
+#: krenameimpl.cpp:355
 #, kde-format
 msgid "Do you really want to remove all files from the list?"
 msgstr "Ar tikrai norite pašalinti visus failus iš sąrašo?"
 
-#: krenameimpl.cpp:354 main.cpp:43
+#: krenameimpl.cpp:356 main.cpp:45
 #, kde-format
 msgid "KRename"
 msgstr "KRename"
 
-#: krenameimpl.cpp:470
+#: krenameimpl.cpp:474
 #, kde-format
 msgid "old filename"
 msgstr "senasis failo pavadinimas"
 
-#: krenameimpl.cpp:471
+#: krenameimpl.cpp:475
 #, kde-format
 msgid "old filename converted to lower case"
 msgstr "senasis failo pavadinimas mažosiomis"
 
-#: krenameimpl.cpp:472
+#: krenameimpl.cpp:476
 #, kde-format
 msgid "old filename converted to upper case"
 msgstr "senasis failo pavadinimas didžiosiomis"
 
-#: krenameimpl.cpp:473
+#: krenameimpl.cpp:477
 #, kde-format
 msgid "first letter of every word upper case"
 msgstr "visų žodžių pirmoji raidė didžioji"
 
-#: krenameimpl.cpp:474
+#: krenameimpl.cpp:478
 #, kde-format
 msgid "first letter of filename upper case"
 msgstr "pirmoji raidė failo pavadinime didžioji"
 
-#: krenameimpl.cpp:475
+#: krenameimpl.cpp:479
 #, kde-format
 msgid "number (try also ##, ###, ... for leading zeros)"
 msgstr "skaičius (bandykite ##, ###, ... su nuliu priekyje)"
 
-#: krenameimpl.cpp:476
+#: krenameimpl.cpp:480
 #, kde-format
 msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "skaitiklis su tinkinta pradžios reikšme 0 ir tinkintu žingsniu 1"
 
-#: krenameimpl.cpp:477
+#: krenameimpl.cpp:481
 #, fuzzy, kde-format
 #| msgid "create a subdirectory"
 msgid "create a subfolder"
 msgstr "sukurti poaplankį"
 
-#: krenameimpl.cpp:478
+#: krenameimpl.cpp:482
 #, kde-format
 msgid "character x to y of old filename"
 msgstr "rašmuo x į y senojo failo pavadinimo"
 
-#: krenameimpl.cpp:479
+#: krenameimpl.cpp:483
 #, kde-format
 msgid "y characters of old filename starting at x"
 msgstr "y rašmenys  senojo failo pavadinimo prasidedantys x"
 
-#: krenameimpl.cpp:480
+#: krenameimpl.cpp:484
 #, fuzzy, kde-format
 #| msgid "insert name of directory"
 msgid "insert name of folder"
 msgstr "įterpti pavadinimą iš aplanko"
 
-#: krenameimpl.cpp:481
+#: krenameimpl.cpp:485
 #, fuzzy, kde-format
 #| msgid "insert name of parent directory"
 msgid "insert name of parent folder"
 msgstr "įterpti pavadinimą pradinio aplanko"
 
-#: krenameimpl.cpp:482
+#: krenameimpl.cpp:486
 #, fuzzy, kde-format
 #| msgid ""
 #| "insert a '/' to create a new subdirectory (useful from within regular "
@@ -1059,77 +1059,77 @@ msgid ""
 msgstr ""
 "poaplankio sukūrimui įterpti '/' (pravartu reguliarios išraiškos viduje)"
 
-#: krenameimpl.cpp:483
+#: krenameimpl.cpp:487
 #, kde-format
 msgid "insert the length of the input filename"
 msgstr "įterpti įvesties failo pavadinimo ilgį"
 
-#: krenameimpl.cpp:484
+#: krenameimpl.cpp:488
 #, kde-format
 msgid "strip whitespaces leading and trailing"
 msgstr "šalinti tuščius tarpus pradžioje ir gale"
 
-#: krenameimpl.cpp:485
+#: krenameimpl.cpp:489
 #, kde-format
 msgid "strip whitespaces leading and trailing of an arbitrary string"
 msgstr "šalinti tuščius tarpus pradžioje ir gale iš savavališkos eilutė"
 
-#: krenameimpl.cpp:486
+#: krenameimpl.cpp:490
 #, kde-format
 msgid "Built-in Functions"
 msgstr "Integruotos funkcijos"
 
-#: krenameimpl.cpp:489
+#: krenameimpl.cpp:493
 #, kde-format
 msgid "Insert '$'"
 msgstr "Įterpti '$'"
 
-#: krenameimpl.cpp:490
+#: krenameimpl.cpp:494
 #, kde-format
 msgid "Insert '%'"
 msgstr "Įterpti '%'"
 
-#: krenameimpl.cpp:491
+#: krenameimpl.cpp:495
 #, kde-format
 msgid "Insert '&'"
 msgstr "Įterpti '&'"
 
-#: krenameimpl.cpp:492
+#: krenameimpl.cpp:496
 #, kde-format
 msgid "Insert '*'"
 msgstr "Įterpti '*'"
 
-#: krenameimpl.cpp:493
+#: krenameimpl.cpp:497
 #, kde-format
 msgid "Insert '/'"
 msgstr "Įterpti '/'"
 
-#: krenameimpl.cpp:494
+#: krenameimpl.cpp:498
 #, kde-format
 msgid "Insert '\\\\'"
 msgstr "Įterpti '\\\\'"
 
-#: krenameimpl.cpp:495
+#: krenameimpl.cpp:499
 #, kde-format
 msgid "Insert '['"
 msgstr "Įterpti '['"
 
-#: krenameimpl.cpp:496
+#: krenameimpl.cpp:500
 #, kde-format
 msgid "Insert ']'"
 msgstr "Įterpti ']'"
 
-#: krenameimpl.cpp:497
+#: krenameimpl.cpp:501
 #, kde-format
 msgid "Insert '#'"
 msgstr "Įterpti '#'"
 
-#: krenameimpl.cpp:498
+#: krenameimpl.cpp:502
 #, kde-format
 msgid "Special Characters"
 msgstr "Specialieji rašmenys"
 
-#: krenameimpl.cpp:539
+#: krenameimpl.cpp:543
 #, fuzzy, kde-format
 #| msgid "Starting conversion of %1 files."
 msgid "Starting conversion of %1 file."
@@ -1139,25 +1139,25 @@ msgstr[1] "Pradėti %1 failų pakeitimus."
 msgstr[2] "Pradėti %1 failų pakeitimus."
 msgstr[3] ""
 
-#: krenameimpl.cpp:551
+#: krenameimpl.cpp:555
 #, fuzzy, kde-format
 #| msgid ""
 #| "The directory %1 does not exist. Do you want KRename to create it for you?"
 msgid "The folder %1 does not exist. Do you want KRename to create it for you?"
 msgstr "Aplankas %1 neegzistuoja. Ar norite kad KRename jį sukurtu jums?"
 
-#: krenameimpl.cpp:561
+#: krenameimpl.cpp:565
 #, fuzzy, kde-format
 #| msgid "The directory %1 could not be created."
 msgid "The folder %1 could not be created."
 msgstr "Aplankas %1 negali būti sukurtas."
 
-#: krenamemodel.cpp:422
+#: krenamemodel.cpp:425
 #, kde-format
 msgid "Origin"
 msgstr "Pradiniai"
 
-#: krenamemodel.cpp:422
+#: krenamemodel.cpp:425
 #, kde-format
 msgid "Renamed"
 msgstr "Pervadinti"
@@ -1184,45 +1184,41 @@ msgstr "Įgalinti įskiepį"
 msgid "?"
 msgstr "?"
 
-#: krenamewindow.cpp:35
-#, kde-format
+#: krenamewindow.cpp:36
 msgid "&1. Files"
 msgstr "&1. Failai"
 
-#: krenamewindow.cpp:36
-#, kde-format
+#: krenamewindow.cpp:37
 msgid "&2. Destination"
 msgstr "&2. Paskirtis"
 
-#: krenamewindow.cpp:37
-#, kde-format
+#: krenamewindow.cpp:38
 msgid "&3. Plugins"
 msgstr "&3. Įskiepiai"
 
-#: krenamewindow.cpp:38
-#, kde-format
+#: krenamewindow.cpp:39
 msgid "&4. Filename"
 msgstr "&4. Failo pavadinimas"
 
-#: krenamewindow.cpp:193
+#: krenamewindow.cpp:194
 #, kde-format
 msgid "&Finish"
 msgstr "&Baigti"
 
-#: krenamewindow.cpp:437
+#: krenamewindow.cpp:438
 #, fuzzy, kde-format
 #| msgid "<b>Files:<b> %1"
 msgid "<b>Files:</b> %1"
 msgstr "<b>Failai:<b> %1"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
 "set of expressions."
 msgstr ""
 
-#: main.cpp:48
+#: main.cpp:50
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p>KRename is a batch file renamer which can rename a list of files "
@@ -1241,49 +1237,49 @@ msgstr ""
 "finansinė parama (pinigų reikia viskam ;). Smulkiau žiūrėkite pagalboje.</"
 "p></qt>"
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "(c) 2001-2012, Dominik Seichter\n"
 msgstr ""
 
-#: main.cpp:55
+#: main.cpp:57
 #, kde-format
 msgid "Heiko Becker"
 msgstr ""
 
-#: main.cpp:55
+#: main.cpp:57
 #, fuzzy, kde-format
 #| msgid "developer and maintainer"
 msgid "Current maintainer"
 msgstr "Kūrėjas ir palaikytojas"
 
-#: main.cpp:57
+#: main.cpp:59
 #, kde-format
 msgid "Dominik Seichter"
 msgstr ""
 
-#: main.cpp:57
+#: main.cpp:59
 #, fuzzy, kde-format
 #| msgid "developer and maintainer"
 msgid "Developer and former maintainer"
 msgstr "Kūrėjas ir palaikytojas"
 
-#: main.cpp:59
+#: main.cpp:61
 #, kde-format
 msgid "Stefan \"Stonki\" Onken"
 msgstr ""
 
-#: main.cpp:60
+#: main.cpp:62
 #, kde-format
 msgid "Website, testing, very good ideas and keeping me coding!"
 msgstr "Tinklapis, testai, labai geros idėjos suteikiačios norą programuoti!"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Arpad Biro"
 msgstr ""
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
@@ -1291,22 +1287,22 @@ msgstr ""
 "Padėjo nustatyti stiliaus vadovo problemas ir paėjo tobulinti vartotojo "
 "žinutes."
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "Trevor Semeniuk"
 msgstr ""
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "Dėkojame jiems už RedHat 7.x paketų pagaminimą bei kitą pagalbą."
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid "Groult Richard"
 msgstr ""
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
@@ -1315,137 +1311,137 @@ msgstr ""
 "Sutvarkyta pradžios indekso klaida ir įdėta BatchRenamer klasė\n"
 "į jo nuostabią paveikslėlių žiuryklę."
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Michael Elvers"
 msgstr ""
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Fixed a bug that caused krename not closing open files."
 msgstr "Ištaisyta klaida, dėl krename negebėjimo uždaryti atidarytus failus."
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid "Andreas Pour"
 msgstr ""
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
 "to apps.kde.com."
 msgstr "Dėkojame apps.kde.com už puikų darbą ir pagalbą platinant krename."
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid "Charles Samuels"
 msgstr ""
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
 msgstr "Ačiū už Noatun ir ID3/Ogg Tag kodą kuris pagrystas noatun moduliais."
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Franz Schmid"
 msgstr ""
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr "Gerą pradžią rašyti įskiepius man davė jo programa Scribus."
 
-#: main.cpp:77
+#: main.cpp:79
 #, kde-format
 msgid "Rolf Magnus"
 msgstr ""
 
-#: main.cpp:77
+#: main.cpp:79
 #, kde-format
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr "Dalis PNG palaikymo yra nukopijuota iš KFile įskiepio png palaikymui."
 
-#: main.cpp:79
+#: main.cpp:81
 #, kde-format
 msgid "Michael v.Ostheim"
 msgstr ""
 
-#: main.cpp:79
+#: main.cpp:81
 #, fuzzy, kde-format
 #| msgid "Created the Gentoo Ebuild scripts for Krename."
 msgid "Created the Gentoo Ebuild scripts for KRename."
 msgstr "Sukurtas Krename Gentoo Ebuild scenarijus."
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Brandon Low"
 msgstr ""
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "Kaikurie GCC 3.1 pataisymai skirti Gentoo."
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Per Oyvind Karlsen"
 msgstr ""
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Thanks for creating the Mandrake RPM"
 msgstr "Padėka už Mandrake RPM pagaminimą"
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "Vincenzo Reale"
 msgstr ""
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "Italian translation"
 msgstr "Vertimas į Italų kalbą"
 
-#: main.cpp:86
+#: main.cpp:88
 #, kde-format
 msgid "Daniele Medri"
 msgstr ""
 
-#: main.cpp:86
+#: main.cpp:88
 #, kde-format
 msgid "Italian translation work"
 msgstr "Vertimas į Italų kalbą"
 
-#: main.cpp:87
+#: main.cpp:89
 #, kde-format
 msgid "Stephan Johach"
 msgstr ""
 
-#: main.cpp:87
+#: main.cpp:89
 #, kde-format
 msgid "Provided a gcc3.x namespace patch"
 msgstr "Pateikė gcc3.x namespace pataisą"
 
-#: main.cpp:88
+#: main.cpp:90
 #, kde-format
 msgid "Michael Zugaro"
 msgstr ""
 
-#: main.cpp:88
+#: main.cpp:90
 #, kde-format
 msgid "Provided the new preview and move features"
 msgstr "Pateikė naują peržiūrą ir perkėlimo galimybes"
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid "Rene Gass"
 msgstr ""
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
@@ -1454,189 +1450,189 @@ msgstr ""
 "Sutvarkytos problemos su spec rinkmena ir pateikti rpms visoms SuSE "
 "versijoms, galite sumanyti KRename pritaikyti Gentoo"
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "Mark Ziegler"
 msgstr ""
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "Provided SuSE RPMs and very good suggestions"
 msgstr "Pateikia  SuSE RPMus ir labai gerus pasūlymus"
 
-#: main.cpp:91
+#: main.cpp:93
 #, kde-format
 msgid "Jose Rodriguez"
 msgstr ""
 
-#: main.cpp:91
+#: main.cpp:93
 #, kde-format
 msgid "Contributed a Spanish translation"
 msgstr "Pateikė Ispanišką vertimą"
 
-#: main.cpp:92
+#: main.cpp:94
 #, kde-format
 msgid "Steven P. Ulrick"
 msgstr ""
 
-#: main.cpp:92
+#: main.cpp:94
 #, kde-format
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr "Pateikia RedHat RPM ir labai padėjo tobulinant KRename"
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "UTUMI Hirosi"
 msgstr ""
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "Translated KRename to Japanese"
 msgstr "Vertimas į Japonų kalbą"
 
-#: main.cpp:94
+#: main.cpp:96
 #, kde-format
 msgid "Nicolas Benoit"
 msgstr ""
 
-#: main.cpp:94
+#: main.cpp:96
 #, kde-format
 msgid "Translated KRename into French"
 msgstr "Vertimas į Prancūzų kalbą"
 
-#: main.cpp:95
+#: main.cpp:97
 #, kde-format
 msgid "Krzysztof Pawlak"
 msgstr ""
 
-#: main.cpp:95
+#: main.cpp:97
 #, kde-format
 msgid "Translated KRename into Polish"
 msgstr "Vertimas į Lenkų kalbą"
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Ilya Ivkov"
 msgstr ""
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Translated KRename into Russian"
 msgstr "Vertimas į Rusų kalbą"
 
-#: main.cpp:97
+#: main.cpp:99
 #, kde-format
 msgid "Asim Husanovic"
 msgstr ""
 
-#: main.cpp:97
+#: main.cpp:99
 #, kde-format
 msgid "Translated KRename into Bosnian"
 msgstr "Vertimas į Bosnių kalbą"
 
-#: main.cpp:98
+#: main.cpp:100
 #, kde-format
 msgid "Michal Smoczyk"
 msgstr ""
 
-#: main.cpp:98
+#: main.cpp:100
 #, kde-format
 msgid "Polish Translation"
 msgstr "Vertimas į Lenkų kalbą"
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgid "Pavel Fric"
 msgstr ""
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgid "Czech Translation"
 msgstr "Vertimas į Čekų kalbą"
 
-#: main.cpp:100
+#: main.cpp:102
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Jonas Česnauskas"
 
-#: main.cpp:101
+#: main.cpp:103
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "upynas@gmail.com"
 
-#: main.cpp:109
+#: main.cpp:111
 #, fuzzy, kde-format
 #| msgid "file will be added to the list of files for renaming"
 msgid "Files to be added to the list to be renamed"
 msgstr "Failas bus įtrauktas į failų sąrašą pervadinimui"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "[files...]"
 msgstr ""
 
-#: main.cpp:110
+#: main.cpp:112
 #, fuzzy, kde-format
 #| msgid "add directory recursively"
 msgid "add folder recursively"
 msgstr "pridėti aplanką rekursyviai"
 
-#: main.cpp:110
+#: main.cpp:112
 #, kde-format
 msgid "folder"
 msgstr ""
 
-#: main.cpp:111
+#: main.cpp:113
 #, kde-format
 msgid "set a template"
 msgstr "parinkti ruošinį"
 
-#: main.cpp:112
+#: main.cpp:114
 #, kde-format
 msgid "set a template for the file extension"
 msgstr "parinkti ruošinį failo plėtiniui"
 
-#: main.cpp:113
+#: main.cpp:115
 #, kde-format
 msgid "enable a plugin for use"
 msgstr "įgalinti įskiepį naudojimui"
 
-#: main.cpp:114
+#: main.cpp:116
 #, fuzzy, kde-format
 #| msgid "copy files to directory or url"
 msgid "copy files to folder or url"
 msgstr "kopijuoti failus į aplanką ar url"
 
-#: main.cpp:114 main.cpp:115 main.cpp:116
+#: main.cpp:116 main.cpp:117 main.cpp:118
 #, kde-format
 msgid "path or url"
 msgstr ""
 
-#: main.cpp:115
+#: main.cpp:117
 #, fuzzy, kde-format
 #| msgid "move files to directory or url"
 msgid "move files to folder or url"
 msgstr "perkelti failus į aplanką ar url"
 
-#: main.cpp:116
+#: main.cpp:118
 #, fuzzy, kde-format
 #| msgid "link files to directory or url"
 msgid "link files to folder or url"
 msgstr "saistyti failus su aplanku ar url"
 
-#: main.cpp:117
+#: main.cpp:119
 #, kde-format
 msgid "start renaming immediately"
 msgstr "pradėti pervadinimą iš karto"
 
-#: main.cpp:118
+#: main.cpp:120
 #, kde-format
 msgid "start KRename's selftest (developers only)"
 msgstr "pradėti KRename patikrą (tik kūrėjams)"
 
-#: main.cpp:137
+#: main.cpp:139
 #, fuzzy, kde-format
 #| msgid ""
 #| "<b>Krename was started from root!</b><br>When started from root, Krename "
@@ -1649,7 +1645,7 @@ msgstr ""
 "nežinote ką darote, pradžiai esant failų sistemos pradžioje Krename gali "
 "sugadinti jūsų sistemą!"
 
-#: main.cpp:141
+#: main.cpp:143
 #, kde-format
 msgid "Error"
 msgstr "Klaida"
@@ -2049,37 +2045,37 @@ msgstr "&Atverti"
 msgid "&Remove"
 msgstr "&Pašalinti"
 
-#: progressdialog.cpp:18
+#: progressdialog.cpp:19
 #, kde-format
 msgid "&Rename more..."
 msgstr "&Pervadinti daugiau..."
 
-#: progressdialog.cpp:19
+#: progressdialog.cpp:20
 #, kde-format
 msgid "&Undo"
 msgstr "&Atšaukti"
 
-#: progressdialog.cpp:20
+#: progressdialog.cpp:21
 #, kde-format
 msgid "&Open Destination"
 msgstr "Atvėrimo paskirtis"
 
-#: progressdialog.cpp:37
+#: progressdialog.cpp:38
 #, kde-format
 msgid "Restart &KRename..."
 msgstr "&KRename paleisti iš naujo..."
 
-#: progressdialog.cpp:39
+#: progressdialog.cpp:40
 #, kde-format
 msgid "Rename Processed Files &Again..."
 msgstr "Vėl pervadinti pervadintus failus..."
 
-#: progressdialog.cpp:40
+#: progressdialog.cpp:41
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
 msgstr "Vėl pervadinti, po pervadinimo atšaukimo, failus..."
 
-#: progressdialog.cpp:41
+#: progressdialog.cpp:42
 #, kde-format
 msgid "&Rename All Files Again..."
 msgstr "Vėl pervadinti visus failus..."
@@ -2231,95 +2227,95 @@ msgstr ""
 msgid "&Edit..."
 msgstr "&Taisa"
 
-#: scriptplugin.cpp:90
+#: scriptplugin.cpp:89
 #, kde-format
 msgid "JavaScript Plugin"
 msgstr "JavaScript Įskiepis"
 
-#: scriptplugin.cpp:97
+#: scriptplugin.cpp:96
 #, kde-format
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "Įterpti JavaScript kodo fragmentą (šiuo atveju 4+5)"
 
-#: scriptplugin.cpp:99
+#: scriptplugin.cpp:98
 #, kde-format
 msgid "Index of the current file"
 msgstr "Esamo failo indeksas"
 
-#: scriptplugin.cpp:100
+#: scriptplugin.cpp:99
 #, kde-format
 msgid "URL of the current file"
 msgstr "Esamo failo URL"
 
-#: scriptplugin.cpp:101
+#: scriptplugin.cpp:100
 #, kde-format
 msgid "Filename of the current file"
 msgstr "Esamo failo pavadinimas"
 
-#: scriptplugin.cpp:102
+#: scriptplugin.cpp:101
 #, kde-format
 msgid "Extension of the current file"
 msgstr "Esamo failo plėtinys"
 
-#: scriptplugin.cpp:103
+#: scriptplugin.cpp:102
 #, kde-format
 msgid "Directory of the current file"
 msgstr "Esamo failo aplankas"
 
-#: scriptplugin.cpp:155
+#: scriptplugin.cpp:154
 #, kde-format
 msgid "Variable Name"
 msgstr "Kintamojo pavadinimas"
 
-#: scriptplugin.cpp:156
+#: scriptplugin.cpp:155
 #, kde-format
 msgid "Initial Value"
 msgstr "Pradinė reikšmė"
 
-#: scriptplugin.cpp:248
+#: scriptplugin.cpp:247
 #, kde-format
 msgid "String"
 msgstr "Eilutė"
 
-#: scriptplugin.cpp:249
+#: scriptplugin.cpp:248
 #, kde-format
 msgid "Int"
 msgstr "Sveikasis skaičius"
 
-#: scriptplugin.cpp:250
+#: scriptplugin.cpp:249
 #, kde-format
 msgid "Double"
 msgstr "Dvigubas"
 
-#: scriptplugin.cpp:251
+#: scriptplugin.cpp:250
 #, kde-format
 msgid "Boolean"
 msgstr "Loginis"
 
-#: scriptplugin.cpp:266
+#: scriptplugin.cpp:265
 #, fuzzy, kde-format
 #| msgid "A JavaScript error has occured: "
 msgid "A JavaScript error has occurred: "
 msgstr "JavaScript klaida"
 
-#: scriptplugin.cpp:290
+#: scriptplugin.cpp:289
 #, kde-format
 msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr "Visi įvesti apibrėžimai bus prarasti. Ar norite tęsti?"
 
-#: scriptplugin.cpp:297 scriptplugin.cpp:316
+#: scriptplugin.cpp:296 scriptplugin.cpp:315
 #, fuzzy, kde-format
 #| msgid "Remove selected files."
 msgid "Select file"
 msgstr "Pašalinti pažymėtus failus."
 
-#: scriptplugin.cpp:327
+#: scriptplugin.cpp:326
 #, kde-format
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "Failas %1 jau yra. Ar norite ją pakeisti?"
 
-#: scriptplugin.cpp:345
+#: scriptplugin.cpp:344
 #, kde-format
 msgid "Unable to open %1 for writing."
 msgstr "%1 nepavyko atverti rašymui."
@@ -2504,102 +2500,102 @@ msgstr "Nurodykite naujus pavadinimus iš esamų šablonų ..."
 msgid "Hint: Undo is still possible after renaming your files."
 msgstr "Patarimas: Failų pervadinimą įmanoma atšaukti."
 
-#: systemplugin.cpp:38
+#: systemplugin.cpp:37
 #, kde-format
 msgid "Insert the current date"
 msgstr "Įterpti dabartinę datą"
 
-#: systemplugin.cpp:39
+#: systemplugin.cpp:38
 #, kde-format
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "Įterpti esamą datą, naudojant formatavimo eilutę yyyy-MM-dd"
 
-#: systemplugin.cpp:40
+#: systemplugin.cpp:39
 #, kde-format
 msgid "Insert the current year"
 msgstr "Įterpti einamuosius metus"
 
-#: systemplugin.cpp:41
+#: systemplugin.cpp:40
 #, kde-format
 msgid "Insert the current month as number"
 msgstr "Įterpti einamojo mėnesio skaičių"
 
-#: systemplugin.cpp:42
+#: systemplugin.cpp:41
 #, kde-format
 msgid "Insert the current day as number"
 msgstr "Įterpti esamos dienos skaičių"
 
-#: systemplugin.cpp:43
+#: systemplugin.cpp:42
 #, kde-format
 msgid "Insert the current time"
 msgstr "Įterpti dabartinį laiką"
 
-#: systemplugin.cpp:44
+#: systemplugin.cpp:43
 #, kde-format
 msgid "Insert the current hour as number"
 msgstr "Įterpti einamosios valandos skaičių"
 
-#: systemplugin.cpp:45
+#: systemplugin.cpp:44
 #, kde-format
 msgid "Insert the current minute as number"
 msgstr "Įterpti einamosios minutės skaičių"
 
-#: systemplugin.cpp:46
+#: systemplugin.cpp:45
 #, kde-format
 msgid "Insert the current second as number"
 msgstr "Įterpti dabartinės sekundės skaičių"
 
-#: systemplugin.cpp:47
+#: systemplugin.cpp:46
 #, kde-format
 msgid "Owner of the file"
 msgstr "Failo valdytojas"
 
-#: systemplugin.cpp:48
+#: systemplugin.cpp:47
 #, kde-format
 msgid "Owning group of the file"
 msgstr "Failo valdytojų grupė"
 
-#: systemplugin.cpp:49
+#: systemplugin.cpp:48
 #, kde-format
 msgid "Insert the files creation date"
 msgstr "Įterpti failų sukūrimo datą"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:49
 #, kde-format
 msgid "Insert the formatted file creation date"
 msgstr "Įterpti suformuotą failo sukūrimo datą"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:50
 #, kde-format
 msgid "Insert the files modification date"
 msgstr "Įterpti failų pakeitimų datą"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:51
 #, kde-format
 msgid "Insert the formatted modification date"
 msgstr "Įterpti suformuotą failo pakeitimų datą"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:52
 #, kde-format
 msgid "Insert the date of the last file access"
 msgstr "Įterpti paskutinę failo prieigos datą"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:53
 #, kde-format
 msgid "Insert the formatted date of the last file access"
 msgstr "Įterpti suformuotą failo prieigos datą"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:54
 #, kde-format
 msgid "Insert the file size in bytes"
 msgstr "Įterpti failo dydį bitais"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:56
 #, kde-format
 msgid "Date and system functions"
 msgstr "Data ir sistemos funkcijos"
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:58
 #, kde-format
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "

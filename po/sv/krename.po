@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sv\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 01:46+0000\n"
+"POT-Creation-Date: 2024-04-21 01:44+0000\n"
 "PO-Revision-Date: 2023-07-31 10:12+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -19,104 +19,104 @@ msgstr ""
 "X-Generator: Lokalize 20.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:659
+#: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "Infiler kommer att döpas om."
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:653
+#: batchrenamer.cpp:195 batchrenamer.cpp:656
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "Filer kommer att kopieras till: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:655
+#: batchrenamer.cpp:198 batchrenamer.cpp:658
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "Filer kommer att flyttas till: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:657
+#: batchrenamer.cpp:201 batchrenamer.cpp:660
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "Symboliska länkar kommer att skapas i: %1"
 
-#: batchrenamer.cpp:218
+#: batchrenamer.cpp:222
 #, kde-format
 msgid "Cannot rename: source and target filename are equal: %1"
 msgstr "Kan inte byta namn: Käll- och målfilnamn är lika: %1"
 
-#: batchrenamer.cpp:236
+#: batchrenamer.cpp:240
 #, kde-format
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "Kan inte skapa symbolisk länk till icke-lokal webbadress: %1"
 
-#: batchrenamer.cpp:250 dirsortplugin.cpp:121
+#: batchrenamer.cpp:254 dirsortplugin.cpp:122
 #, kde-format
 msgid "Error renaming %2 (to %1)"
 msgstr "Fel vid namnbyte av %2 (till %1)"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:735
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
 msgstr[0] "%1 fel inträffade."
 msgstr[1] "%1 fel inträffade."
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:736
+#: batchrenamer.cpp:280 batchrenamer.cpp:739
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "KRename avslutade namnbytesprocessen."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
+#: batchrenamer.cpp:281 batchrenamer.cpp:405 batchrenamer.cpp:740
 #, kde-format
 msgid "Press close to quit."
 msgstr "Tryck stäng för att avsluta."
 
-#: batchrenamer.cpp:341
+#: batchrenamer.cpp:345
 #, kde-format
 msgid "Filenames Processed after %1 seconds."
 msgstr "Filnamn behandlade efter %1 sekunder."
 
-#: batchrenamer.cpp:356
+#: batchrenamer.cpp:360
 #, kde-format
 msgid "Undoing all renamed files."
 msgstr "Ångrar alla omdöpta filer."
 
-#: batchrenamer.cpp:388
+#: batchrenamer.cpp:392
 #, kde-format
 msgid "Error during undoing %1"
 msgstr "Fel vid ångra av %1"
 
-#: batchrenamer.cpp:400
+#: batchrenamer.cpp:404
 #, kde-format
 msgid "KRename finished the undo process."
 msgstr "KRename avslutade ångringsprocessen."
 
-#: batchrenamer.cpp:640
+#: batchrenamer.cpp:643
 #, kde-format
 msgid "Cannot create undo script: %1"
 msgstr "Kan inte skapa ångringsskript: %1"
 
-#: batchrenamer.cpp:714
+#: batchrenamer.cpp:717
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "Ångring är inte möjligt för fjärrfil: %1"
 
-#: batchrenamer.cpp:728
+#: batchrenamer.cpp:731
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "Bytte namn på %1 filer med lyckat resultat."
 
-#: batchrenamer.cpp:735
+#: batchrenamer.cpp:738
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "Förfluten tid: %1 sekunder"
 
-#: batchrenamer.cpp:747
+#: batchrenamer.cpp:750
 #, kde-format
 msgid "Cannot set executable bit on undo script."
 msgstr "Kan inte ge ångringsskript rättighet att köra."
 
-#: batchrenamer.cpp:1167
+#: batchrenamer.cpp:1170
 #, kde-format
 msgid "Cannot create directory %1: %2"
 msgstr "Kan inte skapa katalog %1: %2"
@@ -226,12 +226,12 @@ msgstr "Tid:"
 msgid "Get &Current Time"
 msgstr "Hämta a&ktuell tidpunkt"
 
-#: dirsortplugin.cpp:28
+#: dirsortplugin.cpp:29
 #, kde-format
 msgid "Subfolder-Sort Plugin"
 msgstr "Insticksprogram för underkatalogsortering"
 
-#: dirsortplugin.cpp:90
+#: dirsortplugin.cpp:91
 #, kde-format
 msgid "%1: The output folder %2 does not exist."
 msgstr "%1: Utkatalogen %2 finns inte."
@@ -369,7 +369,7 @@ msgstr ""
 "Detta alternativ gör att KRename också lägger till namnet på baskatalogen "
 "för de markerade filerna i sin lista."
 
-#: fileplugin.cpp:70
+#: fileplugin.cpp:71
 #, kde-format
 msgid "Supported tokens:"
 msgstr "Stödda symboler:"
@@ -936,77 +936,77 @@ msgstr "Upp"
 msgid "Down"
 msgstr "Ner"
 
-#: krenameimpl.cpp:353
+#: krenameimpl.cpp:355
 #, kde-format
 msgid "Do you really want to remove all files from the list?"
 msgstr "Vill du verkligen ta bort alla filer i listan?"
 
-#: krenameimpl.cpp:354 main.cpp:43
+#: krenameimpl.cpp:356 main.cpp:45
 #, kde-format
 msgid "KRename"
 msgstr "KRename"
 
-#: krenameimpl.cpp:470
+#: krenameimpl.cpp:474
 #, kde-format
 msgid "old filename"
 msgstr "gammalt filnamn"
 
-#: krenameimpl.cpp:471
+#: krenameimpl.cpp:475
 #, kde-format
 msgid "old filename converted to lower case"
 msgstr "gammalt filnamn omvandlat till små bokstäver"
 
-#: krenameimpl.cpp:472
+#: krenameimpl.cpp:476
 #, kde-format
 msgid "old filename converted to upper case"
 msgstr "gammalt filnamn omvandlat till stora bokstäver"
 
-#: krenameimpl.cpp:473
+#: krenameimpl.cpp:477
 #, kde-format
 msgid "first letter of every word upper case"
 msgstr "första bokstaven i varje ord med stora bokstäver"
 
-#: krenameimpl.cpp:474
+#: krenameimpl.cpp:478
 #, kde-format
 msgid "first letter of filename upper case"
 msgstr "första bokstaven i filnamn med stora bokstäver"
 
-#: krenameimpl.cpp:475
+#: krenameimpl.cpp:479
 #, kde-format
 msgid "number (try also ##, ###, ... for leading zeros)"
 msgstr "tal (prova också ##, ###, ... för inledande nollor)"
 
-#: krenameimpl.cpp:476
+#: krenameimpl.cpp:480
 #, kde-format
 msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "räknare med anpassat startvärde 0 och anpassat steg 1"
 
-#: krenameimpl.cpp:477
+#: krenameimpl.cpp:481
 #, kde-format
 msgid "create a subfolder"
 msgstr "skapa en underkatalog"
 
-#: krenameimpl.cpp:478
+#: krenameimpl.cpp:482
 #, kde-format
 msgid "character x to y of old filename"
 msgstr "tecken x till y i gammalt filnamn"
 
-#: krenameimpl.cpp:479
+#: krenameimpl.cpp:483
 #, kde-format
 msgid "y characters of old filename starting at x"
 msgstr "y tecken i gammalt filnamn med början på x"
 
-#: krenameimpl.cpp:480
+#: krenameimpl.cpp:484
 #, kde-format
 msgid "insert name of folder"
 msgstr "infoga katalognamn"
 
-#: krenameimpl.cpp:481
+#: krenameimpl.cpp:485
 #, kde-format
 msgid "insert name of parent folder"
 msgstr "infoga överliggande katalognamn"
 
-#: krenameimpl.cpp:482
+#: krenameimpl.cpp:486
 #, kde-format
 msgid ""
 "insert a '/' to create a new subfolder (useful from within regular "
@@ -1015,99 +1015,99 @@ msgstr ""
 "infoga ett '/' för att skapa en ny underkatalog (användbart inne i reguljära "
 "uttryck)"
 
-#: krenameimpl.cpp:483
+#: krenameimpl.cpp:487
 #, kde-format
 msgid "insert the length of the input filename"
 msgstr "infoga infilnamnets längd"
 
-#: krenameimpl.cpp:484
+#: krenameimpl.cpp:488
 #, kde-format
 msgid "strip whitespaces leading and trailing"
 msgstr "ta bort inledande och avslutande blanktecken"
 
-#: krenameimpl.cpp:485
+#: krenameimpl.cpp:489
 #, kde-format
 msgid "strip whitespaces leading and trailing of an arbitrary string"
 msgstr "ta bort inledande och avslutande blanktecken i en godtycklig sträng"
 
-#: krenameimpl.cpp:486
+#: krenameimpl.cpp:490
 #, kde-format
 msgid "Built-in Functions"
 msgstr "Inbyggda funktioner"
 
-#: krenameimpl.cpp:489
+#: krenameimpl.cpp:493
 #, kde-format
 msgid "Insert '$'"
 msgstr "Infoga '$'"
 
-#: krenameimpl.cpp:490
+#: krenameimpl.cpp:494
 #, kde-format
 msgid "Insert '%'"
 msgstr "Infoga '%'"
 
-#: krenameimpl.cpp:491
+#: krenameimpl.cpp:495
 #, kde-format
 msgid "Insert '&'"
 msgstr "Infoga '&'"
 
-#: krenameimpl.cpp:492
+#: krenameimpl.cpp:496
 #, kde-format
 msgid "Insert '*'"
 msgstr "Infoga '*'"
 
-#: krenameimpl.cpp:493
+#: krenameimpl.cpp:497
 #, kde-format
 msgid "Insert '/'"
 msgstr "Infoga '/'"
 
-#: krenameimpl.cpp:494
+#: krenameimpl.cpp:498
 #, kde-format
 msgid "Insert '\\\\'"
 msgstr "Infoga '\\\\'"
 
-#: krenameimpl.cpp:495
+#: krenameimpl.cpp:499
 #, kde-format
 msgid "Insert '['"
 msgstr "Infoga '['"
 
-#: krenameimpl.cpp:496
+#: krenameimpl.cpp:500
 #, kde-format
 msgid "Insert ']'"
 msgstr "Infoga ']'"
 
-#: krenameimpl.cpp:497
+#: krenameimpl.cpp:501
 #, kde-format
 msgid "Insert '#'"
 msgstr "Infoga '#'"
 
-#: krenameimpl.cpp:498
+#: krenameimpl.cpp:502
 #, kde-format
 msgid "Special Characters"
 msgstr "Specialtecken"
 
-#: krenameimpl.cpp:539
+#: krenameimpl.cpp:543
 #, kde-format
 msgid "Starting conversion of %1 file."
 msgid_plural "Starting conversion of %1 files."
 msgstr[0] "Börjar konvertering av %1 fil."
 msgstr[1] "Börjar konvertering av %1 filer."
 
-#: krenameimpl.cpp:551
+#: krenameimpl.cpp:555
 #, kde-format
 msgid "The folder %1 does not exist. Do you want KRename to create it for you?"
 msgstr "Katalogen %1 finns inte. Vill du att KRename ska skapa den åt dig?"
 
-#: krenameimpl.cpp:561
+#: krenameimpl.cpp:565
 #, kde-format
 msgid "The folder %1 could not be created."
 msgstr "Katalogen %1 kunde inte skapas."
 
-#: krenamemodel.cpp:422
+#: krenamemodel.cpp:425
 #, kde-format
 msgid "Origin"
 msgstr "Ursprung"
 
-#: krenamemodel.cpp:422
+#: krenamemodel.cpp:425
 #, kde-format
 msgid "Renamed"
 msgstr "Omdöpt"
@@ -1134,37 +1134,33 @@ msgstr "Aktiv&era insticksprogram"
 msgid "?"
 msgstr "?"
 
-#: krenamewindow.cpp:35
-#, kde-format
+#: krenamewindow.cpp:36
 msgid "&1. Files"
 msgstr "&1. Filer"
 
-#: krenamewindow.cpp:36
-#, kde-format
+#: krenamewindow.cpp:37
 msgid "&2. Destination"
 msgstr "&2. Mål"
 
-#: krenamewindow.cpp:37
-#, kde-format
+#: krenamewindow.cpp:38
 msgid "&3. Plugins"
 msgstr "&3. Insticksprogram"
 
-#: krenamewindow.cpp:38
-#, kde-format
+#: krenamewindow.cpp:39
 msgid "&4. Filename"
 msgstr "&4. Filnamn"
 
-#: krenamewindow.cpp:193
+#: krenamewindow.cpp:194
 #, kde-format
 msgid "&Finish"
 msgstr "&Avsluta"
 
-#: krenamewindow.cpp:437
+#: krenamewindow.cpp:438
 #, kde-format
 msgid "<b>Files:</b> %1"
 msgstr "<b>Filer:</b> %1"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
@@ -1173,7 +1169,7 @@ msgstr ""
 "KRename är ett verktyg för filnamnsbyte, som kan byta namn på en lista med "
 "filer baserat på en uppsättning uttryck."
 
-#: main.cpp:48
+#: main.cpp:50
 #, kde-format
 msgid ""
 "If you like KRename you may want to support it. Testing, bug fixes and "
@@ -1184,47 +1180,47 @@ msgstr ""
 "funktionsönskemål är lika välkomna som finansiellt stöd (alla behöver "
 "pengar). Se hjälpfilerna för detaljer."
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "(c) 2001-2012, Dominik Seichter\n"
 msgstr "© 2001-2012, Dominik Seichter\n"
 
-#: main.cpp:55
+#: main.cpp:57
 #, kde-format
 msgid "Heiko Becker"
 msgstr "Heiko Becker"
 
-#: main.cpp:55
+#: main.cpp:57
 #, kde-format
 msgid "Current maintainer"
 msgstr "Nuvarande underhåll"
 
-#: main.cpp:57
+#: main.cpp:59
 #, kde-format
 msgid "Dominik Seichter"
 msgstr "Dominik Seichter"
 
-#: main.cpp:57
+#: main.cpp:59
 #, kde-format
 msgid "Developer and former maintainer"
 msgstr "Utvecklare och tidigare underhåll"
 
-#: main.cpp:59
+#: main.cpp:61
 #, kde-format
 msgid "Stefan \"Stonki\" Onken"
 msgstr "Stefan \"Stonki\" Onken"
 
-#: main.cpp:60
+#: main.cpp:62
 #, kde-format
 msgid "Website, testing, very good ideas and keeping me coding!"
 msgstr "Webbplats, utprovning, goda idéer, och får mig att fortsätta koda!"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Arpad Biro"
 msgstr "Arpad Biro"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
@@ -1232,24 +1228,24 @@ msgstr ""
 "Hjälpte till att rätta problem med stilmallar och gjorde förbättringar av "
 "användarmeddelanden."
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "Trevor Semeniuk"
 msgstr "Trevor Semeniuk"
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr ""
 "Tack till honom för att ha skapat paket för Red Hat 7.x och för viss annan "
 "hjälp."
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid "Groult Richard"
 msgstr "Groult Richard"
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
@@ -1258,22 +1254,22 @@ msgstr ""
 "Rättade ett fel med startindex och lade till klassen BatchRenamer\n"
 "i sin utmärkta bildvisare showimg."
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Michael Elvers"
 msgstr "Michael Elvers"
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Fixed a bug that caused krename not closing open files."
 msgstr "Rättade ett fel som orsakade att KRename inte stängde öppna filer."
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid "Andreas Pour"
 msgstr "Andreas Pour"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
@@ -1282,12 +1278,12 @@ msgstr ""
 "Tack för hans utmärkta arbete hos kde.apps.com och hjälp med att bidra "
 "KRename till apps.kde.com."
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid "Charles Samuels"
 msgstr "Charles Samuels"
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
@@ -1295,105 +1291,105 @@ msgstr ""
 "Tack för noatun, och ID3/Ogg-taggkoden som är baserad på hans moduler i "
 "noatun."
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Franz Schmid"
 msgstr "Franz Schmid"
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr ""
 "Gav mig en bra start i att skriva insticksprogram med sitt program Scribus."
 
-#: main.cpp:77
+#: main.cpp:79
 #, kde-format
 msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
 
-#: main.cpp:77
+#: main.cpp:79
 #, kde-format
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr ""
 "Delar av PNG-stödet är kopierat från hans KFile-insticksprogram för PNG-stöd."
 
-#: main.cpp:79
+#: main.cpp:81
 #, kde-format
 msgid "Michael v.Ostheim"
 msgstr "Michael v.Ostheim"
 
-#: main.cpp:79
+#: main.cpp:81
 #, kde-format
 msgid "Created the Gentoo Ebuild scripts for KRename."
 msgstr "Skapade Gentoo Ebuild-skript för KRename."
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Brandon Low"
 msgstr "Brandon Low"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "Några korrigeringar för GCC 3.1 i Gentoo."
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Per Oyvind Karlsen"
 msgstr "Per Oyvind Karlsen"
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Thanks for creating the Mandrake RPM"
 msgstr "Tack för att ha skapat Mandrake-RPM."
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "Vincenzo Reale"
 msgstr "Vincenzo Reale"
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "Italian translation"
 msgstr "Italiensk översättning"
 
-#: main.cpp:86
+#: main.cpp:88
 #, kde-format
 msgid "Daniele Medri"
 msgstr "Daniele Medri"
 
-#: main.cpp:86
+#: main.cpp:88
 #, kde-format
 msgid "Italian translation work"
 msgstr "Italienskt översättningsarbete"
 
-#: main.cpp:87
+#: main.cpp:89
 #, kde-format
 msgid "Stephan Johach"
 msgstr "Stephan Johach"
 
-#: main.cpp:87
+#: main.cpp:89
 #, kde-format
 msgid "Provided a gcc3.x namespace patch"
 msgstr "Bidrog med en programfix för GCC 3.x namnrymder"
 
-#: main.cpp:88
+#: main.cpp:90
 #, kde-format
 msgid "Michael Zugaro"
 msgstr "Michael Zugaro"
 
-#: main.cpp:88
+#: main.cpp:90
 #, kde-format
 msgid "Provided the new preview and move features"
 msgstr "Bidrog med den nya förhandsgransknings- och flyttfunktionaliteten"
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid "Rene Gass"
 msgstr "Rene Gass"
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
@@ -1402,185 +1398,185 @@ msgstr ""
 "Rättade problem med spec-filen och bidrog med rpms för varje SuSE-version "
 "man kan tänka sig, och är även den nya Gentoo-ansvarige för KRename."
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "Mark Ziegler"
 msgstr "Mark Ziegler"
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "Provided SuSE RPMs and very good suggestions"
 msgstr "Bidrog med Suse-PRM:er och mycket bra förslag."
 
-#: main.cpp:91
+#: main.cpp:93
 #, kde-format
 msgid "Jose Rodriguez"
 msgstr "Jose Rodriguez"
 
-#: main.cpp:91
+#: main.cpp:93
 #, kde-format
 msgid "Contributed a Spanish translation"
 msgstr "Bidrog med en spansk översättning"
 
-#: main.cpp:92
+#: main.cpp:94
 #, kde-format
 msgid "Steven P. Ulrick"
 msgstr "Steven P. Ulrick"
 
-#: main.cpp:92
+#: main.cpp:94
 #, kde-format
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr ""
 "Bidrog med en RedHat-RPM och var till stor hjälp i att förbättra KRename."
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "UTUMI Hirosi"
 msgstr "UTUMI Hirosi"
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "Translated KRename to Japanese"
 msgstr "Översatte KRename till japanska"
 
-#: main.cpp:94
+#: main.cpp:96
 #, kde-format
 msgid "Nicolas Benoit"
 msgstr "Nicolas Benoit"
 
-#: main.cpp:94
+#: main.cpp:96
 #, kde-format
 msgid "Translated KRename into French"
 msgstr "Översatte KRename till franska"
 
-#: main.cpp:95
+#: main.cpp:97
 #, kde-format
 msgid "Krzysztof Pawlak"
 msgstr "Krzysztof Pawlak"
 
-#: main.cpp:95
+#: main.cpp:97
 #, kde-format
 msgid "Translated KRename into Polish"
 msgstr "Översatte KRename till polska"
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Ilya Ivkov"
 msgstr "Ilya Ivkov"
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Translated KRename into Russian"
 msgstr "Översatte KRename till ryska"
 
-#: main.cpp:97
+#: main.cpp:99
 #, kde-format
 msgid "Asim Husanovic"
 msgstr "Asim Husanovic"
 
-#: main.cpp:97
+#: main.cpp:99
 #, kde-format
 msgid "Translated KRename into Bosnian"
 msgstr "Översatte KRename till bosniska"
 
-#: main.cpp:98
+#: main.cpp:100
 #, kde-format
 msgid "Michal Smoczyk"
 msgstr "Michal Smoczyk"
 
-#: main.cpp:98
+#: main.cpp:100
 #, kde-format
 msgid "Polish Translation"
 msgstr "Polsk översättning"
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgid "Pavel Fric"
 msgstr "Pavel Fric"
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgid "Czech Translation"
 msgstr "Tjeckisk översättning"
 
-#: main.cpp:100
+#: main.cpp:102
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Peter Landgren,Stefan Asserhäll"
 
-#: main.cpp:101
+#: main.cpp:103
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "peter.talken@telia.com,stefan.asserhall@bredband.net"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "Files to be added to the list to be renamed"
 msgstr "Filer att lägga till i listan för namnbyte"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "[files...]"
 msgstr "[filer...]"
 
-#: main.cpp:110
+#: main.cpp:112
 #, kde-format
 msgid "add folder recursively"
 msgstr "lägg till katalog rekursivt"
 
-#: main.cpp:110
+#: main.cpp:112
 #, kde-format
 msgid "folder"
 msgstr "katalog"
 
-#: main.cpp:111
+#: main.cpp:113
 #, kde-format
 msgid "set a template"
 msgstr "ange en mall"
 
-#: main.cpp:112
+#: main.cpp:114
 #, kde-format
 msgid "set a template for the file extension"
 msgstr "ange en mall för filnamnsändelser"
 
-#: main.cpp:113
+#: main.cpp:115
 #, kde-format
 msgid "enable a plugin for use"
 msgstr "aktivera ett insticksprogram för användning"
 
-#: main.cpp:114
+#: main.cpp:116
 #, kde-format
 msgid "copy files to folder or url"
 msgstr "kopiera filer till katalog eller webbadress"
 
-#: main.cpp:114 main.cpp:115 main.cpp:116
+#: main.cpp:116 main.cpp:117 main.cpp:118
 #, kde-format
 msgid "path or url"
 msgstr "sökväg eller webbadress"
 
-#: main.cpp:115
+#: main.cpp:117
 #, kde-format
 msgid "move files to folder or url"
 msgstr "flytta filer till katalog eller webbadress"
 
-#: main.cpp:116
+#: main.cpp:118
 #, kde-format
 msgid "link files to folder or url"
 msgstr "länka filer till katalog eller webbadress"
 
-#: main.cpp:117
+#: main.cpp:119
 #, kde-format
 msgid "start renaming immediately"
 msgstr "börja namnbyte omedelbart"
 
-#: main.cpp:118
+#: main.cpp:120
 #, kde-format
 msgid "start KRename's selftest (developers only)"
 msgstr "starta KRenames självtest (endast utvecklare)"
 
-#: main.cpp:137
+#: main.cpp:139
 #, kde-format
 msgid ""
 "<b>KRename was started from root!</b><br>When started from root, KRename may "
@@ -1590,7 +1586,7 @@ msgstr ""
 "systemadministratören, kan KRename skada systemet om du inte vet exakt vad "
 "du håller på med."
 
-#: main.cpp:141
+#: main.cpp:143
 #, kde-format
 msgid "Error"
 msgstr "Fel"
@@ -1973,37 +1969,37 @@ msgstr "Ö&ppna"
 msgid "&Remove"
 msgstr "Ta bo&rt"
 
-#: progressdialog.cpp:18
+#: progressdialog.cpp:19
 #, kde-format
 msgid "&Rename more..."
 msgstr "&Byt namn på fler..."
 
-#: progressdialog.cpp:19
+#: progressdialog.cpp:20
 #, kde-format
 msgid "&Undo"
 msgstr "Å&ngra"
 
-#: progressdialog.cpp:20
+#: progressdialog.cpp:21
 #, kde-format
 msgid "&Open Destination"
 msgstr "Ö&ppna mål"
 
-#: progressdialog.cpp:37
+#: progressdialog.cpp:38
 #, kde-format
 msgid "Restart &KRename..."
 msgstr "Starta om &KRename..."
 
-#: progressdialog.cpp:39
+#: progressdialog.cpp:40
 #, kde-format
 msgid "Rename Processed Files &Again..."
 msgstr "Byt n&amn på behandlade filer igen..."
 
-#: progressdialog.cpp:40
+#: progressdialog.cpp:41
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
 msgstr "Byt namn på &obehandlade filer igen..."
 
-#: progressdialog.cpp:41
+#: progressdialog.cpp:42
 #, kde-format
 msgid "&Rename All Files Again..."
 msgstr "&Byt namn på alla filer igen..."
@@ -2158,77 +2154,77 @@ msgstr "&Läs in inställningar..."
 msgid "&Edit..."
 msgstr "&Redigera..."
 
-#: scriptplugin.cpp:90
+#: scriptplugin.cpp:89
 #, kde-format
 msgid "JavaScript Plugin"
 msgstr "Javascript-insticksprogram"
 
-#: scriptplugin.cpp:97
+#: scriptplugin.cpp:96
 #, kde-format
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "Infoga ett kodavsnitt av Javascript-kod (4+5 i detta fall)"
 
-#: scriptplugin.cpp:99
+#: scriptplugin.cpp:98
 #, kde-format
 msgid "Index of the current file"
 msgstr "Den aktuella filens index"
 
-#: scriptplugin.cpp:100
+#: scriptplugin.cpp:99
 #, kde-format
 msgid "URL of the current file"
 msgstr "Den aktuella filens webbadress"
 
-#: scriptplugin.cpp:101
+#: scriptplugin.cpp:100
 #, kde-format
 msgid "Filename of the current file"
 msgstr "Den aktuella filens filnamn"
 
-#: scriptplugin.cpp:102
+#: scriptplugin.cpp:101
 #, kde-format
 msgid "Extension of the current file"
 msgstr "Den aktuella filens filnamnsändelse"
 
-#: scriptplugin.cpp:103
+#: scriptplugin.cpp:102
 #, kde-format
 msgid "Directory of the current file"
 msgstr "Den aktuella filens katalog"
 
-#: scriptplugin.cpp:155
+#: scriptplugin.cpp:154
 #, kde-format
 msgid "Variable Name"
 msgstr "Variabelnamn"
 
-#: scriptplugin.cpp:156
+#: scriptplugin.cpp:155
 #, kde-format
 msgid "Initial Value"
 msgstr "Startvärde"
 
-#: scriptplugin.cpp:248
+#: scriptplugin.cpp:247
 #, kde-format
 msgid "String"
 msgstr "Sträng"
 
-#: scriptplugin.cpp:249
+#: scriptplugin.cpp:248
 #, kde-format
 msgid "Int"
 msgstr "Heltal"
 
-#: scriptplugin.cpp:250
+#: scriptplugin.cpp:249
 #, kde-format
 msgid "Double"
 msgstr "Dubbelt flyttal"
 
-#: scriptplugin.cpp:251
+#: scriptplugin.cpp:250
 #, kde-format
 msgid "Boolean"
 msgstr "Boolesk"
 
-#: scriptplugin.cpp:266
+#: scriptplugin.cpp:265
 #, kde-format
 msgid "A JavaScript error has occurred: "
 msgstr "Ett Javascript-fel har inträffat:"
 
-#: scriptplugin.cpp:290
+#: scriptplugin.cpp:289
 #, kde-format
 msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
@@ -2236,17 +2232,17 @@ msgstr ""
 "Alla aktuella inmatade definitioner kommer att gå förlorade. Vill du "
 "fortsätta?"
 
-#: scriptplugin.cpp:297 scriptplugin.cpp:316
+#: scriptplugin.cpp:296 scriptplugin.cpp:315
 #, kde-format
 msgid "Select file"
 msgstr "Välj fil"
 
-#: scriptplugin.cpp:327
+#: scriptplugin.cpp:326
 #, kde-format
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "Filen %1 finns redan. Vill du skriva över den?"
 
-#: scriptplugin.cpp:345
+#: scriptplugin.cpp:344
 #, kde-format
 msgid "Unable to open %1 for writing."
 msgstr "Kan inte öppna %1 för skrivning."
@@ -2419,103 +2415,103 @@ msgstr ""
 "Tips: Det är fortfarande möjligt att ångra sig efter att filerna har döpts "
 "om."
 
-#: systemplugin.cpp:38
+#: systemplugin.cpp:37
 #, kde-format
 msgid "Insert the current date"
 msgstr "Infoga aktuellt datum"
 
-#: systemplugin.cpp:39
+#: systemplugin.cpp:38
 #, kde-format
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr ""
 "Infoga aktuellt datum genom att använda formateringssträngen åååå-MM-dd"
 
-#: systemplugin.cpp:40
+#: systemplugin.cpp:39
 #, kde-format
 msgid "Insert the current year"
 msgstr "Infoga aktuellt år"
 
-#: systemplugin.cpp:41
+#: systemplugin.cpp:40
 #, kde-format
 msgid "Insert the current month as number"
 msgstr "Infoga aktuell månad som ett tal"
 
-#: systemplugin.cpp:42
+#: systemplugin.cpp:41
 #, kde-format
 msgid "Insert the current day as number"
 msgstr "Infoga aktuell dag som ett tal"
 
-#: systemplugin.cpp:43
+#: systemplugin.cpp:42
 #, kde-format
 msgid "Insert the current time"
 msgstr "Infoga aktuell tid"
 
-#: systemplugin.cpp:44
+#: systemplugin.cpp:43
 #, kde-format
 msgid "Insert the current hour as number"
 msgstr "Infoga aktuell timme som ett tal"
 
-#: systemplugin.cpp:45
+#: systemplugin.cpp:44
 #, kde-format
 msgid "Insert the current minute as number"
 msgstr "Infoga aktuell minut som ett tal"
 
-#: systemplugin.cpp:46
+#: systemplugin.cpp:45
 #, kde-format
 msgid "Insert the current second as number"
 msgstr "Infoga aktuell sekund som ett tal"
 
-#: systemplugin.cpp:47
+#: systemplugin.cpp:46
 #, kde-format
 msgid "Owner of the file"
 msgstr "Filens ägare"
 
-#: systemplugin.cpp:48
+#: systemplugin.cpp:47
 #, kde-format
 msgid "Owning group of the file"
 msgstr "Filens ägargrupp"
 
-#: systemplugin.cpp:49
+#: systemplugin.cpp:48
 #, kde-format
 msgid "Insert the files creation date"
 msgstr "Infoga filens skapelsedatum"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:49
 #, kde-format
 msgid "Insert the formatted file creation date"
 msgstr "Infoga filens formaterade skapelsedatum"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:50
 #, kde-format
 msgid "Insert the files modification date"
 msgstr "Infoga filens ändringsdatum"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:51
 #, kde-format
 msgid "Insert the formatted modification date"
 msgstr "Infoga filens formaterade ändringsdatum"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:52
 #, kde-format
 msgid "Insert the date of the last file access"
 msgstr "Infoga datumet för senaste filåtkomst"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:53
 #, kde-format
 msgid "Insert the formatted date of the last file access"
 msgstr "Infoga det formaterade datumet för senaste filåtkomst"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:54
 #, kde-format
 msgid "Insert the file size in bytes"
 msgstr "Infoga filstorleken i byte"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:56
 #, kde-format
 msgid "Date and system functions"
 msgstr "Datum- och systemfunktioner"
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:58
 #, kde-format
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KRename4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 01:46+0000\n"
+"POT-Creation-Date: 2024-04-21 01:44+0000\n"
 "PO-Revision-Date: 2017-03-01 17:49+0100\n"
 "Last-Translator: Kiszel Kristóf <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -21,104 +21,104 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:659
+#: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "A bemeneti fájlok átnevezésre kerülnek"
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:653
+#: batchrenamer.cpp:195 batchrenamer.cpp:656
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "Fájlok másolása ide: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:655
+#: batchrenamer.cpp:198 batchrenamer.cpp:658
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "Fájlok áthelyezése ide: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:657
+#: batchrenamer.cpp:201 batchrenamer.cpp:660
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "Szimbolikus linkek létrehozása itt: %1"
 
-#: batchrenamer.cpp:218
+#: batchrenamer.cpp:222
 #, kde-format
 msgid "Cannot rename: source and target filename are equal: %1"
 msgstr "Nem lehet átnevezni: a forrás- és a célfájlnév ugyanaz: %1"
 
-#: batchrenamer.cpp:236
+#: batchrenamer.cpp:240
 #, kde-format
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "Nem hozható létre szimbolikus link erre a távoli URL-re: %1"
 
-#: batchrenamer.cpp:250 dirsortplugin.cpp:121
+#: batchrenamer.cpp:254 dirsortplugin.cpp:122
 #, kde-format
 msgid "Error renaming %2 (to %1)"
 msgstr "Hiba történt \"%2\" átnevezésekor (erre: %1)"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:735
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
 msgstr[0] "%1 hiba történt."
 msgstr[1] "%1 hiba történt."
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:736
+#: batchrenamer.cpp:280 batchrenamer.cpp:739
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "A KRename befejezte az átnevezést."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
+#: batchrenamer.cpp:281 batchrenamer.cpp:405 batchrenamer.cpp:740
 #, kde-format
 msgid "Press close to quit."
 msgstr "Kilépéshez kattintson a „Bezárás” gombra."
 
-#: batchrenamer.cpp:341
+#: batchrenamer.cpp:345
 #, kde-format
 msgid "Filenames Processed after %1 seconds."
 msgstr "A fájlnevek %1 másodperc alatt feldolgozva."
 
-#: batchrenamer.cpp:356
+#: batchrenamer.cpp:360
 #, kde-format
 msgid "Undoing all renamed files."
 msgstr "Fájlátnevezések visszavonása."
 
-#: batchrenamer.cpp:388
+#: batchrenamer.cpp:392
 #, kde-format
 msgid "Error during undoing %1"
 msgstr "Hiba történt \"%1\" visszavonásakor."
 
-#: batchrenamer.cpp:400
+#: batchrenamer.cpp:404
 #, kde-format
 msgid "KRename finished the undo process."
 msgstr "A KRename befejezte a visszavonást."
 
-#: batchrenamer.cpp:640
+#: batchrenamer.cpp:643
 #, kde-format
 msgid "Cannot create undo script: %1"
 msgstr "Nem hozható létre a visszavonási szkript: %1"
 
-#: batchrenamer.cpp:714
+#: batchrenamer.cpp:717
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "Távoli fájlra nem lehetséges visszavonás: %1"
 
-#: batchrenamer.cpp:728
+#: batchrenamer.cpp:731
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "%1 fájl átnevezve."
 
-#: batchrenamer.cpp:735
+#: batchrenamer.cpp:738
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "Eltelt idő: %1 másodperc"
 
-#: batchrenamer.cpp:747
+#: batchrenamer.cpp:750
 #, kde-format
 msgid "Cannot set executable bit on undo script."
 msgstr "Nem lehet beállítani a futtathatósági bitet a visszavonási szkriptre."
 
-#: batchrenamer.cpp:1167
+#: batchrenamer.cpp:1170
 #, kde-format
 msgid "Cannot create directory %1: %2"
 msgstr "A(z) „%1” mappa létrehozása sikertele: %2"
@@ -228,12 +228,12 @@ msgstr "Idő:"
 msgid "Get &Current Time"
 msgstr "Az aktuális idő &lekérdezése"
 
-#: dirsortplugin.cpp:28
+#: dirsortplugin.cpp:29
 #, kde-format
 msgid "Subfolder-Sort Plugin"
 msgstr "Rendezés almappákba"
 
-#: dirsortplugin.cpp:90
+#: dirsortplugin.cpp:91
 #, kde-format
 msgid "%1: The output folder %2 does not exist."
 msgstr "%1: A kimeneti mappa („%2”) nem létezik."
@@ -370,7 +370,7 @@ msgstr ""
 "Az opció hatása: a KRename a kijelölt fájlok alapkönyvtárának nevét is "
 "felveszi a listába"
 
-#: fileplugin.cpp:70
+#: fileplugin.cpp:71
 #, kde-format
 msgid "Supported tokens:"
 msgstr "Támogatott tokenek:"
@@ -931,78 +931,78 @@ msgstr "Fel"
 msgid "Down"
 msgstr "Le"
 
-#: krenameimpl.cpp:353
+#: krenameimpl.cpp:355
 #, kde-format
 msgid "Do you really want to remove all files from the list?"
 msgstr "Valóban szeretné eltávolítani az összes fájlt a listáról?"
 
-#: krenameimpl.cpp:354 main.cpp:43
+#: krenameimpl.cpp:356 main.cpp:45
 #, kde-format
 msgid "KRename"
 msgstr "KRename"
 
-#: krenameimpl.cpp:470
+#: krenameimpl.cpp:474
 #, kde-format
 msgid "old filename"
 msgstr "korábbi fájlnév"
 
-#: krenameimpl.cpp:471
+#: krenameimpl.cpp:475
 #, kde-format
 msgid "old filename converted to lower case"
 msgstr "a korábbi fájlnév kisbetűs formában"
 
-#: krenameimpl.cpp:472
+#: krenameimpl.cpp:476
 #, kde-format
 msgid "old filename converted to upper case"
 msgstr "a korábbi fájlnév nagybetűs formában"
 
-#: krenameimpl.cpp:473
+#: krenameimpl.cpp:477
 #, kde-format
 msgid "first letter of every word upper case"
 msgstr "minden szó első betűje nagybetűs formában"
 
-#: krenameimpl.cpp:474
+#: krenameimpl.cpp:478
 #, kde-format
 msgid "first letter of filename upper case"
 msgstr "a fájlnév első betűje nagybetűs formában"
 
-#: krenameimpl.cpp:475
+#: krenameimpl.cpp:479
 #, kde-format
 msgid "number (try also ##, ###, ... for leading zeros)"
 msgstr "szám (vezető nullák használata: ##, ###, ...)"
 
-#: krenameimpl.cpp:476
+#: krenameimpl.cpp:480
 #, kde-format
 msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "számláló beállítható kezdőértékkel (0) és növekménnyel (1)"
 
-#: krenameimpl.cpp:477
+#: krenameimpl.cpp:481
 #, fuzzy, kde-format
 #| msgid "create a subdfolder"
 msgid "create a subfolder"
 msgstr "alkönyvtár létrehozása"
 
-#: krenameimpl.cpp:478
+#: krenameimpl.cpp:482
 #, kde-format
 msgid "character x to y of old filename"
 msgstr "a korábbi fájlnévnek az x-edik karaktertől az y-adikig terjedő része"
 
-#: krenameimpl.cpp:479
+#: krenameimpl.cpp:483
 #, kde-format
 msgid "y characters of old filename starting at x"
 msgstr "y darab karakter a korábbi fájlnévből az x-edik karaktertől kezdve"
 
-#: krenameimpl.cpp:480
+#: krenameimpl.cpp:484
 #, kde-format
 msgid "insert name of folder"
 msgstr "könyvtárnév beillesztése"
 
-#: krenameimpl.cpp:481
+#: krenameimpl.cpp:485
 #, kde-format
 msgid "insert name of parent folder"
 msgstr "szülőkönyvtár nevének beillesztése"
 
-#: krenameimpl.cpp:482
+#: krenameimpl.cpp:486
 #, kde-format
 msgid ""
 "insert a '/' to create a new subfolder (useful from within regular "
@@ -1011,99 +1011,99 @@ msgstr ""
 "„/” beillesztése új alkönyvtár létrehozásához (hasznos lehet reguláris "
 "kifejezésekben)"
 
-#: krenameimpl.cpp:483
+#: krenameimpl.cpp:487
 #, kde-format
 msgid "insert the length of the input filename"
 msgstr "a bemeneti fájlnév hosszának beillesztése"
 
-#: krenameimpl.cpp:484
+#: krenameimpl.cpp:488
 #, kde-format
 msgid "strip whitespaces leading and trailing"
 msgstr "szóközök törlése a szöveg elejéről és végéről"
 
-#: krenameimpl.cpp:485
+#: krenameimpl.cpp:489
 #, kde-format
 msgid "strip whitespaces leading and trailing of an arbitrary string"
 msgstr "szóközök törlése tetszőleges szöveg elejéről és végéről"
 
-#: krenameimpl.cpp:486
+#: krenameimpl.cpp:490
 #, kde-format
 msgid "Built-in Functions"
 msgstr "Beépített funkciók"
 
-#: krenameimpl.cpp:489
+#: krenameimpl.cpp:493
 #, kde-format
 msgid "Insert '$'"
 msgstr "\"$\" beillesztése"
 
-#: krenameimpl.cpp:490
+#: krenameimpl.cpp:494
 #, kde-format
 msgid "Insert '%'"
 msgstr "\"%\" beillesztése"
 
-#: krenameimpl.cpp:491
+#: krenameimpl.cpp:495
 #, kde-format
 msgid "Insert '&'"
 msgstr "\"&\" beillesztése"
 
-#: krenameimpl.cpp:492
+#: krenameimpl.cpp:496
 #, kde-format
 msgid "Insert '*'"
 msgstr "\"*\" beillesztése"
 
-#: krenameimpl.cpp:493
+#: krenameimpl.cpp:497
 #, kde-format
 msgid "Insert '/'"
 msgstr "\"/\" beillesztése"
 
-#: krenameimpl.cpp:494
+#: krenameimpl.cpp:498
 #, kde-format
 msgid "Insert '\\\\'"
 msgstr "\"\\\\\" beillesztése"
 
-#: krenameimpl.cpp:495
+#: krenameimpl.cpp:499
 #, kde-format
 msgid "Insert '['"
 msgstr "\"[\" beillesztése"
 
-#: krenameimpl.cpp:496
+#: krenameimpl.cpp:500
 #, kde-format
 msgid "Insert ']'"
 msgstr "\"]\" beillesztése"
 
-#: krenameimpl.cpp:497
+#: krenameimpl.cpp:501
 #, kde-format
 msgid "Insert '#'"
 msgstr "\"#\" beillesztése"
 
-#: krenameimpl.cpp:498
+#: krenameimpl.cpp:502
 #, kde-format
 msgid "Special Characters"
 msgstr "Speciális karakterek"
 
-#: krenameimpl.cpp:539
+#: krenameimpl.cpp:543
 #, kde-format
 msgid "Starting conversion of %1 file."
 msgid_plural "Starting conversion of %1 files."
 msgstr[0] "%1 fájl konvertálása elindítva."
 msgstr[1] "%1 fájl konvertálása elindítva."
 
-#: krenameimpl.cpp:551
+#: krenameimpl.cpp:555
 #, kde-format
 msgid "The folder %1 does not exist. Do you want KRename to create it for you?"
 msgstr "Nem létezik „%1” nevű mappa. Szeretné, hogy a KRename létrehozza azt?"
 
-#: krenameimpl.cpp:561
+#: krenameimpl.cpp:565
 #, kde-format
 msgid "The folder %1 could not be created."
 msgstr "Nem sikerült létrehozni „%1” nevű mappát."
 
-#: krenamemodel.cpp:422
+#: krenamemodel.cpp:425
 #, kde-format
 msgid "Origin"
 msgstr "Eredeti"
 
-#: krenamemodel.cpp:422
+#: krenamemodel.cpp:425
 #, kde-format
 msgid "Renamed"
 msgstr "Átnevezve"
@@ -1130,37 +1130,33 @@ msgstr "Modul beka&pcsolása"
 msgid "?"
 msgstr "?"
 
-#: krenamewindow.cpp:35
-#, kde-format
+#: krenamewindow.cpp:36
 msgid "&1. Files"
 msgstr "&1. Fájlok"
 
-#: krenamewindow.cpp:36
-#, kde-format
+#: krenamewindow.cpp:37
 msgid "&2. Destination"
 msgstr "&2. Cél"
 
-#: krenamewindow.cpp:37
-#, kde-format
+#: krenamewindow.cpp:38
 msgid "&3. Plugins"
 msgstr "&3. Modulok"
 
-#: krenamewindow.cpp:38
-#, kde-format
+#: krenamewindow.cpp:39
 msgid "&4. Filename"
 msgstr "&4. Fájlnév"
 
-#: krenamewindow.cpp:193
+#: krenamewindow.cpp:194
 #, kde-format
 msgid "&Finish"
 msgstr "Befeje&zés"
 
-#: krenamewindow.cpp:437
+#: krenamewindow.cpp:438
 #, kde-format
 msgid "<b>Files:</b> %1"
 msgstr "<b>Fájlok:</b> %1"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
@@ -1169,7 +1165,7 @@ msgstr ""
 "A KRename egy fájlátnevező, amellyel tömeges fájlátnevezés végezhető "
 "kifejezések alapján."
 
-#: main.cpp:48
+#: main.cpp:50
 #, kde-format
 msgid ""
 "If you like KRename you may want to support it. Testing, bug fixes and "
@@ -1181,70 +1177,70 @@ msgstr ""
 "anyagi támogatást (pénzre mindenkinek szüksége van). Részletek a "
 "dokumentációban."
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "(c) 2001-2012, Dominik Seichter\n"
 msgstr "(c) Dominik Seichter, 2001-2012.\n"
 
-#: main.cpp:55
+#: main.cpp:57
 #, kde-format
 msgid "Heiko Becker"
 msgstr ""
 
-#: main.cpp:55
+#: main.cpp:57
 #, fuzzy, kde-format
 #| msgid "developer and maintainer"
 msgid "Current maintainer"
 msgstr "fejlesztő és karbantartó"
 
-#: main.cpp:57
+#: main.cpp:59
 #, kde-format
 msgid "Dominik Seichter"
 msgstr "Dominik Seichter"
 
-#: main.cpp:57
+#: main.cpp:59
 #, fuzzy, kde-format
 #| msgid "developer and maintainer"
 msgid "Developer and former maintainer"
 msgstr "fejlesztő és karbantartó"
 
-#: main.cpp:59
+#: main.cpp:61
 #, kde-format
 msgid "Stefan \"Stonki\" Onken"
 msgstr "Stefan „Stonki” Onken"
 
-#: main.cpp:60
+#: main.cpp:62
 #, kde-format
 msgid "Website, testing, very good ideas and keeping me coding!"
 msgstr "Weboldal, tesztelés, jó ötletek, a program fejlesztésének támogatása."
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Arpad Biro"
 msgstr "Bíró Árpád"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
 msgstr "Felhasználóifelület-üzenetek és stílus javítása"
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "Trevor Semeniuk"
 msgstr "Trevor Semeniuk"
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "Red Hat 7.x-csomagok készítése és egyéb segítség."
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid "Groult Richard"
 msgstr "Groult Richard"
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
@@ -1253,22 +1249,22 @@ msgstr ""
 "Egy startIndex-hiba javítása és a BatchRenamer osztály felvétele\n"
 "a Showimg képmegjelenítőbe."
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Michael Elvers"
 msgstr "Michael Elvers"
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Fixed a bug that caused krename not closing open files."
 msgstr "Megnyitott fájlok le nem zárását okozó hiba javítása."
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid "Andreas Pour"
 msgstr "Andreas Pour"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
@@ -1277,116 +1273,116 @@ msgstr ""
 "Köszönet az apps.kde.com-on végzett munkájáért és a KRename-nek az apps.kde."
 "com-ra való felvételének segítéséért."
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid "Charles Samuels"
 msgstr "Charles Samuels"
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
 msgstr ""
 "Az ID3- illetve az Ogg-címkékkel kapcsolatos kód az ő Noatun-moduljaira épül."
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Franz Schmid"
 msgstr "Franz Schmid"
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr "Modulok készítéséhez jó kiindulást adott a Scribus program."
 
-#: main.cpp:77
+#: main.cpp:79
 #, kde-format
 msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
 
-#: main.cpp:77
+#: main.cpp:79
 #, kde-format
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr "A PNG-támogatás egyes részei az ő KFile-moduljából származnak."
 
-#: main.cpp:79
+#: main.cpp:81
 #, kde-format
 msgid "Michael v.Ostheim"
 msgstr "Michael v.Ostheim"
 
-#: main.cpp:79
+#: main.cpp:81
 #, fuzzy, kde-format
 #| msgid "Created the Gentoo Ebuild scripts for Krename."
 msgid "Created the Gentoo Ebuild scripts for KRename."
 msgstr "Gentoo Ebuild-szkriptek létrehozása a KRename-hez."
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Brandon Low"
 msgstr "Brandon Low"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "GCC 3.1-gyel kapcsolatos javítások Gentoo-hoz."
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Per Oyvind Karlsen"
 msgstr "Per Oyvind Karlsen"
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Thanks for creating the Mandrake RPM"
 msgstr "A Mandrake-hez való RPM-csomag elkészítése."
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "Vincenzo Reale"
 msgstr "Vincenzo Reale"
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "Italian translation"
 msgstr "Olasz fordítás."
 
-#: main.cpp:86
+#: main.cpp:88
 #, kde-format
 msgid "Daniele Medri"
 msgstr "Daniele Medri"
 
-#: main.cpp:86
+#: main.cpp:88
 #, kde-format
 msgid "Italian translation work"
 msgstr "Olasz fordítás."
 
-#: main.cpp:87
+#: main.cpp:89
 #, kde-format
 msgid "Stephan Johach"
 msgstr "Stephan Johach"
 
-#: main.cpp:87
+#: main.cpp:89
 #, kde-format
 msgid "Provided a gcc3.x namespace patch"
 msgstr "GCC 3.x alatti, névterekkel kapcsolatos javítás."
 
-#: main.cpp:88
+#: main.cpp:90
 #, kde-format
 msgid "Michael Zugaro"
 msgstr "Michael Zugaro"
 
-#: main.cpp:88
+#: main.cpp:90
 #, kde-format
 msgid "Provided the new preview and move features"
 msgstr "Új előnézeti és áthelyezési lehetőségek."
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid "Rene Gass"
 msgstr "Rene Gass"
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
@@ -1395,184 +1391,184 @@ msgstr ""
 "A spec-fájllal kapcsolatos problémák javítása, SUSE-hoz való RPM-ek, a "
 "KRename Gentoo alatti karbantartása."
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "Mark Ziegler"
 msgstr "Mark Ziegler"
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "Provided SuSE RPMs and very good suggestions"
 msgstr "SUSE-hoz való RPM-ek és nagyon jó javaslatok."
 
-#: main.cpp:91
+#: main.cpp:93
 #, kde-format
 msgid "Jose Rodriguez"
 msgstr "Jose Rodriguez"
 
-#: main.cpp:91
+#: main.cpp:93
 #, kde-format
 msgid "Contributed a Spanish translation"
 msgstr "Spanyol fordítás."
 
-#: main.cpp:92
+#: main.cpp:94
 #, kde-format
 msgid "Steven P. Ulrick"
 msgstr "Steven P. Ulrick"
 
-#: main.cpp:92
+#: main.cpp:94
 #, kde-format
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr "Red Hat-hez való RPM és komoly segítség a KRename fejlesztésében."
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "UTUMI Hirosi"
 msgstr "UTUMI Hirosi"
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "Translated KRename to Japanese"
 msgstr "Japán fordítás."
 
-#: main.cpp:94
+#: main.cpp:96
 #, kde-format
 msgid "Nicolas Benoit"
 msgstr "Nicolas Benoit"
 
-#: main.cpp:94
+#: main.cpp:96
 #, kde-format
 msgid "Translated KRename into French"
 msgstr "Francia fordítás."
 
-#: main.cpp:95
+#: main.cpp:97
 #, kde-format
 msgid "Krzysztof Pawlak"
 msgstr "Krzysztof Pawlak"
 
-#: main.cpp:95
+#: main.cpp:97
 #, kde-format
 msgid "Translated KRename into Polish"
 msgstr "Lengyel fordítás."
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Ilya Ivkov"
 msgstr "Ilya Ivkov"
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Translated KRename into Russian"
 msgstr "Orosz fordítás."
 
-#: main.cpp:97
+#: main.cpp:99
 #, kde-format
 msgid "Asim Husanovic"
 msgstr "Asim Husanovic"
 
-#: main.cpp:97
+#: main.cpp:99
 #, kde-format
 msgid "Translated KRename into Bosnian"
 msgstr "Bosnyák fordítás."
 
-#: main.cpp:98
+#: main.cpp:100
 #, kde-format
 msgid "Michal Smoczyk"
 msgstr "Michal Smoczyk"
 
-#: main.cpp:98
+#: main.cpp:100
 #, kde-format
 msgid "Polish Translation"
 msgstr "Lengyel fordítás."
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgid "Pavel Fric"
 msgstr "Pavel Fric"
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgid "Czech Translation"
 msgstr "Cseh fordítás."
 
-#: main.cpp:100
+#: main.cpp:102
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Kiszel Kristóf,Bíró Árpád"
 
-#: main.cpp:101
+#: main.cpp:103
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@kubuntu.org,biro.arpad@gmail.com"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "Files to be added to the list to be renamed"
 msgstr "Fájlok felvétele az átnevezendő fájlok listájába"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "[files...]"
 msgstr "[fájlok…]"
 
-#: main.cpp:110
+#: main.cpp:112
 #, kde-format
 msgid "add folder recursively"
 msgstr "Mappa rekurzív felvétele"
 
-#: main.cpp:110
+#: main.cpp:112
 #, kde-format
 msgid "folder"
 msgstr "mappa"
 
-#: main.cpp:111
+#: main.cpp:113
 #, kde-format
 msgid "set a template"
 msgstr "Sablon beállítása"
 
-#: main.cpp:112
+#: main.cpp:114
 #, kde-format
 msgid "set a template for the file extension"
 msgstr "Sablon beállítása a fájlnév-kiterjesztéshez"
 
-#: main.cpp:113
+#: main.cpp:115
 #, kde-format
 msgid "enable a plugin for use"
 msgstr "Modul bekapcsolása"
 
-#: main.cpp:114
+#: main.cpp:116
 #, kde-format
 msgid "copy files to folder or url"
 msgstr "Fájlok másolása egy mappába vagy egy URL-re"
 
-#: main.cpp:114 main.cpp:115 main.cpp:116
+#: main.cpp:116 main.cpp:117 main.cpp:118
 #, kde-format
 msgid "path or url"
 msgstr "elérési út vagy URL-cím"
 
-#: main.cpp:115
+#: main.cpp:117
 #, kde-format
 msgid "move files to folder or url"
 msgstr "Fájlok áthelyezése egy mappába vagy egy URL-re"
 
-#: main.cpp:116
+#: main.cpp:118
 #, kde-format
 msgid "link files to folder or url"
 msgstr "Fájlok linkelése egy mappába vagy egy URL-re"
 
-#: main.cpp:117
+#: main.cpp:119
 #, kde-format
 msgid "start renaming immediately"
 msgstr "Az átnevezés azonnali megkezdése"
 
-#: main.cpp:118
+#: main.cpp:120
 #, kde-format
 msgid "start KRename's selftest (developers only)"
 msgstr "A KRename öntesztjének indítása (fejlesztők számára)"
 
-#: main.cpp:137
+#: main.cpp:139
 #, fuzzy, kde-format
 #| msgid ""
 #| "<b>Krename was started from root!</b><br>When started from root, Krename "
@@ -1585,7 +1581,7 @@ msgstr ""
 "jogokkal való használattal a felhasználó problémákat idézhet elő a "
 "rendszerben."
 
-#: main.cpp:141
+#: main.cpp:143
 #, kde-format
 msgid "Error"
 msgstr "Hiba"
@@ -1978,37 +1974,37 @@ msgstr "Meg&nyitás"
 msgid "&Remove"
 msgstr "El&távolítás"
 
-#: progressdialog.cpp:18
+#: progressdialog.cpp:19
 #, kde-format
 msgid "&Rename more..."
 msgstr "&További átnevezések..."
 
-#: progressdialog.cpp:19
+#: progressdialog.cpp:20
 #, kde-format
 msgid "&Undo"
 msgstr "V&isszavonás"
 
-#: progressdialog.cpp:20
+#: progressdialog.cpp:21
 #, kde-format
 msgid "&Open Destination"
 msgstr "&Cél megnyitása"
 
-#: progressdialog.cpp:37
+#: progressdialog.cpp:38
 #, kde-format
 msgid "Restart &KRename..."
 msgstr "A &KRename újraindítása..."
 
-#: progressdialog.cpp:39
+#: progressdialog.cpp:40
 #, kde-format
 msgid "Rename Processed Files &Again..."
 msgstr "A &feldolgozott fájlok ismételt átnevezése..."
 
-#: progressdialog.cpp:40
+#: progressdialog.cpp:41
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
 msgstr "A fel &nem dolgozott fájlok ismételt átnevezése..."
 
-#: progressdialog.cpp:41
+#: progressdialog.cpp:42
 #, kde-format
 msgid "&Rename All Files Again..."
 msgstr "Az összes fájl i&smételt átnevezése..."
@@ -2159,93 +2155,93 @@ msgstr "Beállítások betö&ltése…"
 msgid "&Edit..."
 msgstr "&Szerkesztés..."
 
-#: scriptplugin.cpp:90
+#: scriptplugin.cpp:89
 #, kde-format
 msgid "JavaScript Plugin"
 msgstr "JavaScript modul"
 
-#: scriptplugin.cpp:97
+#: scriptplugin.cpp:96
 #, kde-format
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "JavaScript-kódrészlet (jelen esetben 4+5) beillesztése"
 
-#: scriptplugin.cpp:99
+#: scriptplugin.cpp:98
 #, kde-format
 msgid "Index of the current file"
 msgstr "Az aktuális fájl indexe"
 
-#: scriptplugin.cpp:100
+#: scriptplugin.cpp:99
 #, kde-format
 msgid "URL of the current file"
 msgstr "Az aktuális fájl URL-je"
 
-#: scriptplugin.cpp:101
+#: scriptplugin.cpp:100
 #, kde-format
 msgid "Filename of the current file"
 msgstr "Az aktuális fájl neve"
 
-#: scriptplugin.cpp:102
+#: scriptplugin.cpp:101
 #, kde-format
 msgid "Extension of the current file"
 msgstr "Az aktuális fájl kiterjesztése"
 
-#: scriptplugin.cpp:103
+#: scriptplugin.cpp:102
 #, kde-format
 msgid "Directory of the current file"
 msgstr "Az aktuális fájl könyvtára"
 
-#: scriptplugin.cpp:155
+#: scriptplugin.cpp:154
 #, kde-format
 msgid "Variable Name"
 msgstr "Változónév"
 
-#: scriptplugin.cpp:156
+#: scriptplugin.cpp:155
 #, kde-format
 msgid "Initial Value"
 msgstr "Kezdőérték"
 
-#: scriptplugin.cpp:248
+#: scriptplugin.cpp:247
 #, kde-format
 msgid "String"
 msgstr "Szöveg"
 
-#: scriptplugin.cpp:249
+#: scriptplugin.cpp:248
 #, kde-format
 msgid "Int"
 msgstr "Egész"
 
-#: scriptplugin.cpp:250
+#: scriptplugin.cpp:249
 #, kde-format
 msgid "Double"
 msgstr "Dupla pontosságú"
 
-#: scriptplugin.cpp:251
+#: scriptplugin.cpp:250
 #, kde-format
 msgid "Boolean"
 msgstr "Logikai"
 
-#: scriptplugin.cpp:266
+#: scriptplugin.cpp:265
 #, kde-format
 msgid "A JavaScript error has occurred: "
 msgstr "JavaScript-hiba történt: "
 
-#: scriptplugin.cpp:290
+#: scriptplugin.cpp:289
 #, kde-format
 msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr "A jelenleg megadott összes definíció elvész. Szeretné folytatni?"
 
-#: scriptplugin.cpp:297 scriptplugin.cpp:316
+#: scriptplugin.cpp:296 scriptplugin.cpp:315
 #, kde-format
 msgid "Select file"
 msgstr "Fájl kiválasztása"
 
-#: scriptplugin.cpp:327
+#: scriptplugin.cpp:326
 #, kde-format
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "Már létezik \"%1\" nevű fájl. Szeretné felülírni azt?"
 
-#: scriptplugin.cpp:345
+#: scriptplugin.cpp:344
 #, kde-format
 msgid "Unable to open %1 for writing."
 msgstr "\"%1\" nem nyitható meg írásra."
@@ -2428,102 +2424,102 @@ msgstr "Adja meg az új fájlneveket egy sablon megadásával..."
 msgid "Hint: Undo is still possible after renaming your files."
 msgstr "Megjegyzés: a fájlok átnevezése után vissza lehet vonni a műveletet."
 
-#: systemplugin.cpp:38
+#: systemplugin.cpp:37
 #, kde-format
 msgid "Insert the current date"
 msgstr "Az aktuális dátum beillesztése"
 
-#: systemplugin.cpp:39
+#: systemplugin.cpp:38
 #, kde-format
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "Az aktuális dátum beillesztése éééé-HH-nn formátumban"
 
-#: systemplugin.cpp:40
+#: systemplugin.cpp:39
 #, kde-format
 msgid "Insert the current year"
 msgstr "Az aktuális év beillesztése"
 
-#: systemplugin.cpp:41
+#: systemplugin.cpp:40
 #, kde-format
 msgid "Insert the current month as number"
 msgstr "Az aktuális hónap beillesztése számként"
 
-#: systemplugin.cpp:42
+#: systemplugin.cpp:41
 #, kde-format
 msgid "Insert the current day as number"
 msgstr "Az aktuális nap beillesztése számként"
 
-#: systemplugin.cpp:43
+#: systemplugin.cpp:42
 #, kde-format
 msgid "Insert the current time"
 msgstr "Az aktuális idő beillesztése"
 
-#: systemplugin.cpp:44
+#: systemplugin.cpp:43
 #, kde-format
 msgid "Insert the current hour as number"
 msgstr "Az aktuális óra beillesztése számként"
 
-#: systemplugin.cpp:45
+#: systemplugin.cpp:44
 #, kde-format
 msgid "Insert the current minute as number"
 msgstr "Az aktuális perc beillesztése számként"
 
-#: systemplugin.cpp:46
+#: systemplugin.cpp:45
 #, kde-format
 msgid "Insert the current second as number"
 msgstr "Az aktuális másodperc beillesztése számként"
 
-#: systemplugin.cpp:47
+#: systemplugin.cpp:46
 #, kde-format
 msgid "Owner of the file"
 msgstr "A fájl tulajdonosa"
 
-#: systemplugin.cpp:48
+#: systemplugin.cpp:47
 #, kde-format
 msgid "Owning group of the file"
 msgstr "A fájlt birtokló csoport"
 
-#: systemplugin.cpp:49
+#: systemplugin.cpp:48
 #, kde-format
 msgid "Insert the files creation date"
 msgstr "A fájl létrehozási dátumának beillesztése"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:49
 #, kde-format
 msgid "Insert the formatted file creation date"
 msgstr "A fájl létrehozási dátumának beillesztése formázott módon"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:50
 #, kde-format
 msgid "Insert the files modification date"
 msgstr "A fájl módosítási dátumának beillesztése"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:51
 #, kde-format
 msgid "Insert the formatted modification date"
 msgstr "A fájl módosítási dátumának beillesztése formázott módon"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:52
 #, kde-format
 msgid "Insert the date of the last file access"
 msgstr "A fájl legutóbbi elérésének dátumának beillesztése"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:53
 #, kde-format
 msgid "Insert the formatted date of the last file access"
 msgstr "A fájl legutóbbi elérésének dátumának beillesztése formázott módon"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:54
 #, kde-format
 msgid "Insert the file size in bytes"
 msgstr "A fájl bájtban mért méretének beillesztése"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:56
 #, kde-format
 msgid "Date and system functions"
 msgstr "Dátum- és rendszerfunkciók"
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:58
 #, kde-format
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "

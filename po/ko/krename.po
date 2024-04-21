@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 01:46+0000\n"
+"POT-Creation-Date: 2024-04-21 01:44+0000\n"
 "PO-Revision-Date: 2023-07-25 00:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,103 +18,103 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: batchrenamer.cpp:188 batchrenamer.cpp:659
+#: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
 msgid "Input files will be renamed."
 msgstr "입력 파일의 이름을 변경합니다."
 
-#: batchrenamer.cpp:191 batchrenamer.cpp:653
+#: batchrenamer.cpp:195 batchrenamer.cpp:656
 #, kde-format
 msgid "Files will be copied to: %1"
 msgstr "파일이 다음 위치로 복사됨: %1"
 
-#: batchrenamer.cpp:194 batchrenamer.cpp:655
+#: batchrenamer.cpp:198 batchrenamer.cpp:658
 #, kde-format
 msgid "Files will be moved to: %1"
 msgstr "파일이 다음 위치로 이동됨: %1"
 
-#: batchrenamer.cpp:197 batchrenamer.cpp:657
+#: batchrenamer.cpp:201 batchrenamer.cpp:660
 #, kde-format
 msgid "Symbolic links will be created in: %1"
 msgstr "심볼릭 링크가 다음 위치에 생성됨: %1"
 
-#: batchrenamer.cpp:218
+#: batchrenamer.cpp:222
 #, kde-format
 msgid "Cannot rename: source and target filename are equal: %1"
 msgstr "이름을 바꿀 수 없음: 원본 및 대상 파일 이름이 동일함: %1"
 
-#: batchrenamer.cpp:236
+#: batchrenamer.cpp:240
 #, kde-format
 msgid "Cannot create symlink to non-local URL: %1"
 msgstr "로컬이 아닌 URL에 대한 심볼릭 링크를 만들 수 없음: %1"
 
-#: batchrenamer.cpp:250 dirsortplugin.cpp:121
+#: batchrenamer.cpp:254 dirsortplugin.cpp:122
 #, kde-format
 msgid "Error renaming %2 (to %1)"
 msgstr "%2(%1(으)로) 이름 변경 중 오류 발생"
 
-#: batchrenamer.cpp:273 batchrenamer.cpp:397 batchrenamer.cpp:732
+#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:735
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
 msgstr[0] "오류 %1개가 발생함."
 
-#: batchrenamer.cpp:276 batchrenamer.cpp:736
+#: batchrenamer.cpp:280 batchrenamer.cpp:739
 #, kde-format
 msgid "KRename finished the renaming process."
 msgstr "KRename이 이름 바꾸기 작업을 완료했습니다."
 
-#: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:737
+#: batchrenamer.cpp:281 batchrenamer.cpp:405 batchrenamer.cpp:740
 #, kde-format
 msgid "Press close to quit."
 msgstr "닫기를 눌러 종료하십시오."
 
-#: batchrenamer.cpp:341
+#: batchrenamer.cpp:345
 #, kde-format
 msgid "Filenames Processed after %1 seconds."
 msgstr "파일 이름이 %1초 후에 처리되었습니다."
 
-#: batchrenamer.cpp:356
+#: batchrenamer.cpp:360
 #, kde-format
 msgid "Undoing all renamed files."
 msgstr "모든 파일 이름 바꾸기를 취소합니다."
 
-#: batchrenamer.cpp:388
+#: batchrenamer.cpp:392
 #, kde-format
 msgid "Error during undoing %1"
 msgstr "%1 실행 취소 중 오류 발생"
 
-#: batchrenamer.cpp:400
+#: batchrenamer.cpp:404
 #, kde-format
 msgid "KRename finished the undo process."
 msgstr "KRename이 실행 취소 작업을 완료했습니다."
 
-#: batchrenamer.cpp:640
+#: batchrenamer.cpp:643
 #, kde-format
 msgid "Cannot create undo script: %1"
 msgstr "실행 취소 스크립트를 만들 수 없음: %1"
 
-#: batchrenamer.cpp:714
+#: batchrenamer.cpp:717
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
 msgstr "원격 파일의 실행 취소를 할 수 없음: %1"
 
-#: batchrenamer.cpp:728
+#: batchrenamer.cpp:731
 #, kde-format
 msgid "Renamed %1 files successfully."
 msgstr "파일 %1개의 이름을 성공적으로 변경했습니다."
 
-#: batchrenamer.cpp:735
+#: batchrenamer.cpp:738
 #, kde-format
 msgid "Elapsed time: %1 seconds"
 msgstr "경과 시간: %1초"
 
-#: batchrenamer.cpp:747
+#: batchrenamer.cpp:750
 #, kde-format
 msgid "Cannot set executable bit on undo script."
 msgstr "실행 취소 스크립트에 실행 비트를 설정할 수 없습니다."
 
-#: batchrenamer.cpp:1167
+#: batchrenamer.cpp:1170
 #, kde-format
 msgid "Cannot create directory %1: %2"
 msgstr "%1 디렉터리를 만들 수 없음: %2"
@@ -224,12 +224,12 @@ msgstr "시간:"
 msgid "Get &Current Time"
 msgstr "현재 시간 가져오기(&C)"
 
-#: dirsortplugin.cpp:28
+#: dirsortplugin.cpp:29
 #, kde-format
 msgid "Subfolder-Sort Plugin"
 msgstr "하위 폴더 정렬 플러그인"
 
-#: dirsortplugin.cpp:90
+#: dirsortplugin.cpp:91
 #, kde-format
 msgid "%1: The output folder %2 does not exist."
 msgstr "%1: 출력 폴더 %2이(가) 없습니다."
@@ -363,7 +363,7 @@ msgstr ""
 "이 옵션을 사용하면 KRename은 선택한 파일의 기본 폴더 이름을 목록에 추가합니"
 "다."
 
-#: fileplugin.cpp:70
+#: fileplugin.cpp:71
 #, kde-format
 msgid "Supported tokens:"
 msgstr "지원하는 토큰:"
@@ -921,175 +921,175 @@ msgstr "위로"
 msgid "Down"
 msgstr "아래로"
 
-#: krenameimpl.cpp:353
+#: krenameimpl.cpp:355
 #, kde-format
 msgid "Do you really want to remove all files from the list?"
 msgstr "목록에서 모든 파일을 삭제하시겠습니까?"
 
-#: krenameimpl.cpp:354 main.cpp:43
+#: krenameimpl.cpp:356 main.cpp:45
 #, kde-format
 msgid "KRename"
 msgstr "KRename"
 
-#: krenameimpl.cpp:470
+#: krenameimpl.cpp:474
 #, kde-format
 msgid "old filename"
 msgstr "이전 파일 이름"
 
-#: krenameimpl.cpp:471
+#: krenameimpl.cpp:475
 #, kde-format
 msgid "old filename converted to lower case"
 msgstr "이전 파일 이름 소문자로 변경"
 
-#: krenameimpl.cpp:472
+#: krenameimpl.cpp:476
 #, kde-format
 msgid "old filename converted to upper case"
 msgstr "이전 파일 이름 대문자로 변경"
 
-#: krenameimpl.cpp:473
+#: krenameimpl.cpp:477
 #, kde-format
 msgid "first letter of every word upper case"
 msgstr "모든 단어의 첫 글자 대문자"
 
-#: krenameimpl.cpp:474
+#: krenameimpl.cpp:478
 #, kde-format
 msgid "first letter of filename upper case"
 msgstr "파일 이름의 첫 글자 대문자"
 
-#: krenameimpl.cpp:475
+#: krenameimpl.cpp:479
 #, kde-format
 msgid "number (try also ##, ###, ... for leading zeros)"
 msgstr "숫자(0을 앞에 붙이려면 ##, ###, ... 를 사용)"
 
-#: krenameimpl.cpp:476
+#: krenameimpl.cpp:480
 #, kde-format
 msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "사용자 지정 시작 값이 0이고 사용자 지정 단계별 값이 1인 문자 카운터"
 
-#: krenameimpl.cpp:477
+#: krenameimpl.cpp:481
 #, kde-format
 msgid "create a subfolder"
 msgstr "하위 폴더 만들기"
 
-#: krenameimpl.cpp:478
+#: krenameimpl.cpp:482
 #, kde-format
 msgid "character x to y of old filename"
 msgstr "이전 파일 이름의 x번째부터 y번째까지 문자"
 
-#: krenameimpl.cpp:479
+#: krenameimpl.cpp:483
 #, kde-format
 msgid "y characters of old filename starting at x"
 msgstr "이전 파일 이름의 x번째부터 시작하여 y문자"
 
-#: krenameimpl.cpp:480
+#: krenameimpl.cpp:484
 #, kde-format
 msgid "insert name of folder"
 msgstr "폴더 이름 삽입"
 
-#: krenameimpl.cpp:481
+#: krenameimpl.cpp:485
 #, kde-format
 msgid "insert name of parent folder"
 msgstr "상위 폴더 이름 삽입"
 
-#: krenameimpl.cpp:482
+#: krenameimpl.cpp:486
 #, kde-format
 msgid ""
 "insert a '/' to create a new subfolder (useful from within regular "
 "expressions)"
 msgstr "'/'을 삽입하여 새 하위 폴더 생성(정규식 내에서 사용)"
 
-#: krenameimpl.cpp:483
+#: krenameimpl.cpp:487
 #, kde-format
 msgid "insert the length of the input filename"
 msgstr "입력 파일 이름 길이 삽입"
 
-#: krenameimpl.cpp:484
+#: krenameimpl.cpp:488
 #, kde-format
 msgid "strip whitespaces leading and trailing"
 msgstr "앞뒤 공백 삭제"
 
-#: krenameimpl.cpp:485
+#: krenameimpl.cpp:489
 #, kde-format
 msgid "strip whitespaces leading and trailing of an arbitrary string"
 msgstr "임의 문자열의 앞뒤 공백 삭제"
 
-#: krenameimpl.cpp:486
+#: krenameimpl.cpp:490
 #, kde-format
 msgid "Built-in Functions"
 msgstr "내장 함수"
 
-#: krenameimpl.cpp:489
+#: krenameimpl.cpp:493
 #, kde-format
 msgid "Insert '$'"
 msgstr "'$' 삽입"
 
-#: krenameimpl.cpp:490
+#: krenameimpl.cpp:494
 #, kde-format
 msgid "Insert '%'"
 msgstr "'%' 삽입"
 
-#: krenameimpl.cpp:491
+#: krenameimpl.cpp:495
 #, kde-format
 msgid "Insert '&'"
 msgstr "'&' 삽입"
 
-#: krenameimpl.cpp:492
+#: krenameimpl.cpp:496
 #, kde-format
 msgid "Insert '*'"
 msgstr "'*' 삽입"
 
-#: krenameimpl.cpp:493
+#: krenameimpl.cpp:497
 #, kde-format
 msgid "Insert '/'"
 msgstr "'/' 삽입"
 
-#: krenameimpl.cpp:494
+#: krenameimpl.cpp:498
 #, kde-format
 msgid "Insert '\\\\'"
 msgstr "'\\\\' 삽입"
 
-#: krenameimpl.cpp:495
+#: krenameimpl.cpp:499
 #, kde-format
 msgid "Insert '['"
 msgstr "'[' 삽입"
 
-#: krenameimpl.cpp:496
+#: krenameimpl.cpp:500
 #, kde-format
 msgid "Insert ']'"
 msgstr "']' 삽입"
 
-#: krenameimpl.cpp:497
+#: krenameimpl.cpp:501
 #, kde-format
 msgid "Insert '#'"
 msgstr "'#' 삽입"
 
-#: krenameimpl.cpp:498
+#: krenameimpl.cpp:502
 #, kde-format
 msgid "Special Characters"
 msgstr "특수 문자"
 
-#: krenameimpl.cpp:539
+#: krenameimpl.cpp:543
 #, kde-format
 msgid "Starting conversion of %1 file."
 msgid_plural "Starting conversion of %1 files."
 msgstr[0] "파일 %1개의 변환을 시작하는 중입니다."
 
-#: krenameimpl.cpp:551
+#: krenameimpl.cpp:555
 #, kde-format
 msgid "The folder %1 does not exist. Do you want KRename to create it for you?"
 msgstr "%1 폴더가 없습니다. 생성하시겠습니까?"
 
-#: krenameimpl.cpp:561
+#: krenameimpl.cpp:565
 #, kde-format
 msgid "The folder %1 could not be created."
 msgstr "%1 폴더를 만들 수 없습니다."
 
-#: krenamemodel.cpp:422
+#: krenamemodel.cpp:425
 #, kde-format
 msgid "Origin"
 msgstr "원래 이름"
 
-#: krenamemodel.cpp:422
+#: krenamemodel.cpp:425
 #, kde-format
 msgid "Renamed"
 msgstr "변경된 이름"
@@ -1116,37 +1116,33 @@ msgstr "플러그인 활성화(&E)"
 msgid "?"
 msgstr "?"
 
-#: krenamewindow.cpp:35
-#, kde-format
+#: krenamewindow.cpp:36
 msgid "&1. Files"
 msgstr "&1. 파일"
 
-#: krenamewindow.cpp:36
-#, kde-format
+#: krenamewindow.cpp:37
 msgid "&2. Destination"
 msgstr "&2. 대상"
 
-#: krenamewindow.cpp:37
-#, kde-format
+#: krenamewindow.cpp:38
 msgid "&3. Plugins"
 msgstr "&3. 플러그인"
 
-#: krenamewindow.cpp:38
-#, kde-format
+#: krenamewindow.cpp:39
 msgid "&4. Filename"
 msgstr "&4. 파일 이름"
 
-#: krenamewindow.cpp:193
+#: krenamewindow.cpp:194
 #, kde-format
 msgid "&Finish"
 msgstr "완료(&F)"
 
-#: krenamewindow.cpp:437
+#: krenamewindow.cpp:438
 #, kde-format
 msgid "<b>Files:</b> %1"
 msgstr "<b>파일:</b> %1"
 
-#: main.cpp:45
+#: main.cpp:47
 #, kde-format
 msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
@@ -1155,7 +1151,7 @@ msgstr ""
 "KRename은 일련의 표현식을 기반으로 파일 목록의 이름을 바꿀 수 있는 일괄 파일"
 "이름 변경 프로그램입니다."
 
-#: main.cpp:48
+#: main.cpp:50
 #, kde-format
 msgid ""
 "If you like KRename you may want to support it. Testing, bug fixes and "
@@ -1165,68 +1161,68 @@ msgstr ""
 "KRename이 마음에 드시면 지원해 주세요. 테스트, 버그 수정 및 기능 요청은 재정"
 "적 지원만큼 환영합니다. 자세한 내용은 도움말 파일을 참조하십시오."
 
-#: main.cpp:52
+#: main.cpp:54
 #, kde-format
 msgid "(c) 2001-2012, Dominik Seichter\n"
 msgstr "(c) 2001-2012, Dominik Seichter\n"
 
-#: main.cpp:55
+#: main.cpp:57
 #, kde-format
 msgid "Heiko Becker"
 msgstr "Heiko Becker"
 
-#: main.cpp:55
+#: main.cpp:57
 #, kde-format
 msgid "Current maintainer"
 msgstr "현재 관리자"
 
-#: main.cpp:57
+#: main.cpp:59
 #, kde-format
 msgid "Dominik Seichter"
 msgstr "Dominik Seichter"
 
-#: main.cpp:57
+#: main.cpp:59
 #, kde-format
 msgid "Developer and former maintainer"
 msgstr "개발자 및 이전 관리자"
 
-#: main.cpp:59
+#: main.cpp:61
 #, kde-format
 msgid "Stefan \"Stonki\" Onken"
 msgstr "Stefan \"Stonki\" Onken"
 
-#: main.cpp:60
+#: main.cpp:62
 #, kde-format
 msgid "Website, testing, very good ideas and keeping me coding!"
 msgstr "웹사이트, 테스트, 아주 좋은 아이디어와 날 계속 코딩하게 하네요!"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid "Arpad Biro"
 msgstr "Arpad Biro"
 
-#: main.cpp:63
+#: main.cpp:65
 #, kde-format
 msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
 msgstr "스타일 가이드 문제를 해결하고 사용자 메시지를 개선했습니다."
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "Trevor Semeniuk"
 msgstr "Trevor Semeniuk"
 
-#: main.cpp:64
+#: main.cpp:66
 #, kde-format
 msgid "Thanks to him for creating RedHat 7.x packages and some other help."
 msgstr "레드햇 7.x 패키지를 만들고 다른 도움도 주셔서 감사합니다."
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid "Groult Richard"
 msgstr "Groult Richard"
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
@@ -1235,22 +1231,22 @@ msgstr ""
 "시작 인덱스로 버그 수정 및 우수한 이미지 뷰어 showimg에 일괄 이름 변경 프로그"
 "램 클래스를 추가했습니다."
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Michael Elvers"
 msgstr "Michael Elvers"
 
-#: main.cpp:69
+#: main.cpp:71
 #, kde-format
 msgid "Fixed a bug that caused krename not closing open files."
 msgstr "KRename이 열린 파일을 닫지 못하게 하는 버그가 수정되었습니다."
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid "Andreas Pour"
 msgstr "Andreas Pour"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
@@ -1259,114 +1255,114 @@ msgstr ""
 "apps.kde.com 사이트 작업에 감사를 드리며 KRename을 apps.kde.com에 등재하는 "
 "데 도움을 주셔서 감사합니다."
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid "Charles Samuels"
 msgstr "Charles Samuels"
 
-#: main.cpp:73
+#: main.cpp:75
 #, kde-format
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
 msgstr "noatun에 감사드리며 ID3/Ogg 태그 코드는 noatun 모듈을 기반으로 합니다."
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Franz Schmid"
 msgstr "Franz Schmid"
 
-#: main.cpp:75
+#: main.cpp:77
 #, kde-format
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr "Scribus를 통해서 플러그인 작성 시작에 도움을 주었습니다."
 
-#: main.cpp:77
+#: main.cpp:79
 #, kde-format
 msgid "Rolf Magnus"
 msgstr "Rolf Magnus"
 
-#: main.cpp:77
+#: main.cpp:79
 #, kde-format
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr "PNG 지원 부분은 KFile PNG 지원 플러그인에서 복사되었습니다."
 
-#: main.cpp:79
+#: main.cpp:81
 #, kde-format
 msgid "Michael v.Ostheim"
 msgstr "Michael v.Ostheim"
 
-#: main.cpp:79
+#: main.cpp:81
 #, kde-format
 msgid "Created the Gentoo Ebuild scripts for KRename."
 msgstr "KRename의 젠투 ebuild 스크립트를 작성했습니다."
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Brandon Low"
 msgstr "Brandon Low"
 
-#: main.cpp:81
+#: main.cpp:83
 #, kde-format
 msgid "Some GCC 3.1 fixes for Gentoo."
 msgstr "젠투용 일부 GCC 3.1 수정."
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Per Oyvind Karlsen"
 msgstr "Per Oyvind Karlsen"
 
-#: main.cpp:83
+#: main.cpp:85
 #, kde-format
 msgid "Thanks for creating the Mandrake RPM"
 msgstr "맨드레이크 RPM을 만들어 주셔서 감사합니다"
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "Vincenzo Reale"
 msgstr "Vincenzo Reale"
 
-#: main.cpp:85
+#: main.cpp:87
 #, kde-format
 msgid "Italian translation"
 msgstr "이탈리아어 번역"
 
-#: main.cpp:86
+#: main.cpp:88
 #, kde-format
 msgid "Daniele Medri"
 msgstr "Daniele Medri"
 
-#: main.cpp:86
+#: main.cpp:88
 #, kde-format
 msgid "Italian translation work"
 msgstr "이탈리아어 번역 작업"
 
-#: main.cpp:87
+#: main.cpp:89
 #, kde-format
 msgid "Stephan Johach"
 msgstr "Stephan Johach"
 
-#: main.cpp:87
+#: main.cpp:89
 #, kde-format
 msgid "Provided a gcc3.x namespace patch"
 msgstr "GCC 3.x 네임스페이스 패치 제공"
 
-#: main.cpp:88
+#: main.cpp:90
 #, kde-format
 msgid "Michael Zugaro"
 msgstr "Michael Zugaro"
 
-#: main.cpp:88
+#: main.cpp:90
 #, kde-format
 msgid "Provided the new preview and move features"
 msgstr "새로운 미리 보기 및 이동 기능 제공"
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid "Rene Gass"
 msgstr "Rene Gass"
 
-#: main.cpp:89
+#: main.cpp:91
 #, kde-format
 msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
@@ -1375,184 +1371,184 @@ msgstr ""
 "spec 파일 오류 수정, 모든 출시된 SuSE 버전으로 RPM 파일 작성, 새로운 KRename"
 "의 젠투 관리자"
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "Mark Ziegler"
 msgstr "Mark Ziegler"
 
-#: main.cpp:90
+#: main.cpp:92
 #, kde-format
 msgid "Provided SuSE RPMs and very good suggestions"
 msgstr "SuSE RPM 및 아주 좋은 제안 제공"
 
-#: main.cpp:91
+#: main.cpp:93
 #, kde-format
 msgid "Jose Rodriguez"
 msgstr "Jose Rodriguez"
 
-#: main.cpp:91
+#: main.cpp:93
 #, kde-format
 msgid "Contributed a Spanish translation"
 msgstr "스페인어 번역 기여"
 
-#: main.cpp:92
+#: main.cpp:94
 #, kde-format
 msgid "Steven P. Ulrick"
 msgstr "Steven P. Ulrick"
 
-#: main.cpp:92
+#: main.cpp:94
 #, kde-format
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr "레드햇 RPM 제공 및 KRename 개선에 큰 도움 제공"
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "UTUMI Hirosi"
 msgstr "UTUMI Hirosi"
 
-#: main.cpp:93
+#: main.cpp:95
 #, kde-format
 msgid "Translated KRename to Japanese"
 msgstr "KRename을 일본어로 번역"
 
-#: main.cpp:94
+#: main.cpp:96
 #, kde-format
 msgid "Nicolas Benoit"
 msgstr "Nicolas Benoit"
 
-#: main.cpp:94
+#: main.cpp:96
 #, kde-format
 msgid "Translated KRename into French"
 msgstr "KRename을 프랑스어로 번역"
 
-#: main.cpp:95
+#: main.cpp:97
 #, kde-format
 msgid "Krzysztof Pawlak"
 msgstr "Krzysztof Pawlak"
 
-#: main.cpp:95
+#: main.cpp:97
 #, kde-format
 msgid "Translated KRename into Polish"
 msgstr "KRename을 폴란드어로 번역"
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Ilya Ivkov"
 msgstr "Ilya Ivkov"
 
-#: main.cpp:96
+#: main.cpp:98
 #, kde-format
 msgid "Translated KRename into Russian"
 msgstr "KRename을 러시아어로 번역"
 
-#: main.cpp:97
+#: main.cpp:99
 #, kde-format
 msgid "Asim Husanovic"
 msgstr "Asim Husanovic"
 
-#: main.cpp:97
+#: main.cpp:99
 #, kde-format
 msgid "Translated KRename into Bosnian"
 msgstr "KRename을 보스니아어로 번역"
 
-#: main.cpp:98
+#: main.cpp:100
 #, kde-format
 msgid "Michal Smoczyk"
 msgstr "Michal Smoczyk"
 
-#: main.cpp:98
+#: main.cpp:100
 #, kde-format
 msgid "Polish Translation"
 msgstr "폴란드어 번역"
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgid "Pavel Fric"
 msgstr "Pavel Fric"
 
-#: main.cpp:99
+#: main.cpp:101
 #, kde-format
 msgid "Czech Translation"
 msgstr "체코어 번역"
 
-#: main.cpp:100
+#: main.cpp:102
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "이정희"
 
-#: main.cpp:101
+#: main.cpp:103
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "daemul72@gmail.com"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "Files to be added to the list to be renamed"
 msgstr "이름을 변경할 목록에 추가할 파일"
 
-#: main.cpp:109
+#: main.cpp:111
 #, kde-format
 msgid "[files...]"
 msgstr "[파일...]"
 
-#: main.cpp:110
+#: main.cpp:112
 #, kde-format
 msgid "add folder recursively"
 msgstr "재귀적으로 폴더 추가"
 
-#: main.cpp:110
+#: main.cpp:112
 #, kde-format
 msgid "folder"
 msgstr "폴더"
 
-#: main.cpp:111
+#: main.cpp:113
 #, kde-format
 msgid "set a template"
 msgstr "템플릿 설정"
 
-#: main.cpp:112
+#: main.cpp:114
 #, kde-format
 msgid "set a template for the file extension"
 msgstr "파일 확장자에 대한 템플릿 설정"
 
-#: main.cpp:113
+#: main.cpp:115
 #, kde-format
 msgid "enable a plugin for use"
 msgstr "사용할 플러그인 활성화"
 
-#: main.cpp:114
+#: main.cpp:116
 #, kde-format
 msgid "copy files to folder or url"
 msgstr "파일을 폴더 또는 URL에 복사"
 
-#: main.cpp:114 main.cpp:115 main.cpp:116
+#: main.cpp:116 main.cpp:117 main.cpp:118
 #, kde-format
 msgid "path or url"
 msgstr "경로 또는 URL"
 
-#: main.cpp:115
+#: main.cpp:117
 #, kde-format
 msgid "move files to folder or url"
 msgstr "폴더 또는 URL로 파일 이동"
 
-#: main.cpp:116
+#: main.cpp:118
 #, kde-format
 msgid "link files to folder or url"
 msgstr "폴더 또는 URL에 파일 링크"
 
-#: main.cpp:117
+#: main.cpp:119
 #, kde-format
 msgid "start renaming immediately"
 msgstr "즉시 이름 바꾸기 시작"
 
-#: main.cpp:118
+#: main.cpp:120
 #, kde-format
 msgid "start KRename's selftest (developers only)"
 msgstr "KRename의 자가 진단 시작(개발자 전용)"
 
-#: main.cpp:137
+#: main.cpp:139
 #, kde-format
 msgid ""
 "<b>KRename was started from root!</b><br>When started from root, KRename may "
@@ -1561,7 +1557,7 @@ msgstr ""
 "<b>KRename이 루트 권한으로 시작됨!</b><br>루트 권한으로 시작되었다면, 정확히 "
 "무엇을 하고 있는지 모른다면 KRename이 시스템을 손상시킬 수 있습니다!"
 
-#: main.cpp:141
+#: main.cpp:143
 #, kde-format
 msgid "Error"
 msgstr "오류"
@@ -1943,37 +1939,37 @@ msgstr "열기(&O)"
 msgid "&Remove"
 msgstr "삭제(&R)"
 
-#: progressdialog.cpp:18
+#: progressdialog.cpp:19
 #, kde-format
 msgid "&Rename more..."
 msgstr "더 많은 이름 바꾸기(&R)..."
 
-#: progressdialog.cpp:19
+#: progressdialog.cpp:20
 #, kde-format
 msgid "&Undo"
 msgstr "실행 취소(&U)"
 
-#: progressdialog.cpp:20
+#: progressdialog.cpp:21
 #, kde-format
 msgid "&Open Destination"
 msgstr "대상 열기(&O)"
 
-#: progressdialog.cpp:37
+#: progressdialog.cpp:38
 #, kde-format
 msgid "Restart &KRename..."
 msgstr "KRename 다시 시작(&K)..."
 
-#: progressdialog.cpp:39
+#: progressdialog.cpp:40
 #, kde-format
 msgid "Rename Processed Files &Again..."
 msgstr "처리된 파일의 이름 다시 바꾸기(&A)..."
 
-#: progressdialog.cpp:40
+#: progressdialog.cpp:41
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
 msgstr "처리되지 않은 파일의 이름 다시 바꾸기(&U)..."
 
-#: progressdialog.cpp:41
+#: progressdialog.cpp:42
 #, kde-format
 msgid "&Rename All Files Again..."
 msgstr "모든 파일의 이름 다시 바꾸기(&R)..."
@@ -2127,93 +2123,93 @@ msgstr "설정 불러오기(&L)..."
 msgid "&Edit..."
 msgstr "편집(&E)..."
 
-#: scriptplugin.cpp:90
+#: scriptplugin.cpp:89
 #, kde-format
 msgid "JavaScript Plugin"
 msgstr "자바스크립트 플러그인"
 
-#: scriptplugin.cpp:97
+#: scriptplugin.cpp:96
 #, kde-format
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "자바스크립트 코드 스니펫 삽입(이 경우 4+5)"
 
-#: scriptplugin.cpp:99
+#: scriptplugin.cpp:98
 #, kde-format
 msgid "Index of the current file"
 msgstr "현재 파일의 인덱스"
 
-#: scriptplugin.cpp:100
+#: scriptplugin.cpp:99
 #, kde-format
 msgid "URL of the current file"
 msgstr "현재 파일의 URL"
 
-#: scriptplugin.cpp:101
+#: scriptplugin.cpp:100
 #, kde-format
 msgid "Filename of the current file"
 msgstr "현재 파일의 파일 이름"
 
-#: scriptplugin.cpp:102
+#: scriptplugin.cpp:101
 #, kde-format
 msgid "Extension of the current file"
 msgstr "현재 파일의 확장자"
 
-#: scriptplugin.cpp:103
+#: scriptplugin.cpp:102
 #, kde-format
 msgid "Directory of the current file"
 msgstr "현재 파일의 디렉터리"
 
-#: scriptplugin.cpp:155
+#: scriptplugin.cpp:154
 #, kde-format
 msgid "Variable Name"
 msgstr "변수 이름"
 
-#: scriptplugin.cpp:156
+#: scriptplugin.cpp:155
 #, kde-format
 msgid "Initial Value"
 msgstr "초기 값"
 
-#: scriptplugin.cpp:248
+#: scriptplugin.cpp:247
 #, kde-format
 msgid "String"
 msgstr "문자열"
 
-#: scriptplugin.cpp:249
+#: scriptplugin.cpp:248
 #, kde-format
 msgid "Int"
 msgstr "정수"
 
-#: scriptplugin.cpp:250
+#: scriptplugin.cpp:249
 #, kde-format
 msgid "Double"
 msgstr "실수"
 
-#: scriptplugin.cpp:251
+#: scriptplugin.cpp:250
 #, kde-format
 msgid "Boolean"
 msgstr "참/거짓"
 
-#: scriptplugin.cpp:266
+#: scriptplugin.cpp:265
 #, kde-format
 msgid "A JavaScript error has occurred: "
 msgstr "자바스크립트 오류가 발생했습니다: "
 
-#: scriptplugin.cpp:290
+#: scriptplugin.cpp:289
 #, kde-format
 msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
 msgstr "현재 입력된 모든 정의가 손실됩니다. 계속 진행하시겠습니까?"
 
-#: scriptplugin.cpp:297 scriptplugin.cpp:316
+#: scriptplugin.cpp:296 scriptplugin.cpp:315
 #, kde-format
 msgid "Select file"
 msgstr "파일 선택"
 
-#: scriptplugin.cpp:327
+#: scriptplugin.cpp:326
 #, kde-format
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "%1 파일이 이미 있습니다. 덮어쓰시겠습니까?"
 
-#: scriptplugin.cpp:345
+#: scriptplugin.cpp:344
 #, kde-format
 msgid "Unable to open %1 for writing."
 msgstr "쓰려고 %1을(를) 열 수 없습니다."
@@ -2383,102 +2379,102 @@ msgstr "템플릿을 지정하여 새 파일 이름 지정..."
 msgid "Hint: Undo is still possible after renaming your files."
 msgstr "힌트: 파일 이름을 변경한 후에도 실행 취소가 가능합니다."
 
-#: systemplugin.cpp:38
+#: systemplugin.cpp:37
 #, kde-format
 msgid "Insert the current date"
 msgstr "현재 날짜 삽입"
 
-#: systemplugin.cpp:39
+#: systemplugin.cpp:38
 #, kde-format
 msgid "Insert the current date using the formatting string yyyy-MM-dd"
 msgstr "yyyy-MM-dd 형식 지정 문자열을 사용하여 현재 날짜 삽입"
 
-#: systemplugin.cpp:40
+#: systemplugin.cpp:39
 #, kde-format
 msgid "Insert the current year"
 msgstr "현재 연도를 삽입"
 
-#: systemplugin.cpp:41
+#: systemplugin.cpp:40
 #, kde-format
 msgid "Insert the current month as number"
 msgstr "현재 달을 숫자로 삽입"
 
-#: systemplugin.cpp:42
+#: systemplugin.cpp:41
 #, kde-format
 msgid "Insert the current day as number"
 msgstr "현재 날짜를 숫자로 삽입"
 
-#: systemplugin.cpp:43
+#: systemplugin.cpp:42
 #, kde-format
 msgid "Insert the current time"
 msgstr "현재 시간 삽입"
 
-#: systemplugin.cpp:44
+#: systemplugin.cpp:43
 #, kde-format
 msgid "Insert the current hour as number"
 msgstr "현재 시간을 숫자로 삽입"
 
-#: systemplugin.cpp:45
+#: systemplugin.cpp:44
 #, kde-format
 msgid "Insert the current minute as number"
 msgstr "현재 분을 숫자로 삽입"
 
-#: systemplugin.cpp:46
+#: systemplugin.cpp:45
 #, kde-format
 msgid "Insert the current second as number"
 msgstr "현재 초를 숫자로 삽입"
 
-#: systemplugin.cpp:47
+#: systemplugin.cpp:46
 #, kde-format
 msgid "Owner of the file"
 msgstr "파일 소유자"
 
-#: systemplugin.cpp:48
+#: systemplugin.cpp:47
 #, kde-format
 msgid "Owning group of the file"
 msgstr "파일 소유 그룹"
 
-#: systemplugin.cpp:49
+#: systemplugin.cpp:48
 #, kde-format
 msgid "Insert the files creation date"
 msgstr "파일 생성 날짜 삽입"
 
-#: systemplugin.cpp:50
+#: systemplugin.cpp:49
 #, kde-format
 msgid "Insert the formatted file creation date"
 msgstr "파일을 생성한 날짜를 형식을 지정하여 삽입"
 
-#: systemplugin.cpp:51
+#: systemplugin.cpp:50
 #, kde-format
 msgid "Insert the files modification date"
 msgstr "파일 수정한 날짜 삽입"
 
-#: systemplugin.cpp:52
+#: systemplugin.cpp:51
 #, kde-format
 msgid "Insert the formatted modification date"
 msgstr "수정한 날짜를 형식을 지정하여 삽입"
 
-#: systemplugin.cpp:53
+#: systemplugin.cpp:52
 #, kde-format
 msgid "Insert the date of the last file access"
 msgstr "마지막 파일 접근 날짜 삽입"
 
-#: systemplugin.cpp:54
+#: systemplugin.cpp:53
 #, kde-format
 msgid "Insert the formatted date of the last file access"
 msgstr "마지막으로 파일에 접근한 날짜를 형식을 지정하여 삽입"
 
-#: systemplugin.cpp:55
+#: systemplugin.cpp:54
 #, kde-format
 msgid "Insert the file size in bytes"
 msgstr "파일 크기를 바이트 단위로 삽입"
 
-#: systemplugin.cpp:57
+#: systemplugin.cpp:56
 #, kde-format
 msgid "Date and system functions"
 msgstr "날짜 및 시스템 함수"
 
-#: systemplugin.cpp:59
+#: systemplugin.cpp:58
 #, kde-format
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
