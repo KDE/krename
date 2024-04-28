@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 01:44+0000\n"
-"PO-Revision-Date: 2024-03-24 10:34+0100\n"
+"PO-Revision-Date: 2024-04-27 22:28+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -57,8 +57,8 @@ msgstr "Eraro renomante %2 (al %1)"
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 eraro okazis."
+msgstr[1] "%1 eraroj okazis."
 
 #: batchrenamer.cpp:280 batchrenamer.cpp:739
 #, kde-format
@@ -151,6 +151,8 @@ msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."
 msgstr ""
+"Uzi la enigdosieran nomon alinomante ĉi dosieron. Vi povas ankaŭ ŝanĝi la "
+"enigdosieran nomon kaj uzi tiun por alinomado."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioInput)
 #: customfilenamedlg.ui:115
@@ -164,6 +166,7 @@ msgstr "Uzi en&igdosieran nomon"
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
 msgstr ""
+"Uzi propran dosiernomon surbaze de la dosiernomo nune kreata per KRename."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
 #: customfilenamedlg.ui:125
@@ -249,6 +252,16 @@ msgid ""
 "\tfolder/003/file5\n"
 "\t..."
 msgstr ""
+"Ĉi tiu kromprogramo ordigas dosierojn en numeritajn subdosierujojn post "
+"alinomado.\n"
+"\n"
+"Ekzemplo:\n"
+"\tfolder/001/file1\n"
+"\tfolder/001/file2\n"
+"\tfolder/002/file3\n"
+"\tfolder/002/file4\n"
+"\tfolder/003/file5\n"
+"\t..."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: dirsortpluginwidget.ui:32
@@ -330,6 +343,8 @@ msgid ""
 "If not checked, KRename will ignore folders starting with a dot during "
 "recursive adding."
 msgstr ""
+"Se ne markita, KRename ignoros dosierujojn komenciĝantajn per punkto dum "
+"rikurva aldonado."
 
 #: filedialogextwidget.cpp:60
 #, kde-format
@@ -337,6 +352,8 @@ msgid ""
 "Add only the folder names and not the names of the files in the folder to "
 "KRename."
 msgstr ""
+"Aldoni nur la dosierujajn nomojn kaj ne la nomojn de la dosieroj en la "
+"dosierujoj al KRename."
 
 #: filedialogextwidget.cpp:62
 #, kde-format
@@ -344,6 +361,8 @@ msgid ""
 "This option causes KRename to also add the name of the base folder of the "
 "selected files to its list."
 msgstr ""
+"Ĉi tiu opcio igas KRename ankaŭ aldoni la nomon de la bazdosierujo de la "
+"elektitaj dosieroj al ĝia listo."
 
 #: fileplugin.cpp:71
 #, kde-format
@@ -1046,8 +1065,8 @@ msgstr "Specialaj Signoj"
 #, kde-format
 msgid "Starting conversion of %1 file."
 msgid_plural "Starting conversion of %1 files."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Komencante konverton de %1 dosiero."
+msgstr[1] "Komencante konverton de %1 dosieroj."
 
 #: krenameimpl.cpp:555
 #, kde-format
