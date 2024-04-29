@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 01:44+0000\n"
-"PO-Revision-Date: 2024-04-27 22:28+0100\n"
+"PO-Revision-Date: 2024-04-28 07:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -336,6 +336,8 @@ msgid ""
 "Walk recursively through the folder tree and also add the content of all "
 "subfolders to the list of files to rename."
 msgstr ""
+"Iri rekursie tra la dosierujo-arbo kaj ankaŭ aldoni la enhavon de ĉiuj "
+"subdosierujoj al la listo de dosieroj por alinomi."
 
 #: filedialogextwidget.cpp:58
 #, kde-format
@@ -439,6 +441,12 @@ msgid ""
 "this plugin, you can easily add an offset of -4 to get the desired result.</"
 "p>"
 msgstr ""
+"<p><b>Tiu ĉi kromaĵo aldonas donitan deŝovon al nombroj en dosiernomoj.</"
+"b><br/>\n"
+"Ekz. vi havas la dosiernomojn: <i>img014</i>, <i>img015</i>, <i>img023</i> "
+"kiuj devus esti nomitaj <i>img010</i>, <i>img011</i> i> kaj <i>img019</i>. "
+"Uzante ĉi tiun kromprogramon, vi povas facile aldoni deŝovon de -4 por akiri "
+"la deziratan rezulton.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: increasecounterpluginwidget.ui:49
@@ -531,6 +539,8 @@ msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
+"<qt>Enigi specialajn funkciojn kiel la artisto de mp3 aŭ la kreodato de "
+"bildo.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFunctions)
 #: krenamefilename.ui:115
@@ -564,6 +574,9 @@ msgid ""
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
 msgstr ""
+"<qt>Agordi kiu parto de la dosiernomo estas konsiderata kiel la dosiertendo. "
+"ekz. \"Unua Punkto\", konsideros \".tar.gz\" kiel etendon, \"Lasta Punkto\" "
+"nur \".gz\".</qt>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:181
@@ -591,6 +604,8 @@ msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
 msgstr ""
+"<qt>Trovi kaj anstataŭigi ĉenojn kaj regulajn esprimojn en la alinomita "
+"dosiernomo.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFind)
 #. i18n: ectx: property (text), widget (QPushButton, buttonFindSimple)
@@ -606,6 +621,8 @@ msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
 msgstr ""
+"<qt>Agordi startindekson, paŝadon kaj saltadon por numerado de dosiernomoj.</"
+"qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:237
@@ -990,6 +1007,7 @@ msgid ""
 "insert a '/' to create a new subfolder (useful from within regular "
 "expressions)"
 msgstr ""
+"enigi '/' por krei novan subdosierujon (utila el ene de regulaj esprimoj)"
 
 #: krenameimpl.cpp:487
 #, kde-format
@@ -1142,6 +1160,8 @@ msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
 "set of expressions."
 msgstr ""
+"KRename estas stapla dosier-alinomilo kiu povas alinomi liston de dosieroj "
+"surbaze de aro de esprimoj."
 
 #: main.cpp:50
 #, kde-format
@@ -1150,6 +1170,9 @@ msgid ""
 "feature requests are as welcome as financial support (everybody needs "
 "money ;). See help files for details."
 msgstr ""
+"Se vi ŝatas KRename vi eble volas subteni ĝin. Testado, korektoj de eraroj "
+"kaj petoj de funkcioj estas tiel bonvenaj kiel financa subteno (ĉiuj bezonas "
+"monon ;). Vidu helpdosierojn por detaloj."
 
 #: main.cpp:54
 #, kde-format
@@ -1196,6 +1219,8 @@ msgstr "Arpad Biro"
 msgid ""
 "Helped to fix style guide issues and made improvements to user messages."
 msgstr ""
+"Helpis ripari problemojn pri stilgvidisto kaj faris plibonigojn al "
+"uzantmesaĝoj."
 
 #: main.cpp:66
 #, kde-format
@@ -1218,6 +1243,8 @@ msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
 msgstr ""
+"Korektis cimon pri startIndex kaj aldonis la klason BatchRenamer\n"
+"al sia bonegan bildspektila showimg."
 
 #: main.cpp:71
 #, kde-format
@@ -1241,6 +1268,8 @@ msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
 "to apps.kde.com."
 msgstr ""
+"Dankon pro lia bonega laboro ĉe apps.kde.com kaj helpo kun kontribuo kun "
+"krename al apps.kde.com."
 
 #: main.cpp:75
 #, kde-format
@@ -1252,6 +1281,7 @@ msgstr "Charles Samuels"
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
 msgstr ""
+"Dankon pro noatun kaj la ID3/Ogg Tag-kodo baziĝas sur liaj noatun-moduloj."
 
 #: main.cpp:77
 #, kde-format
@@ -1273,6 +1303,7 @@ msgstr "Rolf Magnus"
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
 msgstr ""
+"Partoj de la PNG-subteno estas kopiitaj de lia KFile-kromaĵo por PNG-subteno."
 
 #: main.cpp:81
 #, kde-format
@@ -1355,6 +1386,9 @@ msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 msgstr ""
+"Riparis problemojn kun la specifdosiero kaj kontribuitaj rpm por ĉiu SuSE-"
+"versio, kiun vi povas imagi kaj ankaŭ estas la nova Gentoo-prizorganto por "
+"KRename."
 
 #: main.cpp:92
 #, kde-format
@@ -1460,13 +1494,13 @@ msgstr "Ĉeĥa Traduko"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Oliver Kellogg"
 
 #: main.cpp:103
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "okellogg@users.sourceforge.net"
 
 #: main.cpp:111
 #, kde-format
@@ -1539,6 +1573,8 @@ msgid ""
 "<b>KRename was started from root!</b><br>When started from root, KRename may "
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
+"<b>KRename estis komencita de radiko!</b><br>Kiam komencita de radiko, "
+"KRename povas damaĝi vian sistemon se vi ne scias precize kion vi faras!"
 
 #: main.cpp:143
 #, kde-format
@@ -1598,6 +1634,8 @@ msgid ""
 "<qt>This plugin supports reading metadata from files in an OpenDocument "
 "format.</qt>"
 msgstr ""
+"<qt>Tiu ĉi kromaĵo subtenas legadon de metadatenoj el dosieroj en formato "
+"OpenDocument.</qt>"
 
 #: odfplugin.cpp:79
 #, kde-format
@@ -1646,6 +1684,8 @@ msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
 msgstr ""
+"<qt>Bonvolu elekti la parton de la malnova dosiernomo, kiu devus esti "
+"enmetita en la novan dosiernomon en la suban tekstujon:</qt>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkInvert)
 #: partfilenamewidget.ui:45
@@ -1999,6 +2039,9 @@ msgid ""
 "Failed to open the Find and Replace Settings File. Cannot read file %1:\n"
 "%2."
 msgstr ""
+"Malsukcesis malfermi la Trovi kaj Anstataŭigi Agorddosieron. Ne povas legi "
+"dosieron %1:\n"
+"%2."
 
 #: replacedialog.cpp:150 replacedialog.cpp:161 replacedialog.cpp:166
 #: replacedialog.cpp:232
@@ -2012,6 +2055,8 @@ msgid ""
 "Parse error at line %1, column %2:\n"
 "%3"
 msgstr ""
+"Analizeraro ĉe linio %1, kolumno %2:\n"
+"%3"
 
 #: replacedialog.cpp:160
 #, kde-format
@@ -2175,7 +2220,7 @@ msgstr "JavaScript-eraro okazis:"
 #, kde-format
 msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
-msgstr ""
+msgstr "Ĉiuj nuntempe enigitaj difinoj estos perditaj. Ĉu vi volas daŭrigi?"
 
 #: scriptplugin.cpp:296 scriptplugin.cpp:315
 #, kde-format
@@ -2304,6 +2349,8 @@ msgid ""
 "<qt>This plugin can extract information from the filename of a TV series.</"
 "qt>"
 msgstr ""
+"<qt>Tiu ĉi kromaĵo povas ĉerpi informojn el la dosiernomo de televida serio."
+"</qt>"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: startupinfowidget.ui:29
@@ -2323,6 +2370,19 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">A batch file renamer by "
 "KDE.<br />To rename your files, you have to:</p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html> <head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style= \" font-size:"
+"large; font-weight:600;\">Bonvenon al KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin- left:0px; margin-"
+"right:0px -qt-block-indent:0 text-indent:0px;\">Alinomigo de stapla dosiero "
+"de KDE.<br />Por alinomi viajn dosierojn; p></body></html>"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelAdd)
 #: startupinfowidget.ui:57
@@ -2443,6 +2503,8 @@ msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
 msgstr ""
+"<qt>Tiu ĉi kromaĵo enhavas ĵetonojn por akiri la kreadon, modifaĵon kaj "
+"lastan alirtempon de dosieroj kaj la nunan sisteman horon kaj daton.</qt>"
 
 #: taglibplugin.cpp:28
 #, kde-format
@@ -2495,6 +2557,8 @@ msgid ""
 "<qt>This plugin supports reading tags for MP3, Ogg Vorbis, FLAC, MPC, Speex "
 "WavPack and TrueAudio files.</qt>"
 msgstr ""
+"<qt>Tiu ĉi kromaĵo subtenas legajn etikedojn por MP3, Ogg Vorbis, FLAC, MPC, "
+"Speex WavPack kaj TrueAudio dosierojn.</qt>"
 
 #: tokenhelpdialog.cpp:96
 #, kde-format
@@ -2519,6 +2583,9 @@ msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
 msgstr ""
+"Ĉiuj subtenataj ĵetonoj (komandoj) estas listigitaj en ĉi tiu dialogo. Vi "
+"povas serĉi ĵetonojn kaj enmeti trovitan ĵetonon en la ŝablonon por la "
+"dosiernomo."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listCategories)
 #: tokenhelpwidget.ui:61
@@ -2668,3 +2735,5 @@ msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
 "transliteration).</qt>"
 msgstr ""
+"<qt>Tiu ĉi kromaĵo povas transskribi dosiernomon en la anglan (t.e. fari "
+"transliterumadon).</qt>"
