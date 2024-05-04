@@ -4,25 +4,25 @@
 # translation of fr.po to Deutsch
 # translation of fr.po to French
 # french translation for krename
+# SPDX-FileCopyrightText: 2021, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Nicolas BENOIT <nbenoit@tuxfamily.org>, 2003, 2004, 2005.
 # Dominik Seichter <domseichter@web.de>, 2004, 2005.
 # Yoann Laissus <yoann.laissus@jeresiliemoncontrat.com>, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
-# Xavier Besnard <xavier.besnard@kde.org>, 2021.
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 01:44+0000\n"
-"PO-Revision-Date: 2023-04-23 20:47+0200\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2024-05-02 16:03+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -321,7 +321,7 @@ msgstr "Insérer le commentaire d'une image"
 #: exiv2plugin.cpp:351
 #, kde-format
 msgid "Exiv2 (JPEG/TIFF Exif) Plugin"
-msgstr "Module « exiv2 » (JPEG / TIFF Exif)"
+msgstr "Module « exiv2 » (JPEG / TIFF EXIF)"
 
 #: exiv2plugin.cpp:352
 #, kde-format
@@ -1608,9 +1608,9 @@ msgid ""
 "<b>KRename was started from root!</b><br>When started from root, KRename may "
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
-"<b>KRename a été démarré en superutilisateur !</b><br>Lorsque vous le "
-"démarrez en superutilisateur, KRename peut endommager votre système si vous "
-"ne savez pas exactement ce que vous faites !"
+"<b>KRename a été démarré en mode administrateur !</b><br>Lorsque vous le "
+"démarrez avec les privilèges du compte administrateur, KRename peut "
+"endommager votre système si vous ne savez pas exactement ce que vous faites !"
 
 #: main.cpp:143
 #, kde-format
