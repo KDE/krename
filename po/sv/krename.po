@@ -3,14 +3,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Peter Landgren <peter.talken@telia.com>, 2005, 2006, 2009, 2010, 2012.
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2016, 2017, 2018.
+# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2016, 2017, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: sv\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-01 02:09+0000\n"
 "PO-Revision-Date: 2018-01-20 18:14+0100\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -1513,7 +1513,7 @@ msgstr "Peter Landgren,Stefan Asserhäll"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "peter.talken@telia.com,stefan.asserhall@bredband.net"
+msgstr "peter.talken@telia.com,stefan.asserhall@gmail.com"
 
 #: main.cpp:123
 #, kde-format
