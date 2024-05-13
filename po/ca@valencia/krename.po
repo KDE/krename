@@ -271,7 +271,7 @@ msgstr ""
 "\tcarpeta/002/fitxer_3\n"
 "\tcarpeta/002/fitxer_4\n"
 "\tcarpeta/003/fitxer_5\n"
-" \t..."
+" \t…"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: dirsortpluginwidget.ui:32
@@ -356,7 +356,7 @@ msgid ""
 "If not checked, KRename will ignore folders starting with a dot during "
 "recursive adding."
 msgstr ""
-"Si no se selecciona, KRename ignorarà les carpetes que comencen amb un punt "
+"Si no està marcada, KRename ignorarà les carpetes que comencen amb un punt "
 "durant l'addició recursiva."
 
 #: filedialogextwidget.cpp:74
@@ -560,7 +560,7 @@ msgstr ""
 #: krenamefilename.ui:115
 #, kde-format
 msgid "&Functions..."
-msgstr "&Funcions..."
+msgstr "&Funcions…"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:141
@@ -626,7 +626,7 @@ msgstr ""
 #: krenamefilename.ui:224 krenamefilename.ui:748 krenamesimple.ui:439
 #, kde-format
 msgid "Find &and Replace..."
-msgstr "Busca &i substituïx..."
+msgstr "Busca &i substituïx…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:234
@@ -642,7 +642,7 @@ msgstr ""
 #: krenamefilename.ui:237
 #, kde-format
 msgid "&Numbering..."
-msgstr "&Numeració..."
+msgstr "&Numeració…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:247
@@ -655,7 +655,7 @@ msgstr ""
 #: krenamefilename.ui:250
 #, kde-format
 msgid "&Insert Part of Filename..."
-msgstr "&Inserix part del nom de fitxer..."
+msgstr "&Inserix part del nom de fitxer…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabSimple)
 #: krenamefilename.ui:289
@@ -824,7 +824,7 @@ msgstr "Afig els fitxers que es canviaran de nom."
 #: scriptpluginwidget.ui:68
 #, kde-format
 msgid "&Add..."
-msgstr "Afi&g..."
+msgstr "Afi&g…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonRemove)
 #: krenamefiles.ui:66
@@ -904,7 +904,7 @@ msgstr "Data (desc.)"
 #: krenamefiles.ui:134
 #, kde-format
 msgid "Custom ..."
-msgstr "Personalitzada..."
+msgstr "Personalitzada…"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkPreview)
 #: krenamefiles.ui:151
@@ -986,7 +986,7 @@ msgstr "primera lletra del nom de fitxer en majúscules"
 #: krenameimpl.cpp:489
 #, kde-format
 msgid "number (try also ##, ###, ... for leading zeros)"
-msgstr "número (intenteu també ##, ###... per als zeros a l'esquerra)"
+msgstr "número (intenteu també ##, ###… per als zeros a l'esquerra)"
 
 #: krenameimpl.cpp:490
 #, kde-format
@@ -1193,9 +1193,9 @@ msgid ""
 "money ;). See help files for details."
 msgstr ""
 "Si vos agrada KRename, és possible que vulgueu donar-li suport. Fer proves, "
-"correccions d'errors i peticions de noves característiques són tan "
-"benvingudes com un suport financer (tothom necessita diners ;). Vegeu els "
-"fitxers d'ajuda per a més detalls."
+"esmenes d'errors i peticions de noves característiques són tan benvingudes "
+"com un suport financer (tothom necessita diners ;). Vegeu els fitxers "
+"d'ajuda per a més detalls."
 
 #: main.cpp:66
 #, kde-format
@@ -1540,7 +1540,7 @@ msgstr "Els fitxers que s'afegiran a la llista per a canviar de nom"
 #: main.cpp:123
 #, kde-format
 msgid "[files...]"
-msgstr "[fitxers...]"
+msgstr "[fitxers…]"
 
 #: main.cpp:124
 #, kde-format
@@ -1926,7 +1926,7 @@ msgstr ""
 #: previewlist.cpp:31
 #, kde-format
 msgid "&Change filename manually..."
-msgstr "&Canvia el nom del fitxer manualment..."
+msgstr "&Canvia el nom del fitxer manualment…"
 
 #: previewlist.cpp:33
 #, kde-format
@@ -1942,7 +1942,7 @@ msgstr "&Elimina"
 #: progressdialog.cpp:33
 #, kde-format
 msgid "&Rename more..."
-msgstr "Ca&nvia el nom més..."
+msgstr "Ca&nvia el nom més…"
 
 #: progressdialog.cpp:34
 #, kde-format
@@ -1957,22 +1957,22 @@ msgstr "O&bri la destinació"
 #: progressdialog.cpp:52
 #, kde-format
 msgid "Restart &KRename..."
-msgstr "Torna a iniciar &KRename..."
+msgstr "Torna a iniciar &KRename…"
 
 #: progressdialog.cpp:54
 #, kde-format
 msgid "Rename Processed Files &Again..."
-msgstr "Canvia el nom dels fitxers processats una altra veg&ada..."
+msgstr "Canvia el nom dels fitxers processats una altra veg&ada…"
 
 #: progressdialog.cpp:55
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
-msgstr "Canvia el nom dels fitxers &sense processar una altra vegada..."
+msgstr "Canvia el nom dels fitxers &sense processar una altra vegada…"
 
 #: progressdialog.cpp:56
 #, kde-format
 msgid "&Rename All Files Again..."
-msgstr "Ca&nvia el nom de tots els fitxers una altra vegada..."
+msgstr "Ca&nvia el nom de tots els fitxers una altra vegada…"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ProgressDialog)
 #: progressdialog.ui:13
@@ -2111,19 +2111,19 @@ msgstr "Testimonis del procés"
 #: replacewidget.ui:70
 #, kde-format
 msgid "&Save Settings..."
-msgstr "Guar&da la configuració..."
+msgstr "Guar&da la configuració…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonLoadList)
 #: replacewidget.ui:77
 #, kde-format
 msgid "&Load Settings..."
-msgstr "&Carrega la configuració..."
+msgstr "&Carrega la configuració…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonEdit)
 #: replacewidget.ui:104
 #, kde-format
 msgid "&Edit..."
-msgstr "&Edita..."
+msgstr "&Edita…"
 
 #: scriptplugin.cpp:60
 #, kde-format
@@ -2284,13 +2284,13 @@ msgstr ""
 #: scriptpluginwidget.ui:127
 #, kde-format
 msgid "&Save to File..."
-msgstr "Guar&da a un fitxer..."
+msgstr "Guar&da a un fitxer…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonLoad)
 #: scriptpluginwidget.ui:134
 #, kde-format
 msgid "&Load from File..."
-msgstr "Ca&rrega des d'un fitxer..."
+msgstr "Ca&rrega des d'un fitxer…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: scriptpluginwidget.ui:141
@@ -2302,7 +2302,7 @@ msgstr "&Inserix una variable"
 #: scriptpluginwidget.ui:164
 #, kde-format
 msgid "&Test..."
-msgstr "&Prova..."
+msgstr "&Prova…"
 
 #: snumplugin.cpp:36
 #, kde-format
@@ -2372,13 +2372,13 @@ msgstr ""
 #: startupinfowidget.ui:57
 #, kde-format
 msgid "Add some files ..."
-msgstr "Afig alguns fitxers..."
+msgstr "Afig alguns fitxers…"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelTemplate)
 #: startupinfowidget.ui:71
 #, kde-format
 msgid "Specify the new filenames by giving a template ..."
-msgstr "Especifica els noms de fitxer nous donats per una plantilla..."
+msgstr "Especifica els noms de fitxer nous donats per una plantilla…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: startupinfowidget.ui:93
@@ -2638,7 +2638,7 @@ msgstr "Ordenació personalitzada"
 #: tokensortmodedialog.ui:22
 #, kde-format
 msgid "&Sort filenames ..."
-msgstr "&Ordena els noms de fitxer..."
+msgstr "&Ordena els noms de fitxer…"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioAscending)
 #: tokensortmodedialog.ui:28
@@ -2668,7 +2668,7 @@ msgstr "per"
 #: tokensortmodedialog.ui:68
 #, kde-format
 msgid "&Token ..."
-msgstr "&Testimoni..."
+msgstr "&Testimoni…"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioPredefined)
 #: tokensortmodedialog.ui:74
