@@ -34,7 +34,7 @@
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="text">
-          <string comment="KDE::DoNotExtract">TextLabel</string>
+          <string notr="true">TextLabel</string>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
