@@ -1751,7 +1751,7 @@ msgstr "GID"
 #: permissionsplugin.cpp:208
 #, kde-format
 msgid "Sticky"
-msgstr "粘性"
+msgstr "粘滞位"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, PermissionsPluginAdvanceDialog)
 #: permissionspluginadvanceddialog.ui:13
