@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2017.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-01 02:09+0000\n"
-"PO-Revision-Date: 2017-01-24 07:50+0300\n"
-"Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
-"Language-Team: Arabic <doc@arabeyes.org>\n"
+"PO-Revision-Date: 2023-04-27 11:30+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 2.0\n"
 
 #: batchrenamer.cpp:202 batchrenamer.cpp:669
 #, kde-format
@@ -1179,13 +1179,12 @@ msgstr "‏© 2001-2012، Dominik Seichter\n"
 #: main.cpp:69
 #, kde-format
 msgid "Heiko Becker"
-msgstr ""
+msgstr "Heiko Becker"
 
 #: main.cpp:69
-#, fuzzy, kde-format
-#| msgid "developer and maintainer"
+#, kde-format
 msgid "Current maintainer"
-msgstr "مطوّر ومصين"
+msgstr "المصين الحاليّ"
 
 #: main.cpp:71
 #, kde-format
@@ -1193,10 +1192,9 @@ msgid "Dominik Seichter"
 msgstr "Dominik Seichter"
 
 #: main.cpp:71
-#, fuzzy, kde-format
-#| msgid "developer and maintainer"
+#, kde-format
 msgid "Developer and former maintainer"
-msgstr "مطوّر ومصين"
+msgstr "المنسّق السّابق، مطوّر"
 
 #: main.cpp:73
 #, kde-format
@@ -1950,28 +1948,27 @@ msgstr "أل&غِ"
 #: replacedialog.cpp:81
 #, kde-format
 msgid "Save Find & Replace Settings as:"
-msgstr ""
+msgstr "احفظ إعدادات البحث والاستبدال كـ:"
 
 #: replacedialog.cpp:82
 #, kde-format
 msgid "KRename Find & Replace Settings XML (*.xml)"
-msgstr ""
+msgstr "ملف XML  لإعدادات البحث والاستبدال لمغير الأسماء (*.xml)"
 
 #: replacedialog.cpp:91
 #, kde-format
 msgid "Failed to save the Find & Replace Settings File."
-msgstr ""
+msgstr "فشل في حفظ ملف إعدادات البحث والاستبدال"
 
 #: replacedialog.cpp:143
-#, fuzzy, kde-format
-#| msgid "Find and Replace"
+#, kde-format
 msgid "Save Find and Replace Settings File"
-msgstr "أوجد واستبدل"
+msgstr "احفظ ملف إعدادات البحث والاستبدال"
 
 #: replacedialog.cpp:145
 #, kde-format
 msgid "KRename Find and Replace Settings XML (*.xml)"
-msgstr ""
+msgstr "ملف XML  لإعدادات البحث والاستبدال لمغير الأسماء (*.xml)"
 
 #: replacedialog.cpp:153
 #, kde-format
@@ -1979,12 +1976,14 @@ msgid ""
 "Failed to open the Find and Replace Settings File. Cannot read file %1:\n"
 "%2."
 msgstr ""
+"فشل في فتح ملف إعدادات البحث والاستبدال. لا يمكن قراءة الملف %1:\n"
+"%2."
 
 #: replacedialog.cpp:164 replacedialog.cpp:175 replacedialog.cpp:180
 #: replacedialog.cpp:246
 #, kde-format
 msgid "KRename Find and Replace Settings XML File"
-msgstr ""
+msgstr "ملف XML  لإعدادات البحث والاستبدال لمغير الأسماء"
 
 #: replacedialog.cpp:165
 #, kde-format
@@ -1992,21 +1991,23 @@ msgid ""
 "Parse error at line %1, column %2:\n"
 "%3"
 msgstr ""
+"خطأ تركيبي في  في السّطر %1، العمود %2:\n"
+"%3"
 
 #: replacedialog.cpp:174
 #, kde-format
 msgid "The file is not a KRename XML file."
-msgstr ""
+msgstr "الملف ليس ملف  XML لمغير الأسماء الإصدار ."
 
 #: replacedialog.cpp:179
 #, kde-format
 msgid "The file is not an KRename XML version 1.0 file."
-msgstr ""
+msgstr "الملف ليس ملف  XML لمغير الأسماء الإصدار 1.0."
 
 #: replacedialog.cpp:245
 #, kde-format
 msgid "Problem with loading KRename XML file."
-msgstr ""
+msgstr "مشكلة في تحميل ملف XML  لمغير الأسماء."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ReplaceWidget)
 #. i18n: ectx: property (windowTitle), widget (QDialog, ReplaceItemDlg)
@@ -2287,21 +2288,7 @@ msgstr "<qt>يمكن لهذه الملحقة استخراج المعلومات �
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: startupinfowidget.ui:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#| "REC-html40/strict.dtd\">\n"
-#| "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#| "css\">\n"
-#| "p, li { white-space: pre-wrap; }\n"
-#| "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
-#| "weight:400; font-style:normal;\">\n"
-#| "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#| "size:large; font-weight:600;\">Welcome to KRename</span></p>\n"
-#| "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-#| "right:0px; -qt-block-indent:0; text-indent:0px;\">A batch file renamer "
-#| "for KDE.<br />To rename your files, you have to:</p></body></html>"
+#, kde-format
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -2326,7 +2313,7 @@ msgstr ""
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
-"large; font-weight:600;\">مرحبًا بكل في «مغيّر أسمائك»</span></p>\n"
+"large; font-weight:600;\">مرحبًا بكل في «مغيّر الأسماء»</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">برنامج «كِيدِي» لإعادة تسمية "
 "مجموعة ملفّات.<br />لإعادة تسمية ملفّاتك، عليك:</p></body></html>"
