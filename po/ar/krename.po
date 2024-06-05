@@ -17,7 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
 
 #: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
@@ -68,7 +67,7 @@ msgstr[5] "حدث %1 خطأ."
 #: batchrenamer.cpp:280 batchrenamer.cpp:739
 #, kde-format
 msgid "KRename finished the renaming process."
-msgstr "انتهى «مغيّر الأسماء» من عمليّة إعادة التّسمية."
+msgstr "انتهى «مغيّر أسمائك» من عمليّة إعادة التّسمية."
 
 #: batchrenamer.cpp:281 batchrenamer.cpp:405 batchrenamer.cpp:740
 #, kde-format
@@ -93,7 +92,7 @@ msgstr "خطأ أثناء التّراجع عن %1"
 #: batchrenamer.cpp:404
 #, kde-format
 msgid "KRename finished the undo process."
-msgstr "انتهى «مغيّر الأسماء» من عمليّة التّراجع."
+msgstr "انتهى «مغيّر أسمائك» من عمليّة التّراجع."
 
 #: batchrenamer.cpp:643
 #, kde-format
@@ -141,13 +140,13 @@ msgstr "رجاء أدخل اسم ملفّ جديد"
 #: customfilenamedlg.ui:97
 #, kde-format
 msgid "Rename the file using the filename created by KRename."
-msgstr "أعد تسمية الملفّ باستخدام اسم الملفّ الذي أنشأه «مغيّر الأسماء»."
+msgstr "أعد تسمية الملفّ باستخدام اسم الملفّ الذي أنشأه «مغيّر أسمائك»."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioKRename)
 #: customfilenamedlg.ui:100
 #, kde-format
 msgid "Use filename created by &KRename"
-msgstr "استخدم اسم الملفّ الذي أن&شأه «مغيّر الأسماء»"
+msgstr "استخدم اسم الملفّ الذي أن&شأه «مغيّر أسمائك»"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioInput)
 #: customfilenamedlg.ui:112
@@ -170,8 +169,7 @@ msgstr "استخدم اسم الملفّ ال&دّخل"
 #, kde-format
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
-msgstr ""
-"استخدم اسم ملفّ مخصّص، معتمدًا اسم الملفّ الحاليّ الذي أنشأه «مغيّر الأسماء»."
+msgstr "استخدم اسم ملفّ مخصّص، معتمدًا اسم الملفّ الحاليّ الذي أنشأه «مغيّر أسمائك»."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
 #: customfilenamedlg.ui:125
@@ -347,7 +345,7 @@ msgid ""
 "If not checked, KRename will ignore folders starting with a dot during "
 "recursive adding."
 msgstr ""
-"إن لم يؤشّر، فسيتجاهل «مغيّر الأسماء» المجلّدات التي تبدأ بنقطة أثناء الإضافة "
+"إن لم يؤشّر، فسيتجاهل «مغيّر أسمائك» المجلّدات التي تبدأ بنقطة أثناء الإضافة "
 "التّكراريّة."
 
 #: filedialogextwidget.cpp:60
@@ -355,7 +353,7 @@ msgstr ""
 msgid ""
 "Add only the folder names and not the names of the files in the folder to "
 "KRename."
-msgstr "أضف فقط أسماء المجلّدات إلى «مغيّر الأسماء» دون أسماء الملفّات داخلها."
+msgstr "أضف فقط أسماء المجلّدات إلى «مغيّر أسمائك» دون أسماء الملفّات داخلها."
 
 #: filedialogextwidget.cpp:62
 #, kde-format
@@ -363,7 +361,7 @@ msgid ""
 "This option causes KRename to also add the name of the base folder of the "
 "selected files to its list."
 msgstr ""
-"يجعل هذا «مغيّر الأسماء» يضيف أيضًا اسم المجلّد الأساس للملفّات المحدّدة إلى "
+"يجعل هذا «مغيّر أسمائك» يضيف أيضًا اسم المجلّد الأساس للملفّات المحدّدة إلى "
 "القائمة."
 
 #: fileplugin.cpp:71
@@ -406,7 +404,7 @@ msgstr "المظهر والملمس"
 #: guimodeselector.ui:34
 #, kde-format
 msgid "Configure the look and feel of the KRename GUI:"
-msgstr "اضبط مظهر واجهة «مغيّر الأسماء»:"
+msgstr "اضبط مظهر واجهة «مغيّر أسمائك»:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionWizard)
 #: guimodeselector.ui:57
@@ -932,7 +930,7 @@ msgstr "أمتأكّد من إزالة كلّ الملفّات من القائم
 #: krenameimpl.cpp:356 main.cpp:45
 #, kde-format
 msgid "KRename"
-msgstr "مغيّر الأسماء"
+msgstr "مغيّر أسمائك"
 
 #: krenameimpl.cpp:474
 #, kde-format
@@ -1085,7 +1083,7 @@ msgstr[5] "بدأ تحويل %1 ملفّ."
 #: krenameimpl.cpp:555
 #, kde-format
 msgid "The folder %1 does not exist. Do you want KRename to create it for you?"
-msgstr "المجلّد %1 غير موجود. أتريد من «مغيّر الأسماء» إنشائه لك؟"
+msgstr "المجلّد %1 غير موجود. أتريد من «مغيّر أسمائك» إنشائه لك؟"
 
 #: krenameimpl.cpp:565
 #, kde-format
@@ -1156,7 +1154,7 @@ msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
 "set of expressions."
 msgstr ""
-"«مغيّر الأسماء» هو برنامج لإعادة تسمية مجموعة ملفّات تكون في قائمة، وذلك بناء "
+"«مغيّر أسمائك» هو برنامج لإعادة تسمية مجموعة ملفّات تكون في قائمة، وذلك بناء "
 "على عدد من التّعبيرات."
 
 #: main.cpp:50
@@ -1166,7 +1164,7 @@ msgid ""
 "feature requests are as welcome as financial support (everybody needs "
 "money ;). See help files for details."
 msgstr ""
-"إن أحببت «مغيّر الأسماء» فقد ترغب بدعمه. الاختبار، وإصلاح العلل وطلب الميزات "
+"إن أحببت «مغيّر أسمائك» فقد ترغب بدعمه. الاختبار، وإصلاح العلل وطلب الميزات "
 "مرحّب بهم كدعم ماليّ (جميعنا نحتاج إلى المال ؛). طالع ملفّات المساعدة للتّفاصيل."
 
 #: main.cpp:54
@@ -1250,7 +1248,7 @@ msgstr "Michael Elvers"
 #: main.cpp:71
 #, kde-format
 msgid "Fixed a bug that caused krename not closing open files."
-msgstr "أصلح علّة تتسبّب ل‍«مغيّر الأسماء» بعدم إغلاق الملفّات المفتوحة."
+msgstr "أصلح علّة تتسبّب ل‍«مغيّر أسمائك» بعدم إغلاق الملفّات المفتوحة."
 
 #: main.cpp:73
 #, kde-format
@@ -1263,7 +1261,7 @@ msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
 "to apps.kde.com."
 msgstr ""
-"أشكر مجهوده الرّائع في apps.kde.com ومساعدته في المساهمة ب‍«مغيّر الأسماء» إلى "
+"أشكر مجهوده الرّائع في apps.kde.com ومساعدته في المساهمة ب‍«مغيّر أسمائك» إلى "
 "apps.kde.com."
 
 #: main.cpp:75
@@ -1296,7 +1294,7 @@ msgstr "Rolf Magnus"
 #, kde-format
 msgid ""
 "Parts of the PNG support are copied from his KFile plugin for png support."
-msgstr "نُسخت أجزاء من دعم PNG ل‍«مغيّر الأسماء» من ملحقته KFile لدعم PNG."
+msgstr "نُسخت أجزاء من دعم PNG ل‍«مغيّر أسمائك» من ملحقته KFile لدعم PNG."
 
 #: main.cpp:81
 #, kde-format
@@ -1380,7 +1378,7 @@ msgid ""
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 msgstr ""
 "أصلح مشاكل في ملفّ spec وساهم بملفّات RPM لكلّ إصدارة «سوزي» يمكن أن تطرأ في "
-"بالك، وهو الآن مصين «جنتو» الجديد ل‍«مغيّر الأسماء»"
+"بالك، وهو الآن مصين «جنتو» الجديد ل‍«مغيّر أسمائك»"
 
 #: main.cpp:92
 #, kde-format
@@ -1410,7 +1408,7 @@ msgstr "Steven P. Ulrick"
 #: main.cpp:94
 #, kde-format
 msgid "Provided a RedHat RPM and was big help in improving KRename"
-msgstr "قدّم RPM ل‍«رِدهات» وكان مساعدًا كبيرًا في تحسين «مغيّر الأسماء»."
+msgstr "قدّم RPM ل‍«رِدهات» وكان مساعدًا كبيرًا في تحسين «مغيّر أسمائك»."
 
 #: main.cpp:95
 #, kde-format
@@ -1420,7 +1418,7 @@ msgstr "UTUMI Hirosi"
 #: main.cpp:95
 #, kde-format
 msgid "Translated KRename to Japanese"
-msgstr "ترجم «مغيّر الأسماء» إلى اليابانيّة"
+msgstr "ترجم «مغيّر أسمائك» إلى اليابانيّة"
 
 #: main.cpp:96
 #, kde-format
@@ -1430,7 +1428,7 @@ msgstr "Nicolas Benoit"
 #: main.cpp:96
 #, kde-format
 msgid "Translated KRename into French"
-msgstr "ترجم «مغيّر الأسماء» إلى الفرنسيّة"
+msgstr "ترجم «مغيّر أسمائك» إلى الفرنسيّة"
 
 #: main.cpp:97
 #, kde-format
@@ -1440,7 +1438,7 @@ msgstr "Krzysztof Pawlak"
 #: main.cpp:97
 #, kde-format
 msgid "Translated KRename into Polish"
-msgstr "ترجم «مغيّر الأسماء» إلى البولنديّة"
+msgstr "ترجم «مغيّر أسمائك» إلى البولنديّة"
 
 #: main.cpp:98
 #, kde-format
@@ -1450,7 +1448,7 @@ msgstr "Ilya Ivkov"
 #: main.cpp:98
 #, kde-format
 msgid "Translated KRename into Russian"
-msgstr "ترجم «مغيّر الأسماء» إلى الرّوسيّة"
+msgstr "ترجم «مغيّر أسمائك» إلى الرّوسيّة"
 
 #: main.cpp:99
 #, kde-format
@@ -1460,7 +1458,7 @@ msgstr "Asim Husanovic"
 #: main.cpp:99
 #, kde-format
 msgid "Translated KRename into Bosnian"
-msgstr "ترجم «مغيّر الأسماء» إلى البوسنيّة"
+msgstr "ترجم «مغيّر أسمائك» إلى البوسنيّة"
 
 #: main.cpp:100
 #, kde-format
@@ -1557,7 +1555,7 @@ msgstr "ابدأ بإعادة التّسمية مباشرة"
 #: main.cpp:120
 #, kde-format
 msgid "start KRename's selftest (developers only)"
-msgstr "ابدأ اختبار «مغيّر الأسماء» الآليّ (للمطوّرين فقط)"
+msgstr "ابدأ اختبار «مغيّر أسمائك» الآليّ (للمطوّرين فقط)"
 
 #: main.cpp:139
 #, kde-format
@@ -1699,7 +1697,7 @@ msgstr "لا تحويل"
 #: partfilenamewidget.ui:90
 #, kde-format
 msgid "Preview of the generated KRename command:"
-msgstr "معاينة للنّصّ الذي ولّده «مغيّر الأسماء»:"
+msgstr "معاينة للنّصّ الذي ولّده «مغيّر أسمائك»:"
 
 #: permissionsplugin.cpp:92
 #, kde-format
@@ -1966,7 +1964,7 @@ msgstr "ا&فتح المقصد"
 #: progressdialog.cpp:38
 #, kde-format
 msgid "Restart &KRename..."
-msgstr "أعد تش&غيل «مغيّر الأسماء»..."
+msgstr "أعد تش&غيل «مغيّر أسمائك»..."
 
 #: progressdialog.cpp:40
 #, kde-format
@@ -2281,7 +2279,7 @@ msgstr "التّ&عريفات"
 #: scriptpluginwidget.ui:106
 #, kde-format
 msgid "Define functions that can be used from KRename templates:"
-msgstr "عرّف وظائف يمكن استخدامها في قوالب «مغيّر الأسماء»:"
+msgstr "عرّف وظائف يمكن استخدامها في قوالب «مغيّر أسمائك»:"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSave)
 #: scriptpluginwidget.ui:127
@@ -2558,7 +2556,7 @@ msgstr "الأخيرة"
 #: tokenhelpwidget.ui:13
 #, kde-format
 msgid "KRename Help"
-msgstr "مساعدة «مغيّر الأسماء»"
+msgstr "مساعدة «مغيّر أسمائك»"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: tokenhelpwidget.ui:19
