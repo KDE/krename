@@ -38,6 +38,7 @@
   <name xml:lang="x-test">xxKrenamexx</name>
   <name xml:lang="zh-CN">Krename</name>
   <summary>A powerful batch file renamer</summary>
+  <summary xml:lang="ar">مُعيد تسمية الملفات دُفَعِي</summary>
   <summary xml:lang="ca">Un potent canviador de noms per lots</summary>
   <summary xml:lang="ca-valencia">Un potent canviador de noms per lots</summary>
   <summary xml:lang="cs">Mocný nástroj pro dávkové přejmenovávání</summary>
