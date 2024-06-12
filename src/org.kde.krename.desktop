@@ -3,6 +3,7 @@ Type=Application
 Exec=krename -qwindowtitle "%c" %U
 Icon=krename
 Comment=A batch renamer
+Comment[ar]=مُعيد تسمية دُفَعِي
 Comment[ca]=Un canviador de noms de fitxers per lots
 Comment[ca@valencia]=Un canviador de noms de fitxer per lots
 Comment[cs]=Nástroj na dávkové přejmenovávání
