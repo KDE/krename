@@ -4,6 +4,7 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0</project_license>
   <name>Krename</name>
+  <name xml:lang="ar">مغيّر الأسماء</name>
   <name xml:lang="ast">Krename</name>
   <name xml:lang="ca">Krename</name>
   <name xml:lang="ca-valencia">Krename</name>
@@ -80,6 +81,7 @@
       another directory or simply rename the input files. Krename supports many
       conversion operations.
     </p>
+    <p xml:lang="ar">مغير الأسماء هو برنامج إعادة تسمية الملفات دُفَعِي قوي جدًا يمكنه إعادة تسمية قائمة من الملفات بناءً على مجموعة من التعبيرات. يمكنه نسخ / نقل الملفات إلى دليل آخر أو ببساطة إعادة تسمية ملفات الإدخال. يدعم مغير الأسماء العديد من عمليات التحويل.</p>
     <p xml:lang="ca">El Krename és un canviador de noms per lots molt potent que pot reanomenar una llista de fitxers basada en un conjunt d'expressions. Pot copiar/moure els fitxers a un altre directori o senzillament reanomenar els fitxers d'entrada. El Krename admet moltes operacions de conversió.</p>
     <p xml:lang="ca-valencia">El Krename és un canviador de noms per lots molt potent que pot canviar de nom una llista de fitxers basada en un conjunt d'expressions. Pot copiar/moure els fitxers a un altre directori o senzillament canviar de nom els fitxers d'entrada. El Krename admet moltes operacions de conversió.</p>
     <p xml:lang="da">Krename er en meget kraftfuld batchfilomdøber som kan omdøbe en liste af filer baseret på et sæt af udtryk. Den kan kopiere/flytte filerne til en anden mappe eller blot omdøbe inputfilerne. Krename understøtter mange konverteringshandlinger.</p>
