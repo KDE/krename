@@ -5,13 +5,13 @@
 # Frank Schoolmeesters <frank_schoolmeesters@yahoo.com> 2003, 2004, 2005.
 # Cindy De Keyzer, proofreading this file, 2004.
 # Rinse de Vries <rinsedevries@kde.nl>, 2005.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2016, 2017, 2018, 2023.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 01:44+0000\n"
-"PO-Revision-Date: 2023-04-22 10:50+0200\n"
+"PO-Revision-Date: 2024-08-03 10:04+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
@@ -1734,7 +1734,7 @@ msgstr "Vooruitblik op het gegenereerde KRename commando:"
 #: permissionsplugin.cpp:92
 #, kde-format
 msgid "Permissions"
-msgstr "Permissies"
+msgstr "Toegangsrechten"
 
 #: permissionsplugin.cpp:105
 #, kde-format
