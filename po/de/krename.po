@@ -6,7 +6,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2016, 2017, 2018, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: de\n"
+"Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-01 02:09+0000\n"
 "PO-Revision-Date: 2021-05-10 06:11+0200\n"
