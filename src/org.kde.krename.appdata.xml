@@ -112,6 +112,7 @@
     <p xml:lang="uk">KRename — дуже потужна програма для пакетного перейменовування файлів, яка може виконати перейменовування списку файлів на основі набору виразів. Програма здатна копіювати або пересувати файли до іншого каталогу або просто змінити назви вказаних файлів. У KRename передбачено підтримку багатьох дій із перетворення.</p>
     <p xml:lang="x-test">xxKRename is a very powerful batch file renamer which can rename a list of files based on a set of expressions. It can copy/move the files to another directory or simply rename the input files. KRename supports many conversion operations.xx</p>
     <p xml:lang="zh-CN">KRename 是一款功能强大的文件批量重命名工具，它可根据一组表达式重命名整列文件。KRename 还能将文件复制或移动到其他目录中，并支持各种转换操作。</p>
+    <p xml:lang="zh-TW">KRename 是一個強大的批次檔案重命名工具，能夠基於提供的表示式來一次重新命名許多檔案。它可以重新命名指定檔案，也能將它們複製或移動到另一個目錄。KRename 支援許多轉換操作。</p>
   </description>
   <screenshots>
     <screenshot type="default">
