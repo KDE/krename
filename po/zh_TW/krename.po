@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # pan93412 <pan93412@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-01 02:09+0000\n"
-"PO-Revision-Date: 2019-08-19 22:00+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2024-12-02 17:27+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.07.90\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: batchrenamer.cpp:202 batchrenamer.cpp:669
 #, kde-format
@@ -545,12 +546,15 @@ msgstr "檔案副檔名起點(&I)："
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, comboExtension)
 #: krenamefilename.ui:177
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<qt>Configure which part of the filename is considered to be the "
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
-msgstr "<qt>設定要用做檔案副檔名的檔名。(待翻)</qt>"
+msgstr ""
+"<qt>設定要將檔名中哪個部分視為副檔名 / 檔案延伸子。例如如果有一個叫做 "
+"\"krename.tar.gz\" 的檔案，「第一個點」將視 \".tar.gz\" 為副檔名，「最後一個"
+"點」則只會視 \".gz\" 為副檔名。</qt>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:181
@@ -2051,9 +2055,9 @@ msgid "JavaScript Plugin"
 msgstr "JavaScript 外掛程式"
 
 #: scriptplugin.cpp:68
-#, fuzzy, kde-format
+#, kde-format
 msgid "Insert a snippet of JavaScript code (4+5 in this case)"
-msgstr "插入 JavaScript 程式碼片段 (此情況中 4+5)"
+msgstr "插入 JavaScript 程式碼片段（此情況下是 4+5）"
 
 #: scriptplugin.cpp:70
 #, kde-format
@@ -2221,7 +2225,7 @@ msgid "&Test..."
 msgstr "測試(&T)…"
 
 #: snumplugin.cpp:36
-#, fuzzy, kde-format
+#, kde-format
 msgid "Inserts the series number of original filename"
 msgstr "插入原始檔名的數列編號"
 
@@ -2240,7 +2244,7 @@ msgstr ""
 #: snumplugin.cpp:42
 #, kde-format
 msgid "SeriesNumber"
-msgstr ""
+msgstr "數列編號"
 
 #: snumplugin.cpp:44
 #, kde-format
