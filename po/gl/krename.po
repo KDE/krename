@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-01 02:09+0000\n"
-"PO-Revision-Date: 2024-12-16 01:16+0100\n"
+"PO-Revision-Date: 2024-12-19 23:11+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -104,7 +104,7 @@ msgstr "Non é posíbel desfacer no caso de ficheiros remotos: %1"
 #: batchrenamer.cpp:738
 #, kde-format
 msgid "Renamed %1 files successfully."
-msgstr "Cambiouse o nome de %1 ficheiros."
+msgstr "Renomeáronse %1 ficheiros."
 
 #: batchrenamer.cpp:745
 #, kde-format
@@ -137,8 +137,7 @@ msgstr "Introduza un novo nome de ficheiro"
 #: customfilenamedlg.ui:97
 #, kde-format
 msgid "Rename the file using the filename created by KRename."
-msgstr ""
-"Cambie o nome do ficheiro usando o nome de ficheiro creado por KRename."
+msgstr "Renomear o ficheiro co nome de ficheiro creado por KRename."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioKRename)
 #: customfilenamedlg.ui:100
@@ -471,7 +470,7 @@ msgstr "&Opcións"
 #: krenamedestination.ui:52
 #, kde-format
 msgid "&Rename input files"
-msgstr "Cambia&r de nome os ficheiros de entrada"
+msgstr "&Renomear os ficheiros de entrada"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionCopy)
 #: krenamedestination.ui:62
@@ -509,7 +508,7 @@ msgstr "Nome de ficheiro &avanzado"
 msgid "&Template:"
 msgstr "&Modelo:"
 
-# skip-rule: trasno-change
+# skip-rule: trasno-change, trasno-rename_reverse
 #. i18n: ectx: property (toolTip), widget (ExtHistoryCombo, filenameTemplate)
 #: krenamefilename.ui:66
 #, kde-format
@@ -612,8 +611,8 @@ msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
 msgstr ""
-"<qt>Atopar e substituír cadeas e expresións regulares no nome de ficheiro "
-"cambiado.</qt>"
+"<qt>Atopar e substituír cadeas e expresións regulares no ficheiro renomeado."
+"</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFind)
 #. i18n: ectx: property (text), widget (QPushButton, buttonFindSimple)
@@ -1115,7 +1114,7 @@ msgstr "Orixe"
 #: krenamemodel.cpp:433
 #, kde-format
 msgid "Renamed"
-msgstr "Cambiado de nome"
+msgstr "Renomeouse"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listPlugins)
 #: krenameplugins.ui:42
@@ -1911,11 +1910,11 @@ msgstr "Complemento de PoDoFo (PDF)"
 msgid "<qt>This plugin supports reading tags from PDF files.</qt>"
 msgstr "<qt>Este complemento permite ler etiquetas de ficheiros PDF.</qt>"
 
-# skip-rule: trasno-change
+# skip-rule: trasno-change, trasno-rename_reverse
 #: previewlist.cpp:31
 #, kde-format
 msgid "&Change filename manually..."
-msgstr "&Renomear ficheiro manualmente…"
+msgstr "&Renomear o ficheiro manualmente…"
 
 #: previewlist.cpp:33
 #, kde-format
@@ -1931,7 +1930,7 @@ msgstr "&Retirar"
 #: progressdialog.cpp:33
 #, kde-format
 msgid "&Rename more..."
-msgstr "Cambia&r de nome máis…"
+msgstr "&Renomear máis…"
 
 #: progressdialog.cpp:34
 #, kde-format
@@ -1951,7 +1950,7 @@ msgstr "Reiniciar &KRename…"
 #: progressdialog.cpp:54
 #, kde-format
 msgid "Rename Processed Files &Again..."
-msgstr "C&ambiar o nome dos ficheiros procesador de novo…"
+msgstr "Renome&ar os ficheiros procesados de novo…"
 
 #: progressdialog.cpp:55
 #, kde-format
@@ -1961,7 +1960,7 @@ msgstr "Renomear os ficheiros &sen procesar de novo…"
 #: progressdialog.cpp:56
 #, kde-format
 msgid "&Rename All Files Again..."
-msgstr "Cambia&r o nome de todos os ficheiros de novo…"
+msgstr "&Renomear todos os ficheiros de novo…"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ProgressDialog)
 #: progressdialog.ui:13
@@ -2352,8 +2351,8 @@ msgstr ""
 "large; font-weight:600;\">Benvida a KRename</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\">Un cambiador de nomes de "
-"ficheiro en lote de KDE.<br />Para cambiar o nome dos seus ficheiros, ten "
-"que:</p></body></html>"
+"ficheiro en lote de KDE.<br />Para renomear os seus ficheiros, ten que:</p></"
+"body></html>"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelAdd)
 #: startupinfowidget.ui:57
@@ -2371,7 +2370,7 @@ msgstr "Indique os novos nomes de ficheiros fornecendo un modelo…"
 #: startupinfowidget.ui:93
 #, kde-format
 msgid "Hint: Undo is still possible after renaming your files."
-msgstr "Consello: Pode desfacer despois de cambiar o nome dos ficheiros."
+msgstr "Consello: Pode desfacer despois de renomear os ficheiros."
 
 #: systemplugin.cpp:51
 #, kde-format
