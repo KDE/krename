@@ -1646,7 +1646,7 @@ msgid ""
 "<qt>This plugin supports reading metadata from files in an OpenDocument "
 "format.</qt>"
 msgstr ""
-"<qt>Bu eklenti, OpenDocument belge biçimli dosyalardan üstveri okumayı "
+"<qt>Bu eklenti, OpenDocument belge biçimli dosyalardan üst veri okumayı "
 "destekler.</qt>"
 
 #: odfplugin.cpp:79
