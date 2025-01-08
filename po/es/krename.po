@@ -1957,7 +1957,7 @@ msgstr "&Abrir destino"
 #: progressdialog.cpp:52
 #, kde-format
 msgid "Restart &KRename..."
-msgstr "Reiniciar &KRename...."
+msgstr "Reiniciar &KRename..."
 
 #: progressdialog.cpp:54
 #, kde-format
