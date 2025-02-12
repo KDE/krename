@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.16)
 
 project(krename VERSION "5.0.60")
 
-set(QT_MIN_VERSION "5.15.2")
-set(KF_MIN_VERSION "5.100.0")
-
 set(KDE_COMPILERSETTINGS_LEVEL "5.82.0")
+
+set(QT_MIN_VERSION "6.5.0")
+set(KF_MIN_VERSION "6.0.0")
 
 find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_PATH})
@@ -21,27 +21,17 @@ include(FeatureSummary)
 option(BUILD_MODELSELFTEST "Build model self test." OFF)
 add_feature_info(BUILD_MODELSELFTEST BUILD_MODELSELFTEST "Build model self test.")
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_MIN_VERSION "6.5.0")
-    set(KF_MIN_VERSION "6.0.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
-
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS
+find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS
     Core
     Widgets
     Qml
+    Core5Compat
 )
 if (BUILD_MODELSELFTEST)
-    find_package(Qt${QT_MAJOR_VERSION}Test REQUIRED)
-endif()
-if (QT_MAJOR_VERSION STREQUAL "6")
-    find_package(Qt6Core5Compat REQUIRED)
+    find_package(Qt6Test REQUIRED)
 endif()
 
-find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     Completion
     Config
     CoreAddons
@@ -63,8 +53,8 @@ add_definitions(
 )
 
 # Find KArchive
-find_package(KF${KF_MAJOR_VERSION}Archive)
-set_package_properties(KF${KF_MAJOR_VERSION}Archive PROPERTIES
+find_package(KF6Archive)
+set_package_properties(KF6Archive PROPERTIES
     PURPOSE "Needed for ODF plugin"
     TYPE OPTIONAL)
 
@@ -99,7 +89,7 @@ ecm_set_disabled_deprecation_versions(
 set(HAVE_TAGLIB ${TAGLIB_FOUND})
 set(HAVE_EXIV2 ${LibExiv2_FOUND})
 set(HAVE_PODOFO ${PoDoFo_FOUND})
-set(HAVE_KARCHIVE ${KF${KF_MAJOR_VERSION}Archive_FOUND})
+set(HAVE_KARCHIVE ${KF6Archive_FOUND})
 set(HAVE_FREETYPE ${FREETYPE_FOUND})
 configure_file(config-krename.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-krename.h)
 
