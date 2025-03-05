@@ -1509,13 +1509,13 @@ msgstr "Tschechische Übersetzung"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Dominik Seichter"
+msgstr "Deutsches KDE-Übersetzungsteam"
 
 #: main.cpp:103
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "domseichter@web.de"
+msgstr "kde-i18n-de@kde.org"
 
 #: main.cpp:111
 #, kde-format
