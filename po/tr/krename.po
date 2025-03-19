@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 01:44+0000\n"
-"PO-Revision-Date: 2025-03-08 00:14+0300\n"
+"PO-Revision-Date: 2025-03-18 14:42+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
@@ -36,7 +36,7 @@ msgstr "Dosyalar şuraya taşınacak: %1"
 #: batchrenamer.cpp:201 batchrenamer.cpp:660
 #, kde-format
 msgid "Symbolic links will be created in: %1"
-msgstr "Sembolik bağlar şurada oluşturulacak: %1"
+msgstr "Sembolik bağlantılar şurada oluşturulacak: %1"
 
 #: batchrenamer.cpp:222
 #, kde-format
@@ -46,12 +46,12 @@ msgstr "Yeniden adlandırılamıyor: Kaynak ve hedef dosya adı aynı: %1"
 #: batchrenamer.cpp:240
 #, kde-format
 msgid "Cannot create symlink to non-local URL: %1"
-msgstr "Yerel olmayan URL için sembolik bağ oluşturulamıyor: %1"
+msgstr "Yerel olmayan URL için sembolik bağlantı oluşturulamıyor: %1"
 
 #: batchrenamer.cpp:254 dirsortplugin.cpp:122
 #, kde-format
 msgid "Error renaming %2 (to %1)"
-msgstr "%2 nin (%1 e) yeniden adlandırılmasında hata"
+msgstr "%2 ögesi (%1 olarak) yeniden adlandırılamadı"
 
 #: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:735
 #, kde-format
@@ -98,7 +98,7 @@ msgstr "Geri alma betiği oluşturulamıyor: %1"
 #: batchrenamer.cpp:717
 #, kde-format
 msgid "Undo is not possible for remote file: %1"
-msgstr "Geri alma işlemi %1 dosyası için mümkün değil"
+msgstr "Geri alma işlemi %1 dosyası için olanaklı değil"
 
 #: batchrenamer.cpp:731
 #, kde-format
@@ -124,7 +124,7 @@ msgstr "%1 dizini oluşturulamıyor: %2"
 #: customfilenamedlg.ui:63
 #, kde-format
 msgid "File preview"
-msgstr "Dosya ön izleme"
+msgstr "Dosya önizleme"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: customfilenamedlg.ui:91
@@ -137,7 +137,7 @@ msgstr "Lütfen yeni bir dosya adı girin"
 #, kde-format
 msgid "Rename the file using the filename created by KRename."
 msgstr ""
-"Dosyayı K Adveren tarafından oluşturulan dosya adıyla yeniden adlandır."
+"Dosyayı K Adveren tarafından oluşturulan dosya adıyla yeniden adlandırın."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioKRename)
 #: customfilenamedlg.ui:100
@@ -152,7 +152,7 @@ msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."
 msgstr ""
-"Bu dosyayı yeniden adlandırırken girdi dosya adını kullan. Aynı zamanda "
+"Bu dosyayı yeniden adlandırırken girdi dosya adını kullanın. Aynı zamanda "
 "girdi dosya adını değiştirip yeniden adlandırmada bunu kullanabilirsiniz."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioInput)
@@ -168,7 +168,7 @@ msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
 msgstr ""
 "K Adveren tarafından oluşturulan dosya adını taban alan özel bir dosya adı "
-"kullan."
+"kullanın."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
 #: customfilenamedlg.ui:125
@@ -179,13 +179,14 @@ msgstr "&Özel dosya adı kullan"
 #: datetimeplugin.cpp:35
 #, kde-format
 msgid "Date & Time Plugin"
-msgstr "Tarih & Saat Eklentisi"
+msgstr "Tarih ve Zaman Eklentisi"
 
 #: datetimeplugin.cpp:55
 #, kde-format
 msgid "DateTimePlugin works only with local files. %1 is a remote file."
 msgstr ""
-"DateTimePlugin yalnızca yerel dosyalarla çalışır. %1 uzaktaki bir dosya."
+"Tarih ve Zaman eklentisi, yalnızca yerel dosyalarla çalışır. %1 uzaktaki bir "
+"dosya."
 
 #: datetimeplugin.cpp:100
 #, kde-format
@@ -206,19 +207,19 @@ msgstr "%1 dosyasının tarihi değiştirilemiyor. (utime başarısız)"
 #: datetimepluginwidget.ui:19
 #, kde-format
 msgid "Change &access date && time"
-msgstr "&Erişim tarihini && saatini değiştirin"
+msgstr "&Erişim tarihini ve zamanını değiştir"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkModification)
 #: datetimepluginwidget.ui:26
 #, kde-format
 msgid "Change &modifcation date && time"
-msgstr "Değiştirilme tarihi && zamanını değiştir"
+msgstr "Değişiklik tarihini ve zamanını değiştir"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: datetimepluginwidget.ui:35
 #, kde-format
 msgid "Time:"
-msgstr "Saat:"
+msgstr "Zaman:"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonCurrent)
 #: datetimepluginwidget.ui:63
@@ -264,13 +265,13 @@ msgstr ""
 "\tklasör/002/dosya3\n"
 "\tklasör/002/dosya4\n"
 "\tklasör/003/dosya5\n"
-"\t..."
+"\t…"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: dirsortpluginwidget.ui:32
 #, kde-format
 msgid "&Options:"
-msgstr "A&yarlar:"
+msgstr "&Seçenekler:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: dirsortpluginwidget.ui:38
@@ -338,7 +339,7 @@ msgid ""
 "subfolders to the list of files to rename."
 msgstr ""
 "Klasör ağacı boyunca özyineli olarak yürü ve ayrıca tüm alt klasörlerin "
-"içeriğini yeniden adlandırılacak dosyalar listesine ekle."
+"içeriğini yeniden adlandırılacak dosyalar listesine ekleyin."
 
 #: filedialogextwidget.cpp:58
 #, kde-format
@@ -346,7 +347,7 @@ msgid ""
 "If not checked, KRename will ignore folders starting with a dot during "
 "recursive adding."
 msgstr ""
-"Eğer seçili değilse K Adveren özyineli ekleme sırasında nokta ile başlayan "
+"Seçili değilse K Adveren, özyineli ekleme sırasında nokta ile başlayan "
 "klasörleri yok sayacaktır."
 
 #: filedialogextwidget.cpp:60
@@ -355,7 +356,7 @@ msgid ""
 "Add only the folder names and not the names of the files in the folder to "
 "KRename."
 msgstr ""
-"K Adveren'e yalnızca klasör adlarını ekle, klasör içindeki dosyaların "
+"K Adveren’e yalnızca klasör adlarını ekleyin, klasör içindeki dosyaların "
 "adlarını değil."
 
 #: filedialogextwidget.cpp:62
@@ -364,13 +365,13 @@ msgid ""
 "This option causes KRename to also add the name of the base folder of the "
 "selected files to its list."
 msgstr ""
-"Bu seçenek, K Adveren'in seçilen dosyaların ait olduğu klasörün adını de "
+"Bu seçenek, K Adveren’in seçili dosyaların ait olduğu klasörün adını da "
 "listeye eklemesini sağlar."
 
 #: fileplugin.cpp:71
 #, kde-format
 msgid "Supported tokens:"
-msgstr "Desteklenen semboller:"
+msgstr "Desteklenen jetonlar:"
 
 #: fontplugin.cpp:19
 #, kde-format
@@ -401,7 +402,7 @@ msgstr "<qt>Bu eklenti, yazıtipi dosyalarından etiket okumayı destekler.</qt>
 #: guimodeselector.ui:22
 #, kde-format
 msgid "Look and Feel"
-msgstr "Bak ve Hisset"
+msgstr "Görünüm ve His"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: guimodeselector.ui:34
@@ -413,7 +414,7 @@ msgstr "KRename arayüzünün görünümünü yapılandır:"
 #: guimodeselector.ui:57
 #, kde-format
 msgid "Use &assistant style GUI (beginners)"
-msgstr "&Asistan arayüzünü kullan (yeni başlayanlar)"
+msgstr "&Yardımcı tarzı arayüzü kullan (yeni başlayanlar)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionTabs)
 #: guimodeselector.ui:67
@@ -442,18 +443,18 @@ msgid ""
 "this plugin, you can easily add an offset of -4 to get the desired result.</"
 "p>"
 msgstr ""
-"<p><b>Bu eklenti dosya adlarındaki numaralara verilen bir kaymayı ekler.</"
+"<p><b>Bu eklenti dosya adlarındaki numaralara verilen bir ofset ekler.</"
 "b><br/>\n"
-"Örn. <i>img010</i>, <i>img011</i> ve <i>img019</i> olarak adlandırılması "
+"Örneğin, <i>img010</i>, <i>img011</i> ve <i>img019</i> olarak adlandırılması "
 "gereken <i>img014</i>, <i>img015</i>, <i>img023</i> dosya adlarımız olsun. "
-"Bu eklentiyle, kolaylıkla -4 kayma değerini ekleyerek istenen sonucu "
+"Bu eklentiyle, kolaylıkla −4 ofset değerini ekleyerek istenen sonucu "
 "alabilirsiniz.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: increasecounterpluginwidget.ui:49
 #, kde-format
 msgid "Offse&t:"
-msgstr "&Kayma:"
+msgstr "&Ofset:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOptions)
 #: krenamedestination.ui:31
@@ -483,7 +484,7 @@ msgstr "Dosyaları hedef klasöre &taşı"
 #: krenamedestination.ui:76
 #, kde-format
 msgid "Create symbolic &links in destination folder"
-msgstr "Hedef klasörde sembolik &bağlar oluştur"
+msgstr "Hedef klasörde sembolik &bağlantılar oluştur"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkOverwrite)
 #: krenamedestination.ui:99
@@ -501,7 +502,7 @@ msgstr "&Gelişmiş Dosya Adı"
 #: krenamefilename.ui:50
 #, kde-format
 msgid "&Template:"
-msgstr "&Şablon:"
+msgstr "Ş&ablon:"
 
 #. i18n: ectx: property (toolTip), widget (ExtHistoryCombo, filenameTemplate)
 #: krenamefilename.ui:66
@@ -528,7 +529,7 @@ msgstr "<p><b>.</b></p>"
 #: krenamefilename.ui:97
 #, kde-format
 msgid "<qt>Enter a template for changing the file extension.</qt>"
-msgstr "<qt>Dosya uzantıklarını değiştirmek için bir şablon girin.</qt>"
+msgstr "<qt>Dosya uzantılarını değiştirmek için bir şablon girin.</qt>"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFunctions)
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonHelp4)
@@ -542,20 +543,20 @@ msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
-"<qt>Bir mp3'ün sanatçısı ya da görselin oluşturulma tarihi gibi bir özel "
+"<qt>Bir MP3’ün sanatçısı veya görselin oluşturulma tarihi gibi bir özel "
 "işlev girin.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFunctions)
 #: krenamefilename.ui:115
 #, kde-format
 msgid "&Functions..."
-msgstr "&İşlevler..."
+msgstr "&İşlevler…"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:141
 #, kde-format
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
-msgstr "<qt>Dosya uzantısını değiştirmeden olduğu gibi tut.</qt>"
+msgstr "<qt>Dosya uzantısını değiştirmeden olduğu gibi tutun.</qt>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:144
@@ -578,26 +579,26 @@ msgid ""
 "\"Last Dot\" only \".gz\".</qt>"
 msgstr ""
 "<qt>Dosya adının hangi kısmının dosya uzantısı olarak düşünüleceğini "
-"yapılandırın. Örn. \"İlk Nokta\", uzantının \".tar.gz\", \"Son Nokta\" "
-"yalnızca \".gz\" olduğunu belirtir.</qt>"
+"yapılandırın. Örneğin, “İlk nokta”, uzantının “.tar.gz”, “Son nokta” "
+"yalnızca “.gz” olduğunu belirtir.</qt>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:181
 #, kde-format
 msgid "First Dot"
-msgstr "İlk Nokta"
+msgstr "İlk nokta"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:186
 #, kde-format
 msgid "Last Dot"
-msgstr "Son Nokta"
+msgstr "Son nokta"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:191
 #, kde-format
 msgid "No File Extension"
-msgstr "Dosya Uzantısı Yok"
+msgstr "Dosya uzantısı yok"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFind)
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFindSimple)
@@ -615,7 +616,7 @@ msgstr ""
 #: krenamefilename.ui:224 krenamefilename.ui:748 krenamesimple.ui:439
 #, kde-format
 msgid "Find &and Replace..."
-msgstr "Bul &ve Değiştir..."
+msgstr "Bul &ve Değiştir…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:234
@@ -625,25 +626,25 @@ msgid ""
 "</qt>"
 msgstr ""
 "<qt>Dosya adlarının numaralandırılması için başlangıç indeksi, adımlama ve "
-"atlamayı yapılandır.</qt>"
+"atlamayı yapılandırın.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:237
 #, kde-format
 msgid "&Numbering..."
-msgstr "&Numaralama..."
+msgstr "&Numaralandırma…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:247
 #, kde-format
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
-msgstr "<qt>Eklemek için dosya adının bir kısmını grafiksel olarak seç.</qt>"
+msgstr "<qt>Eklemek için dosya adının bir kısmını grafiksel olarak seçin.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:250
 #, kde-format
 msgid "&Insert Part of Filename..."
-msgstr "D&osya adından bir parça kullan..."
+msgstr "D&osya Adından Parça Kullan…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabSimple)
 #: krenamefilename.ui:289
@@ -655,7 +656,7 @@ msgstr "&Basit Dosya Adı"
 #: krenamefilename.ui:312 krenamesimple.ui:48
 #, kde-format
 msgid "&Filename"
-msgstr "&Dosya adı"
+msgstr "&Dosya Adı"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSuffix)
 #: krenamefilename.ui:333 krenamesimple.ui:72
@@ -679,7 +680,7 @@ msgstr "Özgün adını kullan"
 #: krenamesimple.ui:272 partfilenamewidget.ui:70
 #, kde-format
 msgid "Convert to lower case"
-msgstr "Küçük harfe çevir"
+msgstr "küçük harfe çevir"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
@@ -690,7 +691,7 @@ msgstr "Küçük harfe çevir"
 #: krenamesimple.ui:277 partfilenamewidget.ui:75
 #, kde-format
 msgid "Convert to upper case"
-msgstr "Büyük harflere çevir"
+msgstr "BÜYÜK harfe çevir"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboFilenameSimple)
@@ -714,7 +715,7 @@ msgstr "Özel ad"
 #: krenamefilename.ui:426 krenamesimple.ui:153
 #, kde-format
 msgid "File&name:"
-msgstr "Dosya &Adı:"
+msgstr "Dosya &adı:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSuffix)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPrefix)
@@ -775,13 +776,13 @@ msgstr "&Basamak sayısı:"
 #: krenamefilename.ui:707 krenamesimple.ui:407
 #, kde-format
 msgid "Start  &index:"
-msgstr "Başlangıç  &indeksi:"
+msgstr "Başlangıç &indeksi:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonUp)
 #: krenamefilename.ui:835 krenamefiles.ui:210
 #, kde-format
 msgid "Move selected files upwards."
-msgstr "Seçilen dosyaları yukarı taşı."
+msgstr "Seçili dosyaları yukarı taşıyın."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonUp)
 #: krenamefilename.ui:838 krenamesimple.ui:526
@@ -793,7 +794,7 @@ msgstr "&Yukarı"
 #: krenamefilename.ui:845 krenamefiles.ui:220
 #, kde-format
 msgid "Move selected files downwards."
-msgstr "Seçilen dosyaları aşağı taşı."
+msgstr "Seçili dosyaları aşağı taşıyın."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonDown)
 #: krenamefilename.ui:848 krenamesimple.ui:533
@@ -805,20 +806,20 @@ msgstr "&Aşağı"
 #: krenamefiles.ui:53
 #, kde-format
 msgid "Add files for renaming."
-msgstr "Yeniden adlandırma için dosyaları ekle."
+msgstr "Yeniden adlandırma için dosyalar ekleyin."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonAdd)
 #: krenamefiles.ui:56 previewlist.cpp:21 replacewidget.ui:97
 #: scriptpluginwidget.ui:68
 #, kde-format
 msgid "&Add..."
-msgstr "&Ekle..."
+msgstr "&Ekle…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonRemove)
 #: krenamefiles.ui:66
 #, kde-format
 msgid "Remove selected files."
-msgstr "Seçilen dosyaları kaldır."
+msgstr "Seçil dosyaları kaldırın."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
 #: krenamefiles.ui:69
@@ -830,7 +831,7 @@ msgstr "&Kaldır"
 #: krenamefiles.ui:76
 #, kde-format
 msgid "Remove all files."
-msgstr "Tüm dosyaları kaldır."
+msgstr "Tüm dosyaları kaldırın."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemoveAll)
 #: krenamefiles.ui:79
@@ -890,7 +891,7 @@ msgstr "Tarih (Azalan)"
 #: krenamefiles.ui:134
 #, kde-format
 msgid "Custom ..."
-msgstr "Özel ..."
+msgstr "Özel…"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkPreview)
 #: krenamefiles.ui:151
@@ -908,13 +909,13 @@ msgstr "&Önizleme"
 #: krenamefiles.ui:161
 #, kde-format
 msgid "Display the filename together with the preview."
-msgstr "Dosya adını önizleme ile beraber görüntüle."
+msgstr "Dosya adını önizleme ile beraber görüntüleyin."
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkName)
 #: krenamefiles.ui:164
 #, kde-format
 msgid "&Display name"
-msgstr "&Görüntüleme adı"
+msgstr "&Görüntü adı"
 
 #. i18n: ectx: property (text), widget (QLabel, labelCount)
 #: krenamefiles.ui:174
@@ -942,7 +943,7 @@ msgstr "Tüm dosyaları listeden kaldırmak istediğinizden emin misiniz?"
 #: krenameimpl.cpp:356 main.cpp:45
 #, kde-format
 msgid "KRename"
-msgstr "KRename"
+msgstr "K Adveren"
 
 #: krenameimpl.cpp:474
 #, kde-format
@@ -972,7 +973,7 @@ msgstr "dosya adının ilk harfi büyük"
 #: krenameimpl.cpp:479
 #, kde-format
 msgid "number (try also ##, ###, ... for leading zeros)"
-msgstr "numara (başa sıfır koymak için ##, ###, ... seçeneklerini de deneyin)"
+msgstr "numara (başa sıfır koymak için ##, ###, … seçeneklerini de deneyin)"
 
 #: krenameimpl.cpp:480
 #, kde-format
@@ -987,22 +988,22 @@ msgstr "bir alt klasör oluştur"
 #: krenameimpl.cpp:482
 #, kde-format
 msgid "character x to y of old filename"
-msgstr "eski dosya adındaki x - y karakterleri arası"
+msgstr "eski dosya adındaki x–y karakterleri arası"
 
 #: krenameimpl.cpp:483
 #, kde-format
 msgid "y characters of old filename starting at x"
-msgstr "Eski dosya adının x'ten başlayan y karakteri"
+msgstr "Eski dosya adının x’ten başlayan y karakteri"
 
 #: krenameimpl.cpp:484
 #, kde-format
 msgid "insert name of folder"
-msgstr "klasörün adını girin"
+msgstr "klasörün adını gir"
 
 #: krenameimpl.cpp:485
 #, kde-format
 msgid "insert name of parent folder"
-msgstr "üst klasörün adını girin"
+msgstr "üst klasörün adını gir"
 
 #: krenameimpl.cpp:486
 #, kde-format
@@ -1010,23 +1011,23 @@ msgid ""
 "insert a '/' to create a new subfolder (useful from within regular "
 "expressions)"
 msgstr ""
-"yeni bir alt klasör oluşturmak için '/' girin (düzenli ifadeler içinde "
+"yeni bir alt klasör oluşturmak için “/” girin (düzenli ifadeler içinde "
 "faydalıdır)"
 
 #: krenameimpl.cpp:487
 #, kde-format
 msgid "insert the length of the input filename"
-msgstr "girilen dosya adının uzunluğunu girin"
+msgstr "girilen dosya adının uzunluğunu gir"
 
 #: krenameimpl.cpp:488
 #, kde-format
 msgid "strip whitespaces leading and trailing"
-msgstr "Adın baş ve sonundaki boşlukları yok say"
+msgstr "adın baş ve sonundaki boşlukları yok say"
 
 #: krenameimpl.cpp:489
 #, kde-format
 msgid "strip whitespaces leading and trailing of an arbitrary string"
-msgstr "Bir karakter dizisinin başındaki ve sonundaki boşlukları temizle"
+msgstr "bir karakter dizisinin başındaki ve sonundaki boşlukları temizle"
 
 #: krenameimpl.cpp:490
 #, kde-format
@@ -1036,47 +1037,47 @@ msgstr "Yerleşik İşlevler"
 #: krenameimpl.cpp:493
 #, kde-format
 msgid "Insert '$'"
-msgstr "'$' Ekle"
+msgstr "“$” Ekle"
 
 #: krenameimpl.cpp:494
 #, kde-format
 msgid "Insert '%'"
-msgstr "'%' Ekle"
+msgstr "“%” Ekle"
 
 #: krenameimpl.cpp:495
 #, kde-format
 msgid "Insert '&'"
-msgstr "'&' Ekle"
+msgstr "“&” Ekle"
 
 #: krenameimpl.cpp:496
 #, kde-format
 msgid "Insert '*'"
-msgstr "'*' Ekle"
+msgstr "“*” Ekle"
 
 #: krenameimpl.cpp:497
 #, kde-format
 msgid "Insert '/'"
-msgstr "'/' Ekle"
+msgstr "“/” Ekle"
 
 #: krenameimpl.cpp:498
 #, kde-format
 msgid "Insert '\\\\'"
-msgstr "'\\\\' Ekle"
+msgstr "“\\\\” Ekle"
 
 #: krenameimpl.cpp:499
 #, kde-format
 msgid "Insert '['"
-msgstr "'[' Ekle"
+msgstr "“[” Ekle"
 
 #: krenameimpl.cpp:500
 #, kde-format
 msgid "Insert ']'"
-msgstr "']' Ekle"
+msgstr "“]” Ekle"
 
 #: krenameimpl.cpp:501
 #, kde-format
 msgid "Insert '#'"
-msgstr "'#' Ekle"
+msgstr "“#” Ekle"
 
 #: krenameimpl.cpp:502
 #, kde-format
@@ -1174,9 +1175,9 @@ msgid ""
 "feature requests are as welcome as financial support (everybody needs "
 "money ;). See help files for details."
 msgstr ""
-"K Adveren'i beğeniyorsanız desteklemek isteyebilirsiniz. Sınama, hata "
+"K Adveren’i beğeniyorsanız desteklemek isteyebilirsiniz. Sınama, hata "
 "giderme ve özellik isteklerinin yanında finansal destek de hoş karşılanır "
-"(herkesin paraya gereksinimi vardır ;). Ayrıntılar için yardım dosyalarına "
+"(herkesin paraya gereksinimi vardır ;)). Ayrıntılar için yardım dosyalarına "
 "göz atın."
 
 #: main.cpp:54
@@ -1192,7 +1193,7 @@ msgstr "Heiko Becker"
 #: main.cpp:57
 #, kde-format
 msgid "Current maintainer"
-msgstr "Şu anki bakımcı"
+msgstr "Geçerli bakımcı"
 
 #: main.cpp:59
 #, kde-format
@@ -1207,7 +1208,7 @@ msgstr "Geliştirici ve önceki bakımcı"
 #: main.cpp:61
 #, kde-format
 msgid "Stefan \"Stonki\" Onken"
-msgstr "Stefan \"Stonki\" Onken"
+msgstr "Stefan “Stonki” Onken"
 
 #: main.cpp:62
 #, kde-format
@@ -1253,7 +1254,7 @@ msgid ""
 "to his excellent image viewer showimg."
 msgstr ""
 "startIndex işlevinde bir hata düzeltti ve BatchRenamer sınıfını\n"
-"harika görsel görüntüleyicisi olan showmimg'e ekledi."
+"harika görsel görüntüleyicisi olan showmimg’e ekledi."
 
 #: main.cpp:71
 #, kde-format
@@ -1263,7 +1264,7 @@ msgstr "Michael Elvers"
 #: main.cpp:71
 #, kde-format
 msgid "Fixed a bug that caused krename not closing open files."
-msgstr "K Adveren'in açık dosyaları kapatmasını engelleyen hata kapatıldı."
+msgstr "K Adveren’in açık dosyaları kapatmasını engelleyen hata düzeltildi."
 
 #: main.cpp:73
 #, kde-format
@@ -1276,7 +1277,7 @@ msgid ""
 "Thanks for his great job at apps.kde.com and help with contributing krename "
 "to apps.kde.com."
 msgstr ""
-"apps.kde.com'daki harika katkıları ve K Adveren'in apps.kde.com'da "
+"apps.kde.com’daki harika katkıları ve K Adveren’in apps.kde.com’da "
 "bulunmasına yardımları için teşekkürler."
 
 #: main.cpp:75
@@ -1288,9 +1289,7 @@ msgstr "Charles Samuels"
 #, kde-format
 msgid ""
 "Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."
-msgstr ""
-"Onun noatun birimleriyle gerçekleştirilen ID3/Ogg etiket düzenlemeleri için "
-"teşekkürler."
+msgstr "noatun’a ve onun ID3/Ogg künye koduna teşekkürler."
 
 #: main.cpp:77
 #, kde-format
@@ -1301,7 +1300,7 @@ msgstr "Franz Schmid"
 #, kde-format
 msgid "Gave me a good start into writing plugins with his application scribus."
 msgstr ""
-"Uygulaması scribus ile eklenti yazmaya iyi bir başlangıç yapmamı sağladı."
+"Scribus uygulaması ile eklenti yazmaya iyi bir başlangıç yapmamı sağladı."
 
 #: main.cpp:79
 #, kde-format
@@ -1319,7 +1318,7 @@ msgstr ""
 #: main.cpp:81
 #, kde-format
 msgid "Michael v.Ostheim"
-msgstr "Michael v.Ostheim"
+msgstr "Michael v. Ostheim"
 
 #: main.cpp:81
 #, kde-format
@@ -1334,7 +1333,7 @@ msgstr "Brandon Low"
 #: main.cpp:83
 #, kde-format
 msgid "Some GCC 3.1 fixes for Gentoo."
-msgstr "Gentoo için bazı GCC 3.1 düzeltmeleri."
+msgstr "Gentoo için bazı GCC 3.1 düzeltmeleri"
 
 #: main.cpp:85
 #, kde-format
@@ -1344,7 +1343,7 @@ msgstr "Per Oyvind Karlsen"
 #: main.cpp:85
 #, kde-format
 msgid "Thanks for creating the Mandrake RPM"
-msgstr "Manrake RPM'ini oluşturduğu için teşekkürler"
+msgstr "Mandrake RPM’sini oluşturduğu için teşekkürler"
 
 #: main.cpp:87
 #, kde-format
@@ -1364,7 +1363,7 @@ msgstr "Daniele Medri"
 #: main.cpp:88
 #, kde-format
 msgid "Italian translation work"
-msgstr "İtalyanca çeviri işi"
+msgstr "İtalyanca çeviri"
 
 #: main.cpp:89
 #, kde-format
@@ -1374,7 +1373,7 @@ msgstr "Stephan Johach"
 #: main.cpp:89
 #, kde-format
 msgid "Provided a gcc3.x namespace patch"
-msgstr "gcc 3.* sürümleri için namespace yaması hazırladı"
+msgstr "gcc 3.* sürümleri için namespace yaması hazırladı."
 
 #: main.cpp:90
 #, kde-format
@@ -1384,7 +1383,7 @@ msgstr "Michael Zugaro"
 #: main.cpp:90
 #, kde-format
 msgid "Provided the new preview and move features"
-msgstr "Yeni önizleme ve taşıma özellikleri eklendi"
+msgstr "Yeni önizleme ve taşıma özellikleri ekledi."
 
 #: main.cpp:91
 #, kde-format
@@ -1397,8 +1396,8 @@ msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 msgstr ""
-"Spec dosyasındaki sorunları çözdü, SuSE'nin aklınıza gelebilecek tüm "
-"sürümleri için rpm hazırladı ve şimdi de Gentoo paketlerini yapıyor"
+"Spec dosyasındaki sorunları çözdü, SuSE’nin aklınıza gelebilecek tüm "
+"sürümleri için rpm hazırladı ve şimdi de Gentoo paketlerini yapıyor."
 
 #: main.cpp:92
 #, kde-format
@@ -1408,7 +1407,7 @@ msgstr "Mark Ziegler"
 #: main.cpp:92
 #, kde-format
 msgid "Provided SuSE RPMs and very good suggestions"
-msgstr "Suse RPM'leri oluşturdu ve güzel önerilerde bulundu"
+msgstr "Suse RPM’lerini oluşturdu ve güzel önerilerde bulundu."
 
 #: main.cpp:93
 #, kde-format
@@ -1418,7 +1417,7 @@ msgstr "Jose Rodriguez"
 #: main.cpp:93
 #, kde-format
 msgid "Contributed a Spanish translation"
-msgstr "İspanyolca çeviriyle katkıda bulundu"
+msgstr "İspanyolca çeviriyle katkıda bulundu."
 
 #: main.cpp:94
 #, kde-format
@@ -1429,8 +1428,8 @@ msgstr "Steven P. Ulrick"
 #, kde-format
 msgid "Provided a RedHat RPM and was big help in improving KRename"
 msgstr ""
-"Bir RedHat RPM'i sağladı ve K Adveren'i geliştirmede çok büyük yardımı "
-"dokundu"
+"Bir RedHat RPM’si sağladı ve K Adveren’i geliştirmede çok büyük yardımı "
+"dokundu."
 
 #: main.cpp:95
 #, kde-format
@@ -1440,7 +1439,7 @@ msgstr "UTUMI Hirosi"
 #: main.cpp:95
 #, kde-format
 msgid "Translated KRename to Japanese"
-msgstr "K Adveren'i Japoncaya çevirdi"
+msgstr "K Adveren’i Japoncaya çevirdi."
 
 #: main.cpp:96
 #, kde-format
@@ -1450,7 +1449,7 @@ msgstr "Nicolas Benoit"
 #: main.cpp:96
 #, kde-format
 msgid "Translated KRename into French"
-msgstr "K Adveren'i Fransızcaya çevirdi"
+msgstr "K Adveren’i Fransızcaya çevirdi."
 
 #: main.cpp:97
 #, kde-format
@@ -1460,17 +1459,17 @@ msgstr "Krzysztof Pawlak"
 #: main.cpp:97
 #, kde-format
 msgid "Translated KRename into Polish"
-msgstr "K Adveren'i Lehçeye çevirdi"
+msgstr "K Adveren’i Lehçeye çevirdi."
 
 #: main.cpp:98
 #, kde-format
 msgid "Ilya Ivkov"
-msgstr "Ilya Ivkov"
+msgstr "İlya İvkov"
 
 #: main.cpp:98
 #, kde-format
 msgid "Translated KRename into Russian"
-msgstr "K Adveren'i Rusçaya çevirdi"
+msgstr "K Adveren’i Rusçaya çevirdi."
 
 #: main.cpp:99
 #, kde-format
@@ -1480,7 +1479,7 @@ msgstr "Asim Husanovic"
 #: main.cpp:99
 #, kde-format
 msgid "Translated KRename into Bosnian"
-msgstr "K Adveren'i Boşnakçaya çevirdi"
+msgstr "K Adveren’i Boşnakçaya çevirdi."
 
 #: main.cpp:100
 #, kde-format
@@ -1506,13 +1505,13 @@ msgstr "Çekçe çeviri"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Emre Aladağ"
+msgstr "Emre Aladağ, Emir SARI"
 
 #: main.cpp:103
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "emre@emrealadag.com"
+msgstr "emre@emrealadag.com, emir_sari@icloud.com"
 
 #: main.cpp:111
 #, kde-format
@@ -1522,7 +1521,7 @@ msgstr "Yeniden adlandırılacak listeye eklenecek dosyalar"
 #: main.cpp:111
 #, kde-format
 msgid "[files...]"
-msgstr "[dosyalar...]"
+msgstr "[dosyalar…]"
 
 #: main.cpp:112
 #, kde-format
@@ -1552,22 +1551,22 @@ msgstr "kullanılmak üzere bir eklentiyi etkinleştir"
 #: main.cpp:116
 #, kde-format
 msgid "copy files to folder or url"
-msgstr "dosyaları klasöre veya url'ye kopyala"
+msgstr "dosyaları klasöre veya URL’ye kopyala"
 
 #: main.cpp:116 main.cpp:117 main.cpp:118
 #, kde-format
 msgid "path or url"
-msgstr "yol veya url"
+msgstr "yol veya URL"
 
 #: main.cpp:117
 #, kde-format
 msgid "move files to folder or url"
-msgstr "dosyaları klasöre veya url'ye taşı"
+msgstr "dosyaları klasöre veya URL’ye taşı"
 
 #: main.cpp:118
 #, kde-format
 msgid "link files to folder or url"
-msgstr "dosyaları klasöre veya url'ye bağla"
+msgstr "dosyaları klasöre veya URL’ye bağlantıla"
 
 #: main.cpp:119
 #, kde-format
@@ -1586,7 +1585,8 @@ msgid ""
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
 "<b>K Adveren, kök dizinden başlatıldı!</b><br>Eğer ne yaptığınızı tam olarak "
-"bilmiyorsanız Krename kök dizinden başlatılınca sisteminize zarar verebilir!"
+"bilmiyorsanız K Adveren kök dizinden başlatılınca sisteminize zarar "
+"verebilir!"
 
 #: main.cpp:143
 #, kde-format
@@ -1682,12 +1682,12 @@ msgstr "ODF dosyasının dili"
 #: odfplugin.cpp:85
 #, kde-format
 msgid "Number of pages in the ODF file"
-msgstr "OFD dosyasındaki sayfa sayısı"
+msgstr "ODF dosyasındaki sayfa sayısı"
 
 #: odfplugin.cpp:86
 #, kde-format
 msgid "Number of words in the ODF file"
-msgstr "ODF dosyasındaki sayfa sayıs"
+msgstr "ODF dosyasındaki sayfa sayısı"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: partfilenamewidget.ui:25
@@ -1715,7 +1715,7 @@ msgstr "Seçimi &dönüştür:"
 #: partfilenamewidget.ui:65
 #, kde-format
 msgid "No Conversion"
-msgstr "Dönüştürme Yok"
+msgstr "Dönüştürme yok"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPreviewDesc)
 #: partfilenamewidget.ui:90
@@ -1853,7 +1853,7 @@ msgstr "Okuyabilir"
 #: permissionspluginwidget.ui:131
 #, kde-format
 msgid "Can Read & Write"
-msgstr "Okuyabilir & Yazabilir"
+msgstr "Okuyabilir ve yazabilir"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: permissionspluginwidget.ui:69
@@ -1878,7 +1878,7 @@ msgstr "Bu dosya gelişmiş izinler kullanır"
 #, kde-format
 msgid "Is Executable/Only owner &can rename and delete folder content"
 msgstr ""
-"Çalıştırılabilir/Yalnızca sahibi &klasör içeriğini yeniden adlandırabilir ve "
+"Yürütülebilir/Yalnızca sahibi &klasör içeriğini yeniden adlandırabilir ve "
 "silebilir"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
@@ -1959,7 +1959,7 @@ msgstr "<qt>Bu eklenti PDF dosyalarından etiket okumayı destekler.</qt>"
 #: previewlist.cpp:17
 #, kde-format
 msgid "&Change filename manually..."
-msgstr "Dosya Adını Elle &Değiştir..."
+msgstr "Dosya Adını Elle &Değiştir…"
 
 #: previewlist.cpp:19
 #, kde-format
@@ -1975,7 +1975,7 @@ msgstr "&Kaldır"
 #: progressdialog.cpp:19
 #, kde-format
 msgid "&Rename more..."
-msgstr "Daha fazlasını &yeniden adlandır..."
+msgstr "Daha fazlasını &yeniden adlandır…"
 
 #: progressdialog.cpp:20
 #, kde-format
@@ -1990,28 +1990,28 @@ msgstr "Hedefi &Aç"
 #: progressdialog.cpp:38
 #, kde-format
 msgid "Restart &KRename..."
-msgstr "&K Adveren'i Yeniden Başlat..."
+msgstr "&K Adveren’i Yeniden Başlat…"
 
 #: progressdialog.cpp:40
 #, kde-format
 msgid "Rename Processed Files &Again..."
-msgstr "İşlenmiş Dosyaları &Tekrar Yeniden Adlandır..."
+msgstr "İşlenmiş Dosyaları &Tekrar Yeniden Adlandır…"
 
 #: progressdialog.cpp:41
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
-msgstr "İşlenmemiş Dosyaları &Tekrar Yeniden Adlandır..."
+msgstr "İşlenmemiş Dosyaları &Bir Kez Daha Adlandır…"
 
 #: progressdialog.cpp:42
 #, kde-format
 msgid "&Rename All Files Again..."
-msgstr "Tüm Dosyaları &Tekrar Yeniden Adlandır..."
+msgstr "Tüm Dosyaları &Bir Kez Daha Yeniden Adlandır…"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ProgressDialog)
 #: progressdialog.ui:13
 #, kde-format
 msgid "Progress"
-msgstr "Süreç"
+msgstr "İlerleme"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
 #: progressdialog.ui:28
@@ -2022,17 +2022,17 @@ msgstr "İ&ptal"
 #: replacedialog.cpp:67
 #, kde-format
 msgid "Save Find & Replace Settings as:"
-msgstr "Bul & Değiştir Ayarlarını Kaydet:"
+msgstr "Bul ve Değiştir ayarlarını kaydet:"
 
 #: replacedialog.cpp:68
 #, kde-format
 msgid "KRename Find & Replace Settings XML (*.xml)"
-msgstr "K Adveren Bul & Değiştir Ayarları XML (*.xml)"
+msgstr "K Adveren Bul ve Değiştir ayarları XML’si (*.xml)"
 
 #: replacedialog.cpp:77
 #, kde-format
 msgid "Failed to save the Find & Replace Settings File."
-msgstr "Bul & Değiştir Ayarları Dosyasına kaydetme başarısız oldu."
+msgstr "Bul ve Değiştir ayarları dosyasına kaydedilemedi."
 
 #: replacedialog.cpp:129
 #, kde-format
@@ -2042,7 +2042,7 @@ msgstr "Bul ve Değiştir Ayarları Dosyasını Kaydet"
 #: replacedialog.cpp:131
 #, kde-format
 msgid "KRename Find and Replace Settings XML (*.xml)"
-msgstr "K Adveren Bul ve Değiştir Ayarları XML (*.xml)"
+msgstr "K Adveren Bul ve Değiştir ayarları XML’si (*.xml)"
 
 #: replacedialog.cpp:139
 #, kde-format
@@ -2050,15 +2050,14 @@ msgid ""
 "Failed to open the Find and Replace Settings File. Cannot read file %1:\n"
 "%2."
 msgstr ""
-"Bul ve Değiştir Ayarları Dosyası açma başarısız oldur. %1 dosyası "
-"okunamıyor:\n"
+"Bul ve Değiştir ayar dosyasını açma başarısız oldu. %1 dosyası okunamıyor:\n"
 "%2."
 
 #: replacedialog.cpp:150 replacedialog.cpp:161 replacedialog.cpp:166
 #: replacedialog.cpp:232
 #, kde-format
 msgid "KRename Find and Replace Settings XML File"
-msgstr "K Adveren Bul ve Değiştir Ayarları XML Dosyası"
+msgstr "K Adveren Bul ve Değiştir ayarları XML dosyası"
 
 #: replacedialog.cpp:151
 #, kde-format
@@ -2066,7 +2065,7 @@ msgid ""
 "Parse error at line %1, column %2:\n"
 "%3"
 msgstr ""
-"%1 satırında ayrıştırma hatası, sütun %2:\n"
+"%1. satırın %2. sütununda ayrıştırma hatası:\n"
 "%3"
 
 #: replacedialog.cpp:160
@@ -2101,7 +2100,7 @@ msgstr "&Bul:"
 #: replaceitemdlg.ui:35
 #, kde-format
 msgid "&Replace With:"
-msgstr "İle Yer Değişti&r:"
+msgstr "Şununla yer değişti&r:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkRegular)
 #: replaceitemdlg.ui:50
@@ -2131,31 +2130,31 @@ msgstr "Bul"
 #: replacewidget.ui:42
 #, kde-format
 msgid "Replace With"
-msgstr "Bununla Değiştir"
+msgstr "Şununla Değiştir"
 
 #. i18n: ectx: property (text), widget (QTableWidget, list)
 #: replacewidget.ui:47
 #, kde-format
 msgid "Process Tokens"
-msgstr "İşaretleri İşle"
+msgstr "Jetonları İşle"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSaveList)
 #: replacewidget.ui:70
 #, kde-format
 msgid "&Save Settings..."
-msgstr "Ayarları &Kaydet..."
+msgstr "Ayarları &Kaydet…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonLoadList)
 #: replacewidget.ui:77
 #, kde-format
 msgid "&Load Settings..."
-msgstr "Ayarları &Yükle..."
+msgstr "Ayarları &Yükle…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonEdit)
 #: replacewidget.ui:104
 #, kde-format
 msgid "&Edit..."
-msgstr "Dü&zenle..."
+msgstr "Dü&zenle…"
 
 #: scriptplugin.cpp:89
 #, kde-format
@@ -2175,7 +2174,7 @@ msgstr "Geçerli dosyanın indeksi"
 #: scriptplugin.cpp:99
 #, kde-format
 msgid "URL of the current file"
-msgstr "Geçerli dosyanın URL'si"
+msgstr "Geçerli dosyanın URL’si"
 
 #: scriptplugin.cpp:100
 #, kde-format
@@ -2205,22 +2204,22 @@ msgstr "İlk Değer"
 #: scriptplugin.cpp:247
 #, kde-format
 msgid "String"
-msgstr "Dizgi"
+msgstr "Dizi"
 
 #: scriptplugin.cpp:248
 #, kde-format
 msgid "Int"
-msgstr "Int"
+msgstr "Tamsayı"
 
 #: scriptplugin.cpp:249
 #, kde-format
 msgid "Double"
-msgstr "Double"
+msgstr "Çift"
 
 #: scriptplugin.cpp:250
 #, kde-format
 msgid "Boolean"
-msgstr "Boolean"
+msgstr "Boole"
 
 #: scriptplugin.cpp:265
 #, kde-format
@@ -2236,17 +2235,17 @@ msgstr "Girilen tüm tanımlamalar kaybolacak. Sürdürmek istiyor musunuz?"
 #: scriptplugin.cpp:296 scriptplugin.cpp:315
 #, kde-format
 msgid "Select file"
-msgstr "Dosya seç"
+msgstr "Dosya Seç"
 
 #: scriptplugin.cpp:326
 #, kde-format
 msgid "The file %1 already exists. Do you want to overwrite it?"
-msgstr "%1 dosyası zaten var. Üstüne yazmak istiyor musunuz?"
+msgstr "%1 dosyası halihazırda var. Üzerine yazmak istiyor musunuz?"
 
 #: scriptplugin.cpp:344
 #, kde-format
 msgid "Unable to open %1 for writing."
-msgstr "%1 yazmak için açılamadı."
+msgstr "%1, yazmak için açılamadı."
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ScriptPluginDialog)
 #: scriptplugindialog.ui:20
@@ -2264,7 +2263,7 @@ msgstr "&Ad:"
 #: scriptplugindialog.ui:41
 #, kde-format
 msgid "&Initial Value:"
-msgstr "&İlk Değer:"
+msgstr "&İlk değer:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: scriptplugindialog.ui:54
@@ -2312,13 +2311,13 @@ msgstr "K Adveren şablonlarından kullanılabilecek işlevleri tanımlayın:"
 #: scriptpluginwidget.ui:127
 #, kde-format
 msgid "&Save to File..."
-msgstr "&Dosyaya Kaydet..."
+msgstr "&Dosyaya Kaydet…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonLoad)
 #: scriptpluginwidget.ui:134
 #, kde-format
 msgid "&Load from File..."
-msgstr "&Dosyadan Yükle..."
+msgstr "&Dosyadan Yükle…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: scriptpluginwidget.ui:141
@@ -2330,7 +2329,7 @@ msgstr "Değişken &Ekle"
 #: scriptpluginwidget.ui:164
 #, kde-format
 msgid "&Test..."
-msgstr "&Sına..."
+msgstr "&Sına…"
 
 #: snumplugin.cpp:21
 #, kde-format
@@ -2345,7 +2344,7 @@ msgstr "Sezon numarasını çift basamak olarak ekler"
 #: snumplugin.cpp:23
 #, kde-format
 msgid "Inserts the episode number in two or three digits"
-msgstr "Bölüm numarasını iki ya da üç basamak olarak ekler"
+msgstr "Bölüm numarasını iki veya üç basamak olarak ekler"
 
 #. i18n("Inserts the season number in at least pad digits") );
 #. m_help.append( "[episode;pad];;" + i18n("Inserts the episode number in at least pad digits") );
@@ -2388,9 +2387,9 @@ msgstr ""
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
-"large; font-weight:600;\">K Adveren'e hoş geldiniz</span></p>\n"
+"large; font-weight:600;\">K Adveren’e hoş geldiniz</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">KDE'nin toplu dosya "
+"right:0px; -qt-block-indent:0; text-indent:0px;\">KDE’nin toplu dosya "
 "adlandırıcısı.<br />Dosyalarınızı yeniden adlandırmak için yapmanız gereken:"
 "</p></body></html>"
 
@@ -2398,13 +2397,13 @@ msgstr ""
 #: startupinfowidget.ui:57
 #, kde-format
 msgid "Add some files ..."
-msgstr "Birkaç dosya ekleyin ..."
+msgstr "Birkaç dosya ekleyin…"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelTemplate)
 #: startupinfowidget.ui:71
 #, kde-format
 msgid "Specify the new filenames by giving a template ..."
-msgstr "Bir şablon vererek dosya adlarını belirt ..."
+msgstr "Bir şablon vererek dosya adlarını belirtin…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: startupinfowidget.ui:93
@@ -2426,37 +2425,37 @@ msgstr "Günün tarihini yyyy-AA-gg biçiminde ekleyin"
 #: systemplugin.cpp:39
 #, kde-format
 msgid "Insert the current year"
-msgstr "Şu anki yılı ekleyin"
+msgstr "Geçerli yılı ekle"
 
 #: systemplugin.cpp:40
 #, kde-format
 msgid "Insert the current month as number"
-msgstr "Şu anki ayı sayı olarak ekleyin"
+msgstr "Geçerli ayı sayı olarak ekle"
 
 #: systemplugin.cpp:41
 #, kde-format
 msgid "Insert the current day as number"
-msgstr "Şu anki günü sayı olarak ekleyin"
+msgstr "Geçerli günü sayı olarak ekle"
 
 #: systemplugin.cpp:42
 #, kde-format
 msgid "Insert the current time"
-msgstr "Şu anki saati ekleyin"
+msgstr "Geçerli zamanı ekle"
 
 #: systemplugin.cpp:43
 #, kde-format
 msgid "Insert the current hour as number"
-msgstr "Şu anki saati sayı olarak ekleyin"
+msgstr "Geçerli zamanı sayı olarak ekle"
 
 #: systemplugin.cpp:44
 #, kde-format
 msgid "Insert the current minute as number"
-msgstr "Şu anki dakikayı sayı olarak ekleyin"
+msgstr "Geçerli dakikayı sayı olarak ekle"
 
 #: systemplugin.cpp:45
 #, kde-format
 msgid "Insert the current second as number"
-msgstr "Şu anki saniyeyi sayı olarak ekleyin"
+msgstr "Geçerli saniyeyi sayı olarak ekle"
 
 #: systemplugin.cpp:46
 #, kde-format
@@ -2471,37 +2470,37 @@ msgstr "Dosyanın grup sahibi"
 #: systemplugin.cpp:48
 #, kde-format
 msgid "Insert the files creation date"
-msgstr "Dosyaların oluşturulma tarihlerini ekleyin"
+msgstr "Dosyaların oluşturulma tarihlerini ekle"
 
 #: systemplugin.cpp:49
 #, kde-format
 msgid "Insert the formatted file creation date"
-msgstr "Dosyaların biçemli oluşturulma tarihlerini ekleyin"
+msgstr "Dosyaların biçimlendirilmiş oluşturulma tarihlerini ekle"
 
 #: systemplugin.cpp:50
 #, kde-format
 msgid "Insert the files modification date"
-msgstr "Dosyaların değiştirilme tarihlerini ekleyin"
+msgstr "Dosyaların değişiklik tarihlerini ekle"
 
 #: systemplugin.cpp:51
 #, kde-format
 msgid "Insert the formatted modification date"
-msgstr "Biçemli deştirilme tarihini ekleyin"
+msgstr "Biçimlendirilmiş değişiklik tarihini ekle"
 
 #: systemplugin.cpp:52
 #, kde-format
 msgid "Insert the date of the last file access"
-msgstr "Dosyaya son erişimin tarihini girin"
+msgstr "Dosyaya son erişimin tarihini ekle"
 
 #: systemplugin.cpp:53
 #, kde-format
 msgid "Insert the formatted date of the last file access"
-msgstr "Dosyaya son erişimin tarihini biçemli olarak girin"
+msgstr "Dosyaya son erişimin tarihini biçimlendirilmiş olarak ekle"
 
 #: systemplugin.cpp:54
 #, kde-format
 msgid "Insert the file size in bytes"
-msgstr "Dosya boyutunu bayt olarak girin"
+msgstr "Dosya boyutunu bayt olarak ekle"
 
 #: systemplugin.cpp:56
 #, kde-format
@@ -2515,47 +2514,47 @@ msgid ""
 "access time of files and the current system time and date.</qt>"
 msgstr ""
 "<qt>Bu eklenti dosyaların oluşturulma, değiştirilme ve son erişim "
-"zamanlarını ve sistem zamanı ve tarihi almak için işaretçileri içerir.</qt>"
+"zamanlarını ve sistem zamanı ve tarihi almak için jetonları içerir.</qt>"
 
 #: taglibplugin.cpp:28
 #, kde-format
 msgid "Insert the title of a track"
-msgstr "Kaydın başlığını girin"
+msgstr "Parça başlığını ekle"
 
 #: taglibplugin.cpp:29
 #, kde-format
 msgid "Insert the artist of a track"
-msgstr "Kaydın sanatçısını ekle"
+msgstr "Parçanın sanatçısını ekle"
 
 #: taglibplugin.cpp:30
 #, kde-format
 msgid "Insert the album of a track"
-msgstr "Kaydın albümünü ekle"
+msgstr "Parçanın albümünü ekle"
 
 #: taglibplugin.cpp:31
 #, kde-format
 msgid "Insert the comment of a track"
-msgstr "Kaydın yorumunu ekle"
+msgstr "Parçanın açıklamasını ekle"
 
 #: taglibplugin.cpp:32
 #, kde-format
 msgid "Insert the genre of a track"
-msgstr "Kaydın türünü ekle"
+msgstr "Parçanın tarzını ekle"
 
 #: taglibplugin.cpp:33
 #, kde-format
 msgid "Insert the year of a track"
-msgstr "Kaydın yılını ekle"
+msgstr "Parçanın yılını ekle"
 
 #: taglibplugin.cpp:34
 #, kde-format
 msgid "Insert the number of a track"
-msgstr "Kaydın numarasını ekle"
+msgstr "Parçanın numarasını ekle"
 
 #: taglibplugin.cpp:35
 #, kde-format
 msgid "Insert the number of a track formatted with a leading 0"
-msgstr "Kaydın numarasını başında 0 olacak şekilde ekle"
+msgstr "Parça numarasını başında 0 ile ekle"
 
 #: taglibplugin.cpp:37
 #, kde-format
@@ -2569,7 +2568,7 @@ msgid ""
 "WavPack and TrueAudio files.</qt>"
 msgstr ""
 "<qt>Bu eklenti MP3, Ogg Vorbis, FLAC, MPC, Speex WavPack ve TrueAudio "
-"dosyalarından etiket okumayı destekler.</qt>"
+"dosyalarından künye okumayı destekler.</qt>"
 
 #: tokenhelpdialog.cpp:96
 #, kde-format
@@ -2585,7 +2584,7 @@ msgstr "Son Kullanılan"
 #: tokenhelpwidget.ui:13
 #, kde-format
 msgid "KRename Help"
-msgstr "K Adveren Yardım"
+msgstr "K Adveren Yardımı"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: tokenhelpwidget.ui:19
@@ -2594,8 +2593,8 @@ msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
 msgstr ""
-"Desteklenen tüm işaretçiler (komutlar) bu pencerede listelenmiştir. İşaretçi "
-"arayabilir ve bulunan işaretçiyi dosya adı dizgisine sokabilirsiniz."
+"Desteklenen tüm jetonlar (komutlar) bu pencerede listelenmiştir. Jeton "
+"arayabilir ve bulunan jetonu dosya adı dizgisine sokabilirsiniz."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listCategories)
 #: tokenhelpwidget.ui:61
@@ -2607,7 +2606,7 @@ msgstr "Kategori"
 #: tokenhelpwidget.ui:95
 #, kde-format
 msgid "Token"
-msgstr "Sembol"
+msgstr "Jeton"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listTokens)
 #: tokenhelpwidget.ui:100
@@ -2625,13 +2624,13 @@ msgstr "Önizleme"
 #: tokenhelpwidget.ui:119
 #, kde-format
 msgid "Token &Preview"
-msgstr "İşaretçi &Önizleme"
+msgstr "Jeton &Önizlemesi"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPreview)
 #: tokenhelpwidget.ui:142
 #, kde-format
 msgid "Preview File:"
-msgstr "Önizleme Dosyası:"
+msgstr "Önizleme dosyası:"
 
 #: tokensortmodedialog.cpp:23
 #, kde-format
@@ -2646,7 +2645,7 @@ msgstr "Oluşturulma Tarihi"
 #: tokensortmodedialog.cpp:25
 #, kde-format
 msgid "Filesize"
-msgstr "Dosya boyutu"
+msgstr "Dosya Boyutu"
 
 #: tokensortmodedialog.cpp:27
 #, kde-format
@@ -2663,7 +2662,7 @@ msgstr "Özel Sıralama"
 #: tokensortmodedialog.ui:22
 #, kde-format
 msgid "&Sort filenames ..."
-msgstr "Dosya adlarını &sırala ..."
+msgstr "Dosya Adlarını &Sırala…"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioAscending)
 #: tokensortmodedialog.ui:28
@@ -2693,7 +2692,7 @@ msgstr "tarafından"
 #: tokensortmodedialog.ui:68
 #, kde-format
 msgid "&Token ..."
-msgstr "&İşaretçi ..."
+msgstr "&Jeton…"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioPredefined)
 #: tokensortmodedialog.ui:74
@@ -2710,32 +2709,32 @@ msgstr "&Özel"
 #: translitplugin.cpp:81
 #, kde-format
 msgid "Inserts the transliterated original filename"
-msgstr "Karakter dönüşümü yapılmış asıl dosya adını ekler"
+msgstr "Yazıçevrimi yapılmış özgün dosya adını ekler"
 
 #: translitplugin.cpp:82
 #, kde-format
 msgid "Inserts the transliterated original filename converted to lower case"
-msgstr "Karakter dönüşümü yapılmış asıl dosya adının küçük harflisini ekler"
+msgstr "Yazıçevrimi yapılmış özgün dosya adının küçük harflisini ekler"
 
 #: translitplugin.cpp:83
 #, kde-format
 msgid "Inserts the transliterated original filename converted to upper case"
-msgstr "Karakter dönüşümü yapılmış asıl dosya adının büyük harflisini ekler"
+msgstr "Yazıçevrimi yapılmış özgün dosya adının BÜYÜK harflisini ekler"
 
 #: translitplugin.cpp:84
 #, kde-format
 msgid "Inserts the transliterated original filename capitalized"
-msgstr "Karakter dönüşümü yapılmış asıl dosya adını büyük harflerle ekler"
+msgstr "Yazıçevrimi yapılmış özgün dosya adını baş harfleri BÜYÜK olarak ekler"
 
 #: translitplugin.cpp:85
 #, kde-format
 msgid "Transliterates the string following the semicolon"
-msgstr "Noktalı virgülü takip eden karakter dizisini dönüştürür"
+msgstr "Noktalı virgülden sonra dizinin yazıçevrimini yapar"
 
 #: translitplugin.cpp:87
 #, kde-format
 msgid "Transliteration"
-msgstr "Karakter dönüştürme"
+msgstr "Yazıçevrim"
 
 #: translitplugin.cpp:89
 #, kde-format
@@ -2743,5 +2742,5 @@ msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
 "transliteration).</qt>"
 msgstr ""
-"<qt>Bu eklenti, bir dosya adını İngilizceye uyarlar (örn. karakter "
-"dönüştürür).</qt>"
+"<qt>Bu eklenti, bir dosya adını İngilizceye uyarlar (örn. yazıçevrim yapar)."
+"</qt>"
