@@ -1,16 +1,16 @@
 # Translation of krename.po to Catalan (Valencian)
-# Copyright (C) 2016-2023 This_file_is_part_of_KDE
+# Copyright (C) 2016-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2016, 2017, 2018, 2020, 2022.
-# Josep M. Ferrer <txemaq@gmail.com>, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 01:44+0000\n"
-"PO-Revision-Date: 2023-04-22 11:41+0200\n"
+"PO-Revision-Date: 2025-03-18 10:20+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
@@ -385,30 +385,29 @@ msgstr "Testimonis admesos:"
 #: fontplugin.cpp:19
 #, kde-format
 msgid "Insert the PostScript name for Type1 and TrueType fonts."
-msgstr "Inserix el nom PostScript per als tipus de lletra Type1 i TrueType."
+msgstr "Inserix el nom PostScript per a les lletres Type1 i TrueType."
 
 #: fontplugin.cpp:20
 #, kde-format
 msgid "Insert the (usually English) name of the font family."
-msgstr ""
-"Inserix el nom (normalment en anglés) de la família del tipus de lletra."
+msgstr "Inserix el nom (normalment en anglés) de la família de la lletra."
 
 #: fontplugin.cpp:21
 #, kde-format
 msgid "Insert the (usually English) name of the font style."
-msgstr "Inserix el nom (normalment en anglés) de l'estil del tipus de lletra."
+msgstr "Inserix el nom (normalment en anglés) de l'estil de la lletra."
 
 #: fontplugin.cpp:23
 #, kde-format
 msgid "Font (FreeType2) Plugin"
-msgstr "Connector del tipus de lletra (FreeType2)"
+msgstr "Connector de lletra (FreeType2)"
 
 #: fontplugin.cpp:24
 #, kde-format
 msgid "<qt>This plugin supports reading tags from font files.</qt>"
 msgstr ""
-"<qt>Este connector admet la lectura de les etiquetes en els fitxers de tipus "
-"de lletra.</qt>"
+"<qt>Este connector admet la lectura de les etiquetes en els fitxers de "
+"lletres.</qt>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: guimodeselector.ui:22
