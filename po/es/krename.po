@@ -1,17 +1,16 @@
 # Spanish translations for krename.po package.
-# Copyright (C) 2016 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2016-2025 This_file_is_part_of_KDE
+# This file is distributed under the same license as the krename package.
 #
-# Sofia Priego <spriego@darksylvania.net>, %Y.
 # Automatically generated, 2016.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2016, 2017, 2018, 2023.
-# Sofía Priego <spriego@darksylvania.net>, %Y.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2024, 2025 Sofía Priego <spriego@darksylvania.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 01:44+0000\n"
-"PO-Revision-Date: 2023-04-22 20:32+0100\n"
+"PO-Revision-Date: 2025-04-07 21:51+0100\n"
 "Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -272,7 +271,7 @@ msgstr ""
 "\tcarpeta/002/archivo3\n"
 "\tcarpeta/002/archivo4\n"
 "\tcarpeta/003/archivo5\n"
-" \t..."
+" \t…"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: dirsortpluginwidget.ui:32
@@ -565,7 +564,7 @@ msgstr ""
 #: krenamefilename.ui:115
 #, kde-format
 msgid "&Functions..."
-msgstr "&Funciones..."
+msgstr "&Funciones…"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:141
@@ -631,7 +630,7 @@ msgstr ""
 #: krenamefilename.ui:224 krenamefilename.ui:748 krenamesimple.ui:439
 #, kde-format
 msgid "Find &and Replace..."
-msgstr "&Buscar y sustituir..."
+msgstr "&Buscar y sustituir…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:234
@@ -647,7 +646,7 @@ msgstr ""
 #: krenamefilename.ui:237
 #, kde-format
 msgid "&Numbering..."
-msgstr "&Numeración..."
+msgstr "&Numeración…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:247
@@ -660,7 +659,7 @@ msgstr ""
 #: krenamefilename.ui:250
 #, kde-format
 msgid "&Insert Part of Filename..."
-msgstr "&Insertar parte del nombre de archivo..."
+msgstr "&Insertar parte del nombre de archivo…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabSimple)
 #: krenamefilename.ui:289
@@ -829,7 +828,7 @@ msgstr "Añadir archivos para cambiar su nombre."
 #: scriptpluginwidget.ui:68
 #, kde-format
 msgid "&Add..."
-msgstr "&Añadir..."
+msgstr "&Añadir…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonRemove)
 #: krenamefiles.ui:66
@@ -907,7 +906,7 @@ msgstr "Fecha (desc.)"
 #: krenamefiles.ui:134
 #, kde-format
 msgid "Custom ..."
-msgstr "Personalizado..."
+msgstr "Personalizado…"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkPreview)
 #: krenamefiles.ui:151
@@ -1536,7 +1535,7 @@ msgstr "Archivos a añadir a la lista para cambiar su nombre"
 #: main.cpp:111
 #, kde-format
 msgid "[files...]"
-msgstr "[archivos...]"
+msgstr "[archivos…]"
 
 #: main.cpp:112
 #, kde-format
@@ -1977,7 +1976,7 @@ msgstr ""
 #: previewlist.cpp:17
 #, kde-format
 msgid "&Change filename manually..."
-msgstr "&Cambiar el nombre de archivo manualmente..."
+msgstr "&Cambiar el nombre de archivo manualmente…"
 
 #: previewlist.cpp:19
 #, kde-format
@@ -1993,7 +1992,7 @@ msgstr "E&liminar"
 #: progressdialog.cpp:19
 #, kde-format
 msgid "&Rename more..."
-msgstr "Ca&mbiar el nombre de más..."
+msgstr "Ca&mbiar el nombre de más…"
 
 #: progressdialog.cpp:20
 #, kde-format
@@ -2008,22 +2007,22 @@ msgstr "&Abrir destino"
 #: progressdialog.cpp:38
 #, kde-format
 msgid "Restart &KRename..."
-msgstr "Reiniciar &KRename..."
+msgstr "Reiniciar &KRename…"
 
 #: progressdialog.cpp:40
 #, kde-format
 msgid "Rename Processed Files &Again..."
-msgstr "Volver a c&ambiar el nombre de los archivos procesados..."
+msgstr "Volver a c&ambiar el nombre de los archivos procesados…"
 
 #: progressdialog.cpp:41
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
-msgstr "&Volver a cambiar el nombre de los archivos sin procesar..."
+msgstr "&Volver a cambiar el nombre de los archivos sin procesar…"
 
 #: progressdialog.cpp:42
 #, kde-format
 msgid "&Rename All Files Again..."
-msgstr "Volver a cam&biar el nombre de todos los archivos..."
+msgstr "Volver a cam&biar el nombre de todos los archivos…"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ProgressDialog)
 #: progressdialog.ui:13
@@ -2162,19 +2161,19 @@ msgstr "Procesar elementos"
 #: replacewidget.ui:70
 #, kde-format
 msgid "&Save Settings..."
-msgstr "&Guardar preferencias..."
+msgstr "&Guardar preferencias…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonLoadList)
 #: replacewidget.ui:77
 #, kde-format
 msgid "&Load Settings..."
-msgstr "Car&gar preferencias..."
+msgstr "Car&gar preferencias…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonEdit)
 #: replacewidget.ui:104
 #, kde-format
 msgid "&Edit..."
-msgstr "&Editar..."
+msgstr "&Editar…"
 
 #: scriptplugin.cpp:89
 #, kde-format
@@ -2332,13 +2331,13 @@ msgstr "Definir funciones que se pueden usar en las plantillas de KRename:"
 #: scriptpluginwidget.ui:127
 #, kde-format
 msgid "&Save to File..."
-msgstr "&Guardar en archivo..."
+msgstr "&Guardar en archivo…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonLoad)
 #: scriptpluginwidget.ui:134
 #, kde-format
 msgid "&Load from File..."
-msgstr "Car&gar de archivo..."
+msgstr "Car&gar de archivo…"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: scriptpluginwidget.ui:141
@@ -2350,7 +2349,7 @@ msgstr "&Insertar variable"
 #: scriptpluginwidget.ui:164
 #, kde-format
 msgid "&Test..."
-msgstr "&Probar..."
+msgstr "&Probar…"
 
 #: snumplugin.cpp:21
 #, kde-format
@@ -2420,13 +2419,13 @@ msgstr ""
 #: startupinfowidget.ui:57
 #, kde-format
 msgid "Add some files ..."
-msgstr "Añadir algunos archivos..."
+msgstr "Añadir algunos archivos…"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelTemplate)
 #: startupinfowidget.ui:71
 #, kde-format
 msgid "Specify the new filenames by giving a template ..."
-msgstr "Indicar los nuevos nombres de los archivos usando una plantilla..."
+msgstr "Indicar los nuevos nombres de los archivos usando una plantilla…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: startupinfowidget.ui:93
@@ -2688,7 +2687,7 @@ msgstr "Orden personalizado"
 #: tokensortmodedialog.ui:22
 #, kde-format
 msgid "&Sort filenames ..."
-msgstr "&Ordenar nombres de archivos..."
+msgstr "&Ordenar nombres de archivos…"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioAscending)
 #: tokensortmodedialog.ui:28
@@ -2718,7 +2717,7 @@ msgstr "por"
 #: tokensortmodedialog.ui:68
 #, kde-format
 msgid "&Token ..."
-msgstr "E&lemento..."
+msgstr "E&lemento…"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioPredefined)
 #: tokensortmodedialog.ui:74
@@ -2771,18 +2770,3 @@ msgid ""
 msgstr ""
 "<qt>Este complemento puede transcribir un nombre de archivo en inglés (es "
 "decir, realizar una transliteración).</qt>"
-
-#~ msgid "Frame"
-#~ msgstr "Cuadro"
-
-#~ msgid "&Close"
-#~ msgstr "&Cerrar"
-
-#~ msgid "TextLabel"
-#~ msgstr "Etiqueta de texto"
-
-#~ msgid "&Files per directory:"
-#~ msgstr "Arc&hivos por directorio:"
-
-#~ msgid "directory"
-#~ msgstr "directorio"
