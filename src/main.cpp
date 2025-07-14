@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
                         "rgroult@jalix.org");
     aboutData.addCredit(i18n("Michael Elvers"),  i18n("Fixed a bug that caused krename not closing open files."),
                         "m_elvers@yahoo.com");
-    aboutData.addCredit(i18n("Andreas Pour"),  i18n("Thanks for his great job at apps.kde.com and help with contributing krename to apps.kde.com."),
+    aboutData.addCredit(i18n("Andreas Pour"),  i18n("Thanks for his great job at apps.kde.org and help with contributing krename to apps.kde.org."),
                         "pour@mieterra.com");
     aboutData.addCredit(i18n("Charles Samuels"), i18n("Thanks for noatun and the ID3/Ogg Tag code is based on his noatun modules."),
                         "charles@kde.org");
