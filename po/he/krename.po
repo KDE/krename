@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 01:44+0000\n"
-"PO-Revision-Date: 2025-07-15 07:56+0300\n"
+"PO-Revision-Date: 2025-07-17 09:46+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -153,12 +153,14 @@ msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."
 msgstr ""
+"להשתמש בשם קובץ הפלט בעת שינוי שם הקובץ הזה. אפשר גם לשנות את שם קובץ הקלט "
+"ולהשתמש בזה כדי לשנות שם."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioInput)
 #: customfilenamedlg.ui:115
 #, kde-format
 msgid "Use &input filename"
-msgstr ""
+msgstr "להשתמש בשם קובץ ה&קלט"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioCustom)
 #: customfilenamedlg.ui:122
@@ -166,12 +168,13 @@ msgstr ""
 msgid ""
 "Use a custom filename, based on the filename currently created by KRename."
 msgstr ""
+"להשתמש בשם קובץ מותאם אישית, על בסיס שם הקובץ שנוצר כעת על ידי KRename."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
 #: customfilenamedlg.ui:125
 #, kde-format
 msgid "Use &custom filename"
-msgstr ""
+msgstr "הוספת שם קובץ בהתאמה &אישית"
 
 #: datetimeplugin.cpp:35
 #, kde-format
@@ -309,17 +312,17 @@ msgstr "<qt>התוסף הזה תומך בקריאת תגיות מקובצי JPEG
 #: filedialogextwidget.cpp:37
 #, kde-format
 msgid "Add folder names &with filenames"
-msgstr ""
+msgstr "הוספת שמות &תיקיות עם שמות הקבצים"
 
 #: filedialogextwidget.cpp:38
 #, kde-format
 msgid "Add subfolders &recursively"
-msgstr ""
+msgstr "הוספת תת־תיקיות &פנימה"
 
 #: filedialogextwidget.cpp:39
 #, kde-format
 msgid "Add &hidden folders"
-msgstr ""
+msgstr "הוספת תיקיות &נסתרות"
 
 #: filedialogextwidget.cpp:40
 #, kde-format
@@ -332,6 +335,8 @@ msgid ""
 "Walk recursively through the folder tree and also add the content of all "
 "subfolders to the list of files to rename."
 msgstr ""
+"הליכה פנימה דרך עץ התיקיות וגם הוספת התוכן של כל תת־התיקיות לרשימת הקבצים "
+"לשינוי שם."
 
 #: filedialogextwidget.cpp:58
 #, kde-format
@@ -339,13 +344,15 @@ msgid ""
 "If not checked, KRename will ignore folders starting with a dot during "
 "recursive adding."
 msgstr ""
+"אם האפשרות לא מסומנת, KRename יתעלם מתיקיות שמתחילות בנקודה כשמוסיפים עם "
+"כניסה פנימה."
 
 #: filedialogextwidget.cpp:60
 #, kde-format
 msgid ""
 "Add only the folder names and not the names of the files in the folder to "
 "KRename."
-msgstr ""
+msgstr "להוסיף רק את שמות התיקיות ולא את שמות הקבצים בתיקייה ל־KRename."
 
 #: filedialogextwidget.cpp:62
 #, kde-format
@@ -353,6 +360,8 @@ msgid ""
 "This option causes KRename to also add the name of the base folder of the "
 "selected files to its list."
 msgstr ""
+"האפשרות הזאת גורמת ל־KRename להוסיף גם את שם תיקיית הבסיס של הקבצים הנבחרים "
+"לרשימה."
 
 #: fileplugin.cpp:71
 #, kde-format
@@ -429,6 +438,10 @@ msgid ""
 "this plugin, you can easily add an offset of -4 to get the desired result.</"
 "p>"
 msgstr ""
+"<p><b>התוסף הזה מוסיף היסט נתון למספרים בשמות קבצים.</b><br/>\n"
+"כלומר, יש את השמות: <i>תמונה014</i>, <i>תמונה015</i>, <i>תמונה023</i> שנרצה "
+"לשנות את השמות האלה לשמות <i>תמונה010</i>, <i>תמונה011</i> ו<i>תמונה019</i>. "
+"עם התוסף הזה אפשר להוסיף בקלות היסט של ‎-4 כדי לקבל את התוצאה המבוקשת.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: increasecounterpluginwidget.ui:49
@@ -446,37 +459,37 @@ msgstr "&אפשרויות"
 #: krenamedestination.ui:52
 #, kde-format
 msgid "&Rename input files"
-msgstr ""
+msgstr "שינוי שם קובצי &קלט"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionCopy)
 #: krenamedestination.ui:62
 #, kde-format
 msgid "&Copy files to destination folder"
-msgstr ""
+msgstr "ה&עתקת קבצים לתיקיית יעד"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionMove)
 #: krenamedestination.ui:69
 #, kde-format
 msgid "&Move files to destination folder"
-msgstr ""
+msgstr "הע&ברת קבצים לתיקיית יעד"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionLink)
 #: krenamedestination.ui:76
 #, kde-format
 msgid "Create symbolic &links in destination folder"
-msgstr ""
+msgstr "יצירת קישורים &סמליים בתיקיית היעד"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkOverwrite)
 #: krenamedestination.ui:99
 #, kde-format
 msgid "&Overwrite existing files"
-msgstr ""
+msgstr "&שכתוב על קבצים קיימים"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: krenamefilename.ui:27
 #, kde-format
 msgid "&Advanced Filename"
-msgstr ""
+msgstr "שם קובץ מ&תקדם"
 
 #. i18n: ectx: property (text), widget (QLabel, lblTemplate)
 #: krenamefilename.ui:50
@@ -521,30 +534,32 @@ msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
+"<qt>אפשר להוסיף פונקציות מיוחדות כמו אומנים של mp3 או תאריך יצירה של תמונה.</"
+"qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFunctions)
 #: krenamefilename.ui:115
 #, kde-format
 msgid "&Functions..."
-msgstr ""
+msgstr "&פונקציות…"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:141
 #, kde-format
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
-msgstr ""
+msgstr "<qt>לשמור על סיומת הקובץ כמו שהיא ולא לשנות אותה.</qt>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:144
 #, kde-format
 msgid "&Use extension of the input file"
-msgstr ""
+msgstr "להשתמש ב&סיומת של קובץ הקלט"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExtension)
 #: krenamefilename.ui:167
 #, kde-format
 msgid "F&ile extension starts at:"
-msgstr ""
+msgstr "סיומת הקובץ מת&חילה ב־:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, comboExtension)
 #: krenamefilename.ui:177
@@ -554,6 +569,8 @@ msgid ""
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
 msgstr ""
+"<qt>הגדרת החלק משם הקובץ שייחשב לסיומת הקובץ. למשל: „נקודה ראשונה” תחשיב את "
+"„‎.tar.gz” כסיומת, „נקודה אחרונה” רק את „‎.gz”.</qt>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:181
@@ -580,7 +597,7 @@ msgstr "אין סיומת קובץ"
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
-msgstr ""
+msgstr "<qt>איתור והחלפת מחרוזות וביטויים רגולריים בשם הקובץ שהשתנה.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFind)
 #. i18n: ectx: property (text), widget (QPushButton, buttonFindSimple)
@@ -595,7 +612,7 @@ msgstr "&איתור והחלפה…"
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
-msgstr ""
+msgstr "<qt>הגדרת מפתח התחלה, גודל צעד ודילוג למספור שמות קבצים.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:237
@@ -607,19 +624,19 @@ msgstr "מ&ספור…"
 #: krenamefilename.ui:247
 #, kde-format
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
-msgstr ""
+msgstr "<qt>בחירת חזותית של החלק משם הקובץ להוספה.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:250
 #, kde-format
 msgid "&Insert Part of Filename..."
-msgstr ""
+msgstr "הוספת &חלק משם קובץ…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabSimple)
 #: krenamefilename.ui:289
 #, kde-format
 msgid "&Simple Filename"
-msgstr ""
+msgstr "שם קובץ &פשוט"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupFilename)
 #: krenamefilename.ui:312 krenamesimple.ui:48
@@ -678,13 +695,13 @@ msgstr "הגדלת אותיות ראשונות לגדולות"
 #: krenamefilename.ui:418 krenamesimple.ui:145
 #, kde-format
 msgid "Custom name"
-msgstr ""
+msgstr "שם מותאם אישית"
 
 #. i18n: ectx: property (text), widget (QLabel, lblFilename)
 #: krenamefilename.ui:426 krenamesimple.ui:153
 #, kde-format
 msgid "File&name:"
-msgstr ""
+msgstr "&שם קובץ:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSuffix)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPrefix)
@@ -806,19 +823,19 @@ msgstr "הסרת כל הקבצים."
 #: krenamefiles.ui:79
 #, kde-format
 msgid "Re&move All"
-msgstr ""
+msgstr "הסרת ה&כול"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: krenamefiles.ui:88
 #, kde-format
 msgid "Sort:"
-msgstr ""
+msgstr "מיון:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:99
 #, kde-format
 msgid "Unsorted"
-msgstr ""
+msgstr "לא ממוין"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:104
@@ -878,7 +895,7 @@ msgstr "ת&צוגה מקדימה"
 #: krenamefiles.ui:161
 #, kde-format
 msgid "Display the filename together with the preview."
-msgstr ""
+msgstr "הצגת שם הקובץ יחד עם התצוגה המקדימה."
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkName)
 #: krenamefiles.ui:164
@@ -942,12 +959,12 @@ msgstr "האות הראשונה של שם הקובץ באות גדולה"
 #: krenameimpl.cpp:479
 #, kde-format
 msgid "number (try also ##, ###, ... for leading zeros)"
-msgstr ""
+msgstr "מספר (אפשר לנסות גם ##, ###, … כדי להוסיף אפסים בהתחלה)"
 
 #: krenameimpl.cpp:480
 #, kde-format
 msgid "counter with custom start value 0 and custom stepping 1"
-msgstr ""
+msgstr "מונה עם ערך התחלה מותאם אישית 0 וגודל צעד מותאם אישית 1"
 
 #: krenameimpl.cpp:481
 #, kde-format
@@ -962,7 +979,7 @@ msgstr "תו x ל־y של שם הקובץ הישן"
 #: krenameimpl.cpp:483
 #, kde-format
 msgid "y characters of old filename starting at x"
-msgstr ""
+msgstr "‏y תווים משם הקובץ הישן החל מ־x"
 
 #: krenameimpl.cpp:484
 #, kde-format
@@ -980,6 +997,7 @@ msgid ""
 "insert a '/' to create a new subfolder (useful from within regular "
 "expressions)"
 msgstr ""
+"אפשר להוסיף ‚/’ כדי ליצור תת־תיקייה חדשה (שימושי מתוך ביטויים רגולריים)"
 
 #: krenameimpl.cpp:487
 #, kde-format
@@ -1134,6 +1152,8 @@ msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
 "set of expressions."
 msgstr ""
+"KRename משנה שמות של קבצים במרוכז והוא יכול לשנות שמות של קבצים לפי סדרה של "
+"ביטויים."
 
 #: main.cpp:50
 #, kde-format
@@ -1142,11 +1162,14 @@ msgid ""
 "feature requests are as welcome as financial support (everybody needs "
 "money ;). See help files for details."
 msgstr ""
+"אם אהבת את KRename ובא לך לתמוך בו. בדיקות, תיקוני תקלות ובקשות יכולות תמיד "
+"מתקבלות בנוסף לתמיכה כלכלית (כולם צריכים כמה שקלים ;). פרטים נוספים בקובצי "
+"העזרה."
 
 #: main.cpp:54
 #, kde-format
 msgid "(c) 2001-2012, Dominik Seichter\n"
-msgstr ""
+msgstr "‏(c) 2001‏-2012, דומיניק זייכטר\n"
 
 #: main.cpp:57
 #, kde-format
@@ -1171,7 +1194,7 @@ msgstr "מפתח ומתחזק לשעבר"
 #: main.cpp:61
 #, kde-format
 msgid "Stefan \"Stonki\" Onken"
-msgstr ""
+msgstr "שטפן „שטונקי/Stonki” אונקן"
 
 #: main.cpp:62
 #, kde-format
@@ -1202,7 +1225,7 @@ msgstr "בזכותו יש חבילות ל־RedHat 7.x ועזרה בעוד תחו
 #: main.cpp:68
 #, kde-format
 msgid "Groult Richard"
-msgstr ""
+msgstr "גרו רישאר"
 
 #: main.cpp:68
 #, kde-format
@@ -1210,11 +1233,13 @@ msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
 msgstr ""
+"תיקן תקלה עם startIndex והוסיף את המחלקה BatchRenamer\n"
+"למציג התמונות המעולה שלו בשם showimg."
 
 #: main.cpp:71
 #, kde-format
 msgid "Michael Elvers"
-msgstr ""
+msgstr "מייקל אלברס"
 
 #: main.cpp:71
 #, kde-format
@@ -1270,7 +1295,7 @@ msgstr "חלקים מהתמיכה ב־PNG מהתוסף שלו ל־KFile לתמי
 #: main.cpp:81
 #, kde-format
 msgid "Michael v.Ostheim"
-msgstr ""
+msgstr "מיכאל ואן אוסטהיים"
 
 #: main.cpp:81
 #, kde-format
@@ -1290,7 +1315,7 @@ msgstr "תיקוני GCC 3.1 לג׳נטו."
 #: main.cpp:85
 #, kde-format
 msgid "Per Oyvind Karlsen"
-msgstr ""
+msgstr "פר אוייבנד קרלסן"
 
 #: main.cpp:85
 #, kde-format
@@ -1330,12 +1355,12 @@ msgstr "סיפק טלאי למרחב שם ב־gcc3.x"
 #: main.cpp:90
 #, kde-format
 msgid "Michael Zugaro"
-msgstr ""
+msgstr "מיקאל זוגרו"
 
 #: main.cpp:90
 #, kde-format
 msgid "Provided the new preview and move features"
-msgstr ""
+msgstr "סיפק את יכולות התצוגה המקדימה והעברה החדשות"
 
 #: main.cpp:91
 #, kde-format
@@ -1348,6 +1373,8 @@ msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 msgstr ""
+"תיקן תקלות עם קובץ המפרט (spec) ותרם חבילות rpm לכל גרסת SuSE שניתן לדמיין "
+"והוא גם המתחזק של KRename בג׳נטו"
 
 #: main.cpp:92
 #, kde-format
@@ -1372,7 +1399,7 @@ msgstr "תרגם את התרגום לספרדית"
 #: main.cpp:94
 #, kde-format
 msgid "Steven P. Ulrick"
-msgstr ""
+msgstr "סטיבן פ. אולריק"
 
 #: main.cpp:94
 #, kde-format
@@ -1532,6 +1559,8 @@ msgid ""
 "<b>KRename was started from root!</b><br>When started from root, KRename may "
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
+"<b>KRename הופעל עם הרשאות משתמש על!</b><br>בהפעלה תחת משתמש על (כלומר root) "
+"המערכת שלך לא יודעת לשים גבולות לפעולות שלך!"
 
 #: main.cpp:143
 #, kde-format
@@ -1548,19 +1577,19 @@ msgstr "מ&ספור"
 #: numberwidget.ui:25
 #, kde-format
 msgid "Start &index:"
-msgstr ""
+msgstr "מפתח ה&תחלה:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: numberwidget.ui:42
 #, kde-format
 msgid "&Step by:"
-msgstr ""
+msgstr "גודל &צעד:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkReset)
 #: numberwidget.ui:61
 #, kde-format
 msgid "&Reset counter for every directory"
-msgstr ""
+msgstr "איפוס מונה ל&כל אחת מהתיקיות"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupSkip)
 #: numberwidget.ui:71
@@ -1639,6 +1668,8 @@ msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
 msgstr ""
+"<qt>נא לבחור את החלק משם הקובץ הישן שישולב בתוך שם הקובץ החדש בתיבת הטקסט "
+"הבאה:</qt>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkInvert)
 #: partfilenamewidget.ui:45
@@ -1818,7 +1849,7 @@ msgstr "הקובץ משתמש בהרשאות מתקדמות"
 #: permissionspluginwidget.ui:148
 #, kde-format
 msgid "Is Executable/Only owner &can rename and delete folder content"
-msgstr ""
+msgstr "האם ניתן להרצה/רק הבעלים י&כולים לשנות את השם ולמחוק את תוכן התיקייה"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: permissionspluginwidget.ui:170
@@ -1898,7 +1929,7 @@ msgstr "<qt>התוסף הזה תומך בקריאת תגיות מקובצי PDF.
 #: previewlist.cpp:17
 #, kde-format
 msgid "&Change filename manually..."
-msgstr ""
+msgstr "החלפת שם קובץ י&דנית…"
 
 #: previewlist.cpp:19
 #, kde-format
@@ -1914,7 +1945,7 @@ msgstr "הס&רה"
 #: progressdialog.cpp:19
 #, kde-format
 msgid "&Rename more..."
-msgstr ""
+msgstr "שינוי שמות של &עוד…"
 
 #: progressdialog.cpp:20
 #, kde-format
@@ -1934,17 +1965,17 @@ msgstr "הפעלת KRename מ&חדש…"
 #: progressdialog.cpp:40
 #, kde-format
 msgid "Rename Processed Files &Again..."
-msgstr ""
+msgstr "שינוי שמות קצבים ש&עובדו שוב…"
 
 #: progressdialog.cpp:41
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
-msgstr ""
+msgstr "שינוי שמות כל הקבצים ש&לא עובדו שוב…"
 
 #: progressdialog.cpp:42
 #, kde-format
 msgid "&Rename All Files Again..."
-msgstr ""
+msgstr "שינוי שמות כל הקבצים &שוב…"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ProgressDialog)
 #: progressdialog.ui:13
@@ -1971,12 +2002,12 @@ msgstr "‏XML הגדרות איתור והחלפה של KRename‏ (‎*.xml)"
 #: replacedialog.cpp:77
 #, kde-format
 msgid "Failed to save the Find & Replace Settings File."
-msgstr ""
+msgstr "שמירת קובץ הגדרות איתור והחלפה נכשלה."
 
 #: replacedialog.cpp:129
 #, kde-format
 msgid "Save Find and Replace Settings File"
-msgstr ""
+msgstr "שמירת קובץ הגדרות איתור והחלפה"
 
 #: replacedialog.cpp:131
 #, kde-format
@@ -1989,6 +2020,8 @@ msgid ""
 "Failed to open the Find and Replace Settings File. Cannot read file %1:\n"
 "%2."
 msgstr ""
+"פתיחת קובץ הגדרות איתור והחלפה נכשלה. לא ניתן לקרוא את הקובץ %1:\n"
+"%2."
 
 #: replacedialog.cpp:150 replacedialog.cpp:161 replacedialog.cpp:166
 #: replacedialog.cpp:232
@@ -2037,19 +2070,19 @@ msgstr "&איתור:"
 #: replaceitemdlg.ui:35
 #, kde-format
 msgid "&Replace With:"
-msgstr ""
+msgstr "החלפה &ב־:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkRegular)
 #: replaceitemdlg.ui:50
 #, kde-format
 msgid "Find is a Regular &Expression"
-msgstr ""
+msgstr "האיתור הוא ביטוי &רגולרי"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkProcess)
 #: replaceitemdlg.ui:57
 #, kde-format
 msgid "&Process tokens in replace string"
-msgstr ""
+msgstr "&עיבוד אסימונים במחרוזת החלפה"
 
 #. i18n: ectx: property (text), widget (QTableWidget, list)
 #: replacewidget.ui:32
@@ -2167,7 +2200,7 @@ msgstr "אירעה שגיאת JavaScript: "
 #, kde-format
 msgid ""
 "All currently entered definitions will be lost. Do you want to continue?"
-msgstr ""
+msgstr "כל הדפוסים שהוגדרו יאבדו. להמשיך?"
 
 #: scriptplugin.cpp:296 scriptplugin.cpp:315
 #, kde-format
@@ -2218,7 +2251,7 @@ msgstr "מ&שתנים"
 #: scriptpluginwidget.ui:30
 #, kde-format
 msgid "Declare global variables that can be used from within your functions:"
-msgstr ""
+msgstr "אפשר להכריז על דפוסים כוללניים שאפשר להשתמש בהם בתוך הפונקציות שלך:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listVariables)
 #: scriptpluginwidget.ui:58
@@ -2236,7 +2269,7 @@ msgstr "מ&חיקה"
 #: scriptpluginwidget.ui:100
 #, kde-format
 msgid "&Definitions"
-msgstr ""
+msgstr "&דפוסים"
 
 #. i18n: ectx: property (text), widget (QLabel, labelDescDef)
 #: scriptpluginwidget.ui:106
@@ -2288,7 +2321,7 @@ msgstr "הוספת מספר הפרק בשתיים או שלוש ספרות"
 #: snumplugin.cpp:27
 #, kde-format
 msgid "SeriesNumber"
-msgstr ""
+msgstr "מס׳סדרה"
 
 #: snumplugin.cpp:29
 #, kde-format
@@ -2315,6 +2348,19 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">A batch file renamer by "
 "KDE.<br />To rename your files, you have to:</p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
+"large; font-weight:600;\">ברוך בואך ל־KRename</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">משנה שמות קבצים במרוכז "
+"מבית KDE.<br />כדי לשנות שמות של קבצים יש:</p></body></html>"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelAdd)
 #: startupinfowidget.ui:57
@@ -2435,6 +2481,8 @@ msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
 msgstr ""
+"<qt>התוסף הזה מכיל אסימון לקבלת זמני היצירה, השינוי ומועד הגישה האחרון של "
+"הקבצים ואת השעה והתאריך הנוכחיים של המערכת.</qt>"
 
 #: taglibplugin.cpp:28
 #, kde-format
