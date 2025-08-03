@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 01:44+0000\n"
-"PO-Revision-Date: 2025-07-17 09:46+0300\n"
+"PO-Revision-Date: 2025-08-02 21:23+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -2251,7 +2251,7 @@ msgstr "מ&שתנים"
 #: scriptpluginwidget.ui:30
 #, kde-format
 msgid "Declare global variables that can be used from within your functions:"
-msgstr "אפשר להכריז על דפוסים כוללניים שאפשר להשתמש בהם בתוך הפונקציות שלך:"
+msgstr "אפשר להכריז על דפוסים מקיפים שאפשר להשתמש בהם בתוך הפונקציות שלך:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listVariables)
 #: scriptpluginwidget.ui:58
