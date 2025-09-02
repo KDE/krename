@@ -647,8 +647,7 @@ msgstr "&Numeració…"
 #: krenamefilename.ui:247
 #, kde-format
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
-msgstr ""
-"<qt>Selecciona gràficament una part d'un nom de fitxer que s'inserirà.</qt>"
+msgstr "<qt>Tria gràficament una part d'un nom de fitxer que s'inserirà.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:250
@@ -1710,8 +1709,8 @@ msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
 msgstr ""
-"<qt>Seleccioneu la part del nom de fitxer antic que s'ha d'inserir en el nom "
-"de fitxer nou al següent quadro de text:</qt>"
+"<qt>Trieu la part del nom de fitxer antic que s'ha d'inserir en el nom de "
+"fitxer nou al següent quadro de text:</qt>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkInvert)
 #: partfilenamewidget.ui:45
@@ -2253,7 +2252,7 @@ msgstr "Es perdran totes les definicions introduïdes. Voleu continuar?"
 #: scriptplugin.cpp:296 scriptplugin.cpp:315
 #, kde-format
 msgid "Select file"
-msgstr "Selecciona un fitxer"
+msgstr "Tria un fitxer"
 
 #: scriptplugin.cpp:326
 #, kde-format
