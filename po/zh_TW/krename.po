@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # pan93412 <pan93412@gmail.com>, 2019.
-# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-21 01:44+0000\n"
-"PO-Revision-Date: 2024-12-02 17:27+0900\n"
+"PO-Revision-Date: 2025-10-01 22:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.11.70\n"
 
 #: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
 msgid "Input files will be renamed."
-msgstr "將會重命名輸入的檔案。"
+msgstr "將會重新命名輸入的檔案。"
 
 #: batchrenamer.cpp:195 batchrenamer.cpp:656
 #, kde-format
@@ -596,7 +596,7 @@ msgstr "尋找並取代(&A)…"
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
-msgstr ""
+msgstr "<qt>設定檔案名稱編號的索引起點、間隔與略過。</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:237
@@ -948,7 +948,7 @@ msgstr "編號（也嘗試看看 ##、###… 加上前置的 0）"
 #: krenameimpl.cpp:480
 #, kde-format
 msgid "counter with custom start value 0 and custom stepping 1"
-msgstr ""
+msgstr "自訂起始值為 0 與自訂間隔為 1 的計數器"
 
 #: krenameimpl.cpp:481
 #, kde-format
@@ -958,12 +958,12 @@ msgstr "建立子資料夾"
 #: krenameimpl.cpp:482
 #, kde-format
 msgid "character x to y of old filename"
-msgstr ""
+msgstr "舊檔名的字元 x 到 y"
 
 #: krenameimpl.cpp:483
 #, kde-format
 msgid "y characters of old filename starting at x"
-msgstr ""
+msgstr "舊檔名從第 x 個字元開始的 y 個字元"
 
 #: krenameimpl.cpp:484
 #, kde-format
@@ -1350,6 +1350,8 @@ msgid ""
 "Fixed problems with the spec file and contributed rpms for every SuSE "
 "version you can imagine and is also the new Gentoo maintainer for KRename"
 msgstr ""
+"修正了 spec 檔案的問題，貢獻了您所想得到的每個 SuSE 版本的 RPM，還是新的 "
+"KRename Gentoo 套件的維護者"
 
 #: main.cpp:92
 #, kde-format
@@ -1642,7 +1644,7 @@ msgstr "ODF 檔案單字數"
 msgid ""
 "<qt>Please select the part of the old filename  which should be inserted "
 "into the new filename in the textbox below:</qt>"
-msgstr ""
+msgstr "<qt>請在下方文字方塊選取舊檔名要插入新檔名的部分。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkInvert)
 #: partfilenamewidget.ui:45
@@ -1822,7 +1824,7 @@ msgstr "此檔案使用進階權限"
 #: permissionspluginwidget.ui:148
 #, kde-format
 msgid "Is Executable/Only owner &can rename and delete folder content"
-msgstr ""
+msgstr "可執行/只有擁有者可以重新命名與刪除資料夾內容(&C)"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: permissionspluginwidget.ui:170
@@ -2224,7 +2226,7 @@ msgstr "變數(&V)"
 #: scriptpluginwidget.ui:30
 #, kde-format
 msgid "Declare global variables that can be used from within your functions:"
-msgstr ""
+msgstr "宣告您的函式內可使用的全域變數："
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listVariables)
 #: scriptpluginwidget.ui:58
@@ -2282,12 +2284,12 @@ msgstr "插入原始檔名的數列編號"
 #: snumplugin.cpp:22
 #, kde-format
 msgid "Inserts the season number in two digits"
-msgstr ""
+msgstr "插入季數（兩位數）"
 
 #: snumplugin.cpp:23
 #, kde-format
 msgid "Inserts the episode number in two or three digits"
-msgstr ""
+msgstr "插入集數（兩或三位數）"
 
 #. i18n("Inserts the season number in at least pad digits") );
 #. m_help.append( "[episode;pad];;" + i18n("Inserts the episode number in at least pad digits") );
@@ -2301,7 +2303,7 @@ msgstr "數列編號"
 msgid ""
 "<qt>This plugin can extract information from the filename of a TV series.</"
 "qt>"
-msgstr ""
+msgstr "<qt>這個外掛程式可以從電視影集的檔案名稱取出資訊。</qt>"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: startupinfowidget.ui:29
@@ -2534,6 +2536,8 @@ msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
 msgstr ""
+"這個對話框列出所有支援的憑證 (token)（指令）。您可以搜尋 token 並將找到的 "
+"token 插入檔名樣式裡。"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listCategories)
 #: tokenhelpwidget.ui:61
@@ -2648,36 +2652,36 @@ msgstr "自訂(&C)"
 #: translitplugin.cpp:81
 #, kde-format
 msgid "Inserts the transliterated original filename"
-msgstr ""
+msgstr "插入原始檔名音譯的結果"
 
 #: translitplugin.cpp:82
 #, kde-format
 msgid "Inserts the transliterated original filename converted to lower case"
-msgstr ""
+msgstr "插入原始檔名音譯並轉小寫的結果"
 
 #: translitplugin.cpp:83
 #, kde-format
 msgid "Inserts the transliterated original filename converted to upper case"
-msgstr ""
+msgstr "插入原始檔名音譯並轉大寫的結果"
 
 #: translitplugin.cpp:84
 #, kde-format
 msgid "Inserts the transliterated original filename capitalized"
-msgstr ""
+msgstr "插入原始檔名音譯並調整大寫之後的結果"
 
 #: translitplugin.cpp:85
 #, kde-format
 msgid "Transliterates the string following the semicolon"
-msgstr ""
+msgstr "將分號後的字串音譯"
 
 #: translitplugin.cpp:87
 #, kde-format
 msgid "Transliteration"
-msgstr ""
+msgstr "音譯"
 
 #: translitplugin.cpp:89
 #, kde-format
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
 "transliteration).</qt>"
-msgstr ""
+msgstr "<qt>這個外掛程式能把檔名音譯成英語。</qt>"
