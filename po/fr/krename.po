@@ -1050,7 +1050,7 @@ msgstr "enlever les espaces"
 #: krenameimpl.cpp:489
 #, kde-format
 msgid "strip whitespaces leading and trailing of an arbitrary string"
-msgstr "enlever les espaces précédant et suivant une chaîne de caractère"
+msgstr "enlever les espaces précédant et suivant une chaine de caractère"
 
 #: krenameimpl.cpp:490
 #, kde-format
@@ -2768,7 +2768,7 @@ msgstr "Insère en lettres majuscules le nom de fichier original translittéré"
 #: translitplugin.cpp:85
 #, kde-format
 msgid "Transliterates the string following the semicolon"
-msgstr "Translittère la chaîne de caractère après le point virgule"
+msgstr "Translittère la chaine de caractère après le point virgule"
 
 #: translitplugin.cpp:87
 #, kde-format
