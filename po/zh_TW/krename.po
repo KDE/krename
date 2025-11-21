@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2025-10-01 22:26+0900\n"
+"PO-Revision-Date: 2025-11-20 21:36+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.11.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
@@ -62,7 +62,7 @@ msgstr[0] "發生了 %1 個錯誤。"
 #: batchrenamer.cpp:280 batchrenamer.cpp:739
 #, kde-format
 msgid "KRename finished the renaming process."
-msgstr "KRename 已完成重命名程序。"
+msgstr "KRename 已完成重新命名程序。"
 
 #: batchrenamer.cpp:281 batchrenamer.cpp:405 batchrenamer.cpp:740
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "無法復原遠端檔案的檔名：%1"
 #: batchrenamer.cpp:731
 #, kde-format
 msgid "Renamed %1 files successfully."
-msgstr "已順利重命名 %1 個檔案。"
+msgstr "已順利重新命名 %1 個檔案。"
 
 #: batchrenamer.cpp:738
 #, kde-format
@@ -135,7 +135,7 @@ msgstr "請輸入新檔名"
 #: customfilenamedlg.ui:97
 #, kde-format
 msgid "Rename the file using the filename created by KRename."
-msgstr "使用 KRename 建立的檔名來重命名檔案"
+msgstr "使用 KRename 建立的檔名來重新命名檔案"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioKRename)
 #: customfilenamedlg.ui:100
@@ -150,7 +150,8 @@ msgid ""
 "Use the input filename when renaming this file. You may also change the "
 "input filename and use this for renaming."
 msgstr ""
-"重命名此檔案時使用輸入的檔名。您可能也想變更輸入檔名並將此檔名用於重命名。"
+"重新命名此檔案時使用輸入的檔名。您可能也想變更輸入檔名並將此檔名用於重新命"
+"名。"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioInput)
 #: customfilenamedlg.ui:115
@@ -249,7 +250,7 @@ msgid ""
 "\tfolder/003/file5\n"
 "\t..."
 msgstr ""
-"此外掛程式在重命名後將檔案排序至編號過的子資料夾。\n"
+"此外掛程式在重新命名後將檔案排序至編號過的子資料夾。\n"
 "\n"
 "範例：\n"
 "\tfolder/001/file1\n"
@@ -329,7 +330,7 @@ msgstr "僅新增資料夾名稱"
 msgid ""
 "Walk recursively through the folder tree and also add the content of all "
 "subfolders to the list of files to rename."
-msgstr "遞迴巡覽樹狀資料夾，並也新增所有子資料夾的內容到欲重命名的檔案列表。"
+msgstr "遞迴巡覽樹狀資料夾，並也新增所有子資料夾的內容到欲重新命名的檔案列表。"
 
 #: filedialogextwidget.cpp:58
 #, kde-format
@@ -355,7 +356,7 @@ msgstr "此選項會導致 KRename 也將選取檔案之基底資料夾的名稱
 #: fileplugin.cpp:71
 #, kde-format
 msgid "Supported tokens:"
-msgstr "支援的憑證："
+msgstr "支援的標記："
 
 #: fontplugin.cpp:19
 #, kde-format
@@ -375,7 +376,7 @@ msgstr "插入字型樣式的名稱（通常為英文名稱）。"
 #: fontplugin.cpp:23
 #, kde-format
 msgid "Font (FreeType2) Plugin"
-msgstr "Font (FreeType2) 外掛程式"
+msgstr "字型 (FreeType2) 外掛程式"
 
 #: fontplugin.cpp:24
 #, kde-format
@@ -427,12 +428,16 @@ msgid ""
 "this plugin, you can easily add an offset of -4 to get the desired result.</"
 "p>"
 msgstr ""
+"<p><b>這個外掛程式能為檔名中的數字加上指定的偏移。</b><br/>\n"
+"舉例來說，您有這些檔案：<i>img014</i>、<i>img015</i>、<i>img023</i>，而您希望"
+"它們的名字是 <i>img010</i>、<i>img011</i> 和 <i>img019</i>，也就是數字部分要"
+"減 4。利用這個外掛程式，您只需要指定偏移 -4 就能達成希望的結果。</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: increasecounterpluginwidget.ui:49
 #, kde-format
 msgid "Offse&t:"
-msgstr "位移(&T)："
+msgstr "偏移(&T)："
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOptions)
 #: krenamedestination.ui:31
@@ -444,7 +449,7 @@ msgstr "選項(&O)"
 #: krenamedestination.ui:52
 #, kde-format
 msgid "&Rename input files"
-msgstr "重命名輸入檔(&R)"
+msgstr "重新命名輸入檔(&R)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionCopy)
 #: krenamedestination.ui:62
@@ -581,7 +586,7 @@ msgstr "無檔案副檔名"
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
-msgstr "<qt>尋找並取代已重命名之檔名的字串或正規表示式。</qt>"
+msgstr "<qt>尋找並取代已重新命名之檔名的字串或正規表示式。</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFind)
 #. i18n: ectx: property (text), widget (QPushButton, buttonFindSimple)
@@ -776,7 +781,7 @@ msgstr "下(&D)"
 #: krenamefiles.ui:53
 #, kde-format
 msgid "Add files for renaming."
-msgstr "新增要重命名的檔案。"
+msgstr "新增要重新命名的檔案。"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonAdd)
 #: krenamefiles.ui:56 previewlist.cpp:21 replacewidget.ui:97
@@ -825,13 +830,13 @@ msgstr "未經排序"
 #: krenamefiles.ui:104
 #, kde-format
 msgid "Ascending"
-msgstr "升序"
+msgstr "遞增"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:109
 #, kde-format
 msgid "Descending"
-msgstr "降序"
+msgstr "遞減"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:114
@@ -1076,7 +1081,7 @@ msgstr "來源"
 #: krenamemodel.cpp:425
 #, kde-format
 msgid "Renamed"
-msgstr "已重命名"
+msgstr "已重新命名"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listPlugins)
 #: krenameplugins.ui:42
@@ -1132,7 +1137,7 @@ msgid ""
 "KRename is a batch file renamer which can rename a list of files based on a "
 "set of expressions."
 msgstr ""
-"KRename 是個批次檔案重命名工具，其能基於一組表示式來重命名一列表的檔案。"
+"KRename 是個批次檔案重新命名工具，其能基於一組表示式來重新命名一列表的檔案。"
 
 #: main.cpp:50
 #, kde-format
@@ -1468,7 +1473,7 @@ msgstr "pan93412@gmail.com"
 #: main.cpp:111
 #, kde-format
 msgid "Files to be added to the list to be renamed"
-msgstr "要加入到欲重命名列表的檔案"
+msgstr "要加入到欲重新命名列表的檔案"
 
 #: main.cpp:111
 #, kde-format
@@ -1523,7 +1528,7 @@ msgstr "將檔案連結至資料夾或網址"
 #: main.cpp:119
 #, kde-format
 msgid "start renaming immediately"
-msgstr "立即開始重命名"
+msgstr "立即開始重新命名"
 
 #: main.cpp:120
 #, kde-format
@@ -1748,7 +1753,7 @@ msgstr "群組編號"
 #: permissionsplugin.cpp:208
 #, kde-format
 msgid "Sticky"
-msgstr ""
+msgstr "相黏"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, PermissionsPluginAdvanceDialog)
 #: permissionspluginadvanceddialog.ui:13
@@ -1920,7 +1925,7 @@ msgstr "移除(&R)"
 #: progressdialog.cpp:19
 #, kde-format
 msgid "&Rename more..."
-msgstr "重命名更多(&R)…"
+msgstr "重新命名更多(&R)…"
 
 #: progressdialog.cpp:20
 #, kde-format
@@ -1940,17 +1945,17 @@ msgstr "重新啟動 &KRename…"
 #: progressdialog.cpp:40
 #, kde-format
 msgid "Rename Processed Files &Again..."
-msgstr "再次重命名已處理檔案(&A)…"
+msgstr "再次重新命名已處理檔案(&A)…"
 
 #: progressdialog.cpp:41
 #, kde-format
 msgid "Rename &Unprocessed Files Again..."
-msgstr "再次重命名未處理檔案(&U)…"
+msgstr "再次重新命名未處理檔案(&U)…"
 
 #: progressdialog.cpp:42
 #, kde-format
 msgid "&Rename All Files Again..."
-msgstr "再次重命名所有檔案(&R)…"
+msgstr "再次重新命名所有檔案(&R)…"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ProgressDialog)
 #: progressdialog.ui:13
@@ -2057,7 +2062,7 @@ msgstr "「搜尋」為正規表示式(&E)"
 #: replaceitemdlg.ui:57
 #, kde-format
 msgid "&Process tokens in replace string"
-msgstr "處理取代字串中的憑證 (token)(&P)"
+msgstr "處理取代字串中的標記(&P)"
 
 #. i18n: ectx: property (text), widget (QTableWidget, list)
 #: replacewidget.ui:32
@@ -2081,7 +2086,7 @@ msgstr "取代成"
 #: replacewidget.ui:47
 #, kde-format
 msgid "Process Tokens"
-msgstr "處理憑證 (token)"
+msgstr "處理標記"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSaveList)
 #: replacewidget.ui:70
@@ -2334,8 +2339,8 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:"
 "large; font-weight:600;\">歡迎來到 KRename</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">由 KDE 製作的批次檔案重命名"
-"工具。<br />要重命名您的檔案，您將需要：</p></body></html>"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">由 KDE 製作的批次檔案重新命"
+"名工具。<br />要重新命名您的檔案，您將需要：</p></body></html>"
 
 #. i18n: ectx: property (text), widget (KUrlLabel, labelAdd)
 #: startupinfowidget.ui:57
@@ -2353,7 +2358,7 @@ msgstr "透過提供範本來指定新檔名…"
 #: startupinfowidget.ui:93
 #, kde-format
 msgid "Hint: Undo is still possible after renaming your files."
-msgstr "提示：重命名您的檔案後仍可以復原成原始檔名。"
+msgstr "提示：重新命名您的檔案後仍可以復原成原始檔名。"
 
 #: systemplugin.cpp:37
 #, kde-format
@@ -2456,8 +2461,8 @@ msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
 msgstr ""
-"<qt>此外掛程式包含憑證 (token) 以取得檔案的建立、修改、最後存取時間，及目前的"
-"系統時間與日期。</qt>"
+"<qt>此外掛程式包含各種標記 (token)，用於取得檔案的建立、修改、最後存取時間，"
+"及目前的系統時間與日期。</qt>"
 
 #: taglibplugin.cpp:28
 #, kde-format
@@ -2536,8 +2541,8 @@ msgid ""
 "All supported tokens (commands) are listed in this dialog. You can search "
 "for tokens and insert a found token into the pattern for the filename."
 msgstr ""
-"這個對話框列出所有支援的憑證 (token)（指令）。您可以搜尋 token 並將找到的 "
-"token 插入檔名樣式裡。"
+"這個對話框列出所有支援的標記（token，也可視為指令）。您可以搜尋標記並將找到的"
+"標記插入檔名樣式裡。"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listCategories)
 #: tokenhelpwidget.ui:61
@@ -2549,7 +2554,7 @@ msgstr "分類"
 #: tokenhelpwidget.ui:95
 #, kde-format
 msgid "Token"
-msgstr "憑證 (Token)"
+msgstr "標記"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, listTokens)
 #: tokenhelpwidget.ui:100
@@ -2567,7 +2572,7 @@ msgstr "預覽"
 #: tokenhelpwidget.ui:119
 #, kde-format
 msgid "Token &Preview"
-msgstr "憑證 (token) 預覽(&P)"
+msgstr "標記預覽(&P)"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPreview)
 #: tokenhelpwidget.ui:142
@@ -2611,13 +2616,13 @@ msgstr "排序檔名(&S)…"
 #: tokensortmodedialog.ui:28
 #, kde-format
 msgid "&Ascending"
-msgstr "升序(&A)"
+msgstr "遞增(&A)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioDescending)
 #: tokensortmodedialog.ui:38
 #, kde-format
 msgid "&Descending"
-msgstr "降序(&D)"
+msgstr "遞減(&D)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioNumeric)
 #: tokensortmodedialog.ui:45
@@ -2635,7 +2640,7 @@ msgstr "由"
 #: tokensortmodedialog.ui:68
 #, kde-format
 msgid "&Token ..."
-msgstr "憑證 (&Token)…"
+msgstr "標記 (&Token)…"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioPredefined)
 #: tokensortmodedialog.ui:74
