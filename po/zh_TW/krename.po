@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2025-11-20 21:36+0900\n"
+"PO-Revision-Date: 2025-11-24 22:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -1261,7 +1261,7 @@ msgstr "Franz Schmid"
 #: main.cpp:77
 #, kde-format
 msgid "Gave me a good start into writing plugins with his application scribus."
-msgstr ""
+msgstr "因為他的應用程式 scribus 的關係讓我撰寫外掛程式有很好的開始。"
 
 #: main.cpp:79
 #, kde-format
