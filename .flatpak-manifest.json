@@ -22,8 +22,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/libexif/libexif/releases/download/v0.6.24/libexif-0.6.24.tar.bz2",
-                    "sha256": "d47564c433b733d83b6704c70477e0a4067811d184ec565258ac563d8223f6ae",
+                    "url": "https://github.com/libexif/libexif/releases/download/v0.6.25/libexif-0.6.25.tar.bz2",
+                    "sha256": "7c9eba99aed3e6594d8c3e85861f1c6aaf450c218621528bc989d3b3e7a26307",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 1607,
@@ -42,8 +42,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://taglib.github.io/releases/taglib-1.12.tar.gz",
-                    "sha256": "7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703",
+                    "url": "https://taglib.github.io/releases/taglib-2.1.1.tar.gz",
+                    "sha256": "3716d31f7c83cbf17b67c8cf44dd82b2a2f17e6780472287a16823e70305ddba",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 1982,
