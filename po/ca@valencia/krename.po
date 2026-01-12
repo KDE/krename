@@ -54,7 +54,7 @@ msgstr "No s'ha pogut crear l'enllaç simbòlic cap a un URL no local: %1"
 #: batchrenamer.cpp:254 dirsortplugin.cpp:122
 #, kde-format
 msgid "Error renaming %2 (to %1)"
-msgstr "S'ha produït un error en canviar de nom %2 (a %1)"
+msgstr "S'ha produït un error mentre es canviava de nom %2 (a %1)"
 
 #: batchrenamer.cpp:277 batchrenamer.cpp:401 batchrenamer.cpp:735
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "Desfés canviar el nom de tots els fitxers."
 #: batchrenamer.cpp:392
 #, kde-format
 msgid "Error during undoing %1"
-msgstr "Error durant el procés de desfer %1"
+msgstr "S'ha produït un error durant el procés de desfer %1"
 
 #: batchrenamer.cpp:404
 #, kde-format
@@ -2048,7 +2048,8 @@ msgstr "Configuració en XML de la busca i substitució de KRename (*.xml)"
 #, kde-format
 msgid "Failed to save the Find & Replace Settings File."
 msgstr ""
-"No s'ha pogut guardar el fitxer de configuració de la busca i substitució."
+"Ha fallat mentre es guardava el fitxer de configuració de la busca i "
+"substitució."
 
 #: replacedialog.cpp:129
 #, kde-format
@@ -2066,8 +2067,8 @@ msgid ""
 "Failed to open the Find and Replace Settings File. Cannot read file %1:\n"
 "%2."
 msgstr ""
-"No s'ha pogut obrir el fitxer de configuració de la busca i substitució. No "
-"es pot llegir el fitxer %1:\n"
+"Ha fallat mentre s'obria el fitxer de configuració de la busca i "
+"substitució. No es pot llegir el fitxer %1:\n"
 "%2."
 
 #: replacedialog.cpp:150 replacedialog.cpp:161 replacedialog.cpp:166
@@ -2098,7 +2099,8 @@ msgstr "El fitxer no és un fitxer en XML versió 1.0 de KRename."
 #: replacedialog.cpp:231
 #, kde-format
 msgid "Problem with loading KRename XML file."
-msgstr "S'ha produït un problema en carregar el fitxer en XML de KRename."
+msgstr ""
+"S'ha produït un problema mentre es carregava el fitxer en XML de KRename."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ReplaceWidget)
 #. i18n: ectx: property (windowTitle), widget (QDialog, ReplaceItemDlg)
