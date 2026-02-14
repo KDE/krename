@@ -3,20 +3,20 @@
 # Ilya Ivkov <ilya-ivkov@yandex.ru>, 2004.
 # Nick Shaforostoff <shafff@ukr.net>, 2004-2005.
 # Alexey Kouznetsov <kouznetsov@phtf.stu.neva.ru>, 2005.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2022-09-28 15:18+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-02-13 22:25+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
@@ -984,8 +984,7 @@ msgid "counter with custom start value 0 and custom stepping 1"
 msgstr "счётчик с начальным значением 0 и шагом 1"
 
 #: krenameimpl.cpp:481
-#, fuzzy, kde-format
-#| msgid "create a subdfolder"
+#, kde-format
 msgid "create a subfolder"
 msgstr "создать вложенную папку"
 
@@ -1324,10 +1323,9 @@ msgid "Michael v.Ostheim"
 msgstr "Michael v.Ostheim"
 
 #: main.cpp:81
-#, fuzzy, kde-format
-#| msgid "Created the Gentoo Ebuild scripts for Krename."
+#, kde-format
 msgid "Created the Gentoo Ebuild scripts for KRename."
-msgstr "Создал скрипты Gentoo Ebuild для Krename."
+msgstr "Создал сценарии Gentoo Ebuild для KRename."
 
 #: main.cpp:83
 #, kde-format
@@ -1581,16 +1579,13 @@ msgid "start KRename's selftest (developers only)"
 msgstr "запустить самотестирование KRename (только для разработчиков)"
 
 #: main.cpp:139
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Krename was started from root!</b><br>When started from root, Krename "
-#| "may damage your system if you do not know exactly what you are doing!"
+#, kde-format
 msgid ""
 "<b>KRename was started from root!</b><br>When started from root, KRename may "
 "damage your system if you do not know exactly what you are doing!"
 msgstr ""
-"<b>Krename был запущен от root!</b><br>При запуске от root, Krename может "
-"повредить вашу систему, если вы точно не знаете, что делаете!"
+"<b>KRename запущен от имени root!</b><br>При запуске от имени root KRename "
+"может повредить систему, если вы не знаете точно, что делаете!"
 
 #: main.cpp:143
 #, kde-format
@@ -1642,55 +1637,56 @@ msgstr "&Удалить номер"
 #: odfplugin.cpp:62
 #, kde-format
 msgid "OpenDocument Format (ODT, ODS, ODP) Plugin"
-msgstr ""
+msgstr "Модуль OpenDocument Format (ODT, ODS, ODP)"
 
 #: odfplugin.cpp:63
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<qt>This plugin supports reading metadata from files in an OpenDocument "
 "format.</qt>"
 msgstr ""
-"<qt>Этот модуль сортирует файлы в подкаталогах после переименования.</qt>"
+"<qt>Этот модуль поддерживает чтение метаданных из файлов в формате "
+"OpenDocument.</qt>"
 
 #: odfplugin.cpp:79
-#, fuzzy, kde-format
+#, kde-format
 msgid "Creator of the ODF file"
-msgstr "&Количество элементов в истории шаблонов:"
+msgstr "Создатель ODF-файла"
 
 #: odfplugin.cpp:80
-#, fuzzy, kde-format
+#, kde-format
 msgid "Keywords of the ODF file"
-msgstr "&Количество элементов в истории шаблонов:"
+msgstr "Ключевые слова файла ODF"
 
 #: odfplugin.cpp:81
-#, fuzzy, kde-format
+#, kde-format
 msgid "Subject of the ODF file"
-msgstr "&Количество элементов в истории шаблонов:"
+msgstr "Тема файла ODF"
 
 #: odfplugin.cpp:82
-#, fuzzy, kde-format
+#, kde-format
 msgid "Title of the ODF file"
-msgstr "&Количество элементов в истории шаблонов:"
+msgstr "Заголовок файла ODF"
 
 #: odfplugin.cpp:83
-#, fuzzy, kde-format
+#, kde-format
 msgid "Generator of the ODF file"
-msgstr "&Количество элементов в истории шаблонов:"
+msgstr "Генератор ODF-файла"
 
 #: odfplugin.cpp:84
-#, fuzzy, kde-format
+#, kde-format
 msgid "Language of the ODF file"
-msgstr "&Количество элементов в истории шаблонов:"
+msgstr "Язык файла ODF"
 
 #: odfplugin.cpp:85
-#, fuzzy, kde-format
+#, kde-format
 msgid "Number of pages in the ODF file"
-msgstr "&Количество элементов в истории шаблонов:"
+msgstr "Количество страниц в файле ODF"
 
 #: odfplugin.cpp:86
-#, fuzzy, kde-format
+#, kde-format
 msgid "Number of words in the ODF file"
-msgstr "&Количество элементов в истории шаблонов:"
+msgstr "Количество слов в файле ODF"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: partfilenamewidget.ui:25
