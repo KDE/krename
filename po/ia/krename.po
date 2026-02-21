@@ -2405,7 +2405,7 @@ msgstr "Inserta le data de creation de files"
 #: systemplugin.cpp:49
 #, kde-format
 msgid "Insert the formatted file creation date"
-msgstr "Inserta le data de creation de file formattate"
+msgstr "Inserta le data de creation de file fnormatate"
 
 #: systemplugin.cpp:50
 #, kde-format
@@ -2415,7 +2415,7 @@ msgstr "Inserta le data de modification de files"
 #: systemplugin.cpp:51
 #, kde-format
 msgid "Insert the formatted modification date"
-msgstr "Inserta le data de modification formattate"
+msgstr "Inserta le data de modification fnormatate"
 
 #: systemplugin.cpp:52
 #, kde-format
@@ -2425,7 +2425,7 @@ msgstr "Inserta le data del ultime accesso de file"
 #: systemplugin.cpp:53
 #, kde-format
 msgid "Insert the formatted date of the last file access"
-msgstr "Inserta le data formattate del ultime accesso de file"
+msgstr "Inserta le data fnormatate del ultime accesso de file"
 
 #: systemplugin.cpp:54
 #, kde-format
@@ -2482,7 +2482,7 @@ msgstr "Inserta le numero de un tracia"
 #: taglibplugin.cpp:35
 #, kde-format
 msgid "Insert the number of a track formatted with a leading 0"
-msgstr "Inserta le numero de un tracia formattate con un 0 ducente"
+msgstr "Inserta le numero de un tracia fnormatate con un 0 ducente"
 
 #: taglibplugin.cpp:37
 #, kde-format
