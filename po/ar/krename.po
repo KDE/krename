@@ -991,7 +991,7 @@ msgstr "أدرج اسم المجلّد"
 #: krenameimpl.cpp:485
 #, kde-format
 msgid "insert name of parent folder"
-msgstr "أدرج اسم المجلّد الأبّ"
+msgstr "أدرج اسم المجلّد الأب"
 
 #: krenameimpl.cpp:486
 #, kde-format
