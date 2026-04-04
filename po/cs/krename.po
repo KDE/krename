@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 # Pavel Fric <pavelfric@seznam.cz>, 2009, 2010, 2011, 2014.
 # Vít Pelčák <vit@pelcak.org>, 2016, 2017, 2018.
 # Vit Pelcak <vit@pelcak.org>, 2021, 2023.
@@ -6,14 +7,14 @@ msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2023-06-22 16:08+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-04-03 16:51+0200\n"
+"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
+"Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: batchrenamer.cpp:192 batchrenamer.cpp:662
@@ -441,12 +442,17 @@ msgid ""
 "this plugin, you can easily add an offset of -4 to get the desired result.</"
 "p>"
 msgstr ""
+"<p><b>Tento modul přidává k číslům v názvech souborů zadaný posun.</b><br/>\n"
+"Např. pokud máte soubory s názvy: <i>img014</i>, <i>img015</i>, <i>img023</"
+"i>, které chcete pojmenovat <i>img010</i>, <i>img011</i> and <i>img019</i>. "
+"Pomocí tohoto modulu můžete snadno přidat posun o -4 a dosáhnout tak "
+"požadovaného výsledku.</p>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: increasecounterpluginwidget.ui:49
 #, kde-format
 msgid "Offse&t:"
-msgstr ""
+msgstr "Posu%n:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOptions)
 #: krenamedestination.ui:31
@@ -2019,7 +2025,7 @@ msgstr "Uložit nastavení Najít a nahradit jako:"
 #: replacedialog.cpp:68
 #, kde-format
 msgid "KRename Find & Replace Settings XML (*.xml)"
-msgstr ""
+msgstr "Nastavení funkce Najít a nahradit v KRename (XML, *.xml)"
 
 #: replacedialog.cpp:77
 #, kde-format
@@ -2034,7 +2040,7 @@ msgstr "Uložit soubor nastavení Najít a nahradit"
 #: replacedialog.cpp:131
 #, kde-format
 msgid "KRename Find and Replace Settings XML (*.xml)"
-msgstr ""
+msgstr "Nastavení funkce Najít a nahradit v KRename (XML, *.xml)"
 
 #: replacedialog.cpp:139
 #, kde-format
@@ -2042,6 +2048,9 @@ msgid ""
 "Failed to open the Find and Replace Settings File. Cannot read file %1:\n"
 "%2."
 msgstr ""
+"Nepodařilo se otevřít soubor nastavení funkce Najít a nahradit. Nelze načíst "
+"soubor %1:\n"
+"%2."
 
 #: replacedialog.cpp:150 replacedialog.cpp:161 replacedialog.cpp:166
 #: replacedialog.cpp:232
