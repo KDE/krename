@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2026-04-07 02:07+0300\n"
+"PO-Revision-Date: 2026-04-09 18:35+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -286,7 +286,7 @@ msgstr "&Failų skaičius viename aplanke:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: dirsortpluginwidget.ui:58
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Start index:"
 msgstr "&Pradinis skaičius:"
 
@@ -417,16 +417,15 @@ msgstr "Konfigūruoti KRename naudotojo sąsajos išvaizdą ir turinį:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionWizard)
 #: guimodeselector.ui:57
-#, fuzzy, kde-format
-#| msgid "Use &wizard style GUI (beginners)"
+#, kde-format
 msgid "Use &assistant style GUI (beginners)"
-msgstr "Naudoti stiliaus vedlį (naujokams)"
+msgstr "Naudoti &pagelbiklio stiliaus naudotojo sąsają (naujokams)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, optionTabs)
 #: guimodeselector.ui:67
-#, fuzzy, kde-format
+#, kde-format
 msgid "Use &tabbed style GUI (advanced users)"
-msgstr "Naudoti kortelių stilių (patyrusiems naudotojams)"
+msgstr "Naudoti &kortelių stiliaus naudotojo sąsają (patyrusiems naudotojams)"
 
 #: increasecounterplugin.cpp:25
 #, kde-format
@@ -512,9 +511,9 @@ msgstr "Ša&blonas:"
 
 #. i18n: ectx: property (toolTip), widget (ExtHistoryCombo, filenameTemplate)
 #: krenamefilename.ui:66
-#, fuzzy, kde-format
+#, kde-format
 msgid "<qt>Enter a template for changing the filename.</qt>"
-msgstr "<qt>Pasirinkite šabloną failo pervadinimui.</qt>"
+msgstr "<qt>Pasirinkite failo pervadinimo šabloną.</qt>"
 
 #. i18n: ectx: property (text), item, widget (ExtHistoryCombo, filenameTemplate)
 #. i18n: ectx: property (text), item, widget (ExtHistoryCombo, extensionTemplate)
@@ -531,9 +530,9 @@ msgstr "<p><b>.</b></p>"
 
 #. i18n: ectx: property (toolTip), widget (ExtHistoryCombo, extensionTemplate)
 #: krenamefilename.ui:97
-#, fuzzy, kde-format
+#, kde-format
 msgid "<qt>Enter a template for changing the file extension.</qt>"
-msgstr "<qt>Pasirinkite šabloną failo plėtinio pakeitimui.</qt>"
+msgstr "<qt>Pasirinkite failo prievardžio keitimo šabloną.</qt>"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFunctions)
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonHelp4)
@@ -542,13 +541,13 @@ msgstr "<qt>Pasirinkite šabloną failo plėtinio pakeitimui.</qt>"
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonHelp1)
 #: krenamefilename.ui:112 krenamefilename.ui:346 krenamefilename.ui:359
 #: krenamefilename.ui:436 krenamefilename.ui:490
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<qt>Insert special functions like the artist of an mp3 or the creation date "
 "of an image.</qt>"
 msgstr ""
-"<qt>Įterpkite norimus aprašus pvz. mp3 autorių arba nuotraukos sukūrimo  "
-"datą.</qt>"
+"<qt>Įterpkite specialias funkcijas, tokias kaip mp3 atlikėjas ar paveikslo "
+"sukūrimo data.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFunctions)
 #: krenamefilename.ui:115
@@ -558,9 +557,9 @@ msgstr "&Funkcijos..."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:141
-#, fuzzy, kde-format
+#, kde-format
 msgid "<qt>Keep the file extension as it is and do not change it.</qt>"
-msgstr "<qt>Palikti esamą failo plėtinį be pakeitimų.</qt>"
+msgstr "<qt>Palikti esamą failo prievardį ir jo nekeisti.</qt>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkExtension)
 #: krenamefilename.ui:144
@@ -576,15 +575,16 @@ msgstr "Failo prievardis prasideda nuo:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, comboExtension)
 #: krenamefilename.ui:177
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<qt>Configure which part of the filename is considered to be the "
 "fileextension. E.g. \"First Dot\", will consider \".tar.gz\" as extension, "
 "\"Last Dot\" only \".gz\".</qt>"
 msgstr ""
-"<qt>Nurodykite kurią failo pavadinimo dalį laikyti failo plėtiniu Pvz. "
-"„Pirmas taškas\", plėtinys bus „.tar.gz“, „Paskutinis taškas\" tiktai \".gz"
-"\".</qt>"
+"<qt>Konfigūruokite, kuri failo pavadinimo dalis bus laikoma failo "
+"prievardžiu. Pvz., parinktis „Pirmo taško“ numanys, kad prievardis yra „.tar."
+"gz“, o parinktis „Paskutinio taško“ numanys, kad prievardis yra tik „.gz“.</"
+"qt>"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboExtension)
 #: krenamefilename.ui:181
@@ -607,13 +607,13 @@ msgstr "Nėra failo prievardžio"
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFind)
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFindSimple)
 #: krenamefilename.ui:221 krenamefilename.ui:745
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<qt>Find and replace strings and regular expressions in the renamed filename."
 "</qt>"
 msgstr ""
-"<qt>Ieškoti ir keisti išraiškas bei paprastąsias išraiškas pervadinto failo "
-"pavadinime. </qt>"
+"<qt>Rasti ir pakeisti pervadinto failo pavadinime esančias eilutes bei "
+"reguliariuosius reiškinius. </qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonFind)
 #. i18n: ectx: property (text), widget (QPushButton, buttonFindSimple)
@@ -624,13 +624,13 @@ msgstr "Rasti &ir pakeisti..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:234
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
 msgstr ""
-"<qt>Pasirinkti pradžios skaičių, žingsnį ir praleidimus failo pavadinime. </"
-"qt>"
+"<qt>Konfigūruokite failų pavadinimo numeravime naudojamą pradinį skaičių, "
+"žingsnį ir praleidžiamus skaitmenis. </qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonNumbering)
 #: krenamefilename.ui:237
@@ -640,9 +640,9 @@ msgstr "&Numeravimas..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:247
-#, fuzzy, kde-format
+#, kde-format
 msgid "<qt>Graphically select a part of a filename to insert.</qt>"
-msgstr "<qt>Grafiškai pažymėkite kurią failo pavadinimo dalį įterpti</qt>"
+msgstr "<qt>Grafiškai pažymėkite, kurią failo pavadinimo dalį įterpti.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonInsert)
 #: krenamefilename.ui:250
@@ -725,7 +725,7 @@ msgstr "Failo pavadi&nimas:"
 #. i18n: ectx: property (text), item, widget (QComboBox, comboPrefix)
 #: krenamefilename.ui:477 krenamefilename.ui:532 krenamesimple.ui:195
 #: krenamesimple.ui:247
-#, fuzzy, kde-format
+#, kde-format
 msgid "Number"
 msgstr "Numeravimas"
 
@@ -766,7 +766,7 @@ msgstr "Tinkintas prievardis"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupNumber)
 #: krenamefilename.ui:647 krenamesimple.ui:344
-#, fuzzy, kde-format
+#, kde-format
 msgid "N&umber"
 msgstr "N&umeravimas"
 
@@ -778,9 +778,9 @@ msgstr "Skaitmenų &skaičius:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblIndex)
 #: krenamefilename.ui:707 krenamesimple.ui:407
-#, fuzzy, kde-format
+#, kde-format
 msgid "Start  &index:"
-msgstr "Pradinis skaičius:"
+msgstr "Pradinis ska&ičius:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonUp)
 #: krenamefilename.ui:835 krenamefiles.ui:210
@@ -869,7 +869,7 @@ msgstr "Mažėjančiai"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboSort)
 #: krenamefiles.ui:114
-#, fuzzy, kde-format
+#, kde-format
 msgid "Numeric"
 msgstr "Skaitmeninis"
 
@@ -965,12 +965,12 @@ msgid "old filename converted to upper case"
 msgstr "senas failo pavadinimas didžiosiomis raidėmis"
 
 #: krenameimpl.cpp:477
-#, fuzzy, kde-format
+#, kde-format
 msgid "first letter of every word upper case"
-msgstr "visų žodžių pirmoji raidė didžioji"
+msgstr "kiekvieno žodžio pirmoji raidė didžioji"
 
 #: krenameimpl.cpp:478
-#, fuzzy, kde-format
+#, kde-format
 msgid "first letter of filename upper case"
 msgstr "pirmoji raidė failo pavadinime didžioji"
 
@@ -991,14 +991,14 @@ msgid "create a subfolder"
 msgstr "sukurti poaplankį"
 
 #: krenameimpl.cpp:482
-#, fuzzy, kde-format
+#, kde-format
 msgid "character x to y of old filename"
-msgstr "rašmuo x į y senojo failo pavadinimo"
+msgstr "nuo x iki y seno failo pavadinimo simboliai"
 
 #: krenameimpl.cpp:483
-#, fuzzy, kde-format
+#, kde-format
 msgid "y characters of old filename starting at x"
-msgstr "y rašmenys  senojo failo pavadinimo prasidedantys x"
+msgstr "y seno failo pavadinimo simboliai, prasidedantys ties x"
 
 #: krenameimpl.cpp:484
 #, kde-format
@@ -1011,18 +1011,16 @@ msgid "insert name of parent folder"
 msgstr "įterpti viršesnio aplanko pavadinimą"
 
 #: krenameimpl.cpp:486
-#, fuzzy, kde-format
-#| msgid ""
-#| "insert a '/' to create a new subdirectory (useful from within regular "
-#| "expressions)"
+#, kde-format
 msgid ""
 "insert a '/' to create a new subfolder (useful from within regular "
 "expressions)"
 msgstr ""
-"poaplankio sukūrimui įterpti '/' (pravartu reguliarios išraiškos viduje)"
+"įterpti „/“, kad būtų sukurtas naujas poaplankis (naudinga naudojant "
+"reguliariuosiuose reiškiniuose)"
 
 #: krenameimpl.cpp:487
-#, fuzzy, kde-format
+#, kde-format
 msgid "insert the length of the input filename"
 msgstr "įterpti įvesties failo pavadinimo ilgį"
 
@@ -1255,13 +1253,13 @@ msgid "Groult Richard"
 msgstr "Groult Richard"
 
 #: main.cpp:68
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
 msgstr ""
-"Sutvarkyta pradžios indekso klaida ir įdėta BatchRenamer klasė\n"
-"į jo nuostabią paveikslėlių žiuryklę."
+"Pataisė klaidą, susijusią su startIndex ir pridėjo į savo nuostabią\n"
+"showimg paveikslų žiūryklę BatchRenamer klasę."
 
 #: main.cpp:71
 #, kde-format
@@ -1609,7 +1607,7 @@ msgstr "&Numeravimas"
 #: numberwidget.ui:25
 #, kde-format
 msgid "Start &index:"
-msgstr "Pradžios skaičius:"
+msgstr "Prad&inis skaičius:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: numberwidget.ui:42
@@ -2174,9 +2172,9 @@ msgid "Insert a snippet of JavaScript code (4+5 in this case)"
 msgstr "Įterpti JavaScript kodo fragmentą (šiuo atveju 4+5)"
 
 #: scriptplugin.cpp:98
-#, fuzzy, kde-format
+#, kde-format
 msgid "Index of the current file"
-msgstr "Esamo failo indeksas"
+msgstr "Dabartinio failo skaičius"
 
 #: scriptplugin.cpp:99
 #, kde-format
@@ -2518,13 +2516,13 @@ msgid "Date and system functions"
 msgstr "Data ir sistemos funkcijos"
 
 #: systemplugin.cpp:58
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "<qt>This plugin contains tokens to get the creation, modification and last "
 "access time of files and the current system time and date.</qt>"
 msgstr ""
-"<qt>Šiame įskiepyje yra raktai, skirti  kūrimui, failų pakeitimų ir "
-"paskutinės prieigos bei esamam sistemos laiko ir datos pakeitimui.</qt>"
+"<qt>Šiame įskiepyje yra raktai, skirti gauti failų sukūrimo, modifikavimo ir "
+"paskutinės prieigos laiką bei dabartinį sistemos laiką ir datą.</qt>"
 
 #: taglibplugin.cpp:28
 #, kde-format
@@ -2688,15 +2686,15 @@ msgstr "&Mažėjančiai"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioNumeric)
 #: tokensortmodedialog.ui:45
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Numeric"
-msgstr "Skaitmeninis(-ė)"
+msgstr "Skaitmeninis"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: tokensortmodedialog.ui:61
-#, fuzzy, kde-format
+#, kde-format
 msgid "by"
-msgstr "nuo"
+msgstr "pagal"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: tokensortmodedialog.ui:68
@@ -2706,15 +2704,15 @@ msgstr "Rak&tas..."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioPredefined)
 #: tokensortmodedialog.ui:74
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Predefined"
-msgstr "Numatytas(-a)"
+msgstr "Iš anksto a&pibrėžtas"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioCustom)
 #: tokensortmodedialog.ui:87
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Custom"
-msgstr "tinkintas"
+msgstr "&Tinkintas"
 
 #: translitplugin.cpp:81
 #, kde-format
