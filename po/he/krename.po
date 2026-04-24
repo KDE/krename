@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the krename package.
 #
-# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2025-08-02 21:23+0300\n"
+"PO-Revision-Date: 2026-04-21 14:10+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
@@ -1681,7 +1681,7 @@ msgstr "הי&פוך הבחירה"
 #: partfilenamewidget.ui:54
 #, kde-format
 msgid "&Convert selection:"
-msgstr "המר&רת הבחירה:"
+msgstr "המ&רת הבחירה:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #: partfilenamewidget.ui:65
@@ -2035,7 +2035,7 @@ msgid ""
 "Parse error at line %1, column %2:\n"
 "%3"
 msgstr ""
-"שגיאת פענוח בשורה %1, עמודה %2:\n"
+"שגיאת פיענוח בשורה %1, עמודה %2:\n"
 "%3"
 
 #: replacedialog.cpp:160
