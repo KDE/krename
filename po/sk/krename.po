@@ -615,7 +615,7 @@ msgid ""
 "<qt>Configure start index, stepping and skipping for numbering of filenames."
 "</qt>"
 msgstr ""
-"<qt>Nastaviť začiatok zoznamu, kroky and preskakovanie pre číslovanie of "
+"<qt>Nastaviť počiatočný index, krok a preskočenie pre číslovanie názvov "
 "súborov.</qt>"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonNumbering)
