@@ -2726,7 +2726,7 @@ msgstr "Prepísanie"
 msgid ""
 "<qt>This plugin can transcribe a filename into English (i.e. perform "
 "transliteration).</qt>"
-msgstr "<qt>Tento dolpnok dokáže prepísať názov súboru do Angličtiny</qt"
+msgstr "<qt>Tento doplnok dokáže prepísať názov súboru do angličtiny</qt>"
 
 #~ msgid "Frame"
 #~ msgstr "Rámec"
