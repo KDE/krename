@@ -86,7 +86,7 @@ msgstr "撤销 %1 时出错"
 #: batchrenamer.cpp:404
 #, kde-format
 msgid "KRename finished the undo process."
-msgstr "KRename 撤销操作完成。"
+msgstr "KRename 撤销处理完成。"
 
 #: batchrenamer.cpp:643
 #, kde-format
@@ -1943,7 +1943,7 @@ msgstr "重启 KRename(&K)..."
 #: progressdialog.cpp:40
 #, kde-format
 msgid "Rename Processed Files &Again..."
-msgstr "重新重命名已处理的文件(&P)..."
+msgstr "重新重命名已处理的文件(&A)..."
 
 #: progressdialog.cpp:41
 #, kde-format
@@ -2060,7 +2060,7 @@ msgstr "查找正则表达式"
 #: replaceitemdlg.ui:57
 #, kde-format
 msgid "&Process tokens in replace string"
-msgstr "替换字符串中的过程标记(&P)"
+msgstr "处理替换字符串中的标记(&P)"
 
 #. i18n: ectx: property (text), widget (QTableWidget, list)
 #: replacewidget.ui:32
@@ -2084,7 +2084,7 @@ msgstr "替换为"
 #: replacewidget.ui:47
 #, kde-format
 msgid "Process Tokens"
-msgstr "过程标记"
+msgstr "处理标记"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSaveList)
 #: replacewidget.ui:70
