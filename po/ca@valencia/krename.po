@@ -121,7 +121,7 @@ msgstr "No s'ha pogut establir el bit executable en l'script de desfer."
 #: batchrenamer.cpp:1170
 #, kde-format
 msgid "Cannot create directory %1: %2"
-msgstr "No s'ha pogut crear el directori %1: %2"
+msgstr "No s'ha pogut crear la carpeta %1: %2"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: customfilenamedlg.ui:63
@@ -1261,7 +1261,7 @@ msgid ""
 "Fixed a bug with startIndex and added the BatchRenamer class\n"
 "to his excellent image viewer showimg."
 msgstr ""
-"Ha corregit un error amb startIndex i ha afegit la classe BatchRenamer\n"
+"Ha esmenat un error amb startIndex i ha afegit la classe BatchRenamer\n"
 "al seu excel·lent visor d'imatges."
 
 #: main.cpp:71
@@ -1273,7 +1273,7 @@ msgstr "Michael Elvers"
 #, kde-format
 msgid "Fixed a bug that caused krename not closing open files."
 msgstr ""
-"Ha corregit un error que feia que KRename no tancara els fitxers oberts."
+"Ha esmenat un error que feia que KRename no tancara els fitxers oberts."
 
 #: main.cpp:73
 #, kde-format
