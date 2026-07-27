@@ -2,7 +2,7 @@
 # German translation of Krename.
 # SPDX-FileCopyrightText: 2016, 2018, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # Dominik Seichter <domseichter@web.de>, 2001,2003, 2004, 2005, 2006, 2009, 2010.
-# SPDX-FileCopyrightText: 2016, 2017, 2018, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2016-2018, 2021 Burkhard Lück <lueck@hube-lueck.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: krename\n"
