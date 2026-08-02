@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2026-04-03 16:51+0200\n"
-"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-08-02 00:34+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: batchrenamer.cpp:192 batchrenamer.cpp:662
 #, kde-format
@@ -46,7 +46,7 @@ msgstr ""
 #: batchrenamer.cpp:240
 #, kde-format
 msgid "Cannot create symlink to non-local URL: %1"
-msgstr "Nelze vytvořit symbolické odkazy pro ne-místní URL: %1."
+msgstr "Nelze vytvořit symbolické odkazy pro ne-místní URL: %1"
 
 #: batchrenamer.cpp:254 dirsortplugin.cpp:122
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "Během přejmenovávání nastala chyba %2 (do %1)"
 #, kde-format
 msgid "%1 error occurred."
 msgid_plural "%1 errors occurred."
-msgstr[0] "Vyskytla se %1 chyba!"
+msgstr[0] "Vyskytla se %1 chyba."
 msgstr[1] "Vyskytly se %1 chyby."
 msgstr[2] "Vyskytlo se %1 chyb."
 
@@ -452,7 +452,7 @@ msgstr ""
 #: increasecounterpluginwidget.ui:49
 #, kde-format
 msgid "Offse&t:"
-msgstr "Posu%n:"
+msgstr "Posu&n:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOptions)
 #: krenamedestination.ui:31
@@ -500,13 +500,13 @@ msgstr "&Rozšířený název souboru"
 #: krenamefilename.ui:50
 #, kde-format
 msgid "&Template:"
-msgstr "&Předloha:"
+msgstr "&Šablona:"
 
 #. i18n: ectx: property (toolTip), widget (ExtHistoryCombo, filenameTemplate)
 #: krenamefilename.ui:66
 #, kde-format
 msgid "<qt>Enter a template for changing the filename.</qt>"
-msgstr "<qt>Zadat předlohu pro změnu souborového názvu.</qt>"
+msgstr "<qt>Zadat šablonu pro změnu souborového názvu.</qt>"
 
 #. i18n: ectx: property (text), item, widget (ExtHistoryCombo, filenameTemplate)
 #. i18n: ectx: property (text), item, widget (ExtHistoryCombo, extensionTemplate)
@@ -525,7 +525,7 @@ msgstr "<p><b>.</b></p>"
 #: krenamefilename.ui:97
 #, kde-format
 msgid "<qt>Enter a template for changing the file extension.</qt>"
-msgstr "<qt>Zadat předlohu pro změnu souborové přípony.</qt>"
+msgstr "<qt>Zadat šablonu pro změnu souborové přípony.</qt>"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonFunctions)
 #. i18n: ectx: property (toolTip), widget (QPushButton, buttonHelp4)
@@ -944,37 +944,37 @@ msgstr "KRename"
 #: krenameimpl.cpp:474
 #, kde-format
 msgid "old filename"
-msgstr "Starý název souboru"
+msgstr "starý název souboru"
 
 #: krenameimpl.cpp:475
 #, kde-format
 msgid "old filename converted to lower case"
-msgstr "Starý název souboru převedený na malá písmena"
+msgstr "starý název souboru převedený na malá písmena"
 
 #: krenameimpl.cpp:476
 #, kde-format
 msgid "old filename converted to upper case"
-msgstr "Starý název souboru převedený na velká písmena"
+msgstr "starý název souboru převedený na velká písmena"
 
 #: krenameimpl.cpp:477
 #, kde-format
 msgid "first letter of every word upper case"
-msgstr "První písmeno každého slova bude velké"
+msgstr "první písmeno každého slova bude velké"
 
 #: krenameimpl.cpp:478
 #, kde-format
 msgid "first letter of filename upper case"
-msgstr "První písmeno názvu souboru bude velké"
+msgstr "první písmeno názvu souboru bude velké"
 
 #: krenameimpl.cpp:479
 #, kde-format
 msgid "number (try also ##, ###, ... for leading zeros)"
-msgstr "Číslo (zkuste také ##, ###, ... pro předsazení nulami)"
+msgstr "číslo (zkuste také ##, ###, ... pro předsazení nulami)"
 
 #: krenameimpl.cpp:480
 #, kde-format
 msgid "counter with custom start value 0 and custom stepping 1"
-msgstr "Počítadlo s vlastní počáteční hodnotou 0 a s vlastním krokováním 1"
+msgstr "počítadlo s vlastní počáteční hodnotou 0 a s vlastním krokováním 1"
 
 #: krenameimpl.cpp:481
 #, kde-format
@@ -984,7 +984,7 @@ msgstr "vytvořit podsložku"
 #: krenameimpl.cpp:482
 #, kde-format
 msgid "character x to y of old filename"
-msgstr "Znaky x až y starého názvu souboru"
+msgstr "znaky x až y starého názvu souboru"
 
 #: krenameimpl.cpp:483
 #, kde-format
@@ -1007,23 +1007,23 @@ msgid ""
 "insert a '/' to create a new subfolder (useful from within regular "
 "expressions)"
 msgstr ""
-"Vložit '/' pro vytvoření nové podsložky (užitečné zevnitř regulárních výrazů)"
+"vložit '/' pro vytvoření nové podsložky (užitečné zevnitř regulárních výrazů)"
 
 #: krenameimpl.cpp:487
 #, kde-format
 msgid "insert the length of the input filename"
-msgstr "Vložit délku názvu vstupního souboru"
+msgstr "vložit délku názvu vstupního souboru"
 
 #: krenameimpl.cpp:488
 #, kde-format
 msgid "strip whitespaces leading and trailing"
-msgstr "Odebrat počáteční a koncové \"bílé\" znaky (prázdná místa)"
+msgstr "odebrat počáteční a koncové \"bílé\" znaky (prázdná místa)"
 
 #: krenameimpl.cpp:489
 #, kde-format
 msgid "strip whitespaces leading and trailing of an arbitrary string"
 msgstr ""
-"Odebrat počáteční a koncové \"bílé\" znaky (prázdná místa) zcela náhodného "
+"odebrat počáteční a koncové \"bílé\" znaky (prázdná místa) zcela náhodného "
 "řetězce"
 
 #: krenameimpl.cpp:490
@@ -1502,13 +1502,13 @@ msgstr "Překlad do češtiny"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Pavel Fric"
+msgstr "Pavel Fric,Libor Filípek"
 
 #: main.cpp:103
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "pavelfric@seznam.cz"
+msgstr "pavelfric@seznam.cz,libor.filipek@gmail.com"
 
 #: main.cpp:111
 #, kde-format
@@ -1533,17 +1533,17 @@ msgstr "složka"
 #: main.cpp:113
 #, kde-format
 msgid "set a template"
-msgstr "Nastavit předlohu"
+msgstr "nastavit šablonu"
 
 #: main.cpp:114
 #, kde-format
 msgid "set a template for the file extension"
-msgstr "Nastavit předlohu pro příponu souboru"
+msgstr "nastavit šablonu pro příponu souboru"
 
 #: main.cpp:115
 #, kde-format
 msgid "enable a plugin for use"
-msgstr "Povolit použití přídavného modulu"
+msgstr "povolit použití modulu"
 
 #: main.cpp:116
 #, kde-format
@@ -1568,12 +1568,12 @@ msgstr "odkázat soubory do složky nebo URL"
 #: main.cpp:119
 #, kde-format
 msgid "start renaming immediately"
-msgstr "Začít okamžitě s přejmenováním"
+msgstr "okamžitě spustit přejmenování"
 
 #: main.cpp:120
 #, kde-format
 msgid "start KRename's selftest (developers only)"
-msgstr "Začít se zkoušením KRename (pouze vývojáři)"
+msgstr "spustit autotest KRename (pouze vývojáři)"
 
 #: main.cpp:139
 #, kde-format
@@ -1706,7 +1706,7 @@ msgstr "&Obrátit výběr"
 #: partfilenamewidget.ui:54
 #, kde-format
 msgid "&Convert selection:"
-msgstr "&Převést výběr"
+msgstr "&Převést výběr:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboConvert)
 #: partfilenamewidget.ui:65
@@ -2223,7 +2223,7 @@ msgstr "Booleovský"
 #: scriptplugin.cpp:265
 #, kde-format
 msgid "A JavaScript error has occurred: "
-msgstr "Nastala chyba JavaScriptu:"
+msgstr "Nastala chyba JavaScriptu: "
 
 #: scriptplugin.cpp:289
 #, kde-format
@@ -2244,7 +2244,7 @@ msgstr "Soubor %1 již existuje. Chcete jej přepsat?"
 #: scriptplugin.cpp:344
 #, kde-format
 msgid "Unable to open %1 for writing."
-msgstr "Neschopen otevřít %1 pro psaní"
+msgstr "Nelze otevřít %1 pro zápis."
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ScriptPluginDialog)
 #: scriptplugindialog.ui:20
@@ -2305,7 +2305,7 @@ msgstr "&Vymezení"
 #: scriptpluginwidget.ui:106
 #, kde-format
 msgid "Define functions that can be used from KRename templates:"
-msgstr "Stanovit funkce, které se dají použít z předloh KRename:"
+msgstr "Stanovit funkce, které se dají použít z šablon KRename:"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSave)
 #: scriptpluginwidget.ui:127
@@ -2405,7 +2405,7 @@ msgstr "Přidat nějaké soubory..."
 #: startupinfowidget.ui:71
 #, kde-format
 msgid "Specify the new filenames by giving a template ..."
-msgstr "Určit nové názvy souborů udáním předlohy..."
+msgstr "Určit nové názvy souborů zadáním šablony..."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: startupinfowidget.ui:93
@@ -2633,7 +2633,7 @@ msgstr "&Náhled na výraz"
 #: tokenhelpwidget.ui:142
 #, kde-format
 msgid "Preview File:"
-msgstr "Náhled souboru: "
+msgstr "Náhled souboru:"
 
 #: tokensortmodedialog.cpp:23
 #, kde-format
@@ -2689,7 +2689,7 @@ msgstr "&Číslo"
 #: tokensortmodedialog.ui:61
 #, kde-format
 msgid "by"
-msgstr "Od"
+msgstr "od"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: tokensortmodedialog.ui:68
@@ -2707,7 +2707,7 @@ msgstr "&Předem určeno"
 #: tokensortmodedialog.ui:87
 #, kde-format
 msgid "&Custom"
-msgstr "&Vlastní.."
+msgstr "&Vlastní"
 
 #: translitplugin.cpp:81
 #, kde-format
