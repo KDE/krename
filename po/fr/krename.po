@@ -2233,7 +2233,7 @@ msgstr "Valeur initiale"
 #: scriptplugin.cpp:247
 #, kde-format
 msgid "String"
-msgstr "Chaîne"
+msgstr "Chaine"
 
 #: scriptplugin.cpp:248
 #, kde-format
