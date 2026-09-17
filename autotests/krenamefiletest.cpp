@@ -7,7 +7,7 @@
 
 #include <KLocalizedString>
 
-#include <QtTest>
+#include <QTest>
 
 QTEST_GUILESS_MAIN(KRenameFileTest)
 Q_DECLARE_METATYPE(ESplitMode)

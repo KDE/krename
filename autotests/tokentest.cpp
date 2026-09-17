@@ -8,7 +8,7 @@
 
 #include <KLocalizedString>
 
-#include <QtTest>
+#include <QTest>
 
 QTEST_MAIN(TokenTest)
 Q_DECLARE_METATYPE(QLatin1String)
