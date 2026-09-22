@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2026-05-31 19:34-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -376,7 +376,7 @@ msgstr ""
 #: guimodeselector.ui:22
 #, kde-format
 msgid "Look and Feel"
-msgstr ""
+msgstr "كۆرۈنۈش ۋە تۇيغۇ"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: guimodeselector.ui:34
@@ -900,7 +900,7 @@ msgstr ""
 #: krenameimpl.cpp:356 main.cpp:45
 #, kde-format
 msgid "KRename"
-msgstr "KRename"
+msgstr ""
 
 #: krenameimpl.cpp:474
 #, kde-format
@@ -1089,7 +1089,7 @@ msgstr "؟"
 
 #: krenamewindow.cpp:36
 msgid "&1. Files"
-msgstr "&1. ھۆججەتلەر"
+msgstr "&1. ھۆججەت"
 
 #: krenamewindow.cpp:37
 msgid "&2. Destination"
@@ -1221,7 +1221,7 @@ msgstr ""
 #: main.cpp:75
 #, kde-format
 msgid "Charles Samuels"
-msgstr "Charles Samuels"
+msgstr ""
 
 #: main.cpp:75
 #, kde-format
@@ -2205,7 +2205,7 @@ msgstr ""
 #: scriptpluginwidget.ui:58
 #, kde-format
 msgid "1"
-msgstr "1"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemove)
 #: scriptpluginwidget.ui:75
