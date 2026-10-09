@@ -93,8 +93,6 @@ endif()
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(PoDoFo
-    FOUND_VAR
-        PoDoFo_FOUND
     REQUIRED_VARS
         PoDoFo_LIBRARIES
         PoDoFo_INCLUDE_DIRS
