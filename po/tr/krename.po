@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 03:01+0000\n"
-"PO-Revision-Date: 2026-11-10 21:38+0300\n"
+"PO-Revision-Date: 2026-11-15 20:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -376,27 +376,27 @@ msgstr "Desteklenen jetonlar:"
 #: fontplugin.cpp:19
 #, kde-format
 msgid "Insert the PostScript name for Type1 and TrueType fonts."
-msgstr "Type1 ve TrueType yazıtipleri için PostScript adını girin."
+msgstr "Type1 ve TrueType yazı tipleri için PostScript adını girin."
 
 #: fontplugin.cpp:20
 #, kde-format
 msgid "Insert the (usually English) name of the font family."
-msgstr "Yazıtipi ailesinin adını girin (genellikle İngilizce)."
+msgstr "Yazı tipi ailesinin adını girin (genellikle İngilizce)."
 
 #: fontplugin.cpp:21
 #, kde-format
 msgid "Insert the (usually English) name of the font style."
-msgstr "Yazıtipi stilinin adını girin (genellikle İngilizce)."
+msgstr "Yazı tipi stilinin adını girin (genellikle İngilizce)."
 
 #: fontplugin.cpp:23
 #, kde-format
 msgid "Font (FreeType2) Plugin"
-msgstr "Yazıtipi (FreeType2) Eklentisi"
+msgstr "Yazı Tipi (FreeType2) Eklentisi"
 
 #: fontplugin.cpp:24
 #, kde-format
 msgid "<qt>This plugin supports reading tags from font files.</qt>"
-msgstr "<qt>Bu eklenti, yazıtipi dosyalarından etiket okumayı destekler.</qt>"
+msgstr "<qt>Bu eklenti, yazı tipi dosyalarından etiket okumayı destekler.</qt>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: guimodeselector.ui:22
