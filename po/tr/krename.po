@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krename\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 03:01+0000\n"
-"PO-Revision-Date: 2026-11-15 20:15+0300\n"
+"PO-Revision-Date: 2026-11-16 19:22+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -124,7 +124,7 @@ msgstr "%1 dizini oluşturulamıyor: %2"
 #: customfilenamedlg.ui:63
 #, kde-format
 msgid "File preview"
-msgstr "Dosya önizleme"
+msgstr "Dosya ön izleme"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: customfilenamedlg.ui:91
@@ -897,19 +897,19 @@ msgstr "Özel…"
 #: krenamefiles.ui:151
 #, kde-format
 msgid "Display a preview image for each file."
-msgstr "Her dosya için bir önizleme görseli göster."
+msgstr "Her dosya için bir ön izleme görseli göster."
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkPreview)
 #: krenamefiles.ui:154
 #, kde-format
 msgid "&Preview"
-msgstr "&Önizleme"
+msgstr "Ö&n izle"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkName)
 #: krenamefiles.ui:161
 #, kde-format
 msgid "Display the filename together with the preview."
-msgstr "Dosya adını önizleme ile beraber görüntüleyin."
+msgstr "Dosya adını ön izleme ile beraber görüntüleyin."
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkName)
 #: krenamefiles.ui:164
@@ -1383,7 +1383,7 @@ msgstr "Michael Zugaro"
 #: main.cpp:90
 #, kde-format
 msgid "Provided the new preview and move features"
-msgstr "Yeni önizleme ve taşıma özellikleri ekledi."
+msgstr "Yeni ön izleme ve taşıma özellikleri ekledi."
 
 #: main.cpp:91
 #, kde-format
@@ -1721,7 +1721,7 @@ msgstr "Dönüştürme yok"
 #: partfilenamewidget.ui:90
 #, kde-format
 msgid "Preview of the generated KRename command:"
-msgstr "Üretilen K Adveren komutunun önizlemesi:"
+msgstr "Üretilen K Adveren komutunun ön izlemesi:"
 
 #: permissionsplugin.cpp:92
 #, kde-format
@@ -2618,19 +2618,19 @@ msgstr "Açıklama"
 #: tokenhelpwidget.ui:105
 #, kde-format
 msgid "Preview"
-msgstr "Önizleme"
+msgstr "Ön izleme"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkPreview)
 #: tokenhelpwidget.ui:119
 #, kde-format
 msgid "Token &Preview"
-msgstr "Jeton &Önizlemesi"
+msgstr "Jeton  Ö&n İzlemesi"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPreview)
 #: tokenhelpwidget.ui:142
 #, kde-format
 msgid "Preview File:"
-msgstr "Önizleme dosyası:"
+msgstr "Ön izleme dosyası:"
 
 #: tokensortmodedialog.cpp:23
 #, kde-format
